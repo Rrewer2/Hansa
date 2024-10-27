@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path d="M50 0v100-1" stroke="blue" stroke-width="5"/>
+    <path d="M25 50l25-25 25 25-25 25z"/>
+    <path d="M27 50l23-23 23 23-23 23z" fill="white"/>
+    <polygon points="27,50 35,52 35,48" fill="black"/>
+    <polygon points="73,50 65,52 65,48" fill="black"/>
+    <path d="M33 50h34-1" stroke="black"/>
+    <path d="M50 27v46-1" stroke="black"/>
+</svg>

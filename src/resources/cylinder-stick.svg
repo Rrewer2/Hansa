@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <linearGradient id="stick" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="30%" style="stop-color: rgba(255,255,255,1);"/>
+    <stop offset="100%" style="stop-color: rgba(0,0,0,0.3);"/>
+  </linearGradient>
+    <polygon points="5,40 5,60 100,60 100,40" fill="black"/>
+    <polygon points="6,41 6,59 99,59 99,41" fill="white"/>
+    <polygon points="6,41 6,59 99,59 99,41" fill="url(#stick)"/>
+    <polygon points="8,34 8,66 13,66 13,34" fill="black"/>
+    <polygon points="9,35 9,65 12,65 12,35" fill="white"/>
+    <polygon points="13,33 13,67 16.5,68 20,67 20,33 16.5,32" fill="black"/>
+    <polygon points="20,34 20,66 25,66 25,34" fill="black"/>
+    <polygon points="21,35 21,65 24,65 24,35" fill="white"/>
+</svg>
