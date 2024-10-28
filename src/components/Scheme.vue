@@ -24,7 +24,7 @@ const { data } = defineProps(["data"]);
         <div class="wrap">
             <img src="../resources/space.svg" alt="#" />
             <img src="../resources/valve.svg" alt="#" />
-            <img src="../resources/horizontal line.svg" alt="#" />
+            <!-- <img src="../resources/horizontal line.svg" alt="#" /> -->
             <img src="../resources/knee.svg" alt="#" />
         </div>
         <div class="wrap">
