@@ -263,7 +263,7 @@ const obj = [
         </div> -->
         
         <!-- <Scheme :inputs="obj[0].inputs" /> -->
-        <!-- <Scheme :data="funcs" /> -->
+        <Scheme :data="funcs" />
         <!-- <Data :obj="obj" /> -->
     </div>
     <!-- <Input :inputs="obj[0].inputs" />
