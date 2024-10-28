@@ -15,8 +15,10 @@ const props = defineProps(["outputs"]);
                             titleFromArray(item.types)
                         }}</i
                     >
-                    <b v-if="!item.boolean">{{ getResults(item.value) }}</b>
-                    <b v-else>{{ item.options[item.value()] }}</b>
+                    <div class="o">
+                        <b v-if="!item.boolean">{{ getResults(item.value) }}</b>
+                        <b v-else>{{ item.options[item.value()] }}</b>
+                    </div>
                 </div>
                 <Table v-else :tableData="item.value" />
             </div>
@@ -35,5 +37,9 @@ const props = defineProps(["outputs"]);
     flex-direction: column;
     width: 160px;
     align-items: center;
+}
+.o {
+    background-color: #fff;
+    padding: 2px;
 }
 </style>
