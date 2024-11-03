@@ -7,11 +7,7 @@ const inputs = defineProps(["inputs"]);
     <label v-for="input in inputs" class="nnn">
         <i>{{ input.title }} {{ parenthesis(input.unit) }}</i>
         <select v-model="input.value">
-            <option
-                v-for="elem in input.array"
-                :value="elem"
-                :selected="elem === input.value"
-            >
+            <option v-for="elem in input.array" :value="elem" :selected="elem === input.value">
                 {{ elem }}
             </option>
         </select>

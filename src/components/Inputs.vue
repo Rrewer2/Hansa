@@ -9,18 +9,9 @@ const { title, inputs } = defineProps(["title", "inputs"]);
         <div class="ppp">
             <label v-for="item in inputs" class="nnn">
                 <i>{{ item.title }} ({{ item.unit }})</i>
-                <input
-                    v-if="!item.select"
-                    type="number"
-                    min="0"
-                    v-model="item.value"
-                />
+                <input v-if="!item.select" type="number" min="0" v-model="item.value" />
                 <select v-else v-model="item.value">
-                    <option
-                        v-for="elem in item.array"
-                        :value="elem"
-                        :selected="elem === item.value"
-                    >
+                    <option v-for="elem in item.array" :value="elem" :selected="elem === item.value">
                         {{ elem }}
                     </option>
                 </select>
@@ -33,6 +24,7 @@ const { title, inputs } = defineProps(["title", "inputs"]);
     display: flex;
     justify-content: space-around;
 }
+
 .nnn {
     margin: 0 1px;
     display: flex;

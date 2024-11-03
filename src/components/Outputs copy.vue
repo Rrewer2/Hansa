@@ -1,22 +1,18 @@
 <script setup>
 import { getResults, titleFromArray, parenthesis } from "../services/functions";
 import Table from "./Table.vue";
-import { sqr } from "../services/functions";
-const { outputs } = defineProps(["outputs"]);
-
+const props = defineProps(["outputs"]);
 </script>
 
 <template>
     <article>
         <h3>Wyniki</h3>
-        <!-- <div class="ppp">
-            <div v-for="item in outputs">
+        <div class="ppp">
+            <div v-for="item in props.outputs">
                 <div v-if="!item.table" class="nnn">
-                    <i
-                        >{{ item.title }} {{ parenthesis(item.unit) }}<br />{{
-                            titleFromArray(item.types)
-                        }}</i
-                    >
+                    <i>{{ item.title }} {{ parenthesis(item.unit) }}<br />{{
+                        titleFromArray(item.types)
+                    }}</i>
                     <div class="o">
                         <b v-if="!item.boolean">{{ getResults(item.value) }}</b>
                         <b v-else>{{ item.options[item.value()] }}</b>
@@ -24,7 +20,7 @@ const { outputs } = defineProps(["outputs"]);
                 </div>
                 <Table v-else :tableData="item.value" />
             </div>
-        </div> -->
+        </div>
     </article>
 </template>
 

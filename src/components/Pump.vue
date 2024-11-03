@@ -35,10 +35,12 @@ div {
     height: 20vh;
     z-index: 500;
 }
+
 svg {
     /* background-color: #ffc400; */
     width: 100%;
 }
+
 p {
     position: relative;
     left: 5vw;

@@ -13,14 +13,7 @@ const motorCalculation = () => motorData.find(N => N >= Power());
             <line x1="79" y1="48" x2="96" y2="48" stroke="black" />
             <line x1="79" y1="52" x2="96" y2="52" stroke="black" />
             <line x1="96" y1="42" x2="96" y2="58" stroke="black" />
-            <text
-                x="50"
-                y="60"
-                font-family="Arial"
-                font-size="30"
-                fill="black"
-                text-anchor="middle"
-            >
+            <text x="50" y="60" font-family="Arial" font-size="30" fill="black" text-anchor="middle">
                 M
             </text>
         </svg>
@@ -36,11 +29,13 @@ div {
     height: 10vw;
     z-index: 500;
 }
+
 svg {
     position: relative;
     /* background-color: #ffc400; */
     width: 100%;
 }
+
 p {
     position: relative;
     /* left: 0vw; */

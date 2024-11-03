@@ -14,12 +14,7 @@ const { data } = defineProps(["data"]);
             <img src="../resources/space.svg" alt="#" />
             <!-- <img src="../resources/cylinder.svg" alt="#" /> -->
             <img src="../resources/cylinder-pipe.svg" alt="#" />
-            <img
-                class="stick"
-                :class="'left'"
-                src="../resources/cylinder-stick.svg"
-                alt="#"
-            />
+            <img class="stick" :class="'left'" src="../resources/cylinder-stick.svg" alt="#" />
         </div>
         <div class="wrap">
             <img src="../resources/space.svg" alt="#" />
@@ -53,18 +48,22 @@ const { data } = defineProps(["data"]);
     width: 10vw;
     height: 20vh;
 }
+
 .wh80 {
     position: fixed;
     width: 40vw;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
 .stick {
     transition: 5s linear 1s;
 }
+
 .left {
     transform: translate(-8vh, 0);
 }
+
 .right {
     transform: translate(-20vh, 0);
 }

@@ -19,14 +19,7 @@
             <circle cx="50" cy="50" r="14" fill="white" />
             <polygon points="40,40 46,49 49,46" fill="black" />
             <line x1="47" y1="47" x2="60" y2="60" stroke="black" />
-            <line
-                x1="65"
-                y1="50"
-                x2="100"
-                y2="50"
-                stroke="red"
-                stroke-width="5"
-            />
+            <line x1="65" y1="50" x2="100" y2="50" stroke="red" stroke-width="5" />
         </svg>
         <!-- <p>{{ coolerCalculation(P01) }}</p> -->
     </div>
@@ -39,10 +32,12 @@ div {
     height: 20vh;
     z-index: 500;
 }
+
 svg {
     /* background-color: #ffc400; */
     width: 100%;
 }
+
 p {
     position: relative;
     left: 5vw;
