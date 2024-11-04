@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+    <line x1="35" y1="640" x2="35" y2="650" stroke="#000" stroke-width="2"/>
+    <line x1="45" y1="640" x2="45" y2="650" stroke="#000" stroke-width="2"/>
+     <path d="M 30 640 A 10 10 0 0 1 50 640" fill="none" stroke="black" stroke-width="2"/>
+    <path d="M40 680v50-1" stroke="black" stroke-width="2"/>
+    <path d="M15 670l25-25 25 25-25 25z" stroke="black" stroke-width="2" fill="white"/>
+    <path d="M15 670h50-1" stroke="black" stroke-dasharray="5 5" stroke-width="0.5"/>
+</svg>

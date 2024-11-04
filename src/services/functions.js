@@ -4,7 +4,7 @@ export const dif = (D, d) => sqr(D) / (sqr(D) - sqr(d));
 
 const isString = variable => typeof variable === "string";
 
-export const round = (num, i = 2) => isString(num) ? num :  Math.trunc(num * 10) / 10 ?? "-";
+export const round = (num) => isString(num) ? num :  Math.trunc(num * 10) / 10 ?? "-";
 
 export const getId = (key) => key + Date.now(); 
 
@@ -56,7 +56,7 @@ export const hkshCounting = ( { D, d, L }, Q, p, length = 1 ) => {
     const vIn = v(L, tIn);
     const wall = wallThick(D, p);
 
-    return { VD, Vd, tOut, tIn, tC, FOut, FIn, vOut, vIn, wall };
+    return { FOut, FIn, tOut, tIn, tC, VD, Vd, vOut, vIn, wall };
 }
 
 export const buckling = ( { D, d, L }, p) => {
@@ -101,11 +101,11 @@ export const agregatCounting = (project, meta) => {
 
 export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
     const P  = Power(Q1,p1);
-    const VFU = round(Q1 / 1.45);
-    const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q > Q1 && p > p1)[0];
+    const VFU = round(Q1 / 1.43);
+    const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1)[0];
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipeT = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k)[0];
-    return { P, VFU, pipeP, pipeT };
+    return { P, VFU, pipeP, pipeT, QBack: Q1* k };
 };
 
 export const filtrationD = (arr, D) => arr.filter(el => el < D);

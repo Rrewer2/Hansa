@@ -39,7 +39,7 @@ const hkshData = ref(pumpData.HKSH);
             }" @delCyl="() => {
                 hkshData = hkshData.filter(({ id }) => id !== muscle.id);
                 $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id });
-            }" :class="buckling(muscle, pumpData.p)" />
+            }" :class="buckling(muscle, pumpData.p)" class="my-2 border-no" />
         <div class="flex-row flex-left pl-25">
             <button @click="() => $emit('addCyl')" class="btn-add my-2">
                 + HKSH

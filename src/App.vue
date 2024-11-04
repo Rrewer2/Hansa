@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from "vue";
-import PumpUnit from "./components/PumpUnit.vue"
+import PumpUnit from "./components/PumpUnit.vue";
 import { powerUnitCounting, agregatCounting, getId, agregatTitle } from "./services/functions";
 import { tankData } from "./services/data";
+import Navbar from "./components/Navbar.vue";
+import Scheme from "./components/Scheme.vue";
 const cylInit = { D: 100, d: 60, L: 500 };
 const pumpInit = { Q: 7.5, p: 200 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
@@ -20,51 +22,56 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
+const stan = ref([true, false, false, false]);
 </script>
 
 <template>
     <main class="app">
-        <section class="">
-            <h1>Agregat {{ agregatTitle(project, meta.tank) }}</h1>
-            <div class="flex-row flex-left">
-                <p v-for="r in agregatCounting(project, meta.tank)">{{ r }}</p>
-                <select v-model="meta.tank">
-                    <option v-for="(_, t) in tankData" :value="t">
-                        {{ t }}
-                    </option>
-                </select>
-            </div>
-        </section>
-        <section v-for="( { id, unit }, k ) in project" class="border px-5 my-2">
-            <div :key="id">
-                <h2 class="text-left">
-                    <button :disabled="project.length < 2" @click="delUnit(k)">X</button>
-                    Zespół pompujacy {{ powerUnitCounting(unit) }}
-                </h2>
-                <div v-for="(pump, i) in unit" class="border-l pl-25 my-2">
-                    <PumpUnit :key="pump.id" :pumpData="pump" @pumpUpdate="(a) => unit[i] = a"
-                        @addCyl="() => addCyl(k, i)">
-                        <button :disabled="unit.length < 2" @click="() => delPump(k, pump.id)">
-                            X
+        <article :class="!stan[0] ? 'invisible' : ''">
+            <section class="">
+                <h1>Agregat {{ agregatTitle(project, meta.tank) }}</h1>
+                <div class="flex-row flex-left">
+                    <p v-for="r in agregatCounting(project, meta.tank)">{{ r }}</p>
+                    <select v-model="meta.tank">
+                        <option v-for="(_, t) in tankData" :value="t">
+                            {{ t }}
+                        </option>
+                    </select>
+                </div>
+            </section>
+
+            <section v-for="( { id, unit }, k ) in project" class="border px-5 my-2">
+                <div :key="id">
+                    <h2 class="text-left">
+                        <button :disabled="project.length < 2" @click="delUnit(k)">X</button>
+                        Zespół pompujacy {{ powerUnitCounting(unit) }}
+                    </h2>
+                    <div v-for="(pump, i) in unit" class="border-l pl-25 my-2">
+                        <PumpUnit :key="pump.id" :pumpData="pump" @pumpUpdate="(a) => unit[i] = a"
+                            @addCyl="() => addCyl(k, i)">
+                            <button :disabled="unit.length < 2" @click="() => delPump(k, pump.id)">
+                                X
+                            </button>
+                        </PumpUnit>
+                    </div>
+                    <div class="flex-row flex-left pl-25">
+                        <button @click="() => addPump(k)" class="btn-add my-2">
+                            + Pompa
                         </button>
-                    </PumpUnit>
-                </div>
-                <div class="flex-row flex-left pl-25">
-                    <button @click="() => addPump(k)" class="btn-add my-2">
-                        + Pompa
-                    </button>
-                </div>
+                    </div>
 
+                </div>
+            </section>
+
+            <div class="flex-row flex-left my-2">
+                <button @click="getNewPowerUnit" class="btn-add">
+                    + Zespół pompujacy
+                </button>
             </div>
-        </section>
-
-        <div class="flex-row flex-left my-2">
-            <button @click="getNewPowerUnit" class="btn-add">
-                + Zespół pompujacy
-            </button>
-        </div>
-
+        </article>
+        <Scheme v-if="stan[1]" />
     </main>
+    <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" />
 </template>
 
 <style>
@@ -78,10 +85,8 @@ const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
 .app {
     background-color: rgba(0, 0, 0, 0.15);
     padding: 10px;
+    padding-bottom: 5vh;
     width: 100vw;
-    /* height: 100vh; */
-    /* display: grid;
-    grid-template-columns: 40vw 60vw; */
 }
 
 main {
@@ -128,6 +133,10 @@ button {
     border: solid;
 }
 
+.border-no {
+    border: solid rgba(0, 0, 0, 0);
+}
+
 .bgc-w {
     background-color: #a9bed2;
 }
@@ -157,10 +166,14 @@ button {
 }
 
 .yellow {
-    border: solid 2px yellow;
+    border: solid 1px yellow;
 }
 
 .my-2 {
-    margin: 5px 0;
+    margin: 3px 0;
+}
+
+.invisible {
+    display: none;
 }
 </style>
