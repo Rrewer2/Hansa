@@ -5,6 +5,7 @@ import { powerUnitCounting, agregatCounting, getId, agregatTitle } from "./servi
 import { tankData } from "./services/data";
 import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
+import Oferta from "./components/Oferta.vue";
 const cylInit = { D: 100, d: 60, L: 500 };
 const pumpInit = { Q: 7.5, p: 200 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
@@ -22,7 +23,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([false, true, false, false]);
+const stan = ref([false, false, false, true]);
 </script>
 
 <template>
@@ -70,6 +71,8 @@ const stan = ref([false, true, false, false]);
             </div>
         </article>
         <Scheme v-if="stan[1]" />
+
+        <Oferta v-if="stan[3]" />
     </main>
     <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" :stan="stan" />
 </template>

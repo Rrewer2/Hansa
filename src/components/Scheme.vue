@@ -1,5 +1,4 @@
 <script setup>
-const { invisible } = defineProps(["invisible"]);
 </script>
 
 <template>

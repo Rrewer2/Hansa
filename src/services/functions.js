@@ -101,7 +101,7 @@ export const agregatCounting = (project, meta) => {
 
 export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
     const P  = Power(Q1,p1);
-    const VFU = round(Q1 / 1.43);
+    const VFU = round(Q1 / 1.72);
     const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1)[0];
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipeT = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k)[0];
@@ -160,18 +160,18 @@ export const filtrationD = (arr, D) => arr.filter(el => el < D);
 //         value: 'Power',
 //     },
 // ].map(({title, unit,value}) => ([value, [title, unit]]))));
-const splitJoin = (arr,ö) => {
-    const splitter = (A) => A.split(' ').map(str => str.split(',')); 
-    const svgLeft = (A, ö) => A.map(([x, y]) => ([+x - ö, y]));
-    const svgRight= (A, ö) => A.map(([x, y]) => ([+x + ö, y]));
-    const svgUp= (A, ö) => A.map(([x, y]) => ([x, +y - ö]));
-    const svgDown= (A, ö) => A.map(([x, y]) => ([x, +y + ö]));
-    const a = splitter(arr);
-    console.log('a :>> ', a);
-    const b = svgUp(a, 50);
-    console.log('b :>> ', b);
-    const c = b.map((arr) => arr.join(',')).join(' ');
-    console.log('c :>> ', c);
-    return c;
-};
-console.log(splitJoin('380,535 380,565 410,565 410,535'));
+// const splitJoin = (arr,ö) => {
+//     const splitter = (A) => A.split(' ').map(str => str.split(',')); 
+//     const svgLeft = (A, ö) => A.map(([x, y]) => ([+x - ö, y]));
+//     const svgRight= (A, ö) => A.map(([x, y]) => ([+x + ö, y]));
+//     const svgUp= (A, ö) => A.map(([x, y]) => ([x, +y - ö]));
+//     const svgDown= (A, ö) => A.map(([x, y]) => ([x, +y + ö]));
+//     const a = splitter(arr);
+//     console.log('a :>> ', a);
+//     const b = svgUp(a, 50);
+//     console.log('b :>> ', b);
+//     const c = b.map((arr) => arr.join(',')).join(' ');
+//     console.log('c :>> ', c);
+//     return c;
+// };
+// console.log(splitJoin('380,535 380,565 410,565 410,535'));
