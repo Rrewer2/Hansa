@@ -22,7 +22,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([true, false, false, false]);
+const stan = ref([false, true, false, false]);
 </script>
 
 <template>
@@ -71,7 +71,7 @@ const stan = ref([true, false, false, false]);
         </article>
         <Scheme v-if="stan[1]" />
     </main>
-    <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" />
+    <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" :stan="stan" />
 </template>
 
 <style>
@@ -83,7 +83,7 @@ const stan = ref([true, false, false, false]);
 }
 
 .app {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 10px;
     padding-bottom: 5vh;
     width: 100vw;
@@ -96,13 +96,14 @@ main {
 }
 
 input {
-    width: 90px
+    width: 100%
 }
 
 button {
     padding: 0 5px;
     /* height: 50%; */
     background-color: #dcb4b4;
+    border: 1px solid;
 }
 
 .btn-add {
@@ -130,19 +131,23 @@ button {
 }
 
 .border {
-    border: solid;
+    border: 1px solid;
 }
 
 .border-no {
-    border: solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.border-bottom-no {
+    border-bottom: none;
 }
 
 .bgc-w {
-    background-color: #a9bed2;
+    background-color: #ffc67a;
 }
 
 .bgc-g {
-    background-color: #ffffff54;
+    background-color: #3cc4c754;
 }
 
 .pl-25 {

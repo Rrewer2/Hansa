@@ -24,7 +24,7 @@ const title = () => "Siłownik HKSH" + ("000" + HKSH.value.D).slice(-3) + ("000"
         </h4>
         <div class="flex-row pl-25">
             <div v-for="(_, i) in HKSH" class="flex-col">
-                <p class="border bgc-g h-100">{{ text(i) }}</p>
+                <p class="border border-bottom-no bgc-g h-100">{{ text(i) }}</p>
                 <input v-if="i === 'L'" @input="() => $emit('muscleUpdate', { ...HKSH, id })" type="number" min="0"
                     max="3000" v-model="HKSH[i]" class="input" />
                 <select v-else v-model="HKSH[i]" @change="() => $emit('muscleUpdate', { ...HKSH, id })">
@@ -35,7 +35,7 @@ const title = () => "Siłownik HKSH" + ("000" + HKSH.value.D).slice(-3) + ("000"
                 </select>
             </div>
             <div v-for="(el, name) in results" class="flex-col fs-sm">
-                <span class="border bgc-g h-100">{{ text(name) }}</span>
+                <span class="border bgc-g border-bottom-no h-100">{{ text(name) }}</span>
                 <span class="border bgc-w">{{ round(el) }}</span>
             </div>
         </div>
