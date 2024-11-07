@@ -99,14 +99,15 @@ export const agregatCounting = (project, meta) => {
 //     return { Q1, pPmin, pPmax, pTmin, pTmax };
 // };
 
-export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
+export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const P  = Power(Q1,p1);
-    const VFU = round(Q1 / 1.72);
+    const I = P * 1000/ (3**0.5 * 400 * 0.86 * 0.9);
+    const VFU = round(Q1 / n * 1000);
     const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1)[0];
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipeT = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k)[0];
     const pipeS = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1)[0];
-    return { P, VFU, pipeP, pipeT, pipeS, QBack: Q1* k };
+    return { P, I, VFU, pipeP, pipeT, pipeS, QBack: Q1* k };
 };
 
 export const filtrationD = (arr, D) => arr.filter(el => el < D);

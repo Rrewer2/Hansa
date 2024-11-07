@@ -80,3 +80,9 @@ export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Perform
 ];
 
 export const filterData = [];
+
+export const freqData = [1440, 1728, 2880, 720, 3456, 864];
+// const a =  [50, 60];
+// const b = [1,2,4];
+// const a50 = a.map((u) => b.map(j => 60* u*0.96/j)).flat();
+// console.log(a50);

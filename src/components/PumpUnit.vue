@@ -3,11 +3,13 @@ import { ref } from "vue";
 import Hydrocylinder from "./Hydrocylinder.vue";
 import { buckling, hkshCounting, pumpCounting, round } from "../services/functions";
 import { text } from "../services/text";
+import { freqData } from "../services/data";
 const { pumpData } = defineProps(["pumpData"]);
 
 const data = ref({
     Q: pumpData.Q,
     p: pumpData.p,
+    n: pumpData.n
 });
 const hkshData = ref(pumpData.HKSH);
 </script>
@@ -23,8 +25,15 @@ const hkshData = ref(pumpData.HKSH);
                     <span class="border border-bottom-no bgc-g fs-sm px-5">
                         {{ text(ind) }}
                     </span>
-                    <input @input="() => $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id })"
-                        type="number" min="0" v-model="data[ind]" />
+                    <input v-if="ind !== 'n'"
+                        @input="() => $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id })" type="number"
+                        min="0" v-model="data[ind]" />
+                    <select v-else v-model="data[ind]"
+                        @change="() => $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id })">
+                        <option v-for="elem in freqData" :value="elem">
+                            {{ elem }}
+                        </option>
+                    </select>
                 </div>
             </div>
             <div v-for="(el, title) in pumpCounting(pumpData)" class="flex-col fs-sm">

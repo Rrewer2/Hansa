@@ -1,13 +1,13 @@
 <script setup>
 import { ref } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
-import { powerUnitCounting, agregatCounting, getId, agregatTitle } from "./services/functions";
+import { powerUnitCounting, agregatCounting, getId, agregatTitle, round } from "./services/functions";
 import { tankData } from "./services/data";
 import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 const cylInit = { D: 100, d: 60, L: 500 };
-const pumpInit = { Q: 7.5, p: 200 };
+const pumpInit = { Q: 7.5, p: 200, n: 1440 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
 const meta = ref({ tank: 'RA' });
@@ -23,7 +23,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([false, false, false, true]);
+const stan = ref([true, false, false, false]);
 </script>
 
 <template>
@@ -32,7 +32,7 @@ const stan = ref([false, false, false, true]);
             <section class="">
                 <h1>Agregat {{ agregatTitle(project, meta.tank) }}</h1>
                 <div class="flex-row flex-left">
-                    <p v-for="r in agregatCounting(project, meta.tank)">{{ r }}</p>
+                    <p v-for="r in agregatCounting(project, meta.tank)">{{ round(r) }}</p>
                     <select v-model="meta.tank">
                         <option v-for="(_, t) in tankData" :value="t">
                             {{ t }}
