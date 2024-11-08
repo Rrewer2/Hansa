@@ -1,35 +1,11 @@
 <script setup>
 import { ref } from "vue";
-const zlec = ref(`100	HKKA1	74
-200	HKKA2	69
-300	HKKA3	64
-400	HKKA4	59
-500	HKKA5	54
-600	HKKA6	49
-700	HKKA5	44
-800	HKKA8	39
-900	HKKA9	34
-1000	HKKA1	29
-1100	HKKA11	24
-1200	HKKA12	19
-1300	HKKA13	14
-1400	HKKA13	10`);
-const lista = ref(`HKKA1	73
-HKKA2	69
-HKKA3	64
-HKKA4	93
-HKKA5	54
-HKKA6	21
-HKKA5	44
-HKKA8	39
-HKKA9	34
-HKKA7	2
-HKKA11	24
-HKKA17	2
-HKKA17	22`);
-const getDiffBetween = (A1, A2) => {
-  const a1 = A1.split("\n").map(row => row.split('\t'));
-  const a2 = A2.split("\n").map(row => row.split('\t'));
+const zlec = ref(``);
+const lista = ref(``);
+const getDiffBetween = (str1, str2) => {
+  if (!str1.trim().length || !str2.trim().length) return '';
+  const a1 = str1.split("\n").map(row => row.split('\t'));
+  const a2 = str2.split("\n").map(row => row.split('\t'));
   const obj1 = {};
   a1.forEach(([nr, title, N]) => {
     obj1[title] ? obj1[title].push({ N, nr }) : obj1[title] = [{ N, nr }];

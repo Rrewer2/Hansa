@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="#FFF">
-    <polygon points="10,705 10,715 590,715 590,705"  stroke="#000" stroke-width="2"/>Pokrywa
-    <polygon points="10,715 10,725 590,725 590,715"  stroke="#000" stroke-width="2"/>Gora zbiornika
-    <polygon points="20,725 30,935 570,935 580,725"  stroke="#000" stroke-width="2"/>Korpus zbiornika
-    <polygon points="40,935 40,975 70,975 90,935"  stroke="#000" stroke-width="2"/>Noga lewa
-    <polygon points="560,935 560,975 530,975 510,935"  stroke="#000" stroke-width="2"/>Noga prawa
-    <polygon points="50,750 50,850 70,850 70,750"  stroke="#000" stroke-width="2"/>wskaznik poziomu
-    <polygon points="55,755 55,845 65,845 65,755"  stroke="#000" stroke-width="2"/>wskaznik poziomu
-    <polygon points="20,910 20,930 40,910 40,930" fill="black"/>Zlew
+    <polygon points="10,705 10,715 590,715 590,705" stroke="#000" stroke-width="2"/>Pokrywa
+    <polygon points="10,715 10,725 590,725 590,715" stroke="#000" stroke-width="2"/>Gora zbiornika
+    <polygon points="20,725 30,935 570,935 580,725" stroke="#000" stroke-width="2"/>Korpus zbiornika
+    <polygon points="40,935 40,975 70,975 90,935" stroke="#000" stroke-width="2"/>Noga lewa
+    <polygon points="560,935 560,975 530,975 510,935" stroke="#000" stroke-width="2"/>Noga prawa
+    <polygon points="50,750 50,850 70,850 70,750" stroke="#000" stroke-width="2"/>wskaznik poziomu
+    <polygon points="55,755 55,845 65,845 65,755" stroke="#000" stroke-width="2"/>wskaznik poziomu
+    <polygon points="19,910 19,930 39,910 39,930" stroke="#000"  stroke-width="2"/>Zlew
     <text x="420" y="700" font-family="Arial" font-size="10" fill="black" text-anchor="middle">G3/4</text>
     <text x="470" y="700" font-family="Arial" font-size="10" fill="black" text-anchor="middle">G3/4</text>
     <text x="520" y="700" font-family="Arial" font-size="10" fill="black" text-anchor="middle">G3/4</text>

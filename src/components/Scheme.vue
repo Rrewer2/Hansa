@@ -1,4 +1,6 @@
 <script setup>
+import Filter from './Filter.vue';
+
 </script>
 
 <template>
@@ -8,9 +10,13 @@
         <img src="../resources/tank.svg" alt="#" class="" />
         <img src="../resources/FIBL.svg" alt="#" class="" />
         <img src="../resources/motor-b35-pumpX3.svg" alt="#" class="" />
-        <!-- <img src="../resources/pumpentraeger.svg" alt="#" class="" />
+        <img src="../resources/coolerUp.svg" alt="#" class="" />
+        <!-- <img src="../resources/coolerDown.svg" alt="#" class="" /> -->
+        <!-- <img src="../resources/filterUp.svg" alt="#" class="" /> -->
+        <!-- <img src="../resources/filterDown.svg" alt="#" class="" /> -->
+        <img src="../resources/pumpentraeger.svg" alt="#" class="" />
         <img src="../resources/motor.svg" alt="#" class="" />
-        <img src="../resources/pump.svg" alt="#" class="" /> -->
+        <img src="../resources/pump.svg" alt="#" class="" />
         <!-- <img src="../resources/HKEM.svg" alt="#" class="hkem" /> -->
         <!-- <main v-if="invisible" class=""> -->
         <!-- <article class=" contener flex-col l"> -->
@@ -26,7 +32,8 @@
         <!-- </main> -->
 
         <!-- <Motor :Power="data.Power" />
-            <Pump /> -->
+        <Pump /> -->
+        <Filter :x="95.5" :y="65" angle="0" />
     </div>
 </template>
 
@@ -42,7 +49,7 @@
 img {
     display: block;
     position: absolute;
-    width: 40%;
+    width: 50%;
     bottom: 0;
     left: 100px;
 }

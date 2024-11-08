@@ -5,28 +5,42 @@
   <line x1="350" y1="550" x2="350" y2="800" stroke="#000" stroke-width="2"/>
 
   <line x1="140" y1="640" x2="350" y2="640" stroke="#000" stroke-width="2"/>
-  <circle cx="140" cy="640" r="50" stroke="black" stroke-width="2px" fill="white"/>
+  <circle cx="140" cy="640" r="50" stroke="black" stroke-width="2" fill="white"/>
   <text x="140" y="665" font-family="Arial" font-size="70" fill="black" text-anchor="middle">M</text>
   <polygon points="90,703 100,703 110,690 170,690 180,703 190,703 180,703 170,690 110,690 100,703" fill="white" stroke="#000" stroke-width="2"/>Lapy
   
-  <polygon points="190,690 205,690 205,680 240,670 240,610 205,600 205,590 190,590" fill="white" stroke="#000" stroke-width="2"/>
+  <polygon points="190,690 205,690 205,680 240,670 240,610 205,600 205,590 190,590" fill="white" stroke="#000" stroke-width="2"/>kielich
 
-  <circle cx="260" cy="640" r="20" stroke="black" stroke-width="2px" fill="white"/>
+  <circle cx="260" cy="640" r="20" stroke="black" stroke-width="2" fill="white"/>pompa 1
   <polygon points="255,635 265,635 260,620" fill="black"/>
 
-  <circle cx="305" cy="640" r="20" stroke="black" stroke-width="2px" fill="white"/>
+  <circle cx="305" cy="640" r="20" stroke="black" stroke-width="2" fill="white"/>pompa 2
   <polygon points="300,635 310,635 305,620" fill="black"/>
 
-  <circle cx="350" cy="640" r="20" stroke="black" stroke-width="2px" fill="white"/>
+  <circle cx="350" cy="640" r="20" stroke="black" stroke-width="2" fill="white"/>pompa 3
   <polygon points="345,635 355,635 350,620" fill="black"/>
+
+    <polygon points="370,600 370,620 390,620 390,600" stroke="#000" stroke-width="1"  stroke-dasharray="5 2" fill="white" />
 
     <line x1="260" y1="500" x2="380" y2="500" stroke="#000" stroke-width="2"/>
     <line x1="305" y1="550" x2="380" y2="550" stroke="#000" stroke-width="2"/>
     <line x1="350" y1="600" x2="380" y2="600" stroke="#000" stroke-width="2"/>
     <polygon points="380,485 380,515 410,515 410,485" stroke="#000" stroke-width="2" fill="white"/>
     <polygon points="380,535 380,565 410,565 410,535" stroke="#000" stroke-width="2" fill="white"/>
+
     <polygon points="380,585 380,615 410,615 410,585" stroke="#000" stroke-width="2" fill="white"/>
-    <circle cx="260" cy="500" r="3" stroke="black" stroke-width="2px" fill="black"/>
-    <circle cx="305" cy="550" r="3" stroke="black" stroke-width="2px" fill="black"/>
-    <circle cx="350" cy="600" r="3" stroke="black" stroke-width="2px" fill="black"/>
+    <line x1="385" y1="600" x2="385" y2="611" stroke="#000" stroke-width="2"/>strzalka
+    <line x1="385" y1="610" x2="400" y2="610" stroke="#000" stroke-width="2"/>strzalka
+    <polygon points="398,613 398,607 408,610" fill="black"/>strzalka
+    <line x1="390" y1="582" x2="405" y2="582" stroke="#000" stroke-width="0.5"/>sprezyna
+    <line x1="390" y1="582" x2="405" y2="577" stroke="#000" stroke-width="0.5"/>sprezyna
+    <line x1="405" y1="577" x2="390" y2="574" stroke="#000" stroke-width="0.5"/>sprezyna
+    <line x1="390" y1="574" x2="400" y2="571" stroke="#000" stroke-width="0.5"/>sprezyna
+    <line x1="385" y1="580" x2="410" y2="571" stroke="#000" stroke-width="1"/>sprezyna
+    <polygon points="407.5,570 409,573 413,570" fill="black"/>strzalka
+
+
+    <circle cx="260" cy="500" r="3" stroke="black" stroke-width="2" fill="black"/>
+    <circle cx="305" cy="550" r="3" stroke="black" stroke-width="2" fill="black"/>
+    <circle cx="350" cy="600" r="3" stroke="black" stroke-width="2" fill="black"/>
 </svg>
