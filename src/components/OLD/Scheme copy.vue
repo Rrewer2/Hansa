@@ -1,7 +1,7 @@
 <script setup>
 // import Motor from "./Motor.vue";
-import Pump from "./Pump.vue";
-import Tank from "./Tank.vue";
+import Pump from "./Scheme/Pump.vue";
+import Tank from "./Scheme/Tank.vue";
 
 // import Input from "./Inputs.vue";
 // const inputs = defineProps(["inputs"]);

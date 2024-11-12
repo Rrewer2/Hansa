@@ -1,0 +1,16 @@
+<script setup>
+const { x, y, h } = defineProps(['x', 'y', 'h']);
+</script>
+
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 300">
+        <path
+            :d="`M${x - 0.2 * h} ${y + h} v${-h * 0.5} h${-h * 0.1} l${h * 0.1} ${-h * 0.45} l${h * 0.1} ${h * 0.45} h${-h * 0.1}`"
+            stroke="black" stroke-width="2" fill="black" />
+        <path
+            :d="`M${x + 0.2 * h} ${y} v${h * 0.5} h${-h * 0.1} l${h * 0.1} ${h * 0.45} l${h * 0.1} ${-h * 0.45} h${-h * 0.1}`"
+            stroke="black" stroke-width="2" fill="black" />
+    </svg>
+</template>
+
+<style scoped></style>

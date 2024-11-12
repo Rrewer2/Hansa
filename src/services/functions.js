@@ -40,7 +40,7 @@ export const getResults = elem =>
         ? elem.map(item => round(item())).join(separator)
         : round(elem());
 
-export const parenthesis = smt => (smt ? `(${smt})` : "");
+export const parenthesis = smt => (smt ? `(${smt})`: "");
 
 export const hkshCounting = ( { D, d, L }, Q, p, length = 1 ) => {
     const SD = S(D);
@@ -63,7 +63,7 @@ export const buckling = ( { D, d, L }, p) => {
     const SD = S(D);
     const FOut = F(p, SD);
     const F1 = FI(d, L);
-    return F1 <= FOut ? 'error' : 1 - FOut / F1 < bucklingSafety / 100 ? 'yellow' : '';
+    return F1 <= FOut ? 'error': 1 - FOut / F1 < bucklingSafety / 100 ? 'yellow': '';
 }
 
 export const powerUnitCounting = (unit) => {
@@ -113,16 +113,16 @@ export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
 export const filtrationD = (arr, D) => arr.filter(el => el < D);
 
 // console.log(Object.fromEntries([
-//     { title: "Nadtłokowa objętość", unit: "l", value: 'VD' },
-//     { title: "Podtłokowa objętość", unit: "l", value: 'Vd' },
+//     { title: "Nadtłokowa objętość", unit: "l", value: 'VD'},
+//     { title: "Podtłokowa objętość", unit: "l", value: 'Vd'},
 //     {
 //         title: "Czas",
 //         unit: "sec",
 //         // types: ["wysuwu", "wsuwu", "cykłu"],
 //         value: 'tOut'
 //     },
-//     { title: "Siła wysuwu", unit: "kG", value: 'FOut' },
-//     { title: "Siła wsuwu", unit: "kG", value: 'FIn' },
+//     { title: "Siła wysuwu", unit: "kG", value: 'FOut'},
+//     { title: "Siła wsuwu", unit: "kG", value: 'FIn'},
 //     {
 //         title: "Szybkość  wysuwu",
 //         unit:"mm/s",
@@ -139,8 +139,8 @@ export const filtrationD = (arr, D) => arr.filter(el => el < D);
 //     //     boolean: true,
 //     //     options: ["Przekroczony", `Mniej niż ${bucklingSafety}%`, "Zachowany"],
 //     // },
-//     { title: "Ścianka cylindra", unit: "mm", value: 'wallThick' },
-//     { title: "Powrót oleju", unit: "l/min", value: 'QBack' },
+//     { title: "Ścianka cylindra", unit: "mm", value: 'wallThick'},
+//     { title: "Powrót oleju", unit: "l/min", value: 'QBack'},
 //     // {
 //     //     title: "Przelot przewodu P",
 //     //     unit: "mm",
@@ -153,7 +153,7 @@ export const filtrationD = (arr, D) => arr.filter(el => el < D);
 //     //     types: ["min", "max"],
 //     //     value: [pipeTmin, pipeTmax],
 //     // },
-//     { title: "Pojemność zbiornika", unit: "l", value: 'tank' },
+//     { title: "Pojemność zbiornika", unit: "l", value: 'tank'},
 //     // { value: tankSize, table: true },
 //     {
 //         title: "Moc silnika",
@@ -162,14 +162,14 @@ export const filtrationD = (arr, D) => arr.filter(el => el < D);
 //     },
 // ].map(({title, unit,value}) => ([value, [title, unit]]))));
 const splitJoin = (arr,ö) => {
-    const splitter = (A) => A.split(' ').map(str => str.split(',')); 
+    const splitter = (A) => A.split('').map(str => str.split(',')); 
     const svgLeft = (A, ö) => A.map(([x, y]) => ([+x - ö, y]));
     const svgRight= (A, ö) => A.map(([x, y]) => ([+x + ö, y]));
     const svgUp= (A, ö) => A.map(([x, y]) => ([x, +y - ö]));
     const svgDown= (A, ö) => A.map(([x, y]) => ([x, +y + ö]));
     const a = splitter(arr);
     const b = svgUp(a, 2);
-    const c = b.map((arr) => arr.join(',')).join(' ');
+    const c = b.map((arr) => arr.join(',')).join('');
     return c;
 };
 // console.log(splitJoin('407.5,572 409,575 413,572'));

@@ -1,5 +1,5 @@
 <script setup>
-import { tankData } from "../services/data";
+import { tankData } from "../../services/data";
 import Select from "./Select.vue";
 const { tank } = defineProps(["tank"]);
 const isObj = el => (el.Size ? el.Size : el);
@@ -42,13 +42,6 @@ const inputs = () => ({
 
 <style scoped>
 label,
-div {
-    width: 10vw;
-    height: 20vh;
-    z-index: 500;
-    position: absolute;
-}
-
 svg {
     /* background-color: #ffc400; */
     width: 100%;

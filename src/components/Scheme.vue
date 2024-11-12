@@ -1,77 +1,71 @@
 <script setup>
-import Filter from './Filter.vue';
+import Biezpiecz from './Scheme/Biezpiecz.vue';
+import Cooler from './Scheme/Cooler.vue';
+import DR1 from './Scheme/DR1.vue';
+import Filter from './Scheme/Filter.vue';
+import Kielich from './Scheme/Kielich.vue';
+import Motor from './Scheme/Motor.vue';
+import NTM from './Scheme/NTM.vue';
+import Pump from './Scheme/Pump.vue';
+import Tank from './Scheme/Tank.vue';
+import Valve from './Scheme/Valve.vue';
 
+const { project } = defineProps(["project"]);
+
+const valveData = [
+    { n: 2, suwak: 'D' },
+    { n: 3, suwak: 'G' },
+    { n: 3, suwak: 'H' },
+    { n: 2, suwak: 'JB' },
+    { n: 3, suwak: 'E' },
+];
+const sectionLength = 200;
+const DR1type = 2;
+const getSL1 = () => !DR1type ? 0 : DR1type === 1 ? sectionLength * 0.75 : sectionLength * 1.5;
 </script>
 
 <template>
     <div class="contener">
-        <img src="../resources/cylinder.svg" alt="#" class="cyl" />
-
-        <img src="../resources/tank.svg" alt="#" class="" />
-        <img src="../resources/FIBL.svg" alt="#" class="" />
-        <img src="../resources/motor-b35-pumpX3.svg" alt="#" class="" />
-        <img src="../resources/coolerUp.svg" alt="#" class="" />
-        <!-- <img src="../resources/coolerDown.svg" alt="#" class="" /> -->
-        <!-- <img src="../resources/filterUp.svg" alt="#" class="" /> -->
-        <!-- <img src="../resources/filterDown.svg" alt="#" class="" /> -->
-        <img src="../resources/pumpentraeger.svg" alt="#" class="" />
-        <img src="../resources/motor.svg" alt="#" class="" />
-        <img src="../resources/pump.svg" alt="#" class="" />
-        <!-- <img src="../resources/HKEM.svg" alt="#" class="hkem" /> -->
-        <!-- <main v-if="invisible" class=""> -->
-        <!-- <article class=" contener flex-col l"> -->
-
-        <!-- <img src="../resources/MZ-HK-HG-03-900x900-1713174267728.jpg" alt="#" class="" />
-    <img src="../resources/MZ-HK-HG-03-900x900-1713174267728.jpg" alt="#" class="" />
-    <img src="../resources/MZ-HK-HG-03-900x900-1713174267728.jpg" alt="#" class="" />
-    <img src="../resources/MZ-HK-HG-03-900x900-1713174267728.jpg" alt="#" class="" /> -->
-        <!-- <img src="../resources/fixed-displacement-pump.svg" alt="#" class="" />
-        <img src="../resources/fixed-displacement-pump.svg" alt="#" class="" />
-        <img src="../resources/fixed-displacement-pump.svg" alt="#" class="" /> -->
-        <!-- </article> -->
-        <!-- </main> -->
-
-        <!-- <Motor :Power="data.Power" />
-        <Pump /> -->
-        <Filter :x="95.5" :y="65" angle="0" />
+        <Tank :x="100" :y="150" angle="0" class="absolut poziom0" />
+        <Filter :x="550" :y="80" angle="0" class="absolut poziom0" />
+        <Cooler :x="550" :y="0" angle="0" class="absolut poziom0" />
+        <Biezpiecz :x="100" :y="100" :a="30" class="absolut poziom1" />
+        <Pump :x="300" :y="95" angle="0" class="absolut poziom0" />
+        <Motor :x="200" :y="95" angle="0" class="absolut poziom0" />
+        <Kielich :x="240" :y="95" angle="0" class="absolut poziom0" />
+        <NTM :x="500" :y="80" angle="0" class="absolut poziom0" />
+        <DR1 :x="100" :y="0" :type="DR1type" :N="valveData.length" :sl="sectionLength" :sl1="getSL1()"
+            class="absolut poziom1" />
+        <Valve v-for="el, i in valveData" :x="100 + getSL1() + i * (sectionLength * 1.1)"
+            :y="(DR1type ? 2 * sectionLength / 3 : 0.5 * sectionLength / 3) + sectionLength / 5" :data="el"
+            :sl="sectionLength" class="absolut poziom1" />
     </div>
 </template>
 
 <style scoped>
-.l {
-    justify-content: center;
-}
-
 .contener {
-    height: 90vh;
+    position: relative;
+    height: 100vh;
+    background-color: #969696;
 }
 
-img {
+.absolut {
     display: block;
     position: absolute;
-    width: 50%;
-    bottom: 0;
-    left: 100px;
+    /* height: 25%; */
+    width: 110%;
+    left: 0;
 }
 
-.hkem {
-    bottom: 0px;
+.poziom0 {
+    top: 66.66%;
 }
 
-.cyl {
-    bottom: auto;
-    top: 0;
+.poziom1 {
+    top: 33.33%;
 }
 
-/* .tank {
-    width: 600px;
-    bottom: 0;
-    left: 100px;
+.poziom2 {
+    top: 0%;
 }
-
-.motor {
-    width: 600px;
-    bottom: 0;
-    left: 100px;
-} */
 </style>

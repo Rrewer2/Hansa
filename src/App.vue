@@ -70,8 +70,8 @@ const stan = ref([false, true, false, false]);
                 </button>
             </div>
         </article>
-        <Scheme v-if="stan[1]" />
 
+        <Scheme v-if="stan[1]" :project="project" />
         <Oferta v-if="stan[3]" />
     </main>
     <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" :stan="stan" />
@@ -86,15 +86,17 @@ const stan = ref([false, true, false, false]);
 }
 
 .app {
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    padding-bottom: 5vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* padding: 10px; */
+    /* padding-bottom: 5vh; */
     width: 100vw;
 }
 
 svg {
     display: block;
-    width: 100%;
+    width: 500%;
+    /* position: absolute; */
+    border: #ffc67a solid 2px;
 }
 
 main {
@@ -104,7 +106,7 @@ main {
 }
 
 input {
-    width: 100%
+    /* min-width: 60px; */
 }
 
 button {
