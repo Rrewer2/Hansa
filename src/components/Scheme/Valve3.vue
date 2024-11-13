@@ -1,12 +1,24 @@
 <script setup>
-import ValveA from './ValveA.vue';
-import ValveB from './ValveB.vue';
+import ValveX from './ValveX.vue';
+import ValveII from './ValveII.vue';
 import Valve3E from './Valve3E.vue';
 import Valve3G from './Valve3G.vue';
 import Valve3H from './Valve3H.vue';
 import Valve3J from './Valve3J.vue';
+import Valve3F from './Valve3F.vue';
+import Valve3L from './Valve3L.vue';
+import Valve3M from './Valve3M.vue';
+import Valve3P from './Valve3P.vue';
+import Valve3U from './Valve3U.vue';
+import Valve3W from './Valve3W.vue';
+import ValveLeft from './ValveLeft.vue';
+import ValveRight from './ValveRight.vue';
 
 const { x, y, data, h } = defineProps(['x', 'y', 'data', 'h']);
+const position = {
+    E: -1, J: -1, H: -1, L: -1, M: -1, U: -1, W: -1,
+    G: 1, F: 1, P: 1,
+};
 </script>
 
 <template>
@@ -14,11 +26,21 @@ const { x, y, data, h } = defineProps(['x', 'y', 'data', 'h']);
         <path :d="`M${x} ${y}h${-1.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}v${h} h${h} v${-h}z`" stroke="black"
             stroke-width="1" fill="white" />
         <Valve3H v-if="data.suwak === 'H'" :x="x" :y="y" :h="h" />
-        <Valve3G v-if="data.suwak === 'G'" :x="x" :y="y" :h="h" />
         <Valve3J v-if="data.suwak === 'J'" :x="x" :y="y" :h="h" />
         <Valve3E v-if="data.suwak === 'E'" :x="x" :y="y" :h="h" />
-        <ValveB :x="x + h" :y="y" :h="h" />
-        <ValveA :x="x - h" :y="y" :h="h" />
+        <Valve3L v-if="data.suwak === 'L'" :x="x" :y="y" :h="h" />
+        <Valve3M v-if="data.suwak === 'M'" :x="x" :y="y" :h="h" />
+        <Valve3U v-if="data.suwak === 'U'" :x="x" :y="y" :h="h" />
+        <Valve3W v-if="data.suwak === 'W'" :x="x" :y="y" :h="h" />
+
+        <ValveX :x="x + position[data.suwak] * (h)" :y="y" :h="h" />
+        <ValveII :x="x - position[data.suwak] * (h)" :y="y" :h="h" />
+        <ValveLeft :x="x - h * 1.5" :y="y" :h="h" />
+        <ValveRight :x="x + h * 1.5" :y="y" :h="h" />
+
+        <Valve3F v-if="data.suwak === 'F'" :x="x" :y="y" :h="h" />
+        <Valve3P v-if="data.suwak === 'P'" :x="x" :y="y" :h="h" />
+        <Valve3G v-if="data.suwak === 'G'" :x="x" :y="y" :h="h" />
     </svg>
 </template>
 
