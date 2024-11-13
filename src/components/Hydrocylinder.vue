@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { round, filtrationD } from "../services/functions";
+import { round, filtrationD, HKSHTitle } from "../services/functions";
 import { standartDiameters } from "../services/data";
 import { text } from "../services/text";
 const { data, results } = defineProps(["data", "results"]);
@@ -11,7 +11,6 @@ const HKSH = ref({
     L: data.L,
 });
 const id = ref(data.id);
-const title = () => "Siłownik HKSH" + ("000" + HKSH.value.D).slice(-3) + ("000" + HKSH.value.d).slice(-3) + ("000" + HKSH.value.L).slice(-4);
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const title = () => "Siłownik HKSH" + ("000" + HKSH.value.D).slice(-3) + ("000"
             <button @click="() => $emit('delCyl')" class="el">
                 X
             </button>
-            {{ title() }}
+            {{ HKSHTitle(HKSH.D, HKSH.d, HKSH.L) }}
         </h4>
         <div class="flex-row pl-25">
             <div v-for="(_, i) in HKSH" class="flex-col">

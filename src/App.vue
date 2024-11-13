@@ -6,7 +6,7 @@ import { tankData } from "./services/data";
 import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
-const cylInit = { D: 100, d: 60, L: 500 };
+const cylInit = { D: 100, d: 60, L: 500, z: 1, type: 22, form: 'hor' };
 const pumpInit = { Q: 7.5, p: 200, n: 1440 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
