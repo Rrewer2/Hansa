@@ -9,12 +9,11 @@ export const standartDiameters = [ 160, 155, 150, 145, 140, 135, 130, 125, 120, 
 export const bucklingSafety = 5;
 
 export const tankData = { RA: [ 3, 6, 12, 20, 30, 44, 70, 130, // { // Size: 3, // CoolingCapacity: 0.16, // }, // { // Size: 6, // CoolingCapacity: 0.36, // }, // { // Size: 12, // CoolingCapacity: 0.6, // }, // { // Size: 20, // CoolingCapacity: 0.72, // }, // { // Size: 30, // CoolingCapacity: 0.92, // }, // { // Size: 44, // CoolingCapacity: 1.04, // }, // { // Size: 70, // CoolingCapacity: 1.16, // }, // { // Size: 130, // CoolingCapacity: 2.1, // }, 
-    ],     BSK: [40, 63, 100, 160, 200, 250, 300, 400], SBT: [6, 12, 25, 40, 70, 100, 160, 250], BEK: [12, 20, 35, 50, 60, 75, 100, 150, 225, 300
+ ], BSK: [40, 63, 100, 160, 200, 250, 300, 400], SBT: [6, 12, 25, 40, 70, 100, 160, 250], BEK: [12, 20, 35, 50, 60, 75, 100, 150, 225, 300
 ],
 };
 
-export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200, // { P: "-" }, // { P: 0.75 }, // { P: 1.1 }, // { P: 1.5 }, // { P: 2.2 }, // { P: 3 }, // { P: 4 }, // { P: 5.5 }, // { P: 7.5 }, // { P: 11 }, // { P: 15 }, // { P: 18.5 }, // { P: 22 }, // { P: 30 }, // { P: 37 }, // { P: 45 }, // { P: 55 }, // { P: 75 }, // { P: 90 }, // { P: 110 }, // { P: 132 }, // { P: 160 }, // { P: 200 },
-];
+export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
 
 export const screwArr = [12.9, 10.9, 8.8, 6.8, 6.6, 5.8];
 
@@ -31,50 +30,6 @@ export const pipesData = { 'L06-1': { p: 300, Q: 4 }, 'L08-1': { p: 248, Q: 5 },
 
 export const pipesSData = { 'L12-1.5': { Q: 7 }, 'L15-1.5': { Q: 12 }, 'L18-2': { Q: 18 }, 'L22-2': { Q: 25 }, 'L28-2.5': { Q: 43 }, 'L35-3': { Q: 70 }, 'L42-3': { Q: 100 }, 'L42-3': { Q: 100 },
 };
-// [
-// [6, 1, 4, 470, 396],
-// [6, 1.5, 3, 666, 526],
-// [8, 1, 6, 352, 307],
-// [8, 1.5, 5, 499, 412],
-// [8, 2, 4, 705, 558],
-// [10, 1, 8, 282, 249],
-// [10, 1.5, 7, 423, 357],
-// [10, 2, 6, 564, 463],
-// [12, 1, 10, 235, 212],
-// [12, 1.5, 9, 353, 303],
-// [12, 2, 8, 470, 396],
-// [12, 2.5, 7, 588, 474],
-// [14, 2, 10, 403, 346],
-// [15, 1.5, 12, 282, 249],
-// [15, 2, 11, 376, 325],
-// [16, 2, 12, 352, 307],
-// [16, 2.5, 11, 441, 370],
-// [18, 1.5, 15, 235, 209],
-// [18, 2, 14, 313, 276],
-// [18, 2.5, 13, 392, 333],
-// [20, 2, 16, 282, 250],
-// [20, 2.5, 15, 353, 303],
-// [20, 3, 14, 423, 361],
-// [20, 4, 12, 564, 463],
-// [22, 1.5, 19, 192, 173],
-// [22, 2, 18, 256, 229],
-// [22, 2.5, 17, 320, 278],
-// [22, 3, 16, 384, 332],
-// [25, 2.5, 20, 282, 248],
-// [25, 3, 19, 338, 296],
-// [25, 4, 17, 451, 382],
-// [28, 1.5, 25, 151, 138],
-// [28, 2, 24, 201, 183],
-// [28, 2.5, 23, 252, 223],
-// [28, 3, 22, 302, 267],
-// [30, 2.5, 25, 235, 209],
-// [30, 3, 24, 282, 250],
-// [30, 4, 32, 376, 325],
-// [30, 5, 20, 470, 396],
-// [35, 2, 31, 161, 148],
-// [35, 3, 29, 242, 216],
-// [35, 4, 27, 322, 283],
-// ];
 
 export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Performance: { min: 0.021, max: 0.031 }, }, { Model: "2010K", Flow: { min: 20, max: 100 }, Performance: { min: 0.052, max: 0.06 }, }, { Model: "2015K", Flow: { min: 20, max: 200 }, Performance: { min: 0.084, max: 0.101 }, }, { Model: "2020K", Flow: { min: 20, max: 250 }, Performance: { min: 0.099, max: 0.12 }, }, { Model: "2024K", Flow: { min: 20, max: 250 }, Performance: { min: 0.165, max: 0.214 }, }, { Model: "2030K", Flow: { min: 50, max: 300 }, Performance: { min: 0.257, max: 0.309 }, }, { Model: "2040K", Flow: { min: 50, max: 350 }, Performance: { min: 0.337, max: 0.425 }, }, { Model: "2050K", Flow: { min: 50, max: 400 }, Performance: { min: 0.447, max: 0.635 }, },
 ];
@@ -82,7 +37,34 @@ export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Perform
 export const filterData = [];
 
 export const freqData = [1440, 1728, 2880, 720, 3456, 864];
-// const a =  [50, 60];
-// const b = [1,2,4];
-// const a50 = a.map((u) => b.map(j => 60* u*0.96/j)).flat();
-// console.log(a50);
+
+export const pumpData = { HK2P4102EOOA: { CC: '4,2', LITRY: '6,0', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185 },
+ HK2P4302EOOA: { CC: '6', LITRY: '8,6', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185 },
+ HK2P4502EOOA: { CC: '8,4', LITRY: '12,0', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185  },
+ HK2P4702EOOA: { CC: '10,8', LITRY: '15,4', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185  },
+ HK2P4902EPOA: { CC: '14,4', LITRY: '20,6', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185  },
+ HK2P5102EPOA: { CC: '16,8', LITRY: '24,0', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185  },
+ HK2P5302EPOA: { CC: '19,2', LITRY: '27,5', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185 },
+ HK2P5502EPOA: { CC: '22,8', LITRY: '32,6', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185 },
+ HK2P5702EQPA: { CC: '26,2', LITRY: '37,5', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
+ HK2P6102EQPA: { CC: '30', LITRY: '42,9', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
+ HK2P5902EQPA: { CC: '34,2', LITRY: '48,9', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
+ HK2P6302EQPA: { CC: '39,6', LITRY: '56,6', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P7002ABAA: { CC: '21,1', LITRY: '30,2', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P7202ABAA: { CC: '26,06', LITRY: '37,3', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P7402ABAA: { CC: '32,27', LITRY: '46,1', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P7802ABAA: { CC: '38,47', LITRY: '55,0', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P7902ABAA: { CC: '43,44', LITRY: '62,1', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P8102ABAA: { CC: '50,88', LITRY: '72,8', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
+ HKX3P8302ACBA: { CC: '60,81', LITRY: '87,0', dIn: '62', in: '-', dOut: '51', out: 'WDS3100', pmax:185 },
+ 
+ HKKP2004D082E2L: { CC: '4,95', LITRY: '7,1', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320 },
+ HKKP2006D082E2L: { CC: '6,61', LITRY: '9,5', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
+ HKKP2008D082E2L: { CC: '8,26', LITRY: '11,8', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
+ HKKP2011D082E2L: { CC: '11,23', LITRY: '16,1', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
+ HKKP2014D082E2L: { CC: '14,53', LITRY: '20,8', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
+ HKKP2016D082E2L: { CC: '16,85', LITRY: '24,1', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
+ HKKP2020D082E2L: { CC: '21,14', LITRY: '30,2', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
+ HKKP2025D082E2L: { CC: '26,42', LITRY: '37,8', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
+ HKKP2031D082E2L: { CC: '33,03', LITRY: '47,2', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320 }
+ };

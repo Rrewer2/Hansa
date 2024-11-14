@@ -6,7 +6,6 @@ import HKSH2hor from './HKSH2hor.vue';
 import HKSH2ver from './HKSH2ver.vue';
 
 const { x, y, angle, sl, data } = defineProps(['x', 'y', 'angle', 'sl', 'data']);
-console.log('data :>> ', data);
 const H = 300;
 </script>
 

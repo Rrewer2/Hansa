@@ -6,6 +6,7 @@ import { tankData } from "./services/data";
 import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
+import Selector from "./components/Selector.vue";
 const cylInit = { D: 100, d: 60, L: 500, z: 1, type: 22, form: 'hor' };
 const pumpInit = { Q: 7.5, p: 200, n: 1440 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
@@ -23,12 +24,12 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([false, true, false, false]);
+const stan = ref([false, false, true, false]);
 </script>
 
 <template>
     <main class="app">
-        <article :class="!stan[0] ? 'invisible' : ''">
+        <article v-if="stan[0]">
             <section class="">
                 <h1>Agregat {{ agregatTitle(project, meta.tank) }}</h1>
                 <div class="flex-row flex-left">
@@ -72,6 +73,7 @@ const stan = ref([false, true, false, false]);
         </article>
 
         <Scheme v-if="stan[1]" :project="project" />
+        <Selector v-if="stan[2]" :project="project" @pumpSelected="(title) => ({})" />
         <Oferta v-if="stan[3]" />
     </main>
     <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" :stan="stan" />
@@ -87,22 +89,17 @@ const stan = ref([false, true, false, false]);
 
 .app {
     background-color: rgba(0, 0, 0, 0.25);
-    /* padding: 10px; */
     /* padding-bottom: 5vh; */
+    /* height: 100vh; */
     width: 100vw;
+    padding: 0 10px;
 }
 
 svg {
     display: block;
-    width: 500%;
+    /* width: 100%; */
     /* position: absolute; */
-    border: #ffc67a solid 2px;
-}
-
-main {
-    min-height: 100vh;
-    width: 100vw;
-    padding: 0 10px;
+    /* border: #ffc67a solid 2px; */
 }
 
 input {

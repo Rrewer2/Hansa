@@ -12,7 +12,6 @@ import Tank from './Scheme/Tank.vue';
 import Valve from './Scheme/Valve.vue';
 
 const { project } = defineProps(["project"]);
-console.log('project :>> ', project);
 const sectionData = [
     { suwak: 'E', z: 1, type: "33", form: 'hor' },
     { suwak: 'EA', z: 2, type: "00", form: 'hor' },
@@ -22,7 +21,7 @@ const sectionData = [
     { suwak: 'GB', z: 2, type: "11", form: 'ver' },
 ];
 const sectionLength = 180;
-const DR1type = 2;
+const DR1type = 1;
 const getSL1 = () => !DR1type ? 0 : DR1type === 1 ? sectionLength * 0.75 : sectionLength * 1.5;
 </script>
 
@@ -48,7 +47,7 @@ const getSL1 = () => !DR1type ? 0 : DR1type === 1 ? sectionLength * 0.75 : secti
 
 <style scoped>
 .container {
-    position: relative;
+    /* position: relative; */
     height: 100vh;
     background-color: #969696;
 }
@@ -57,7 +56,7 @@ const getSL1 = () => !DR1type ? 0 : DR1type === 1 ? sectionLength * 0.75 : secti
     display: block;
     position: absolute;
     /* height: 25%; */
-    width: 110%;
+    width: 100%;
     left: 0;
 }
 
