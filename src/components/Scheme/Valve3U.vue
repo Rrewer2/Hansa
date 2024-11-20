@@ -3,14 +3,12 @@ const { x, y, h } = defineProps(['x', 'y', 'h']);
 </script>
 
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 300">
-        <path :d="`M${x - 0.2 * h} ${y} v${h / 3} h${-h / 8} h${h / 4}`" stroke="black" stroke-width="3" fill="white" />
-        <path :d="`M${x - 0.2 * h} ${y + h} v${-h / 3} h${-h / 8} h${h / 4}`" stroke="black" stroke-width="3"
-            fill="white" />
-        <path
-            :d="`M${x + 0.2 * h} ${y} v${h * 0.5} h${-h * 0.1} l${h * 0.1} ${h * 0.45} l${h * 0.1} ${-h * 0.45} h${-h * 0.1}`"
-            stroke="black" stroke-width="2" fill="black" />
-    </svg>
+    <path :d="`M${x - 0.2 * h} ${y} v${h / 3} h${-h / 8} h${h / 4}`" stroke="black" stroke-width="3" fill="white" />
+    <path :d="`M${x - 0.2 * h} ${y + h} v${-h / 3} h${-h / 8} h${h / 4}`" stroke="black" stroke-width="3"
+        fill="white" />
+    <path
+        :d="`M${x + 0.2 * h} ${y} v${h * 0.5} h${-h * 0.1} l${h * 0.1} ${h * 0.45} l${h * 0.1} ${-h * 0.45} h${-h * 0.1}`"
+        stroke="black" stroke-width="2" fill="black" />
 </template>
 
 <style scoped></style>

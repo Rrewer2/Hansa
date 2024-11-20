@@ -26,10 +26,10 @@ const hkshData = ref(pumpData.HKSH);
                         {{ text(ind) }}
                     </span>
                     <input v-if="ind !== 'n'"
-                        @input="() => $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id })" type="number"
-                        min="0" v-model="data[ind]" />
+                        @input="() => $emit('pumpUpdate', { ...pumpData, ...data, HKSH: hkshData, id: pumpData.id })"
+                        type="number" min="0" v-model="data[ind]" />
                     <select v-else v-model="data[ind]"
-                        @change="() => $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id })">
+                        @change="() => $emit('pumpUpdate', { ...pumpData, ...data, HKSH: hkshData, id: pumpData.id })">
                         <option v-for="elem in freqData" :value="elem">
                             {{ elem }}
                         </option>
@@ -44,10 +44,10 @@ const hkshData = ref(pumpData.HKSH);
         <Hydrocylinder v-for="(muscle, j) in pumpData.HKSH" :key="muscle.id" :data="muscle"
             :results="hkshCounting(muscle, pumpData.Q, pumpData.p)" @muscleUpdate="(a) => {
                 hkshData[j] = a;
-                $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id });
+                $emit('pumpUpdate', { ...pumpData, ...data, HKSH: hkshData, id: pumpData.id });
             }" @delCyl="() => {
                 hkshData = hkshData.filter(({ id }) => id !== muscle.id);
-                $emit('pumpUpdate', { ...data, HKSH: hkshData, id: pumpData.id });
+                $emit('pumpUpdate', { ...pumpData, ...data, HKSH: hkshData, id: pumpData.id });
             }" :class="buckling(muscle, pumpData.p)" class="my-2 border-no" />
         <div class="flex-row flex-left pl-25">
             <button @click="() => $emit('addCyl')" class="btn-add my-2">

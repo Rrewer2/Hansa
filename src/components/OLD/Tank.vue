@@ -27,16 +27,15 @@ const inputs = () => ({
     <!-- <div v-if="P01() < 0.021">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path d="M50 0v100-1" stroke="blue" stroke-width="5" />
-        </svg>
     </div> -->
     <div class="all">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="#fff">
             <path d="M15 10v70h370V10" stroke="#000" stroke-width="3" />
             <path d="M10 12V5h380V12" stroke="#000" stroke-width="3" />
-        </svg>
-        <!-- <Table :tableData="coolerCalculation" /> -->
-        <Select :inputs="inputs()" />
-        <i>{{ tank() }}</i>
+            <!-- </svg> -->
+            <!-- <Table :tableData="coolerCalculation" /> -->
+            <Select :inputs="inputs()" />
+            <i>{{ tank() }}</i>
     </div>
 </template>
 

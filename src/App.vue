@@ -7,12 +7,12 @@ import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
-const cylInit = { D: 100, d: 60, L: 500, z: 1, type: 22, form: 'hor' };
-const pumpInit = { Q: 7.5, p: 200, n: 1440 };
+const cylInit = { D: 100, d: 60, L: 500, z: 1, suwak: 'E', type: 22, form: 'hor' };
+const pumpInit = { Q: 7.5, p: 200, n: 1440, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
 const meta = ref({ tank: 'RA' });
-const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()] });
+const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35' });
 getNewPowerUnit();
 const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
     ? {
@@ -24,7 +24,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([false, false, true, false]);
+const stan = ref([false, true, false, false]);
 </script>
 
 <template>

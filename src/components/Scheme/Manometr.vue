@@ -10,9 +10,8 @@
     <!-- <div v-if="P01() < 0.021">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path d="M50 0v100-1" stroke="blue" stroke-width="5" />
-        </svg>
     </div>
-    <div v-else>  -->
+    <div v-else> -->
     <div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="15" fill="000" />
@@ -20,8 +19,8 @@
             <polygon points="40,40 46,49 49,46" fill="black" />
             <line x1="47" y1="47" x2="60" y2="60" stroke="black" />
             <line x1="65" y1="50" x2="100" y2="50" stroke="red" stroke-width="5" />
-        </svg>
-        <!-- <p>{{ coolerCalculation(P01) }}</p> -->
+            <!-- </svg> -->
+            <!-- <p>{{ coolerCalculation(P01) }}</p> -->
     </div>
 </template>
 

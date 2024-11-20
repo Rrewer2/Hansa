@@ -24,9 +24,9 @@ const id = ref(data.id);
         <div class="flex-row pl-25">
             <div v-for="(_, i) in HKSH" class="flex-col">
                 <p class="border border-bottom-no bgc-g h-100">{{ text(i) }}</p>
-                <input v-if="i === 'L'" @input="() => $emit('muscleUpdate', { ...HKSH, id })" type="number" min="0"
-                    max="3000" v-model="HKSH[i]" class="input" />
-                <select v-else v-model="HKSH[i]" @change="() => $emit('muscleUpdate', { ...HKSH, id })">
+                <input v-if="i === 'L'" @input="() => $emit('muscleUpdate', { ...data, ...HKSH, id })" type="number"
+                    min="0" max="3000" v-model="HKSH[i]" class="input" />
+                <select v-else v-model="HKSH[i]" @change="() => $emit('muscleUpdate', { ...data, ...HKSH, id })">
                     <option v-for="elem in i === 'D' ? standartDiameters : filtrationD(standartDiameters, HKSH.D)"
                         :value="elem">
                         {{ elem }}

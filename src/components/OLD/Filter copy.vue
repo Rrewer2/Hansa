@@ -1,5 +1,5 @@
 <script setup>
-const { x, y, angle } = defineProps(['x', 'y', 'angle']);
+const { x, y } = defineProps(['x', 'y']);
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const { x, y, angle } = defineProps(['x', 'y', 'angle']);
             <circle :cx="584 + x" :cy="550 + y" r="8" stroke="black" stroke-width="1" fill="white" />
             <path :d="'M' + `${580 + x} ${546 + y}` + 'l8+8'" stroke="black" stroke-width="1" fill="white" />
             <path :d="'M' + `${580 + x} ${554 + y}` + 'l8-8'" stroke="black" stroke-width="1" fill="white" />
-        </svg>
+            <!-- </svg> -->
     </div>
 </template>
 

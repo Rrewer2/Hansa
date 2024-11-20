@@ -23,7 +23,7 @@ const tank = ( Q ) => 3 * Q; //Ємність баку
 const tankSize = (key, T) => tankData[key].find(el => el >= T); // Розмір баку
 
 export const Power = ( Q, p ) => ( Q * p ) / 500; //Потужність розрахункова
-const Power1 = ( P ) => motorData.find(N => N >= P); //Потужність каталогова
+export const Power1 = ( P ) => motorData.find(N => N >= P); //Потужність каталогова
 
 const QBack = ( Q, SD, Sd ) => Q * SD / Sd;
 const pipe = ( Q, VP ) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
