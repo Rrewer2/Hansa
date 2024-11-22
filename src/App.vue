@@ -2,17 +2,17 @@
 import { ref } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
 import { powerUnitCounting, agregatCounting, getId, agregatTitle, round } from "./services/functions";
-import { tankData } from "./services/data";
+import { engineMountData, tankData } from "./services/data";
 import Navbar from "./components/Navbar.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
-const cylInit = { D: 100, d: 60, L: 500, z: 1, suwak: 'E', type: 22, form: 'hor' };
-const pumpInit = { Q: 7.5, p: 200, n: 1440, DR2type: 2 };
+const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', type: 22, form: 'hor' };
+const pumpInit = { Q: 7.5, p: 200, n: 1440, DR2type: 3 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
-const meta = ref({ tank: 'RA' });
-const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35' });
+const meta = ref({ tank: 'RA', mount: 'B35' });
+const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: meta.value.mount });
 getNewPowerUnit();
 const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
     ? {
@@ -47,6 +47,9 @@ const stan = ref([false, true, false, false]);
                     <h2 class="text-left">
                         <button :disabled="project.length < 2" @click="delUnit(k)">X</button>
                         Zespół pompujacy {{ powerUnitCounting(unit) }}
+                        <select v-model="meta.mount" @change="project[k].engineMount = meta.mount">
+                            <option v-for="item in engineMountData" :value="item">{{ item }}</option>
+                        </select>
                     </h2>
                     <div v-for="(pump, i) in unit" class="border-l pl-25 my-2">
                         <PumpUnit :key="pump.id" :pumpData="pump" @pumpUpdate="(a) => unit[i] = a"
@@ -150,11 +153,11 @@ button {
 }
 
 .bgc-w {
-    background-color: #ffc67a;
+    background-color: #f8eeac;
 }
 
 .bgc-g {
-    background-color: #3cc4c754;
+    background-color: #9bf0ff54;
 }
 
 .pl-25 {

@@ -6,15 +6,14 @@ import HKSH2hor from './HKSH2hor.vue';
 import HKSH2ver from './HKSH2ver.vue';
 
 const { x, y, sl, data } = defineProps(['x', 'y', 'sl', 'data']);
-const H = 315;
 </script>
 
 <template>
-    <HKSH1hor v-if="!data.form || (data.form === 'hor' && data.z === 1)" :x="x" :y="y + H" :sl="sl" />
-    <HKSH2hor v-if="data.form === 'hor' && data.z === 2" :x="x" :y="y + H" :sl="sl" />
+    <HKSH1hor v-if="!data.form || (data.form === 'hor' && data.z === 1)" :x="x" :y="y + sl + 5" :sl="sl" />
+    <HKSH2hor v-if="data.form === 'hor' && data.z === 2" :x="x" :y="y + sl + 5" :sl="sl" />
 
-    <HKSH1ver v-if="data.form === 'ver' && data.z === 1" :x="x" :y="y + H" :sl="sl" />
-    <HKSH2ver v-if="data.form === 'ver' && data.z === 2" :x="x" :y="y + H" :sl="sl" />
+    <HKSH1ver v-if="data.form === 'ver' && data.z === 1" :x="x" :y="y + sl + 5" :sl="sl" />
+    <HKSH2ver v-if="data.form === 'ver' && data.z === 2" :x="x" :y="y + sl + 5" :sl="sl" />
 
     <text :x="x + sl / 2" :y="y + sl / 100" font-family="Arial" :font-size="sl / 12" fill="black" text-anchor="middle">
         {{ HKSHTitle(data.D, data.d, data.L, data.type) }}

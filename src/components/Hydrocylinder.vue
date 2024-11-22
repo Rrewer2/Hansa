@@ -9,8 +9,19 @@ const HKSH = ref({
     D: data.D,
     d: data.d,
     L: data.L,
+    z: data.z,
+    spool: data.spool,
+    type: data.type,
+    form: data.form
 });
-const id = ref(data.id);
+const getValue = {
+    D: standartDiameters,
+    d: filtrationD(standartDiameters, HKSH.value.D),
+    z: [1, 2],
+    spool: ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y'],
+    type: ['22', '33', '11', '20', '02'],
+    form: ['ver', 'hor']
+}
 </script>
 
 <template>
@@ -24,11 +35,10 @@ const id = ref(data.id);
         <div class="flex-row pl-25">
             <div v-for="(_, i) in HKSH" class="flex-col">
                 <p class="border border-bottom-no bgc-g h-100">{{ text(i) }}</p>
-                <input v-if="i === 'L'" @input="() => $emit('muscleUpdate', { ...data, ...HKSH, id })" type="number"
-                    min="0" max="3000" v-model="HKSH[i]" class="input" />
-                <select v-else v-model="HKSH[i]" @change="() => $emit('muscleUpdate', { ...data, ...HKSH, id })">
-                    <option v-for="elem in i === 'D' ? standartDiameters : filtrationD(standartDiameters, HKSH.D)"
-                        :value="elem">
+                <input v-if="i === 'L'" @input="() => $emit('muscleUpdate', { ...data, ...HKSH })" type="number" min="0"
+                    max="3000" v-model="HKSH[i]" class="input" />
+                <select v-else v-model="HKSH[i]" @change="() => $emit('muscleUpdate', { ...data, ...HKSH })">
+                    <option v-for="elem in getValue[i]" :value="elem">
                         {{ elem }}
                     </option>
                 </select>
@@ -45,38 +55,4 @@ const id = ref(data.id);
 .h-100 {
     height: 100%;
 }
-
-.fs-sm {
-    font-size: small;
-}
-
-/* .hc {
-    display: flex;
-    justify-content: space-around;
-}
-
-.el {
-    width: 12%;
-    border: solid 1px;
-}
-
-.l {
-    border: dashed red;
-    padding: 0 10px;
-}
-
-.ö {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.p {
-    border: solid 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: small;
-    height: 40px;
-} */
 </style>
