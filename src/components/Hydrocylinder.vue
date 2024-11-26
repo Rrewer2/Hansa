@@ -18,8 +18,8 @@ const getValue = {
     D: standartDiameters,
     d: filtrationD(standartDiameters, HKSH.value.D),
     z: [1, 2],
-    spool: ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y'],
-    type: ['22', '33', '11', '20', '02'],
+    spool: ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'D1', 'Y', 'Y1'],
+    type: ['22', '11', '30', '03', '20', '02'],
     form: ['ver', 'hor']
 }
 </script>
@@ -30,7 +30,7 @@ const getValue = {
             <button @click="() => $emit('delCyl')" class="el">
                 X
             </button>
-            {{ HKSHTitle(HKSH.D, HKSH.d, HKSH.L) }}
+            {{ HKSHTitle(HKSH.D, HKSH.d, HKSH.L, HKSH.type) }}
         </h4>
         <div class="flex-row pl-25">
             <div v-for="(_, i) in HKSH" class="flex-col">

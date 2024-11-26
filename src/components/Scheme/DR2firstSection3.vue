@@ -19,6 +19,8 @@ const width = 2;
     <Hline v-for="p in [0, sh]" :x="x + sl / 10" :y="p + y" :L="sl1" :width="width" />
 
     <Valve :x="x + sl * 0.45" :y="y + sh + sl / 40" :data="{ spool: 'GA' }" :sl="sl" />
+    <path v-for="a in [0.46 * sl, (1 - 0.46) * sl]" :d="`M${a + x + sl * 0.45} ${y - sh / 8} v${-10} h${-5} h${10}`"
+        stroke="black" stroke-width="2" fill="none" />
 </template>
 
 <style scoped></style>
