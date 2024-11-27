@@ -15,7 +15,7 @@ const { x, y, sl, data } = defineProps(['x', 'y', 'sl', 'data']);
     <HKSH1ver v-if="data.form === 'ver' && data.z === 1" :x="x" :y="y + sl + 5" :sl="sl" />
     <HKSH2ver v-if="data.form === 'ver' && data.z === 2" :x="x" :y="y + sl + 5" :sl="sl" />
 
-    <text :x="x + sl / 2" :y="y + sl / 100" font-family="Arial" :font-size="sl / 12" fill="black" text-anchor="middle">
+    <text :x="x + sl / 2" :y="sl / 5" font-family="Arial" :font-size="sl / 12" fill="black" text-anchor="middle">
         {{ HKSHTitle(data.D, data.d, data.L, data.type) }}
     </text>
 </template>

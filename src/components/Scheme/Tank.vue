@@ -1,14 +1,12 @@
 <script setup>
 
 
-const { x, y } = defineProps(['x', 'y']);
-const L = 1000;
+const { x, y, L, text } = defineProps(['x', 'y', 'L', 'text']);
 const H = () => 1280 - y;
 const h = 0;
 const hZlew = 30;
 const u = 30;
 const s = 8;
-
 </script>
 
 <template>
@@ -26,6 +24,10 @@ const s = 8;
     <path
         :d="`M${x + 2 * u - 1.5 * s} ${y + h + s + H() + hZlew / 2 - 2 * s} l${3 * s} ${3 * s} v${-3 * s} l${-3 * s} ${3 * s}z`"
         stroke="#000" stroke-width="2" fill="black" />
+    <text :x="x + L - 400" :y="y + H() - u" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">HV
+        46</text>
+    <text :x="x + L - 400" :y="y + H()" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">{{ text
+        }}</text>
 </template>
 
 <style scoped></style>

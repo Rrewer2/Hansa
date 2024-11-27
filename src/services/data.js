@@ -36,7 +36,7 @@ export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Perform
 
 export const filterData = [];
 
-export const freqData = [1440, 1728, 2880, 720, 3456, 864];
+export const freqData = [1500, 1800, 3000, 750];
 export const engineMountData = ['B35', 'B5', 'B34'];
 
 export const pumpData = { HK2P4102EOOA: { CC: '4,2', LITRY: '6,0', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185 },

@@ -1,7 +1,5 @@
 import { separator, bucklingSafety, tankData, motorData, VPipe, pipesData, pipesSData } from "./data";
 
-export const dif = (D, d) => sqr(D) / (sqr(D) - sqr(d));
-
 const isString = variable => typeof variable === "string";
 
 export const round = (num) => isString(num) ? num :  Math.trunc(num * 10) / 10 ?? "-";
@@ -20,7 +18,7 @@ const wallThick = (D, p) => (D * 2.6 * p) / 200 / 47;
 // const wallThick = () => (D() * P()) / (2.3 * 800 - P());
 
 const tank = ( Q ) => 3 * Q; //Ємність баку
-const tankSize = (key, T) => tankData[key].find(el => el >= T); // Розмір баку
+export const tankSize = (key, T) => tankData[key].find(el => el >= T); // Розмір баку
 
 export const Power = ( Q, p ) => ( Q * p ) / 500; //Потужність розрахункова
 export const Power1 = ( P ) => motorData.find(N => N >= P); //Потужність каталогова
@@ -74,20 +72,21 @@ export const powerUnitCounting = (unit) => {
     const b = unit.map(item => item.Q).join("x");
     return `HAG${ round(P) }-${ b }`;
 };
-
-
+const getQ = project => project.map(({unit}) => unit.map(({ Q }) => Q)).flat();
+const getT = Q => tank(Q.reduce((a, b) => a + b));
+export const getTankSize = (project, meta) => tankSize(meta, getT(getQ(project)));
 export const agregatTitle = (project, meta) => {
     const P = project.map(({unit}) => unit.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b));
     const P1 = P.map(el => Power1(el));
-    const Q = project.map(({unit}) => unit.map(({ Q }) => Q)).flat();
-    const T = tank(Q.reduce((a, b) => a + b));
+    const Q = getQ(project);
+    const T = getT(Q);
     const T1 = tankSize(meta, T);
     return `HAG${meta}${T1}-${P1.join("/")}-${Q.join("/")}`;
 };
 
-export const agregatCounting = (project, meta) => {
-    const Q = project.map(({unit}) => unit.map(({ Q }) => Q)).flat();
-    const T = tank(Q.reduce((a, b) => a + b));
+export const agregatCounting = (project) => {
+    const Q = getQ(project);
+    const T = getT(Q);
     return { T };
 };
 
@@ -104,7 +103,7 @@ export const agregatCounting = (project, meta) => {
 export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const P  = Power(Q1,p1);
     const I = P * 1000/ (3**0.5 * 400 * 0.86 * 0.9);
-    const VFU = round(Q1 / n * 1000);
+    const VFU = round(Q1 / (n*0.96) * 1000);
     const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1)[0];
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipeT = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k)[0];

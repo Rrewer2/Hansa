@@ -1,45 +1,18 @@
 <script setup>
-// import { coolerData } from "../services/data";
-// const { P01 } = defineProps(["P01"]);
-
-// const coolerCalculation = P01 =>
-//     coolerData.find(el => el.Performance.max >= P01())?.Model;
+const { x, y, a, text } = defineProps(['x', 'y', 'a', 'text']);
 </script>
 
 <template>
-    <!-- <div v-if="P01() < 0.021">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <path d="M50 0v100-1" stroke="blue" stroke-width="5" />
-    </div>
-    <div v-else> -->
-    <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="15" fill="000" />
-            <circle cx="50" cy="50" r="14" fill="white" />
-            <polygon points="40,40 46,49 49,46" fill="black" />
-            <line x1="47" y1="47" x2="60" y2="60" stroke="black" />
-            <line x1="65" y1="50" x2="100" y2="50" stroke="red" stroke-width="5" />
-            <!-- </svg> -->
-            <!-- <p>{{ coolerCalculation(P01) }}</p> -->
-    </div>
+    <Point :x="x" :y="y" />
+    <path :d="`M${x} ${y} v${-a / 2} h${-10} l${20} ${-30} h${-20} l${20} ${30} h${-10} v${-a * 1.5}`" stroke="black"
+        stroke-width="2" />
+    <circle :cx="x" :cy="y - 3 * a" :r="a" fill="white" stroke="black" stroke-width="1" />
+    <path :d="`M${x + a / 2} ${y - 3 * a + a / 2} l${-a} ${-a}`" stroke="black" stroke-width="2" />
+    <path :d="`M${x - a / 2} ${y - 3 * a - a / 2} l${a / 3} ${a / 5} l${-a / 6} ${a / 7}z`" stroke="black"
+        stroke-width="2" fill="black" />
+    <text :x="x - 2 * a" :y="y - a" font-family="Arial" :font-size="a / 1.25" fill="black" text-anchor="middle">{{
+        text
+    }} bar</text>
 </template>
 
-<style scoped>
-label,
-div {
-    width: 10vw;
-    height: 20vh;
-    z-index: 500;
-}
-
-svg {
-    /* background-color: #ffc400; */
-    width: 100%;
-}
-
-p {
-    position: relative;
-    left: 5vw;
-    top: -6.3vw;
-}
-</style>
+<style scoped></style>
