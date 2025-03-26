@@ -2,7 +2,7 @@ import { separator, bucklingSafety, tankData, motorData, VPipe, pipesData, pipes
 
 const isString = variable => typeof variable === "string";
 
-export const round = (num) => isString(num) ? num :  Math.trunc(num * 10) / 10 ?? "-";
+export const round = (num) => isString(num) ? num : Math.trunc(num * 10) / 10;
 
 export const getId = (key) => key + Date.now(); 
 
@@ -68,7 +68,7 @@ export const buckling = ( { D, d, L }, p) => {
 
 export const powerUnitCounting = (unit) => {
     const a = unit.map(({ Q, p}) => Power(Q, p)).reduce((a, b) => a + b);
-    const P = Power1(a)
+    const P = Power1(a) || '___';
     const b = unit.map(item => item.Q).join("x");
     return `HAG${ round(P) }-${ b }`;
 };
@@ -77,10 +77,10 @@ const getT = Q => tank(Q.reduce((a, b) => a + b));
 export const getTankSize = (project, meta) => tankSize(meta, getT(getQ(project)));
 export const agregatTitle = (project, meta) => {
     const P = project.map(({unit}) => unit.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b));
-    const P1 = P.map(el => Power1(el));
+    const P1 = P.map(el => Power1(el) || '___');
     const Q = getQ(project);
     const T = getT(Q);
-    const T1 = tankSize(meta, T);
+    const T1 = tankSize(meta, T) || '___';
     return `HAG${meta}${T1}-${P1.join("/")}-${Q.join("/")}`;
 };
 
@@ -102,13 +102,21 @@ export const agregatCounting = (project) => {
 
 export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const P  = Power(Q1,p1);
-    const I = P * 1000/ (3**0.5 * 400 * 0.86 * 0.9);
-    const VFU = round(Q1 / (n*0.96) * 1000);
-    const pipeP = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1)[0];
+    const I = P * 1000 / (3**0.5 * 400 * 0.86 * 0.9);
+    const VFU = round(Q1 / (n * 0.96) * 1000);
+    let pipeP = '∄';
+    let pipeT = '∄';
+    let pipeS = '∄';
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
-    const pipeT = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k)[0];
-    const pipeS = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1)[0];
-    return { P, I, VFU, pipeP, pipeT, pipeS, QBack: Q1* k };
+    Object.entries(pipesData).forEach(([key, { Q, p }]) => {
+        if (Q >= Q1 && p > p1) pipeP = key;
+        if (Q > Q1 * k) pipeT = key;
+    });
+    Object.entries(pipesSData).forEach(([key, { Q }]) => {
+        if (Q > Q1) pipeS = key;
+    });
+    const QBack = Q1 * k;
+    return { P, VFU, I, pipeP, pipeT, pipeS, QBack };
 };
 
 export const filtrationD = (arr, D) => arr.filter(el => el < D);

@@ -47,11 +47,10 @@ const stan = ref([false, true, false, false]);
                             </option>
                         </select>
                     </label>
-
                 </div>
             </section>
 
-            <section v-for="( { id, unit }, k ) in project" class="border px-5 my-2">
+            <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
                 <div :key="id">
                     <h2 class="text-left">
                         <button :disabled="project.length < 2" @click="delUnit(k)">X</button>

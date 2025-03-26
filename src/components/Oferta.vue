@@ -28,6 +28,7 @@ const getDiffBetween = (str1, str2) => {
       }
     }
   });
+  res.push('	');
   Object.keys(obj2).forEach(key => {
     if (!obj1[key]) {
       res.push([key, `${obj2[key].join(', ')}`].join('\t'));

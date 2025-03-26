@@ -42,7 +42,7 @@ const hkshData = ref(pumpData.HKSH);
                 </div>
             </div>
             <div v-for="(el, title) in pumpCounting(pumpData)" class="flex-col fs-sm">
-                <span class="border border-bottom-no  bgc-g h-100 px-5">{{ text(title) }}</span>
+                <span class="border border-bottom-no bgc-g h-100 px-5">{{ text(title) }}</span>
                 <span class="border bgc-w">{{ round(el) }}</span>
             </div>
         </div>

@@ -5,7 +5,6 @@ import { pumpData } from '../../services/data';
 const pump = ref();
 
 const { project } = defineProps(["project"]);
-console.log('project[0] :>> ', project[0]);
 </script>
 
 <template>
@@ -26,7 +25,10 @@ console.log('project[0] :>> ', project[0]);
         </thead>
         <tbody>
           <tr>
-            <td>{{ title }}</td>
+            <td>
+              <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">{{
+                title }}</a>
+            </td>
             <td v-for="value in Object.values(elem)">
               <b>{{ value }}</b>
             </td>
