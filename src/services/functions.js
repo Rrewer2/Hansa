@@ -104,17 +104,13 @@ export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const P  = Power(Q1,p1);
     const I = P * 1000 / (3**0.5 * 400 * 0.86 * 0.9);
     const VFU = round(Q1 / (n * 0.96) * 1000);
-    let pipeP = '∄';
-    let pipeT = '∄';
-    let pipeS = '∄';
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
-    Object.entries(pipesData).forEach(([key, { Q, p }]) => {
-        if (Q >= Q1 && p > p1) pipeP = key;
-        if (Q > Q1 * k) pipeT = key;
-    });
-    Object.entries(pipesSData).forEach(([key, { Q }]) => {
-        if (Q > Q1) pipeS = key;
-    });
+    const pipe_P = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1);
+    const pipeP = pipe_P ? pipe_P[0] : '∄';
+    const pipe_T = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k);
+    const pipeT = pipe_T ? pipe_T[0] : '∄';
+    const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
+    const pipeS = pipe_S ? pipe_S[0] : '∄';
     const QBack = Q1 * k;
     return { P, VFU, I, pipeP, pipeT, pipeS, QBack };
 };

@@ -35,9 +35,7 @@ const hkshData = ref(pumpData.HKSH);
                     </select>
                     <select v-if="ind === 'n'" v-model="data[ind]"
                         @change="() => $emit('pumpUpdate', { ...pumpData, ...data, HKSH: hkshData })">
-                        <option v-for="elem in freqData" :value="elem">
-                            {{ elem }}
-                        </option>
+                        <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
                     </select>
                 </div>
             </div>

@@ -24,7 +24,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([false, true, false, false]);
+const stan = ref([true, false, false, false]);
 </script>
 
 <template>
@@ -102,7 +102,7 @@ const stan = ref([false, true, false, false]);
 .app {
     background-color: rgba(0, 0, 0, 0.25);
     /* padding-bottom: 5vh; */
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     padding: 0 10px;
 }
