@@ -42,13 +42,13 @@ export const parenthesis = smt => (smt ? `(${smt})`: "");
 
 export const HKSHTitle = (D, d, L, type = 22) => `HKSH${type}.`  + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 
-export const hkshCounting = ( { D, d, L }, Q, p, length = 1 ) => {
+export const hkshCounting = ( { D, d, L, z }, Q, p ) => {
     const SD = S(D);
     const Sd = S(D, d);
     const VD = V(SD, L);
     const Vd = V(Sd, L);
-    const tOut = t(VD , length, Q);
-    const tIn = t(Vd, length, Q);
+    const tOut = t(VD , z, Q);
+    const tIn = t(Vd, z, Q);
     const tC = tIn + tOut;
     const FOut = F(p, SD);
     const FIn = F(p, Sd);
@@ -102,7 +102,7 @@ export const agregatCounting = (project) => {
 
 export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const P  = Power(Q1,p1);
-    const I = P * 1000 / (3**0.5 * 400 * 0.86 * 0.9);
+    const I = 2.4 * P ** 0.9;
     const VFU = round(Q1 / (n * 0.96) * 1000);
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipe_P = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1);
