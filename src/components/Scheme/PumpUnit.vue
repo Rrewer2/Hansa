@@ -1,5 +1,5 @@
 <script setup>
-import { Power1, Power } from '../../services/functions';
+import { getStandartPower, Power } from '../../services/functions';
 import Kielich from './Kielich.vue';
 import Motor from './Motor.vue';
 import Pump from './Pump.vue';
@@ -11,7 +11,7 @@ const pumpR = () => R - (R / (6 - pumps.length));
 <template>
   <Motor :x="x" :y="y" :R="R" :mount="mount" />
   <text :x="x - R * 2" :y="y - R / 2" font-family="Arial" :font-size="R / 2" fill="black" text-anchor="middle">{{
-    Power1(pumps.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b))
+    getStandartPower(pumps.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b))
   }} kW</text>
   <text :x="x - R * 2" :y="y" font-family="Arial" :font-size="R / 3" fill="black" text-anchor="middle">{{ pumps[0].n }}
     min⁻¹</text>

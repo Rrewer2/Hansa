@@ -12,7 +12,7 @@ const textData = {
   DR2type: ['Typ bloku'],
   P: ['Moc', 'kW'],
   I: ['Prąd', 'A'],
-  VFU: ['Pompa', 'cm³/obr'],
+  VFU: ['VFU', 'cm³'],
   pipeP: ['Rura P'],
   pipeT: ['Rura T'],
   pipeS: ['Rura S'],
@@ -28,5 +28,7 @@ const textData = {
   wall: [ 'Ścianka', 'mm'],
   QBack: [ 'Powrót oleju', 'l/min'],
   tank: [ 'Pojemność zbiornika', 'L'],
+  gears: ['Zębata'],
+  piston: ['Wiełotłoczkowa']
 };
 export const text = (key) => textData[key].join(', ');

@@ -1,16 +1,18 @@
 <script setup>
 import { ref } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
-import { powerUnitCounting, agregatCounting, getId, agregatTitle, round } from "./services/functions";
-import { engineMountData, tankData } from "./services/data";
+import { getId, } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
+import Title from "./components/Title.vue";
 import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
+import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', type: 22, form: 'hor' };
 const pumpInit = { Q: 7.5, p: 200, n: 1500, DR2type: 3 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
+const order = ref({});
 const meta = ref({ tank: 'RA', cooler: 2 });
 const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35' });
 getNewPowerUnit();
@@ -24,47 +26,22 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const stan = ref([true, false, false, false]);
+const navPage = ref([false, false, true, false]);
 </script>
 
 <template>
     <main class="app">
-        <article v-if="stan[0]">
-            <section class="">
-                <h1>Agregat {{ agregatTitle(project, meta.tank) }}</h1>
-                <div class="flex-row flex-left">
-                    <label>Typ zbiornika:
-                        <select v-model="meta.tank">
-                            <option v-for="(_, t) in tankData" :value="t">
-                                {{ t }}
-                            </option>
-                        </select>
-                    </label>
-                    <label>Cooler:
-                        <select v-model="meta.cooler">
-                            <option v-for="(_, c) in [0, 1, 2]" :value="c">
-                                {{ c }}
-                            </option>
-                        </select>
-                    </label>
-                </div>
-            </section>
+        <article v-if="navPage[0]">
+            <Title :project="project" :meta="meta" :order="order.tank" />
 
             <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
                 <div :key="id">
-                    <h2 class="text-left">
-                        <button :disabled="project.length < 2" @click="delUnit(k)">X</button>
-                        Zespół pompujacy {{ powerUnitCounting(unit) }}
-                        <select v-model="project[k].engineMount">
-                            <option v-for="item in engineMountData" :value="item">{{ item }}</option>
-                        </select>
-                    </h2>
+                    <PumpUnitTitle :project="project" :k="k" :unit="unit" :btnDisabled="project.length < 2"
+                        @delUnit="delUnit" />
                     <div v-for="(pump, i) in unit" class="border-l pl-25 my-2">
                         <PumpUnit :key="pump.id" :pumpData="pump" @pumpUpdate="(a) => unit[i] = a"
-                            @addCyl="() => addCyl(k, i)">
-                            <button :disabled="unit.length < 2" @click="() => delPump(k, pump.id)">
-                                X
-                            </button>
+                            @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
+                            @delPump="() => delPump(k, pump.id)">
                         </PumpUnit>
                     </div>
                     <div class="flex-row flex-left pl-25">
@@ -72,7 +49,6 @@ const stan = ref([true, false, false, false]);
                             + Pompa
                         </button>
                     </div>
-
                 </div>
             </section>
 
@@ -84,11 +60,14 @@ const stan = ref([true, false, false, false]);
             <Scheme class="schemeMin" :project="project" :meta="meta" />
         </article>
 
-        <Scheme class="scheme" v-if="stan[1]" :project="project" :meta="meta" />
-        <Selector v-if="stan[2]" :project="project" @pumpSelected="(title) => ({})" />
-        <Oferta v-if="stan[3]" />
+        <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" />
+
+        <Selector v-if="navPage[2]" :project="project" :order="order" :meta="meta"
+            @pumpSelected="(title) => console.log(title)" @projectUpdated="pump => { }" />
+
+        <Oferta v-if="navPage[3]" />
     </main>
-    <Navbar @nav="(ind) => stan = stan.map((_, k) => ind === k)" :stan="stan" />
+    <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
 </template>
 
 <style>
@@ -102,7 +81,7 @@ const stan = ref([true, false, false, false]);
 .app {
     background-color: rgba(0, 0, 0, 0.25);
     /* padding-bottom: 5vh; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     padding: 0 10px;
 }
@@ -114,18 +93,30 @@ svg {
     /* border: #ffc67a solid 2px; */
 }
 
-input {
-    /* min-width: 60px; */
+input[type="number"],
+select {
+    max-width: 13vh;
+    min-width: 10vh;
 }
 
 button {
-    padding: 0 5px;
-    /* height: 50%; */
-    background-color: #dcb4b4;
+    margin: 5px;
+    padding: 5px;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 5px;
+    background-color: #a87575;
     border: 1px solid;
 }
 
+button:hover {
+    background-color: #133fc3;
+    color: aliceblue;
+    transition: 0.5s;
+}
+
 .btn-add {
+    padding: 0 10px;
     background-color: #95c98c;
 }
 

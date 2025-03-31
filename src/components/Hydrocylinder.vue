@@ -28,7 +28,7 @@ const getValue = {
     <section class="pl-25 my-2">
         <h4 class="text-left">
             <button @click="() => $emit('delCyl')" class="el">
-                X
+                ✕
             </button>
             {{ HKSHTitle(HKSH.D, HKSH.d, HKSH.L, HKSH.type) }}
         </h4>

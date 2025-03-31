@@ -82,10 +82,10 @@ const t = V => (V * 60 * i()) / Q(); //Час роботи
 const F = S => (P() * S) / 100; //Сила
 const v = t => L() / t; //Швидкість
 const Power = () => (Q() * P()) / 500; //Потужність розрахункова
-const Power1 = () => motorData.find(N => N >= Power()); //Потужність каталогова
+const getStandartPower = () => motorData.find(N => N >= Power()); //Потужність каталогова
 const tank = () => 3 * Q(); //Ємність баку
 const pipe = (Q, VP) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
-const tankSize = () => ({
+const getStandartTank = () => ({
     body: Object.fromEntries(
         Object.entries(tankData).map(row => [
             row[0],
@@ -159,12 +159,12 @@ const mainOutputs = [
         value: [pipeTmin, pipeTmax],
     },
     { title: "Pojemność zbiornika", unit: "l", value: tank },
-    // { value: tankSize, table: true },
+    // { value: getStandartTank, table: true },
     {
         title: "Moc silnika",
         unit: "kW",
         types: ["obliczona", "katalogowa"],
-        value: [Power, Power1],
+        value: [Power, getStandartPower],
     },
 ];
 
@@ -257,11 +257,11 @@ const obj = [
 <template>
     <!-- <input v-model="inputs.value.main.D.value" type="number" /> -->
     <div class="app">
-        <Article :data="obj[0]"/>
+        <Article :data="obj[0]" />
         <!-- <div v-for="el in obj" :data="el">
             <Article :data="el"/>
         </div> -->
-        
+
         <!-- <Scheme :inputs="obj[0].inputs" /> -->
         <Scheme :data="funcs" />
         <!-- <Data :obj="obj" /> -->
@@ -277,6 +277,7 @@ const obj = [
     box-sizing: border-box;
     text-align: center;
 }
+
 .app {
     background-color: rgba(0, 66, 25, 0.5);
     padding: 10px;
@@ -285,6 +286,7 @@ const obj = [
     /* display: grid;
     grid-template-columns: 40vw 60vw; */
 }
+
 .cool {
     position: fixed;
     z-index: 300;

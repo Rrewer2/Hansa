@@ -37,35 +37,138 @@ export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Perform
 export const filterData = [];
 
 export const freqData = [ 750, 1500, 1800, 3000 ];
-export const engineMountData = ['B35', 'B5', 'B34'];
+export const engineMountData = ['B5', 'B35', 'B14', 'B34'];
 
-export const pumpData = { HK2P4102EOOA: { CC: '4,2', LITRY: '6,0', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185 },
- HK2P4302EOOA: { CC: '6', LITRY: '8,6', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185 },
- HK2P4502EOOA: { CC: '8,4', LITRY: '12,0', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185  },
- HK2P4702EOOA: { CC: '10,8', LITRY: '15,4', dIn: '30', in: 'WDA112', dOut: '30', out: 'WDS112', pmax:185  },
- HK2P4902EPOA: { CC: '14,4', LITRY: '20,6', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185  },
- HK2P5102EPOA: { CC: '16,8', LITRY: '24,0', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185  },
- HK2P5302EPOA: { CC: '19,2', LITRY: '27,5', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185 },
- HK2P5502EPOA: { CC: '22,8', LITRY: '32,6', dIn: '40', in: 'WDA234', dOut: '30', out: 'WDS112', pmax:185 },
- HK2P5702EQPA: { CC: '26,2', LITRY: '37,5', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
- HK2P6102EQPA: { CC: '30', LITRY: '42,9', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
- HK2P5902EQPA: { CC: '34,2', LITRY: '48,9', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
- HK2P6302EQPA: { CC: '39,6', LITRY: '56,6', dIn: '40', in: 'WDA234', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P7002ABAA: { CC: '21,1', LITRY: '30,2', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P7202ABAA: { CC: '26,06', LITRY: '37,3', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P7402ABAA: { CC: '32,27', LITRY: '46,1', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P7802ABAA: { CC: '38,47', LITRY: '55,0', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P7902ABAA: { CC: '43,44', LITRY: '62,1', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P8102ABAA: { CC: '50,88', LITRY: '72,8', dIn: '51', in: 'WDA334', dOut: '40', out: 'WDS234', pmax:185  },
- HKX3P8302ACBA: { CC: '60,81', LITRY: '87,0', dIn: '62', in: '-', dOut: '51', out: 'WDS3100', pmax:185 },
- 
- HKKP2004D082E2L: { CC: '4,95', LITRY: '7,1', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320 },
- HKKP2006D082E2L: { CC: '6,61', LITRY: '9,5', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
- HKKP2008D082E2L: { CC: '8,26', LITRY: '11,8', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
- HKKP2011D082E2L: { CC: '11,23', LITRY: '16,1', dIn: '30', in: 'F1', dOut: '30', out: 'F1', pmax:320},
- HKKP2014D082E2L: { CC: '14,53', LITRY: '20,8', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
- HKKP2016D082E2L: { CC: '16,85', LITRY: '24,1', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
- HKKP2020D082E2L: { CC: '21,14', LITRY: '30,2', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
- HKKP2025D082E2L: { CC: '26,42', LITRY: '37,8', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320},
- HKKP2031D082E2L: { CC: '33,03', LITRY: '47,2', dIn: '40', in: 'F2', dOut: '30', out: 'F1', pmax:320 }
- };
+export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
+const gearPumpAPF = [
+  {},
+  {
+    HK1PF21L01Z01LBF: { CC: 2.1, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:200},
+    HK1PF27L01Z01LBF: { CC: 2.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:200},
+    HK1PF37L01Z01LBF: { CC: 3.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:200},
+    HK1PF42L01Z01LBF: { CC: 4.2, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:200},
+    HK1PF58L01Z01LBF: { CC: 5.8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:160},
+    HK1PF80L01Z01LBF: { CC: 8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', pmax:160},
+  },
+  {
+    HK2APF04F02Z41RSS: { CC: 4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF06F02Z41RSS: { CC: 6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF08F02Z41RSS: { CC: 8, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF10F02Z41RSS: { CC: 10, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF14F02Z41RSS: { CC: 14, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF16F02Z41RSS: { CC: 16, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF20F02Z41RSS: { CC: 20, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+    HK2APF25F02Z41RSS: { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+  },
+  {
+    HK3APF26F09Z05RSS: { CC: 26, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:200},
+    HK3APF33F09Z05RSS: { CC: 33, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:200},
+    HK3APF39F09Z05RSS: { CC: 39, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:200},
+    HK3APF46F09Z05RSS: { CC: 46, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:200},
+    HK3APF55F09Z05RSS: { CC: 55, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:200},
+    HK3APF63F09Z05RSS: { CC: 63, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:180},
+  }
+];
+//  flange: 'Ø36,5 European'
+const gearPumpVivolo =[
+  {},
+  {},
+  {
+  HK2P4102EOOA: { CC: 4.2, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:260},
+  HK2P4302EOOA: { CC: 6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:260},
+  HK2P4502EOOA: { CC: 8.4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:260},
+  HK2P4702EOOA: { CC: 10.8, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:260},
+  HK2P4902EPOA: { CC: 14.4, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:250},
+  HK2P5102EPOA: { CC: 16.8, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:230},
+  HK2P5302EPOA: { CC: 19.2, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:210},
+  HK2P5502EPOA: { CC: 22.8, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:200},
+  HK2P5702EQPA: { CC: 26.2, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8', pmax:170},
+  HK2P6102EQPA: { CC: 30, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8', pmax:160},
+  HK2P5902EQPA: { CC: 34.2, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8', pmax:150},
+  HK2P6302EQPA: { CC: 39.6, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8', pmax:140},
+ },
+ {
+  HKX3P7002ABAA: { CC: 21.1, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:250},
+  HKX3P7202ABAA: { CC: 26.06, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:250},
+  HKX3P7402ABAA: { CC: 32.27, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:250},
+  HKX3P7802ABAA: { CC: 38.47, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:250},
+  HKX3P7902ABAA: { CC: 43.44, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:250},
+  HKX3P8102ABAA: { CC: 50.88, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:230},
+  HKX3P8302ACBA: { CC: 60.81, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:230},
+  HKX3P8702ACBA: { CC: 74.46, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:180},
+},
+];
+const gearPumpCasappa = [
+  {},
+  {},
+  {
+    HKKP2004D082E2L: { CC: 4.95, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:285},
+    HKKP2006D082E2L: { CC: 6.61, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:285},
+    HKKP2008D082E2L: { CC: 8.26, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:285},
+    HKKP2011D082E2L: { CC: 11.23, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', pmax:275},
+    HKKP2014D082E2L: { CC: 14.53, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:265},
+    HKKP2016D082E2L: { CC: 16.85, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:260},
+    HKKP2020D082E2L: { CC: 21.14, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:210},
+    HKKP2025D082E2L: { CC: 26.42, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:180},
+    HKKP2031D082E2L: { CC: 33.03, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6', pmax:140}
+  },
+  {
+    HKKP3027D083E3L: { CC: 26.7, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:310},
+    HKKP3034D083E3L: { CC: 34.6, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:300},
+    HKKP3038D083E3L: { CC: 39.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:300},
+    HKKP3043D083E3L: { CC: 43.9, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:290},
+    HKKP3051D083E3L: { CC: 51.8, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:270},
+    HKKP3061D083E3L: { CC: 61.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8', pmax:240},
+    HKKP3073D083E3L: { CC: 73.8, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10', pmax:220},
+  }
+];
+const pistonPumpRexroth = {
+  HKA10VSO18DRG31R: { CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VSO18DFR31R: { CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKA10VSO28DRG31R: { CC: 28, in: 'SAE J518C - 1.1/4″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VSO28DFR31R: { CC: 28, in: 'SAE J518C - 1.1/4″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKA10VSO45DRG31R: { CC: 45, in: 'SAE J518C - 1.1/2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VSO45DFR31R: { CC: 45, in: 'SAE J518C - 1.1/2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKA10VSO71DRG31R: { CC: 71, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VSO71DFR31R: { CC: 71, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKA10VSO88DRG31R: { CC: 88, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VSO88DFR31R: { CC: 88, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKA10VS100DRG31R: { CC: 100, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
+  HKA10VS100DFR31R: { CC: 100, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
+};
+const pistonPumpKawasaki = {
+  HKK3VL045B1NRMMP0: { CC: 45, in: 'SAE J518C - 1.1/2″', out: 'SAE J518C - 1″', drain:'M22 x 1.5', pmax:320, Regulator: 'Regulator ciśnienia'},
+  HKK3VL080B1NRMMP0: { CC: 80, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'M22 x 1.5', pmax:320, Regulator: 'Regulator ciśnienia'},
+  HKK3VL112B1NRMMP0: { CC: 112, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Regulator ciśnienia'},
+  HKK3VL140B1NRMMP0: { CC: 140, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Regulator ciśnienia'},
+  HKK3VL200B1NRMMP0: { CC: 200, in: 'SAE J518C - 3″', out: 'SAE J518C - 1.1/2″', drain:'3/4″', pmax:320, Regulator: 'Regulator ciśnienia'},
+  HKK3VL045B1NRMML0: { CC: 45, in: 'SAE J518C - 1.1/2″', out: 'SAE J518C - 1″', drain:'M22 x 1.5', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKK3VL080B1NRMML0: { CC: 80, in: 'SAE J518C - 2″', out: 'SAE J518C - 1″', drain:'M22 x 1.5', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKK3VL112B1NRMML0: { CC: 112, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKK3VL140B1NRMML0: { CC: 140, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKK3VL200B1NRMML0: { CC: 200, in: 'SAE J518C - 3″', out: 'SAE J518C - 1.1/2″', drain:'3/4″', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
+
+};
+const pistonPumpDaikin = {
+  HKJV15A3RX95: { CC: 14.8, in: 'G1″', out: 'G1″', drain:'3/8″', pmax:210, Regulator: 'Regulator ciśnienia'},
+  HKJV23A4RX30: { CC: 23, in: 'G1″', out: 'G1″', drain:'3/8″', pmax:250, Regulator: 'Regulator ciśnienia'},
+  HKJV38A4RX95: { CC: 37.7, in: 'G1″', out: 'G1″', drain:'1/2″', pmax:250, Regulator: 'Regulator ciśnienia'},
+  HKJV15SA3CRX95: { CC: 14.8, in: 'G1″', out: 'G1″', drain:'3/8″', pmax:210, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKJV23SA4CRX30: { CC: 23, in: 'G1″', out: 'G1″', drain:'3/8″', pmax:250, Regulator: 'Kontroler wykrywania obciążenia'},
+  HKJV38SA4CRX95: { CC: 37.7, in: 'G1″', out: 'G1″', drain:'1/2″', pmax:250, Regulator: 'Kontroler wykrywania obciążenia'},
+};
+const pistonPumpPBA = {
+  HKPBA012L8051SF: { CC: 12, in: 'G3/4″', out: 'G3/4″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA018L8051SF: { CC: 18, in: 'G3/4″', out: 'G3/4″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA025L8051SF: { CC: 25, in: 'G3/4″', out: 'G3/4″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA040L8051SF: { CC: 40, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA063L8051SF: { CC: 63, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA080L8051SF: { CC: 80, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA080L8064SF: { CC: 80, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA108L8051SF: { CC: 108, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+  HKPBA108L8064SF: { CC: 108, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
+};
+export const pumpData = {
+  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['CHINA', gearPumpAPF]],
+  piston:[['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]],
+};
