@@ -4,7 +4,7 @@ const textData = {
   L: ['Skok', 'mm'],
   z: ['Iłość'],
   spool: ['Suwak'],
-  type: ['Mocowania'],
+  mount: ['Mocowania'],
   form: ['Forma'],
   Q: ['Q', 'L/min'],
   p: ['ρ', 'bar'],

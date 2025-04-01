@@ -41,7 +41,7 @@ export const getResults = elem =>
 
 export const parenthesis = smt => (smt ? `(${smt})`: "");
 
-export const HKSHTitle = (D, d, L, type = 22) => `HKSH${type}.`  + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
+export const HKSHTitle = ({D,d,L,mount = 22}) => ('HKSH' + mount).slice(0, 6) + '.'  + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 
 export const hkshCounting = ( { D, d, L, z }, Q, p ) => {
     const SD = S(D);

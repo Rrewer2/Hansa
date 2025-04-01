@@ -1,4 +1,6 @@
 <script setup>
+import Point from './Point.vue';
+
 const { x, y, a, text } = defineProps(['x', 'y', 'a', 'text']);
 </script>
 
@@ -12,7 +14,7 @@ const { x, y, a, text } = defineProps(['x', 'y', 'a', 'text']);
         stroke-width="2" fill="black" />
     <text :x="x - 2 * a" :y="y - a" font-family="Arial" :font-size="a / 1.25" fill="black" text-anchor="middle">{{
         text
-    }} bar</text>
+        }} bar</text>
 </template>
 
 <style scoped></style>

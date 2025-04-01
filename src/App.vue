@@ -8,7 +8,7 @@ import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
-const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', type: 22, form: 'hor' };
+const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mount: '22 Wachliwe', form: 'hor' };
 const pumpInit = { Q: 7.5, p: 200, n: 1500, DR2type: 3 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
@@ -38,10 +38,9 @@ const navPage = ref([false, false, true, false]);
                 <div :key="id">
                     <PumpUnitTitle :project="project" :k="k" :unit="unit" :btnDisabled="project.length < 2"
                         @delUnit="delUnit" />
-                    <div v-for="(pump, i) in unit" class="border-l pl-25 my-2">
-                        <PumpUnit :key="pump.id" :pumpData="pump" @pumpUpdate="(a) => unit[i] = a"
-                            @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
-                            @delPump="() => delPump(k, pump.id)">
+                    <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
+                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" @addCyl="() => addCyl(k, i)"
+                            :btnDisabled="unit.length < 2" @delPump="() => delPump(k, unit[i].id)">
                         </PumpUnit>
                     </div>
                     <div class="flex-row flex-left pl-25">
@@ -59,7 +58,6 @@ const navPage = ref([false, false, true, false]);
             </div>
             <Scheme class="schemeMin" :project="project" :meta="meta" />
         </article>
-
         <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" />
 
         <Selector v-if="navPage[2]" :project="project" :order="order" :meta="meta"
@@ -95,6 +93,10 @@ svg {
 
 input[type="number"],
 select {
+    border: 0.5px solid;
+    border-radius: 4px;
+    min-height: 2.5vh;
+    font-size: 1.75vh;
     max-width: 13vh;
     min-width: 10vh;
 }
@@ -113,6 +115,11 @@ button:hover {
     background-color: #133fc3;
     color: aliceblue;
     transition: 0.5s;
+}
+
+button:disabled:hover {
+    background-color: #a87575;
+    color: grey;
 }
 
 .btn-add {
@@ -202,5 +209,9 @@ button:hover {
     height: 60vh;
     width: 60vw;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.h-100 {
+    height: 100%;
 }
 </style>

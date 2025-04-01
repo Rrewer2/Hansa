@@ -1,62 +1,52 @@
 <script setup>
-import { ref } from "vue";
 import Hydrocylinder from "./Hydrocylinder.vue";
-import { buckling, hkshCounting, pumpCounting, round, getVFU } from "../services/functions";
+import { buckling, pumpCounting, round, getVFU } from "../services/functions";
 import { text } from "../services/text";
 import { freqData } from "../services/data";
+import ResultItem from "./ResultItem.vue";
 const { pumpData, btnDisabled } = defineProps(["pumpData", "btnDisabled"]);
 
-const data = ref({
-    Q: pumpData.Q,
-    VFU: '',
-    p: pumpData.p,
-    n: pumpData.n,
-    DR2type: pumpData.DR2type
-});
-const hkshData = ref(pumpData.HKSH);
-const emits = defineEmits(["pumpUpdate"]);
-const updating = () => emits('pumpUpdate', { ...pumpData, ...data.value, HKSH: hkshData.value });
+const { id, HKSH, ...rest } = pumpData;
 </script>
 
 <template>
     <article>
         <div class="flex-row">
             <div>
-                <button :disabled="btnDisabled" @click="() => $emit('delPump')">
+                <button :disabled="btnDisabled" @click="$emit('delPump')">
                     ✕
                 </button>
             </div>
+            <ResultItem :data="{ VFU: getVFU(pumpData.Q, pumpData.n) }" />
 
-            <div v-for="(_, ind) in data" @input="updating" class="flex-col">
+            <div v-for="(_, ind) in rest" class="flex-col">
                 <span class="border border-bottom-no bgc-g fs-sm px-5">
                     {{ text(ind) }}
                 </span>
-                <input v-if="ind === 'Q' || ind === 'p'" type="number" min="0" v-model="data[ind]" />
-                <select v-if="ind === 'DR2type'" v-model="data.DR2type">
+
+                <input v-if="ind === 'Q' || ind === 'p'" type="number" min="0" v-model="pumpData[ind]" />
+
+                <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type">
                     <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>
                 </select>
-                <select v-if="ind === 'n'" v-model="data[ind]">
+
+                <select v-if="ind === 'n'" v-model="pumpData[ind]">
                     <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
                 </select>
-                <span v-if="ind === 'VFU'" class="border bgc-w">{{ getVFU(pumpData.Q, pumpData.n) }}</span>
             </div>
 
-            <div v-for="(el, title) in pumpCounting(pumpData)" class="flex-col fs-sm">
-                <span class="border border-bottom-no bgc-g h-100 px-5">{{ text(title) }}</span>
-                <span class="border bgc-w">{{ round(el) }}</span>
-            </div>
+            <ResultItem :data="pumpCounting(pumpData)" />
         </div>
 
-        <Hydrocylinder v-for="(muscle, j) in pumpData.HKSH" :key="muscle.id" :data="muscle"
-            :results="hkshCounting(muscle, pumpData.Q, pumpData.p)" @muscleUpdate="(a) => {
-                hkshData[j] = a;
-                updating();
-            }" @delCyl="() => {
-                hkshData = hkshData.filter(({ id }) => id !== muscle.id);
-                updating();
-            }" :class="buckling(muscle, pumpData.p)" class="my-2 border-no" />
+        <Hydrocylinder v-for="(_, j) in pumpData.HKSH" :key="pumpData.HKSH[j].id" :HKSH="pumpData.HKSH[j]"
+            :pumpData="pumpData" :class="buckling(pumpData.HKSH[j], pumpData.p)" class="my-2 border-no">
+            <button @click="() => pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id)"
+                class="el">
+                ✕
+            </button>
+        </Hydrocylinder>
         <div class="flex-row flex-left pl-25">
-            <button @click="() => $emit('addCyl')" class="btn-add my-2">
+            <button @click="$emit('addCyl')" class="btn-add my-2">
                 + HKSH
             </button>
         </div>
