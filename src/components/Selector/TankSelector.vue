@@ -1,61 +1,66 @@
 <script setup>
 import { ref } from "vue";
 import { tankData } from '../../services/data';
-import { agregatCounting, getStandartTank, getTextWithSpace } from "../../services/functions";
+import { agregatCounting, getStandartTank, getTextWithSpace, round } from "../../services/functions";
 
 
-const { project, meta, open } = defineProps(["project", "meta", "open"]);
+const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
 const emits = defineEmits(["tankSelected"]);
-const tank = ref({
-  minSize: agregatCounting(project).T,
-  title: getTankName(getStandartTank(meta.tank, agregatCounting(project).T))
-});
+const minSize = agregatCounting(project).T;
+const tank = ref({});
 
-function getTankName(size) {
-  if (meta.tank === 'RA') return 'HKBAKRA' + size;
-  if (meta.tank === 'BEK') return 'HKBEK' + size;
-  if (meta.tank === 'SBT') return 'HKSBT' + `00${size}`.slice(-3);
-  if (meta.tank === 'BSK') return 'HKBSK' + size;
-};
+const getName = (elem) => Object.keys(elem)[0];
 const updating = (elem) => {
-  tank.value.title = getTankName(elem)
-  emits("tankSelected", { title: tank.value.title, value: elem });
+  // if (order) {
+  //   console.log('order :>> ', order);
+  //   console.log('tank :>> ', tank.value);
+  //   console.log('tankData[meta.tank] :>> ', tankData[meta.tank]);
+  //   console.log('tankData[meta.tank][order] :>> ', tankData[meta.tank][order]);
+  //   tank.value = order
+  //   return
+  // }
+  tank.value = elem;
+  emits("tankSelected", elem);
 };
-updating(tankData[meta.tank].find(el => el >= tank.value.minSize));
+updating(getStandartTank(meta.tank, minSize))
+
+const tankVerify = (elem) => getName(elem) === getName(tank.value);
 </script>
 
 <template>
   <article>
-    <h2>Zbiornik<span>{{ tank.title }}</span></h2>
+    <h2 :class="open && 'bgc-g'">Zbiornik<span> {{ getName(tank) }}</span></h2>
     <span>
-      Minimalna pojemność: {{ tank.minSize }} L
+      Minimalna pojemność: {{ round(minSize) }} L
     </span>
     <label>Typ zbiornika:
-      <select v-model="meta.tank" @input="() => tank.tank = t">
-        <option v-for="(_, t) in tankData" :value="t">
-          {{ t }}
+      <select v-model="meta.tank">
+        <option v-for="(_, type) in tankData" :value="type">
+          {{ type }}
         </option>
       </select>
     </label>
-    <div>
-      <table>
-        <thead>
-          <td>Wybierz</td>
-          <td>Nazwa</td>
-        </thead>
-        <tbody v-for="elem in tankData[meta.tank]" :value="elem">
-          <td>
-            <input type="radio" :id="elem" :value="elem" name="elem" @input="() => updating(elem)"
-              :checked="elem === tankData[meta.tank].find(el => el >= tank.minSize)" class="mx" />
-          </td>
-          <td class="tal">
-            <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${getTankName(elem)}`" target="_blank"
-              rel="noopener noreferrer">{{ getTextWithSpace(getTankName(elem)) }}
-            </a>
-          </td>
-        </tbody>
-      </table>
-    </div>
+
+    <table>
+      <thead>
+        <td>Wybierz</td>
+        <td>Nazwa</td>
+        <td v-for="item in Object.keys(Object.values(tankData[meta.tank][0])[0])">{{ item }}</td>
+      </thead>
+      <tbody v-for="elem in tankData[meta.tank]" :value="elem">
+        <td>
+          <input type="radio" :id="getName(elem)" :value="getName(elem)" name="elem" @input="updating(elem)"
+            :checked="tankVerify(elem)" class="mx" />
+        </td>
+        <td class="tal">
+          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${(getName(elem))}`" target="_blank" rel="noopener noreferrer">
+            {{ getTextWithSpace(getName(elem)) }}
+          </a>
+        </td>
+        <td v-for="item in Object.values(elem)[0]">{{ item }}</td>
+      </tbody>
+    </table>
+
   </article>
 </template>
 

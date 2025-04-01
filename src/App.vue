@@ -8,7 +8,7 @@ import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
-const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mount: '22 Wachliwe', form: 'hor' };
+const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mountA: '2', mountB: '2', form: 'hor' };
 const pumpInit = { Q: 7.5, p: 200, n: 1500, DR2type: 3 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
@@ -61,7 +61,7 @@ const navPage = ref([false, false, true, false]);
         <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" />
 
         <Selector v-if="navPage[2]" :project="project" :order="order" :meta="meta"
-            @pumpSelected="(title) => console.log(title)" @projectUpdated="pump => { }" />
+            @pumpSelected="(title) => console.log(title)" />
 
         <Oferta v-if="navPage[3]" />
     </main>

@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from "vue";
 import { pumpData, freqData } from '../../services/data';
-import { getTextWithSpace, getVFU, round } from "../../services/functions";
+import { getQ, getTextWithSpace, getVFU, round } from "../../services/functions";
 import { text } from "../../services/text";
 
 
 const { project } = defineProps(["project"]);
-const emits = defineEmits(["pumpSelected", "projectUpdated"]);
+const emits = defineEmits(["pumpSelected"]);
 const pump = ref({
   Q: project[0].unit[0].Q,
   type: '',
@@ -17,7 +17,6 @@ const pump = ref({
 
 const onTypeSelect = () => {
   pump.value.founded = null;
-  emits('projectUpdated', pump);
 
   if (!pump.value.type) return;
   if (pump.value.type === 'gears') {
@@ -25,7 +24,7 @@ const onTypeSelect = () => {
       .map(([maker, pumpsByGroup]) => pumpsByGroup
         .map((el, group) => Object.entries(el)
           .map(([title, data]) => ([title, { ...data, maker, group }]))
-          .filter((el) => el[1].CC - getVFU(pump.value.Q, pump.value.n) >= -1.5 && el[1].CC - getVFU(pump.value.Q, pump.value.n) <= 1.5)
+          .filter((el) => el[1].CC - getVFU(project[0].unit[0].Q, project[0].unit[0].n) >= -1.5 && el[1].CC - getVFU(project[0].unit[0].Q, project[0].unit[0].n) <= 1.5)
         )
       ).flat(2);
   }
@@ -33,13 +32,13 @@ const onTypeSelect = () => {
     pump.value.founded = pumpData[pump.value.type]
       .map(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
         .map(([title, data]) => ([title, { ...data, maker }]))
-        .filter((el) => el[1].CC - getVFU(pump.value.Q, pump.value.n) >= -12 && el[1].CC - getVFU(pump.value.Q, pump.value.n) <= 12)
+        .filter((el) => el[1].CC - getVFU(project[0].unit[0].Q, project[0].unit[0].n) >= -12 && el[1].CC - getVFU(project[0].unit[0].Q, project[0].unit[0].n) <= 12)
       ).flat();
   }
 };
 const selectedPump = ([title, elem]) => {
   pump.value.title = title;
-  pump.value.Q = round(elem.CC * pump.value.n * 0.96 / 1000);
+  project[0].unit[0].Q = round(getQ(elem.CC, project[0].unit[0].n));
   emits('pumpSelected', [title, elem]);
 };
 
@@ -52,21 +51,21 @@ const selectedPump = ([title, elem]) => {
       <h3>
         Objętość L/min
       </h3>
-      <input type="number" min="0" v-model="pump.Q" @change="onTypeSelect" :disabled="false" />
+      <input type="number" min="0" v-model="project[0].unit[0].Q" @change="onTypeSelect" :disabled="false" />
     </div>
 
     <div class="inline w-100">
       <h3>
         VFU cm³
       </h3>
-      <h3>{{ getVFU(pump.Q, pump.n) }}</h3>
+      <h3>{{ getVFU(project[0].unit[0].Q, project[0].unit[0].n) }}</h3>
     </div>
 
     <div class="inline w-100">
       <h3>
         ν, min⁻¹
       </h3>
-      <select v-model="pump.n" @change="onTypeSelect">
+      <select v-model="project[0].unit[0].n" @change="onTypeSelect">
         <option v-for="item in freqData" :value="item">{{ item }}</option>
       </select>
     </div>
@@ -102,12 +101,13 @@ const selectedPump = ([title, elem]) => {
         </thead>
         <tbody v-for="[title, elem] in pump.founded" :value="elem" @input="() => selectedPump([title, elem])">
           <td class="tal">
-            <input type="radio" :id="title" :value="title" name="title" :checked="pump === title" class="mx" />
+            <input type="radio" :id="title" :value="getQ(elem.CC, project[0].unit[0].n)" v-model="project[0].unit[0].Q"
+              name="title" :checked="pump.title === title" class="mx" />
             <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
           </td>
-          <td>{{ round(pump.n * 0.96 * elem.CC / 1000) }}</td>
+          <td>{{ round(getQ(elem.CC, project[0].unit[0].n)) }}</td>
           <td v-for="item in elem">{{ item }}
           </td>
         </tbody>

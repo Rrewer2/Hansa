@@ -24,7 +24,7 @@ const getSh = (unit) => unit.DR2type ? 2 * (getSL(unit.HKSH.length) / 5) : 0.5 *
         <ControlUnit v-for="unit, c in project[0].unit" :x="200 + c * 1100" :y="100" :sl="getSL(unit.HKSH.length)"
             :unit="unit" :sl1="getSL1(unit)" :sh="getSh(unit)" :R="R()" :length="project[0].unit.length"
             :xT="LTank - 100" />
-        <Tank :x="200" :y="yTank()" :L="LTank" :text="`${getTankSize(project, meta.tank)} L`" />
+        <Tank :x="200" :y="yTank()" :L="LTank" :text="`${Object.values(getTankSize(project, meta.tank))[0].Size} L`" />
         <PumpUnit v-for="pumps, i in project" :x="350 + 1000 * i" :y="yTank() - 1.25 * R()" :pumps="pumps.unit"
             :mount="pumps.engineMount" :R="R()" />
         <FIBL :x="200 + LTank - 400" :y="yTank()" :a="R() / 1.5" />

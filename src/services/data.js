@@ -8,10 +8,13 @@ export const standartDiameters = [ 160, 155, 150, 145, 140, 135, 130, 125, 120, 
  ];
 export const bucklingSafety = 5;
 
-export const tankData = { RA: [ 3, 6, 12, 20, 30, 44, 70, 130, // { // Size: 3, // CoolingCapacity: 0.16, // }, // { // Size: 6, // CoolingCapacity: 0.36, // }, // { // Size: 12, // CoolingCapacity: 0.6, // }, // { // Size: 20, // CoolingCapacity: 0.72, // }, // { // Size: 30, // CoolingCapacity: 0.92, // }, // { // Size: 44, // CoolingCapacity: 1.04, // }, // { // Size: 70, // CoolingCapacity: 1.16, // }, // { // Size: 130, // CoolingCapacity: 2.1, // }, 
- ], BSK: [40, 63, 100, 160, 200, 250, 300, 400], SBT: [6, 12, 25, 40, 70, 100, 160, 250], BEK: [12, 20, 35, 50, 60, 75, 100, 150, 225, 300
-],
-};
+export const HKSHMount  = {0:'Zakończone gwintem',1:'Tuleja sztywna',2:'Wahliwe łożysko',3:'Kołnierz dławnicy',4:'Kołnierz dna',5:'Kołnierz pręta',6:'Na łapach',7:'Na kuli',8:'Przelotowy pręt',9:'Na czopach',W:'Widlaste',X:'Inne'};
+
+const RA = [{HKBAKRA03:{Size:3,CoolingCapacity: 0.16}},{HKBAKRA06:{Size:6,CoolingCapacity: 0.36}},{HKBAKRA12:{Size:12,CoolingCapacity: 0.6}},{HKBAKRA20:{Size:20,CoolingCapacity: 0.72}},{HKBAKRA30:{Size:30,CoolingCapacity: 0.92}},{HKBAKRA44:{Size:44,CoolingCapacity: 1.04}},{HKBAKRA70:{Size:70,CoolingCapacity: 1.16}},{HKBAKRA130:{Size:130,CoolingCapacity: 2.1}}];
+const BSK = [{HKBSK40:{Size:40}},{HKBSK63:{Size:63}},{HKBSK100:{Size:100}},{HKBSK160:{Size:160}},{HKBSK200:{Size:200}},{HKBSK250:{Size:250}},{HKBSK300:{Size:300}},{HKBSK400:{Size:400}}];
+const BEK = [{HKBEK12:{Size:12}},{HKBEK20:{Size:20}},{HKBEK35:{Size:35}},{HKBEK50:{Size:50}},{HKBEK60:{Size:60}},{HKBEK75:{Size:75}},{HKBEK100:{Size:100}},{HKBEK150:{Size:150}},{HKBEK225:{Size:225}},{HKBEK300:{Size:300}}];
+const SBT =[{HKSBT006:{Size:6}},{HKSBT012:{Size:12}},{HKSBT025:{Size:25}},{HKSBT040:{Size:40}},{HKSBT070:{Size:70}},{HKSBT100:{Size:100}},{HKSBT160:{Size:160}},{HKSBT250:{Size:250}}];
+export const tankData = { RA, BSK, BEK, SBT};
 
 export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
 
@@ -35,6 +38,8 @@ export const coolerData = [ { Model: "2005K", Flow: { min: 5, max: 75 }, Perform
 ];
 
 export const filterData = [];
+
+export const spoolTypes = ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'D1', 'Y', 'Y1'];
 
 export const freqData = [ 750, 1500, 1800, 3000 ];
 export const engineMountData = ['B5', 'B35', 'B14', 'B34'];

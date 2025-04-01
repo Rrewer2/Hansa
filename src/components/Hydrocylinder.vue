@@ -10,7 +10,8 @@ const getValue = {
     d: filtrationD(standartDiameters, HKSH.D),
     z: [1, 2],
     spool: spoolTypes,
-    mount: HKSHMount,
+    mountA: HKSHMount,
+    mountB: HKSHMount,
     form: ['ver', 'hor']
 };
 const { id, ...rest } = HKSH;
@@ -31,6 +32,12 @@ const { id, ...rest } = HKSH;
 
                 <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input" />
 
+                <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]">
+                    <option v-for="elem, j in getValue[i]" :value="j" class="tal">
+                        <span v-if="i === 'mountA' || i === 'mountB'">{{ j }}</span> {{ elem }}
+                    </option>
+                </select>
+
                 <select v-else v-model="HKSH[i]">
                     <option v-for="elem in getValue[i]" :value="elem">
                         {{ elem }}
@@ -43,4 +50,8 @@ const { id, ...rest } = HKSH;
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.tal {
+    text-align: left;
+}
+</style>

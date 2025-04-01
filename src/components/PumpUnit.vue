@@ -1,6 +1,6 @@
 <script setup>
 import Hydrocylinder from "./Hydrocylinder.vue";
-import { buckling, pumpCounting, round, getVFU } from "../services/functions";
+import { buckling, pumpCounting, getVFU } from "../services/functions";
 import { text } from "../services/text";
 import { freqData } from "../services/data";
 import ResultItem from "./ResultItem.vue";
