@@ -1,10 +1,9 @@
 <script setup>
 import Hydrocylinder from "./Hydrocylinder.vue";
-import { buckling, pumpCounting, getVFU } from "../services/functions";
+import { buckling, pumpCounting, getVFU, round } from "../services/functions";
 import { text } from "../services/text";
-import { freqData } from "../services/data";
 import ResultItem from "./ResultItem.vue";
-const { pumpData, btnDisabled } = defineProps(["pumpData", "btnDisabled"]);
+const { pumpData, btnDisabled, project, k } = defineProps(["pumpData", "btnDisabled", "project", "k"]);
 
 const { id, HKSH, ...rest } = pumpData;
 </script>
@@ -17,9 +16,9 @@ const { id, HKSH, ...rest } = pumpData;
                     ✕
                 </button>
             </div>
-            <ResultItem :data="{ VFU: getVFU(pumpData.Q, pumpData.n) }" />
+            <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
-            <div v-for="(_, ind) in rest" class="flex-col">
+            <div v-for="(_, ind) in rest" class="flex-col ml-10">
                 <span class="border border-bottom-no bgc-g fs-sm px-5">
                     {{ text(ind) }}
                 </span>
@@ -28,10 +27,6 @@ const { id, HKSH, ...rest } = pumpData;
 
                 <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type">
                     <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>
-                </select>
-
-                <select v-if="ind === 'n'" v-model="pumpData[ind]">
-                    <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
                 </select>
             </div>
 

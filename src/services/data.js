@@ -4,7 +4,7 @@ export const g = 9.80665;
 
 export const separator = " | ";
 
-export const standartDiameters = [ 160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100, 95, 90, 85, 80, 75, 70, 65, 63, 60, 56, 55, 50, 45, 40, 36, 35, 32, 30, 28, 25, 22, 20, 16
+export const standartDiameters = [ 200,195,190,185,180,175,170,165,160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100, 95, 90, 85, 80, 75, 70, 65, 63, 60, 56, 55, 50, 45, 40, 36, 35, 32, 30, 28, 25, 22, 20, 16
  ];
 export const bucklingSafety = 5;
 
@@ -17,6 +17,11 @@ const SBT =[{HKSBT006:{Size:6}},{HKSBT012:{Size:12}},{HKSBT025:{Size:25}},{HKSBT
 export const tankData = { RA, BSK, BEK, SBT};
 
 export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
+export const freqData = [ 750, 1500, 1800, 3000 ];
+export const engineMountData = ['B5', 'B35', 'B14', 'B34'];
+const engines = [{'K-400B35-1.5-90': {P:1.5,size:90,V:400,mount:'B35',},'K-400B35-2.2-100': {P:2.2,size:100,V:400,mount:'B35',},'K-400B35-3-112': {P:3,size:112,V:400,mount:'B35',},'K-400B35-4-112': {P:4,size:112,V:400,mount:'B35',},'K-400B35-5.5-132': {P:5.5,size:132,V:400,mount:'B35',},'K-400B35-7.5-160': {P:7.5,size:160,V:400,mount:'B35',},},
+  {'K-230B14-1.5-90': {P:1.5,size:90,V:230,mount:'B14',},'K-230B14-2.2-100': {P:2.2,size:100,V:230,mount:'B14',},'K-230B14-3-112': {P:3,size:112,V:230,mount:'B14',},}];
+export const enginesData = engines.reduce((prev, cur) => ({...prev, ...cur}));
 
 export const screwArr = [12.9, 10.9, 8.8, 6.8, 6.6, 5.8];
 
@@ -41,8 +46,6 @@ export const filterData = [];
 
 export const spoolTypes = ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'D1', 'Y', 'Y1'];
 
-export const freqData = [ 750, 1500, 1800, 3000 ];
-export const engineMountData = ['B5', 'B35', 'B14', 'B34'];
 
 export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
 const gearPumpAPF = [
@@ -152,7 +155,6 @@ const pistonPumpKawasaki = {
   HKK3VL112B1NRMML0: { CC: 112, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
   HKK3VL140B1NRMML0: { CC: 140, in: 'SAE J518C - 2.1/2″', out: 'SAE J518C - 1.1/4″', drain:'M27 x 2', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
   HKK3VL200B1NRMML0: { CC: 200, in: 'SAE J518C - 3″', out: 'SAE J518C - 1.1/2″', drain:'3/4″', pmax:320, Regulator: 'Kontroler wykrywania obciążenia'},
-
 };
 const pistonPumpDaikin = {
   HKJV15A3RX95: { CC: 14.8, in: 'G1″', out: 'G1″', drain:'3/8″', pmax:210, Regulator: 'Regulator ciśnienia'},
@@ -174,6 +176,11 @@ const pistonPumpPBA = {
   HKPBA108L8064SF: { CC: 108, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
 };
 export const pumpData = {
-  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['CHINA', gearPumpAPF]],
-  piston:[['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]],
+  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['CHINA', gearPumpAPF]]
+  .map(([maker, pumpsByGroup]) => pumpsByGroup
+    .map((el, group) => Object.entries(el)
+      .map(([title, data]) => ({[title]: { ...data, maker, group }})))).flat(2),
+  piston:[['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]]
+  .map(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
+    .map(([title, data]) => ({[title]: { ...data, maker }}))).flat()
 };

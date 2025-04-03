@@ -9,12 +9,12 @@ import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mountA: '2', mountB: '2', form: 'hor' };
-const pumpInit = { Q: 7.5, p: 200, n: 1500, DR2type: 3 };
+const pumpInit = { Q: 8, p: 190, DR2type: 3 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
-const order = ref({});
 const meta = ref({ tank: 'RA', cooler: 2 });
-const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35' });
+const order = ref({ tank: {} });
+const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35', n: 1500 });
 getNewPowerUnit();
 const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
     ? {
@@ -36,11 +36,12 @@ const navPage = ref([false, false, true, false]);
 
             <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
                 <div :key="id">
-                    <PumpUnitTitle :project="project" :k="k" :unit="unit" :btnDisabled="project.length < 2"
-                        @delUnit="delUnit" />
+                    <PumpUnitTitle :project="project" :k="k" :btnDisabled="project.length < 2" @delUnit="delUnit"
+                        :order="order" />
                     <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
-                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" @addCyl="() => addCyl(k, i)"
-                            :btnDisabled="unit.length < 2" @delPump="() => delPump(k, unit[i].id)">
+                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" :project="project" :k="k"
+                            @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
+                            @delPump="() => delPump(k, unit[i].id)">
                         </PumpUnit>
                     </div>
                     <div class="flex-row flex-left pl-25">
@@ -80,7 +81,7 @@ const navPage = ref([false, false, true, false]);
     background-color: rgba(0, 0, 0, 0.25);
     /* padding-bottom: 5vh; */
     min-height: 100vh;
-    width: 100vw;
+    min-width: 100vw;
     padding: 0 10px;
 }
 
@@ -130,7 +131,7 @@ button:disabled:hover {
 .flex-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     align-content: stretch;
 }
 
@@ -195,6 +196,14 @@ button:disabled:hover {
     margin: 3px 0;
 }
 
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-50 {
+    margin-right: 50px;
+}
+
 .invisible {
     display: none;
 }
@@ -213,5 +222,15 @@ button:disabled:hover {
 
 .h-100 {
     height: 100%;
+}
+
+.inline {
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 80px;
+}
+
+.w-100 {
+    min-width: 100px;
 }
 </style>

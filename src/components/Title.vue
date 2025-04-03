@@ -6,7 +6,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 
 <template>
   <section class="">
-    <h1>Agregat {{ agregatTitle(project, meta.tank, order) }}</h1>
+    <h2>Agregat {{ agregatTitle(project, meta.tank, order) }}</h2>
     <div class="flex-row flex-left">
       <label>Typ zbiornika:
         <select v-model="meta.tank">

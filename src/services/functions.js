@@ -21,11 +21,12 @@ const tank = ( Q ) => 3 * Q; //Ємність баку
 export const getStandartTank = (key, T) => tankData[key].find((a) => Object.values(a)[0].Size >= T); // Розмір баку
 
 export const Power = ( Q, p ) => ( Q * p ) / 500; //Потужність розрахункова
+export const reducedPower = (unit) => unit.map(({ Q, p}) => Power(Q, p)).reduce((a, b) => a + b);
 export const getStandartPower = ( P ) => motorData.find(N => N >= P)  || '___'; //Потужність каталогова
 
 const QBack = ( Q, SD, Sd ) => Q * SD / Sd;
-export const getVFU = (Q, n) => round(Q / (n * 0.96) * 1000);
-export const getQ = (VFU, n) => round(VFU * (n * 0.96) / 1000);
+export const getVFU = (Q, n) => Q * 1000 / (n * 0.96);
+export const getQ = (VFU, n) => VFU * (n * 0.96) / 1000;
 const pipe = ( Q, VP ) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
 const pipePmax = ( Q ) => pipe(Q, VPipe.P[0]);
 const pipeTmax = ( QBack ) => pipe(QBack, VPipe.T[0]);
@@ -71,20 +72,21 @@ export const buckling = ( { D, d, L }, p) => {
 }
 
 export const powerUnitCounting = (unit) => {
-    const resucedPower = unit.map(({ Q, p}) => Power(Q, p)).reduce((a, b) => a + b);
-    const power = getStandartPower(resucedPower);
+    const power = getStandartPower(reducedPower(unit));
     const pumpLitre = unit.map(item => item.Q).join("x");
     return `${ round(power) }kW - ${ pumpLitre }L`;
 };
 const getQfromProject = project => project.map(({unit}) => unit.map(({ Q }) => Q)).flat();
 const getT = Q => tank(Q.reduce((a, b) => a + b));
 export const getTankSize = (project, meta) => getStandartTank(meta, getT(getQfromProject(project)));
-export const agregatTitle = (project, meta, tank) => {
-    const P = project.map(({unit}) => unit.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b));
+
+export const agregatTitle = (project, meta, order) => {
+    const P = project.map(({unit}) => reducedPower(unit));
     const P1 = P.map(el => getStandartPower(el));
     const Q = getQfromProject(project);
     const T = getT(Q);
-    const T1 = tank ? Object.values(tank)[0].Size : getStandartTank(meta, T) || '___';
+    const temp = Object.values(order.tank || getStandartTank(meta, T));
+    const T1 = temp? temp[0]?.Size : '___';
     return `HAG${meta}${T1}-${P1.join("/")}-${Q.join("/")}`;
 };
 
@@ -103,10 +105,12 @@ export const agregatCounting = (project) => {
 //     const pTmin = pipePmax(Q1);
 //     return { Q1, pPmin, pPmax, pTmin, pTmax };
 // };
-
-export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
-    const P  = Power(Q1,p1);
+export const powerCounting = (unit) => {
+    const P = unit.map(({ Q, p}) => Power(Q, p)).reduce((a, b) => a + b);
     const I = 2.4 * P ** 0.9;
+    return {P, I}
+}
+export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
     const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
     const pipe_P = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1);
     const pipeP = pipe_P ? pipe_P[0] : '∄';
@@ -115,10 +119,10 @@ export const pumpCounting = ({ Q: Q1, p: p1, n, HKSH }) => {
     const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
     const pipeS = pipe_S ? pipe_S[0] : '∄';
     const QBack = Q1 * k;
-    return { P, I, pipeP, pipeT, pipeS, QBack };
+    return { pipeP, pipeT, pipeS, QBack, k  };
 };
 
-export const filtrationD = (arr, D) => arr.filter(el => el < D);
+export const filtrationD = (arr, D) => arr;
 
 // console.log(Object.fromEntries([
 //     { title: "Nadtłokowa objętość", unit: "l", value: 'VD'},

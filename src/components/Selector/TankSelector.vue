@@ -1,37 +1,19 @@
 <script setup>
-import { ref } from "vue";
 import { tankData } from '../../services/data';
 import { agregatCounting, getStandartTank, getTextWithSpace, round } from "../../services/functions";
 
-
 const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
-const emits = defineEmits(["tankSelected"]);
-const minSize = agregatCounting(project).T;
-const tank = ref({});
 
-const getName = (elem) => Object.keys(elem)[0];
-const updating = (elem) => {
-  // if (order) {
-  //   console.log('order :>> ', order);
-  //   console.log('tank :>> ', tank.value);
-  //   console.log('tankData[meta.tank] :>> ', tankData[meta.tank]);
-  //   console.log('tankData[meta.tank][order] :>> ', tankData[meta.tank][order]);
-  //   tank.value = order
-  //   return
-  // }
-  tank.value = elem;
-  emits("tankSelected", elem);
-};
-updating(getStandartTank(meta.tank, minSize))
+const getTitle = (item) => Object.keys(item)[0];
 
-const tankVerify = (elem) => getName(elem) === getName(tank.value);
+const tankVerify = (elem) => getTitle(elem) === order.tank?.title;
 </script>
 
 <template>
   <article>
-    <h2 :class="open && 'bgc-g'">Zbiornik<span> {{ getName(tank) }}</span></h2>
+    <h2 :class="open && 'bgc-g'">Zbiornik<span> {{ order.tank?.title }}</span></h2>
     <span>
-      Minimalna pojemność: {{ round(minSize) }} L
+      Minimalna pojemność: {{ round(agregatCounting(project).T) }} L
     </span>
     <label>Typ zbiornika:
       <select v-model="meta.tank">
@@ -49,18 +31,17 @@ const tankVerify = (elem) => getName(elem) === getName(tank.value);
       </thead>
       <tbody v-for="elem in tankData[meta.tank]" :value="elem">
         <td>
-          <input type="radio" :id="getName(elem)" :value="getName(elem)" name="elem" @input="updating(elem)"
-            :checked="tankVerify(elem)" class="mx" />
+          <input type="radio" :id="getTitle(elem)" :value="{ title: getTitle(elem), tankData: elem }" name="elem"
+            v-model="order.tank" :checked="tankVerify(elem)" class="mx" />
         </td>
         <td class="tal">
-          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${(getName(elem))}`" target="_blank" rel="noopener noreferrer">
-            {{ getTextWithSpace(getName(elem)) }}
+          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${(getTitle(elem))}`" target="_blank" rel="noopener noreferrer">
+            {{ getTextWithSpace(getTitle(elem)) }}
           </a>
         </td>
         <td v-for="item in Object.values(elem)[0]">{{ item }}</td>
       </tbody>
     </table>
-
   </article>
 </template>
 

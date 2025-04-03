@@ -19,13 +19,13 @@ const { id, ...rest } = HKSH;
 
 <template>
     <section class="pl-25 my-2">
-        <h4 class="text-left">
+        <h2 class="text-left">
             <slot></slot>
             {{ HKSHTitle(HKSH) }}
-        </h4>
+        </h2>
 
         <div class="flex-row pl-25">
-            <div v-for="(_, i) in rest" class="flex-col">
+            <div v-for="(_, i) in rest" class="flex-col ml-10">
                 <p class="border border-bottom-no bgc-g h-100">
                     {{ text(i) }}
                 </p>

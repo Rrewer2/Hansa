@@ -10,10 +10,12 @@ const textData = {
   Q: ['Q', 'L/min'],
   p: ['ρ', 'bar'],
   n: ['ν', 'min⁻¹'],
+  engineMount: ['Mocowanie silnika'],
   DR2type: ['Typ bloku'],
   P: ['Moc', 'kW'],
   I: ['Prąd', 'A'],
   VFU: ['VFU', 'cm³'],
+  k: ['Ratio'],
   pipeP: ['Rura P'],
   pipeT: ['Rura T'],
   pipeS: ['Rura S'],
@@ -32,4 +34,4 @@ const textData = {
   gears: ['Zębata'],
   piston: ['Wiełotłoczkowa']
 };
-export const text = (key) => textData[key].join(', ');
+export const text = (key) => textData[key] ? textData[key].join(', ') : '############';
