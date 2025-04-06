@@ -1,5 +1,5 @@
 <script setup>
-const navData = ['Obliczenia', 'Schemat', 'Dobór części', 'Oferta'];
+const navData = ['Obliczenia', 'Schemat', 'Dobór części', 'Oferta', 'Simile'];
 const { navPage } = defineProps(["navPage"]);
 </script>
 
@@ -15,7 +15,7 @@ const { navPage } = defineProps(["navPage"]);
 nav {
   position: fixed;
   top: 0;
-  left: 75vw;
+  left: 70vw;
 }
 
 .slice {

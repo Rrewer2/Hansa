@@ -21,7 +21,7 @@ const { id, unit, ...rest } = project[k];
           <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
         </select>
 
-        <select v-else v-model="project[k].engineMount" :disabled="order[`motor${k}`]">
+        <select v-else v-model="project[k].mount" :disabled="order[`motor${k}`]">
           <option v-for="item in engineMountData" :value="item">{{ item }}</option>
         </select>
       </div>

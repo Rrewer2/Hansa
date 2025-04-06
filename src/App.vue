@@ -8,13 +8,14 @@ import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
+import Simile from "./components/Simile.vue";
 const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mountA: '2', mountB: '2', form: 'hor' };
-const pumpInit = { Q: 8, p: 190, DR2type: 3 };
+const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
 const meta = ref({ tank: 'RA', cooler: 2 });
-const order = ref({ tank: {} });
-const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], engineMount: 'B35', n: 1500 });
+const order = ref({});
+const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], mount: 'B35', n: 1500 });
 getNewPowerUnit();
 const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
     ? {
@@ -26,23 +27,22 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
-const navPage = ref([false, false, true, false]);
+const navPage = ref([false, false, true, false, false]);
 </script>
 
 <template>
     <main class="app">
         <article v-if="navPage[0]">
-            <Title :project="project" :meta="meta" :order="order.tank" />
+            <Title :project="project" :meta="meta" :order="order" />
 
             <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
                 <div :key="id">
                     <PumpUnitTitle :project="project" :k="k" :btnDisabled="project.length < 2" @delUnit="delUnit"
                         :order="order" />
                     <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
-                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" :project="project" :k="k"
+                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" :project="project" :k="k" :i="i"
                             @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
-                            @delPump="() => delPump(k, unit[i].id)">
-                        </PumpUnit>
+                            @delPump="() => delPump(k, unit[i].id)" :order="order" />
                     </div>
                     <div class="flex-row flex-left pl-25">
                         <button @click="() => addPump(k)" class="btn-add my-2">
@@ -57,14 +57,15 @@ const navPage = ref([false, false, true, false]);
                     + Zespół pompujacy
                 </button>
             </div>
-            <Scheme class="schemeMin" :project="project" :meta="meta" />
+            <Scheme class="schemeMin" :project="project" :meta="meta" :order="order" />
         </article>
-        <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" />
+        <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" :order="order" />
 
         <Selector v-if="navPage[2]" :project="project" :order="order" :meta="meta"
             @pumpSelected="(title) => console.log(title)" />
 
-        <Oferta v-if="navPage[3]" />
+        <Oferta v-if="navPage[3]" :order="order" />
+        <Simile v-if="navPage[4]" />
     </main>
     <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
 </template>
@@ -78,11 +79,16 @@ const navPage = ref([false, false, true, false]);
 }
 
 .app {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(14, 44, 14, 0.25);
     /* padding-bottom: 5vh; */
     min-height: 100vh;
     min-width: 100vw;
     padding: 0 10px;
+}
+
+article {
+    font-size: 20px;
+    padding: 20px;
 }
 
 svg {
@@ -98,8 +104,14 @@ select {
     border-radius: 4px;
     min-height: 2.5vh;
     font-size: 1.75vh;
-    max-width: 13vh;
-    min-width: 10vh;
+    /* max-width: 13vh;
+    min-width: 10vh; */
+}
+
+input,
+select,
+option {
+    font-size: 20px;
 }
 
 button {
@@ -108,24 +120,57 @@ button {
     min-width: 30px;
     min-height: 30px;
     border-radius: 5px;
-    background-color: #a87575;
+    background-color: #d25959;
     border: 1px solid;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+button.btn-add {
+    background-color: #356c2b;
+    color: aliceblue;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #133fc3;
+    background-color: #ef1c1c;
     color: aliceblue;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
+button:hover.btn-add {
+    background-color: #44d82a;
+    color: aliceblue;
+    transition: 0.2s;
+}
+
+button:disabled,
 button:disabled:hover {
-    background-color: #a87575;
-    color: grey;
+    cursor: default;
+    background-color: #a58282;
+}
+
+h2,
+h3 {
+    /* padding-top: 20px; */
+}
+
+table {
+    margin: 0 20 0 20;
+    padding-top: 20px;
+}
+
+span {
+    /* margin-left: 20px; */
+}
+
+td {
+    border: 0.5px solid grey;
+    width: 15%;
 }
 
 .btn-add {
     padding: 0 10px;
-    background-color: #95c98c;
 }
 
 .flex-row {
@@ -226,11 +271,19 @@ button:disabled:hover {
 
 .inline {
     display: inline-block;
-    padding-top: 20px;
-    padding-left: 80px;
+    /* padding-top: 20px;
+    padding-left: 80px; */
 }
 
 .w-100 {
     min-width: 100px;
+}
+
+.tal {
+    text-align: left;
+}
+
+.mx {
+    padding: 10;
 }
 </style>

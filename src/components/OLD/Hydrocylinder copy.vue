@@ -111,11 +111,11 @@ const FIn = key => () => F(Sd()) * [1, g / 1000][key];
 const vOut = key => () => v(tOut()) * [1, 0.001, 0.06][key];
 const vIn = key => () => v(tIn()) * [1, 0.001, 0.06][key];
 const tC = () => tIn() + tOut();
-const QBack = () => (Q() * S()) / Sd();
+const Qback = () => (Q() * S()) / Sd();
 const pipePmax = () => pipe(Q(), VPipe.P[0]);
-const pipeTmax = () => pipe(QBack(), VPipe.T[0]);
+const pipeTmax = () => pipe(Qback(), VPipe.T[0]);
 const pipePmin = () => pipe(Q(), VPipe.P[1]);
-const pipeTmin = () => pipe(QBack(), VPipe.T[1]);
+const pipeTmin = () => pipe(Qback(), VPipe.T[1]);
 
 const mainOutputs = [
     { title: "Nadtłokowa objętość", unit: "l", value: VD },
@@ -145,7 +145,7 @@ const mainOutputs = [
         options: ["Przekroczony", `Mniej niż ${bucklingSafety}%`, "Zachowany"],
     },
     { title: "Ścianka cylindra", unit: "mm", value: wallThick },
-    { title: "Powrót oleju", unit: "l/min", value: QBack },
+    { title: "Powrót oleju", unit: "l/min", value: Qback },
     {
         title: "Przelot przewodu P",
         unit: "mm",
