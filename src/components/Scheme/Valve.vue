@@ -4,6 +4,7 @@ import Valve3 from './Valve3.vue';
 
 const { x, y, data, sl } = defineProps(['x', 'y', 'data', 'sl']);
 const h = () => sl / 5;
+console.log('data :>> ', data);
 </script>
 
 <template>

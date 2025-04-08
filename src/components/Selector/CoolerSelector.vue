@@ -11,9 +11,9 @@ const getTitle = () => order.cooler?.title;
 </script>
 
 <template>
-  <article>
+  <article v-if="meta.cooler">
+    <h2>Chłodnica<span> {{ order.cooler?.title }}</span></h2>
 
-    <h2>Cooler<span> {{ order.cooler?.title }}</span></h2>
     <div class="inline w-100">
       <h3 class="border border-bottom-no bgc-g fs-sm px-5">
         {{ text("η") }}

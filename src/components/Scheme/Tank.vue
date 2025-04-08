@@ -1,8 +1,8 @@
 <script setup>
 
 
-const { x, y, L } = defineProps(['x', 'y', 'L']);
-const H = () => 1280 - y;
+const { x, y, L, screenSize } = defineProps(['x', 'y', 'L', 'screenSize']);
+const H = () => screenSize - 150 - y;
 const h = 0;
 const hZlew = 30;
 const u = 30;

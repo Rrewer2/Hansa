@@ -13,7 +13,7 @@ const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mountA: '2', mountB: 
 const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
-const meta = ref({ tank: 'RA', cooler: 2 });
+const meta = ref({ tank: 'RA', cooler: 0, pumpType: 'gears', spool: 'G' });
 const order = ref({});
 const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], mount: 'B35', n: 1500 });
 getNewPowerUnit();
@@ -256,13 +256,13 @@ td {
 .scheme {
     height: 100vh;
     width: 100vw;
-    background-color: #969696;
+    /* background-color: #969696; */
 }
 
 .schemeMin {
     height: 60vh;
     width: 60vw;
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
 }
 
 .h-100 {

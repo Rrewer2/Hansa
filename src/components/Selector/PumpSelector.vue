@@ -10,8 +10,7 @@ const filteredPumps = () => {
     const item = Object.values(el)[0].CC - getVFU(pump.Q, project[i].n);
     const par = meta.pumpType === 'gears' ? 1 : 12;
     return item >= -par && item <= par
-  }
-  )
+  })
 };
 
 const selectedPump = () => {
