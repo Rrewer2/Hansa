@@ -157,4 +157,11 @@ export const KITtitle = (order) => {
     // const size = order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || '___';
     // return `HAG${type}${size}-${P}-${Q.join("/")}`;
   };
-  
+
+export const getSmthFromProject = (arr, key) => arr.flatMap(({ unit }) => unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item[key])));
+export const uniqOrder = (elem, key, order) => {
+  order[key] = {}
+  const unit = order[key];
+ if (unit[elem]) unit[elem].count ? unit[elem].count++ : 1;
+  else unit[elem] = {count:1};
+};

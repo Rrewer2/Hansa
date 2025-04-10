@@ -49,7 +49,7 @@ export const coolerData = [ { title: "2005K", flow: { min: 5, max: 75 }, perform
 
 export const filterData = [];
 
-export const spoolTypes = ['G', 'E', 'J', 'H', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'D1', 'Y', 'Y1'];
+export const spoolTypes = ['G','GA', 'E','EA', 'J','JA', 'H','HA', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
 
 
 export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
@@ -266,11 +266,12 @@ const spoolHansa = [
   {"title":"HK4131030601C1Q","spool":"EA","cetop":"3"},
   {"title":"HK4132010302C1Q","spool":"H","cetop":"3"},
   {"title":"HK4131010601C1Q","spool":"HA","cetop":"3"},
+  {"title":"HK4131520101C1Q","spool":"A","cetop":"3"},
+  {"title":"###HK4131520201C1Q###","spool":"B","cetop":"3"},
   {"title":"HK4131110101C1Q","spool":"C","cetop":"3"},
   {"title":"HK4131510101C1Q","spool":"D","cetop":"3"},
   {"title":"HK4131510201C1Q","spool":"Y","cetop":"3"},
-  {"title":"HK4137510902C1Q","spool":"Dzaczep","cetop":"3"},
-  {"title":"HK4131520101C1Q","spool":"A","cetop":"3"},
+  {"title":"HK4137510902C1Q","spool":"D^","cetop":"3"},
 ]
 const spoolEaton = [
   {"title":"HKDG4V30CVMU24DC","spool":"H","cetop":"3"},
@@ -284,8 +285,8 @@ const spoolEaton = [
   {"title":"HKDG4V322AVMU24DC","spool":"A","cetop":"3"},
   {"title":"HKDG4V322ALVMU24DC","spool":"B","cetop":"3"},
   {"title":"HKDG4V32AVMU24DC","spool":"D","cetop":"3"},
-  {"title":"HKDG4V32NVMU24DC","spool":"Dzaczep","cetop":"3"},
   {"title":"HKDG4V32ALVMU24DC","spool":"Y","cetop":"3"},
+  {"title":"HKDG4V32NVMU24DC","spool":"D^","cetop":"3"},
   {"title":"HKDG4V37CVMU24DC","spool":"M","cetop":"3"}
 ];
 const spoolRexroth = [
@@ -297,16 +298,17 @@ const spoolRexroth = [
   {"title":"D1VW001ENJW","spool":"EA","cetop":"3"},
   {"title":"D1VW002CNJW","spool":"H","cetop":"3"},
   {"title":"D1VW002ENJW","spool":"HA","cetop":"3"},
+  {"title":"D1VW208BNJW","spool":"A","cetop":"3"},
+  {"title":"D1VW208HNJW","spool":"B","cetop":"3"},
   {"title":"D1VW030BNJW","spool":"C","cetop":"3"},
   {"title":"D1VW020BNJW","spool":"D","cetop":"3"},
   {"title":"D1VW020HNJW","spool":"Y","cetop":"3"},
-  {"title":"D1VW020DNJW","spool":"D zaczep","cetop":"3"},
-  {"title":"D1VW208BNJW","spool":"A","cetop":"3"}
+  {"title":"D1VW020DNJW","spool":"D^","cetop":"3"},
 ];
 export const spoolData = [
   ...spoolHansa,
-  ...spoolHansa.map(({title,cetop,...rest})=>({title:title.replace('HK413','HK423'),...rest,cetop:5})),
   ...spoolEaton,
-  ...spoolEaton.map(({title,cetop,...rest})=>({title:title.replace('HKDG4V3','HKDG4V5'),...rest,cetop:5})),
   ...spoolRexroth,
+  ...spoolHansa.map(({title,cetop,...rest})=>({title:title.replace('HK413','HK423'),...rest,cetop:5})),
+  ...spoolEaton.map(({title,cetop,...rest})=>({title:title.replace('HKDG4V3','HKDG4V5'),...rest,cetop:5})),
 ];
