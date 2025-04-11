@@ -5,15 +5,22 @@ import Valve from '../Scheme/Valve.vue';
 
 
 const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
-// const pushToOrder = () => {
-//   const list = getSmthFromProject(project, 'spool');
-//   console.log('list :>> ', list);
-//   const titles = list.map(spool => spoolData.find(el => el.spool === spool).title);
-//   console.log('titles :>> ', titles);
-//   console.log('order :>> ', order);
-//   console.log('order.valve :>> ', order.valve);
-//   // titles.forEach(title => order.valve.push({ title, count: 1 }))
-// }
+const pushToOrder = () => {
+  const list = getSmthFromProject(project).map(({ spool }) => spoolData.find(el => el.spool === spool));
+  const obj = {};
+  list.forEach((elem) => {
+    if (!elem) return;
+    const { title, ...rest } = elem;
+    if (obj[title]) {
+      obj[title].count++;
+    }
+    else {
+      obj[title] = { ...rest, count: 1 };
+    }
+  });
+  order.valve = Object.keys(obj).map(key => ({ title: key, valveData: obj[key], count: obj[key].count }));
+}
+pushToOrder();
 // getSmthFromProject(project, 'spool').map(spool => {
 //   order.valve.push({ title: spool });
 // });

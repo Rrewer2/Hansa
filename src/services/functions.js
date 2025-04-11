@@ -62,8 +62,8 @@ export const hkshCounting = ({ D, d, L, z }, Q, p) => {
   const vOut = v(L, tOut);
   const vIn = v(L, tIn);
   const wall = wallThick(D, p);
-
-  return { FOut, FIn, tOut, tIn, tC, VD, Vd, vOut, vIn, wall };
+  const k = S(D) / S(D, d);
+  return { FOut, FIn, tOut, tIn, tC, VD, Vd, k, vOut, vIn, wall };
 };
 
 export const buckling = ({ D, d, L }, p) => {
@@ -73,7 +73,7 @@ export const buckling = ({ D, d, L }, p) => {
   return F1 <= FOut ? 'error' : 1 - FOut / F1 < bucklingSafety / 100 ? 'yellow' : '';
 };
 
-export const powerUnitCounting = (unit) => {
+export const unitTitle = (unit) => {
   const power = getStandartPower(reducedPower(unit));
   const pumpLitre = unit.map(item => item.Q).join("x");
   return `${round(power)}kW - ${pumpLitre}L`;
@@ -115,7 +115,8 @@ export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
   const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
   const pipeS = pipe_S ? pipe_S[0] : '∄';
   const Qback = Q1 * k;
-  return { pipeP, pipeT, pipeS, Qback, k };
+  const P = Power(Q1,p1);
+  return { pipeP, pipeT, pipeS, Qback, P };
 };
 
 export const filtrationD = (arr, D) => arr;
@@ -158,7 +159,7 @@ export const KITtitle = (order) => {
     // return `HAG${type}${size}-${P}-${Q.join("/")}`;
   };
 
-export const getSmthFromProject = (arr, key) => arr.flatMap(({ unit }) => unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item[key])));
+export const getSmthFromProject = (arr) => arr.flatMap(({ unit }) => unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item)));
 export const uniqOrder = (elem, key, order) => {
   order[key] = {}
   const unit = order[key];

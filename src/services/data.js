@@ -18,11 +18,11 @@ export const tankData = { RA, BSK, BEK, SBT };
 
 export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
 export const freqData = [ 750, 1500, 1800, 3000 ];
-const enginesHK = [{"title": "HK63B4B3142-4IE2","power": 0.18,"meta": "E-Motor 230/400V 0,18kW 1360U B34 IE2"},{"title": "HK71A4B3142-4IE2","power": 0.25,"meta": "E-Motor 230/400V 0,25kW 1380U B34 IE2"},{"title": "HK71B4B3142-4IE2","power": 0.37,"meta": "E-Motor 230/400V 0,37kW 1380U B34 IE2"},{"title": "HK80M4B352-4IE3","power": 0.75,"meta": "E-Motor 230/400V 0,75kW 1400U B35 IE3"},{"title": "HK90S4B352-4IE3","power": 1.1,"meta": "E-Motor 230/400V 1,1kW 1400U B35 IE3"},{"title": "HK90L4B352-4IE3","power": 1.5,"meta": "E-Motor 230/400V 1,5kW 1400U B35 IE3"},{"title": "HKK407A90LB4IE3","power": 1.5,"meta": "E-Motor 230/400V 1,5kW 1445U B34 IE3"},{"title": "HK100LA4B352-4IE3","power": 2.2,"meta": "E-Motor 230/400V 2,2kW 1455U B35 IE3"},{"title": "HKK408A100LA4IE3","power": 2.2,"meta": "E-Motor 230/400V 2,2kW 1445U B34 IE3"},{"title": "HK100LB4B352-4IE3","power": 3,"meta": "E-Motor 230/400V 3,0kW 1455U B35 IE3"},{"title": "HK100LB4B52-4IE3","power": 3,"meta": "E-Motor 230/400V 3,0kW 1455U B5 IE3"},{"title": "HKK409A100LB4IE3","power": 3,"meta": "E-Motor 230/400V 3,0kW 1420U B34 IE3"},{"title": "HK112M4B354-6IE3","power": 4,"meta": "E-Motor 400/690V 4,0kW 1460U B35 IE3"},{"title": "HK132SB4B354-6IE3","power": 5.5,"meta": "E-Motor 400/690V 5,5kW 1470U B35 IE3"},{"title": "HK132SB4B54-6IE3","power": 5.5,"meta": "E-Motor 400/690V 5,5kW 1470U B5 IE3"},{"title": "HKK411A132SA4IE2","power": 5.5,"meta": "Silnik-E 400/690V 5,5kW 1450U B3B14 IE2"},{"title": "HK132M4B354-6IE2","power": 7.5,"meta": "Silnik-E 400/690V 7,5kW 1465U B35 IE2"},{"title": "HK132M4B354-6IE3","power": 7.5,"meta": "E-MOTOR 400/690V 7,5KW 1465U B35 IE3"},{"title": "HK160M4B354-6IE2","power": 11,"meta": "Silnik-E 400/690V 11,0kW 1470U B35 IE2"},{"title": "HK160M4B354-6IE3","power": 11,"meta": "E-MOTOR 400/690V 11,0KW 1470U B35 IE3"},{"title": "HK160M4B54-6IE2","power": 11,"meta": "Silnik-E 400/690V 11,0kW 1470U B5 IE2"},{"title": "HK160M4B54-6IE3","power": 11,"meta": "E-MOTOR 400/690V 11,0KW 1470U B5 IE3"},{"title": "HK160L4B354-6IE3","power": 15,"meta": "E-MOTOR 400/690V 15,0KW 1475U B35 IE3"},{"title": "HK180M4B354-6IE3","power": 18.5,"meta": "E-MOTOR 400/690V 18,5KW 1470U B35 IE3"},{"title": "HK200L4B354-6IE3","power": 30,"meta": "E-MOTOR 400/690V 30,0KW 1475U B35 IE3"}];
-const enginesK400 = [{"title": "K-400B14-1.5-90L","power": 1.5,"meta": "Silnik trójfazowy 400V; 1,5kW 1400obr."},{"title": "K-400B14-2.2100L","power": 2.2,"meta": "Silnik 3-faz. 400V; 2,2kW 1420obr/min;"},{"title": "K-400B14-3-100L","power": 3,"meta": "Silnik 3-faz. 400V; 3kW 1420obr/min;"},{"title": "K-400B34-3-100L","power": 3,"meta": "Silnik 3-faz. 400V; 3kW 1420obr/min; B34"},{"title": "K-400B35-3-100L","power": 3,"meta": "Silnik elektr. 3 kW; B35; 230/400V; 1450"},{"title": "K-400B35-4-112M","power": 4,"meta": "Silnik trójfazowy 400V; 4kW 1450obr/min"},{"title": "K-400B35-5.5-132","power": 5.5,"meta": "Silnik 3-faz. 400V; 5.5kW 1420obr/min; B"},{"title": "K-400B35-7.5132M","power": 7.5,"meta": "Silnik el. 400/690V 7,5KW 1465U B35 IE3"},{"title": "K-400B5-11-132L","power": 11,"meta": "Silnik prog. 400/690V 11kW 1465 B5 132L2"}];
-const enginesK230 = [{"title": "K-230B34-1.5-90L","power": 1.5,"meta": "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
-const enginesACMotoren = [{"title": "K-FCPA804/PHE","power": 1.1,"meta": "SILNIK PROGRESYWNY 1,1KW"},{"title": "K-FCA90LC4/PHE","power": 2.2,"meta": "SILNIK PROGRESYWNY 2,2 Kw"},{"title": "K-FCPA112MD-4IMB35","power": 7.5,"meta": "SILNIK PROGRESYWNY 7,5 KW"},{"title": "K-FCPA132MC4/HE","power": 9.2,"meta": "Silnik 9,2kW progresywny"}];
-const enginesT3A=[{"title": "K-T3A90L1-4.B34","power": 1.5,"meta": "Silnik trójfazowy T3A90L1-4,B34;1,5kW"},{"title": "K-T3A100L2-4","power": 3,"meta": "Silnik eleketr. 3 kW; B5; 230/400V"},{"title": "K-T3A112M4B35-4KW","power": 4,"meta": "Silnik elektryczny 4kW"},{"title": "K-T3A-112M2-4","power": 5.5,"meta": "Silnik prog. T3A-112M2-4; 5,5kW, B5, 145"},{"title": "K-T3A-132M-4","power": 7.5,"meta": "Silnik prog. T3A 132M-4, B35 , 7.5kW"},{"title": "K-T3A-132M3-4","power": 11,"meta": "Silnik prog. T3A 132M3-4, B35 ,11kW"}];
+const enginesHK = [{title: "HK63B4B3142-4IE2",power: 0.18,meta: "E-Motor 230/400V 0,18kW 1360U B34 IE2"},{title: "HK71A4B3142-4IE2",power: 0.25,meta: "E-Motor 230/400V 0,25kW 1380U B34 IE2"},{title: "HK71B4B3142-4IE2",power: 0.37,meta: "E-Motor 230/400V 0,37kW 1380U B34 IE2"},{title: "HK80M4B352-4IE3",power: 0.75,meta: "E-Motor 230/400V 0,75kW 1400U B35 IE3"},{title: "HK90S4B352-4IE3",power: 1.1,meta: "E-Motor 230/400V 1,1kW 1400U B35 IE3"},{title: "HK90L4B352-4IE3",power: 1.5,meta: "E-Motor 230/400V 1,5kW 1400U B35 IE3"},{title: "HKK407A90LB4IE3",power: 1.5,meta: "E-Motor 230/400V 1,5kW 1445U B34 IE3"},{title: "HK100LA4B352-4IE3",power: 2.2,meta: "E-Motor 230/400V 2,2kW 1455U B35 IE3"},{title: "HKK408A100LA4IE3",power: 2.2,meta: "E-Motor 230/400V 2,2kW 1445U B34 IE3"},{title: "HK100LB4B352-4IE3",power: 3,meta: "E-Motor 230/400V 3,0kW 1455U B35 IE3"},{title: "HK100LB4B52-4IE3",power: 3,meta: "E-Motor 230/400V 3,0kW 1455U B5 IE3"},{title: "HKK409A100LB4IE3",power: 3,meta: "E-Motor 230/400V 3,0kW 1420U B34 IE3"},{title: "HK112M4B354-6IE3",power: 4,meta: "E-Motor 400/690V 4,0kW 1460U B35 IE3"},{title: "HK132SB4B354-6IE3",power: 5.5,meta: "E-Motor 400/690V 5,5kW 1470U B35 IE3"},{title: "HK132SB4B54-6IE3",power: 5.5,meta: "E-Motor 400/690V 5,5kW 1470U B5 IE3"},{title: "HKK411A132SA4IE2",power: 5.5,meta: "Silnik-E 400/690V 5,5kW 1450U B3B14 IE2"},{title: "HK132M4B354-6IE2",power: 7.5,meta: "Silnik-E 400/690V 7,5kW 1465U B35 IE2"},{title: "HK132M4B354-6IE3",power: 7.5,meta: "E-MOTOR 400/690V 7,5KW 1465U B35 IE3"},{title: "HK160M4B354-6IE2",power: 11,meta: "Silnik-E 400/690V 11,0kW 1470U B35 IE2"},{title: "HK160M4B354-6IE3",power: 11,meta: "E-MOTOR 400/690V 11,0KW 1470U B35 IE3"},{title: "HK160M4B54-6IE2",power: 11,meta: "Silnik-E 400/690V 11,0kW 1470U B5 IE2"},{title: "HK160M4B54-6IE3",power: 11,meta: "E-MOTOR 400/690V 11,0KW 1470U B5 IE3"},{title: "HK160L4B354-6IE3",power: 15,meta: "E-MOTOR 400/690V 15,0KW 1475U B35 IE3"},{title: "HK180M4B354-6IE3",power: 18.5,meta: "E-MOTOR 400/690V 18,5KW 1470U B35 IE3"},{title: "HK200L4B354-6IE3",power: 30,meta: "E-MOTOR 400/690V 30,0KW 1475U B35 IE3"}];
+const enginesK400 = [{title: "K-400B14-1.5-90L",power: 1.5,meta: "Silnik trójfazowy 400V; 1,5kW 1400obr."},{title: "K-400B14-2.2100L",power: 2.2,meta: "Silnik 3-faz. 400V; 2,2kW 1420obr/min;"},{title: "K-400B14-3-100L",power: 3,meta: "Silnik 3-faz. 400V; 3kW 1420obr/min;"},{title: "K-400B34-3-100L",power: 3,meta: "Silnik 3-faz. 400V; 3kW 1420obr/min; B34"},{title: "K-400B35-3-100L",power: 3,meta: "Silnik elektr. 3 kW; B35; 230/400V; 1450"},{title: "K-400B35-4-112M",power: 4,meta: "Silnik trójfazowy 400V; 4kW 1450obr/min"},{title: "K-400B35-5.5-132",power: 5.5,meta: "Silnik 3-faz. 400V; 5.5kW 1420obr/min; B"},{title: "K-400B35-7.5132M",power: 7.5,meta: "Silnik el. 400/690V 7,5KW 1465U B35 IE3"},{title: "K-400B5-11-132L",power: 11,meta: "Silnik prog. 400/690V 11kW 1465 B5 132L2"}];
+const enginesK230 = [{title: "K-230B34-1.5-90L",power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
+const enginesACMotoren = [{title: "K-FCPA804/PHE",power: 1.1,meta: "SILNIK PROGRESYWNY 1,1KW"},{title: "K-FCA90LC4/PHE",power: 2.2,meta: "SILNIK PROGRESYWNY 2,2 Kw"},{title: "K-FCPA112MD-4IMB35",power: 7.5,meta: "SILNIK PROGRESYWNY 7,5 KW"},{title: "K-FCPA132MC4/HE",power: 9.2,meta: "Silnik 9,2kW progresywny"}];
+const enginesT3A=[{title: "K-T3A90L1-4.B34",power: 1.5,meta: "Silnik trójfazowy T3A90L1-4,B34;1,5kW"},{title: "K-T3A100L2-4",power: 3,meta: "Silnik eleketr. 3 kW; B5; 230/400V"},{title: "K-T3A112M4B35-4KW",power: 4,meta: "Silnik elektryczny 4kW"},{title: "K-T3A-112M2-4",power: 5.5,meta: "Silnik prog. T3A-112M2-4; 5,5kW, B5, 145"},{title: "K-T3A-132M-4",power: 7.5,meta: "Silnik prog. T3A 132M-4, B35 , 7.5kW"},{title: "K-T3A-132M3-4",power: 11,meta: "Silnik prog. T3A 132M3-4, B35 ,11kW"}];
 
 export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title,  ...rest})=>({title,...rest,meta,mount:meta.slice(meta.indexOf('B'),meta.indexOf('B') + 3)|| title.slice(title.indexOf('B'),title.indexOf('B') + 3).trim()}));
 // console.log('enginesData :>> ', enginesData);
@@ -135,6 +135,36 @@ const gearPumpCasappa = [
     HKKP3073D083E3L: { CC: 73.8, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:220},
   }
 ];
+const gearPumpRexroth = [
+  {},
+  {
+  HKK10: { CC: 0.92,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK11: { CC: 1.17,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK12: { CC: 1.56,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK13: { CC: 2.08,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK14: { CC: 2.60,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK15: { CC: 3.12,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 220},
+  HKK16: { CC: 3.64,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax: 200},
+  HKK17: { CC: 4.16,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax:180},
+  HKK18: { CC: 4.94,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax:150},
+  HKK19: { CC: 5.85,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: 'frez 5 x 10',pmax:120},
+  HKK10CON: { CC: 0.92,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK11CON: { CC: 1.17,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK12CON: { CC: 1.56,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK13CON: { CC: 2.08,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK14CON: { CC: 2.6,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK15CON: { CC: 3.12,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK16CON: { CC: 3.64,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK17CON: { CC: 4.16,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK18CON: { CC: 4.94,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK19CON: { CC: 5.85,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK19ACON: { CC: 6.5,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 220 },
+  HKK20CON: { CC: 7.54,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 210 },
+  HKK21CON: { CC: 9.88,in: 'G 3/8″ -19',out: 'Bore Ø 9.25 mm with O-Ring',shaft: '1:8',pmax: 190 },
+  },
+  {},
+  {} 
+];
 const pistonPumpRexroth = {
   HKA10VSO18DRG31R: { CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Regulator ciśnienia'},
   HKA10VSO18DFR31R: { CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain:'-',  pmax:280, Regulator: 'Kontroler wykrywania obciążenia'},
@@ -182,13 +212,13 @@ const pistonPumpPBA = {
   HKPBA108L8064SF: { CC: 108, in: 'G1″', out: 'G1″', drain:'-', pmax:350, Regulator: '-'},
 };
 export const pumpData = {
-  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['CHINA', gearPumpAPF]]
-  .map(([maker, pumpsByGroup]) => pumpsByGroup
-    .map((el, group) => Object.entries(el)
-      .map(([title, data]) => ({[title]: { ...data, maker, group }})))).flat(2),
+  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['REXROTH', gearPumpRexroth], ['CHINA', gearPumpAPF]]
+  .flatMap(([maker, pumpsByGroup]) => pumpsByGroup
+    .flatMap((el, group) => Object.entries(el)
+      .map(([title, data]) => ({[title]: { ...data, maker, group }})))),
   piston:[['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]]
-  .map(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
-    .map(([title, data]) => ({[title]: { ...data, maker }}))).flat()
+  .flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
+    .map(([title, data]) => ({[title]: { ...data, maker }})))
 };
 
 export const coolerVBT =  Array.from(Array(11), (_, i) => i*5 + 20);
@@ -258,52 +288,52 @@ export const couplingData = [
 ];
 
 const spoolHansa = [
-  {"title":"HK4132080302C1Q","spool":"J","cetop":"3"},
-  {"title":"HK4131080601C1Q","spool":"JA","cetop":"3"},
-  {"title":"HK4132070302C1Q","spool":"G","cetop":"3"},
-  {"title":"HK4131070601C1Q","spool":"GA","cetop":"3"},
-  {"title":"HK4132030302C1Q","spool":"E","cetop":"3"},
-  {"title":"HK4131030601C1Q","spool":"EA","cetop":"3"},
-  {"title":"HK4132010302C1Q","spool":"H","cetop":"3"},
-  {"title":"HK4131010601C1Q","spool":"HA","cetop":"3"},
-  {"title":"HK4131520101C1Q","spool":"A","cetop":"3"},
-  {"title":"###HK4131520201C1Q###","spool":"B","cetop":"3"},
-  {"title":"HK4131110101C1Q","spool":"C","cetop":"3"},
-  {"title":"HK4131510101C1Q","spool":"D","cetop":"3"},
-  {"title":"HK4131510201C1Q","spool":"Y","cetop":"3"},
-  {"title":"HK4137510902C1Q","spool":"D^","cetop":"3"},
+  {title:"HK4132080302C1Q",spool:"J",cetop:"3"},
+  {title:"HK4131080601C1Q",spool:"JA",cetop:"3"},
+  {title:"HK4132070302C1Q",spool:"G",cetop:"3"},
+  {title:"HK4131070601C1Q",spool:"GA",cetop:"3"},
+  {title:"HK4132030302C1Q",spool:"E",cetop:"3"},
+  {title:"HK4131030601C1Q",spool:"EA",cetop:"3"},
+  {title:"HK4132010302C1Q",spool:"H",cetop:"3"},
+  {title:"HK4131010601C1Q",spool:"HA",cetop:"3"},
+  {title:"HK4131520101C1Q",spool:"A",cetop:"3"},
+  // {title:"###HK4131520201C1Q###",spool:"B",cetop:"3"},
+  {title:"HK4131110101C1Q",spool:"C",cetop:"3"},
+  {title:"HK4131510101C1Q",spool:"D",cetop:"3"},
+  {title:"HK4131510201C1Q",spool:"Y",cetop:"3"},
+  {title:"HK4137510902C1Q",spool:"D^",cetop:"3"},
 ]
 const spoolEaton = [
-  {"title":"HKDG4V30CVMU24DC","spool":"H","cetop":"3"},
-  {"title":"HKDG4V30BVMU24DC","spool":"HA","cetop":"3"},
-  {"title":"HKDG4V32CVMU24DC","spool":"E","cetop":"3"},
-  {"title":"HKDG4V32BVMU24DC","spool":"EA","cetop":"3"},
-  {"title":"HKDG4V36CVMU24DC","spool":"J","cetop":"3"},
-  {"title":"HKDG4V36BVMU24DC","spool":"JA","cetop":"3"},
-  {"title":"HKDG4V38CVMU24DC","spool":"G","cetop":"3"},
-  {"title":"HKDG4V38BLVMU24DC","spool":"GA","cetop":"3"},
-  {"title":"HKDG4V322AVMU24DC","spool":"A","cetop":"3"},
-  {"title":"HKDG4V322ALVMU24DC","spool":"B","cetop":"3"},
-  {"title":"HKDG4V32AVMU24DC","spool":"D","cetop":"3"},
-  {"title":"HKDG4V32ALVMU24DC","spool":"Y","cetop":"3"},
-  {"title":"HKDG4V32NVMU24DC","spool":"D^","cetop":"3"},
-  {"title":"HKDG4V37CVMU24DC","spool":"M","cetop":"3"}
+  {title:"HKDG4V30CVMU24DC",spool:"H",cetop:"3"},
+  {title:"HKDG4V30BVMU24DC",spool:"HA",cetop:"3"},
+  {title:"HKDG4V32CVMU24DC",spool:"E",cetop:"3"},
+  {title:"HKDG4V32BVMU24DC",spool:"EA",cetop:"3"},
+  {title:"HKDG4V36CVMU24DC",spool:"J",cetop:"3"},
+  {title:"HKDG4V36BVMU24DC",spool:"JA",cetop:"3"},
+  {title:"HKDG4V38CVMU24DC",spool:"G",cetop:"3"},
+  {title:"HKDG4V38BLVMU24DC",spool:"GA",cetop:"3"},
+  {title:"HKDG4V322AVMU24DC",spool:"A",cetop:"3"},
+  {title:"HKDG4V322ALVMU24DC",spool:"B",cetop:"3"},
+  {title:"HKDG4V32AVMU24DC",spool:"D",cetop:"3"},
+  {title:"HKDG4V32ALVMU24DC",spool:"Y",cetop:"3"},
+  {title:"HKDG4V32NVMU24DC",spool:"D^",cetop:"3"},
+  {title:"HKDG4V37CVMU24DC",spool:"M",cetop:"3"}
 ];
 const spoolRexroth = [
-  {"title":"D1VW004CNJW","spool":"J","cetop":"3"},
-  {"title":"D1VW004ENJW","spool":"JA","cetop":"3"},
-  {"title":"D1VW009CNJW","spool":"G","cetop":"3"},
-  {"title":"D1VW009KNJW","spool":"GA","cetop":"3"},
-  {"title":"D1VW001CNJW","spool":"E","cetop":"3"},
-  {"title":"D1VW001ENJW","spool":"EA","cetop":"3"},
-  {"title":"D1VW002CNJW","spool":"H","cetop":"3"},
-  {"title":"D1VW002ENJW","spool":"HA","cetop":"3"},
-  {"title":"D1VW208BNJW","spool":"A","cetop":"3"},
-  {"title":"D1VW208HNJW","spool":"B","cetop":"3"},
-  {"title":"D1VW030BNJW","spool":"C","cetop":"3"},
-  {"title":"D1VW020BNJW","spool":"D","cetop":"3"},
-  {"title":"D1VW020HNJW","spool":"Y","cetop":"3"},
-  {"title":"D1VW020DNJW","spool":"D^","cetop":"3"},
+  {title:"D1VW004CNJW",spool:"J",cetop:"3"},
+  {title:"D1VW004ENJW",spool:"JA",cetop:"3"},
+  {title:"D1VW009CNJW",spool:"G",cetop:"3"},
+  {title:"D1VW009KNJW",spool:"GA",cetop:"3"},
+  {title:"D1VW001CNJW",spool:"E",cetop:"3"},
+  {title:"D1VW001ENJW",spool:"EA",cetop:"3"},
+  {title:"D1VW002CNJW",spool:"H",cetop:"3"},
+  {title:"D1VW002ENJW",spool:"HA",cetop:"3"},
+  {title:"D1VW208BNJW",spool:"A",cetop:"3"},
+  {title:"D1VW208HNJW",spool:"B",cetop:"3"},
+  {title:"D1VW030BNJW",spool:"C",cetop:"3"},
+  {title:"D1VW020BNJW",spool:"D",cetop:"3"},
+  {title:"D1VW020HNJW",spool:"Y",cetop:"3"},
+  {title:"D1VW020DNJW",spool:"D^",cetop:"3"},
 ];
 export const spoolData = [
   ...spoolHansa,
@@ -312,3 +342,126 @@ export const spoolData = [
   ...spoolHansa.map(({title,cetop,...rest})=>({title:title.replace('HK413','HK423'),...rest,cetop:5})),
   ...spoolEaton.map(({title,cetop,...rest})=>({title:title.replace('HKDG4V3','HKDG4V5'),...rest,cetop:5})),
 ];
+
+// const d = 
+// [{title:"D1VW001CNJW",article:"K-D1VW001CNJW",description:"Zawór magrozdz4/3 WZ6 bez cewki"},
+// {title:"D1VW001CNJW",article:"K-VED1VW001CNJW",description:"n.v. => HK4132030302C1Q"},
+// {title:"D1VW001CNJW",article:"K-VED1W001CNJW",description:"n.v. => HK4132030302C1Q"},
+// {title:"D1VW003FNJW",article:"K-VED1VW003FNJW",description:"4/2-Wegeventil, 24VDC"},
+// {title:"D1VW035CNJW",article:"K-VED1VW035CNJW",description:"Wegeventil D1VW035CNJW91"},
+// {title:"D1VW006KNJW",article:"K-VED1VW006KNJW",description:"4/2-Wegeventil, NG6 24VDC"},
+// {title:"D1VW101BNJW",article:"K-D1VW101BNJW",description:"4/2 Wegeventil"},
+// {title:"D1VW011CNJW",article:"K-VED1VW011CNJW",description:"4/3-Wegeventil NG6 24 DC"},
+// {title:"D1VW020DNJW",article:"K-VED1VW020DNJW",description:"n.v. --> siehe HK4137510902C1Q"},
+// {title:"D1VW031CNJW",article:"K-VED1VW031CNJW",description:"Wegeventil NG6 24Volt"},
+// {title:"D1VW004CNJW",article:"HK4132080302C1Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW004KNJW",article:"K-VED1VW004KNJW",description:"4/2-Wegeventil NG6 24 VDC"},
+// {title:"D1VW021CNJW",article:"K-VED1VW021CNJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW003CNJW",article:"K-VED1VW003CNJW",description:"Wegeventil D1VW003CNJW, 24VDC"},
+// {title:"D1VW022CNJW",article:"K-VED1VW022CNJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW208BNJW",article:"K-VED1VW208BNJW",description:"4/2-WV 350bar 80l/mim neg.Überdeckung"},
+// {title:"D1VW026BNJW",article:"K-VED1VW026BNJW",description:"4/2-Wegeventil, NG6"},
+// {title:"D1VW014CNJW",article:"K-VED1VW014CNJW",description:"4/3 Wegeventil D1VW014CNJW   NG6"},
+// {title:"D1VW20HNJW",article:"K-VED1VW20HNJW",description:"4/2 wegeventil NG 6, 24 VDC"},
+// {title:"D1VW004CNJW",article:"K-VED1VW004CNJW",description:"4/3-Wegeventil 24 VDC"},
+// {title:"D1VW001CNJW",article:"K-VED1VW001CNJW",description:"4/3-Wegeventil NG6 24DC"},
+// {title:"D1VW022ENJW",article:"K-VED1VW022ENJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW002ENJW",article:"HK4131010601C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW015CNJW",article:"K-VED1VW015CNJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW008CNJW",article:"K-VED1VW008CNJW",description:"4/3-Wegeventil Ng6 24VDC"},
+// {title:"D1VW020BNJW",article:"K-VED1VW020BNJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW001FNJW",article:"K-VED1VW001FNJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW002KNJW",article:"K-VED1VW002KNJW",description:"4/3 Wegeventil NG6 24VDC"},
+// {title:"D1VW4CNJW",article:"K-VED1VW4CNJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW9ENJW",article:"K-VED1VW9ENJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW020DNJW",article:"K-D1VW020DNJW",description:""},
+// {title:"D1VW101DNJW",article:"K-D1VW101DNJW",description:"Filterelement"},
+// {title:"D1VW002ENJW",article:"K-VED1VW002ENJW",description:"Valv.Dir.Ele.D1VW002ENJW"},
+// {title:"D1VW061CNJW",article:"K-VED1VW061CNJW",description:"4/3 Wegeventil NG06 24VDC"},
+// {title:"D1VW004ENJW",article:"K-4/2WEGEMAGNETVEN",description:"4/2 Wege-Magnetventil NG6"},
+// {title:"D1VW002CNJW",article:"K-VED1VW002CNJW",description:"4/3 Wegeventil NG6 24VDC"},
+// {title:"D1VW004FNJW",article:"K-VED1VW004FNJW",description:"4/3 Wegeventil NG6 24 VDC"},
+// {title:"D1VW002ENJW",article:"K-VED1VW002ENJW",description:"4/2-Wegev. NG6 24VDC => HK4131010601C1Q"},
+// {title:"D1VW004CNJW",article:"K-VED1VW004CNJW",description:"4/3-Wegeventil 24 VDC => HK4132080302C1Q"},
+// {title:"D1VW004CNJW",article:"K-VED1VW004CNJW",description:"n.v. => HK4132080302C1Q"},
+// {title:"D1VW020DNJW",article:"HK4137510902C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW001CNJW",article:"K-VED1W001CNJW",description:"4/3 Wege-Magnetventil"},
+// {title:"D1VW008KNJW",article:"K-VED1VW008KNJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW008CNJW",article:"K-VED1VW008CNJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW020DNJW",article:"K-VED1VW020DNJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW002ENJW",article:"HK41310106011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW001ENJW",article:"HK4131030601C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW001ENJW",article:"HK41310306011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW009KNJW",article:"HK4131070601C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW009KNJW",article:"HK41310706011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW004ENJW",article:"HK4131080601C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW004ENJW",article:"HK41310806011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW030BNJW",article:"HK4131110101C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW030BNJW",article:"HK41311101011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW020BNJW",article:"HK4131510101C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW020BNJW",article:"HK41315101011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW020HNJW",article:"HK4131510201C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW020HNJW",article:"HK41315102011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW020DNJW",article:"K-D1VW020DNJW1",description:"Ventil"},
+// {title:"D1VW020HNJW",article:"K-D1VW020HNJW",description:"Ventil"},
+// {title:"D1VW001FNJW",article:"K-VED1VW001FNJW",description:"4/2-Wegeventil 24 VDC (K-VEDHE067124DC)"},
+// {title:"D1VW001CNJW",article:"K-VED1VW001CNJW",description:"4/3-Wegeventil NG6, 24 Volt DC"},
+// {title:"D1VW001CNJW",article:"HK4132030302C1Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW076KNJW",article:"K-VED1VW076KNJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW078ENJW",article:"K-VED1VW078ENJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW004CNJW",article:"K-VED1VW4CNJW75",description:"Wegeventil"},
+// {title:"D1VW026HNJW",article:"K-VED1VW026HNJW",description:"4/2-Wegeventil, NG6"},
+// {title:"D1VW004CNJW",article:"K-D1VW004CNJW",description:"4/3 Valve NG6 ABT"},
+// {title:"D1VW004CNJW",article:"HK41320803021Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW001FNJW",article:"K-D1VW001FNJW",description:"4/2 magn. vožtuvas NG6 24VDC (Parker)"},
+// {title:"D1VW006CNJW",article:"K-VED1VW006CNJW",description:"4/3 Wegeventil NG6 24VDC"},
+// {title:"D1VW083BNJW",article:"K-VED1VW083BNJW",description:"4/2 Wegeventil  NG6 Sonderschieber 24VDC"},
+// {title:"D1VW004ENJW",article:"K-VED1VW004ENJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW001MNJW",article:"K-VED1VW001MNJW",description:"4/2 Wegeventil NG 6, 24 VDC"},
+// {title:"D1VW020HNJW",article:"K-VED1VW020HNJW",description:"Wegeventil"},
+// {title:"D1VW009CNJW",article:"K-VED1VW009CNJW",description:"4/3-Wegeventil NG6 24VDC"},
+// {title:"D1VW104KNJW",article:"K-VED1VW104KNJW",description:"3/2-Wegeventil, Sonderschieber"},
+// {title:"D1VW001MNJW",article:"K-VED1VW001MNJW",description:"4/2 wegeventil NG 6, 24 VDC"},
+// {title:"D1VW20BNJW",article:"K-VED1VW20BNJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW002KNJW",article:"K-VED1VW002KNJW",description:"4/2 Wegeventil NG6 24VDC"},
+// {title:"D1VW011BNJW",article:"K-VED1VW011BNJW",description:"4/2 Wegeventil"},
+// {title:"D1VW011DNJW",article:"K-VED1VW011DNJW",description:"4/2 Wegeventil"},
+// {title:"D1VW101BNJW",article:"K-VED1VW101BNJW",description:"4/2 Wegeventil"},
+// {title:"D1VW101DNJW",article:"K-VED1VW101DNJW",description:"4/2 Wegeventil"},
+// {title:"D1VW021KNJW",article:"K-D1VW021KNJW",description:"4/2 Wege Ventil NG 6 24 VDC"},
+// {title:"D1VW208BNJW",article:"K-D1VW208BNJW",description:"4/2 Wege Ventil NG 6 24 VDC"},
+// {title:"D1VW1CNJW",article:"K-VED1VW1CNJW",description:"4/3-Wegeventil"},
+// {title:"D1VW105KNJW",article:"K-VED1VW105KNJW",description:"4/2 Wegeventil NG6 24VDC"},
+// {title:"D1VW106CNJW",article:"K-VED1VW106CNJW",description:"4/3-Wegeventil D1VW106CNJW, 24VDC"},
+// {title:"D1VW003KNJW",article:"K-VED1VW003KNJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW002KNJW",article:"K-VED1VW002KNJW",description:"4/2 ventil NG6 24VDC"},
+// {title:"D1VW004ENJW",article:"K-4/2WEGEMAGNETVEN",description:"n.v. => HK4131080601C1Q"},
+// {title:"D1VW020BNJW",article:"K-HKVED1VW020BNJW",description:"n.v. => HK4131510101C1Q"},
+// {title:"D1VW020DNJW",article:"K-VED1VW020DNJW",description:"n.v. => HK4137510902C1Q"},
+// {title:"D1VW020HNJW",article:"K-D1VW020HNJW",description:"n.v. => HK4131510201C1Q"},
+// {title:"D1VW020HNJW",article:"K-VED1VW020HNJW",description:"n.v. => HK4131510201C1Q"},
+// {title:"D1VW020BNJW",article:"K-HKVED1VW020BNJW",description:"Wegeventil NG 6"},
+// {title:"D1VW081FNJW",article:"K-VED1VW081FNJW",description:"4/2-Wegeventil NG6, 24VDC"},
+// {title:"D1VW004CNJW",article:"K-D1VW004CNJW",description:"Wegeventil 24V= 210 bar 1,25 A"},
+// {title:"D1VW208BNJW",article:"HK4131520101C1Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW208BNJW",article:"HK41315201011Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW002CNJW",article:"HK4132010302C1Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW002CNJW",article:"HK41320103021Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW001CNJW",article:"HK41320303021Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW009CNJW",article:"HK4132070302C1Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW009CNJW",article:"HK41320703021Q",description:"Zawór magrozdz4/3 WZ6 24VDC"},
+// {title:"D1VW020DNJW",article:"HK41375109021Q",description:"Zawór magrozdz4/2 WZ6 24VDC"},
+// {title:"D1VW002ENJW",article:"K-VED1VW002ENJW",description:"4/2-Wegeventil NG6 24VDC"},
+// {title:"D1VW009ENJW",article:"K-VED1VW009ENJW",description:"4/2-Wegeventil 24 VDC"},
+// {title:"D1VW008FNJW",article:"K-VED1VW008FNJW",description:"4/2 Wegeventil NG6"},
+// {title:"D1VW055CNJW",article:"K-VED1VW055CNJW",description:"4/3-Wegeventil, Sonderschieber"},
+// {title:"D1VW006KNJW",article:"K-VED1VW006KNJW",description:"4/3-Wegeventil, NG6"},
+// {title:"D1VW026BNJW",article:"K-VED1VW026BNJW",description:"4/3-Wegeventil, NG6"}]
+
+// const set1 = new Set();
+// console.log(d.map(({title})=>spoolRexroth.some(el=> el.title === title) || console.log(title)))
+// spoolRexroth.forEach(({title})=>set1.add(title));
+// d.forEach(({title})=>{
+//   if (set1[title]) console.log(title);
+//   else set1.add(title)
+// })

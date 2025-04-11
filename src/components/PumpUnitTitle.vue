@@ -1,6 +1,6 @@
 <script setup>
 import { engineMountData, freqData } from "../services/data";
-import { powerCounting, powerUnitCounting } from "../services/functions";
+import { powerCounting, unitTitle } from "../services/functions";
 import { text } from "../services/text";
 import ResultItem from "./ResultItem.vue";
 const { project, k, btnDisabled, order } = defineProps(["project", "k", "btnDisabled", "order"]);
@@ -12,7 +12,7 @@ const { id, unit, ...rest } = project[k];
   <h2 class="text-left">
     <div class="flex-row">
       <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>
-      <h3 class="mr-50">Zespół pompujacy {{ powerUnitCounting(unit) }}</h3>
+      <h3 class="mr-50">Zespół pompujacy {{ unitTitle(unit) }}</h3>
       <div v-for="(_, ind) in rest" class="flex-col ml-10">
         <span class="border border-bottom-no bgc-g fs-sm px-5">
           {{ text(ind) }}

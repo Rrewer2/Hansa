@@ -31,7 +31,7 @@ const textData = {
   wall: [ 'Ścianka', 'mm'],
   Qback: [ 'Powrót oleju', 'l/min'],
   Qmax: [ 'Powrót oleju max', 'l/min'],
-  tank: [ 'Pojemność zbiornika', 'L'],
+  // tank: [ 'Pojemność zbiornika', 'L'],
   gears: ['Zębata'],
   piston: ['Wiełotłoczkowa'],
   title: ['Nazwa'],
@@ -49,4 +49,4 @@ const textData = {
   type: ['Typ zbiornika'],
   pumpType: ['Typ pompy']
 };
-export const text = (key) => textData[key] ? textData[key].join(', ') : '@@@@@@@@@@@@@';
+export const text = (key) => textData[key] ? textData[key].join(', ') : key;

@@ -10,7 +10,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
     <h2>Agregat {{ agregatTitle(project, meta, order) }}</h2>
     <div class="flex-row flex-left">
       <div class="inline w-100">
-        <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('tank') }}</h3>
+        <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('type') }}</h3>
         <select v-model="meta.tank" :disabled="order.tank?.title">
           <option v-for="(_, t) in tankData" :value="t">
             {{ t }}

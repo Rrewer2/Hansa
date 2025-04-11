@@ -14,7 +14,7 @@ const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
 const meta = ref({ tank: 'RA', cooler: 0, pumpType: '', spool: 'G' });
-const order = ref({ valve: [] });
+const order = ref({});
 const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], mount: 'B35', n: 1500 });
 getNewPowerUnit();
 const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
@@ -111,7 +111,7 @@ select {
 input,
 select,
 option {
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 button {

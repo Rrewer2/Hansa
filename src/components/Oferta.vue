@@ -14,22 +14,30 @@ const { order } = defineProps(["order"]);
       </thead>
 
       <tbody>
-        <tr>
-          <td>100</td>
-          <td class="tal">KIT</td>
-          <td>{{ KITtitle(order) }}</td>
-        </tr>
-        <tr v-for="{ title, ...rest } of order">
-          <td>{{ 200 }}</td>
+
+
+        <td>100</td>
+        <td class="tal">KIT</td>
+        <td>{{ KITtitle(order) }}</td>
+        <td>1</td>
+
+
+        <!-- <tr v-if="Array.isArray(el)" v-for="el, _, i of order">
+          <td v-for="{ title, ...rest }, k in el">{{ (i + 2) * 100 + k }}</td>
           <td class="tal">
-            <!-- <input type="radio" :id="title" v-model="order[`motor${i}`]" :value="({ title, motorData: elem })"
-            name="title" :checked="getTitle() === title" class="mx" /> -->
-
             {{ title }}
-
           </td>
           <td v-for="item in rest">{{ item }}</td>
         </tr>
+
+        <tr v-else v-for="el, _, i of order">
+          <td>{{ (i + 2) * 100 }}</td>
+          <td class="tal">
+            {{ el }}
+          </td>
+          <td v-for="item in el">{{ item }}</td>
+          <td>1</td>
+        </tr> -->
       </tbody>
       order {{ order }}
     </table>
