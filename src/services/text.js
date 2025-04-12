@@ -10,7 +10,7 @@ const textData = {
   Q: ['Q', 'L/min'],
   p: ['ρ', 'bar'],
   n: ['ν', 'min⁻¹'],
-  mount: ['Mocowanie silnika'],
+  mount: ['Montaż'],
   DR2type: ['Typ bloku'],
   P: ['Moc', 'kW'],
   I: ['Prąd', 'A'],

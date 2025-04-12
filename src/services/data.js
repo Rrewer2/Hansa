@@ -297,12 +297,11 @@ const spoolHansa = [
   {title:"HK4132010302C1Q",spool:"H",cetop:"3"},
   {title:"HK4131010601C1Q",spool:"HA",cetop:"3"},
   {title:"HK4131520101C1Q",spool:"A",cetop:"3"},
-  // {title:"###HK4131520201C1Q###",spool:"B",cetop:"3"},
   {title:"HK4131110101C1Q",spool:"C",cetop:"3"},
   {title:"HK4131510101C1Q",spool:"D",cetop:"3"},
   {title:"HK4131510201C1Q",spool:"Y",cetop:"3"},
   {title:"HK4137510902C1Q",spool:"D^",cetop:"3"},
-]
+];
 const spoolEaton = [
   {title:"HKDG4V30CVMU24DC",spool:"H",cetop:"3"},
   {title:"HKDG4V30BVMU24DC",spool:"HA",cetop:"3"},
@@ -335,12 +334,45 @@ const spoolRexroth = [
   {title:"D1VW020HNJW",spool:"Y",cetop:"3"},
   {title:"D1VW020DNJW",spool:"D^",cetop:"3"},
 ];
+const spoolAtos = [
+  {title:"HKDHE0710X00DC",spool:"H",cetop:"3"},
+  {title:"HKDHE0610X00DC",spool:"HA",cetop:"3"},
+  {title:"HKDHE0711X00DC",spool:"E",cetop:"3"},
+  {title:"HKDHE0611X00DC",spool:"EA",cetop:"3"},
+  {title:"HKDHE0713X00DC",spool:"J",cetop:"3"},
+  {title:"HKDHE0613X00DC",spool:"JA",cetop:"3"},
+  {title:"HKDHE0714X00DC",spool:"G",cetop:"3"},
+  {title:"HKDHE0614X00DC",spool:"GA",cetop:"3"},
+  {title:"HKDHE06322X00DC",spool:"A",cetop:"3"},
+  {title:"HKDHE06302X00DC",spool:"C",cetop:"3"},
+  {title:"HKDHE06312X00DC",spool:"D",cetop:"3"},
+  {title:"HKDHE06312AX00DC",spool:"Y",cetop:"3"},
+  {title:"HKDHE07512X00DC",spool:"D^",cetop:"3"},
+  {title:"HKDHE0716X00DC",spool:"L",cetop:"3"},
+  {title:"HKDHE0718X00DC",spool:"M",cetop:"3"},
+  {title:"HKDHE0717X00DC",spool:"U",cetop:"3"},
+];
+const spoolAtosCetop5 = [
+  {title:"HKDKE1710X00DC",spool:"H",cetop:"5"},
+  {title:"HKDKE1610X00DC",spool:"HA",cetop:"5"},
+  {title:"HKDKE1711X00DC",spool:"E",cetop:"5"},
+  {title:"HKDKE1611X00DC",spool:"EA",cetop:"5"},
+  {title:"HKDKE1713X00DC",spool:"J",cetop:"5"},
+  {title:"HKDKE1613X00DC",spool:"JA",cetop:"5"},
+  {title:"HKDKE1714X00DC",spool:"G",cetop:"5"},
+  {title:"HKDKE16322X00DC",spool:"A",cetop:"5"},
+  {title:"HKDKE16312X00DC",spool:"D",cetop:"5"},
+  {title:"HKDKE16312AX00DC",spool:"Y",cetop:"5"},
+  {title:"HKDKE17512X00DC",spool:"D^",cetop:"5"},
+];
 export const spoolData = [
   ...spoolHansa,
   ...spoolEaton,
   ...spoolRexroth,
+  ...spoolAtos,
   ...spoolHansa.map(({title,cetop,...rest})=>({title:title.replace('HK413','HK423'),...rest,cetop:5})),
   ...spoolEaton.map(({title,cetop,...rest})=>({title:title.replace('HKDG4V3','HKDG4V5'),...rest,cetop:5})),
+  ...spoolAtosCetop5,
 ];
 
 // const d = 

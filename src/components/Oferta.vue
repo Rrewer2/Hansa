@@ -2,6 +2,20 @@
 import { KITtitle } from '../services/functions';
 
 const { order } = defineProps(["order"]);
+const normalize = () => {
+  const obj = {};
+  Object.keys(order).forEach((key) => {
+    if (Array.isArray(order[key])) order[key].forEach((elem, i) => obj[`${key}${i}`] = elem);
+
+    else if (obj[key]) {
+      obj[key].count++;
+    }
+    else {
+      obj[key] = { ...order[key], count: 1 };
+    }
+  })
+  return obj;
+};
 </script>
 
 <template>
@@ -15,30 +29,21 @@ const { order } = defineProps(["order"]);
 
       <tbody>
 
-
         <td>100</td>
         <td class="tal">KIT</td>
         <td>{{ KITtitle(order) }}</td>
         <td>1</td>
 
 
-        <!-- <tr v-if="Array.isArray(el)" v-for="el, _, i of order">
-          <td v-for="{ title, ...rest }, k in el">{{ (i + 2) * 100 + k }}</td>
+        <tr v-for="{ title, ...rest }, _, i of normalize()">
+          <td>{{ (i + 2) * 100 }}</td>
           <td class="tal">
             {{ title }}
           </td>
-          <td v-for="item in rest">{{ item }}</td>
+          <td v-for="item in rest">{{ item?.meta ? item.meta : typeof item === 'object' ? '' : item }}</td>
         </tr>
-
-        <tr v-else v-for="el, _, i of order">
-          <td>{{ (i + 2) * 100 }}</td>
-          <td class="tal">
-            {{ el }}
-          </td>
-          <td v-for="item in el">{{ item }}</td>
-          <td>1</td>
-        </tr> -->
       </tbody>
+      <div>normalize {{ normalize() }}</div>
       order {{ order }}
     </table>
   </article>
