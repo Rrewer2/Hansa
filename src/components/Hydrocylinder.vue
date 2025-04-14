@@ -1,8 +1,9 @@
 <script setup>
 import { filtrationD, HKSHTitle, hkshCounting } from "../services/functions";
-import { HKSHMount, spoolTypes, standartDiameters } from "../services/data";
+import { HKSHMountD, HKSHMountd, spoolTypes, standartDiameters } from "../services/data";
 import { text } from "../services/text";
 import ResultItem from "./ResultItem.vue";
+import InputItem from "./InputItem.vue";
 const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
 
 const getValue = {
@@ -10,8 +11,8 @@ const getValue = {
     d: filtrationD(standartDiameters, HKSH.D),
     z: [1, 2],
     spool: spoolTypes,
-    mountA: HKSHMount,
-    mountB: HKSHMount,
+    mountA: HKSHMountD,
+    mountB: HKSHMountd,
     form: ['ver', 'hor']
 };
 const { id, ...rest } = HKSH;
@@ -24,25 +25,24 @@ const { id, ...rest } = HKSH;
             {{ HKSHTitle(HKSH) }}
         </h2>
 
-        <div class="flex-row pl-25">
-            <div v-for="(_, i) in rest" class="flex-col ml-10">
-                <p class="border border-bottom-no bgc-g h-100">
-                    {{ text(i) }}
-                </p>
+        <div class="flex-row">
+            <div v-for="(_, i) in rest" class="flex-col ml-5">
+                <InputItem :title="text(i)">
 
-                <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input" />
+                    <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input w-75" />
 
-                <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]">
-                    <option v-for="elem, j in getValue[i]" :value="j" class="tal">
-                        <span v-if="i === 'mountA' || i === 'mountB'">{{ j }}</span> {{ elem }}
-                    </option>
-                </select>
+                    <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75">
+                        <option v-for="elem, j in getValue[i]" :value="j" class="tal">
+                            <span>{{ j }} {{ elem }}</span>
+                        </option>
+                    </select>
 
-                <select v-else v-model="HKSH[i]">
-                    <option v-for="elem in getValue[i]" :value="elem">
-                        {{ elem }}
-                    </option>
-                </select>
+                    <select v-else v-model="HKSH[i]" class="w-75">
+                        <option v-for="elem in getValue[i]" :value="elem">
+                            {{ elem }}
+                        </option>
+                    </select>
+                </InputItem>
             </div>
 
             <ResultItem :data="hkshCounting(HKSH, pumpData.Q, pumpData.p)" />
@@ -50,8 +50,4 @@ const { id, ...rest } = HKSH;
     </section>
 </template>
 
-<style scoped>
-.tal {
-    text-align: left;
-}
-</style>
+<style scoped></style>

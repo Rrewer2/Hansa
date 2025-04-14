@@ -17,7 +17,7 @@ const yTank = () => 1200;
 const LTank = 1000;
 const getSL = (length) => sectionLength - length * 12;
 const getSh = (unit) => unit.DR2type ? 2 * (getSL(unit.HKSH.length) / 5) : 0.5 * getSL(unit.HKSH.length) / 3;
-const screenSize = 1600;
+const screenSize = 1600 - 50;
 </script>
 
 <template>

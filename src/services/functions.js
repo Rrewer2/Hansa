@@ -143,7 +143,7 @@ export const P01 = (project,cooler) => Pv(project,cooler.η) / (cooler.vBT-coole
 export const filteredCooler = (project, cooler) => coolerData.find(({ performance, flow }) => {
     const P = P01(project, cooler);
     const Qm = Qmax(project);
-    return  performance.max >= P && flow.max >= 2 * Qm;
+    return  performance.max >= P && flow.max >= 5 * Qm;
 });
 
 export const KITtitle = (order) => {

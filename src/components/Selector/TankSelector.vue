@@ -2,6 +2,8 @@
 import { tankData } from '../../services/data';
 import { agregatCounting, getStandartTank, getTextWithSpace, round } from "../../services/functions";
 import { text } from '../../services/text';
+import InputItem from '../InputItem.vue';
+import ResultItem from '../ResultItem.vue';
 
 const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
 </script>
@@ -10,20 +12,16 @@ const { project, meta, order, open } = defineProps(["project", "meta", "order", 
   <article>
     <h2 :class="open && 'bgc-g'">Zbiornik<span> {{ order.tank?.title }}</span></h2>
 
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">Typ zbiornika:</h3>
-      <select v-model="meta.tank" :disabled="order.tank?.title">
-        <option v-for="(_, type) in tankData" :value="type">
-          {{ type }}
-        </option>
-      </select>
-    </div>
+    <div class="flex-row flex-center">
+      <InputItem :title="text('type').split(', ')[0]" class="ml-10">
+        <select v-model="meta.tank" :disabled="order.tank?.title" class="w-100">
+          <option v-for="(_, type) in tankData" :value="type">
+            {{ type }}
+          </option>
+        </select>
+      </InputItem>
 
-    <div class="inline w-100">
-      <h3>
-        Minimalna pojemność:
-      </h3>
-      <span>{{ round(agregatCounting(project)) }} L</span>
+      <ResultItem :data="{ tankMin: round(agregatCounting(project)) }" class="ml-10" />
     </div>
     <table>
       <thead>

@@ -3,6 +3,8 @@ import { ref } from 'vue';
 import { coolerData, coolerVBT, coolerVZ } from '../../services/data';
 import { P01, Pv, Qmax, filteredCooler, getTextWithSpace, round } from '../../services/functions';
 import { text } from '../../services/text';
+import InputItem from '../InputItem.vue';
+import ResultItem from '../ResultItem.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
@@ -13,48 +15,25 @@ const getTitle = () => order.cooler?.title;
 <template>
   <article v-if="meta.cooler">
     <h2>Chłodnica<span> {{ order.cooler?.title }}</span></h2>
+    <div class="flex-row flex-center">
+      <InputItem :title="text('η').split(', ')[0]" :unit="text('η').split(', ')[1]" class="ml-10">
+        <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" />
+      </InputItem>
 
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">
-        {{ text("η") }}
-      </h3>
-      <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" />
-    </div>
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">
-        {{ text("vBT") }}
-      </h3>
-      <select v-model="cooler.vBT" :disabled="getTitle()">
-        <option v-for="item in coolerVBT" :value="item">{{ item }}</option>
-      </select>
-    </div>
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">
-        {{ text("vZ") }}
-      </h3>
-      <select v-model="cooler.vZ" :disabled="getTitle()">
-        <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
-      </select>
-    </div>
-    <div class="inline w-100">
-      <h3>
-        {{ text('Qmax') }}
-      </h3>
-      <h3>{{ round(Qmax(project)) }}</h3>
-    </div>
-    <div class="inline w-100">
-      <h3>
-        {{ text('Pv') }}
-      </h3>
-      <h3>{{ round(Pv(project, cooler.η)) }}</h3>
-    </div>
-    <div class="inline w-100">
-      <h3>
-        {{ text('P01') }}
-      </h3>
-      <h3>{{ round(P01(project, cooler), 1000) }}</h3>
-    </div>
+      <InputItem :title="text('vBT').split(', ')[0]" :unit="text('vBT').split(', ')[1]" class="ml-10">
+        <select v-model="cooler.vBT" :disabled="getTitle()">
+          <option v-for="item in coolerVBT" :value="item">{{ item }}</option>
+        </select>
+      </InputItem>
 
+      <InputItem :title="text('vZ').split(', ')[0]" :unit="text('vZ').split(', ')[1]" class="ml-10">
+        <select v-model="cooler.vZ" :disabled="getTitle()">
+          <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
+        </select>
+      </InputItem>
+
+      <ResultItem :data="{ Qmax: Qmax(project), Pv: Pv(project, cooler.η), P01: P01(project, cooler) }" class="ml-10" />
+    </div>
     <br>
     <table>
       <thead>

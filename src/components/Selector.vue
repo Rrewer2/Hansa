@@ -5,6 +5,8 @@ import TankSelector from './Selector/TankSelector.vue';
 import MotorSelector from './Selector/MotorSelector.vue';
 import CoolerSelector from './Selector/CoolerSelector.vue';
 import ValveSelector from './Selector/ValveSelector.vue';
+import BellhousingSelector from './Selector/BellhousingSelector.vue';
+import CouplingSelector from './Selector/CouplingSelector.vue';
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const selectorNav = ref([true, false, false]);
@@ -18,6 +20,8 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
       <PumpSelector v-for="pump, k in powerUNIT.unit" :project="project" :meta="meta" :order="order" :pump="pump" :i="i"
         :k="k" />
       <MotorSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
+      <BellhousingSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
+      <CouplingSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
     </div>
     <TankSelector :project="project" :meta="meta" :order="order" />
     <CoolerSelector :project="project" :meta="meta" :order="order" />

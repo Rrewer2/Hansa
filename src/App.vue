@@ -9,7 +9,7 @@ import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 import Simile from "./components/Simile.vue";
-const cylInit = { D: 100, d: 60, L: 500, z: 1, spool: 'E', mountA: '2', mountB: '2', form: 'hor' };
+const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', spool: 'E', z: 1, form: 'hor' };
 const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
@@ -82,13 +82,13 @@ const navPage = ref([false, false, true, false, false]);
     background-color: rgba(14, 44, 14, 0.25);
     /* padding-bottom: 5vh; */
     min-height: 100vh;
-    min-width: 100vw;
-    padding: 0 10px;
+    max-width: 100vw;
+    padding: 5px;
 }
 
 article {
     font-size: 20px;
-    padding: 20px;
+    padding: 5px;
 }
 
 svg {
@@ -100,18 +100,12 @@ svg {
 
 input[type="number"],
 select {
-    border: 0.5px solid;
+    border: none;
     border-radius: 4px;
     min-height: 2.5vh;
-    font-size: 1.75vh;
-    /* max-width: 13vh;
-    min-width: 10vh; */
-}
-
-input,
-select,
-option {
-    /* font-size: 20px; */
+    font-size: 2vh;
+    max-width: 100px;
+    min-width: 70px;
 }
 
 button {
@@ -177,7 +171,7 @@ td {
     display: flex;
     flex-direction: row;
     /* justify-content: space-evenly; */
-    align-content: stretch;
+    align-items: end;
 }
 
 .flex-col {
@@ -190,7 +184,7 @@ td {
 }
 
 .flex-center {
-    align-content: center;
+    justify-content: center;
 }
 
 .border {
@@ -206,11 +200,11 @@ td {
 }
 
 .bgc-w {
-    background-color: #f8eeac;
+    background-color: #fef6c6;
 }
 
 .bgc-g {
-    background-color: #9bf0ff54;
+    background-color: #c7ecf354;
 }
 
 .pl-25 {
@@ -241,6 +235,10 @@ td {
     margin: 3px 0;
 }
 
+.ml-5 {
+    margin-left: 5px;
+}
+
 .ml-10 {
     margin-left: 10px;
 }
@@ -254,14 +252,14 @@ td {
 }
 
 .scheme {
-    height: 100vh;
-    width: 100vw;
+    height: 95vh;
+    width: 95vw;
     /* background-color: #969696; */
 }
 
 .schemeMin {
     height: 60vh;
-    width: 60vw;
+    width: 80vw;
     /* background-color: rgba(0, 0, 0, 0); */
 }
 
@@ -275,8 +273,12 @@ td {
     padding-left: 80px; */
 }
 
+.w-75 {
+    min-width: 75px;
+}
+
 .w-100 {
-    min-width: 100px;
+    width: 100%;
 }
 
 .tal {

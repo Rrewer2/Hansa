@@ -3,6 +3,7 @@ import Hydrocylinder from "./Hydrocylinder.vue";
 import { buckling, pumpCounting, getVFU, round } from "../services/functions";
 import { text } from "../services/text";
 import ResultItem from "./ResultItem.vue";
+import InputItem from "./InputItem.vue";
 
 const { pumpData, btnDisabled, project, k, i, order } = defineProps(["pumpData", "btnDisabled", "project", "k", "i", "order"]);
 
@@ -19,18 +20,16 @@ const { id, HKSH, ...rest } = pumpData;
             </div>
             <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
-            <div v-for="(_, ind) in rest" class="flex-col ml-10">
-                <span class="border border-bottom-no bgc-g fs-sm px-5">
-                    {{ text(ind) }}
-                </span>
+            <div v-for="(_, ind) in rest" class="ml-10">
+                <InputItem :title="text(ind).split(', ')[0]" :unit="text(ind).split(', ')[1]">
+                    <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
+                        :disabled="order[`pump${i}-${k}`]?.title" />
+                    <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" />
 
-                <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
-                    :disabled="order[`pump${i}-${k}`]?.title" />
-                <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" />
-
-                <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type">
-                    <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>
-                </select>
+                    <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100">
+                        <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>
+                    </select>
+                </InputItem>
             </div>
 
             <ResultItem :data="pumpCounting(pumpData)" />

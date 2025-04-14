@@ -2,13 +2,16 @@
 import { pumpData, freqData } from '../../services/data';
 import { getQ, getTextWithSpace, getVFU, round } from "../../services/functions";
 import { text } from "../../services/text";
+import InputItem from '../InputItem.vue';
+import ResultItem from '../ResultItem.vue';
 
 const { project, order, pump, i, meta, k } = defineProps(["project", "order", "pump", "i", "meta", "k"]);
 const filteredPumps = () => {
   if (!meta.pumpType) return [];
+  const VFU = getVFU(pump.Q, project[i].n);
+  const par = meta.pumpType === 'gears' ? 0.2 * VFU : 0.5 * VFU;
   return pumpData[meta.pumpType].filter((el) => {
-    const item = Object.values(el)[0].CC - getVFU(pump.Q, project[i].n);
-    const par = meta.pumpType === 'gears' ? 1 : 12;
+    const item = Object.values(el)[0].CC - VFU;
     return item >= -par && item <= par
   })
 };
@@ -21,32 +24,29 @@ const getTitle = (item) => Object.keys(item)[0];
 
 <template>
   <article>
-    <h2>Pompa<span> {{ (order[`pump${i}-${k}`]?.title) }}</span></h2>
+    <h2>Pompa {{ i ? i + 1 : '' }}<span> {{ (order[`pump${i}-${k}`]?.title) }}</span></h2>
 
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('Q') }}</h3>
-      <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}-${k}`]" />
+    <div class="flex-row flex-center">
+      <InputItem :title="text('Q').split(', ')[0]" :unit="text('Q').split(', ')[1]">
+        <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}-${k}`]" />
+      </InputItem>
+
+      <ResultItem :data="{ VFU: round(getVFU(pump.Q, project[i].n)) }" class="ml-10" />
+
+      <InputItem :title="text('n').split(', ')[0]" :unit="text('n').split(', ')[1]" class="ml-10">
+        <select v-model="project[i].n"
+          :disabled="order[`pump${i}-${k}`] || Object.keys(order).some(str => str.includes(`motor${i}`))">
+          <option v-for="item in freqData" :value="item">{{ item }}</option>
+        </select>
+      </InputItem>
+
+      <InputItem :title="text('pumpType').split(', ')[0]" :unit="text('pumpType').split(', ')[1]" class="ml-10">
+        <select v-model="meta.pumpType">
+          <option v-for="item in Object.keys(pumpData)" :value="item">{{ text(item) }}</option>
+        </select>
+      </InputItem>
     </div>
 
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('VFU') }}</h3>
-      <h3>{{ round(getVFU(pump.Q, project[i].n)) }}</h3>
-    </div>
-
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('n') }}</h3>
-      <select v-model="project[i].n"
-        :disabled="order[`pump${i}-${k}`] || Object.keys(order).some(str => str.includes(`motor${i}`))">
-        <option v-for="item in freqData" :value="item">{{ item }}</option>
-      </select>
-    </div>
-
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">{{ text('pumpType') }}</h3>
-      <select v-model="meta.pumpType">
-        <option v-for="item in Object.keys(pumpData)" :value="item">{{ text(item) }}</option>
-      </select>
-    </div>
 
     <br>
     <table v-if="meta.pumpType && filteredPumps().length">

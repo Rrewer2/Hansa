@@ -4,7 +4,7 @@ const { data, disabled } = defineProps(["data", "disabled"]);
 </script>
 
 <template>
-  <div class="inline w-100">
+  <div class="inline w-75">
     <h3 class="border border-bottom-no bgc-g fs-sm px-5">
       {{ text(Object.keys(data)[0]) }}
     </h3>

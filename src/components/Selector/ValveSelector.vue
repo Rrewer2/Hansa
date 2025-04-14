@@ -63,7 +63,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     </table>
 
     <!-- 
-    <div class="inline w-100">
+    <div class="inline w-75">
       <h3 class="border border-bottom-no bgc-g fs-sm px-5">Typ zaworu</h3>
       <select v-model="meta.spool">
         <option v-for="title in spoolTypes" :value="title">

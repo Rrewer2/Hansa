@@ -2,6 +2,8 @@
 import { engineMountData, enginesData, freqData } from '../../services/data';
 import { getTextWithSpace, reducedPower, round } from '../../services/functions';
 import { text } from '../../services/text';
+import InputItem from '../InputItem.vue';
+import ResultItem from '../ResultItem.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
@@ -14,30 +16,23 @@ const getTitle = () => order[`motor${i}`]?.title;
 <template>
   <article>
 
-    <h2>Silnik<span> {{ getTitle() }}</span></h2>
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">
-        {{ text('n') }}
-      </h3>
-      <select v-model="powerUNIT.n" :disabled="getTitle() || Object.keys(order).some(str => str.includes(`pump${i}`))">
-        <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
-      </select>
-    </div>
-    <div class="inline w-100">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">
-        {{ text('mount') }}
-      </h3>
-      <select v-model="powerUNIT.mount" :disabled="getTitle()">
-        <option v-for="item in engineMountData" :value="item">{{ item }}</option>
-      </select>
-    </div>
-    <div class="inline w-100">
-      <h3>
-        {{ text('P') }}
-      </h3>
-      <h3>{{ round(reducedPower(powerUNIT.unit)) }}</h3>
-    </div>
+    <h2>Silnik {{ i ? i + 1 : '' }}<span> {{ getTitle() }}</span></h2>
+    <div class="flex-row flex-center">
+      <InputItem :title="text('n').split(', ')[0]" :unit="text('n').split(', ')[1]" class="ml-10">
+        <select v-model="powerUNIT.n"
+          :disabled="getTitle() || Object.keys(order).some(str => str.includes(`pump${i}`))">
+          <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
+        </select>
+      </InputItem>
 
+      <InputItem :title="text('mount').split(', ')[0]" class="ml-10">
+        <select v-model="powerUNIT.mount" :disabled="getTitle()">
+          <option v-for="item in engineMountData" :value="item">{{ item }}</option>
+        </select>
+      </InputItem>
+
+      <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" class="ml-10" />
+    </div>
     <br>
     <table v-if="filteredMotors().length">
       <thead>
