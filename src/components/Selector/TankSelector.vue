@@ -21,7 +21,7 @@ const { project, meta, order, open } = defineProps(["project", "meta", "order", 
         </select>
       </InputItem>
 
-      <ResultItem :data="{ tankMin: round(agregatCounting(project)) }" class="ml-10" />
+      <ResultItem :data="{ tankMin: round(agregatCounting(project)) }" />
     </div>
     <table>
       <thead>

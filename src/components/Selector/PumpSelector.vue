@@ -31,7 +31,7 @@ const getTitle = (item) => Object.keys(item)[0];
         <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}-${k}`]" />
       </InputItem>
 
-      <ResultItem :data="{ VFU: round(getVFU(pump.Q, project[i].n)) }" class="ml-10" />
+      <ResultItem :data="{ VFU: round(getVFU(pump.Q, project[i].n)) }" />
 
       <InputItem :title="text('n').split(', ')[0]" :unit="text('n').split(', ')[1]" class="ml-10">
         <select v-model="project[i].n"

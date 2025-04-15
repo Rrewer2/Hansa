@@ -31,7 +31,7 @@ const getTitle = () => order[`motor${i}`]?.title;
         </select>
       </InputItem>
 
-      <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" class="ml-10" />
+      <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" />
     </div>
     <br>
     <table v-if="filteredMotors().length">

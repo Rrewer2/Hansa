@@ -7,11 +7,18 @@ import ResultItem from '../ResultItem.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
-const filteredCoupling = () => couplingData.filter(({ group, size, shaft }) =>
-  (shaft === order[`pump${i}-${0}`]?.pumpData.shaft && group === order[`pump${i}-${0}`]?.pumpData.group
-    || (order[`pump${i}-${0}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
-  && size === order[`motor${i}`]?.motorData.size
-);
+const filteredCoupling = () => {
+  const filtered = couplingData.filter(({ group, size, shaft }) =>
+    (shaft === order[`pump${i}-${0}`]?.pumpData.shaft && group === order[`pump${i}-${0}`]?.pumpData.group
+      || (order[`pump${i}-${0}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
+    && size === order[`motor${i}`]?.motorData.size
+  );
+  if (filtered.length === 1) {
+    const { title, ...rest } = filtered[0];
+    order.coupling = { title, couplingData: { ...rest } }
+  }
+  return filtered;
+};
 </script>
 
 <template>
@@ -28,9 +35,8 @@ const filteredCoupling = () => couplingData.filter(({ group, size, shaft }) =>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
         <td class="tal">
-          <!-- <input type="radio" :id="getTitle(elem)" v-model="order[`pump${i}-${k}`]" @change="selectedPump"
-            :value="{ title: getTitle(elem), pumpData: { ...elem[getTitle(elem)], n: project[i].n } }" name="pump"
-            :checked="getTitle(elem) === (order[`pump${i}-${k}`]?.title)" class="mx" /> -->
+          <input type="radio" :id="title" v-model="order.coupling" :value="{ title, couplingData: { ...rest } }"
+            :checked="title === order.coupling?.title" class="mx" />
 
           <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}

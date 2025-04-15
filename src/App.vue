@@ -8,7 +8,10 @@ import Scheme from "./components/Scheme.vue";
 import Oferta from "./components/Oferta.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
+
 import Simile from "./components/Simile.vue";
+const simile = ref({ zlec: '', lista: '' })
+
 const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', spool: 'E', z: 1, form: 'hor' };
 const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
@@ -65,7 +68,7 @@ const navPage = ref([false, false, true, false, false]);
             @pumpSelected="(title) => console.log(title)" />
 
         <Oferta v-if="navPage[3]" :order="order" />
-        <Simile v-if="navPage[4]" />
+        <Simile v-if="navPage[4]" :simile="simile" />
     </main>
     <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
 </template>

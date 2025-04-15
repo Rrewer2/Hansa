@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from "vue";
-const zlec = ref(``);
-const lista = ref(``);
+const { simile } = defineProps(["simile"]);
 const getDiffBetween = (str1, str2) => {
   if (!str1.trim().length || !str2.trim().length) return '';
   const a1 = str1.split("\n").map(row => row.split('\t'));
@@ -40,10 +38,13 @@ const getDiffBetween = (str1, str2) => {
 
 <template>
   <section>
-    <textarea name="zlec" id="zlec" placeholder="Wstaw ze zlecenia" v-model="zlec"></textarea>
-    <textarea name="lista" id="lista" placeholder="Wklej z listy czesci" v-model="lista"></textarea>
+    <textarea name="zlec" id="zlec" placeholder="Wstaw ze zlecenia:
+100 HKHQ012  1" v-model="simile.zlec"></textarea>
+    <textarea name="lista" id="lista" placeholder="Wklej z listy cześci:
+HKHQ012 2" v-model="simile.lista"></textarea>
   </section>
-  <textarea>{{ getDiffBetween(zlec, lista) }}</textarea>
+  <textarea
+    placeholder="Różnica między zleceniem a listą części">{{ getDiffBetween(simile.zlec, simile.lista) }}</textarea>
 </template>
 
 <style scoped>
