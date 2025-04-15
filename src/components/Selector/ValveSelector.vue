@@ -1,6 +1,7 @@
 <script setup>
 import { spoolData, spoolTypes } from '../../services/data';
 import { getSmthFromProject, getTextWithSpace, uniqOrder } from '../../services/functions';
+import { text } from '../../services/text';
 import Valve from '../Scheme/Valve.vue';
 
 
@@ -44,7 +45,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     <table>
       <thead>
       </thead>
-      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">{{ item }}</td>
+      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">{{ text(item) }}</td>
       <tbody>
         <tr v-for="{ title, ...rest } in filtered()">
           <td class="tal">
