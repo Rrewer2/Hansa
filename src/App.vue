@@ -107,7 +107,7 @@ select {
     border-radius: 4px;
     min-height: 2.5vh;
     font-size: 2vh;
-    max-width: 100px;
+    max-width: 140px;
     min-width: 70px;
 }
 
@@ -246,8 +246,8 @@ td {
     margin-left: 10px;
 }
 
-.mr-50 {
-    margin-right: 50px;
+.mr-100 {
+    margin-right: 100px;
 }
 
 .invisible {

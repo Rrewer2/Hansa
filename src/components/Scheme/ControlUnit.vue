@@ -12,7 +12,7 @@ const s = () => x + 3 * R - (R / (6 - length));
         :data="el" />
     <DR2 :x="x" :y="y + 300 + sl / 10" :type="unit.DR2type" :N="unit.HKSH.length" :sl="sl" :sl1="sl1" :sh="sh"
         :text="unit.p" />
-    <Valve v-for="el, i in unit.HKSH" :x="x + sl1 + i * (sl * 1.1)" :y="y + 300 + sh + sl / 8" :data="el" :sl="sl" />
+    <Valve v-for="el, i in unit.HKSH" :x="x + sl1 + i * (sl * 1.1)" :y="y + 300 + sh + sl / 6" :data="el" :sl="sl" />
     <path
         :d="`M${x + sl / 10} ${y + 300 + sl / 10}  h${-sh / 5} v${sh * 3} h${sh / 5} h${150 - sl / 10 + s() - 200} v${1100 - y - 300 - sh * 2}`"
         stroke="red" stroke-width="3" fill="none" />

@@ -30,6 +30,7 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
     order{{ order }}
     meta{{ meta }}
+    project {{ project }}
   </main>
 </template>
 

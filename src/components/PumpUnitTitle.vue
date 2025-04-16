@@ -13,7 +13,7 @@ const { id, unit, ...rest } = project[k];
   <div class="text-left my-2">
     <div class="flex-row">
       <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>
-      <h2 class="mr-50">Zespół pompujacy {{ unitTitle(unit) }}</h2>
+      <h2 class="mr-100">Zespół pompujacy {{ unitTitle(unit) }}</h2>
       <div v-for="(_, ind) in rest" class="flex-col ml-10">
 
         <InputItem :title="text(ind).split(', ')[0]" :unit="text(ind).split(', ')[1]">

@@ -15,18 +15,37 @@ const getValue = {
     mountB: HKSHMountd,
     form: ['ver', 'hor']
 };
-const { id, ...rest } = HKSH;
+const { id, mountA, mountB, spool, form, ...rest } = HKSH;
 </script>
 
 <template>
     <section class="pl-25 my-2">
-        <h2 class="text-left">
-            <slot></slot>
-            {{ HKSHTitle(HKSH) }}
-        </h2>
-
         <div class="flex-row">
-            <div v-for="(_, i) in rest" class="flex-col ml-5">
+            <h2 class="text-left mr-100">
+                <slot></slot>
+                {{ HKSHTitle(HKSH) }}
+            </h2>
+            <div v-for="(_, i) in { mountA, mountB, form, spool }" class="flex-col ml-5">
+                <InputItem :title="text(i)">
+
+                    <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input w-75" />
+
+                    <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75">
+                        <option v-for="elem, j in getValue[i]" :value="j" class="tal">
+                            <span>{{ j }} {{ elem }}</span>
+                        </option>
+                    </select>
+
+                    <select v-else v-model="HKSH[i]" class="w-75">
+                        <option v-for="elem in getValue[i]" :value="elem">
+                            {{ elem }}
+                        </option>
+                    </select>
+                </InputItem>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div v-for="(_, i) in rest" class="flex-col ml-5 my-2">
                 <InputItem :title="text(i)">
 
                     <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input w-75" />
