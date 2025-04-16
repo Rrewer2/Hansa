@@ -7,6 +7,7 @@ const h = () => sl / 5;
 </script>
 
 <template>
+    <path :d="`M${x} ${y - 8} h${sl}`" stroke="black" stroke-width="1" stroke-dasharray="5 10" />
     <path :d="`M${x} ${y} v${h() + 10} h${0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
     <path :d="`M${x + sl} ${y} v${h() + 10} h${-0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
 

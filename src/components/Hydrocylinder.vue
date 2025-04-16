@@ -13,9 +13,11 @@ const getValue = {
     spool: spoolTypes,
     mountA: HKSHMountD,
     mountB: HKSHMountd,
-    form: ['ver', 'hor']
+    form: ['pionowo', 'poziomo'],
+    throttle: ['', '012', '013', '014', '022', '023', '024'],
+    check: ['', '011', '012', '013', '014', '016']
 };
-const { id, mountA, mountB, spool, form, ...rest } = HKSH;
+const { id, mountA, mountB, spool, throttle, check, form, ...rest } = HKSH;
 </script>
 
 <template>
@@ -25,12 +27,9 @@ const { id, mountA, mountB, spool, form, ...rest } = HKSH;
                 <slot></slot>
                 {{ HKSHTitle(HKSH) }}
             </h2>
-            <div v-for="(_, i) in { mountA, mountB, form, spool }" class="flex-col ml-5">
+            <div v-for="(_, i) in { mountA, mountB, form, spool, throttle, check }" class="flex-col ml-5">
                 <InputItem :title="text(i)">
-
-                    <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input w-75" />
-
-                    <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75">
+                    <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75">
                         <option v-for="elem, j in getValue[i]" :value="j" class="tal">
                             <span>{{ j }} {{ elem }}</span>
                         </option>

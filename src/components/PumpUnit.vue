@@ -36,7 +36,7 @@ const { id, HKSH, ...rest } = pumpData;
         </div>
 
         <Hydrocylinder v-for="(_, j) in pumpData.HKSH" :key="pumpData.HKSH[j].id" :HKSH="pumpData.HKSH[j]"
-            :pumpData="pumpData" :class="buckling(pumpData.HKSH[j], pumpData.p)" class="my-2 border-no">
+            :pumpData="pumpData" :class="buckling(pumpData.HKSH[j], pumpData.p)" class="my-2 border">
             <button @click="() => pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id)"
                 class="el">
                 ✕

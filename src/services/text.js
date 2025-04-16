@@ -48,6 +48,8 @@ const textData = {
   CoolingCapacity: ['Wydajność chłodzenia', "kW/K"],
   type: ['Typ zbiornika'],
   tankMin : ['Minimalna pojemność', 'L'],
-  pumpType: ['Typ pompy']
+  pumpType: ['Typ pompy'],
+  throttle: ['HKHQ'],
+  check: ['HKHR'],
 };
 export const text = (key) => textData[key] ? textData[key].join(', ') : key;
