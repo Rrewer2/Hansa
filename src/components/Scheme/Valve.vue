@@ -17,7 +17,7 @@ const h = () => sl / 5;
     <Valve3 v-if="data.spool.length === 1 && ['A', 'B', 'C', 'D', 'Y'].every(el => el !== data.spool)" :x="x + sl / 2"
         :y="y" :h="h()" :spool="data.spool" />
     <Valve2 v-else :x="x + sl / 2" :y="y" :h="h()" :spool="data.spool" />
-    <text :x="x + sl / 2" :y="y + h() * 2" font-family="Arial" :font-size="20" fill="black" text-anchor="middle">
+    <text :x="x + sl / 2" :y="y + h() * 1.5" font-family="Arial" :font-size="20" fill="black" text-anchor="middle">
         {{ data.spool }}
     </text>
 </template>

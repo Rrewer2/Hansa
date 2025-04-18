@@ -13,7 +13,7 @@ const { project, meta, order } = defineProps(["project", 'meta', "order"]);
 const sectionLength = 320;
 const getSL1 = (unit) => getSL(unit.HKSH.length) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type);
 const R = () => 70;
-const yTank = () => 1200;
+const yTank = () => 1300;
 const LTank = 1070;
 const getSL = (length) => sectionLength - length * 12;
 const getSh = (unit) => unit.DR2type ? 2 * (getSL(unit.HKSH.length) / 5) : 0.5 * getSL(unit.HKSH.length) / 3;

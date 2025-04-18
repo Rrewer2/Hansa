@@ -15,9 +15,10 @@ const getValue = {
     mountB: HKSHMountd,
     form: ['pionowo', 'poziomo'],
     throttle: ['', '012', '013', '014', '022', '023', '024'],
-    check: ['', '011', '012', '013', '014', '016']
+    check: ['', '011', '012', '013', '014', '016'],
+    directPress: ['', '011', '012', '013', '014', '015'],
 };
-const { id, mountA, mountB, spool, throttle, check, form, ...rest } = HKSH;
+const { id, mountA, mountB, spool, throttle, check, directPress, form, ...rest } = HKSH;
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const { id, mountA, mountB, spool, throttle, check, form, ...rest } = HKSH;
                 <slot></slot>
                 {{ HKSHTitle(HKSH) }}
             </h2>
-            <div v-for="(_, i) in { mountA, mountB, form, spool, throttle, check }" class="flex-col ml-5">
+            <div v-for="(_, i) in { mountA, mountB, form, spool, throttle, check, directPress }" class="flex-col ml-5">
                 <InputItem :title="text(i)">
                     <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75">
                         <option v-for="elem, j in getValue[i]" :value="j" class="tal">

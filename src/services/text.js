@@ -51,5 +51,6 @@ const textData = {
   pumpType: ['Typ pompy'],
   throttle: ['HKHQ'],
   check: ['HKHR'],
+  directPress: ['HKHMP'],
 };
 export const text = (key) => textData[key] ? textData[key].join(', ') : key;

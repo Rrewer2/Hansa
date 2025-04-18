@@ -1,7 +1,4 @@
 <script setup>
-import Biezpiecz from './Biezpiecz.vue';
-
-
 const { x, y, type, arr } = defineProps(['x', 'y', 'type', 'arr']);
 const x0 = 50;
 const y0 = 0;

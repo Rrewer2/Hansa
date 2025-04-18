@@ -12,7 +12,7 @@ import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 import Simile from "./components/Simile.vue";
 const simile = ref({ zlec: '', lista: '' })
 
-const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'E', throttle: '', check: '' };
+const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'E', throttle: '', check: '', directPress: '' };
 const pumpInit = { Q: 8, p: 190, DR2type: 2 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
