@@ -28,6 +28,7 @@ const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].uni
     : { ...cylInit, id: getId('c') });
 
 const addPump = (k) => project.value[k].unit.push(getNewPump());
+const addPumpSame = (k) => project.value[k].unit.push({ ...getNewPump(), HKSH: project.value[k].unit.at(-1).HKSH, same: true });
 const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
 const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
 const navPage = ref([false, false, true, false, false]);
@@ -49,7 +50,10 @@ const navPage = ref([false, false, true, false, false]);
                     </div>
                     <div class="flex-row flex-left pl-25">
                         <button @click="() => addPump(k)" class="btn-add my-2">
-                            + Pompa
+                            + Pompa osobna
+                        </button>
+                        <button @click="() => addPumpSame(k)" class="btn-add my-2">
+                            + Pompa na tym samym układzie
                         </button>
                     </div>
                 </div>

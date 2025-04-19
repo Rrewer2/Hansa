@@ -7,7 +7,7 @@ import InputItem from "./InputItem.vue";
 
 const { pumpData, btnDisabled, project, k, i, order } = defineProps(["pumpData", "btnDisabled", "project", "k", "i", "order"]);
 
-const { id, HKSH, ...rest } = pumpData;
+const { id, HKSH, same, ...rest } = pumpData;
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const { id, HKSH, ...rest } = pumpData;
                         :disabled="order[`pump${i}-${k}`]?.title" />
                     <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" />
 
-                    <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100">
+                    <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same">
                         <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>
                     </select>
                 </InputItem>
@@ -36,7 +36,7 @@ const { id, HKSH, ...rest } = pumpData;
         </div>
 
         <Hydrocylinder v-for="(_, j) in pumpData.HKSH" :key="pumpData.HKSH[j].id" :HKSH="pumpData.HKSH[j]"
-            :pumpData="pumpData" :class="buckling(pumpData.HKSH[j], pumpData.p)" class="my-2 border">
+            :pumpData="{ ...pumpData, same }" :class="buckling(pumpData.HKSH[j], pumpData.p)" class="my-2 border">
             <button @click="() => pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id)"
                 class="el">
                 ✕
