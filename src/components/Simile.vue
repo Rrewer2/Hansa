@@ -43,7 +43,7 @@ const getDiffBetween = (str1, str2) => {
     <textarea name="lista" id="lista" placeholder="Wklej z listy cześci:
 HKHQ012 2" v-model="simile.lista"></textarea>
   </section>
-  <textarea
+  <textarea id="result"
     placeholder="Różnica między zleceniem a listą części">{{ getDiffBetween(simile.zlec, simile.lista) }}</textarea>
 </template>
 

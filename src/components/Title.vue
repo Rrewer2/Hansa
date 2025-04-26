@@ -11,7 +11,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 
     <label>
       <span class="fs-sm px-5">{{ text('type') }}</span>
-      <select v-model="meta.tank" :disabled="order.tank?.title" class=" ml-10">
+      <select v-model="meta.tank" :disabled="order.tank?.title" class=" ml-10" id="tank">
         <option v-for="(_, t) in tankData" :value="t">
           {{ t }}
         </option>
@@ -20,7 +20,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 
     <label class=" ml-10">
       <span class="fs-sm px-5 ml-10">Chłodnica</span>
-      <select v-model="meta.cooler" class=" ml-10">
+      <select v-model="meta.cooler" class=" ml-10" id="cooler">
         <option v-for="(_, c) in [0, 1, 2]" :value="c">
           {{ c }}
         </option>

@@ -23,14 +23,14 @@ const getTitle = () => order[`motor${i}`]?.title;
     <h2>Silnik {{ i ? i + 1 : '' }}<span> {{ getTitle() }}</span></h2>
     <div class="flex-row flex-center">
       <InputItem data="n" class="ml-10">
-        <select v-model="powerUNIT.n"
-          :disabled="getTitle() || Object.keys(order).some(str => str.includes(`pump${i}`))">
+        <select v-model="powerUNIT.n" :disabled="getTitle() || Object.keys(order).some(str => str.includes(`pump${i}`))"
+          id="motor-n">
           <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
         </select>
       </InputItem>
 
       <InputItem data="mount" class="ml-10">
-        <select v-model="powerUNIT.mount" :disabled="getTitle()">
+        <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount">
           <option v-for="item in engineMountData" :value="item">{{ item }}</option>
         </select>
       </InputItem>
@@ -38,7 +38,7 @@ const getTitle = () => order[`motor${i}`]?.title;
       <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" />
 
       <InputItem data="P" class="ml-10">
-        <select v-model="P" @change="() => setPressure(powerUNIT.unit, P)">
+        <select v-model="P" @change="() => setPressure(powerUNIT.unit, P)" id="P">
           <option v-for="item in motorData" :value="item">{{ item }}</option>
         </select>
       </InputItem>

@@ -17,17 +17,17 @@ const { id, unit, ...rest } = project[k];
       <div v-for="(_, ind) in rest" class="flex-col ml-10">
 
         <InputItem :data="ind">
-          <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]">
+          <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]" :id="ind">
             <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
           </select>
 
-          <select v-else v-model="project[k].mount" :disabled="order[`motor${k}`]" class="w-75">
+          <select v-else v-model="project[k].mount" :disabled="order[`motor${k}`]" :id="ind" class="w-75">
             <option v-for="item in engineMountData" :value="item">{{ item }}</option>
           </select>
         </InputItem>
       </div>
       <InputItem data="P">
-        <select v-model="P" @change="() => setPressure(unit, P)">
+        <select v-model="P" @change="() => setPressure(unit, P)" id="P">
           <option v-for="item in motorData" :value="item">{{ item }}</option>
         </select>
       </InputItem>

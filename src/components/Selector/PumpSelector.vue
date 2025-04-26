@@ -33,7 +33,7 @@ const getTitle = (item) => Object.keys(item)[0];
     <div class="flex-row flex-center">
       <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
         <InputItem data="Q">
-          <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}`]" />
+          <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}`]" id="Q" />
         </InputItem>
 
         <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
@@ -41,13 +41,13 @@ const getTitle = (item) => Object.keys(item)[0];
 
       <InputItem data=n class="ml-10">
         <select v-model="powerUNIT.n"
-          :disabled="order[`pump${i}`] || Object.keys(order).some(str => str.includes(`motor${i}`))">
+          :disabled="order[`pump${i}`] || Object.keys(order).some(str => str.includes(`motor${i}`))" id="n">
           <option v-for="item in freqData" :value="item">{{ item }}</option>
         </select>
       </InputItem>
 
       <InputItem data="pumpType" class="ml-10">
-        <select v-model="meta.pumpType">
+        <select v-model="meta.pumpType" id="pumpType">
           <option v-for="item in Object.keys(pumpData)" :value="item">{{ text(item) }}</option>
         </select>
       </InputItem>

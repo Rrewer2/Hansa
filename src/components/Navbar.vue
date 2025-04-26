@@ -6,7 +6,7 @@ const { navPage } = defineProps(["navPage"]);
 <template>
   <nav class="flex-row flex-left">
     <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
-      <label :for="nav">{{ nav }}</label>
+      {{ nav }}
     </div>
   </nav>
 </template>

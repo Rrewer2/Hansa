@@ -18,17 +18,17 @@ const getTitle = () => order.cooler?.title;
     <h2>Chłodnica<span> {{ order.cooler?.title }}</span></h2>
     <div class="flex-row flex-center">
       <InputItem data="η" class="ml-10">
-        <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" />
+        <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" id="η" />
       </InputItem>
 
       <InputItem data="vBT">
-        <select v-model="cooler.vBT" :disabled="getTitle()">
+        <select v-model="cooler.vBT" :disabled="getTitle()" id="vBT">
           <option v-for="item in coolerVBT" :value="item">{{ item }}</option>
         </select>
       </InputItem>
 
       <InputItem data="vZ" class="ml-10">
-        <select v-model="cooler.vZ" :disabled="getTitle()">
+        <select v-model="cooler.vZ" :disabled="getTitle()" id="vZ">
           <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
         </select>
       </InputItem>
