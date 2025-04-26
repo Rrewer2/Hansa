@@ -21,7 +21,7 @@ const filteredPumps = () => {
 };
 
 const selectedPump = () => {
-  pump.Q = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
+  powerUNIT.unit[0].Q = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
 };
 const getTitle = (item) => Object.keys(item)[0];
 </script>
