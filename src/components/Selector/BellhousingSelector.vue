@@ -4,25 +4,26 @@ import { getTextWithSpace, reducedPower, round } from '../../services/functions'
 import { text } from '../../services/text';
 import InputItem from '../InputItem.vue';
 import ResultItem from '../ResultItem.vue';
+import CopyText from './CopyText.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
-const filteredBellhousing = () => bellhousingData.filter(({ holePattern, size }) =>
-  holePattern === order[`pump${i}-${0}`]?.pumpData.holePattern
-  && size === order[`motor${i}`]?.motorData.size
-);
-// const filteredCoupling = () => couplingData.filter(({ group, size, shaft }) =>
-//   (shaft === order[`pump${i}-${0}`]?.pumpData.shaft && group === order[`pump${i}-${0}`]?.pumpData.group
-//     || (order[`pump${i}-${0}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
-//   && size === order[`motor${i}`]?.motorData.size
-// );
+const filteredBellhousing = () => {
+  const filtered = bellhousingData.filter(({ holePattern, size }) =>
+    holePattern === order[`pump${i}-${0}`]?.pumpData.holePattern
+    && size === order[`motor${i}`]?.motorData.size
+  );
+  if (filtered.length === 1) {
+    const { title, ...rest } = filtered[0];
+    order.bellhousing = { title, bellhousingData: { ...rest } }
+  }
+  return filtered;
+};
 </script>
 
 <template>
   <article>
     <h2>Kielich {{ i ? i + 1 : '' }}<span> {{ filteredBellhousing().at(-1)?.title }}</span></h2>
-    <!-- <h2>Sprzęgło {{ i ? i + 1 : '' }}<span> {{ filteredCoupling().at(-1)?.title }}</span></h2> -->
-
     <br>
 
     <table v-if="filteredBellhousing().length">
@@ -33,13 +34,13 @@ const filteredBellhousing = () => bellhousingData.filter(({ holePattern, size })
       </thead>
       <tbody v-for="{ title, ...rest } in filteredBellhousing()">
         <td class="tal">
-          <!-- <input type="radio" :id="getTitle(elem)" v-model="order[`pump${i}-${k}`]" @change="selectedPump"
-            :value="{ title: getTitle(elem), pumpData: { ...elem[getTitle(elem)], n: project[i].n } }" name="pump"
-            :checked="getTitle(elem) === (order[`pump${i}-${k}`]?.title)" class="mx" /> -->
+          <input type="radio" :id="title" v-model="order.bellhousing" :value="{ title, bellhousingData: { ...rest } }"
+            :checked="title === order.bellhousing?.title" class="mx" />
 
           <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
+          <CopyText :text="title" />
         </td>
         <td v-for="item in Object.values(rest)">{{ item }}</td>
       </tbody>

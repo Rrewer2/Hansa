@@ -21,6 +21,8 @@ const tank = (Q) => 3 * Q; //Ємність баку
 export const getStandartTank = ({tank}, T) => tankData[tank].find(({Size}) => Size >= T); // Розмір баку
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
+const pressure  = (Q, P) => P * 500 / Q;//Тиск
+export const setPressure = (unit, P) =>  unit[0].p = round(pressure(unit[0].Q, P), 1);
 export const reducedPower = (unit) => unit.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b); // Сукупна потужність
 export const getStandartPower = (P) => motorData.find(N => N >= 0.97*P) || '___'; //Потужність каталогова
 
@@ -133,7 +135,7 @@ export const filtrationD = (arr, D) => arr;
 //   return c;
 // };
 // console.log(splitJoin('407.5,572 409,575 413,572'));
-export const getTextWithSpace = text => text.match(/HK|[a-zA-Z]+|\d+/g).join(' ');
+export const getTextWithSpace = text => text.match(/HK|[a-zA-Z.\-\/]+|\d+/g).join(' ');
 
 export const Pv = (project,η) => project.map(({unit}) => reducedPower(unit))
     .reduce((prev,cur)=> prev + cur)

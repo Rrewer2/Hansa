@@ -1,6 +1,8 @@
 <script setup>
-const { title, unit } = defineProps(["title", "unit"]);
-// console.log('title,unit :>> ', title, unit);
+import { text } from '../services/text';
+
+const { data } = defineProps(["data"]);
+const [title, unit] = text(data).split(', ')
 </script>
 
 <template>

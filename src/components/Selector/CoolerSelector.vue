@@ -5,6 +5,7 @@ import { P01, Pv, Qmax, filteredCooler, getTextWithSpace, round } from '../../se
 import { text } from '../../services/text';
 import InputItem from '../InputItem.vue';
 import ResultItem from '../ResultItem.vue';
+import CopyText from './CopyText.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
@@ -16,17 +17,17 @@ const getTitle = () => order.cooler?.title;
   <article v-if="meta.cooler">
     <h2>Chłodnica<span> {{ order.cooler?.title }}</span></h2>
     <div class="flex-row flex-center">
-      <InputItem :title="text('η').split(', ')[0]" :unit="text('η').split(', ')[1]" class="ml-10">
+      <InputItem data="η" class="ml-10">
         <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" />
       </InputItem>
 
-      <InputItem :title="text('vBT').split(', ')[0]" :unit="text('vBT').split(', ')[1]" class="ml-10">
+      <InputItem data="vBT">
         <select v-model="cooler.vBT" :disabled="getTitle()">
           <option v-for="item in coolerVBT" :value="item">{{ item }}</option>
         </select>
       </InputItem>
 
-      <InputItem :title="text('vZ').split(', ')[0]" :unit="text('vZ').split(', ')[1]" class="ml-10">
+      <InputItem data="vZ" class="ml-10">
         <select v-model="cooler.vZ" :disabled="getTitle()">
           <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
         </select>
@@ -51,6 +52,7 @@ const getTitle = () => order.cooler?.title;
             <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
+            <CopyText :text="title" />
           </td>
           <td v-for="item in elem">{{ `${item.min} ÷ ${item.max}` }}</td>
         </tr>

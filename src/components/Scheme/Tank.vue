@@ -1,5 +1,5 @@
 <script setup>
-
+import ShutOff from './ShutOff.vue';
 
 const { x, y, L, screenSize } = defineProps(['x', 'y', 'L', 'screenSize']);
 const H = () => screenSize - 100 - y;
@@ -21,9 +21,7 @@ const s = 8;
         fill="none" />
     <path :d="`M${x + 3 * u + s} ${y + h + s + H() / 4 + s} v${H() / 2 - 2 * s} h${u - 2 * s} v${-H() / 2 + 2 * s}z`"
         stroke="#000" stroke-width="2" fill="none" />
-    <path
-        :d="`M${x + 2 * u - 1.5 * s} ${y + h + s + H() + hZlew / 2 - 2 * s} l${3 * s} ${3 * s} v${-3 * s} l${-3 * s} ${3 * s}z`"
-        stroke="#000" stroke-width="2" fill="black" />
+    <ShutOff :x="x + 2 * u" :y="y + h + s + H() + hZlew / 2" :a="2 * s" deg="90" />
     <text :x="x + L - 400" :y="y + H() - u" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">L-HV
         46</text>
     <text :x="x + L - 400" :y="y + H()" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">

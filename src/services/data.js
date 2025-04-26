@@ -35,60 +35,63 @@ const BEK = [{title:'HKBEK12',Size:12},{title:'HKBEK20',Size:20},{title:'HKBEK35
 const SBT =[{title:'HKSBT006',Size:6},{title:'HKSBT012',Size:12},{title:'HKSBT025',Size:25},{title:'HKSBT040',Size:40},{title:'HKSBT070',Size:70},{title:'HKSBT100',Size:100},{title:'HKSBT160',Size:160},{title:'HKSBT250',Size:250}].map((el) => ({...el, type: 'SBT'}));
 export const tankData = { RA, BSK, BEK, SBT };
 
-export const motorData = [ 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
+export const motorData = [ '',0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 9.2, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
 export const freqData = [ 750, 1500, 1800, 3000 ];
-const enginesHK = [
-  {title:'HK63B4B3142-4IE2',size:63,power:0.18,meta:'E-Motor230/400V0,18kW1360UB34IE2'},
-  {title:'HK71A4B3142-4IE2',size:71,power:0.25,meta:'E-Motor230/400V0,25kW1380UB34IE2'},
-  {title:'HK71B4B3142-4IE2',size:71,power:0.37,meta:'E-Motor230/400V0,37kW1380UB34IE2'},
-  {title:'HK80M4B352-4IE3',size:80,power:0.75,meta:'E-Motor230/400V0,75kW1400UB35IE3'},
-  {title:'HK90S4B352-4IE3',size:90,power:1.1,meta:'E-Motor230/400V1,1kW1400UB35IE3'},
-  {title:'HK90L4B352-4IE3',size:90,power:1.5,meta:'E-Motor230/400V1,5kW1400UB35IE3'},
-  {title:'HKK407A90LB4IE3',size:90,power:1.5,meta:'E-Motor230/400V1,5kW1445UB34IE3'},
-  {title:'HK100LA4B352-4IE3',size:100,power:2.2,meta:'E-Motor230/400V2,2kW1455UB35IE3'},
-  {title:'HKK408A100LA4IE3',size:100,power:2.2,meta:'E-Motor230/400V2,2kW1445UB34IE3'},
-  {title:'HK100LB4B352-4IE3',size:100,power:3,meta:'E-Motor230/400V3,0kW1455UB35IE3'},
-  {title:'HK100LB4B52-4IE3',size:100,power:3,meta:'E-Motor230/400V3,0kW1455UB5IE3'},
-  {title:'HKK409A100LB4IE3',size:100,power:3,meta:'E-Motor230/400V3,0kW1420UB34IE3'},
-  {title:'HK112M4B354-6IE3',size:112,power:4,meta:'E-Motor400/690V4,0kW1460UB35IE3'},
-  {title:'HK132SB4B354-6IE3',size:132,power:5.5,meta:'E-Motor400/690V5,5kW1470UB35IE3'},
-  {title:'HK132SB4B54-6IE3',size:132,power:5.5,meta:'E-Motor400/690V5,5kW1470UB5IE3'},
-  {title:'HKK411A132SA4IE2',size:132,power:5.5,meta:'Silnik-E400/690V5,5kW1450UB34IE2'},
-  {title:'HK132M4B354-6IE2',size:132,power:7.5,meta:'Silnik-E400/690V7,5kW1465UB35IE2'},
-  {title:'HK132M4B354-6IE3',size:132,power:7.5,meta:'E-MOTOR400/690V7,5KW1465UB35IE3'},
-  {title:'HK160M4B354-6IE2',size:160,power:11,meta:'Silnik-E400/690V11,0kW1470UB35IE2'},
-  {title:'HK160M4B354-6IE3',size:160,power:11,meta:'E-MOTOR400/690V11,0KW1470UB35IE3'},
-  {title:'HK160M4B54-6IE2',size:160,power:11,meta:'Silnik-E400/690V11,0kW1470UB5IE2'},
-  {title:'HK160M4B54-6IE3',size:160,power:11,meta:'E-MOTOR400/690V11,0KW1470UB5IE3'},
-  {title:'HK160L4B354-6IE3',size:160,power:15,meta:'E-MOTOR400/690V15,0KW1475UB35IE3'},
-  {title:'HK180M4B354-6IE3',size:180,power:18.5,meta:'E-MOTOR400/690V18,5KW1470UB35IE3'},
-  {title:'HK200L4B354-6IE3',size:200,power:30,meta:'E-MOTOR400/690V30,0KW1475UB35IE3'}];
+const enginesHK = [	
+  {title:'HK63B4B3142-4IE2',size:63,power:0.18,meta:'E-Motor 230/400V 0,18kW 1360U B34 IE2'},
+  {title:'HK71A4B3142-4IE2',size:71,power:0.25,meta:'E-Motor 230/400V 0,25kW 1380U B34 IE2'},
+  {title:'HK71B4B3142-4IE2',size:71,power:0.37,meta:'E-Motor 230/400V 0,37kW 1380U B34 IE2'},
+  {title:'HK80M4B352-4IE3',size:80,power:0.75,meta:'E-Motor 230/400V 0,75kW 1400U B35 IE3'},
+  {title:'HK90S4B352-4IE3',size:90,power:1.1,meta:'E-Motor 230/400V 1,1kW 1400U B35 IE3'},
+  {title:'HK90L4B352-4IE3',size:90,power:1.5,meta:'E-Motor 230/400V 1,5kW 1400U B35 IE3'},
+  {title:'HKK407A90LB4IE3',size:90,power:1.5,meta:'E-Motor 230/400V 1,5kW 1445U B34 IE3'},
+  {title:'HK100LA4B352-4IE3',size:100,power:2.2,meta:'E-Motor 230/400V 2,2kW 1455U B35 IE3'},
+  {title:'HKK408A100LA4IE3',size:100,power:2.2,meta:'E-Motor 230/400V 2,2kW 1445U B34 IE3'},
+  {title:'HK100LB4B352-4IE3',size:100,power:3,meta:'E-Motor 230/400V 3,0kW 1455U B35 IE3'},
+  {title:'HK100LB4B52-4IE3',size:100,power:3,meta:'E-Motor 230/400V 3,0kW 1455U B5 IE3'},
+  {title:'HKK409A100LB4IE3',size:100,power:3,meta:'E-Motor 230/400V 3,0kW 1420U B34 IE3'},
+  {title:'HK112M4B354-6IE3',size:112,power:4,meta:'E-Motor 400/690V 4,0kW 1460U B35 IE3'},
+  {title:'HK132SB4B354-6IE3',size:132,power:5.5,meta:'E-Motor 400/690V 5,5kW 1470U B35 IE3'},
+  {title:'HK132SB4B54-6IE3',size:132,power:5.5,meta:'E-Motor 400/690V 5,5kW 1470U B5 IE3'},
+  {title:'HKK411A132SA4IE2',size:132,power:5.5,meta:'Silnik-E 400/690V 5,5kW 1450U B34 IE2'},
+  // {title:'HK132M4B354-6IE2',size:132,power:7.5,meta:'Silnik-E 400/690V 7,5kW 1465U B35 IE2'},
+  {title:'HK132M4B354-6IE3',size:132,power:7.5,meta:'E-MOTOR 400/690V 7,5KW 1465U B35 IE3'},
+  // {title:'HK160M4B354-6IE2',size:160,power:11,meta:'Silnik-E 400/690V 11,0kW 1470U B35 IE2'},
+  {title:'HK160M4B354-6IE3',size:160,power:11,meta:'E-MOTOR 400/690V 11,0KW 1470U B35 IE3'},
+  // {title:'HK160M4B54-6IE2',size:160,power:11,meta:'Silnik-E 400/690V 11,0kW 1470U B5 IE2'},
+  {title:'HK160M4B54-6IE3',size:160,power:11,meta:'E-MOTOR 400/690V 11,0KW 1470U B5 IE3'},
+  {title:'HK160L4B354-6IE3',size:160,power:15,meta:'E-MOTOR 400/690V 15,0KW 1475U B35 IE3'},
+  {title:'HK180M4B354-6IE3',size:180,power:18.5,meta:'E-MOTOR 400/690V 18,5KW 1470U B35 IE3'},
+  {title:'HK200L4B354-6IE3',size:200,power:30,meta:'E-MOTOR 400/690V 30,0KW 1475U B35 IE3'},
+  {title:'HK180M4B354-6IE3',size:225,power:45,meta:'E-MOTOR 400/690V 45,0KW 1475U B35 IE3'},
+];
 const enginesK400 = [
-  {title:'K-400B14-1.5-90L',size:90,power:1.5,meta:'Silniktrójfazowy400V;1,5kW1400obr.'},
-  {title:'K-400B14-2.2100L',size:100,power:2.2,meta:'Silnik3-faz.400V;2,2kW1420obr/min;'},
-  {title:'K-400B14-3-100L',size:100,power:3,meta:'Silnik3-faz.400V;3kW1420obr/min;'},
-  {title:'K-400B34-3-100L',size:100,power:3,meta:'Silnik3-faz.400V;3kW1420obr/min;B34'},
-  {title:'K-400B35-3-100L',size:100,power:3,meta:'Silnikelektr.3kW;B35;230/400V;1450'},
-  {title:'K-400B35-4-112M',size:112,power:4,meta:'Silniktrójfazowy400V;4kW1450obr/min'},
-  {title:'K-400B35-5.5-132',size:132,power:5.5,meta:'Silnik3-faz.400V;5.5kW1420obr/min;B'},
-  {title:'K-400B35-7.5132M',size:132,power:7.5,meta:'Silnikel.400/690V7,5KW1465UB35IE3'},
-  {title:'K-400B5-11-132L',size:132,power:11,meta:'Silnikprog.400/690V11kW1465B5132L2'}];
+  {title:'K-400B14-1.5-90L',size:90,power:1.5,meta:'Silnik trójfazowy 400V; 1,5kW 1400obr.'},
+  {title:'K-400B14-2.2100L',size:100,power:2.2,meta:'Silnik 3-faz. 400V; 2,2kW 1420obr/min;'},
+  {title:'K-400B14-3-100L',size:100,power:3,meta:'Silnik 3-faz. 400V; 3kW 1420obr/min;'},
+  {title:'K-400B34-3-100L',size:100,power:3,meta:'Silnik 3-faz. 400V; 3kW 1420obr/min; B34'},
+  {title:'K-400B35-3-100L',size:100,power:3,meta:'Silnik elektr. 3 kW; B35; 230/400V; 1450'},
+  {title:'K-400B35-4-112M',size:112,power:4,meta:'Silnik trójfazowy 400V; 4kW 1450obr/min'},
+  {title:'K-400B35-5.5-132',size:132,power:5.5,meta:'Silnik 3-faz. 400V; 5.5kW 1420obr/min; B'},
+  {title:'K-400B35-7.5132M',size:132,power:7.5,meta:'Silnik el. 400/690V 7,5KW 1465U B35 IE3'},
+  {title:'K-400B5-11-132L',size:132,power:11,meta:'Silnik prog. 400/690V 11kW 1465 B5 132L2'}];
 const enginesK230 = [{title: "K-230B34-1.5-90L",size:90,power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
 const enginesACMotoren = [
   {title: "K-FCPA804/PHE",size:80,power: 1.1,meta: "SILNIK PROGRESYWNY 1,1KW"},
   {title: "K-FCA90LC4/PHE",size:90,power: 2.2,meta: "SILNIK PROGRESYWNY 2,2 Kw"},
   {title: "K-FCPA112MD-4IMB35",size:112,power: 7.5,meta: "SILNIK PROGRESYWNY 7,5 KW"},
   {title: "K-FCPA132MC4/HE",size:132,power: 9.2,meta: "Silnik 9,2kW progresywny"}];
-const enginesT3A=[{title: "K-T3A90L1-4.B34",size:90,power: 1.5,meta: "Silnik trójfazowy T3A90L1-4,B34;1,5kW"},
+const enginesT3A=[
+  {title: "K-T3A90L1-4.B34",size:90,power: 1.5,meta: "Silnik trójfazowy T3A90L1-4,B34;1,5kW"},
   {title: "K-T3A100L2-4",size:100,power: 3,meta: "Silnik eleketr. 3 kW; B5; 230/400V"},
   {title: "K-T3A112M4B35-4KW",size:112,power: 4,meta: "Silnik elektryczny 4kW"},
   {title: "K-T3A-112M2-4",size:112,power: 5.5,meta: "Silnik prog. T3A-112M2-4; 5,5kW, B5, 145"},
   {title: "K-T3A-132M-4",size:132,power: 7.5,meta: "Silnik prog. T3A 132M-4, B35 , 7.5kW"},
   {title: "K-T3A-132M3-4",size:132,power: 11,meta: "Silnik prog. T3A 132M3-4, B35 ,11kW"}];
 
-export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title,  ...rest})=>({title,...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0]}));
+export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title,  ...rest})=>({title,...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0] || 'B35'}));
 // console.log('enginesData :>> ', enginesData);
-export const engineMountData = ['B5', 'B35', 'B14', 'B34'];
+export const engineMountData = ['', 'B5', 'B35', 'B14', 'B34'];
 
 export const screwArr = [12.9, 10.9, 8.8, 6.8, 6.6, 5.8];
 
@@ -136,12 +139,12 @@ const gearPumpAPF = [
     HK2APF25F02Z41RSS: { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
   },
   {
-    HK3APF26F09Z05RSS: { CC: 26, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HK3APF33F09Z05RSS: { CC: 33, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HK3APF39F09Z05RSS: { CC: 39, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HK3APF46F09Z05RSS: { CC: 46, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HK3APF55F09Z05RSS: { CC: 55, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HK3APF63F09Z05RSS: { CC: 63, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
+    HK3APF26F09Z05RSS: { CC: 26, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF33F09Z05RSS: { CC: 33, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF39F09Z05RSS: { CC: 39, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF46F09Z05RSS: { CC: 46, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF55F09Z05RSS: { CC: 55, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF63F09Z05RSS: { CC: 63, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8'},
   }
 ];
 //  flange: 'Ø36,5 European'
@@ -183,19 +186,19 @@ const gearPumpVivolo =[
   HK1P3402FBBA: { CC: 7.54, in: 'G 3/8″ -19', out: 'G 3/8″ -19',shaft:'1:8', pmax:190, holePattern:'71.9 x 52.4 - Ø 25.4'},
   HK1P3602FBBA: { CC: 9.88, in: 'G 3/8″ -19', out: 'G 3/8″ -19',shaft:'1:8', pmax:170, holePattern:'71.9 x 52.4 - Ø 25.4'},
   
-  HK1P1602GIIA: { CC: 0.91, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
-  HK1P1702GIIA: { CC: 1.17, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
-  HK1P1802GIIA: { CC: 1.56, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
-  HK1P2002GIIA: { CC: 2.08, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
-  HK1P2102GIIA: { CC: 2.6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
-  HK1P2302GIIA: { CC: 3.12, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
-  HK1P2502GIIA: { CC: 3.64, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
-  HK1P2702GIIA: { CC: 4.16, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
-  HK1P2902GIIA: { CC: 4.94, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'73 x 56 - Ø 30'},
-  HK1P3102GIIA: { CC: 5.85, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
-  HK1P3202GIIA: { CC: 6.5, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
-  HK1P3402GIIA: { CC: 7.54, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
-  HK1P3602GIIA: { CC: 9.88, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:170, holePattern:'73 x 56 - Ø 30'},
+  HK1P1612GIIA: { CC: 0.91, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
+  HK1P1712GIIA: { CC: 1.17, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
+  HK1P1812GIIA: { CC: 1.56, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
+  HK1P2012GIIA: { CC: 2.08, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
+  HK1P2112GIIA: { CC: 2.6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:250, holePattern:'73 x 56 - Ø 30'},
+  HK1P2312GIIA: { CC: 3.12, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
+  HK1P2512GIIA: { CC: 3.64, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
+  HK1P2712GIIA: { CC: 4.16, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:240, holePattern:'73 x 56 - Ø 30'},
+  HK1P2912GIIA: { CC: 4.94, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'73 x 56 - Ø 30'},
+  HK1P3112GIIA: { CC: 5.85, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
+  HK1P3212GIIA: { CC: 6.5, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
+  HK1P3412GIIA: { CC: 7.54, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:190, holePattern:'73 x 56 - Ø 30'},
+  HK1P3612GIIA: { CC: 9.88, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:170, holePattern:'73 x 56 - Ø 30'},
   },
   {
   HK2P4102EOOA: { CC: 4.2, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:260, holePattern:'96.2 x 71.5 - Ø 36.5'},
@@ -231,14 +234,14 @@ const gearPumpVivolo =[
   HK2P5742FSRA: { CC: 26.2, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 35 mm / M 6',shaft:'1:5', pmax:170, holePattern:'96.2 x 71.5 - Ø 36.5'},
  },
  {
-  HKX3P7002ABAA: { CC: 21.1, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P7202ABAA: { CC: 26.06, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P7402ABAA: { CC: 32.27, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P7802ABAA: { CC: 38.47, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P7902ABAA: { CC: 43.44, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P8102ABAA: { CC: 50.88, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:230, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P8302ACBA: { CC: 60.81, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:230, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-  HKX3P8702ACBA: { CC: 74.46, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
+  HKX3P7002ABAA: { CC: 21.1, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P7202ABAA: { CC: 26.06, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P7402ABAA: { CC: 32.27, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P7802ABAA: { CC: 38.47, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P7902ABAA: { CC: 43.44, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:250, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P8102ABAA: { CC: 50.88, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:230, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P8302ACBA: { CC: 60.81, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:230, holePattern:'128 x 98 - Ø 50.8'},
+  HKX3P8702ACBA: { CC: 74.46, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8'},
 },
 ];
 const gearPumpCasappa = [
@@ -256,13 +259,13 @@ const gearPumpCasappa = [
     HKKP2031D082E2L: { CC: 33.03, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:140, holePattern:'96.2 x 71.5 - Ø 36.5'},
   },
   {
-    HKKP3027D083E3L: { CC: 26.7, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:310, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3034D083E3L: { CC: 34.6, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:300, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3038D083E3L: { CC: 39.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:300, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3043D083E3L: { CC: 43.9, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:290, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3051D083E3L: { CC: 51.8, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:270, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3061D083E3L: { CC: 61.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:240, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
-    HKKP3073D083E3L: { CC: 73.8, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:220, holePattern:'128 x 98 - Ø 50.8 - Ø 50.8'},
+    HKKP3027D083E3L: { CC: 26.7, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:310, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3034D083E3L: { CC: 34.6, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:300, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3038D083E3L: { CC: 39.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:300, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3043D083E3L: { CC: 43.9, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:290, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3051D083E3L: { CC: 51.8, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:270, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3061D083E3L: { CC: 61.3, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:240, holePattern:'128 x 98 - Ø 50.8'},
+    HKKP3073D083E3L: { CC: 73.8, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:220, holePattern:'128 x 98 - Ø 50.8'},
   }
 ];
 const gearPumpRexroth = [
@@ -300,6 +303,44 @@ const gearPumpRexroth = [
   },
   {},
   {} 
+];
+const gearPumpWPH = [
+  {},
+  {    
+    '1PZ4-1/28-2-776': { CC: 1, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-1.2/28-2-776': { CC: 1.2, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-1.6/28-2-776': { CC: 1.6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-2/28-2-776': { CC: 2, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-2.5/28-2-776': { CC: 2.5, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-3.2/28-2-776': { CC: 3.2, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-4/22-2-776': { CC: 4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:220, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-5/22-2-776': { CC: 5, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:220, holePattern:'71.9 x 52.4 - Ø 25.4'},
+    '1PZ4-6.3/17-2-776': { CC: 6.3, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:170, holePattern:'71.9 x 52.4 - Ø 25.4'},
+  },
+  {
+    '2PZ4-4/28-2-775': { CC: 4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-5.5/28-2-775': { CC: 5.5, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-6.3/28-2-775': { CC: 6.3, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-8/28-2-775': { CC: 8, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-11/28-2-775': { CC: 11, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-12.5/28-2-775': { CC: 12.5, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-14/25-2-775': { CC: 14, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-16/22-2-775': { CC: 16, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:220, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-20/22-2-775': { CC: 20, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:220, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-22/22-2-775': { CC: 22, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:220, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    '2PZ4-25/18-2-775': { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:180, holePattern:'96.2 x 71.5 - Ø 36.5'},
+  },
+  {
+    '3PZ4-16/28-2-775': { CC: 16, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-20/28-2-775': { CC: 20, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-25/28-2-775': { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-28/28-2-775': { CC: 28, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 40 mm / M 8',shaft:'1:8', pmax:280, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-32/28-2-775': { CC: 32, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:280, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-40/22-2-775': { CC: 40, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:220, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-52/20-2-775': { CC: 52, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-60/18-2-775': { CC: 60, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8'},
+    '3PZ4-70/16-2-775': { CC: 70, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:160, holePattern:'128 x 98 - Ø 50.8'},
+  }
 ];
 const pistonPumpRexroth = {
   HKA10VSO18DRG31R: { CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain:'M16 x 1.5',  pmax:280, regulator: 'Regulator ciśnienia', holePattern:'Ø 106,4 - Ø 80'},
@@ -348,13 +389,13 @@ const pistonPumpPBA = {
   HKPBA108L8064SF: { CC: 108, in: 'G1″', out: 'G1″', drain:'-', pmax:350,regulator:"-", holePattern: '80 x 80 - Ø 80', shaft: '8-32-36 DIN ISO 14'},
 };
 export const pumpData = {
-  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['REXROTH', gearPumpRexroth], ['CHINA', gearPumpAPF]]
+  gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['REXROTH', gearPumpRexroth], ['WPH', gearPumpWPH], ['CHINA', gearPumpAPF]]
   .flatMap(([maker, pumpsByGroup]) => pumpsByGroup
     .flatMap((el, group) => Object.entries(el)
       .map(([title, data]) => ({[title]: { ...data, maker, group }})))),
   piston:[['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]]
   .flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
-    .map(([title, data]) => ({[title]: { ...data, maker }})))
+    .map(([title, data]) => ({[title]: { ...data, shaft:data.shaft || '-', maker }})))
 };
 
 export const coolerVBT =  Array.from(Array(11), (_, i) => i*5 + 20);

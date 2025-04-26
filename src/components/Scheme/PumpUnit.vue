@@ -10,10 +10,12 @@ const pumpR = () => R - (R / (6 - pumps.length));
 
 <template>
   <Motor :x="x" :y="y" :R="R" :mount="mount" />
-  <text :x="x - R * 2.5" :y="y - R / 4" font-family="Arial" :font-size="R / 2" fill="black" text-anchor="middle">{{
-    round(reducedPower(pumps))
-  }} kW</text>
-  <text :x="x - R * 2.5" :y="y + R / 4" font-family="Arial" :font-size="R / 2" fill="black" text-anchor="middle">
+  <text v-if="round(reducedPower(pumps))" :x="x - R * 2.5" :y="y - R / 4" font-family="Arial" :font-size="R / 2"
+    fill="black" text-anchor="middle">{{
+      round(reducedPower(pumps))
+    }} kW</text>
+  <text v-if="round(reducedPower(pumps))" :x="x - R * 2.5" :y="y + R / 4" font-family="Arial" :font-size="R / 2"
+    fill="black" text-anchor="middle">
     <slot></slot>
     min⁻¹
   </text>

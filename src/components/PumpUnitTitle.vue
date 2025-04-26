@@ -1,11 +1,11 @@
 <script setup>
-import { engineMountData, freqData } from "../services/data";
-import { powerCounting, unitTitle } from "../services/functions";
-import { text } from "../services/text";
+import { ref } from "vue";
+import { engineMountData, freqData, motorData } from "../services/data";
+import { powerCounting, setPressure, unitTitle } from "../services/functions";
 import InputItem from "./InputItem.vue";
 import ResultItem from "./ResultItem.vue";
 const { project, k, btnDisabled, order } = defineProps(["project", "k", "btnDisabled", "order"]);
-
+const P = ref('');
 const { id, unit, ...rest } = project[k];
 </script>
 
@@ -16,7 +16,7 @@ const { id, unit, ...rest } = project[k];
       <h2 class="mr-100">Zespół pompujacy {{ unitTitle(unit) }}</h2>
       <div v-for="(_, ind) in rest" class="flex-col ml-10">
 
-        <InputItem :title="text(ind).split(', ')[0]" :unit="text(ind).split(', ')[1]">
+        <InputItem :data="ind">
           <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]">
             <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
           </select>
@@ -26,6 +26,11 @@ const { id, unit, ...rest } = project[k];
           </select>
         </InputItem>
       </div>
+      <InputItem data="P">
+        <select v-model="P" @change="() => setPressure(unit, P)">
+          <option v-for="item in motorData" :value="item">{{ item }}</option>
+        </select>
+      </InputItem>
       <ResultItem :data="powerCounting(unit)" />
     </div>
   </div>

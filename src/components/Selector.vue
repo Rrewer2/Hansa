@@ -17,15 +17,14 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
 <template>
   <main>
     <div v-for="powerUNIT, i in project">
-      <PumpSelector v-for="pump, k in powerUNIT.unit" :project="project" :meta="meta" :order="order" :pump="pump" :i="i"
-        :k="k" />
-      <MotorSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
-      <BellhousingSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
-      <CouplingSelector :project="project" :meta="meta" :order="order" :powerUNIT="powerUNIT" :i="i" />
+      <PumpSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <MotorSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <BellhousingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <CouplingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
     </div>
-    <TankSelector :project="project" :meta="meta" :order="order" />
-    <CoolerSelector :project="project" :meta="meta" :order="order" />
-    <ValveSelector :project="project" :meta="meta" :order="order" />
+    <TankSelector v-bind="{ project, meta, order }" />
+    <CoolerSelector v-bind="{ project, meta, order }" />
+    <ValveSelector v-bind="{ project, meta, order }" />
 
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
     order{{ order }}

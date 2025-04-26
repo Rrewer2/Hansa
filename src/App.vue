@@ -5,18 +5,18 @@ import { getId, } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
 import Title from "./components/Title.vue";
 import Scheme from "./components/Scheme.vue";
-import Oferta from "./components/Oferta.vue";
+import Order from "./components/Order.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 
 import Simile from "./components/Simile.vue";
 const simile = ref({ zlec: '', lista: '' })
 
-const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'E', throttle: '', check: '', directPress: '' };
-const pumpInit = { Q: 8, p: 190, DR2type: 2 };
+const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'G', throttle: '', check: '', directPress: '' };
+const pumpInit = { Q: '', p: '', DR2type: 1 };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
-const meta = ref({ tank: 'RA', cooler: 0, pumpType: '', spool: 'G' });
+const meta = ref({ tank: 'RA', cooler: 0, pumpType: 'gears', spool: 'G' });
 const order = ref({});
 const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], mount: 'B35', n: 1500 });
 getNewPowerUnit();
@@ -37,12 +37,12 @@ const navPage = ref([false, false, true, false, false]);
 <template>
     <main class="app">
         <article v-if="navPage[0]">
-            <Title :project="project" :meta="meta" :order="order" />
+            <Title v-bind="{ project, meta, order }" />
 
             <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
                 <div :key="id">
-                    <PumpUnitTitle :project="project" :k="k" :btnDisabled="project.length < 2" @delUnit="delUnit"
-                        :order="order" />
+                    <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2"
+                        @delUnit="delUnit" />
                     <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
                         <PumpUnit :key="unit[i].id" :pumpData="unit[i]" :project="project" :k="k" :i="i"
                             @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
@@ -64,15 +64,14 @@ const navPage = ref([false, false, true, false, false]);
                     + Zespół pompujacy
                 </button>
             </div>
-            <Scheme class="schemeMin" :project="project" :meta="meta" :order="order" />
+            <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
         </article>
-        <Scheme class="scheme" v-if="navPage[1]" :project="project" :meta="meta" :order="order" />
+        <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
-        <Selector v-if="navPage[2]" :project="project" :order="order" :meta="meta"
-            @pumpSelected="(title) => console.log(title)" />
+        <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" @pumpSelected="(title) => console.log(title)" />
 
-        <Oferta v-if="navPage[3]" :order="order" />
-        <Simile v-if="navPage[4]" :simile="simile" />
+        <Order v-if="navPage[3]" v-bind="{ order }" />
+        <Simile v-if="navPage[4]" v-bind="{ simile }" />
     </main>
     <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
 </template>
@@ -152,23 +151,28 @@ button:disabled:hover {
     background-color: #a58282;
 }
 
-h2,
-h3 {
-    /* padding-top: 20px; */
+input[type="radio"] {
+    margin-right: 10px;
 }
+
+/* h2,
+h3 {
+    padding-top: 20px;
+} */
 
 table {
     margin: 0 20 0 20;
     padding-top: 20px;
 }
 
-span {
-    /* margin-left: 20px; */
-}
+/* span {
+    margin-left: 20px;
+} */
 
 td {
     border: 0.5px solid grey;
-    width: 15%;
+    /* width: 15%; */
+    padding: 0 10px;
 }
 
 .btn-add {
@@ -179,7 +183,7 @@ td {
     display: flex;
     flex-direction: row;
     /* justify-content: space-evenly; */
-    align-items: end;
+    align-items: center;
 }
 
 .flex-col {
@@ -193,6 +197,10 @@ td {
 
 .flex-center {
     justify-content: center;
+}
+
+.flex-between {
+    justify-content: space-between;
 }
 
 .border {

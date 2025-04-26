@@ -43,9 +43,9 @@ const normalize = () => {
           <td v-for="item in rest">{{ item?.meta ? item.meta : typeof item === 'object' ? '' : item }}</td>
         </tr>
       </tbody>
-      <div>normalize {{ normalize() }}</div>
-      order {{ order }}
     </table>
+    <div>normalize {{ normalize() }}</div>
+    <div>order {{ order }}</div>
   </article>
 </template>
 

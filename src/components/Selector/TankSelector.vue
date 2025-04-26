@@ -4,6 +4,7 @@ import { agregatCounting, getStandartTank, getTextWithSpace, round } from "../..
 import { text } from '../../services/text';
 import InputItem from '../InputItem.vue';
 import ResultItem from '../ResultItem.vue';
+import CopyText from './CopyText.vue';
 
 const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
 </script>
@@ -13,7 +14,7 @@ const { project, meta, order, open } = defineProps(["project", "meta", "order", 
     <h2 :class="open && 'bgc-g'">Zbiornik<span> {{ order.tank?.title }}</span></h2>
 
     <div class="flex-row flex-center">
-      <InputItem :title="text('type').split(', ')[0]" class="ml-10">
+      <InputItem data="type" class="ml-10">
         <select v-model="meta.tank" :disabled="order.tank?.title" class="w-100">
           <option v-for="(_, type) in tankData" :value="type">
             {{ type }}
@@ -37,6 +38,7 @@ const { project, meta, order, open } = defineProps(["project", "meta", "order", 
             <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
+            <CopyText :text="title" />
           </td>
           <td v-for="item in Object.values(elem)">{{ item }}</td>
         </tr>

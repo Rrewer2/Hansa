@@ -4,6 +4,7 @@ import { getTextWithSpace, reducedPower, round } from '../../services/functions'
 import { text } from '../../services/text';
 import InputItem from '../InputItem.vue';
 import ResultItem from '../ResultItem.vue';
+import CopyText from './CopyText.vue';
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
@@ -41,6 +42,7 @@ const filteredCoupling = () => {
           <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
+          <CopyText :text="title" />
         </td>
         <td v-for="item in Object.values(rest)">{{ item }}</td>
       </tbody>

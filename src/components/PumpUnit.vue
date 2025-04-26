@@ -1,7 +1,6 @@
 <script setup>
 import Hydrocylinder from "./Hydrocylinder.vue";
 import { buckling, pumpCounting, getVFU, round } from "../services/functions";
-import { text } from "../services/text";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 
@@ -21,7 +20,7 @@ const { id, HKSH, same, ...rest } = pumpData;
             <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
             <div v-for="(_, ind) in rest" class="ml-10">
-                <InputItem :title="text(ind).split(', ')[0]" :unit="text(ind).split(', ')[1]">
+                <InputItem :data="ind">
                     <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
                         :disabled="order[`pump${i}-${k}`]?.title" />
                     <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" />

@@ -1,7 +1,6 @@
 <script setup>
 import { filtrationD, HKSHTitle, hkshCounting } from "../services/functions";
 import { HKSHMountD, HKSHMountd, spoolTypes, standartDiameters } from "../services/data";
-import { text } from "../services/text";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
@@ -29,7 +28,7 @@ const { id, mountA, mountB, spool, throttle, check, directPress, form, ...rest }
                 {{ HKSHTitle(HKSH) }}
             </h2>
             <div v-for="(_, i) in { mountA, mountB, form, spool, throttle, check, directPress }" class="flex-col ml-5">
-                <InputItem :title="text(i)">
+                <InputItem :data="i">
                     <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" class="w-75"
                         :disabled="pumpData.same">
                         <option v-for="elem, j in getValue[i]" :value="j" class="tal">
@@ -47,7 +46,7 @@ const { id, mountA, mountB, spool, throttle, check, directPress, form, ...rest }
         </div>
         <div class="flex-row">
             <div v-for="(_, i) in rest" class="flex-col ml-5 my-2">
-                <InputItem :title="text(i)">
+                <InputItem :data="i">
 
                     <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" class="input w-75"
                         :disabled="pumpData.same" />

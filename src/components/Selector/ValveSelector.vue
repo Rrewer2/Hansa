@@ -3,6 +3,7 @@ import { spoolData, spoolTypes } from '../../services/data';
 import { getSmthFromProject, getTextWithSpace, uniqOrder } from '../../services/functions';
 import { text } from '../../services/text';
 import Valve from '../Scheme/Valve.vue';
+import CopyText from './CopyText.vue';
 
 
 const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
@@ -39,7 +40,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     <div class="grid ml-10">
       <svg v-for="spool in set" @click="() => meta.spool = spool" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 90" class="valve">
-        <Valve :x="0" :y="10" :data="{ spool: spool }" :sl="200" />
+        <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
       </svg>
     </div>
     <table>
@@ -48,55 +49,24 @@ spoolData.forEach(({ spool }) => set.add(spool));
       <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">{{ text(item) }}</td>
       <tbody>
         <tr v-for="{ title, ...rest } in filtered()">
-          <td class="tal">
+          <td class='tal hover'>
             <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
               :checked="title === order.valve?.title" class="mx" /> -->
+
             <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
               rel="noopener noreferrer">
-              {{ title }}
+              {{ getTextWithSpace(title) }}
             </a>
 
-            <span v-else>{{ title }}</span>
+            <span v-else>{{ getTextWithSpace(title) }}
+            </span>
+            <CopyText :text="title" />
+
           </td>
           <td v-for="el in Object.values(rest)">{{ el }}</td>
         </tr>
       </tbody>
     </table>
-
-    <!-- 
-    <div class="inline w-75">
-      <h3 class="border border-bottom-no bgc-g fs-sm px-5">Typ zaworu</h3>
-      <select v-model="meta.spool">
-        <option v-for="title in spoolTypes" :value="title">
-          {{ title }}
-        </option>
-      </select>
-    </div>
-    <div class="inline valve ml-10">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" class="">
-        <Valve :x="0" :y="10" :data="{ spool: meta.spool }" :sl="200" />
-      </svg>
-    </div>
-    <table>
-      <thead>
-      </thead>
-      <td v-if="filtered().length" v-for="item in Object.keys(filtered()[0])">{{ item }}</td>
-      <tbody>
-        <tr v-for="{ title, ...rest } in filtered()">
-          <td class="tal">
-            <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.spool"
-              :checked="title === order.spool?.title" class="mx" />
-            <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
-              rel="noopener noreferrer">
-              {{ title }}
-            </a>
-
-            <span v-else>{{ title }}</span>
-          </td>
-          <td v-for="el in Object.values(rest)">{{ el }}</td>
-        </tr>
-      </tbody>
-    </table> -->
   </article>
 </template>
 
@@ -115,5 +85,10 @@ spoolData.forEach(({ spool }) => set.add(spool));
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.hover:hover {
+  background-color: #fff;
+  ;
 }
 </style>
