@@ -24,7 +24,7 @@ const { id, HKSH, same, ...rest } = pumpData;
                     <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
                         :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
                     <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
-
+                    <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
                     <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same"
                         :id="ind">
                         <option v-for="item in [0, 1, 2, 3]" :value="item">{{ item }}</option>

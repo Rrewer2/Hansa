@@ -1,50 +1,58 @@
 <script setup>
+import DBD from './DBD.vue';
 import DR2 from './DR2.vue';
 import HKHMP from './HKHMP.vue';
 import HKHQ from './HKHQ.vue';
 import HKHR from './HKHR.vue';
 import HKSH from './HKSH.vue';
+import Pipes from './Pipes.vue';
 import Valve from './Valve.vue';
 
-const { x, y, sl, unit, sl1, sh, R, length, xT } = defineProps(['x', 'y', 'sl', 'unit', 'sl1', 'sh', 'R', 'length', 'xT']);
-const s = () => x + 3 * R - (R / (6 - length));
-
-const yValve = (el) => {
-    if (el.throttle && el.check && el.directPress) return 3 * sh;
-    if ((el.throttle && el.check) || (el.throttle && el.directPress) || (el.check && el.directPress)) return 2 * sh;
-    if (el.throttle || el.check || el.directPress) return sh;
+const { x, y, unit, R, xT, xM, yM, c } = defineProps(['x', 'y', 'unit', 'R', 'xT', 'xM', 'yM', 'c']);
+const sectionLength = 320;
+const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
+const getSL1 = (unit) => getSL(unit) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type);
+const getSh = (unit) => getSL(unit) * 0.35;
+const xV = (unit, i) => x(c) + getSL1(unit) + i * (getSL(unit) * 1.1);
+const yV = y + 300 + getSh(unit) + getSh(unit) / 10;
+const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
+const yValve = (data) => {
+    if (data.throttle && data.check && data.directPress) return 3 * getSh(unit);
+    if ((data.throttle && data.check) || (data.throttle && data.directPress) || (data.check && data.directPress)) return 2 * getSh(unit);
+    if (data.throttle || data.check || data.directPress) return getSh(unit);
     return 0;
 };
-const yHKHMP = (el) => {
-    if (el.throttle && el.check) return 2 * sh;
-    if (el.throttle && el.check) return 2 * sh;
-    if (el.throttle || el.check) return sh;
+const yHKHMP = (data) => {
+    if (data.throttle && data.check) return 2 * getSh(unit);
+    if (data.throttle || data.check) return getSh(unit);
     return 0;
 };
+const yHKHQ = (data) => data.check ? getSh(unit) : 0;
 </script>
 
 <template>
-    <HKSH v-for="el, i in unit.HKSH" :x="x + sl1 + i * (sl * 1.1)" :y="y - 5 + unit.HKSH.length * 10" :sl="sl"
-        :data="el" />
-    <DR2 :x="x" :y="y + 300 + sl / 10" :type="unit.DR2type" :N="unit.HKSH.length" :sl="sl" :sl1="sl1" :sh="sh"
-        :text="unit.p" />
-    <Valve v-for="el, i in unit.HKSH" :x="x + sl1 + i * (sl * 1.1)" :y="y + 300 + sh + sl / 6 + yValve(el)" :data="el"
-        :sl="sl" />
-    <path
-        :d="`M${x + sl / 10} ${y + 300 + sl / 10} h${-sh / 5} v${sh * 5} h${sh / 5} h${150 - sl / 10 + s() - 200} v${1100 - y - 300 - sh * 3}`"
+    <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
+    <HKSH v-if="!unit.same" v-for="data, i in unit.HKSH" :x="xV(unit, i)" :y="y - 5 + unit.HKSH.length * 10"
+        v-bind="{ sl: getSL(unit), data }" />
+    <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length"
+        v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
+    <HKHR v-if="!unit.same" v-for="data, i in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+        :x="xV(unit, i)" :y="yV" :r="getSL(unit) / 30" />
+    <HKHQ v-if="!unit.same" v-for="data, i in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+        :x="xV(unit, i)" :y="yV + yHKHQ(data)" :r="getSL(unit) / 30" />
+    <HKHMP v-if="!unit.same" v-for="data, i in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+        :x="xV(unit, i)" :y="yV + yHKHMP(data)" :r="getSL(unit) / 30" />
+    <Valve v-if="!unit.same" v-for="data, i in unit.HKSH" v-bind="{ sl: getSL(unit), data }" :x="xV(unit, i)"
+        :y="yV + yValve(data)" />
+
+    <DBD v-if="unit.DBD" :x="x(c) - getSh(unit)" :xSame="x(c - 1) - getSh(unit) / 2" :y="y + 300 + R * 8"
+        :a="getSL(unit) / 6" :unit="unit" :line="() => getSh(unit) / 2" />
+    <path v-if="unit.mount.startsWith('B3') && unit.same"
+        :d="`M${x(c - 1)} ${y + 300} h${-getSh(unit) * 1.5} v${R * 6} h${getSh(unit) * 2} v${R * 3.5} h${xM - x(c - 1) - getSh(unit) / 2 + gap} v${yM - (R * 9.5) - (300)}`"
         stroke="red" stroke-width="3" fill="none" />
-    <path v-if="xT > (x + sl1 + (sl + sl / 10) * unit.HKSH.length + sh / 5 - 200)" :d="`M${x + sl1 + (sl + sl / 10) * unit.HKSH.length} ${y + sl / 10 + 300 + sh} 
- h${xT - (x + sl1 + (sl + sl / 10) * unit.HKSH.length - 200)} v${1100 - y - 300}`" stroke="blue" stroke-width="2"
-        fill="none" />
-    <path v-else :d="`M${x + sl1 + (sl + sl / 10) * unit.HKSH.length} ${y + sl / 10 + 300 + sh} h${sh / 5} v${sh * 3} 
- h${xT - (x + sl1 + (sl + sl / 10) * unit.HKSH.length + sh / 5 - 200)} v${1100 - y - 300 - sh * 3}`" stroke="blue"
-        stroke-width="2" fill="none" />
-    <HKHQ v-for="el, i in unit.HKSH" :sl="sl" :sh="sh" :x="x + sl1 + i * (sl * 1.1)"
-        :y="y + 300 + sh + (el.check ? sh : 0) + sl / 6" :r="sl / 30" :data="el" />
-    <HKHR v-for="el, i in unit.HKSH" :sl="sl" :sh="sh" :x="x + sl1 + i * (sl * 1.1)" :y="y + 300 + sh + sl / 6"
-        :r="sl / 30" :data="el" />
-    <HKHMP v-for="el, i in unit.HKSH" :sl="sl" :sh="sh" :x="x + sl1 + i * (sl * 1.1)"
-        :y="y + 300 + sh + sl / 6 + yHKHMP(el)" :r="sl / 30" :data="el" />
+    <path v-if="!unit.mount.startsWith('B3') && unit.same"
+        :d="`M${x(c - 1)} ${y + 300} h${-getSh(unit) * 1.5} v${getSh(unit) * 5.5 - c * 15} h${xM - x(c - 1) + getSh(unit) * 1.5 + gap} v${yM - (getSh(unit) * 5.5 - c * 15) - (300) + gap}  h${- (gap)}`"
+        stroke="red" stroke-width="15" fill="none" />
 </template>
 
 <style scoped></style>

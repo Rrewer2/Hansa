@@ -21,7 +21,7 @@ const width = 2;
     <path v-if="type === 2" :d="`M${x + sl1 * 0.6} ${y} v${sh}`" stroke="black" stroke-width="2" />
 
     <Start v-if="type === 2" :x="x + sl1 * 0.6" :y="y + sh / 2 - sl / 8" :a="sl / 5" />
-    <Hline v-for="p in [0, sh]" :x="x + sl / 10" :y="p + y" :L="sl1" :width="width" />
+    <Hline v-for="p in [0, sh]" :x="x" :y="p + y" :L="sl1" :width="width" />
     <Manometr :x="x + sl / 4" :y="y" :a="sl / 8" :text=text />
 </template>
 

@@ -66,7 +66,7 @@ const { id, mountA, mountB, spool, throttle, check, directPress, form, ...rest }
                 </InputItem>
             </div>
 
-            <ResultItem :data="hkshCounting(HKSH, pumpData.Q, pumpData.p)" />
+            <ResultItem :data="hkshCounting(HKSH, pumpData)" />
         </div>
     </section>
 </template>

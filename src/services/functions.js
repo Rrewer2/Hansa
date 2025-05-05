@@ -23,7 +23,7 @@ export const getStandartTank = ({tank}, T) => tankData[tank].find(({Size}) => Si
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure  = (Q, P) => P * 500 / Q;//Тиск
 export const setPressure = (unit, P) =>  unit[0].p = round(pressure(unit[0].Q, P), 1);
-export const reducedPower = (unit) => unit.map(({ Q, p }) => Power(Q, p)).reduce((a, b) => a + b); // Сукупна потужність
+export const reducedPower = (unit) => unit.map(({ Q, p, DBD }) => Power(Q, DBD ? DBD : p)).reduce((a, b) => a + b); // Сукупна потужність
 export const getStandartPower = (P) => motorData.find(N => N >= 0.97*P) || '___'; //Потужність каталогова
 
 export const Qback = item => pumpCounting(item).Qback;
@@ -51,7 +51,7 @@ export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
   return 'HKSH' + mountA + mountB + '.' + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4)
 };
 
-export const hkshCounting = ({ D, d, L, z }, Q, p) => {
+export const hkshCounting = ({ D, d, L, z }, {Q, p, DBD}) => {
   const SD = S(D);
   const Sd = S(D, d);
   const VD = V(SD, L);
@@ -59,11 +59,11 @@ export const hkshCounting = ({ D, d, L, z }, Q, p) => {
   const tOut = t(VD, z, Q);
   const tIn = t(Vd, z, Q);
   const tC = tIn + tOut;
-  const FOut = F(p, SD);
-  const FIn = F(p, Sd);
+  const FOut = F(DBD ? DBD : p, SD);
+  const FIn = F(DBD ? DBD : p, Sd);
   const vOut = v(L, tOut);
   const vIn = v(L, tIn);
-  const wall = wallThick(D, p);
+  const wall = wallThick(D, DBD ? DBD : p);
   const k = S(D) / S(D, d);
   return { FOut, FIn, tOut, tIn, tC, VD, Vd, k, vOut, vIn, wall };
 };
@@ -108,16 +108,16 @@ export const powerCounting = (unit) => {
   const I = 2.4 * P ** 0.9;
   return { P, I }
 }
-export const pumpCounting = ({ Q: Q1, p: p1, HKSH }) => {
+export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
   const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
-  const pipe_P = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > p1);
+  const pipe_P = Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > DBD ? DBD :p1);
   const pipeP = pipe_P ? pipe_P[0] : '∄';
   const pipe_T = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k);
   const pipeT = pipe_T ? pipe_T[0] : '∄';
   const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
   const pipeS = pipe_S ? pipe_S[0] : '∄';
   const Qback = Q1 * k;
-  const P = Power(Q1,p1);
+  const P = Power(Q1,DBD ? DBD :p1);
   return { pipeP, pipeT, pipeS, Qback, P };
 };
 

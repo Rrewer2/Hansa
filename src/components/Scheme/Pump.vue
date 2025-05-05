@@ -1,18 +1,30 @@
 <script setup>
 import { round } from '../../services/functions';
+import Point from './Point.vue';
 
-const { x, y, R, data, ver } = defineProps(['x', 'y', 'R', 'data', 'ver']);
+const { x, y, R, mount, pumps } = defineProps(['x', 'y', 'R', 'mount', 'pumps']);
+
+const r = () => R * 0.8;
+const xP = (i, pumps) => x + 2 * R + r() * (1 + 2 * i);
 </script>
-
 <template>
-    <path v-if="ver" :d="`M${x} ${y} h${-2 * R} h${3 * R} h${0}`" stroke="black" stroke-width="2" />
-    <circle :cx="x" :cy="y" :r="R" stroke="black" stroke-width="2px" fill="white" />
-    <path v-if="ver" :d="`M${x + 0.9 * R} ${y} l${-R / 3} ${-R / 5} v${R / 2.5}z`" stroke="black" stroke-width="2" />
-    <path v-else :d="`M${x} ${y - 0.9 * R} l${R / 5} ${R / 3} h${-R / 2.5}z`" stroke="black" stroke-width="2" />
-    <text v-if="round(data.Q)" :x="ver ? x + 2 * R : x - 3 * R" :y="ver ? y - 0.5 * R : y - 2 * R" font-family="Arial"
-        :font-size="R / 1.5" fill="black" text-anchor="middle">
-        {{ round(data.Q) }} L/min
-    </text>
+    <template v-for="pump, i in pumps">
+        <path :transform="`rotate(${mount.startsWith('B3') ? 0 : 90} ${x} ${y})`"
+            :d="`M${xP(i, pumps)} ${y} v${r() * 2.5}z`" stroke="black" stroke-width="2" />
+        <circle :transform="`rotate(${mount.startsWith('B3') ? 0 : 90} ${x} ${y})`" :cx="xP(i, pumps)" :cy="y" :r="r()"
+            stroke="black" stroke-width="2px" fill="white" />
+        <path :transform="`rotate(${mount.startsWith('B3') ? 0 : 90} ${x} ${y})`"
+            :d="`M${xP(i, pumps)} ${y - 0.9 * r()} l${r() / 5} ${r() / 3} h${-r() / 2.5}z`" stroke="black"
+            stroke-width="2" />
+        <text v-if="mount.startsWith('B3')" :transform="`rotate(-90 ${xP(i, pumps)} ${y})`" :x="xP(i, pumps) + 2 * R"
+            :y="y - R / 5" font-family="Arial" :font-size="R / 2" text-anchor="middle">
+            {{ round(pump.Q) }} L/min
+        </text>
+        <text v-else :x="x + R * 2" :y="y + 3.3 * R + i * 2 * R * 0.8" font-family="Arial" :font-size="R / 2"
+            text-anchor="middle">
+            {{ round(pump.Q) }} L/min
+        </text>
+    </template>
 </template>
 
 <style scoped></style>

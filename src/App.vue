@@ -13,7 +13,7 @@ import Simile from "./components/Simile.vue";
 const simile = ref({ zlec: '', lista: '' })
 
 const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'G', throttle: '', check: '', directPress: '' };
-const pumpInit = { Q: '', p: '', DR2type: 1 };
+const pumpInit = { Q: 8, p: '', DR2type: 1, DBD: '' };
 const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
 const project = ref([]);
 const meta = ref({ tank: 'RA', cooler: 0, pumpType: 'gears', spool: 'G' });
@@ -74,6 +74,9 @@ const navPage = ref([false, false, true, false, false]);
         <Simile v-if="navPage[4]" v-bind="{ simile }" />
     </main>
     <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
+    <!-- <div>project {{ project }}</div>
+    <div>order {{ order }}</div>
+    <div>meta {{ meta }}</div> -->
 </template>
 
 <style>
@@ -276,7 +279,12 @@ td {
 .schemeMin {
     height: 60vh;
     width: 80vw;
-    /* background-color: rgba(0, 0, 0, 0); */
+    /* position: fixed;
+    background-color: rgb(255, 255, 255, 0.7);
+    top: 40px;
+    right: 0;
+    height: 50vh;
+    width: 30vw; */
 }
 
 .h-100 {
