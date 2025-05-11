@@ -10,7 +10,7 @@ const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "
 
 const filteredBellhousing = () => {
   const filtered = bellhousingData.filter(({ holePattern, size }) =>
-    holePattern === order[`pump${i}-${0}`]?.pumpData.holePattern
+    holePattern === order[`pump${i}`]?.pumpData.holePattern
     && size === order[`motor${i}`]?.motorData.size
   );
   if (filtered.length === 1) {

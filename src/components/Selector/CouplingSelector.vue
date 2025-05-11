@@ -10,8 +10,8 @@ const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "
 
 const filteredCoupling = () => {
   const filtered = couplingData.filter(({ group, size, shaft }) =>
-    (shaft === order[`pump${i}-${0}`]?.pumpData.shaft && group === order[`pump${i}-${0}`]?.pumpData.group
-      || (order[`pump${i}-${0}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
+    (shaft === order[`pump${i}`]?.pumpData.shaft && group === order[`pump${i}`]?.pumpData.group
+      || (order[`pump${i}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
     && size === order[`motor${i}`]?.motorData.size
   );
   if (filtered.length === 1) {
