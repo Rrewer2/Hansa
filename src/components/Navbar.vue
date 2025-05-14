@@ -1,11 +1,16 @@
 <script setup>
-const navData = ['Obliczenia', 'Schemat', 'Dobór części', 'Oferta', 'Simile'];
+const navData = ["Obliczenia", "Schemat", "Dobór części", "Oferta", "Simile"];
 const { navPage } = defineProps(["navPage"]);
 </script>
 
 <template>
   <nav class="flex-row flex-left">
-    <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
+    <div
+      v-for="(nav, i) in navData"
+      @click="() => $emit('nav', i)"
+      class="slice"
+      :class="navPage[i] && 'active'"
+    >
       {{ nav }}
     </div>
   </nav>
@@ -37,12 +42,12 @@ label {
 
 .active {
   background-color: #29938e;
-  color: white
+  color: white;
 }
 
 .active:hover {
   background-color: #d5e094;
-  color: black
+  color: black;
 }
 
 label {

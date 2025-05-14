@@ -1,18 +1,17 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const { text } = defineProps(["text"]);
-const btn = ref('Copy');
+const btn = ref("Copy");
 const copyText = async () => {
   try {
     await navigator.clipboard.writeText(text);
-    btn.value = 'Copied';
-    setTimeout(() => btn.value = 'Copy', 3000);
+    btn.value = "Copied";
+    setTimeout(() => (btn.value = "Copy"), 3000);
   } catch (err) {
-    console.error('Copy error: ', err);
+    console.error("Copy error: ", err);
   }
 };
-
 </script>
 <template>
   <button @click="copyText" :class="btn === 'Copy' ? 'copy' : 'copied'">

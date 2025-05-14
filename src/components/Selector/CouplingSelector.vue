@@ -1,22 +1,35 @@
 <script setup>
-import { bellhousingData, couplingData } from '../../services/data';
-import { getTextWithSpace, reducedPower, round } from '../../services/functions';
-import { text } from '../../services/text';
-import InputItem from '../InputItem.vue';
-import ResultItem from '../ResultItem.vue';
-import CopyText from './CopyText.vue';
+import { bellhousingData, couplingData } from "../../services/data";
+import {
+  getTextWithSpace,
+  reducedPower,
+  round,
+} from "../../services/functions";
+import { text } from "../../services/text";
+import InputItem from "../InputItem.vue";
+import ResultItem from "../ResultItem.vue";
+import CopyText from "./CopyText.vue";
 
-const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
+const { project, meta, order, powerUNIT, i } = defineProps([
+  "project",
+  "meta",
+  "order",
+  "powerUNIT",
+  "i",
+]);
 
 const filteredCoupling = () => {
-  const filtered = couplingData.filter(({ group, size, shaft }) =>
-    (shaft === order[`pump${i}`]?.pumpData.shaft && group === order[`pump${i}`]?.pumpData.group
-      || (order[`pump${i}`]?.title.startsWith('HKPBA') && title.includes('PBA')))
-    && size === order[`motor${i}`]?.motorData.size
+  const filtered = couplingData.filter(
+    ({ group, size, shaft }) =>
+      ((shaft === order[`pump${i}`]?.pumpData.shaft &&
+        group === order[`pump${i}`]?.pumpData.group) ||
+        (order[`pump${i}`]?.title.startsWith("HKPBA") &&
+          title.includes("PBA"))) &&
+      size === order[`motor${i}`]?.motorData.size,
   );
   if (filtered.length === 1) {
     const { title, ...rest } = filtered[0];
-    order.coupling = { title, couplingData: { ...rest } }
+    order.coupling = { title, couplingData: { ...rest } };
   }
   return filtered;
 };
@@ -24,22 +37,37 @@ const filteredCoupling = () => {
 
 <template>
   <article>
-    <h2>Sprzęgło {{ i ? i + 1 : '' }}<span> {{ filteredCoupling().at(-1)?.title }}</span></h2>
+    <h2>
+      Sprzęgło {{ i ? i + 1 : ""
+      }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
+    </h2>
 
-    <br>
+    <br />
 
     <table v-if="filteredCoupling().length">
       <thead>
         <td v-for="a in Object.keys(couplingData[0])">
-          <b><i>{{ a }}</i></b>
+          <b
+            ><i>{{ a }}</i></b
+          >
         </td>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
         <td class="tal">
-          <input type="radio" :id="title" v-model="order.coupling" :value="{ title, couplingData: { ...rest } }"
-            :checked="title === order.coupling?.title" class="mx" />
+          <input
+            type="radio"
+            :id="title"
+            v-model="order.coupling"
+            :value="{ title, couplingData: { ...rest } }"
+            :checked="title === order.coupling?.title"
+            class="mx"
+          />
 
-          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
+          <a
+            :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {{ getTextWithSpace(title) }}
           </a>
           <CopyText :text="title" />

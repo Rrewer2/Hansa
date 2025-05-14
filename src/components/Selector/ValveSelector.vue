@@ -1,26 +1,35 @@
 <script setup>
-import { spoolData, spoolTypes } from '../../services/data';
-import { getSmthFromProject, getTextWithSpace, uniqOrder } from '../../services/functions';
-import { text } from '../../services/text';
-import Valve from '../Scheme/Valve.vue';
-import CopyText from './CopyText.vue';
+import { spoolData, spoolTypes } from "../../services/data";
+import {
+  getSmthFromProject,
+  getTextWithSpace,
+  uniqOrder,
+} from "../../services/functions";
+import { text } from "../../services/text";
+import Valve from "../Scheme/Valve.vue";
+import CopyText from "./CopyText.vue";
 
-
-const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
+const { project, meta, order, open } = defineProps([
+  "project",
+  "meta",
+  "order",
+  "open",
+]);
 (() => {
-  const list = getSmthFromProject(project).map(({ spool }) => spoolData.find(el => el.spool === spool));
+  const list = getSmthFromProject(project).map(({ spool }) =>
+    spoolData.find((el) => el.spool === spool),
+  );
   const obj = {};
   list.forEach((elem) => {
     if (!elem) return;
     const { title, ...rest } = elem;
     if (obj[title]) {
       obj[title].count++;
-    }
-    else {
+    } else {
       obj[title] = { ...rest, count: 1 };
     }
   });
-  order.valve = Object.keys(obj).map(key => {
+  order.valve = Object.keys(obj).map((key) => {
     const { count, ...data } = obj[key];
     return { title: key, valveData: data, count };
   });
@@ -36,32 +45,42 @@ spoolData.forEach(({ spool }) => set.add(spool));
 
 <template>
   <article>
-    <h2 :class="open && 'bgc-g'">Rozdzielacz <span> {{ order.valve?.title }}</span></h2>
+    <h2 :class="open && 'bgc-g'">
+      Rozdzielacz <span> {{ order.valve?.title }}</span>
+    </h2>
     <div class="grid ml-10">
-      <svg v-for="spool in set" @click="() => meta.spool = spool" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 90" class="valve">
+      <svg
+        v-for="spool in set"
+        @click="() => (meta.spool = spool)"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 90"
+        class="valve"
+      >
         <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
       </svg>
     </div>
     <table>
-      <thead>
-      </thead>
-      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">{{ text(item) }}</td>
+      <thead></thead>
+      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">
+        {{ text(item) }}
+      </td>
       <tbody>
         <tr v-for="{ title, ...rest } in filtered()">
-          <td class='tal hover'>
+          <td class="tal hover">
             <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
               :checked="title === order.valve?.title" class="mx" /> -->
 
-            <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              v-if="title.includes('HK')"
+              :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {{ getTextWithSpace(title) }}
             </a>
 
-            <span v-else>{{ getTextWithSpace(title) }}
-            </span>
+            <span v-else>{{ getTextWithSpace(title) }} </span>
             <CopyText :text="title" />
-
           </td>
           <td v-for="el in Object.values(rest)">{{ el }}</td>
         </tr>
@@ -89,6 +108,5 @@ spoolData.forEach(({ spool }) => set.add(spool));
 
 .hover:hover {
   background-color: #fff;
-  ;
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
-import { getId, } from "./services/functions";
+import { getId } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
 import Title from "./components/Title.vue";
 import Scheme from "./components/Scheme.vue";
@@ -10,152 +10,206 @@ import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 
 import Simile from "./components/Simile.vue";
-const simile = ref({ zlec: '', lista: '' })
+const simile = ref({ zlec: "", lista: "" });
 
-const cylInit = { D: 100, d: 60, L: 500, mountA: '2', mountB: '2', z: 1, form: 'poziomo', spool: 'G', throttle: '', check: '', directPress: '' };
-const pumpInit = { Q: 8, p: '', DR2type: 1, DBD: '' };
-const getNewPump = () => ({ ...pumpInit, id: getId('p'), HKSH: [{ ...cylInit, id: getId('c') }] });
+const cylInit = {
+  D: 100,
+  d: 60,
+  L: 500,
+  mountA: "2",
+  mountB: "2",
+  z: 1,
+  form: "poziomo",
+  spool: "G",
+  throttle: "",
+  check: "",
+  directPress: "",
+};
+const pumpInit = { Q: 8, p: "", DR2type: 1, DBD: "" };
+const getNewPump = () => ({
+  ...pumpInit,
+  id: getId("p"),
+  HKSH: [{ ...cylInit, id: getId("c") }],
+});
 const project = ref([]);
-const meta = ref({ tank: 'RA', cooler: 0, pumpType: 'gears', spool: 'G' });
+const meta = ref({ tank: "RA", cooler: 0, pumpType: "gears", spool: "G" });
 const order = ref({});
-const getNewPowerUnit = () => project.value.push({ id: getId('u'), unit: [getNewPump()], mount: 'B35', n: 1500 });
+const getNewPowerUnit = () =>
+  project.value.push({
+    id: getId("u"),
+    unit: [getNewPump()],
+    mount: "B35",
+    n: 1500,
+  });
 getNewPowerUnit();
-const addCyl = (k, i) => project.value[k].unit[i].HKSH.push(project.value[k].unit[i].HKSH.length
-    ? {
-        ...project.value[k].unit[i].HKSH.at(-1),
-        id: getId('c')
-    }
-    : { ...cylInit, id: getId('c') });
+const addCyl = (k, i) =>
+  project.value[k].unit[i].HKSH.push(
+    project.value[k].unit[i].HKSH.length
+      ? {
+          ...project.value[k].unit[i].HKSH.at(-1),
+          id: getId("c"),
+        }
+      : { ...cylInit, id: getId("c") },
+  );
 
 const addPump = (k) => project.value[k].unit.push(getNewPump());
-const addPumpSame = (k) => project.value[k].unit.push({ ...getNewPump(), HKSH: project.value[k].unit.at(-1).HKSH, same: true });
-const delPump = (k, x) => project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x);
-const delUnit = (k) => project.value = project.value.filter((_, i) => i !== k);
+const addPumpSame = (k) =>
+  project.value[k].unit.push({
+    ...getNewPump(),
+    HKSH: project.value[k].unit.at(-1).HKSH,
+    same: true,
+  });
+const delPump = (k, x) =>
+  (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
+const delUnit = (k) =>
+  (project.value = project.value.filter((_, i) => i !== k));
 const navPage = ref([false, false, true, false, false]);
 </script>
 
 <template>
-    <main class="app">
-        <article v-if="navPage[0]">
-            <Title v-bind="{ project, meta, order }" />
+  <main class="app">
+    <article v-if="navPage[0]">
+      <Title v-bind="{ project, meta, order }" />
 
-            <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
-                <div :key="id">
-                    <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2"
-                        @delUnit="delUnit" />
-                    <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
-                        <PumpUnit :key="unit[i].id" :pumpData="unit[i]" :project="project" :k="k" :i="i"
-                            @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2"
-                            @delPump="() => delPump(k, unit[i].id)" :order="order" />
-                    </div>
-                    <div class="flex-row flex-left pl-25">
-                        <button @click="() => addPump(k)" class="btn-add my-2">
-                            + Pompa osobna
-                        </button>
-                        <button @click="() => addPumpSame(k)" class="btn-add my-2">
-                            + Pompa na tym samym układzie
-                        </button>
-                    </div>
-                </div>
-            </section>
+      <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
+        <div :key="id">
+          <PumpUnitTitle
+            v-bind="{ project, k, order }"
+            :btnDisabled="project.length < 2"
+            @delUnit="delUnit"
+          />
+          <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
+            <PumpUnit
+              :key="unit[i].id"
+              :pumpData="unit[i]"
+              :project="project"
+              :k="k"
+              :i="i"
+              @addCyl="() => addCyl(k, i)"
+              :btnDisabled="unit.length < 2"
+              @delPump="() => delPump(k, unit[i].id)"
+              :order="order"
+            />
+          </div>
+          <div class="flex-row flex-left pl-25">
+            <button @click="() => addPump(k)" class="btn-add my-2">
+              + Pompa osobna
+            </button>
+            <button @click="() => addPumpSame(k)" class="btn-add my-2">
+              + Pompa na tym samym układzie
+            </button>
+          </div>
+        </div>
+      </section>
 
-            <div class="flex-row flex-left my-2">
-                <button @click="getNewPowerUnit" class="btn-add">
-                    + Zespół pompujacy
-                </button>
-            </div>
-            <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
-        </article>
-        <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
+      <div class="flex-row flex-left my-2">
+        <button @click="getNewPowerUnit" class="btn-add">
+          + Zespół pompujacy
+        </button>
+      </div>
+      <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
+    </article>
+    <Scheme
+      class="scheme"
+      v-if="navPage[1]"
+      v-bind="{ project, meta, order }"
+    />
 
-        <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" @pumpSelected="(title) => console.log(title)" />
+    <Selector
+      v-if="navPage[2]"
+      v-bind="{ project, meta, order }"
+      @pumpSelected="(title) => console.log(title)"
+    />
 
-        <Order v-if="navPage[3]" v-bind="{ order }" />
-        <Simile v-if="navPage[4]" v-bind="{ simile }" />
-    </main>
-    <Navbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" />
-    <!-- <div>project {{ project }}</div>
+    <Order v-if="navPage[3]" v-bind="{ order }" />
+    <Simile v-if="navPage[4]" v-bind="{ simile }" />
+  </main>
+  <Navbar
+    @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))"
+    :navPage="navPage"
+  />
+  <!-- <div>project {{ project }}</div>
     <div>order {{ order }}</div>
     <div>meta {{ meta }}</div> -->
 </template>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .app {
-    background-color: rgba(14, 44, 14, 0.25);
-    /* padding-bottom: 5vh; */
-    min-height: 100vh;
-    max-width: 100vw;
-    padding: 5px;
+  background-color: rgba(14, 44, 14, 0.25);
+  /* padding-bottom: 5vh; */
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 5px;
 }
 
 article,
 section {
-    font-size: 20px;
-    padding: 5px;
+  font-size: 20px;
+  padding: 5px;
 }
 
 svg {
-    display: block;
-    /* width: 100%; */
-    /* position: absolute; */
-    /* border: #ffc67a solid 2px; */
+  display: block;
+  /* width: 100%; */
+  /* position: absolute; */
+  /* border: #ffc67a solid 2px; */
 }
 
 input[type="number"],
 select {
-    border: none;
-    border-radius: 4px;
-    min-height: 2.5vh;
-    font-size: 2vh;
-    max-width: 140px;
-    min-width: 70px;
+  border: none;
+  border-radius: 4px;
+  min-height: 2.5vh;
+  font-size: 2vh;
+  max-width: 140px;
+  min-width: 70px;
 }
 
 button {
-    margin: 5px;
-    padding: 5px;
-    min-width: 30px;
-    min-height: 30px;
-    border-radius: 5px;
-    background-color: #d25959;
-    border: 1px solid;
-    color: aliceblue;
-    cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 5px;
+  background-color: #d25959;
+  border: 1px solid;
+  color: aliceblue;
+  cursor: pointer;
 }
 
 button.btn-add {
-    background-color: #356c2b;
-    color: aliceblue;
-    transition: 0.2s;
+  background-color: #356c2b;
+  color: aliceblue;
+  transition: 0.2s;
 }
 
 button:hover {
-    background-color: #ef1c1c;
-    color: aliceblue;
-    transition: 0.2s;
+  background-color: #ef1c1c;
+  color: aliceblue;
+  transition: 0.2s;
 }
 
 button:hover.btn-add {
-    background-color: #44d82a;
-    color: aliceblue;
-    transition: 0.2s;
+  background-color: #44d82a;
+  color: aliceblue;
+  transition: 0.2s;
 }
 
 button:disabled,
 button:disabled:hover {
-    cursor: default;
-    background-color: #a58282;
+  cursor: default;
+  background-color: #a58282;
 }
 
 input[type="radio"] {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* h2,
@@ -164,8 +218,8 @@ h3 {
 } */
 
 table {
-    margin: 0 20 0 20;
-    padding-top: 20px;
+  margin: 0 20 0 20;
+  padding-top: 20px;
 }
 
 /* span {
@@ -173,113 +227,113 @@ table {
 } */
 
 td {
-    border: 0.5px solid grey;
-    /* width: 15%; */
-    padding: 0 10px;
+  border: 0.5px solid grey;
+  /* width: 15%; */
+  padding: 0 10px;
 }
 
 .btn-add {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-evenly; */
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  align-items: center;
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-left {
-    justify-content: left;
+  justify-content: left;
 }
 
 .flex-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .border {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .border-no {
-    border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .border-bottom-no {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .bgc-w {
-    background-color: #fef6c6;
+  background-color: #fef6c6;
 }
 
 .bgc-g {
-    background-color: #c7ecf354;
+  background-color: #c7ecf354;
 }
 
 .pl-25 {
-    padding-left: 25px;
+  padding-left: 25px;
 }
 
 .px-5 {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 .border-l {
-    border: solid 0.5px;
+  border: solid 0.5px;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .error {
-    border: solid 1px red;
+  border: solid 1px red;
 }
 
 .yellow {
-    border: solid 1px yellow;
+  border: solid 1px yellow;
 }
 
 .my-2 {
-    margin: 3px 0;
+  margin: 3px 0;
 }
 
 .ml-5 {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .ml-10 {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .mr-100 {
-    margin-right: 100px;
+  margin-right: 100px;
 }
 
 .invisible {
-    display: none;
+  display: none;
 }
 
 .scheme {
-    height: 95vh;
-    width: 95vw;
-    /* background-color: #969696; */
+  height: 95vh;
+  width: 95vw;
+  /* background-color: #969696; */
 }
 
 .schemeMin {
-    height: 60vh;
-    width: 80vw;
-    /* position: fixed;
+  height: 60vh;
+  width: 80vw;
+  /* position: fixed;
     background-color: rgb(255, 255, 255, 0.7);
     top: 40px;
     right: 0;
@@ -288,28 +342,28 @@ td {
 }
 
 .h-100 {
-    height: 100%;
+  height: 100%;
 }
 
 .inline {
-    display: inline-block;
-    /* padding-top: 20px;
+  display: inline-block;
+  /* padding-top: 20px;
     padding-left: 80px; */
 }
 
 .w-75 {
-    min-width: 75px;
+  min-width: 75px;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .tal {
-    text-align: left;
+  text-align: left;
 }
 
 .mx {
-    padding: 10;
+  padding: 10;
 }
 </style>
