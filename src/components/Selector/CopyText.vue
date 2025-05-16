@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 const { text } = defineProps(["text"]);
 const btn = ref("Copy");
-const copyText = async () => {
+const copyText = async (text) => {
   try {
     await navigator.clipboard.writeText(text);
     btn.value = "Copied";
@@ -14,8 +14,8 @@ const copyText = async () => {
 };
 </script>
 <template>
-  <button @click="copyText" :class="btn === 'Copy' ? 'copy' : 'copied'">
-    <span v-if="btn === 'Copied'">✅</span>{{ btn }}
+  <button @click="() => copyText(text)" :class="btn === 'Copy' ? 'copy' : 'copied'">
+    {{ btn }}<span v-if="btn === 'Copied'">✅</span>
   </button>
 </template>
 

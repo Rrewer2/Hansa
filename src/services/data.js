@@ -36,7 +36,7 @@ const SBT =[{title:'HKSBT006',Size:6},{title:'HKSBT012',Size:12},{title:'HKSBT02
 export const tankData = { RA, BSK, BEK, SBT };
 
 export const motorData = [ '',0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 9.2, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
-export const freqData = [ 750, 1500, 1800, 3000 ];
+export const freqData = [ 750, 1000, 1500, 1800, 3000 ];
 const enginesHK = [	
   {title:'HK63B4B3142-4IE2',size:63,power:0.18,meta:'E-Motor 230/400V 0,18kW 1360U B34 IE2'},
   {title:'HK71A4B3142-4IE2',size:71,power:0.25,meta:'E-Motor 230/400V 0,25kW 1380U B34 IE2'},

@@ -65,7 +65,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
         {{ text(item) }}
       </td>
       <tbody>
-        <tr v-for="{ title, ...rest } in filtered()">
+        <tr v-for="{ title, ...rest } in filtered()" :id="title">
           <td class="tal hover">
             <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
               :checked="title === order.valve?.title" class="mx" /> -->
