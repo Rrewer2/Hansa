@@ -27,7 +27,6 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
     <ValveSelector v-bind="{ project, meta, order }" />
 
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
-    order{{ order }} meta{{ meta }} project {{ project }}
   </main>
 </template>
 

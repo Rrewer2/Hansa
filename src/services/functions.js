@@ -1,5 +1,4 @@
 import {
-  separator,
   bucklingSafety,
   tankData,
   motorData,
@@ -57,9 +56,6 @@ const pipePmax = (Q) => pipe(Q, VPipe.P[0]);
 const pipeTmax = (QBack) => pipe(QBack, VPipe.T[0]);
 const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
-
-export const titleFromArray = (elem) =>
-  Array.isArray(elem) ? elem.join(separator) : elem;
 
 const getPressure = (DBD, p) => {
   if (DBD) {

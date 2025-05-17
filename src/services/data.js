@@ -1,8 +1,4 @@
-export const initialValues = { i: 1, D: 100, d: 60, L: 300, Q: 12, P: 200, aF: 40, bF: 80, DF: 20, η: 70, vBT: 45, vz: 20, z: 4,};
-
 export const g = 9.80665;
-
-export const separator = " | ";
 
 export const standartDiameters = [ 200,195,190,185,180,175,170,165,160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100, 95, 90, 85, 80, 75, 70, 65, 63, 60, 56, 55, 50, 45, 40, 36, 35, 32, 30, 28, 25, 22, 20, 16
  ];
@@ -132,19 +128,19 @@ const gearPumpAPF = [
     HK2APF04F02Z41RSS: { CC: 4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
     HK2APF06F02Z41RSS: { CC: 6, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
     HK2APF08F02Z41RSS: { CC: 8, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
-    HK2APF10F02Z41RSS: { CC: 10, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
-    HK2APF14F02Z41RSS: { CC: 14, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
-    HK2APF16F02Z41RSS: { CC: 16, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
-    HK2APF20F02Z41RSS: { CC: 20, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
-    HK2APF25F02Z41RSS: { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    HK2APF10F06Z41RSS: { CC: 10, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    HK2APF14F06Z41RSS: { CC: 14, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    HK2APF16F06Z41RSS: { CC: 16, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    HK2APF20F06Z41RSS: { CC: 20, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
+    HK2APF25F06Z41RSS: { CC: 25, in: 'LK Ø 40 mm / M 8', out: 'LK Ø 30 mm / M 6',shaft:'1:8', pmax:200, holePattern:'96.2 x 71.5 - Ø 36.5'},
   },
   {
     HK3APF26F09Z05RSS: { CC: 26, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
     HK3APF33F09Z05RSS: { CC: 33, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
     HK3APF39F09Z05RSS: { CC: 39, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
     HK3APF46F09Z05RSS: { CC: 46, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
-    HK3APF55F09Z05RSS: { CC: 55, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
-    HK3APF63F09Z05RSS: { CC: 63, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF55F12Z05RSS: { CC: 55, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:200, holePattern:'128 x 98 - Ø 50.8'},
+    HK3APF63F12Z05RSS: { CC: 63, in: 'LK Ø 62 mm / M 10', out: 'LK Ø 51 mm / M 10',shaft:'1:8', pmax:180, holePattern:'128 x 98 - Ø 50.8'},
   }
 ];
 //  flange: 'Ø36,5 European'
