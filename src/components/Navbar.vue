@@ -4,7 +4,7 @@ const { navPage } = defineProps(["navPage"]);
 </script>
 
 <template>
-  <nav class="flex-row flex-left">
+  <nav class="">
     <div
       v-for="(nav, i) in navData"
       @click="() => $emit('nav', i)"
@@ -20,16 +20,20 @@ const { navPage } = defineProps(["navPage"]);
 nav {
   position: fixed;
   top: 0;
-  left: 70vw;
+  left: 61vw;
 }
 
 .slice {
+  display: inline-block;
   background-color: #a2a1a1;
   padding: 0.4vw 0.8vw;
   margin: 0 0.2vw;
   border-radius: 0 0 1vw 1vw;
   font-size: 18px;
   cursor: pointer;
+  min-width: 7vw;
+  height: 40px;
+  transition: all ease 0.2s;
 }
 
 label {
@@ -38,6 +42,8 @@ label {
 
 .slice:hover {
   background-color: #94e0a1;
+  height: 44px;
+  padding-bottom: 4px;
 }
 
 .active {

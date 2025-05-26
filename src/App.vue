@@ -143,9 +143,7 @@ const navPage = ref([false, false, true, false, false]);
 
 .app {
   background-color: rgba(14, 44, 14, 0.25);
-  /* padding-bottom: 5vh; */
   min-height: 100vh;
-  max-width: 100vw;
   padding: 5px;
 }
 
@@ -169,7 +167,11 @@ select {
   min-height: 2.5vh;
   font-size: 2vh;
   max-width: 140px;
-  min-width: 70px;
+  width: 45px;
+}
+
+select {
+  width:auto;
 }
 
 button {

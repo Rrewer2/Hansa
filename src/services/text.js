@@ -21,13 +21,13 @@ const textData = {
   pipeS: ["Rura S"],
   VD: ["Nadtłokowa", "L"],
   Vd: ["Podtłokowa", "L"],
-  tOut: ["Czas wysuw", "sec"],
-  tIn: ["Czas wsuw", "sec"],
-  tC: ["Czas cykl", "sec"],
+  tOut: ["Czas wysuw", "s"],
+  tIn: ["Czas wsuw", "s"],
+  tC: ["Czas cykl", "s"],
   FOut: ["F wysuw", "kG"],
   FIn: ["F wsuw", "kG"],
-  vOut: ["Wysuw", "mm/sec"],
-  vIn: ["Wsuw", "mm/sec"],
+  vOut: ["Wysuw", "mm/s"],
+  vIn: ["Wsuw", "mm/s"],
   wall: ["Ścianka", "mm"],
   Qback: ["Powrót oleju", "L/min"],
   Qmax: ["Powrót oleju max", "L/min"],
@@ -52,5 +52,6 @@ const textData = {
   throttle: ["HKHQ"],
   check: ["HKHR"],
   directPress: ["HKHMP"],
+  DBD: ['DBD', 'bar']
 };
 export const text = (key) => (textData[key] ? textData[key].join(", ") : key);
