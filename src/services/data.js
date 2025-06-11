@@ -134,7 +134,7 @@ export const coolerData = [ { title: "2005K", flow: { min: 5, max: 75 }, perform
 
 export const filterData = [];
 
-export const spoolTypes = ['G','GA', 'E','EA', 'J','JA', 'H','HA', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
+export const spoolTypes = ['G','GA','GB', 'E','EA','EB', 'J','JA','JB', 'H','HA','HB', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
 
 
 export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
