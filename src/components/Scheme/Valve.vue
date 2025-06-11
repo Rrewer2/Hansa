@@ -7,57 +7,19 @@ const h = () => sl / 5;
 </script>
 
 <template>
-  <path
-    :d="`M${x} ${y} h${sl}`"
-    stroke="black"
-    stroke-width="1"
-    stroke-dasharray="5 10"
-  />
-  <path
-    :d="`M${x} ${y} v${h() + 20} h${0.46 * sl} v-10`"
-    stroke="black"
-    stroke-width="2"
-    fill="none"
-  />
-  <path
-    :d="`M${x + sl} ${y} v${h() + 20} h${-0.46 * sl} v-10`"
-    stroke="black"
-    stroke-width="2"
-    fill="none"
-  />
+  <path :d="`M${x} ${y} h${sl}`" stroke="black" stroke-width="1" stroke-dasharray="5 10" />
+  <path :d="`M${x} ${y} v${h() + 20} h${0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
+  <path :d="`M${x + sl} ${y} v${h() + 20} h${-0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
 
-  <path
-    :d="`M${x + sl / 2 - (0.5 - 0.46) * sl} ${y} v${-h() / 12}`"
-    stroke="black"
-    stroke-width="2"
-    fill="none"
-  />
-  <path
-    :d="`M${x + sl / 2 + (0.5 - 0.46) * sl} ${y} v${-h() / 12}`"
-    stroke="black"
-    stroke-width="2"
-    fill="none"
-  />
+  <path :d="`M${x + sl / 2 - (0.5 - 0.46) * sl} ${y} v${-h() / 12}`" stroke="black" stroke-width="2" fill="none" />
+  <path :d="`M${x + sl / 2 + (0.5 - 0.46) * sl} ${y} v${-h() / 12}`" stroke="black" stroke-width="2" fill="none" />
 
-  <Valve3
-    v-if="
-      data.spool.length === 1 &&
-      ['A', 'B', 'C', 'D', 'Y'].every((el) => el !== data.spool)
-    "
-    :x="x + sl / 2"
-    :y="y + 10"
-    :h="h()"
-    :spool="data.spool"
-  />
+  <Valve3 v-if="
+    data.spool.length === 1 &&
+    ['A', 'B', 'C', 'D', 'Y'].every((el) => el !== data.spool)
+  " :x="x + sl / 2" :y="y + 10" :h="h()" :spool="data.spool" />
   <Valve2 v-else :x="x + sl / 2" :y="y + 10" :h="h()" :spool="data.spool" />
-  <text
-    :x="x + sl / 2"
-    :y="y + h() * 1.55"
-    font-family="Arial"
-    :font-size="sl / 15"
-    fill="black"
-    text-anchor="middle"
-  >
+  <text :x="x + sl / 2" :y="y + h() * 1.55" font-family="Arial" :font-size="sl / 15" fill="black" text-anchor="middle">
     {{ data.spool }}
   </text>
 </template>
