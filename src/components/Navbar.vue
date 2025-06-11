@@ -1,17 +1,15 @@
-<script setup>
-const navData = ["Obliczenia", "Schemat", "Dobór części", "Oferta", "Simile"];
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
+<script lang="js" setup>
+import { text } from "../services/text";
+
+const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity"];
 const { navPage } = defineProps(["navPage"]);
 </script>
 
 <template>
   <nav class="">
-    <div
-      v-for="(nav, i) in navData"
-      @click="() => $emit('nav', i)"
-      class="slice"
-      :class="navPage[i] && 'active'"
-    >
-      {{ nav }}
+    <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
+      {{ text(nav) }}
     </div>
   </nav>
 </template>

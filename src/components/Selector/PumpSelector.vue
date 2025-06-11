@@ -42,33 +42,24 @@ const getTitle = (item) => Object.keys(item)[0];
 <template>
   <article>
     <h2>
-      Pompa {{ i ? i + 1 : "" }}<span> {{ order[`pump${i}`]?.title }}</span>
+      {{ text("pump") }} {{ i ? i + 1 : "" }}<span> {{ order[`pump${i}`]?.title }}</span>
     </h2>
 
     <div class="flex-row flex-center">
       <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
         <InputItem data="Q">
-          <input
-            type="number"
-            min="0"
-            v-model="pump.Q"
-            :disabled="order[`pump${i}`]"
-            id="Q"
-          />
+          <!-- <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}`]" id="Q" /> -->
+          <input type="number" min="0" v-model="pump.Q" id="Q" />
         </InputItem>
 
         <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
       </span>
 
       <InputItem data="n" class="ml-10">
-        <select
-          v-model="powerUNIT.n"
-          :disabled="
-            order[`pump${i}`] ||
-            Object.keys(order).some((str) => str.includes(`motor${i}`))
-          "
-          id="n"
-        >
+        <!-- <select v-model="powerUNIT.n" :disabled="order[`pump${i}`] ||
+          Object.keys(order).some((str) => str.includes(`motor${i}`))
+          " id="n"> -->
+        <select v-model="powerUNIT.n" id="n">
           <option v-for="item in freqData" :value="item">{{ item }}</option>
         </select>
       </InputItem>
@@ -90,33 +81,18 @@ const getTitle = (item) => Object.keys(item)[0];
           <b><i>L/min</i></b>
         </td>
         <td v-for="a in Object.keys(Object.values(filteredPumps().at(-1))[0])">
-          <b
-            ><i>{{ a }}</i></b
-          >
+          <b><i>{{ a }}</i></b>
         </td>
       </thead>
       <tbody v-for="elem in filteredPumps()" :value="elem">
         <td class="tal">
-          <input
-            type="radio"
-            :id="getTitle(elem)"
-            v-model="order[`pump${i}`]"
-            @change="selectedPump"
-            :value="{
-              title: getTitle(elem),
-              pumpData: { ...elem[getTitle(elem)], n: powerUNIT.n },
-            }"
-            name="pump"
-            :checked="getTitle(elem) === order[`pump${i}`]?.title"
-            class="mx"
-          />
+          <input type="radio" :id="getTitle(elem)" v-model="order[`pump${i}`]" @change="selectedPump" :value="{
+            title: getTitle(elem),
+            pumpData: { ...elem[getTitle(elem)], n: powerUNIT.n },
+          }" name="pump" :checked="getTitle(elem) === order[`pump${i}`]?.title" class="mx" />
 
-          <a
-            v-if="Object.values(elem)[0].maker !== 'WPH'"
-            :href="`https://shop.hansa-flex.pl/pl_PL/p/${getTitle(elem)}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a v-if="Object.values(elem)[0].maker !== 'WPH'"
+            :href="`https://shop.hansa-flex.pl/pl_PL/p/${getTitle(elem)}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(getTitle(elem)) }}
           </a>
           <span v-else>{{ getTextWithSpace(getTitle(elem)) }}</span>

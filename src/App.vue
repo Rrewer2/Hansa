@@ -1,5 +1,5 @@
-<script setup>
-import { ref } from "vue";
+<script lang="js" setup>
+import { ref, provide } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
 import { getId } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
@@ -8,8 +8,10 @@ import Scheme from "./components/Scheme.vue";
 import Order from "./components/Order.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
-
+import LanguageSwitcher from "./components/LanguageSwitcher.vue";
 import Simile from "./components/Simile.vue";
+import { text } from "./services/text";
+
 const simile = ref({ zlec: "", lista: "" });
 
 const cylInit = {
@@ -19,7 +21,7 @@ const cylInit = {
   mountA: "2",
   mountB: "2",
   z: 1,
-  form: "poziomo",
+  form: "formHorizontal",
   spool: "G",
   throttle: "",
   check: "",
@@ -32,7 +34,8 @@ const getNewPump = () => ({
   HKSH: [{ ...cylInit, id: getId("c") }],
 });
 const project = ref([]);
-const meta = ref({ tank: "RA", cooler: 0, pumpType: "gears", spool: "G" });
+const meta = ref({ tank: "RA", cooler: 0, pumpType: "gears", spool: "G", lang: 'pl' });
+provide('meta', meta);
 const order = ref({});
 const getNewPowerUnit = () =>
   project.value.push({
@@ -73,30 +76,17 @@ const navPage = ref([false, false, true, false, false]);
 
       <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
         <div :key="id">
-          <PumpUnitTitle
-            v-bind="{ project, k, order }"
-            :btnDisabled="project.length < 2"
-            @delUnit="delUnit"
-          />
+          <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2" @delUnit="delUnit" />
           <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
-            <PumpUnit
-              :key="unit[i].id"
-              :pumpData="unit[i]"
-              :project="project"
-              :k="k"
-              :i="i"
-              @addCyl="() => addCyl(k, i)"
-              :btnDisabled="unit.length < 2"
-              @delPump="() => delPump(k, unit[i].id)"
-              :order="order"
-            />
+            <PumpUnit :key="unit[i].id" :pumpData="unit[i]" v-bind="{ project, order, i, k }"
+              @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2" @delPump="() => delPump(k, unit[i].id)" />
           </div>
           <div class="flex-row flex-left pl-25">
             <button @click="() => addPump(k)" class="btn-add my-2">
-              + Pompa osobna
+              + {{ text("separatePump", meta) }}
             </button>
             <button @click="() => addPumpSame(k)" class="btn-add my-2">
-              + Pompa na tym samym układzie
+              + {{ text("samePump", meta) }}
             </button>
           </div>
         </div>
@@ -104,30 +94,20 @@ const navPage = ref([false, false, true, false, false]);
 
       <div class="flex-row flex-left my-2">
         <button @click="getNewPowerUnit" class="btn-add">
-          + Zespół pompujacy
+          + {{ text("pumpUnit", meta) }}
         </button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
     </article>
-    <Scheme
-      class="scheme"
-      v-if="navPage[1]"
-      v-bind="{ project, meta, order }"
-    />
+    <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
-    <Selector
-      v-if="navPage[2]"
-      v-bind="{ project, meta, order }"
-      @pumpSelected="(title) => console.log(title)"
-    />
+    <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" @pumpSelected="(title) => console.log(title)" />
 
     <Order v-if="navPage[3]" v-bind="{ order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
   </main>
-  <Navbar
-    @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))"
-    :navPage="navPage"
-  />
+  <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />
+  <LanguageSwitcher :meta="meta" />
   <!-- <div>project {{ project }}</div>
     <div>order {{ order }}</div>
     <div>meta {{ meta }}</div> -->
@@ -167,11 +147,11 @@ select {
   min-height: 2.5vh;
   font-size: 2vh;
   max-width: 140px;
-  width: 45px;
+  width: 95px;
 }
 
 select {
-  width:auto;
+  width: auto;
 }
 
 button {

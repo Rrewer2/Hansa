@@ -38,8 +38,7 @@ const filteredCoupling = () => {
 <template>
   <article>
     <h2>
-      Sprzęgło {{ i ? i + 1 : ""
-      }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
+      {{ text("coupling") }} {{ i ? i + 1 : "" }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
     </h2>
 
     <br />
@@ -47,27 +46,15 @@ const filteredCoupling = () => {
     <table v-if="filteredCoupling().length">
       <thead>
         <td v-for="a in Object.keys(couplingData[0])">
-          <b
-            ><i>{{ a }}</i></b
-          >
+          <b><i>{{ a }}</i></b>
         </td>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
         <td class="tal">
-          <input
-            type="radio"
-            :id="title"
-            v-model="order.coupling"
-            :value="{ title, couplingData: { ...rest } }"
-            :checked="title === order.coupling?.title"
-            class="mx"
-          />
+          <input type="radio" :id="title" v-model="order.coupling" :value="{ title, couplingData: { ...rest } }"
+            :checked="title === order.coupling?.title" class="mx" />
 
-          <a
-            :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
           <CopyText :text="title" />

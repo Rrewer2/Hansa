@@ -2,17 +2,16 @@
 import { text } from "../services/text";
 
 const { data } = defineProps(["data"]);
-const [title, unit] = text(data).split(", ");
 </script>
 
 <template>
   <div class="inline w-75">
     <h4 class="border border-bottom-no bgc-g fs-sm px-5">
-      <i>{{ title }}</i>
+      <i>{{ text(data).split(', ')[0] }}</i>
     </h4>
     <div class="input-group">
       <slot></slot>
-      <i v-if="unit" class="unit px-5">{{ unit }}</i>
+      <i v-if="text(data).split(', ')[1]" class="unit px-5">{{ text(data).split(', ')[1] }}</i>
     </div>
   </div>
 </template>

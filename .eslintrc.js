@@ -11,9 +11,15 @@ module.exports = {
   ],
   parserOptions: {
     parser: "@babel/eslint-parser",
+    ecmaVersion: 2020,
   },
   rules: {
     // Власні правила
     "vue/multi-word-component-names": "off", // Наприклад, вимкнення обов'язкових багатослівних назв компонентів
+    "semi": ["error", "always"],
+    "semi-style": ["error", "last"],
+    "no-extra-semi": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
   },
 };

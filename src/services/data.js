@@ -1,11 +1,35 @@
 export const g = 9.80665;
 
-export const standartDiameters = [ 200,195,190,185,180,175,170,165,160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100, 95, 90, 85, 80, 75, 70, 65, 63, 60, 56, 55, 50, 45, 40, 36, 35, 32, 30, 28, 25, 22, 20, 16
- ];
+export const standartDiameters = [
+  500, 450, 400, 360, 340, 320, 300, 280, 260, 250, 240, 220, 200,
+  195, 190, 185, 180, 175, 170, 165, 160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100, 95, 90, 85, 80, 75, 70, 65, 63, 60, 56, 55, 50, 45, 40, 36, 35, 32, 30, 28, 25, 22, 20, 16
+];
 export const bucklingSafety = 5;
 
-export const HKSHMountD  = {0:'Gwint',1:'Sztywna tuleja',2:'Wahliwe łożysko',3:'Kołnierz dławnicy',4:'Kołnierz dna',6:'Na łapach',7:'Na kuli',9:'Na czopach',W:'Widlaste',X:'Inne'};
-export const HKSHMountd  = {0:'Gwint',1:'Sztywna tuleja',2:'Wahliwe łożysko',5:'Kołnierz pręta',6:'Na łapach',7:'Na kuli',8:'Przelotowy pręt',W:'Widlaste',X:'Inne'};
+export const HKSHMountD = {
+  0: 'mountThread',
+  1: 'mountRigidBushing',
+  2: 'mountSwivelBearing',
+  3: 'mountGlandFlange',
+  4: 'mountBottomFlange',
+  6: 'mountFeet',
+  7: 'mountBall',
+  9: 'mountPins',
+  W: 'mountForked',
+  X: 'mountOther'
+};
+
+export const HKSHMountd = {
+  0: 'mountThread',
+  1: 'mountRigidBushing',
+  2: 'mountSwivelBearing',
+  5: 'mountRodFlange',
+  6: 'mountFeet',
+  7: 'mountBall',
+  8: 'mountThroughRod',
+  W: 'mountForked',
+  X: 'mountOther'
+};
 
 const RA = [
   {title:'HKBAKRA03',Size:3,CoolingCapacity: 0.16},

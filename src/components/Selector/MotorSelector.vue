@@ -44,24 +44,21 @@ const getTitle = () => order[`motor${i}`]?.title;
 <template>
   <article>
     <h2>
-      Silnik {{ i ? i + 1 : "" }}<span> {{ getTitle() }}</span>
+      {{ text("motor") }} {{ i ? i + 1 : "" }}<span> {{ getTitle() }}</span>
     </h2>
     <div class="flex-row flex-center">
       <InputItem data="n" class="ml-10">
-        <select
-          v-model="powerUNIT.n"
-          :disabled="
-            getTitle() ||
-            Object.keys(order).some((str) => str.includes(`pump${i}`))
-          "
-          id="motor-n"
-        >
+        <!-- <select v-model="powerUNIT.n" :disabled="getTitle() ||
+          Object.keys(order).some((str) => str.includes(`pump${i}`))
+          " id="motor-n"> -->
+        <select v-model="powerUNIT.n" id="motor-n">
           <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
         </select>
       </InputItem>
 
       <InputItem data="mount" class="ml-10">
-        <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount">
+        <!-- <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount"> -->
+        <select v-model="powerUNIT.mount" id="mount">
           <option v-for="item in engineMountData" :value="item">
             {{ item }}
           </option>
@@ -71,11 +68,7 @@ const getTitle = () => order[`motor${i}`]?.title;
       <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" />
 
       <InputItem data="P" class="ml-10">
-        <select
-          v-model="P"
-          @change="() => setPressure(powerUNIT.unit, P)"
-          id="P"
-        >
+        <select v-model="P" @change="() => setPressure(powerUNIT.unit, P)" id="P">
           <option v-for="item in motorData" :value="item">{{ item }}</option>
         </select>
       </InputItem>
@@ -84,29 +77,16 @@ const getTitle = () => order[`motor${i}`]?.title;
     <table v-if="motors().length">
       <thead>
         <td v-for="a in Object.keys(motors()[0])">
-          <b
-            ><i>{{ text(a) }}</i></b
-          >
+          <b><i>{{ text(a) }}</i></b>
         </td>
       </thead>
 
       <tbody v-for="{ title, ...elem } in motors()">
         <td class="tal">
-          <input
-            type="radio"
-            :id="title"
-            v-model="order[`motor${i}`]"
-            :value="{ title, motorData: elem }"
-            name="title"
-            :checked="getTitle() === title"
-            class="mx"
-          />
-          <a
-            v-if="title.includes('HK')"
-            :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <input type="radio" :id="title" v-model="order[`motor${i}`]" :value="{ title, motorData: elem }" name="title"
+            :checked="getTitle() === title" class="mx" />
+          <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
+            rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
           <span v-else>{{ title }}</span>

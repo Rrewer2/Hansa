@@ -35,35 +35,22 @@ const filteredBellhousing = () => {
 <template>
   <article>
     <h2>
-      Kielich {{ i ? i + 1 : ""
-      }}<span> {{ filteredBellhousing().at(-1)?.title }}</span>
+      {{ text("bellhousing") }} {{ i ? i + 1 : "" }}<span> {{ filteredBellhousing().at(-1)?.title }}</span>
     </h2>
     <br />
 
     <table v-if="filteredBellhousing().length">
       <thead>
         <td v-for="a in Object.keys(bellhousingData[0])">
-          <b
-            ><i>{{ a }}</i></b
-          >
+          <b><i>{{ a }}</i></b>
         </td>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredBellhousing()">
         <td class="tal">
-          <input
-            type="radio"
-            :id="title"
-            v-model="order.bellhousing"
-            :value="{ title, bellhousingData: { ...rest } }"
-            :checked="title === order.bellhousing?.title"
-            class="mx"
-          />
+          <input type="radio" :id="title" v-model="order.bellhousing" :value="{ title, bellhousingData: { ...rest } }"
+            :checked="title === order.bellhousing?.title" class="mx" />
 
-          <a
-            :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
           <CopyText :text="title" />

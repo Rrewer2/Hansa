@@ -46,16 +46,11 @@ spoolData.forEach(({ spool }) => set.add(spool));
 <template>
   <article>
     <h2 :class="open && 'bgc-g'">
-      Rozdzielacz <span> {{ order.valve?.title }}</span>
+      {{ text("valve") }}<span> {{ order.valve?.title }}</span>
     </h2>
     <div class="grid ml-10">
-      <svg
-        v-for="spool in set"
-        @click="() => (meta.spool = spool)"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 90"
-        class="valve"
-      >
+      <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 200 90" class="valve">
         <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
       </svg>
     </div>
@@ -70,12 +65,8 @@ spoolData.forEach(({ spool }) => set.add(spool));
             <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
               :checked="title === order.valve?.title" class="mx" /> -->
 
-            <a
-              v-if="title.includes('HK')"
-              :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
+              rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
 
