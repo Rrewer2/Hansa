@@ -19,18 +19,20 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 ]);
 
 const filteredBellhousing = () => {
-  const filtered = bellhousingData.filter(
-    ({ holePattern, size, pump }) =>
-    size === order[`motor${i}`]?.motorData.size &&
-    (holePattern === order[`pump${i}`]?.pumpData.holePattern || 
-     (pump && order[`pump${i}`]?.pumpData.title && 
-      pump.split(',').some(p => p.trim() === order[`pump${i}`].pumpData.title)))
-  );
-  if (filtered.length === 1) {
-    const { title, ...rest } = filtered[0];
-    order.bellhousing = { title, bellhousingData: { ...rest } };
+  if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
+  else {
+    const filtered = bellhousingData.filter(({ group, size, holePattern, pump }) => {
+      return holePattern === order[`pump${i}`]?.pumpData?.holePattern &&
+      size === order[`motor${i}`]?.motorData?.size &&
+      (!group || group === order[`pump${i}`]?.pumpData?.group) &&
+      (!pump || pump.split(',').some(p => order[`pump${i}`].title?.startsWith(p)))
+});
+    if (filtered.length === 1) {
+      const { title, ...rest } = filtered[0];
+      order.bellhousing = { title, bellhousingData: { ...rest } };
+    }
+    return filtered;
   }
-  return filtered;
 };
 </script>
 
@@ -43,7 +45,7 @@ const filteredBellhousing = () => {
 
     <table v-if="filteredBellhousing().length">
       <thead>
-        <td v-for="a in Object.keys(bellhousingData[0])">
+        <td v-for="a in Object.keys(filteredBellhousing()[0])">
           <b><i>{{ a }}</i></b>
         </td>
       </thead>

@@ -19,19 +19,20 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 ]);
 
 const filteredCoupling = () => {
-  const filtered = couplingData.filter(
-    ({ group, size, shaft }) =>
-      ((shaft === order[`pump${i}`]?.pumpData.shaft &&
-        group === order[`pump${i}`]?.pumpData.group) ||
-        (order[`pump${i}`]?.title.startsWith("HKPBA") &&
-          title.includes("PBA"))) &&
-      size === order[`motor${i}`]?.motorData.size
-  );
+  if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
+  else {
+    const filtered = couplingData.filter(({ group, size, shaft, pump }) => {
+      return size === order[`motor${i}`]?.motorData?.size &&
+      (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft) &&
+      (!group || group === order[`pump${i}`]?.pumpData?.group) &&
+      (!pump || order[`pump${i}`].title?.startsWith(pump))
+});
   if (filtered.length === 1) {
     const { title, ...rest } = filtered[0];
     order.coupling = { title, couplingData: { ...rest } };
   }
   return filtered;
+  }
 };
 </script>
 
@@ -45,15 +46,15 @@ const filteredCoupling = () => {
 
     <table v-if="filteredCoupling().length">
       <thead>
-        <td v-for="a in Object.keys(couplingData[0])">
+        <td v-for="a in Object.keys(filteredCoupling()[0])">
           <b><i>{{ a }}</i></b>
         </td>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
         <td class="tal">
-          <input type="radio" :id="title" v-model="order.coupling" :value="{ title, couplingData: { ...rest } }"
-            :checked="title === order.coupling?.title" class="mx" />
-
+          <button type="radio" :id="title" @click="order.coupling = { title, couplingData: { ...rest } }" class="mx">
+            {{ order.coupling?.title ? 'v' : '-' }}
+          </button>
           <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
