@@ -25,7 +25,7 @@ const filteredCoupling = () => {
         group === order[`pump${i}`]?.pumpData.group) ||
         (order[`pump${i}`]?.title.startsWith("HKPBA") &&
           title.includes("PBA"))) &&
-      size === order[`motor${i}`]?.motorData.size,
+      size === order[`motor${i}`]?.motorData.size
   );
   if (filtered.length === 1) {
     const { title, ...rest } = filtered[0];

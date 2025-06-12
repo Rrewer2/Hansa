@@ -20,9 +20,11 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 
 const filteredBellhousing = () => {
   const filtered = bellhousingData.filter(
-    ({ holePattern, size }) =>
-      holePattern === order[`pump${i}`]?.pumpData.holePattern &&
-      size === order[`motor${i}`]?.motorData.size,
+    ({ holePattern, size, pump }) =>
+    size === order[`motor${i}`]?.motorData.size &&
+    (holePattern === order[`pump${i}`]?.pumpData.holePattern || 
+     (pump && order[`pump${i}`]?.pumpData.title && 
+      pump.split(',').some(p => p.trim() === order[`pump${i}`].pumpData.title)))
   );
   if (filtered.length === 1) {
     const { title, ...rest } = filtered[0];
