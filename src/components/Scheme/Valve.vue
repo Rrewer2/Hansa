@@ -11,8 +11,8 @@ const h = () => sl / 5;
   <path :d="`M${x} ${y} v${h() + 20} h${0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
   <path :d="`M${x + sl} ${y} v${h() + 20} h${-0.46 * sl} v-10`" stroke="black" stroke-width="2" fill="none" />
 
-  <path :d="`M${x + sl / 2 - (0.5 - 0.46) * sl} ${y} v${-h() / 12}`" stroke="black" stroke-width="2" fill="none" />
-  <path :d="`M${x + sl / 2 + (0.5 - 0.46) * sl} ${y} v${-h() / 12}`" stroke="black" stroke-width="2" fill="none" />
+  <path :d="`M${x + sl / 2 - (0.5 - 0.46) * sl} ${y} v${h() / 6}`" stroke="black" stroke-width="2" fill="none" />
+  <path :d="`M${x + sl / 2 + (0.5 - 0.46) * sl} ${y} v${h() / 6}`" stroke="black" stroke-width="2" fill="none" />
 
   <Valve3 v-if="
     data.spool.length === 1 &&
