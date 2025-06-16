@@ -1,13 +1,8 @@
 <script setup>
-import { bellhousingData, couplingData } from "../../services/data";
-import {
-  getTextWithSpace,
-  reducedPower,
-  round,
-} from "../../services/functions";
+import { couplingData } from "../../services/data";
+import { getTextWithSpace } from "../../services/functions";
+import { links } from "../../services/links";
 import { text } from "../../services/text";
-import InputItem from "../InputItem.vue";
-import ResultItem from "../ResultItem.vue";
 import CopyText from "./CopyText.vue";
 
 const { project, meta, order, powerUNIT, i } = defineProps([
@@ -57,7 +52,7 @@ const filteredCoupling = () => {
           <td class="tal">
             <input type="checkbox" :id="title" @click="order.coupling = { title, couplingData: { ...rest } }"
               class="mx" />
-            <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
+            <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />

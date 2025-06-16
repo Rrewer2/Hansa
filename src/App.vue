@@ -101,7 +101,7 @@ const navPage = ref([false, false, true, false, false]);
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
-    <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" @pumpSelected="(title) => console.log(title)" />
+    <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
 
     <Order v-if="navPage[3]" v-bind="{ order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
@@ -147,6 +147,7 @@ select {
   min-height: 2.5vh;
   font-size: 2vh;
   max-width: 140px;
+  min-width: 85px;
   width: 95px;
 }
 

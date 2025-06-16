@@ -1,10 +1,7 @@
 <script setup>
-import { spoolData, spoolTypes } from "../../services/data";
-import {
-  getSmthFromProject,
-  getTextWithSpace,
-  uniqOrder,
-} from "../../services/functions";
+import { spoolData } from "../../services/data";
+import { getSmthFromProject, getTextWithSpace } from "../../services/functions";
+import { links } from "../../services/links";
 import { text } from "../../services/text";
 import Valve from "../Scheme/Valve.vue";
 import CopyText from "./CopyText.vue";
@@ -65,7 +62,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
             <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
               :checked="title === order.valve?.title" class="mx" /> -->
 
-            <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
+            <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>

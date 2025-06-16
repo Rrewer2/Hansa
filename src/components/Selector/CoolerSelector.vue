@@ -6,13 +6,13 @@ import {
   Pv,
   Qmax,
   filteredCooler,
-  getTextWithSpace,
-  round,
+  getTextWithSpace
 } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import CopyText from "./CopyText.vue";
+import { links } from "../../services/links";
 
 const { project, meta, order, powerUNIT, i } = defineProps([
   "project",
@@ -71,7 +71,7 @@ const getTitle = () => order.cooler?.title;
           <td class="tal">
             <input type="radio" :id="title" v-model="order.cooler" :value="{ title, coolerData: elem }" name="title"
               :checked="getTitle() === title" class="mx" />
-            <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
+            <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />

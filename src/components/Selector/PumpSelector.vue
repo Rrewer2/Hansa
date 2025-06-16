@@ -6,6 +6,7 @@ import {
   getVFU,
   round,
 } from "../../services/functions";
+import { links } from "../../services/links";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -93,8 +94,8 @@ const getTitle = (item) => Object.keys(item)[0];
             pumpData: { ...elem[getTitle(elem)], n: powerUNIT.n },
           }" name="pump" :checked="getTitle(elem) === order[`pump${i}`]?.title" class="mx" />
 
-          <a v-if="Object.values(elem)[0].maker !== 'WPH'"
-            :href="`https://shop.hansa-flex.pl/pl_PL/p/${getTitle(elem)}`" target="_blank" rel="noopener noreferrer">
+          <a v-if="Object.values(elem)[0].maker !== 'WPH'" :href="`${links[meta.lang]}${getTitle(elem)}`"
+            target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(getTitle(elem)) }}
           </a>
           <span v-else>{{ getTextWithSpace(getTitle(elem)) }}</span>

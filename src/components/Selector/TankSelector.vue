@@ -6,6 +6,7 @@ import {
   getTextWithSpace,
   round,
 } from "../../services/functions";
+import { links } from "../../services/links";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -53,7 +54,7 @@ const { project, meta, order, open } = defineProps([
           <td class="tal">
             <input type="radio" :id="title" :value="{ title, tankData: elem }" name="elem" v-model="order.tank"
               :checked="title === order.tank?.title" class="mx" />
-            <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
+            <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />

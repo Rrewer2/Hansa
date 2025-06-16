@@ -16,6 +16,7 @@ import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import CopyText from "./CopyText.vue";
+import { links } from "../../services/links";
 
 const { project, meta, order, powerUNIT, i } = defineProps([
   "project",
@@ -85,7 +86,7 @@ const getTitle = () => order[`motor${i}`]?.title;
         <td class="tal">
           <input type="radio" :id="title" v-model="order[`motor${i}`]" :value="{ title, motorData: elem }" name="title"
             :checked="getTitle() === title" class="mx" />
-          <a v-if="title.includes('HK')" :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank"
+          <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
             rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
