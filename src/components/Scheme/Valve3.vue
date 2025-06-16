@@ -30,12 +30,8 @@ const position = {
 </script>
 
 <template>
-  <path
-    :d="`M${x} ${y}h${-1.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}v${h} h${h} v${-h}z`"
-    stroke="black"
-    stroke-width="1"
-    fill="white"
-  />
+  <path :d="`M${x} ${y}h${-1.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}v${h} h${h} v${-h}z`" stroke="black"
+    stroke-width="1" fill="white" />
   <Valve3H v-if="spool === 'H'" :x="x" :y="y" :h="h" />
   <Valve3J v-if="spool === 'J'" :x="x" :y="y" :h="h" />
   <Valve3E v-if="spool === 'E'" :x="x" :y="y" :h="h" />

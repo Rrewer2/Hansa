@@ -46,21 +46,24 @@ const filteredCoupling = () => {
 
     <table v-if="filteredCoupling().length">
       <thead>
-        <td v-for="a in Object.keys(filteredCoupling()[0])">
-          <b><i>{{ a }}</i></b>
-        </td>
+        <tr>
+          <td v-for="a in Object.keys(filteredCoupling()[0])">
+            <b><i>{{ a }}</i></b>
+          </td>
+        </tr>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
-        <td class="tal">
-          <button type="radio" :id="title" @click="order.coupling = { title, couplingData: { ...rest } }" class="mx">
-            {{ order.coupling?.title ? 'v' : '-' }}
-          </button>
-          <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
-            {{ getTextWithSpace(title) }}
-          </a>
-          <CopyText :text="title" />
-        </td>
-        <td v-for="item in Object.values(rest)">{{ item }}</td>
+        <tr>
+          <td class="tal">
+            <input type="checkbox" :id="title" @click="order.coupling = { title, couplingData: { ...rest } }"
+              class="mx" />
+            <a :href="`https://shop.hansa-flex.pl/pl_PL/p/${title}`" target="_blank" rel="noopener noreferrer">
+              {{ getTextWithSpace(title) }}
+            </a>
+            <CopyText :text="title" />
+          </td>
+          <td v-for="item in Object.values(rest)">{{ item }}</td>
+        </tr>
       </tbody>
     </table>
   </article>

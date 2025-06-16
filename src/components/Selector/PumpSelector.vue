@@ -23,9 +23,9 @@ const filteredPumps = () => {
   if (powerUNIT.unit.length === 1) {
     const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
     const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
-    return pumpData[meta.pumpType].filter((el) => {
-      const item = Object.values(el)[0].CC - VFU;
-      return item >= -par && item <= par;
+    return pumpData[meta.pumpType].filter((pump) => {
+      const CC = Object.values(pump)[0].CC - VFU;
+      return CC >= -par && CC <= par && Object.values(pump)[0].pmax > powerUNIT.unit[0].p;
     });
   }
   if (powerUNIT.unit.length > 1) return [];
@@ -51,8 +51,10 @@ const getTitle = (item) => Object.keys(item)[0];
           <!-- <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}`]" id="Q" /> -->
           <input type="number" min="0" v-model="pump.Q" id="Q" />
         </InputItem>
-
         <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
+        <InputItem data="p">
+          <input type="number" min="0" v-model="pump.p" id="pp" />
+        </InputItem>
       </span>
 
       <InputItem data="n" class="ml-10">

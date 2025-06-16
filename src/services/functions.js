@@ -9,10 +9,9 @@ import {
   coolerData,
 } from "./data";
 
-const isString = (variable) => typeof variable === "string";
-
-export const round = (num, param = 10) =>
-  isString(num) ? num : Math.round(num * param) / param;
+export const round = (num, param = 10) => num === Infinity ? '-' :
+  typeof num === 'string' ? num :
+    Math.round(num * param) / param;
 
 export const getId = (key) => key + Date.now();
 
@@ -109,7 +108,7 @@ export const buckling = ({ HKSH: { D, d, L }, p, DBD }) => {
 export const unitTitle = (unit) => {
   const power = getStandartPower(reducedPower(unit));
   const pumpLitre = unit.map((item) => item.Q).join("x");
-  return `${round(power)}kW - ${pumpLitre}L`;
+  return round(power) && pumpLitre ? `${round(power)}kW - ${pumpLitre}L`: '';
 };
 export const getQfromProject = (project) =>
   project.map(({ unit }) => unit.map(({ Q }) => Q)).flat();

@@ -46,81 +46,28 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
 </script>
 
 <template>
-  <Pipes
-    v-if="!unit.same"
-    v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }"
-  />
-  <HKSH
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    :x="xV(unit, i)"
-    :y="y - 5 + unit.HKSH.length * 10"
-    v-bind="{ sl: getSL(unit), data }"
-  />
-  <DR2
-    v-if="!unit.same"
-    :x="x(c)"
-    :y="y + 300"
-    :type="unit.DR2type"
-    :N="unit.HKSH.length"
-    v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }"
-    :text="unit.p"
-  />
-  <HKHR
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)"
-    :y="yV"
-    :r="getSL(unit) / 30"
-  />
-  <HKHQ
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)"
-    :y="yV + yHKHQ(data)"
-    :r="getSL(unit) / 30"
-  />
-  <HKHMP
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)"
-    :y="yV + yHKHMP(data)"
-    :r="getSL(unit) / 30"
-  />
-  <Valve
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    v-bind="{ sl: getSL(unit), data }"
-    :x="xV(unit, i)"
-    :y="yV + yValve(data)"
-  />
+  <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
+  <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y - 5 + unit.HKSH.length * 10"
+    v-bind="{ sl: getSL(unit), data }" />
+  <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length"
+    v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
+  <HKHR v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+    :x="xV(unit, i)" :y="yV" :r="getSL(unit) / 30" />
+  <HKHQ v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+    :x="xV(unit, i)" :y="yV + yHKHQ(data)" :r="getSL(unit) / 30" />
+  <HKHMP v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+    :x="xV(unit, i)" :y="yV + yHKHMP(data)" :r="getSL(unit) / 30" />
+  <Valve v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), data }" :x="xV(unit, i)"
+    :y="yV + yValve(data)" />
 
-  <DBD
-    v-if="unit.DBD"
-    :x="x(c) - getSh(unit)"
-    :xSame="x(c - 1) - getSh(unit) / 2"
-    :y="y + 300 + R * 8"
-    :a="getSL(unit) / 6"
-    :unit="unit"
-    :line="() => getSh(unit) / 2"
-  />
-  <path
-    v-if="unit.mount.startsWith('B3') && unit.same"
+  <DBD v-if="unit.DBD" :x="x(c) - getSh(unit)" :xSame="x(c - 1) - getSh(unit) / 2" :y="y + 300 + R * 8"
+    :a="getSL(unit) / 6" :unit="unit" :line="() => getSh(unit) / 2" />
+  <path v-if="unit.mount.startsWith('B3') && unit.same"
     :d="`M${x(c - 1)} ${y + 300} h${-getSh(unit) * 1.5} v${R * 6} h${getSh(unit) * 2} v${R * 3.5} h${xM - x(c - 1) - getSh(unit) / 2 + gap} v${yM - R * 9.5 - 300}`"
-    stroke="red"
-    stroke-width="3"
-    fill="none"
-  />
-  <path
-    v-if="!unit.mount.startsWith('B3') && unit.same"
+    stroke="red" stroke-width="3" fill="none" />
+  <path v-if="!unit.mount.startsWith('B3') && unit.same"
     :d="`M${x(c - 1)} ${y + 300} h${-getSh(unit) * 1.5} v${getSh(unit) * 5.5 - c * 15} h${xM - x(c - 1) + getSh(unit) * 1.5 + gap} v${yM - (getSh(unit) * 5.5 - c * 15) - 300 + gap}  h${-gap}`"
-    stroke="red"
-    stroke-width="15"
-    fill="none"
-  />
+    stroke="red" stroke-width="15" fill="none" />
 </template>
 
 <style scoped></style>

@@ -31,63 +31,23 @@ const position = {
 </script>
 
 <template>
-  <path
-    v-if="
-      spool[1] === 'A' || ['A', 'C', 'D', 'D^', 'D1'].some((el) => el === spool)
-    "
-    :d="`M${x} ${y}h${-1.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}z`"
-    stroke="black"
-    stroke-width="1"
-    fill="white"
-  />
-  <path
-    v-if="spool[1] === 'B' || ['B', 'Y', 'Y1'].some((el) => el === spool)"
-    :d="`M${x} ${y}h${-0.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}z`"
-    stroke="black"
-    stroke-width="1"
-    fill="white"
-  />
+  <path v-if="
+    spool[1] === 'A' || ['A', 'C', 'D', 'D^', 'D1'].some((el) => el === spool)
+  " :d="`M${x} ${y}h${-1.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}z`" stroke="black" stroke-width="1"
+    fill="white" />
+  <path v-if="spool[1] === 'B' || ['B', 'Y', 'Y1'].some((el) => el === spool)"
+    :d="`M${x} ${y}h${-0.5 * h} v${h} h${h} v${-h} v${h} h${h} v${-h}z`" stroke="black" stroke-width="1" fill="white" />
   <Valve3H v-if="spool[0] === 'H'" :x="x" :y="y" :h="h" />
   <Valve3G v-if="spool[0] === 'G'" :x="x" :y="y" :h="h" />
   <Valve3J v-if="spool[0] === 'J'" :x="x" :y="y" :h="h" />
   <Valve3E v-if="spool[0] === 'E'" :x="x" :y="y" :h="h" />
-  <ValveX
-    v-if="spool[1] === 'A' && position[spool[0]] < 0"
-    :x="x - h"
-    :y="y"
-    :h="h"
-  />
-  <ValveX
-    v-if="spool[1] === 'B' && position[spool[0]] > 0"
-    :x="x + h"
-    :y="y"
-    :h="h"
-  />
-  <ValveII
-    v-if="spool[1] === 'B' && position[spool[0]] < 0"
-    :x="x + h"
-    :y="y"
-    :h="h"
-  />
-  <ValveII
-    v-if="spool[1] === 'A' && position[spool[0]] > 0"
-    :x="x - h"
-    :y="y"
-    :h="h"
-  />
+  <ValveX v-if="spool[1] === 'A' && position[spool[0]] < 0" :x="x - h" :y="y" :h="h" />
+  <ValveX v-if="spool[1] === 'B' && position[spool[0]] > 0" :x="x + h" :y="y" :h="h" />
+  <ValveII v-if="spool[1] === 'B' && position[spool[0]] < 0" :x="x + h" :y="y" :h="h" />
+  <ValveII v-if="spool[1] === 'A' && position[spool[0]] > 0" :x="x - h" :y="y" :h="h" />
 
-  <ValveX
-    v-if="spool === 'D' || spool === 'D^' || spool === 'C'"
-    :x="x - h"
-    :y="y"
-    :h="h"
-  />
-  <ValveII
-    v-if="spool === 'D' || spool === 'D^' || spool === 'C'"
-    :x="x"
-    :y="y"
-    :h="h"
-  />
+  <ValveX v-if="spool === 'D' || spool === 'D^' || spool === 'C'" :x="x - h" :y="y" :h="h" />
+  <ValveII v-if="spool === 'D' || spool === 'D^' || spool === 'C'" :x="x" :y="y" :h="h" />
   <ValveX v-if="spool === 'Y'" :x="x" :y="y" :h="h" />
   <ValveII v-if="spool === 'Y'" :x="x + h" :y="y" :h="h" />
   <Valve2A v-if="spool === 'A'" :x="x" :y="y" :h="h" />
@@ -100,18 +60,9 @@ const position = {
   <Valve2Y1Left v-if="spool === 'Y1'" :x="x" :y="y" :h="h" />
   <Valve2Y1Right v-if="spool === 'Y1'" :x="x + h" :y="y" :h="h" />
 
-  <Valve2Left
-    v-if="spool[1] === 'A' || ['A', 'C', 'D', 'D1'].some((el) => el === spool)"
-    :x="x - h * 1.5"
-    :y="y"
-    :h="h"
-  />
-  <Valve2Right
-    v-if="spool[1] === 'B' || ['B', 'Y', 'Y1'].some((el) => el === spool)"
-    :x="x + h * 1.5"
-    :y="y"
-    :h="h"
-  />
+  <Valve2Left v-if="spool[1] === 'A' || ['A', 'C', 'D', 'D1'].some((el) => el === spool)" :x="x - h * 1.5" :y="y"
+    :h="h" />
+  <Valve2Right v-if="spool[1] === 'B' || ['B', 'Y', 'Y1'].some((el) => el === spool)" :x="x + h * 1.5" :y="y" :h="h" />
   <ValveFix v-if="spool.at(-1) === '^'" :x="x - h * 1.5" :y="y" :h="h" />
 </template>
 

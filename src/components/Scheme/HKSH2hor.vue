@@ -10,16 +10,10 @@ const k = 0.75;
   <HKSHhor :x="x + sl / 4" :y="y - (sl * 3) / 4" :sl="sl * k" />
   <path
     :d="`M${x + 0.46 * sl} ${y} A0.7 1 0 1 0 ${x + 0.46 * sl} ${y - sl / 12} v${-sl / 12} h${-sl / 3} v${(-sl * 5) / 12} h${sl / 6} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
-    stroke="black"
-    stroke-width="1"
-    fill="none"
-  />
+    stroke="black" stroke-width="1" fill="none" />
   <path
     :d="`M${x + (1 - 0.46) * sl} ${y} A0.7 1 0 1 0 ${x + (1 - 0.46) * sl} ${y - sl / 12} v${-sl / 12} h${sl / 3} h${sl / 20} v${(-sl * 5) / 12} h${-sl / 3} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
-    stroke="black"
-    stroke-width="1"
-    fill="none"
-  />
+    stroke="black" stroke-width="1" fill="none" />
 
   <!-- <path
         :d="`M${x + 0.46 * sl} ${y} A0.7 1 0 1 0 ${x + 0.46 * sl} ${y - sl / 12} v${-sl / 8} h${-sl * 5 / 16} v${-sl / 8} h${-sl / 16} v${-sl / 4} h${sl * 0.5} v${sl / 20}`"

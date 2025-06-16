@@ -8,20 +8,9 @@ const { x, y, a, text } = defineProps(["x", "y", "a", "text"]);
 
 <template>
   <Point :x="x" :y="y" />
-  <path
-    :d="`M${x} ${y} v${-a / 2 + -a * 1.5}`"
-    stroke="black"
-    stroke-width="2"
-  />
+  <path :d="`M${x} ${y} v${-a / 2 + -a * 1.5}`" stroke="black" stroke-width="2" />
   <ShutOff :x="x" :y="y - a" :a="a / 2" />
-  <circle
-    :cx="x"
-    :cy="y - 3 * a"
-    :r="a"
-    fill="white"
-    stroke="black"
-    stroke-width="1"
-  />
+  <circle :cx="x" :cy="y - 3 * a" :r="a" fill="white" stroke="black" stroke-width="1" />
   <Arrow :x="x" :y="y - 3 * a" :l="a * 1.5" deg="-45" />
   <!-- <path :d="`M${x + a / 2} ${y - 3 * a + a / 2} l${-a} ${-a}`" stroke="black" stroke-width="2" />
     <path :d="`M${x - a / 2} ${y - 3 * a - a / 2} l${a / 3} ${a / 5} l${-a / 6} ${a / 7}z`" stroke="black"

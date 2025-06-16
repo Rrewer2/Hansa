@@ -37,7 +37,7 @@ const { project, meta, order, open } = defineProps([
 // getSmthFromProject(project, 'spool').map(spool => {
 //   order.valve.push({ title: spool });
 // });
-// const filtered = () => spoolData.filter(({ spool }) => spool === meta.spool).sort((a, b) => a.cetop - b.cetop);
+// const filtered = () => spoolData.filter(({ spool }) => spool === meta.spool).sort((a, b) => a.CETOP - b.CETOP);
 const filtered = () => spoolData.filter(({ spool }) => spool === meta.spool);
 const set = new Set();
 spoolData.forEach(({ spool }) => set.add(spool));
@@ -50,7 +50,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     </h2>
     <div class="grid ml-10">
       <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 90" class="valve">
+        viewBox="0 0 200 90" class="valve" :class="spool === meta.spool && 'clicked'">
         <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
       </svg>
     </div>
@@ -90,6 +90,10 @@ spoolData.forEach(({ spool }) => set.add(spool));
   margin: 8px;
   border: 1px solid green;
   background-color: rgba(81, 158, 60, 0.25);
+}
+
+.clicked {
+  background-color: rgba(201, 119, 179, 0.25);
 }
 
 .grid {

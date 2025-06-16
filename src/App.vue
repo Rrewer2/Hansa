@@ -27,21 +27,21 @@ const cylInit = {
   check: "",
   directPress: "",
 };
-const pumpInit = { Q: 8, p: "", DR2type: 1, DBD: "" };
+const pumpInit = { Q: "", p: "", DR2type: 1, DBD: "" };
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
   HKSH: [{ ...cylInit, id: getId("c") }],
 });
 const project = ref([]);
-const meta = ref({ tank: "RA", cooler: 0, pumpType: "gears", spool: "G", lang: 'pl' });
+const meta = ref({ tank: "RA", cooler: 1, pumpType: "gears", spool: "G", lang: 'pl' });
 provide('meta', meta);
 const order = ref({});
 const getNewPowerUnit = () =>
   project.value.push({
     id: getId("u"),
     unit: [getNewPump()],
-    mount: "B35",
+    mount: "",
     n: 1500,
   });
 getNewPowerUnit();
