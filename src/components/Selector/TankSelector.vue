@@ -27,7 +27,7 @@ const { project, meta, order, open } = defineProps([
     </h2>
 
     <div class="flex-row flex-center">
-      <InputItem data="type" class="ml-10">
+      <InputItem data="type">
         <!-- <select v-model="meta.tank" :disabled="order.tank?.title" class="w-100" id="tank"> -->
         <select v-model="meta.tank" class="w-100" id="tank">
           <option v-for="(_, type) in tankData" :value="type">

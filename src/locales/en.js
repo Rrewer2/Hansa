@@ -26,8 +26,8 @@ export default {
   tOut: ["Extension time", "s"],
   tIn: ["Retraction time", "s"],
   tC: ["Cycle", "s"],
-  FOut: ["Force out", "kg"],
-  FIn: ["Force in", "kg"],
+  FOut: ["Force out", "kG"],
+  FIn: ["Force in", "kG"],
   vOut: ["Extension", "mm/s"],
   vIn: ["Retraction", "mm/s"],
   wall: ["Wall thickness", "mm"],
@@ -84,5 +84,6 @@ export default {
   tank: ["Tank"],
   motor: ["Motor"],
   bellhousing: ["Bellhousing"],
-  coupling: ["Coupling"]
+  coupling: ["Coupling"],
+  group: ["Group"],
 };

@@ -84,5 +84,6 @@ export default {
   tank: ["Zbiornik"],
   motor: ["Silnik"],
   bellhousing: ["Kielich"],
-  coupling: ["Sprzęgło"]
+  coupling: ["Sprzęgło"],
+  group: ["Grupa"],
 }

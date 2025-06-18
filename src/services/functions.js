@@ -5,11 +5,10 @@ import {
   VPipe,
   pipesData,
   pipesSData,
-  coolerVZ,
   coolerData,
 } from "./data";
 
-export const round = (num, param = 10) => num === Infinity ? '-' :
+export const round = (num, param = 10) => num === Infinity || isNaN(num) ? '-' :
   typeof num === 'string' ? num :
     Math.round(num * param) / param;
 

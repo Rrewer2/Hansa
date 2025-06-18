@@ -26,9 +26,9 @@ const { project, meta, order, open } = defineProps([
       obj[title] = { ...rest, count: 1 };
     }
   });
-  order.valve = Object.keys(obj).map((key) => {
-    const { count, ...data } = obj[key];
-    return { title: key, valveData: data, count };
+  order.valve = Object.keys(obj).map((title) => {
+    const { count, ...data } = obj[title];
+    return { title, valveData: data, count };
   });
 })();
 // getSmthFromProject(project, 'spool').map(spool => {
@@ -59,8 +59,8 @@ spoolData.forEach(({ spool }) => set.add(spool));
       <tbody>
         <tr v-for="{ title, ...rest } in filtered()" :id="title">
           <td class="tal hover">
-            <!-- <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
-              :checked="title === order.valve?.title" class="mx" /> -->
+            <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
+              :checked="title === order.valve?.title" class="mx" />
 
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">

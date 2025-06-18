@@ -5,7 +5,7 @@ const { data } = defineProps(["data"]);
 </script>
 
 <template>
-  <div v-for="(el, name) in data" class="flex-col fs-sm px-5">
+  <div v-for="(el, name) in data" class="flex-col fs-sm ml-10">
     <h4 class="border border-bottom-no bgc-g h-100 px-5">
       {{ text(name).split(", ")[0] }}
     </h4>

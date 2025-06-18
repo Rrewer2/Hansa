@@ -32,7 +32,7 @@ const getTitle = () => order.cooler?.title;
       {{ text("cooler") }}<span> {{ order.cooler?.title }}</span>
     </h2>
     <div class="flex-row flex-center">
-      <InputItem data="η" class="ml-10">
+      <InputItem data="η">
         <!-- <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" id="η" /> -->
         <input type="number" min="0" max="100" v-model="cooler.η" id="η" />
       </InputItem>
@@ -44,7 +44,7 @@ const getTitle = () => order.cooler?.title;
         </select>
       </InputItem>
 
-      <InputItem data="vZ" class="ml-10">
+      <InputItem data="vZ">
         <!-- <select v-model="cooler.vZ" :disabled="getTitle()" id="vZ"> -->
         <select v-model="cooler.vZ" id="vZ">
           <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
@@ -55,7 +55,7 @@ const getTitle = () => order.cooler?.title;
         Qmax: Qmax(project),
         Pv: Pv(project, cooler.η),
         P01: P01(project, cooler),
-      }" class="ml-10" />
+      }" />
     </div>
     <br />
     <table>

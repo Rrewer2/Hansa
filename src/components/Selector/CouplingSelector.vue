@@ -1,5 +1,5 @@
 <script setup>
-import { couplingData } from "../../services/data";
+import { couplingData, couplingsKitData } from "../../services/data";
 import { getTextWithSpace } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
@@ -16,7 +16,8 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 const filteredCoupling = () => {
   if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
   else {
-    const filtered = couplingData.filter(({ group, size, shaft, pump }) => {
+    const data = order[`motor${i}`]?.motorData?.mount.at(-1) ==='4' ? couplingsKitData : couplingData;
+    const filtered = data.filter(({ group, size, shaft, pump }) => {
       return size === order[`motor${i}`]?.motorData?.size &&
       (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft) &&
       (!group || group === order[`pump${i}`]?.pumpData?.group) &&

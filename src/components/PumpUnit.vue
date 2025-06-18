@@ -26,35 +26,11 @@ const { id, HKSH, same, ...rest } = pumpData;
 
       <div v-for="(_, ind) in rest" class="ml-10">
         <InputItem :data="ind">
-          <input
-            v-if="ind === 'Q'"
-            type="number"
-            min="0"
-            v-model="pumpData[ind]"
-            :disabled="order[`pump${i}-${k}`]?.title"
-            :id="ind"
-          />
-          <input
-            v-if="ind === 'p'"
-            type="number"
-            min="0"
-            v-model="pumpData[ind]"
-            :id="ind"
-          />
-          <input
-            v-if="ind === 'DBD'"
-            type="number"
-            min="0"
-            v-model="pumpData[ind]"
-            :id="ind"
-          />
-          <select
-            v-if="ind === 'DR2type'"
-            v-model="pumpData.DR2type"
-            class="w-100"
-            :disabled="same"
-            :id="ind"
-          >
+          <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
+            :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
+          <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
+          <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
+          <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="ind">
             <option v-for="item in [0, 1, 2, 3]" :value="item">
               {{ item }}
             </option>
@@ -65,23 +41,14 @@ const { id, HKSH, same, ...rest } = pumpData;
       <ResultItem :data="pumpCounting(pumpData)" />
     </div>
 
-    <Hydrocylinder
-      v-for="(_, j) in pumpData.HKSH"
-      :key="pumpData.HKSH[j].id"
-      :HKSH="pumpData.HKSH[j]"
-      :pumpData="{ ...pumpData, same }"
-      :class="buckling({ ...pumpData, HKSH: HKSH[j] })"
-      class="my-2 border"
-    >
-      <button
-        @click="
-          () =>
-            (pumpData.HKSH = pumpData.HKSH.filter(
-              ({ id }) => id !== pumpData.HKSH[j].id,
-            ))
-        "
-        class="el"
-      >
+    <Hydrocylinder v-for="(_, j) in pumpData.HKSH" :key="pumpData.HKSH[j].id" :HKSH="pumpData.HKSH[j]"
+      :pumpData="{ ...pumpData, same }" :class="buckling({ ...pumpData, HKSH: HKSH[j] })" class="my-2 border">
+      <button @click="
+        () =>
+        (pumpData.HKSH = pumpData.HKSH.filter(
+          ({ id }) => id !== pumpData.HKSH[j].id,
+        ))
+      " class="el">
         ✕
       </button>
     </Hydrocylinder>

@@ -5,7 +5,7 @@ const { data } = defineProps(["data"]);
 </script>
 
 <template>
-  <div class="inline w-75">
+  <div class="inline w-75 ml-10">
     <h4 class="border border-bottom-no bgc-g fs-sm px-5">
       <i>{{ text(data).split(', ')[0] }}</i>
     </h4>

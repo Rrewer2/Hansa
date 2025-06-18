@@ -58,7 +58,7 @@ const getTitle = (item) => Object.keys(item)[0];
         </InputItem>
       </span>
 
-      <InputItem data="n" class="ml-10">
+      <InputItem data="n">
         <!-- <select v-model="powerUNIT.n" :disabled="order[`pump${i}`] ||
           Object.keys(order).some((str) => str.includes(`motor${i}`))
           " id="n"> -->
@@ -67,7 +67,7 @@ const getTitle = (item) => Object.keys(item)[0];
         </select>
       </InputItem>
 
-      <InputItem data="pumpType" class="ml-10">
+      <InputItem data="pumpType">
         <select v-model="meta.pumpType" id="pumpType">
           <option v-for="item in Object.keys(pumpData)" :value="item">
             {{ text(item) }}
