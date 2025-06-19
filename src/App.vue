@@ -34,8 +34,14 @@ const getNewPump = () => ({
   HKSH: [{ ...cylInit, id: getId("c") }],
 });
 const project = ref([]);
-const meta = ref({ tank: "RA", cooler: 1, pumpType: "gears", spool: "G", lang: 'pl' });
-provide('meta', meta);
+const meta = ref({
+  tank: "RA",
+  cooler: 1,
+  pumpType: "gears",
+  spool: "G",
+  lang: "pl",
+});
+provide("meta", meta);
 const order = ref({});
 const getNewPowerUnit = () =>
   project.value.push({
@@ -108,9 +114,9 @@ const navPage = ref([false, false, true, false, false]);
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />
   <LanguageSwitcher :meta="meta" />
-  <!-- <div>project {{ project }}</div>
-    <div>order {{ order }}</div>
-    <div>meta {{ meta }}</div> -->
+  <!-- <div>project {{ project }}</div> -->
+  <!-- <div>order {{ order }}</div> -->
+  <div>meta {{ meta }}</div>
 </template>
 
 <style>

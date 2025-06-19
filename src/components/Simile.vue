@@ -24,18 +24,29 @@ const getDiffBetween = (orderStr, modelStr) => {
       : (modelObj[trimTitle] = [N * (KIT || 1)]);
   });
   const res = [];
-  Object.keys(orderObj).forEach(title => {
+  Object.keys(orderObj).forEach((title) => {
     const orderCount = orderObj[title].map(({ N }) => N);
     const orderNumber = orderObj[title].map(({ nr }) => nr);
     if (!modelObj[title]) {
-      res.push([`${orderNumber.join(", ")}`, title, `${orderCount.join(", ")}`].join("\t"));
+      res.push(
+        [`${orderNumber.join(", ")}`, title, `${orderCount.join(", ")}`].join(
+          "\t",
+        ),
+      );
     } else {
       const modelCount = modelObj[title];
       if (
         orderCount.reduce((a, b) => +a + +b) !==
         modelCount.reduce((a, b) => +a + +b)
       ) {
-        res.push([`${orderNumber.join(", ")}`, title, `${orderCount.join(", ")}`, `/ ${modelCount.join(", ")}`].join("\t"));
+        res.push(
+          [
+            `${orderNumber.join(", ")}`,
+            title,
+            `${orderCount.join(", ")}`,
+            `/ ${modelCount.join(", ")}`,
+          ].join("\t"),
+        );
       }
     }
   });
@@ -44,7 +55,7 @@ const getDiffBetween = (orderStr, modelStr) => {
     if (!orderObj[title]) {
       res.push([title, `${modelObj[title].join(", ")}`].join("\t"));
     }
-  }); 
+  });
   return res.join("\n");
   // const res = [];
   // Object.keys(orderObj).forEach((title) => {
@@ -79,8 +90,9 @@ const getDiffBetween = (orderStr, modelStr) => {
     <textarea name="lista" id="lista" placeholder="Wklej z listy cześci:
 HKHQ012 2" v-model="simile.lista"></textarea>
   </section>
-  <textarea id="result"
-    placeholder="Różnica między zleceniem a listą części">{{ getDiffBetween(simile.zlec, simile.lista) }}</textarea>
+  <textarea id="result" placeholder="Różnica między zleceniem a listą części">{{
+    getDiffBetween(simile.zlec, simile.lista)
+  }}</textarea>
 </template>
 
 <style scoped>

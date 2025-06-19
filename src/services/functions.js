@@ -8,9 +8,12 @@ import {
   coolerData,
 } from "./data";
 
-export const round = (num, param = 10) => num === Infinity || isNaN(num) ? '-' :
-  typeof num === 'string' ? num :
-    Math.round(num * param) / param;
+export const round = (num, param = 10) =>
+  num === Infinity || isNaN(num)
+    ? "-"
+    : typeof num === "string"
+      ? num
+      : Math.round(num * param) / param;
 
 export const getId = (key) => key + Date.now();
 
@@ -107,7 +110,7 @@ export const buckling = ({ HKSH: { D, d, L }, p, DBD }) => {
 export const unitTitle = (unit) => {
   const power = getStandartPower(reducedPower(unit));
   const pumpLitre = unit.map((item) => item.Q).join("x");
-  return round(power) && pumpLitre ? `${round(power)}kW - ${pumpLitre}L`: '';
+  return round(power) && pumpLitre ? `${round(power)}kW - ${pumpLitre}L` : "";
 };
 export const getQfromProject = (project) =>
   project.map(({ unit }) => unit.map(({ Q }) => Q)).flat();
@@ -172,7 +175,7 @@ export const filtrationD = (arr, D) => arr;
 // };
 // console.log(splitJoin('407.5,572 409,575 413,572'));
 export const getTextWithSpace = (text) =>
-  text.match(/HK|[a-zA-Z.\-\/]+|\d+/g).join(" ");
+  text.match(/HK|[a-zA-Z.\-\/]+|\d+\.+\d+|\d+/g).join(" ");
 
 export const Pv = (project, η) =>
   project

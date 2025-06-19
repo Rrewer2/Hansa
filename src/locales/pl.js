@@ -54,7 +54,7 @@ export default {
   throttle: ["HKHQ"],
   check: ["HKHR"],
   directPress: ["HKHMP"],
-  DBD: ['DBD', 'bar'],
+  DBD: ["DBD", "bar"],
   // Navigation items
   calculations: ["Obliczenia"],
   scheme: ["Schemat"],
@@ -86,4 +86,4 @@ export default {
   bellhousing: ["Kielich"],
   coupling: ["Sprzęgło"],
   group: ["Grupa"],
-}
+};

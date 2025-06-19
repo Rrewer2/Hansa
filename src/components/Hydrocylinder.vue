@@ -63,7 +63,7 @@ const {
 
           <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="i" class="w-75">
             <option v-for="elem in getValue[i]" :value="elem">
-              {{ i === 'form' ? text(elem) : elem }}
+              {{ i === "form" ? text(elem) : elem }}
             </option>
           </select>
         </InputItem>

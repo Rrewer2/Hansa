@@ -10,11 +10,11 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => tag.includes('-')
-        }
-      }
-    }), 
-    vueJsx()
+          isCustomElement: (tag) => tag.includes("-"),
+        },
+      },
+    }),
+    vueJsx(),
   ],
   resolve: {
     alias: {

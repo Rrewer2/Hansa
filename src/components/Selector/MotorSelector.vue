@@ -5,7 +5,7 @@ import {
   enginesData,
   freqData,
   motorData,
-  motorSizes
+  motorSizes,
 } from "../../services/data";
 import {
   getTextWithSpace,
@@ -27,7 +27,7 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 const P = ref("");
-const motorSize = ref('');
+const motorSize = ref("");
 const filteredMotors = () =>
   enginesData.filter(
     ({ power, mount }) =>
@@ -40,16 +40,18 @@ const motorsByPower = () =>
     ({ power, mount }) =>
       power === P.value && (!powerUNIT.mount || mount === powerUNIT.mount),
   );
-  const motorsBySize = () =>
+const motorsBySize = () =>
   enginesData.filter(
     ({ size, mount }) =>
-      size === motorSize.value && (!powerUNIT.mount || mount === powerUNIT.mount),
+      size === motorSize.value &&
+      (!powerUNIT.mount || mount === powerUNIT.mount),
   );
-const motors = () => (P.value ? motorsByPower() : motorSize ? motorsBySize() : filteredMotors());
+const motors = () =>
+  P.value ? motorsByPower() : motorSize ? motorsBySize() : filteredMotors();
 const getTitle = () => order[`motor${i}`]?.title;
-const selectedMotor = (elem) => {
-  powerUNIT.mount = elem.mount;
-  motorSize.value = elem.size;
+const selectedMotor = ({ mount, size }) => {
+  powerUNIT.mount = mount;
+  motorSize.value = size;
 };
 </script>
 

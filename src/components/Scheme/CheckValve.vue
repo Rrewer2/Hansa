@@ -1,5 +1,5 @@
 <script setup>
-import Spring from './Spring.vue';
+import Spring from "./Spring.vue";
 
 const { x, y, r, deg } = defineProps(["x", "y", "r", "deg"]);
 </script>

@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 import { pumpData, freqData } from "../../services/data";
 import {
   getQ,
@@ -12,6 +13,7 @@ import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import CopyText from "./CopyText.vue";
 
+const group = ref("");
 const { project, meta, order, powerUNIT, i } = defineProps([
   "project",
   "meta",
@@ -24,9 +26,17 @@ const filteredPumps = () => {
   if (powerUNIT.unit.length === 1) {
     const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
     const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
-    return pumpData[meta.pumpType].filter((pump) => {
-      const CC = Object.values(pump)[0].CC - VFU;
-      return CC >= -par && CC <= par && Object.values(pump)[0].pmax > powerUNIT.unit[0].p;
+    return pumpData[meta.pumpType].filter((item) => {
+      const pump = Object.values(item)[0];
+      const CC = pump.CC - VFU;
+      return (
+        CC >= -par &&
+        CC <= par &&
+        pump.pmax > powerUNIT.unit[0].p &&
+        (group.value === '' ||
+          meta.pumpType !== "gears" ||
+          group.value === pump.group)
+      );
     });
   }
   if (powerUNIT.unit.length > 1) return [];
@@ -43,7 +53,8 @@ const getTitle = (item) => Object.keys(item)[0];
 <template>
   <article>
     <h2>
-      {{ text("pump") }} {{ i ? i + 1 : "" }}<span> {{ order[`pump${i}`]?.title }}</span>
+      {{ text("pump") }} {{ i ? i + 1 : ""
+      }}<span> {{ order[`pump${i}`]?.title }}</span>
     </h2>
 
     <div class="flex-row flex-center">
@@ -71,6 +82,14 @@ const getTitle = (item) => Object.keys(item)[0];
         <select v-model="meta.pumpType" id="pumpType">
           <option v-for="item in Object.keys(pumpData)" :value="item">
             {{ text(item) }}
+          </option>
+        </select>
+      </InputItem>
+
+      <InputItem v-if="meta.pumpType === 'gears'" data="group">
+        <select v-model="group" id="group">
+          <option v-for="item in ['', 0, 1, 2, 3]" :value="item">
+            {{ item }}
           </option>
         </select>
       </InputItem>

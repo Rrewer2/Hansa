@@ -44,7 +44,11 @@ const xFilter = tankGap + LTank - 150;
       :xM="tankGap + 200" :yM="yTank() - 1.25 * R() - 100" />
     <Tank :x="tankGap" :y="yTank()" :L="LTank" :H="() => screenSize - 150 - yTank()"
       :pumps="project.flatMap(({ unit }) => unit)">
-      {{ order.tank?.tankData?.Size || getStandartTank(meta, getT(getQfromProject(project)))?.Size || "___" }}L
+      {{
+        order.tank?.tankData?.Size ||
+        getStandartTank(meta, getT(getQfromProject(project)))?.Size ||
+        "___"
+      }}L
     </Tank>
     <PumpUnit v-for="(pumps, i) in project" :x="tankGap + 200 + 1000 * i" :y="yTank() - 1.25 * R()" :pumps="pumps.unit"
       :mount="pumps.mount" :R="R()">

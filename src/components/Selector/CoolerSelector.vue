@@ -6,7 +6,7 @@ import {
   Pv,
   Qmax,
   filteredCooler,
-  getTextWithSpace
+  getTextWithSpace,
 } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";

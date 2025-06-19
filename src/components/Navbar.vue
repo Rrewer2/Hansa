@@ -2,7 +2,13 @@
 <script lang="js" setup>
 import { text } from "../services/text";
 
-const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity"];
+const navData = [
+  "calculations",
+  "scheme",
+  "partsSelection",
+  "offer",
+  "similarity",
+];
 const { navPage } = defineProps(["navPage"]);
 </script>
 

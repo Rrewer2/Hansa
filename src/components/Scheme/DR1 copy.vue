@@ -47,8 +47,7 @@ const width = 2;
       <path :d="'M' +
         `${x0 + x} ${y + y0 + hS / 2 + y1 + hS / 6 + hS} l${hS / 10} ${-hS / 3} h${-hS / 5}z`
         " stroke="black" stroke-width="2" />
-      <path :d="'M' + `${x0 + x + hS} ${y + y0 + hS / 2 + y1 + hS / 6} v${hS / 3}`
-        " stroke="black" stroke-width="2" />
+      <path :d="'M' + `${x0 + x + hS} ${y + y0 + hS / 2 + y1 + hS / 6} v${hS / 3}`" stroke="black" stroke-width="2" />
       <path :d="'M' +
         `${x0 + x + hS} ${y + y0 + hS / 2 + y1 + hS / 6 + hS / 3} h${-hS / 6} h${hS / 3}`
         " stroke="black" stroke-width="2" />

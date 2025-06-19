@@ -16,8 +16,8 @@
 </template>
 
 <script lang="js" setup>
-import { ref } from 'vue';
-import { messages } from '../locales';
+import { ref } from "vue";
+import { messages } from "../locales";
 
 const isOpen = ref(false);
 const switcherRef = ref(null);

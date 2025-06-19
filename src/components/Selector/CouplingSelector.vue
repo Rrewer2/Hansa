@@ -16,18 +16,23 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 const filteredCoupling = () => {
   if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
   else {
-    const data = order[`motor${i}`]?.motorData?.mount.at(-1) ==='4' ? couplingsKitData : couplingData;
+    const data =
+      order[`motor${i}`]?.motorData?.mount.at(-1) === "4"
+        ? couplingsKitData
+        : couplingData;
     const filtered = data.filter(({ group, size, shaft, pump }) => {
-      return size === order[`motor${i}`]?.motorData?.size &&
-      (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft) &&
-      (!group || group === order[`pump${i}`]?.pumpData?.group) &&
-      (!pump || order[`pump${i}`].title?.startsWith(pump))
-});
-  if (filtered.length === 1) {
-    const { title, ...rest } = filtered[0];
-    order.coupling = { title, couplingData: { ...rest } };
-  }
-  return filtered;
+      return (
+        size === order[`motor${i}`]?.motorData?.size &&
+        (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft) &&
+        (!group || group === order[`pump${i}`]?.pumpData?.group) &&
+        (!pump || order[`pump${i}`].title?.startsWith(pump))
+      );
+    });
+    if (filtered.length === 1) {
+      const { title, ...rest } = filtered[0];
+      order.coupling = { title, couplingData: { ...rest } };
+    }
+    return filtered;
   }
 };
 </script>
@@ -35,7 +40,8 @@ const filteredCoupling = () => {
 <template>
   <article>
     <h2>
-      {{ text("coupling") }} {{ i ? i + 1 : "" }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
+      {{ text("coupling") }} {{ i ? i + 1 : ""
+      }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
     </h2>
 
     <br />
