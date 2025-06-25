@@ -38,7 +38,7 @@ const meta = ref({
   tank: "RA",
   cooler: 1,
   pumpType: "gears",
-  spool: "G",
+  // spool: "G",
   lang: "pl",
 });
 provide("meta", meta);
@@ -354,5 +354,9 @@ td {
 
 .mx {
   padding: 10;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }
 </style>

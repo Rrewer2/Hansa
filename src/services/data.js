@@ -192,6 +192,37 @@ export const filterData = [];
 
 export const spoolTypes = ['G','GA','GB', 'E','EA','EB', 'J','JA','JB', 'H','HA','HB', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
 
+export const flanges = [
+  { title: "WDA0.512", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14" }, 
+  { title: "WDA0.538", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19" }, 
+  { title: "WDA112", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14" }, 
+  { title: "WDA138", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19" }, 
+  { title: "WDA212", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14" }, 
+  { title: "WDA234", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14" }, 
+  { title: "WDA334", pressure: 180, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14" }, 
+  { title: "WDA3100", pressure: 180, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11" },
+  { title: "WDS0.512", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14" },
+  { title: "WDS0.538", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19" },
+  { title: "WDS112", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14" },
+  { title: "WDS138", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19" },
+  { title: "WDS212", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14" },
+  { title: "WDS234", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14" },
+  { title: "WDS3100", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 1″ -11" },
+  { title: "WDS334", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14" },
+  { title: "WDS3B100", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11" },
+  { title: "WDS3B34", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14" },
+  { title: "F1", pressure: 250, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19" },
+  { title: "F2", pressure: 250, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14" },
+  { title: "F3A", pressure: 250, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14" },
+  { title: "F3B", pressure: 250, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14" },
+  { title: "F3.5A", pressure: 180, LK: "LK Ø 62 mm / M 10", thread: "G 1″ -11" },
+  { title: "F3.5B", pressure: 180, LK: "LK Ø 62 mm / M 12", thread: "G 1″ -11" },
+  { title: "F4", pressure: 180, LK: "LK Ø 72.5 mm / M 12", thread: "G 1.1/4″ -11" },
+];
+
+export const flangesPP = [
+  { title: "HKK234069000", pressure: 10, LK: "G 3/8″ -19" },
+];
 
 export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
 const gearPumpAPF = [

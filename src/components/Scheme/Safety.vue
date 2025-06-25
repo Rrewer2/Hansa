@@ -14,7 +14,7 @@ const { x, y, a, direction } = defineProps(["x", "y", "a", "direction"]);
       stroke="black" stroke-width=" 1" />
     <path :d="`M${x} ${y - a / 2} l${-a / 2} ${-a / 4} h${-a / 8} v${a - a / 4} h${a / 8}`" stroke="black"
       stroke-dasharray="5 5" stroke-width="1" fill="none" />
-    <Spring :x="x + a / 2" :y="y" :h="a / 4" deg="180" />
+    <Spring :x="x + a / 2" :y="y" :h="a / 4" deg="90" />
     <!-- <path
       :d="`M${x + a / 2} ${y + a / 4} l${a / 10} ${-a / 2} l${a / 10} ${a / 2} l${a / 10} ${-a / 2} l${a / 10} ${a / 2}`"
       stroke="black" stroke-width="1" fill="none" /> -->
@@ -28,7 +28,7 @@ const { x, y, a, direction } = defineProps(["x", "y", "a", "direction"]);
       stroke="black" stroke-width=" 1" />
     <path :d="`M${x - a / 2} ${y} l${-a / 4} ${-a / 2} v${-a / 8} h${a - a / 4} v${a / 8}`" stroke="black"
       stroke-dasharray="5 5" stroke-width="1" fill="none" />
-    <Spring :x="x" :y="y + a / 2" :h="a / 4" deg="270" />
+    <Spring :x="x" :y="y + a / 2" :h="a / 4" deg="180" />
     <Arrow :x="x" :y="y + a - a / 4" :l="a * 1.5" deg="105" />
   </template>
   <template v-if="direction === 'left'">
@@ -39,8 +39,8 @@ const { x, y, a, direction } = defineProps(["x", "y", "a", "direction"]);
       stroke="black" stroke-width=" 1" />
     <path :d="`M${x + a / 2} ${y} l${a / 4} ${-a / 2} v${-a / 8} h${-a + a / 4} v${a / 8}`" stroke="black"
       stroke-dasharray="5 5" stroke-width="1" fill="none" />
-    <Spring :x="x" :y="y + a / 2" :h="a / 4" deg="270" />
-    <Arrow :x="x" :y="y + a - a / 4" :l="a * 1.5" deg="-105" />
+    <Spring :x="x" :y="y + a / 2" :h="a / 4" deg="180" />
+    <Arrow :x="x" :y="y + a - a / 4" :l="a * 1.5" deg="105" />
   </template>
 </template>
 

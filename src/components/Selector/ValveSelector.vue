@@ -81,6 +81,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
 .valve {
   margin: 10px;
   cursor: pointer;
+  transition: all 0.1s ease;
 }
 
 .valve:hover {

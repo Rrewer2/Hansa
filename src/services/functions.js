@@ -203,7 +203,7 @@ export const KITtitle = (order) => {
   const Qkeys = Object.keys(order).filter((key) => key.includes("pump"));
   const Q = Qkeys.length
     ? Qkeys.map((key) =>
-        round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n)),
+        round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1),
       ).join("/")
     : "___";
   return `HAG${type}${Size}-${P}-${Q} AGREGAT HYDRAULICZNY`;

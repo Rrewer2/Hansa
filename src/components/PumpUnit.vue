@@ -53,7 +53,7 @@ const { id, HKSH, same, ...rest } = pumpData;
       </button>
     </Hydrocylinder>
     <div class="flex-row flex-left pl-25">
-      <button @click="$emit('addCyl')" class="btn-add my-2">+ HKSH</button>
+      <button @click="$emit('addCyl')" class="btn-add my-2">+ Section</button>
     </div>
   </article>
 </template>
