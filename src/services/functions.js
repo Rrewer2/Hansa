@@ -9,10 +9,10 @@ import {
 } from "./data";
 
 export const round = (num, param = 10) =>
-  num === Infinity || isNaN(num)
-    ? "-"
-    : typeof num === "string"
-      ? num
+   typeof num === "string"
+      ? num :
+      num === Infinity || isNaN(num)
+      ? "-"      
       : Math.round(num * param) / param;
 
 export const getId = (key) => key + Date.now();
