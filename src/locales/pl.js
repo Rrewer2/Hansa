@@ -86,4 +86,7 @@ export default {
   bellhousing: ["Kielich"],
   coupling: ["Sprzęgło"],
   group: ["Grupa"],
+  inputFromSap: ['Wstaw ze zlecenia'],
+  inputFromSolid: ['Wklej z listy cześci'],
+  difference: ['Różnica między zleceniem a listą części'],
 };

@@ -1,4 +1,6 @@
 <script setup>
+import { text } from '../services/text';
+
 const { simile } = defineProps(["simile"]);
 const getDiffBetween = (orderStr, modelStr) => {
   if (!orderStr.trim().length || !modelStr.trim().length) return "";
@@ -85,12 +87,12 @@ const getDiffBetween = (orderStr, modelStr) => {
 
 <template>
   <section>
-    <textarea name="zlec" id="zlec" placeholder="Wstaw ze zlecenia:
-100 HKHQ012  1" v-model="simile.zlec"></textarea>
-    <textarea name="lista" id="lista" placeholder="Wklej z listy cześci:
-HKHQ012 2" v-model="simile.lista"></textarea>
+    <textarea name="zlec" id="zlec" :placeholder="`${text('inputFromSap')}:
+100 HKHQ012  1`" v-model="simile.zlec"></textarea>
+    <textarea name="lista" id="lista" :placeholder="`${text('inputFromSolid')}:
+HKHQ012 2`" v-model="simile.lista"></textarea>
   </section>
-  <textarea id="result" placeholder="Różnica między zleceniem a listą części">{{
+  <textarea id="result" :placeholder="text('difference')">{{
     getDiffBetween(simile.zlec, simile.lista)
   }}</textarea>
 </template>

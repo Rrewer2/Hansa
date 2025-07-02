@@ -86,4 +86,7 @@ export default {
   bellhousing: ["Bellhousing"],
   coupling: ["Coupling"],
   group: ["Group"],
+  inputFromSap: ['Insert from SAP'],
+  inputFromSolid: ['Paste from parts list from SOLID'],
+  difference: ['Difference between order and parts list'],
 };

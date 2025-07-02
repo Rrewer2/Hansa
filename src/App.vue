@@ -116,7 +116,7 @@ const navPage = ref([false, false, true, false, false]);
   <LanguageSwitcher :meta="meta" />
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
-  <div>meta {{ meta }}</div>
+  <!-- <div>meta {{ meta }}</div> -->
 </template>
 
 <style>
@@ -131,6 +131,7 @@ const navPage = ref([false, false, true, false, false]);
   background-color: rgba(14, 44, 14, 0.25);
   min-height: 100vh;
   padding: 5px;
+  padding-top: 40px;
 }
 
 article,
