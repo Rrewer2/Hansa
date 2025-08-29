@@ -865,34 +865,24 @@ const multipleConnectionPlateBA314 = Array.from({ length: 5 }, (_, i) => {
     DBV: false
   };
 });
-const multipleConnectionPlateEM1033F = Array.from({ length: 5 }, (_, i) => {
-  const stations = 2 + i;
-  return {
-    title: `HKEM103{stations}38X3F`,
-    cetop: 3,
-    stations,
-    pressure: 350,
-    threadP: 'G 1/2″ -14',
-    threadT: 'G 1/2″ -14',
-    threadA: 'G 3/8″ -19',
-    threadB: 'G 3/8″ -19',
-    DBV: true
-  };
-});
-const multipleConnectionPlateEM1032F = Array.from({ length: 5 }, (_, i) => {
-  const stations = 2 + i;
-  return {
-    title: `HKEM103{stations}38X2F`,
-    cetop: 3,
-    stations,
-    pressure: 210,
-    threadP: 'G 1/2″ -14',
-    threadT: 'G 1/2″ -14',
-    threadA: 'G 3/8″ -19',
-    threadB: 'G 3/8″ -19',
-    DBV: true
-  };
-});
+const createMultipleConnectionPlateEM103 = (suffix) => 
+  Array.from({ length: 5 }, (_, i) => {
+    const stations = 2 + i;
+    return {
+      title: `HKEM103${stations}38X${suffix}`,
+      cetop: 3,
+      stations,
+      pressure: suffix === "3F" ? 350 : 210,
+      threadP: 'G 1/2″ -14',
+      threadT: 'G 1/2″ -14',
+      threadA: 'G 3/8″ -19',
+      threadB: 'G 3/8″ -19',
+      DBV: true
+    };
+  });
+
+const multipleConnectionPlateEM1033F = createMultipleConnectionPlateEM103("3F", 350);
+const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F", 210);
 const multipleConnectionPlateEM1053F = Array.from({ length: 4 }, (_, i) => {
   const stations = 2 + i;
   return {
@@ -921,6 +911,36 @@ const multipleConnectionPlateEM1052F = Array.from({ length: 4 }, (_, i) => {
     DBV: true
   };
 });
+const multipleConnectionPlateDR2 = Array.from({ length: 4 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `K-DR2-06/{stations}1-AL`,
+    cetop: 5,
+    stations,
+    pressure: 120,
+    threadP: 'G 3/4″ -14',
+    threadT: 'G 3/4″ -14',
+    threadA: 'G 3/4″ -14',
+    threadB: 'G 3/4″ -14',
+    DBV: true
+  };
+});
+  //K-DR2-06/11-AL
+//K-DR2-06/11-ST
+//K-DR2-06/21-AL
+//K-DR2-06/21-ST
+//K-DR2-06/22-AL
+//K-DR2-06/22ST-B
+//K-DR2-06/31-AL
+//K-DR2-06/31-ST
+//K-DR2-06/32-AL
+//K-DR2-06/41-AL
+//K-DR2-06/41-ST
+//K-DR2-06/42-AL
+//K-DR2-06/51-AL
+//K-DR2-06/52-AL
+//K-DR2-06/61-AL
+//K-DR2-06/62-AL
 export const block = [
   ...singleConnectionPlate.map(el => ({...el, stations: 1 })),
   ...multipleConnectionPlateBA214,
