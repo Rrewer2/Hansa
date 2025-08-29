@@ -812,7 +812,17 @@ export const spoolData = [
   ...spoolEaton.map(({title,CETOP,...rest})=>({title: title.replace('HKDG4V3','HKDG4V5'),...rest,CETOP: 5})),
   ...spoolAtosCetop5,
 ];
-
+export const gasketPump = [
+  {title: "HKDPT160NBR", size: 71},
+  {title: "HKDPT200NBR", size: 80},
+  {title: "HKDPT200NBR", size: 90},
+  {title: "HKDPT250NBR", size: 100},
+  {title: "HKDPT250NBR", size: 112},
+  {title: "HKDPT300NBR", size: 132},
+  {title: "HKDPT350NBR", size: 160},
+  {title: "HKDPT350NBR", size: 180},
+  {title: "HKDPT400NBR", size: 200},
+];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
