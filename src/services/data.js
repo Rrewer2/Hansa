@@ -823,6 +823,113 @@ export const gasketPump = [
   {title: "HKDPT350NBR", size: 180},
   {title: "HKDPT400NBR", size: 200},
 ];
+const singleConnectionPlate = [
+  {title: "HKES3B38X2F", cetop: 3, pressure: 210, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "HKES3B38X3F", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "HKES5B34PLX2F", cetop: 5, pressure: 120, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
+  {title: "HKES5B34PLX3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
+  {title: "HKEM103138X2F", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "HKEM103138X3F", cetop: 3, pressure: 350, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "HKEM105134X2F", cetop: 5, pressure: 120, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
+  {title: "HKEM105134X3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
+  {title: "HKBA201HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
+  {title: "HKBA202HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
+  {title: "HKBA204HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
+  
+];
+const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKBA214${stations}`,
+    cetop: 3,
+    stations,
+    pressure: 350,
+    threadP: 'G 1/2″ -14',
+    threadT: 'G 1/2″ -14',
+    threadA: 'G 3/8″ -19',
+    threadB: 'G 3/8″ -19',
+    DBV: false
+  };
+});
+const multipleConnectionPlateBA314 = Array.from({ length: 5 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKBA314${stations}`,
+    cetop: 5,
+    stations,
+    pressure: 350,
+    threadP: 'G 3/4″ -14',
+    threadT: 'G 1″ -11',
+    threadA: 'G 3/4″ -14',
+    threadB: 'G 3/4″ -14',
+    DBV: false
+  };
+});
+const multipleConnectionPlateEM1033F = Array.from({ length: 5 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKEM103{stations}38X3F`,
+    cetop: 3,
+    stations,
+    pressure: 350,
+    threadP: 'G 1/2″ -14',
+    threadT: 'G 1/2″ -14',
+    threadA: 'G 3/8″ -19',
+    threadB: 'G 3/8″ -19',
+    DBV: true
+  };
+});
+const multipleConnectionPlateEM1032F = Array.from({ length: 5 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKEM103{stations}38X2F`,
+    cetop: 3,
+    stations,
+    pressure: 210,
+    threadP: 'G 1/2″ -14',
+    threadT: 'G 1/2″ -14',
+    threadA: 'G 3/8″ -19',
+    threadB: 'G 3/8″ -19',
+    DBV: true
+  };
+});
+const multipleConnectionPlateEM1053F = Array.from({ length: 4 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKEM105{stations}34X3F`,
+    cetop: 5,
+    stations,
+    pressure: 270,
+    threadP: 'G 3/4″ -14',
+    threadT: 'G 3/4″ -14',
+    threadA: 'G 3/4″ -14',
+    threadB: 'G 3/4″ -14',
+    DBV: true
+  };
+});
+const multipleConnectionPlateEM1052F = Array.from({ length: 4 }, (_, i) => {
+  const stations = 2 + i;
+  return {
+    title: `HKEM105{stations}34X2F`,
+    cetop: 5,
+    stations,
+    pressure: 120,
+    threadP: 'G 3/4″ -14',
+    threadT: 'G 3/4″ -14',
+    threadA: 'G 3/4″ -14',
+    threadB: 'G 3/4″ -14',
+    DBV: true
+  };
+});
+export const block = [
+  ...singleConnectionPlate.map(el => ({...el, stations: 1 })),
+  ...multipleConnectionPlateBA214,
+  ...multipleConnectionPlateBA314,
+  ...multipleConnectionPlateEM1033F,
+  ...multipleConnectionPlateEM1032F,
+  ...multipleConnectionPlateEM1053F,
+  ...multipleConnectionPlateEM1052F,
+];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
