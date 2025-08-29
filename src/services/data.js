@@ -640,7 +640,7 @@ export const couplingData = [
   {title: "HKA24322860N1AL", size: 112, shaft: "1: 8", group: 1},
   
   {title: "HKA2419N2AAL", size: 80, shaft: "1: 8", group: 2},
-  {title: "HKA2419N2AAL", size: 90, shaft: "1: 8", group: 2},
+  {title: "HKA2424N2AAL", size: 90, shaft: "1: 8", group: 2},
   {title: "HKA243228N2AAL", size: 100, shaft: "1: 8", group: 2},
   {title: "HKA243228N2AAL", size: 112, shaft: "1: 8", group: 2},
   
