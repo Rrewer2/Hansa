@@ -835,7 +835,7 @@ const singleConnectionPlate = [
   {title: "HKBA201HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA202HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA204HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
-  
+  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
 ];
 const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   const stations = 2 + i;
@@ -911,7 +911,7 @@ const multipleConnectionPlateEM1052F = Array.from({ length: 4 }, (_, i) => {
     DBV: true
   };
 });
-const multipleConnectionPlateDR2 = Array.from({ length: 4 }, (_, i) => {
+const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
   const stations = 2 + i;
   return {
     title: `K-DR2-06/{stations}1-AL`,
@@ -941,7 +941,7 @@ const multipleConnectionPlateDR2 = Array.from({ length: 4 }, (_, i) => {
 //K-DR2-06/52-AL
 //K-DR2-06/61-AL
 //K-DR2-06/62-AL
-export const block = [
+export const blockData = [
   ...singleConnectionPlate.map(el => ({...el, stations: 1 })),
   ...multipleConnectionPlateBA214,
   ...multipleConnectionPlateBA314,
@@ -949,6 +949,7 @@ export const block = [
   ...multipleConnectionPlateEM1032F,
   ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateEM1052F,
+  ...multipleConnectionPlateDR2,
 ];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
