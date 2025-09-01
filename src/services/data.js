@@ -823,6 +823,18 @@ export const gasketPump = [
   {title: "HKDPT350NBR", size: 180},
   {title: "HKDPT400NBR", size: 200},
 ];
+export const dampingRail = [
+  {title: "HKDLMDL90L", size: 90},
+  {title: "HKDLMDL100L", size: 100},
+  {title: "HKDLMDL112M", size: 112},
+  {title: "HKDLMDL132S", size: 132},
+  {title: "HKDLMDL132M", size: 132},
+  {title: "HKDLMDL160M", size: 160},
+  {title: "HKDLMDL160L", size: 160},
+  {title: "HKDLMDL180M", size: 180},
+  {title: "HKDLMDL180L", size: 180},
+  {title: "HKDLMDL200L", size: 200},
+];
 const singleConnectionPlate = [
   {title: "HKES3B38X2F", cetop: 3, pressure: 210, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKES3B38X3F", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},

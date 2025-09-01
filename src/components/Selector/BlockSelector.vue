@@ -36,14 +36,14 @@ const filteredBlock = () => {
 
 <template>
   <article>
-    <h2>
+    <!-- <h2>
       {{ text("coupling") }} {{ i ? i + 1 : ""
       }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
-    </h2>
+    </h2> -->
 
     <br />
 
-    <table v-if="filteredCoupling().length">
+    <!-- <table v-if="filteredCoupling().length">
       <thead>
         <tr>
           <td v-for="a in Object.keys(filteredCoupling()[0])">
@@ -64,7 +64,7 @@ const filteredBlock = () => {
           <td v-for="item in Object.values(rest)">{{ item }}</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </article>
 </template>
 

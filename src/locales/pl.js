@@ -89,4 +89,5 @@ export default {
   inputFromSap: ['Wstaw ze zlecenia'],
   inputFromSolid: ['Wklej z listy cześci'],
   difference: ['Różnica między zleceniem a listą części'],
+  vibro: ['Element amortyzujący'],
 };
