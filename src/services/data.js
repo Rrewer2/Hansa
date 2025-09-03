@@ -108,7 +108,41 @@ const SBT = [
   {title: "HKSBT160",Size: 160},
   {title: "HKSBT250",Size: 250}
 ].map((el) => ({...el, type: "SBT"}));
-export const tankData = { RA, BSK, BEK, SBT };
+const KS = [
+  {title: "HKKS01", size: 1, poz: 'h'},
+  {title: "HKKS01V", size: 1, poz: 'v'},
+  {title: "HKKS02", size: 2.5, poz: 'h'},
+  {title: "HKKS02V", size: 2.5, poz: 'v'},
+  {title: "HKKS03", size: 5, poz: 'h'},
+  {title: "HKKS03V", size: 5, poz: 'v'},
+  {title: "HKKS04", size: 8, poz: 'h'},
+  {title: "HKKS04V", size: 8, poz: 'v'},
+  {title: "HKKS07", size: 6, poz: 'h'},
+  {title: "HKKS09", size: 20, poz: 'v'},
+  {title: "HKKS10", size: 30, poz: 'v'},
+  {title: "HKKS109", size: 11, poz: 'h'},
+  {title: "HKKS11", size: 45, poz: 'v'},
+  {title: "HKKS115", size: 60, poz: 'v'},
+  {title: "HKKS12", size: 60, poz: 'v'},
+  {title: "HKKS138", size: 6, poz: 'v'},
+  {title: "HKKS139", size: 6, poz: 'v'},
+  {title: "HKKS140", size: 12, poz: 'v'},
+  {title: "HKKS141", size: 15, poz: 'h'},
+  {title: "HKKS143", size: 20, poz: 'v'},
+  {title: "HKKS20", size: 1.8, poz: 'h'},
+  {title: "HKKS205", size: 8, poz: 'v'},
+  {title: "HKKS208", size: 12, poz: 'v'},
+  {title: "HKKS20V", size: 1.8, poz: 'v'},
+  {title: "HKKS34", size: 7, poz: 'h'},
+  {title: "HKKS34V", size: 7, poz: 'v'},
+  {title: "HKKS48", size: 6, poz: 'v'},
+  {title: "HKKS90", size: 12, poz: 'h'},
+  {title: "HKKS90V", size: 12, poz: 'v'},
+  {title: "HKKS92", size: 18, poz: 'h'},
+  {title: "HKKS92V", size: 18, poz: 'v'},
+  {title: "HKKS94", size: 8, poz: 'h'},
+].map((el) => ({...el, type: "HKKS"}));
+export const tankData = { RA, BSK, BEK, SBT, KS };
 
 export const motorData = [ '',0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 9.2, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
 export const freqData = [ 750, 1000, 1500, 1800, 3000 ];
