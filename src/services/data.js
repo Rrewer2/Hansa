@@ -175,16 +175,22 @@ const enginesHK = [
   {title: 'HK180M4B354-6IE3', size: 225,power: 45,meta: 'E-MOTOR 400/690V 45,0KW 1475U B35 IE3'},
 ];
 const enginesK400 = [
-  {title: 'K-400B14-1.5-90L', size: 90,power: 1.5,meta: 'Silnik trójfazowy 400V; 1,5kW 1400obr.'},
-  {title: 'K-400B14-2.2100L', size: 100,power: 2.2,meta: 'Silnik 3-faz. 400V; 2,2kW 1420obr/min;'},
-  {title: 'K-400B14-3-100L', size: 100,power: 3,meta: 'Silnik 3-faz. 400V; 3kW 1420obr/min;'},
-  {title: 'K-400B34-3-100L', size: 100,power: 3,meta: 'Silnik 3-faz. 400V; 3kW 1420obr/min; B34'},
-  {title: 'K-400B35-3-100L', size: 100,power: 3,meta: 'Silnik elektr. 3 kW; B35; 230/400V; 1450'},
-  {title: 'K-400B35-4-112M', size: 112,power: 4,meta: 'Silnik trójfazowy 400V; 4kW 1450obr/min'},
-  {title: 'K-400B35-5.5-132', size: 132,power: 5.5,meta: 'Silnik 3-faz. 400V; 5.5kW 1420obr/min; B'},
-  {title: 'K-400B35-7.5132M', size: 132,power: 7.5,meta: 'Silnik el. 400/690V 7,5KW 1465U B35 IE3'},
-  {title: 'K-400B5-11-132L', size: 132,power: 11,meta: 'Silnik prog. 400/690V 11kW 1465 B5 132L2'}];
-const enginesK230 = [{title: "K-230B34-1.5-90L", size: 90,power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
+  {title: 'K-400B5-1.1-90S', size: 90, power: 1.1, meta: 'Silnik 3faz. 400V; 1.1kW 1420obr/min; B5'},
+  {title: 'K-400B14-1.5-90L', size: 90, power: 1.5, meta: 'Silnik trójfazowy 400V; 1,5kW 1400obr.'},
+  {title: 'K-400B34-1.5-90L', size: 90, power: 1.5, meta: 'Silnik trójfaz. 400V; 1,5kW 1400obr; B34'},
+  {title: 'K-400B14-2.2100L', size: 100, power: 2.2, meta: 'Silnik 3-faz. 400V; 2,2kW 1420obr/min;'},
+  {title: 'K-400B35-2.2-90L', size: 90, power: 2.2, meta: 'Silnik 3-faz. B35; 400V; 2,2kW 1410obr/m'},
+  {title: 'K-400B5-2.2-100L', size: 100, power: 2.2, meta: 'Silnik 3faz. 400V; 2.2kW 1420obr/min; B5'},
+  {title: 'K-400B14-3-100L', size: 100, power: 3, meta: 'Silnik 3-faz. 400V; 3kW 1420obr/min;'},
+  {title: 'K-400B34-3-100L', size: 100, power: 3, meta: 'Silnik 3-faz. 400V; 3kW 1420obr/min; B34'},
+  {title: 'K-400B35-3-100L', size: 100, power: 3, meta: 'Silnik elektr. 3 kW; B35; 230/400V; 1450'},
+  {title: 'K-400B35-4-112M', size: 112, power: 4, meta: 'Silnik trójfazowy 400V; 4kW 1450obr/min;'},
+  {title: 'K-400B35-5.5-132', size: 132, power: 5.5, meta: 'Silnik 3-faz. 400V; 5.5kW 1420obr/min; B'},
+  {title: 'K-400B35-7.5132M', size: 132, power: 7.5, meta: 'Silnik el. 400/690V 7,5KW 1465U B35 IE3'},
+  {title: 'K-400B5-11-132L', size: 132, power: 11, meta: 'Silnik prog. 400/690V 11kW 1465 B5 132L2'}
+];
+const enginesK230 = [{title: "K-230B14-0.18-63", size: 63,power: 0.18,meta: "Siln.1-faz. 230V; 0,18kW 1390obr.B34; MY"},
+                    {title: "K-230B34-1.5-90L", size: 90,power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
 const enginesACMotoren = [
   {title: "K-FCPA804/PHE", size: 80,power: 1.1,meta: "SILNIK PROGRESYWNY 1,1KW"},
   {title: "K-FCA90LC4/PHE", size: 90,power: 2.2,meta: "SILNIK PROGRESYWNY 2,2 Kw"},
