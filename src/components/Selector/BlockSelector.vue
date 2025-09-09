@@ -18,6 +18,9 @@ console.log(powerUNIT.unit);
 const filteredBlocks = () => {
   if (!meta.pumpType) return [];
   return blockData.filter((item) => {
+    console.log(item.stations, powerUNIT.unit.length);
+    console.log(powerUNIT.unit.Q);
+    console.log(item.pressure, powerUNIT.unit.p);
     return (
       item.stations === powerUNIT.unit.length &&
       (item.cetop === 3 && powerUNIT.unit.Q < 40 || item.cetop === 5 && powerUNIT.unit.Q > 40)
