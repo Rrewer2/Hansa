@@ -14,7 +14,7 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "powerUNIT",
   "i",
 ]);
-console.log(powerUNIT[0].unit);
+console.log(powerUNIT);
 </script>
 
 
