@@ -32,6 +32,7 @@ const filteredBlocks = () => {
 };
 </script>
 <template>
+  <div>BLOCK</div>
   <div>{{ filteredBlocks() }}</div>
 </template>
 <style scoped></style>
