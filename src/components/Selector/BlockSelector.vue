@@ -15,6 +15,9 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 console.log(powerUNIT.unit);
+console.log(powerUNIT.unit.p);
+console.log(powerUNIT.unit.Q);
+console.log(powerUNIT.unit.length);
 const filteredBlocks = () => {
   return blockData.filter((item) => {
     console.log(item.stations, powerUNIT.unit.length);
