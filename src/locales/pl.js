@@ -90,4 +90,7 @@ export default {
   inputFromSolid: ['Wklej z listy cześci'],
   difference: ['Różnica między zleceniem a listą części'],
   vibro: ['Element amortyzujący'],
+  size: ['BG'],
+  block: ['Blok przyłączeniowy'],
+  length: ['Ilość stacji'],
 };

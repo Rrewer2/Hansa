@@ -14,24 +14,64 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "powerUNIT",
   "i",
 ]);
-  console.log('Fuck');
-console.log(powerUNIT);
+
+const sections = ref("");
+const press = ref("");
+
 const filteredBlocks = () => {
-  return blockData.filter((item) => {
-    console.log(item.stations, powerUNIT.unit.length);
-    console.log(powerUNIT.unit.Q);
-    console.log(item.pressure, powerUNIT.unit.p);
+  return powerUNIT.unit.map(({ Q, p }, i) => blockData.filter(( block ) => {
     return (
-      item.stations === powerUNIT.unit.length &&
-      (item.cetop === 3 && powerUNIT.unit.Q < 40 || item.cetop === 5 && powerUNIT.unit.Q > 40)
-      item.pressure > powerUNIT.unit.p + 20
+      (sections.value ? block.stations === sections.value : block.stations === powerUNIT.unit[i].HKSH.length) &&
+      (!Q || (block.cetop === 5 && Q > 34) || (block.cetop === 3 && Q < 35)) &&
+      (press.value ? block.pressure > press.value : block.pressure > +p + 20)
     );
-  });
+  }));
 };
 </script>
 
 <template>
-  <div>BLOCK</div>
-  <div>{{ filteredBlocks() }}</div>
+  <article>
+    <h2>
+      {{ text("block") }} {{ i ? i + 1 : ""
+      }}<span> {{ order.block?.title }}</span>
+    </h2>
+    <br />
+    <div class="flex-row flex-center">
+      <InputItem data="length">
+        <!-- <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount"> -->
+        <select v-model="length" id="length">
+          <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
+            {{ i }}
+          </option>
+        </select>
+      </InputItem>
+      <InputItem data="p">
+        <input type="number" min="0" v-model="press" id="press" />
+      </InputItem>
+    </div>
+    <table v-if="filteredBlocks()[0].length">
+      <thead>
+        <tr>
+          <td v-for="a in Object.keys(filteredBlocks()[0][0])">
+            <b><i>{{ text(a) }}</i></b>
+          </td>
+        </tr>
+      </thead>
+      <tbody v-for="unit in filteredBlocks()">
+        <tr v-for="{ title, ...rest } in unit">
+          <td class="tal">
+            <input type="radio" :id="title" @click="order.block = { title, blockData: { ...rest } }" class="mx" />
+            <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
+              rel="noopener noreferrer">
+              {{ getTextWithSpace(title) }}
+            </a>
+            <span v-else>{{ title }}</span>
+            <CopyText :text="title" />
+          </td>
+          <td v-for="item in Object.values(rest)">{{ item }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
 </template>
 <style scoped></style>

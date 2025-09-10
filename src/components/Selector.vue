@@ -24,7 +24,7 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
       <BellhousingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
       <CouplingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
       <VibroSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-      <div>BLOVK</div><BlockSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <BlockSelector v-bind="{ project, meta, order, i, powerUNIT }" />
     </div>
     <TankSelector v-bind="{ project, meta, order }" />
     <CoolerSelector v-bind="{ project, meta, order }" />

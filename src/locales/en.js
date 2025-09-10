@@ -89,4 +89,8 @@ export default {
   inputFromSap: ['Insert from SAP'],
   inputFromSolid: ['Paste from parts list from SOLID'],
   difference: ['Difference between order and parts list'],
+  vibro: ['Damper'],
+  size: ['Frame size'],
+  block: ['Mounting plate'],
+  length: ['Stations'],
 };

@@ -994,7 +994,7 @@ const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
 //K-DR2-06/61-AL
 //K-DR2-06/62-AL
 export const blockData = [
-  ...singleConnectionPlate.map(el => ({...el, stations: 1 })),
+  ...singleConnectionPlate.map(({ cetop, ...rest }) => ({cetop, stations: 1, ...rest })),
   ...multipleConnectionPlateBA214,
   ...multipleConnectionPlateBA314,
   ...multipleConnectionPlateEM1033F,
