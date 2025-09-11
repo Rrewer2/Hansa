@@ -38,9 +38,9 @@ const filteredBlocks = () => {
     </h2>
     <br />
     <div class="flex-row flex-center">
-      <InputItem data="length">
+      <InputItem data="sections">
         <!-- <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount"> -->
-        <select v-model="length" id="length">
+        <select v-model="sections" id="sections">
           <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
             {{ i }}
           </option>
