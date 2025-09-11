@@ -16,7 +16,7 @@ const filteredValves = () => {
 };
 
 const GA = () => spoolData.find(({ spool }) => spool === "GA");
-const valves = () => powerUNIT.unit[i].DR2type === 3 ? [GA, ...filteredValves()] : filteredValves();
+const valves = () => powerUNIT.unit[i].DR2type === 3 ? [GA(), ...filteredValves()] : filteredValves();
 </script>
 
 <template>
