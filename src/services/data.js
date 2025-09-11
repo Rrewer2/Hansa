@@ -882,12 +882,12 @@ const singleConnectionPlate = [
   {title: "HKES5B34PLX3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKEM103138X2F", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKEM103138X3F", cetop: 3, pressure: 350, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKEM105134X2F", cetop: 5, pressure: 120, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKEM105134X3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKBA201HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA202HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA204HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
-  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
 ];
 const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   const stations = 2 + i;
@@ -946,7 +946,7 @@ const createMultipleConnectionPlateEM105 = (suffix) =>
       threadB: 'G 3/4″ -14',
       DBV: true
     };
-});
+  });
 const multipleConnectionPlateEM1033F = createMultipleConnectionPlateEM103("3F");
 const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F");
 const multipleConnectionPlateEM1053F = createMultipleConnectionPlateEM105("3F");
@@ -956,13 +956,12 @@ const createMultipleConnectionPlateDR2 = (suffix) => Array.from({ length: 5 }, (
   const stations = 2 + i;
   return {
     title: `K-DR2-06/${stations}${suffix}-AL`,
-    cetop: 5,
-    stations,
-    pressure: 120,
-    threadP: 'G 3/4″ -14',
-    threadT: 'G 3/4″ -14',
-    threadA: 'G 3/4″ -14',
-    threadB: 'G 3/4″ -14',
+    cetop: 3,
+    pressure: 210,
+    threadP: 'G 1/2″ -14',
+    threadT: 'G 1/2″ -14',
+    threadA: 'G 3/8″ -19',
+    threadB: 'G 3/8″ -19',
     DBV: true,
     start: suffix === 1 ? false : true,
   };
