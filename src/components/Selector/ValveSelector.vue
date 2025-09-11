@@ -42,12 +42,13 @@ spoolData.forEach(({ spool }) => set.add(spool));
 
 <template>
   <article>
+    {{ filteredValves() }}
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }}<span> {{ order.valve?.title }}</span>
     </h2>
     <table v-if="filteredValves()[0].length">
       <thead>
-        <td v-for="item in Object.keys(filteredValves()[0])">
+        <td v-for="item in Object.keys(filteredValves()[0][0])">
           <b><i>{{ text(item) }}</i></b>
         </td>
       </thead>
