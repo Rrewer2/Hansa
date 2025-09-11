@@ -21,6 +21,8 @@ const valves = powerUNIT.unit[i].DR2type === 3 ? [GA, ...filteredValves()] : fil
 
 <template>
   <article>
+   filteredValves {{ filteredValves }}
+   valves {{ valves }}
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }} <span> {{ order.valve?.title }}</span>
     </h2>
