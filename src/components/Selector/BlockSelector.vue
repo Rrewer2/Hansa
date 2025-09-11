@@ -38,7 +38,7 @@ const filteredBlocks = () => {
     </h2>
     <br />
     <div class="flex-row flex-center">
-      <InputItem data="sections">
+      <InputItem data="length">
         <!-- <select v-model="powerUNIT.mount" :disabled="getTitle()" id="mount"> -->
         <select v-model="sections" id="sections">
           <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
@@ -48,6 +48,13 @@ const filteredBlocks = () => {
       </InputItem>
       <InputItem data="p">
         <input type="number" min="0" v-model="press" id="press" />
+      </InputItem>
+      <InputItem data="DR2type">
+        <select type="number" min="0" v-model="powerUNIT[i].DR2type" id="DR2type" >
+          <option v-for="item in [0, 1, 2, 3]" :value="item">
+            {{ item }}
+          </option>
+        </select>
       </InputItem>
     </div>
     <table v-if="filteredBlocks()[0].length">
