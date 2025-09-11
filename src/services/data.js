@@ -932,37 +932,26 @@ const createMultipleConnectionPlateEM103 = (suffix) =>
       DBV: true
     };
   });
+const createMultipleConnectionPlateEM105 = (suffix) => 
+  Array.from({ length: 4 }, (_, i) => {
+    const stations = 2 + i;
+    return {
+      title: `HKEM105${stations}34X${suffix}`,
+      cetop: 5,
+      stations,
+      pressure: suffix === "3F" ? 270 : 120,
+      threadP: 'G 3/4″ -14',
+      threadT: 'G 3/4″ -14',
+      threadA: 'G 3/4″ -14',
+      threadB: 'G 3/4″ -14',
+      DBV: true
+    };
+});
+const multipleConnectionPlateEM1033F = createMultipleConnectionPlateEM103("3F");
+const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F");
+const multipleConnectionPlateEM1053F = createMultipleConnectionPlateEM105("3F");
+const multipleConnectionPlateEM1052F = createMultipleConnectionPlateEM105("2F");
 
-const multipleConnectionPlateEM1033F = createMultipleConnectionPlateEM103("3F", 350);
-const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F", 210);
-const multipleConnectionPlateEM1053F = Array.from({ length: 4 }, (_, i) => {
-  const stations = 2 + i;
-  return {
-    title: `HKEM105{stations}34X3F`,
-    cetop: 5,
-    stations,
-    pressure: 270,
-    threadP: 'G 3/4″ -14',
-    threadT: 'G 3/4″ -14',
-    threadA: 'G 3/4″ -14',
-    threadB: 'G 3/4″ -14',
-    DBV: true
-  };
-});
-const multipleConnectionPlateEM1052F = Array.from({ length: 4 }, (_, i) => {
-  const stations = 2 + i;
-  return {
-    title: `HKEM105{stations}34X2F`,
-    cetop: 5,
-    stations,
-    pressure: 120,
-    threadP: 'G 3/4″ -14',
-    threadT: 'G 3/4″ -14',
-    threadA: 'G 3/4″ -14',
-    threadB: 'G 3/4″ -14',
-    DBV: true
-  };
-});
 const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
   const stations = 2 + i;
   return {
