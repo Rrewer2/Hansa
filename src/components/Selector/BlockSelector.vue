@@ -17,7 +17,8 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 
 const sections = ref("");
 const press = ref("");
-
+const dr2 = ref(1);
+  
 const filteredBlocks = () => {
   return powerUNIT.unit.map(({ Q, p, DR2type }, i) => blockData.filter(({ stations, cetop, pressure, DBV }) => {
     return (
@@ -50,7 +51,7 @@ const filteredBlocks = () => {
         <input type="number" min="0" v-model="press" id="press" />
       </InputItem>
       <InputItem data="DR2type">
-        <select type="number" min="0" v-model="powerUNIT[i].DR2type" id="DR2type" >
+        <select type="number" min="0" v-model="dr2" id="DR2type" >
           <option v-for="item in [0, 1, 2, 3]" :value="item">
             {{ item }}
           </option>
