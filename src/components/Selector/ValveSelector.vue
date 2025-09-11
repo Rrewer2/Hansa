@@ -21,8 +21,6 @@ const valves = () => powerUNIT.unit[i].DR2type === 3 ? [[ GA() ], ...filteredVal
 
 <template>
   <article>
-   filteredValves {{ filteredValves() }}
-   valves {{ valves() }}
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }} <span> {{ order.valve?.title }}</span>
     </h2>
@@ -35,7 +33,7 @@ const valves = () => powerUNIT.unit[i].DR2type === 3 ? [[ GA() ], ...filteredVal
       <tbody v-for="unit in valves()">
         <tr v-for="{ title, ...rest } in unit">
           <td class="tal">
-            <input type="radio" :id="title" @click="order.valve = { title, blockData: { ...rest } }" class="mx" />
+            <input type="radio" :id="title" @click="order.valve = { title, valveData: { ...rest } }" class="mx" />
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
