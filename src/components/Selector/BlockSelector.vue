@@ -21,10 +21,10 @@ const press = ref("");
 const filteredBlocks = () => {
   return powerUNIT.unit.map(({ Q, p, DR2type }, i) => blockData.filter(({ stations, cetop, pressure, DBV, start }) => {
     return (
-      (sections.value ? stations === sections.value : stations === powerUNIT.unit[i].HKSH.length) &&
+      (sections.value ? stations === sections.value : stations === powerUNIT.unit[i].HKSH.length + +(DR2type === 3)) &&
       (!Q || (cetop === 5 && Q > 34) || (cetop === 3 && Q < 35)) &&
       (press.value ? pressure > press.value : pressure > +p + 20) 
-      && ((DR2type === 0 && !DBV) || (DR2type === 1 && DBV && !start) || ((DR2type === 2 && DBV && start))) 
+      && ((DR2type === 0 && !DBV) || (DR2type === 1 && DBV && !start) || ((DR2type === 2 && DBV && start)) || DR2type === 3) 
       //TODO: add a DR2type equals 3
     )
   }));
