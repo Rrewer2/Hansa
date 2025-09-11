@@ -16,23 +16,23 @@ const filteredValves = () => {
 };
 
 const GA = () => spoolData.find(({ spool }) => spool === "GA");
-const valves = powerUNIT.unit[i].DR2type === 3 ? [GA, ...filteredValves()] : filteredValves();
+const valves = () => powerUNIT.unit[i].DR2type === 3 ? [GA, ...filteredValves()] : filteredValves();
 </script>
 
 <template>
   <article>
-   filteredValves {{ filteredValves }}
-   valves {{ valves }}
+   filteredValves {{ filteredValves() }}
+   valves {{ valves() }}
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }} <span> {{ order.valve?.title }}</span>
     </h2>
-    <table v-if="valves()[0].length">
+    <table v-if="filteredValves()[0].length">
       <thead>
-        <td v-for="item in Object.keys(valves()[0][0])">
+        <td v-for="item in Object.keys(filteredValves()[0][0])">
           <b><i>{{ text(item) }}</i></b>
         </td>
       </thead>
-      <tbody v-for="unit in valves()">
+      <tbody v-for="unit in filteredValves()">
         <tr v-for="{ title, ...rest } in unit">
           <td class="tal">
             <input type="radio" :id="title" @click="order.valve = { title, blockData: { ...rest } }" class="mx" />
