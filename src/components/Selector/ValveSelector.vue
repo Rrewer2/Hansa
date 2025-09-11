@@ -9,50 +9,28 @@ import CopyText from "./CopyText.vue";
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
-  return powerUNIT.unit.map(({ Q, HKSH }, i) => HKSH.map(({ spool }) => spoolData.find(valve => (!Q || (valve.CETOP === 5 && Q >= 35) || (valve.CETOP === 3 && Q < 35)) && valve.spool === spool)));
+  return powerUNIT.unit.map(({ Q, HKSH }, i) => 
+    HKSH.map(({ spool }) => 
+      spoolData.find(valve => 
+        (!Q || (valve.CETOP === 5 && Q >= 35) || (valve.CETOP === 3 && Q < 35)) && valve.spool === spool)));
 };
-  console.log(filteredValves());
-//(() => {
-//  const list = getSmthFromProject(project).map(({ spool }) =>
-//    spoolData.find((el) => el.spool === spool),
-//  );
-//  const obj = {};
-//  list.forEach((elem) => {
-//    if (!elem) return;
-//    const { title, ...rest } = elem;
-//    if (obj[title]) {
-//      obj[title].count++;
-//    } else {
-//      obj[title] = { ...rest, count: 1 };
-//    }
-//  });
-//  order.valve = Object.keys(obj).map((title) => {
-//    const { count, ...data } = obj[title];
-//    return { title, valveData: data, count };
-//  });
-//})();
-// getSmthFromProject(project, 'spool').map(spool => {
-//   order.valve.push({ title: spool });
-// });
-// const filtered = () => spoolData.filter(({ spool }) => spool === meta.spool).sort((a, b) => a.CETOP - b.CETOP);
-const filtered = () => spoolData.filter(({ spool }) => spool === meta.spool);
-const set = new Set();
-spoolData.forEach(({ spool }) => set.add(spool));
+
+const GA = () => spoolData.find(({ spool }) => spool === "GA");
+const valves = powerUNIT.unit[i].DR2type === 3 ? [GA, ...filteredValves()] : filteredValves();
 </script>
 
 <template>
   <article>
-    {{ filteredValves() }}
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }} <span> {{ order.valve?.title }}</span>
     </h2>
-    <table v-if="filteredValves()[0].length">
+    <table v-if="valves()[0].length">
       <thead>
-        <td v-for="item in Object.keys(filteredValves()[0][0])">
+        <td v-for="item in Object.keys(valves()[0][0])">
           <b><i>{{ text(item) }}</i></b>
         </td>
       </thead>
-      <tbody v-for="unit in filteredValves()">
+      <tbody v-for="unit in valves()">
         <tr v-for="{ title, ...rest } in unit">
           <td class="tal">
             <input type="radio" :id="title" @click="order.valve = { title, blockData: { ...rest } }" class="mx" />
