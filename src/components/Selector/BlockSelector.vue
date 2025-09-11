@@ -25,7 +25,7 @@ const filteredBlocks = () => {
       (sections.value ? stations === sections.value : stations === powerUNIT.unit[i].HKSH.length) &&
       (!Q || (cetop === 5 && Q > 34) || (cetop === 3 && Q < 35)) &&
       (press.value ? pressure > press.value : pressure > +p + 20) 
-      //&& ((DR2type === 0 && DBV === false) || (DR2type === 1 && DBV === true)) TODO: add a DR2type equals 2 or 3
+      && ((DR2type === 0 && DBV === false) || (DR2type === 1 && DBV === true)) //TODO: add a DR2type equals 2 or 3
     );
   }));
 };
