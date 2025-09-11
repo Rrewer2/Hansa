@@ -25,10 +25,10 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
       <CouplingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
       <VibroSelector v-bind="{ project, meta, order, i, powerUNIT }" />
       <BlockSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <ValveSelector v-bind="{ project, meta, order, i, powerUNIT }" />
     </div>
     <TankSelector v-bind="{ project, meta, order }" />
     <CoolerSelector v-bind="{ project, meta, order }" />
-    <ValveSelector v-bind="{ project, meta, order }" />
 
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
   </main>
