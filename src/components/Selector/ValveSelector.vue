@@ -45,17 +45,18 @@ spoolData.forEach(({ spool }) => set.add(spool));
     <h2 :class="open && 'bgc-g'">
       {{ text("valve") }}<span> {{ order.valve?.title }}</span>
     </h2>
-    <div class="grid ml-10">
-      <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 200 90" class="valve" :class="spool === meta.spool && 'clicked'">
-        <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
-      </svg>
-    </div>
-    <table>
-      <thead></thead>
-      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">
-        {{ text(item) }}
-      </td>
+//    <div class="grid ml-10">
+//      <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
+//        viewBox="0 0 200 90" class="valve" :class="spool === meta.spool && 'clicked'">
+//        <Valve :x="0" :y="10" :data="{ spool }" :sl="200" />
+//      </svg>
+//    </div>
+    <table v-if="filteredValves()[0].length">
+      <thead>
+        <td v-for="item in Object.keys(filteredValves()[0][0])">
+          <b><i>{{ text(item) }}</i></b>
+        </td>
+      </thead>
       <tbody>
         <tr v-for="{ title, ...rest } in filtered()" :id="title">
           <td class="tal hover">
