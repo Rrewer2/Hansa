@@ -52,21 +52,18 @@ spoolData.forEach(({ spool }) => set.add(spool));
           <b><i>{{ text(item) }}</i></b>
         </td>
       </thead>
-      <tbody>
-        <tr v-for="{ title, ...rest } in filtered()" :id="title">
-          <td class="tal hover">
-            <input type="radio" :id="title" :value="{ title, spoolData: rest }" name="valve" v-model="order.valve"
-              :checked="title === order.valve?.title" class="mx" />
-
+      <tbody v-for="unit in filteredValves()">
+        <tr v-for="{ title, ...rest } in unit">
+          <td class="tal">
+            <input type="radio" :id="title" @click="order.valve = { title, blockData: { ...rest } }" class="mx" />
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
-
-            <span v-else>{{ getTextWithSpace(title) }} </span>
+            <span v-else>{{ title }}</span>
             <CopyText :text="title" />
           </td>
-          <td v-for="el in Object.values(rest)">{{ el }}</td>
+          <td v-for="item in Object.values(rest)">{{ item }}</td>
         </tr>
       </tbody>
     </table>
