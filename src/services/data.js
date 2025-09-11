@@ -979,7 +979,7 @@ export const blockData = [
   ...multipleConnectionPlateEM1052F,
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
-].map(type => type.map(el => ({...el, start: !!el.start}));
+].map((el) => ({ ...el, start: !!el.start }));
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
