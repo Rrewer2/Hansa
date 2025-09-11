@@ -19,11 +19,12 @@ const sections = ref("");
 const press = ref("");
 
 const filteredBlocks = () => {
-  return powerUNIT.unit.map(({ Q, p }, i) => blockData.filter(( block ) => {
+  return powerUNIT.unit.map(({ Q, p, DR2type }, i) => blockData.filter(( block ) => {
     return (
       (sections.value ? block.stations === sections.value : block.stations === powerUNIT.unit[i].HKSH.length) &&
       (!Q || (block.cetop === 5 && Q > 34) || (block.cetop === 3 && Q < 35)) &&
-      (press.value ? block.pressure > press.value : block.pressure > +p + 20)
+      (press.value ? block.pressure > press.value : block.pressure > +p + 20) &&
+      ((DR2type === 0 && block.DBV === false) || (DR2type === 1 && block.DBV === true)) \\TODO: add a DR2type equals 2 or 3
     );
   }));
 };
