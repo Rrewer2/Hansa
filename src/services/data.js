@@ -952,10 +952,10 @@ const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F");
 const multipleConnectionPlateEM1053F = createMultipleConnectionPlateEM105("3F");
 const multipleConnectionPlateEM1052F = createMultipleConnectionPlateEM105("2F");
 
-const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
+const createMultipleConnectionPlateDR2 = (suffix) => Array.from({ length: 5 }, (_, i) => {
   const stations = 2 + i;
   return {
-    title: `K-DR2-06/${stations}1-AL`,
+    title: `K-DR2-06/${stations}${suffix}-AL`,
     cetop: 5,
     stations,
     pressure: 120,
@@ -963,25 +963,13 @@ const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
     threadT: 'G 3/4″ -14',
     threadA: 'G 3/4″ -14',
     threadB: 'G 3/4″ -14',
-    DBV: true
+    DBV: true,
+    start: suffix === 1 ? false : true,
   };
 });
-  //K-DR2-06/11-AL
-//K-DR2-06/11-ST
-//K-DR2-06/21-AL
-//K-DR2-06/21-ST
-//K-DR2-06/22-AL
-//K-DR2-06/22ST-B
-//K-DR2-06/31-AL
-//K-DR2-06/31-ST
-//K-DR2-06/32-AL
-//K-DR2-06/41-AL
-//K-DR2-06/41-ST
-//K-DR2-06/42-AL
-//K-DR2-06/51-AL
-//K-DR2-06/52-AL
-//K-DR2-06/61-AL
-//K-DR2-06/62-AL
+const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);
+const multipleConnectionPlateDR22 = createMultipleConnectionPlateDR2(2);
+
 export const blockData = [
   ...singleConnectionPlate.map(({ cetop, ...rest }) => ({cetop, stations: 1, ...rest })),
   ...multipleConnectionPlateBA214,
@@ -990,7 +978,8 @@ export const blockData = [
   ...multipleConnectionPlateEM1032F,
   ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateEM1052F,
-  ...multipleConnectionPlateDR2,
+  ...multipleConnectionPlateDR21,
+  ...multipleConnectionPlateDR22,
 ];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
