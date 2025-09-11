@@ -966,7 +966,7 @@ const multipleConnectionPlateEM1052F = Array.from({ length: 4 }, (_, i) => {
 const multipleConnectionPlateDR2 = Array.from({ length: 5 }, (_, i) => {
   const stations = 2 + i;
   return {
-    title: `K-DR2-06/{stations}1-AL`,
+    title: `K-DR2-06/${stations}1-AL`,
     cetop: 5,
     stations,
     pressure: 120,
