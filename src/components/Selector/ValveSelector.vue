@@ -44,7 +44,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
   <article>
     {{ filteredValves() }}
     <h2 :class="open && 'bgc-g'">
-      {{ text("valve") }}<span> {{ order.valve?.title }}</span>
+      {{ text("valve") }} <span> {{ order.valve?.title }}</span>
     </h2>
     <table v-if="filteredValves()[0].length">
       <thead>
