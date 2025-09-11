@@ -9,7 +9,7 @@ import CopyText from "./CopyText.vue";
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
-  return powerUNIT.unit.map(({ HKSH }, i) => HKSH.map(({spool}) => spoolData.find(valve => valve.spool === spool)));
+  return powerUNIT.unit.map(({ Q, HKSH }, i) => HKSH.map(({ spool, CETOP }) => spoolData.find(valve => (!Q || (CETOP === 5 && Q >= 35) || (CETOP === 3 && Q < 35)) && valve.spool === spool)));
 };
   console.log(filteredValves());
 //(() => {
