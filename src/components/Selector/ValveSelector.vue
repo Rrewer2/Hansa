@@ -6,7 +6,7 @@ import { text } from "../../services/text";
 import Valve from "../Scheme/Valve.vue";
 import CopyText from "./CopyText.vue";
 
-const { project, meta, order, open } = defineProps(["project", "meta", "order", "open",]);
+const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
   return powerUNIT.unit.map(({ HKSH }, i) => HKSH.map(({spool}) => spoolData.find(valve => valve.spool === spool)));
