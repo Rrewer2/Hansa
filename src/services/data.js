@@ -952,20 +952,22 @@ const multipleConnectionPlateEM1032F = createMultipleConnectionPlateEM103("2F");
 const multipleConnectionPlateEM1053F = createMultipleConnectionPlateEM105("3F");
 const multipleConnectionPlateEM1052F = createMultipleConnectionPlateEM105("2F");
 
-const createMultipleConnectionPlateDR2 = (suffix) => Array.from({ length: 5 }, (_, i) => {
-  const stations = 2 + i;
-  return {
-    title: `K-DR2-06/${stations}${suffix}-AL`,
-    cetop: 3,
-    pressure: 210,
-    threadP: 'G 1/2″ -14',
-    threadT: 'G 1/2″ -14',
-    threadA: 'G 3/8″ -19',
-    threadB: 'G 3/8″ -19',
-    DBV: true,
-    start: suffix === 1 ? false : true,
-  };
-});
+const createMultipleConnectionPlateDR2 = (suffix) => 
+  Array.from({ length: 5 }, (_, i) => {
+    const stations = 2 + i;
+    return {
+      title: `K-DR2-06/${stations}${suffix}-AL`,
+      cetop: 3,
+      stations,
+      pressure: 210,
+      threadP: 'G 1/2″ -14',
+      threadT: 'G 1/2″ -14',
+      threadA: 'G 3/8″ -19',
+      threadB: 'G 3/8″ -19',
+      DBV: true,
+      start: suffix === 1 ? false : true,
+    };
+  });
 const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);
 const multipleConnectionPlateDR22 = createMultipleConnectionPlateDR2(2);
 
