@@ -6,31 +6,31 @@ import { text } from "../../services/text";
 import Valve from "../Scheme/Valve.vue";
 import CopyText from "./CopyText.vue";
 
-const { project, meta, order, open } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "open",
-]);
-(() => {
-  const list = getSmthFromProject(project).map(({ spool }) =>
-    spoolData.find((el) => el.spool === spool),
-  );
-  const obj = {};
-  list.forEach((elem) => {
-    if (!elem) return;
-    const { title, ...rest } = elem;
-    if (obj[title]) {
-      obj[title].count++;
-    } else {
-      obj[title] = { ...rest, count: 1 };
-    }
-  });
-  order.valve = Object.keys(obj).map((title) => {
-    const { count, ...data } = obj[title];
-    return { title, valveData: data, count };
-  });
-})();
+const { project, meta, order, open } = defineProps(["project", "meta", "order", "open",]);
+  
+const filteredValves = () => {
+  return powerUNIT.unit.map(({ HKSH }, i) => HKSH.map(({spool}) => spoolData.find(valve => valve.spool === spool)));
+};
+  console.log(filteredValves());
+//(() => {
+//  const list = getSmthFromProject(project).map(({ spool }) =>
+//    spoolData.find((el) => el.spool === spool),
+//  );
+//  const obj = {};
+//  list.forEach((elem) => {
+//    if (!elem) return;
+//    const { title, ...rest } = elem;
+//    if (obj[title]) {
+//      obj[title].count++;
+//    } else {
+//      obj[title] = { ...rest, count: 1 };
+//    }
+//  });
+//  order.valve = Object.keys(obj).map((title) => {
+//    const { count, ...data } = obj[title];
+//    return { title, valveData: data, count };
+//  });
+//})();
 // getSmthFromProject(project, 'spool').map(spool => {
 //   order.valve.push({ title: spool });
 // });
