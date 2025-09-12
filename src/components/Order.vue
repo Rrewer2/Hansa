@@ -3,19 +3,21 @@ import { KITtitle } from "../services/functions";
 
 const { order } = defineProps(["order"]);
 const normalize = () => {
-  const obj = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
+  const KIT = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
-    if (Array.isArray(order[key]))
-      order[key].forEach((elem, i) => (obj[`${key}${i}`] = { title: elem.title, count: elem.count, JM: 'Szt', opis: '' }));
-    else if (order[key].title) {
-      if (obj[key]) {
-      obj[key].count++;
-    } else {
-      obj[key] = { title: order[key].title, count: 1, JM: 'Szt', opis: '' };
+    //   // if (Array.isArray(order[key]))
+    //     //   order[key].forEach((elem, i) => (KIT[`${key}${i}`] = { title: elem.title, count: elem.count, JM: 'Szt', opis: '' }));
+    //   // else 
+    if (order[key].title) {
+      if (KIT[order[key].title]?.title) {
+        KIT[order[key].title].count++;
+      } 
+      else {
+        KIT[order[key].title] = { title: order[key].title, count: 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
       }
     }
   });
-  return obj;
+  return KIT;
 };
 </script>
 
@@ -35,7 +37,7 @@ const normalize = () => {
             {{ title }}
           </td>
           <td v-for="item in rest">
-            {{ item?.meta ? item.meta : typeof item === "object" ? "" : item }}
+            {{ item?.meta ? item.meta : typeof item === "KITect" ? "" : item }}
           </td>
         </tr>
       </tbody>

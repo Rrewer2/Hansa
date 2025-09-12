@@ -50,7 +50,7 @@ const filteredBlocks = () => {
         <input type="number" min="0" v-model="press" id="press" />
       </InputItem>
       <InputItem data="DR2type">
-        <select type="number" min="0" v-model="powerUNIT.unit[i].DR2type" id="DR2type">
+        <select min="0" v-model="powerUNIT.unit[i].DR2type" id="DR2type">
           <option v-for="item in [0, 1, 2, 3]" :value="item">
             {{ item }}
           </option>

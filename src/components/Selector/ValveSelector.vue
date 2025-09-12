@@ -1,6 +1,6 @@
 <script setup>
-import { spoolData, HKHMP } from "../../services/data";
-import { getSmthFromProject, getTextWithSpace } from "../../services/functions";
+import { spoolData, HKHMP, HKHQ, HKHR } from "../../services/data";
+import { getQfromProject, getSmthFromProject, getTextWithSpace } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
 import Valve from "../Scheme/Valve.vue";
@@ -9,16 +9,17 @@ import CopyText from "./CopyText.vue";
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
-  powerUNIT.unit.map(({ HKSH, p }) => 
-    HKSH.map(({ throttle, check, directPress }) => {
-      order.throttle = throttle ? { title: text('throttle') + throttle} : {};
-      order.check = check ? { title: text('check') + check} : {};
-      order.directPress = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p)?.title } : {}; //TODO: change p to directPress pressure
+  const cetop = (Q) => Q >= 35 ? 5 : 3;
+  powerUNIT.unit.map(({ HKSH, p, Q }, i) => 
+    HKSH.map(({ throttle, check, directPress }, j) => {
+      order[`throttle`+ i + j] = throttle ? { title: HKHQ.find(el => el.type === throttle && el.CETOP === cetop(Q))?.title } : {};
+      order[`check`+ i + j] = check ? { title: HKHR.find(el => el.type === check && el.CETOP === cetop(Q))?.title } : {};
+      order[`directPress`+ i + j] = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p && el.CETOP === cetop(Q))?.title } : {}; //TODO: change p to directPress pressure
     }));
-  return powerUNIT.unit.map(({ Q, HKSH }, i) => 
+  return powerUNIT.unit.map(({ Q, HKSH }) => 
     HKSH.map(({ spool }) => 
       spoolData.find(valve => 
-        (!Q || (valve.CETOP === 5 && Q >= 35) || (valve.CETOP === 3 && Q < 35)) && valve.spool === spool)));
+        (!Q || valve.CETOP === cetop(Q)) && valve.spool === spool)));
 };
 
 const GA = () => spoolData.find(({ spool }) => spool === "GA");
