@@ -23,7 +23,7 @@ const normalize = () => {
   <article class="mt-20">
     <table>
       <thead>
-        <td v-for="a in ['Nr', 'Title', 'Opis', 'Count']">
+        <td v-for="a in ['Nr', 'Title', 'Count', 'JM', 'Opis']">
           <b><i>{{ a }}</i></b>
         </td>
       </thead>
