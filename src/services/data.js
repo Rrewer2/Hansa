@@ -982,6 +982,19 @@ export const blockData = [
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
 ].map((el) => ({ ...el, start: !!el.start }));
+
+export const HKHMP = [
+  {title: "HKHMP011100", type: "011",CETOP: 3, pmax: 100},
+  {title: "HKHMP011210", type: "011",CETOP: 3, pmax: 210},
+  {title: "HKHMP011350", type: "011",CETOP: 3, pmax: 350},
+  {title: "HKHMP012100", type: "012",CETOP: 3, pmax: 100},
+  {title: "HKHMP012210", type: "012",CETOP: 3, pmax: 210},
+  {title: "HKHMP012350", type: "012",CETOP: 3, pmax: 350},
+  {title: "HKHMP013100", type: "013",CETOP: 3, pmax: 100},
+  {title: "HKHMP013210", type: "013",CETOP: 3, pmax: 210},
+  {title: "HKHMP013350", type: "013",CETOP: 3, pmax: 350},
+  {title: "HKHMP014350", type: "014",CETOP: 3, pmax: 350},
+];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
