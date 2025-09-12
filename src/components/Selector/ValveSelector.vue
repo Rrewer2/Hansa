@@ -11,9 +11,9 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
 const filteredValves = () => {
   powerUNIT.unit.map(({ HKSH, p }) => 
     HKSH.map(({ throttle, check, directPress }) => {
-      order.throttle = throttle ? { title: text('throttle') + throttle} : undefined;
-      order.check = check ? { title: text('check') + check} : undefined;
-      order.directPress = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p)?.title } : undefined; //TODO: change p to directPress pressure
+      order.throttle = throttle ? { title: text('throttle') + throttle} : {};
+      order.check = check ? { title: text('check') + check} : {};
+      order.directPress = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p)?.title } : {}; //TODO: change p to directPress pressure
     }));
   return powerUNIT.unit.map(({ Q, HKSH }, i) => 
     HKSH.map(({ spool }) => 
