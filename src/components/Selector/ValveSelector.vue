@@ -1,5 +1,5 @@
 <script setup>
-import { spoolData } from "../../services/data";
+import { spoolData, HKHMP } from "../../services/data";
 import { getSmthFromProject, getTextWithSpace } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
@@ -9,11 +9,11 @@ import CopyText from "./CopyText.vue";
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
-  powerUNIT.unit.map(({ HKSH }) => 
+  powerUNIT.unit.map(({ HKSH, p }) => 
     HKSH.map(({ throttle, check, directPress }) => {
-      if (throttle) order.throttle = { title: text('throttle') + throttle};
-      if (check) order.check = { title: text('check') + check};
-      if (directPress) order.directPress = { title: text('directPress') + directPress};
+      order.throttle = throttle ? { title: text('throttle') + throttle} : undefined;
+      order.check = check ? { title: text('check') + check} : undefined;
+      order.directPress = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p)?.title } : undefined; //TODO: change p to directPress pressure
     }));
   return powerUNIT.unit.map(({ Q, HKSH }, i) => 
     HKSH.map(({ spool }) => 
