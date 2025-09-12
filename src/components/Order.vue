@@ -5,13 +5,13 @@ const { order } = defineProps(["order"]);
 const normalize = () => {
   const obj = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
-    if (key && Array.isArray(order[key]))
+    if (Array.isArray(order[key]))
       order[key].forEach((elem, i) => (obj[`${key}${i}`] = { title: elem.title, count: elem.count, JM: 'Szt', opis: '' }));
     else if (order[key].title) {
       if (obj[key]) {
       obj[key].count++;
     } else {
-      obj[key] = { title: order[key].title, count: elem.count, JM: 'Szt', opis: '' };
+      obj[key] = { title: order[key].title, count: 1, JM: 'Szt', opis: '' };
       }
     }
   });
