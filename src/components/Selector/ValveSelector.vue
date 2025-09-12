@@ -10,11 +10,11 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
   
 const filteredValves = () => {
   powerUNIT.unit.map(({ HKSH }) => 
-    HKSH.map(({ throttle, check, directPress }) => 
+    HKSH.map(({ throttle, check, directPress }) => {
       if (throttle) order.throttle = { title: text(throttle) + throttle};
       if (check) order.check = { title: text(check) + check};
       if (directPress) order.directPress = { title: text(directPress) + directPress};
-    ));
+    }));
   return powerUNIT.unit.map(({ Q, HKSH }, i) => 
     HKSH.map(({ spool }) => 
       spoolData.find(valve => 
