@@ -9,6 +9,12 @@ import CopyText from "./CopyText.vue";
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
   
 const filteredValves = () => {
+  powerUNIT.unit.map(({ HKSH }) => 
+    HKSH.map(({ throttle, check, directPress }) => 
+      throttle ?? order.throttle = { title: text(throttle) + throttle};
+      check ?? order.check = { title: text(check) + check};
+      directPress ?? order.directPress = { title: text(directPress) + directPress};
+    ));
   return powerUNIT.unit.map(({ Q, HKSH }, i) => 
     HKSH.map(({ spool }) => 
       spoolData.find(valve => 
