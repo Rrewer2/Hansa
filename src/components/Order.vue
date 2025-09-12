@@ -3,16 +3,16 @@ import { KITtitle } from "../services/functions";
 
 const { order } = defineProps(["order"]);
 const normalize = () => {
-  const obj = { KIT: { title: 'KIT', opis: KITtitle(order), count: 1 } };
+  const obj = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
-    if (Array.isArray(order[key]))
-      order[key].forEach((elem, i) => (obj[`${key}${i}`] = { title: elem.title, opis: '', count: elem.count }));
+    if (key && Array.isArray(order[key]))
+      order[key].forEach((elem, i) => (obj[`${key}${i}`] = { title: elem.title, count: elem.count, JM: 'Szt', opis: '' }));
     else if (order[key].title) {
       if (obj[key]) {
       obj[key].count++;
     } else {
-      obj[key] = { title: order[key].title, opis: '', count: 1 };
-    }
+      obj[key] = { title: order[key].title, count: elem.count, JM: 'Szt', opis: '' };
+      }
     }
   });
   return obj;
