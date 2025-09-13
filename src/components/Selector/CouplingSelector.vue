@@ -13,6 +13,8 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 
+const setCoupling = ({ title, ...rest }) => order[`coupling` + i] = { title, couplingData: { ...rest } };
+
 const filteredCoupling = () => {
   if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
   else {
@@ -28,10 +30,7 @@ const filteredCoupling = () => {
         (!pump || order[`pump${i}`].title?.startsWith(pump))
       );
     });
-    if (filtered.length === 1) {
-      const { title, ...rest } = filtered[0];
-      order.coupling = { title, couplingData: { ...rest } };
-    }
+    if (filtered.length === 1) setCoupling(filtered[0]);
     return filtered;
   }
 };
@@ -57,8 +56,8 @@ const filteredCoupling = () => {
       <tbody v-for="{ title, ...rest } in filteredCoupling()">
         <tr>
           <td class="tal">
-            <input type="checkbox" :id="title" @click="order.coupling = { title, couplingData: { ...rest } }"
-              class="mx" />
+            <input type="radio" :id="title" @click="setCoupling({ title, ...rest })"
+              :checked="title === order[`coupling${i}`]?.title" class="mx" />
             <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>

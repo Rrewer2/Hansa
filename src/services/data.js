@@ -258,6 +258,9 @@ export const flanges = [
   { title: "F3.5A", pressure: 180, LK: "LK Ø 62 mm / M 10", thread: "G 1″ -11" },
   { title: "F3.5B", pressure: 180, LK: "LK Ø 62 mm / M 12", thread: "G 1″ -11" },
   { title: "F4", pressure: 180, LK: "LK Ø 72.5 mm / M 12", thread: "G 1.1/4″ -11" },
+  { title: "GF35LKL12315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 18 x 1,5" },
+  { title: "GF35LKL15250", pressure: 250, LK: "LK Ø 35 mm / M 6", thread: "M 22 x 1,5" },
+  { title: "GF35LKS16315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 24 x 1,5" },
 ];
 
 export const flangesPP = [
@@ -1060,6 +1063,37 @@ export const HKM = [
   {title: "HKM6175", L: 175,CETOP: 5},
   {title: "HKM6190", L: 190,CETOP: 5},
 ];
+
+const priority = [
+  "HAG",
+  "pump",
+  "flangeIn",
+  "flangeOut",
+  "motor",
+  "bellhousing",
+  "coupling",
+  "vibro",
+  "block",
+  "valve",
+  "start",
+  "throttle",
+  "check",
+  "directPress",
+  "bolt",
+  "plug",
+  'tank',
+  'cooler',
+];
+export const getPriority = (KIT) => {
+  const array = Object.entries(KIT);
+  const sorting = (a, b) => {
+    const a1 = priority.findIndex(item => a[1].opis.includes(item));
+    const b1 = priority.findIndex(item => b[1].opis.includes(item));
+    return a1 - b1;
+    }
+    const sorted = array.sort(sorting);
+  return Object.fromEntries(sorted)
+};
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},

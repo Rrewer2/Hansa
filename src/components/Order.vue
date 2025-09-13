@@ -1,23 +1,23 @@
 <script setup>
+import { getPriority } from "../services/data";
 import { KITtitle } from "../services/functions";
+import { text } from "../services/text";
 
 const { order } = defineProps(["order"]);
 const normalize = () => {
   const KIT = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
-    //   // if (Array.isArray(order[key]))
-    //     //   order[key].forEach((elem, i) => (KIT[`${key}${i}`] = { title: elem.title, count: elem.count, JM: 'Szt', opis: '' }));
-    //   // else 
-    if (order[key].title) {
-      if (KIT[order[key].title]?.title) {
-        KIT[order[key].title].count++;
+    const { title } = order[key];
+    if (title) {
+      if (KIT[title]?.title) {
+        KIT[title].count++;
       } 
       else {
-        KIT[order[key].title] = { title: order[key].title, count: 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
+        KIT[title] = { title, count: 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
       }
     }
   });
-  return KIT;
+  return getPriority(KIT);
 };
 </script>
 
@@ -37,7 +37,7 @@ const normalize = () => {
             {{ title }}
           </td>
           <td v-for="item in rest">
-            {{ item?.meta ? item.meta : typeof item === "KITect" ? "" : item }}
+            {{ text(item?.meta ? item.meta : item) }}
           </td>
         </tr>
       </tbody>

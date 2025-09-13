@@ -46,14 +46,11 @@ const filteredPumps = () => {
 const flangeSelector = () => {
   const flangesData = order[`pump${i}`]?.pumpData.out.startsWith('Bore') ? flangesPP : flanges;
   const flangeIn = flangesData.find(({ LK }) => LK === order[`pump${i}`]?.pumpData.in);
-  console.log('flangeIn', flangeIn);
-  if (flangeIn) order[`flangeIn${i}`] = { title: flangeIn.title, flangeData : flangeIn};
-  else order[`flangeIn${i}`] = {};
+  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
+
   if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
-    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure >= powerUNIT.unit[0].p);
-    console.log('flangeOut', flangeOut);
-    if (flangeOut) order[`flangeOut${i}`] = { title: flangeOut.title, flangeData : flangeOut};
-    else order[`flangeOut${i}`] = {};
+    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure > powerUNIT.unit[0].p + 40);
+    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
   }
 };
 
@@ -61,6 +58,7 @@ const selectedPump = () => {
   powerUNIT.unit[0].Q = round(
     getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n),
   );
+  group.value = order[`pump${i}`]?.pumpData?.group;
   flangeSelector();
 };
 const getTitle = (item) => Object.keys(item)[0];

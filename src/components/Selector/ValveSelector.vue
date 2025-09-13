@@ -1,6 +1,6 @@
 <script setup>
-import { spoolData, HKHMP, HKHQ, HKHR } from "../../services/data";
-import { getQfromProject, getSmthFromProject, getTextWithSpace } from "../../services/functions";
+import { spoolData, HKHMP, HKHQ, HKHR, HKM } from "../../services/data";
+import { getTextWithSpace } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
 import Valve from "../Scheme/Valve.vue";
@@ -10,20 +10,34 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
   
 const filteredValves = () => {
   const cetop = (Q) => Q >= 35 ? 5 : 3;
-  powerUNIT.unit.map(({ HKSH, p, Q }, i) => 
-    HKSH.map(({ throttle, check, directPress }, j) => {
-      order[`throttle`+ i + j] = throttle ? { title: HKHQ.find(el => el.type === throttle && el.CETOP === cetop(Q))?.title } : {};
-      order[`check`+ i + j] = check ? { title: HKHR.find(el => el.type === check && el.CETOP === cetop(Q))?.title } : {};
-      order[`directPress`+ i + j] = directPress ? { title: HKHMP.find(el => el.type === directPress && el.pmax > p && el.CETOP === cetop(Q))?.title } : {}; //TODO: change p to directPress pressure
+  return powerUNIT.unit.map(({ HKSH, p, Q }, i) => 
+    HKSH.map(({ throttle, check, directPress, spool }, j) => {
+      const CETOP = cetop(Q);
+      const hq = throttle ? HKHQ.find(el => el.type === throttle && el.CETOP === CETOP) : {};
+      const hr = check ? HKHR.find(el => el.type === check && el.CETOP === CETOP) : {};
+      const hmp = directPress ? HKHMP.find(el => el.type === directPress && el.pmax > p && el.CETOP === CETOP) : {};
+      const valve = spoolData.find((el) => el.spool === spool && (!Q || el.CETOP === CETOP));
+      const bolt = HKM.find((el) => el.L === (hq.h ?? 0) + (hr.h ?? 0) + (hmp.h ?? 0) + (valve.CETOP === 3 ? 30 : 40) && el.CETOP === CETOP);
+      order[`throttle`+ i + j] = { title: hq.title };
+      order[`check`+ i + j] = { title: hr.title };
+      order[`directPress`+ i + j] = { title: hmp.title }; //TODO: change p to directPress pressure
+      order[`valve`+ i + j] = { title: valve?.title };
+      order[`bolt`+ i + j] = { title: bolt?.title };
+      return valve
     }));
-  return powerUNIT.unit.map(({ Q, HKSH }) => 
-    HKSH.map(({ spool }) => 
-      spoolData.find(valve => 
-        (!Q || valve.CETOP === cetop(Q)) && valve.spool === spool)));
 };
 
 const GA = () => spoolData.find(({ spool }) => spool === "GA");
-const valves = () => powerUNIT.unit[i].DR2type === 3 ? [[ GA() ], ...filteredValves() ] : filteredValves();
+const valves = () => {
+  if (powerUNIT.unit[i].DR2type === 3) {
+    const start = GA();
+    order['start' + i] = { title: start.title };
+    return [[ start ], ...filteredValves() ];
+  } else {
+    order['start' + i] = {};
+    return filteredValves()
+  };
+};
 </script>
 
 <template>

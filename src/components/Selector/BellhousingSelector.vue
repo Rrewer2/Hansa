@@ -18,7 +18,7 @@ const bellhousing = ref({ group: "", holePattern: "", size: "" });
 
 const filteredBellhousing = () => {
   const data = powerUNIT.mount.at(-1) === "4" ? manifoldData : bellhousingData;
-  return data.filter(({ group, size, holePattern, pump, shaft }) => {
+  const res = data.filter(({ group, size, holePattern, pump, shaft }) => {
     return (
       (holePattern === order[`pump${i}`]?.pumpData?.holePattern ||
         holePattern === bellhousing.value.holePattern) &&
@@ -31,19 +31,24 @@ const filteredBellhousing = () => {
         pump.split(",").some((p) => order[`pump${i}`]?.title?.startsWith(p)))
     );
   });
-};
-
-watch(
-  [() => bellhousing.value.group, () => bellhousing.value.holePattern, () => bellhousing.value.size, () => order[`pump${i}`], () => order[`motor${i}`], () => powerUNIT.mount],
-  () => {
-    const filtered = filteredBellhousing();
-    if (filtered.length === 1) {
-      const { title, ...rest } = filtered[0];
+  if (res.length === 1) {
+      const { title, ...rest } = res[0];
       order.bellhousing = { title, bellhousingData: { ...rest } };
     }
-  },
-  { immediate: true }
-);
+  return res;
+};
+
+// watch(
+//   [() => bellhousing.value.group, () => bellhousing.value.holePattern, () => bellhousing.value.size, () => order[`pump${i}`], () => order[`motor${i}`], () => powerUNIT.mount],
+//   () => {
+//     const filtered = filteredBellhousing();
+//     if (filtered.length === 1) {
+//       const { title, ...rest } = filtered[0];
+//       order.bellhousing = { title, bellhousingData: { ...rest } };
+//     }
+//   },
+//   { immediate: true }
+// );
 
 const pattern = () => {
   const obj = {};

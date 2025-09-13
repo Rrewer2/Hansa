@@ -81,6 +81,8 @@ export default {
   mountForked: ["Widlaste"],
   mountOther: ["Inne"],
   valve: ["Rozdzielacz"],
+  start: ['Rozdzielacz startowy'],
+  bolt: ['Zestaw śrub metrycznych'],
   tank: ["Zbiornik"],
   motor: ["Silnik"],
   bellhousing: ["Kielich"],

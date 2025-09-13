@@ -114,9 +114,9 @@ const navPage = ref([false, false, true, false, false]);
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />
   <LanguageSwitcher :meta="meta" />
-  <div>project {{ project }}</div>
+  <!-- <div>project {{ project }}</div> -->
   <div>order {{ order }}</div>
-  <div>meta {{ meta }}</div>
+  <!-- <div>meta {{ meta }}</div> -->
 </template>
 
 <style>

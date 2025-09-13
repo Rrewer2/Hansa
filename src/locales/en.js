@@ -81,6 +81,8 @@ export default {
   mountForked: ["Forked"],
   mountOther: ["Other"],
   valve: ["Valve"],
+  start: ['Start valve'],
+  bolt: ['Metric screw set'],
   tank: ["Tank"],
   motor: ["Motor"],
   bellhousing: ["Bellhousing"],
