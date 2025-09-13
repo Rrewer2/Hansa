@@ -542,10 +542,10 @@ export const pumpData = {
   gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['REXROTH', gearPumpRexroth], ['WPH', gearPumpWPH], ['CHINA', gearPumpAPF]]
   .flatMap(([maker, pumpsByGroup]) => pumpsByGroup
     .flatMap((el, group) => Object.entries(el)
-      .map(([title, data]) => ({[title]: { ...data, maker, group }})))),
+      .map(([title, data]) => ({[title]: { title, ...data, maker, group }})))),
   piston: [['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]]
   .flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
-    .map(([title, data]) => ({[title]: { ...data, shaft: data.shaft || '-', maker }})))
+    .map(([title, data]) => ({[title]: { title, ...data, shaft: data.shaft || '-', maker }})))
 };
 
 export const coolerVBT =  Array.from(Array(11), (_, i) => i*5 + 20);

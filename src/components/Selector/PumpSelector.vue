@@ -22,10 +22,12 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 const filteredPumps = () => {
+  console.log('Go');
   if (!meta.pumpType) return [];
   if (powerUNIT.unit.length === 1) {
     const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
     const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
+    if (order[`pump${i}`]?.title) flangeSelector();
     return pumpData[meta.pumpType].filter((item) => {
       const pump = Object.values(item)[0];
       const CC = pump.CC - VFU;
@@ -37,10 +39,13 @@ const filteredPumps = () => {
           meta.pumpType !== "gears" ||
           group.value === pump.group)
       );
+    }).map(el => {
+      const { title, CC, ...rest } = Object.values(el)[0];
+      return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
     });
   }
-  // TODO: create a functionality for multiple pump
-  if (powerUNIT.unit.length > 1) return [];
+  
+  if (powerUNIT.unit.length > 1) return [];// TODO: create a functionality for multiple pump
 };
 
 const flangeSelector = () => {
@@ -61,7 +66,6 @@ const selectedPump = () => {
   group.value = order[`pump${i}`]?.pumpData?.group;
   flangeSelector();
 };
-const getTitle = (item) => Object.keys(item)[0];
 </script>
 
 <template>
@@ -112,30 +116,30 @@ const getTitle = (item) => Object.keys(item)[0];
     <br />
     <table v-if="meta.pumpType && filteredPumps().length">
       <thead>
-        <td></td>
-        <td>
+        <!-- <td>{{ text('title') }}</td> -->
+        <td v-for="a in Object.keys(filteredPumps()[0])">
+          <b><i>{{ text(a) }}</i></b>
+        </td>
+        <!-- <td>
           <b><i>L/min</i></b>
-        </td>
-        <td v-for="a in Object.keys(Object.values(filteredPumps().at(-1))[0])">
-          <b><i>{{ a }}</i></b>
-        </td>
+        </td> -->
       </thead>
-      <tbody v-for="elem in filteredPumps()" :value="elem">
+      <tbody v-for="{ title, ...rest } in filteredPumps()">
         <td class="tal">
-          <input type="radio" :id="getTitle(elem)" v-model="order[`pump${i}`]" @change="selectedPump" :value="{
-            title: getTitle(elem),
-            pumpData: { ...elem[getTitle(elem)], n: powerUNIT.n },
-          }" name="pump" :checked="getTitle(elem) === order[`pump${i}`]?.title" class="mx" />
-
-          <a v-if="Object.values(elem)[0].maker !== 'WPH'" :href="`${links[meta.lang]}${getTitle(elem)}`"
-            target="_blank" rel="noopener noreferrer">
-            {{ getTextWithSpace(getTitle(elem)) }}
+          <input type="radio" :id="title" v-model="order[`pump${i}`]" @change="selectedPump" :value="{
+            title,
+            pumpData: { ...rest, n: powerUNIT.n },
+          }" name="pump" :checked="title === order[`pump${i}`]?.title" class="mx" />
+          <a v-if="rest.maker !== 'WPH'" :href="`${links[meta.lang]}${title}`" target="_blank"
+            rel="noopener noreferrer">
+            {{ getTextWithSpace(title) }}
           </a>
-          <span v-else>{{ getTextWithSpace(getTitle(elem)) }}</span>
-          <CopyText :text="getTitle(elem)" />
+          <span v-else>{{ getTextWithSpace(title) }}</span>
+          <CopyText :text="title" />
         </td>
-        <td>{{ round(getQ(Object.values(elem)[0].CC, powerUNIT.n)) }}</td>
-        <td v-for="item in Object.values(elem)[0]">{{ item }}</td>
+        <td v-for="item in Object.values(rest)">{{ item }}</td>
+        <!-- <td>{{ round(getQ(Object.values(...rest)[0].CC, powerUNIT.n)) }}</td>
+        <td v-for="item in Object.values(...rest)[0]">{{ item }}</td> -->
       </tbody>
     </table>
   </article>
