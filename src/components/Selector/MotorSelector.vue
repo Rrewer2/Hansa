@@ -8,6 +8,7 @@ import {
   motorSizes,
 } from "../../services/data";
 import {
+  getMaxPower,
   getTextWithSpace,
   reducedPower,
   round,
@@ -53,6 +54,12 @@ const selectedMotor = ({ mount, size }) => {
   powerUNIT.mount = mount;
   motorSize.value = size;
 };
+const filteredMotorData = () => {
+  if (order[`pump${i}`]?.title) {
+    return motorData.filter(el => el <= getMaxPower({ VFU: order[`pump${i}`]?.pumpData.CC, n: powerUNIT.n, p: order[`pump${i}`]?.pumpData.pmax }))
+  }
+  return motorData;
+};
 </script>
 
 <template>
@@ -92,7 +99,7 @@ const selectedMotor = ({ mount, size }) => {
 
       <InputItem data="P">
         <select v-model="P" @change="() => setPressure(powerUNIT.unit, P)" id="P">
-          <option v-for="item in motorData" :value="item">{{ item }}</option>
+          <option v-for="item in filteredMotorData()" :value="item">{{ item }}</option>
         </select>
       </InputItem>
     </div>

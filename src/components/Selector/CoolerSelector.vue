@@ -1,13 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { coolerData, coolerVBT, coolerVZ } from "../../services/data";
-import {
-  P01,
-  Pv,
-  Qmax,
-  filteredCooler,
-  getTextWithSpace,
-} from "../../services/functions";
+import { P01, Pv, Qmax, getTextWithSpace } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -23,29 +17,40 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 ]);
 
 const cooler = ref({ η: 70, vBT: 50, vZ: 30 });
-const getTitle = () => order.cooler?.title;
+const setCooler = ({ title, ...rest }) => order.cooler?.title !== title ? order.cooler = { title, bellhousingData: { ...rest } } : order.cooler = {};
+
+const filteredCooler = (project, cooler) => {
+  return coolerData.filter(({ performance, flow }) => {
+    const P = P01(project, cooler);
+    const Qm = Qmax(project);
+    return performance.max >= P && (flow.min + flow.max)/2 >= Qm;
+  })};
 </script>
 
 <template>
-  <article v-if="meta.cooler">
-    <h2>
-      {{ text("cooler") }}<span> {{ order.cooler?.title }}</span>
-    </h2>
+  <article>
+    <h2>{{ text("cooler") }} {{ order.cooler?.title }}</h2>
     <div class="flex-row flex-center">
+      <InputItem data="cooler">
+        <select v-model="meta.cooler" class="ml-10" id="cooler"
+          @click="meta.cooler === 0 ? setCooler({ title: order.cooler?.title }) : {}">
+          <option v-for="(title, c) in ['Bez', 'Przed fitrem', 'Za filtrem']" :value="c">
+            {{ title }}
+          </option>
+        </select>
+      </InputItem>
+
       <InputItem data="η">
-        <!-- <input type="number" min="0" max="100" v-model="cooler.η" :disabled="order?.cooler" id="η" /> -->
         <input type="number" min="0" max="100" v-model="cooler.η" id="η" />
       </InputItem>
 
       <InputItem data="vBT">
-        <!-- <select v-model="cooler.vBT" :disabled="getTitle()" id="vBT"> -->
         <select v-model="cooler.vBT" id="vBT">
           <option v-for="item in coolerVBT" :value="item">{{ item }}</option>
         </select>
       </InputItem>
 
       <InputItem data="vZ">
-        <!-- <select v-model="cooler.vZ" :disabled="getTitle()" id="vZ"> -->
         <select v-model="cooler.vZ" id="vZ">
           <option v-for="item in coolerVZ" :value="item">{{ item }}</option>
         </select>
@@ -58,25 +63,23 @@ const getTitle = () => order.cooler?.title;
       }" />
     </div>
     <br />
-    <table>
+    <table v-if="filteredCooler(project, cooler).length && meta.cooler">
       <thead>
         <td v-for="a of Object.keys(coolerData[0])">
           <b><i>{{ text(a) }}</i></b>
         </td>
       </thead>
       <tbody>
-        <tr v-for="{ title, ...elem } in filteredCooler(project, cooler)?.title
-          ? [filteredCooler(project, cooler)]
-          : coolerData">
+        <tr v-for="{ title, ...rest } in filteredCooler(project, cooler)">
           <td class="tal">
-            <input type="radio" :id="title" v-model="order.cooler" :value="{ title, coolerData: elem }" name="title"
-              :checked="getTitle() === title" class="mx" />
+            <input type="radio" :id="title" @click="setCooler({ title, ...rest })" name="title"
+              :checked="order.cooler?.title === title" class="mx" :disabled="!meta.cooler" />
             <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />
           </td>
-          <td v-for="item in elem">{{ `${item.min} ÷ ${item.max}` }}</td>
+          <td v-for="item in rest">{{ `${item.min} ÷ ${item.max}` }}</td>
         </tr>
       </tbody>
     </table>

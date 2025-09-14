@@ -17,11 +17,15 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 
 const motorSize = ref("");
 
+const setVibro = ({ title, ...rest }) => order[`vibro` + i]?.title !== title ? order[`vibro` + i] = { title, vibroData: { ...rest } } : {};
+
 const vibro = () => {
   if (powerUNIT.mount === "B14" || powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B14" || order[`motor${i}`]?.motorData?.mount === "B5") {
     return gasketPump.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
   }
-  return dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
+  const result = dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
+  if (result.length === 1) setVibro(result[0]);
+  return result;
 };
 </script>
 
@@ -62,7 +66,8 @@ const vibro = () => {
       <tbody v-for="{ title, ...rest } in vibro()">
         <tr>
           <td class="tal">
-            <input type="radio" :id="title" @click="order.vibro = { title, vibroData: { ...rest } }" class="mx" />
+            <input type="radio" :id="title" @click="setVibro({ title, ...rest })" class="mx"
+              :checked="title === order['vibro' + i]?.title" />
             <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>

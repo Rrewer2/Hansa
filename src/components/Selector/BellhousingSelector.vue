@@ -31,24 +31,9 @@ const filteredBellhousing = () => {
         pump.split(",").some((p) => order[`pump${i}`]?.title?.startsWith(p)))
     );
   });
-  if (res.length === 1) {
-      const { title, ...rest } = res[0];
-      order.bellhousing = { title, bellhousingData: { ...rest } };
-    }
+  if (res.length === 1) setBellhousing(res[0])
   return res;
 };
-
-// watch(
-//   [() => bellhousing.value.group, () => bellhousing.value.holePattern, () => bellhousing.value.size, () => order[`pump${i}`], () => order[`motor${i}`], () => powerUNIT.mount],
-//   () => {
-//     const filtered = filteredBellhousing();
-//     if (filtered.length === 1) {
-//       const { title, ...rest } = filtered[0];
-//       order.bellhousing = { title, bellhousingData: { ...rest } };
-//     }
-//   },
-//   { immediate: true }
-// );
 
 const pattern = () => {
   const obj = {};
@@ -58,6 +43,7 @@ const pattern = () => {
   });
   return ['', ...Object.keys(obj)];
 };
+const setBellhousing = ({ title, ...rest }) => order[`bellhousing` + i]?.title !== title ? order[`bellhousing` + i] = { title, bellhousingData: { ...rest } } : {};
 </script>
 
 <template>
@@ -112,8 +98,8 @@ const pattern = () => {
       </thead>
       <tbody v-for="{ title, ...rest } in filteredBellhousing()">
         <td class="tal">
-          <input type="radio" :id="title" v-model="order.bellhousing" :value="{ title, bellhousingData: { ...rest } }"
-            :checked="title === order.bellhousing?.title" class="mx" />
+          <input type="radio" :id="title" @click="setBellhousing({ title, ...rest })"
+            :checked="title === order['bellhousing' + i]?.title" class="mx" />
 
           <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}

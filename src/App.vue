@@ -26,6 +26,7 @@ const cylInit = {
   throttle: "",
   check: "",
   directPress: "",
+  directPressValue: "",
 };
 const pumpInit = { Q: "", p: "", DR2type: 1, DBD: "" };
 const getNewPump = () => ({
@@ -109,7 +110,7 @@ const navPage = ref([false, false, true, false, false]);
 
     <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
 
-    <Order v-if="navPage[3]" v-bind="{ order }" />
+    <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />

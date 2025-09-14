@@ -65,7 +65,7 @@ const RA = [
   {title: "HKBAKRA44",Size: 44,CoolingCapacity: 1.04},
   {title: "HKBAKRA70",Size: 70,CoolingCapacity: 1.16},
   {title: "HKBAKRA130",Size: 130,CoolingCapacity: 2.1}
-].map((el) => ({...el, type: "RA"}));
+].map((el) => ({...el, type: "RA", material: 'Alu'}));
 const BSK = [
   {title: "HKBSK40",Size: 40},
   {title: "HKBSK50",Size: 50},
@@ -85,7 +85,7 @@ const BSK = [
   {title: "HKBSK400",Size: 400},
   {title: "HKBSK450",Size: 450},
   {title: "HKBSK500",Size: 500}
-].map((el) => ({...el, type: "BSK"}));
+].map((el) => ({...el, type: "BSK", material: 'Steel'}));
 const BEK = [
   {title: "HKBEK12",Size: 12},
   {title: "HKBEK20",Size: 20},
@@ -97,7 +97,7 @@ const BEK = [
   {title: "HKBEK150",Size: 150},
   {title: "HKBEK225",Size: 225},
   {title: "HKBEK300",Size: 300}
-].map((el) => ({...el, type: "BEK"}));
+].map((el) => ({...el, type: "BEK", material: 'Steel'}));
 const SBT = [
   {title: "HKSBT006",Size: 6},
   {title: "HKSBT012",Size: 12},
@@ -107,7 +107,7 @@ const SBT = [
   {title: "HKSBT100",Size: 100},
   {title: "HKSBT160",Size: 160},
   {title: "HKSBT250",Size: 250}
-].map((el) => ({...el, type: "SBT"}));
+].map((el) => ({...el, type: "SBT", material: 'Steel'}));
 const KS = [
   {title: "HKKS01", Size: 1, poz: 'h'},
   {title: "HKKS01V", Size: 1, poz: 'v'},
@@ -141,7 +141,7 @@ const KS = [
   {title: "HKKS92", Size: 18, poz: 'h'},
   {title: "HKKS92V", Size: 18, poz: 'v'},
   {title: "HKKS94", Size: 8, poz: 'h'},
-].map((el) => ({...el, type: "KS"}));
+].map((el) => ({...el, type: "KS", material: 'Steel'}));
 export const tankData = { RA, BSK, BEK, SBT, KS };
 
 export const motorData = [ '',0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 9.2, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
@@ -173,7 +173,7 @@ const enginesHK = [
   {title: 'HK180M4B354-6IE3', size: 180,power: 18.5,meta: 'E-MOTOR 400/690V 18,5KW 1470U B35 IE3'},
   {title: 'HK200L4B354-6IE3', size: 200,power: 30,meta: 'E-MOTOR 400/690V 30,0KW 1475U B35 IE3'},
   {title: 'HK180M4B354-6IE3', size: 225,power: 45,meta: 'E-MOTOR 400/690V 45,0KW 1475U B35 IE3'},
-];
+].map(({meta, ...rest}) => ({ ...rest, U: meta.includes('230/400V') ? '230/400V' : '400/690V', n: meta.match(/(\d{2,4})U/)[1], meta }));
 const enginesK400 = [
   {title: 'K-400B5-1.1-90S', size: 90, power: 1.1, meta: 'Silnik 3faz. 400V; 1.1kW 1420obr/min; B5'},
   {title: 'K-400B14-1.5-90L', size: 90, power: 1.5, meta: 'Silnik trójfazowy 400V; 1,5kW 1400obr.'},
@@ -188,21 +188,26 @@ const enginesK400 = [
   {title: 'K-400B35-5.5-132', size: 132, power: 5.5, meta: 'Silnik 3-faz. 400V; 5.5kW 1420obr/min; B'},
   {title: 'K-400B35-7.5132M', size: 132, power: 7.5, meta: 'Silnik el. 400/690V 7,5KW 1465U B35 IE3'},
   {title: 'K-400B5-11-132L', size: 132, power: 11, meta: 'Silnik prog. 400/690V 11kW 1465 B5 132L2'}
-];
-const enginesK230 = [{title: "K-230B14-0.18-63", size: 63,power: 0.18,meta: "Siln.1-faz. 230V; 0,18kW 1390obr.B34; MY"},
-                    {title: "K-230B34-1.5-90L", size: 90,power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}];
+].map(({meta, ...rest}) => ({ ...rest, U: meta.includes('400V') ? '400V' : '400/690V', n: meta.match(/(\d{4})/)[1], meta }));
+const enginesK230 = [
+  {title: "K-230B14-0.18-63", size: 63,power: 0.18,meta: "Siln.1-faz. 230V; 0,18kW 1390obr.B34; MY"},
+  {title: "K-230B34-1.5-90L", size: 90,power: 1.5,meta: "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT"}
+].map(({meta, ...rest}) => ({ ...rest, U: '230V', n: meta.match(/(\d{4})/)[1], meta }));
+
 const enginesACMotoren = [
   {title: "K-FCPA804/PHE", size: 80,power: 1.1,meta: "SILNIK PROGRESYWNY 1,1KW"},
   {title: "K-FCA90LC4/PHE", size: 90,power: 2.2,meta: "SILNIK PROGRESYWNY 2,2 Kw"},
   {title: "K-FCPA112MD-4IMB35", size: 112,power: 7.5,meta: "SILNIK PROGRESYWNY 7,5 KW"},
-  {title: "K-FCPA132MC4/HE", size: 132,power: 9.2,meta: "Silnik 9,2kW progresywny"}];
+  {title: "K-FCPA132MC4/HE", size: 132,power: 9.2,meta: "Silnik 9,2kW progresywny"}
+].map(({meta, ...rest}) => ({ ...rest, U: '400V', n: '1440', meta }));
 const enginesT3A=[
   {title: "K-T3A90L1-4.B34", size: 90,power: 1.5,meta: "Silnik trójfazowy T3A90L1-4,B34;1,5kW"},
   {title: "K-T3A100L2-4", size: 100,power: 3,meta: "Silnik eleketr. 3 kW; B5; 230/400V"},
   {title: "K-T3A112M4B35-4KW", size: 112,power: 4,meta: "Silnik elektryczny 4kW"},
   {title: "K-T3A-112M2-4", size: 112,power: 5.5,meta: "Silnik prog. T3A-112M2-4; 5,5kW, B5, 145"},
   {title: "K-T3A-132M-4", size: 132,power: 7.5,meta: "Silnik prog. T3A 132M-4, B35, 7.5kW"},
-  {title: "K-T3A-132M3-4", size: 132,power: 11,meta: "Silnik prog. T3A 132M3-4, B35,11kW"}];
+  {title: "K-T3A-132M3-4", size: 132,power: 11,meta: "Silnik prog. T3A 132M3-4, B35,11kW"}
+].map(({meta, ...rest}) => ({ ...rest, U: meta.includes('230/400V') ? '230/400V' : '400V', n: '1440', meta }));
 
 export const motorSizes = ['', 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 225, 250, 280, 315].sort((a, b) => a - b);
 export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title,  ...rest})=>({title,...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0] || 'B35'}));
@@ -885,9 +890,9 @@ const singleConnectionPlate = [
   {title: "HKES5B34PLX3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKEM103138X2F", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKEM103138X3F", cetop: 3, pressure: 350, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
-  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKEM105134X2F", cetop: 5, pressure: 120, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKEM105134X3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
+  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKBA201HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA202HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA204HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
@@ -897,8 +902,8 @@ const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   return {
     title: `HKBA214${stations}`,
     cetop: 3,
-    stations,
     pressure: 350,
+    stations,
     threadP: 'G 1/2″ -14',
     threadT: 'G 1/2″ -14',
     threadA: 'G 3/8″ -19',
@@ -911,8 +916,8 @@ const multipleConnectionPlateBA314 = Array.from({ length: 5 }, (_, i) => {
   return {
     title: `HKBA314${stations}`,
     cetop: 5,
-    stations,
     pressure: 350,
+    stations,
     threadP: 'G 3/4″ -14',
     threadT: 'G 1″ -11',
     threadA: 'G 3/4″ -14',
@@ -926,8 +931,8 @@ const createMultipleConnectionPlateEM103 = (suffix) =>
     return {
       title: `HKEM103${stations}38X${suffix}`,
       cetop: 3,
-      stations,
       pressure: suffix === "3F" ? 350 : 210,
+      stations,
       threadP: 'G 1/2″ -14',
       threadT: 'G 1/2″ -14',
       threadA: 'G 3/8″ -19',
@@ -941,8 +946,8 @@ const createMultipleConnectionPlateEM105 = (suffix) =>
     return {
       title: `HKEM105${stations}34X${suffix}`,
       cetop: 5,
-      stations,
       pressure: suffix === "3F" ? 270 : 120,
+      stations,
       threadP: 'G 3/4″ -14',
       threadT: 'G 3/4″ -14',
       threadA: 'G 3/4″ -14',
@@ -961,8 +966,8 @@ const createMultipleConnectionPlateDR2 = (suffix) =>
     return {
       title: `K-DR2-06/${stations}${suffix}-AL`,
       cetop: 3,
-      stations,
       pressure: 210,
+      stations,
       threadP: 'G 1/2″ -14',
       threadT: 'G 1/2″ -14',
       threadA: 'G 3/8″ -19',
@@ -975,13 +980,13 @@ const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);
 const multipleConnectionPlateDR22 = createMultipleConnectionPlateDR2(2);
 
 export const blockData = [
-  ...singleConnectionPlate.map(({ cetop, ...rest }) => ({cetop, stations: 1, ...rest })),
+  ...singleConnectionPlate.map(({ title, cetop, pressure, ...rest }) => ({ title, cetop, pressure, stations: 1, ...rest })),
   ...multipleConnectionPlateBA214,
   ...multipleConnectionPlateBA314,
-  ...multipleConnectionPlateEM1033F,
   ...multipleConnectionPlateEM1032F,
-  ...multipleConnectionPlateEM1053F,
+  ...multipleConnectionPlateEM1033F,
   ...multipleConnectionPlateEM1052F,
+  ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
 ].map((el) => ({ ...el, start: !!el.start }));

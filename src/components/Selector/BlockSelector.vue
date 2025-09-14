@@ -17,7 +17,9 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 
 const sections = ref("");
 const press = ref("");
-  
+
+const setBlock = ({ title, ...rest }) => order[`block` + i]?.title !== title ? order[`block` + i] = { title, blockData: { ...rest } } : {};
+
 const filteredBlocks = () => {
   return powerUNIT.unit.map(({ Q, p, DR2type }, i) => blockData.filter(({ stations, cetop, pressure, DBV, start }) => {
     return (
@@ -34,7 +36,7 @@ const filteredBlocks = () => {
   <article>
     <h2>
       {{ text("block") }} {{ i ? i + 1 : ""
-      }}<span> {{ order.block?.title }}</span>
+      }}<span> {{ order['block' + i]?.title }}</span>
     </h2>
     <br />
     <div class="flex-row flex-center">
@@ -47,7 +49,7 @@ const filteredBlocks = () => {
         </select>
       </InputItem>
       <InputItem data="p">
-        <input type="number" min="0" v-model="press" id="press" />
+        <input type="number" min="0" v-model="powerUNIT.unit[i].p" id="press" />
       </InputItem>
       <InputItem data="DR2type">
         <select min="0" v-model="powerUNIT.unit[i].DR2type" id="DR2type">
@@ -68,7 +70,8 @@ const filteredBlocks = () => {
       <tbody v-for="unit in filteredBlocks()">
         <tr v-for="{ title, ...rest } in unit">
           <td class="tal">
-            <input type="radio" :id="title" @click="order.block = { title, blockData: { ...rest } }" class="mx" />
+            <input type="radio" :id="title" @click="setBlock({ title, ...rest })" class="mx"
+              :checked="title === order['block' + i]?.title" />
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}

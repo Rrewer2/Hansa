@@ -28,9 +28,9 @@ const wallThick = (D, p) => (D * 2.6 * p) / 200 / 47;
 // const wallThick = () => (D() * P()) / (2 * 138 + 0.6 * P());
 // const wallThick = () => (D() * P()) / (2.3 * 800 - P());
 
-const tank = (Q) => 3 * Q; //Ємність баку
+const tank = (Q) => 2 * Q; //Ємність баку
 export const getStandartTank = ({ tank }, T) =>
-  tankData[tank].find(({ Size }) => Size >= T); // Розмір баку
+  tankData[tank].filter(({ Size }) => Size >= T); // Розмір баку
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
@@ -42,14 +42,13 @@ export const reducedPower = (unit) =>
     .reduce((a, b) => a + b); // Сукупна потужність
 export const getStandartPower = (P) =>
   motorData.find((N) => N >= 0.97 * P) || "___"; //Потужність каталогова
-
 export const Qback = (item) => pumpCounting(item).Qback;
 export const Qmax = (project) =>
   project
     .map(({ unit }) => unit.map((item) => Qback(item)))
     .flat()
     .reduce((a, b) => a + b);
-
+    
 export const getVFU = (Q, n) => (Q * 1000) / (n * 0.96);
 export const getQ = (VFU, n) => (VFU * (n * 0.96)) / 1000;
 const pipe = (Q, VP) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
@@ -58,6 +57,7 @@ const pipeTmax = (QBack) => pipe(QBack, VPipe.T[0]);
 const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
 
+export const getMaxPower = (({ VFU, n, p }) => Power(getQ(VFU, n), p));//Потужність двигуна, яка є максимальною для вибраної помпи
 const getPressure = (DBD, p) => {
   if (DBD) {
     if (p) return Math.min(p, DBD);
@@ -160,7 +160,7 @@ export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
   return { pipeP, pipeT, pipeS, Qback, P };
 };
 
-export const filtrationD = (arr, D) => arr;
+export const filtrationD = (arr, { D }) => arr.filter(el => el < D);
 
 // const splitJoin = (arr, ö) => {
 //   const splitter = (A) => A.split('').map(str => str.split(','));
@@ -185,12 +185,6 @@ export const Pv = (project, η) =>
 
 export const P01 = (project, cooler) =>
   Pv(project, cooler.η) / (cooler.vBT - cooler.vZ);
-export const filteredCooler = (project, cooler) =>
-  coolerData.find(({ performance, flow }) => {
-    const P = P01(project, cooler);
-    const Qm = Qmax(project);
-    return performance.max >= P && flow.max >= 5 * Qm;
-  });
 
 export const KITtitle = (order) => {
   const { Size, type } = order.tank?.title

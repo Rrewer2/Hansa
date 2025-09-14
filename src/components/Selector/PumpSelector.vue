@@ -22,7 +22,6 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 const filteredPumps = () => {
-  console.log('Go');
   if (!meta.pumpType) return [];
   if (powerUNIT.unit.length === 1) {
     const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
@@ -54,9 +53,9 @@ const flangeSelector = () => {
   order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
 
   if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
-    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure > powerUNIT.unit[0].p + 40);
+    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180));
     order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
-  }
+  } else order[`flangeOut${i}`] = {};
 };
 
 const selectedPump = () => {

@@ -13,7 +13,7 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "i",
 ]);
 
-const setCoupling = ({ title, ...rest }) => order[`coupling` + i] = { title, couplingData: { ...rest } };
+const setCoupling = ({ title, ...rest }) => order[`coupling` + i]?.title !== title ? order[`coupling` + i] = { title, couplingData: { ...rest } } : {};
 
 const filteredCoupling = () => {
   if (!order[`pump${i}`]?.title || !order[`motor${i}`]?.title) return [];
@@ -40,7 +40,7 @@ const filteredCoupling = () => {
   <article>
     <h2>
       {{ text("coupling") }} {{ i ? i + 1 : ""
-      }}<span> {{ filteredCoupling().at(-1)?.title }}</span>
+      }}<span> {{ filteredCoupling()[0]?.title }}</span>
     </h2>
 
     <br />

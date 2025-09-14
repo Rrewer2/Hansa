@@ -18,12 +18,13 @@ const { project, meta, order, open } = defineProps([
   "order",
   "open",
 ]);
+const filteredTanks = () => getStandartTank(meta, agregatCounting(project)) ?? tankData[meta.tank];
 </script>
 
 <template>
   <article>
     <h2 :class="open && 'bgc-g'">
-      {{ text("tank") }}<span> {{ order.tank?.title }}</span>
+      {{ text("tank") }} {{ order.tank?.title }}
     </h2>
 
     <div class="flex-row flex-center">
@@ -45,12 +46,7 @@ const { project, meta, order, open } = defineProps([
         </td>
       </thead>
       <tbody>
-        <tr v-for="{ title, ...elem } in getStandartTank(
-          meta,
-          agregatCounting(project),
-        )?.title
-          ? [getStandartTank(meta, agregatCounting(project))]
-          : tankData[meta.tank]">
+        <tr v-for="{ title, ...elem } in filteredTanks()">
           <td class="tal">
             <input type="radio" :id="title" :value="{ title, tankData: elem }" name="elem" v-model="order.tank"
               :checked="title === order.tank?.title" class="mx" />

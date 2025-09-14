@@ -14,7 +14,7 @@ const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
 
 const getValue = {
   D: standartDiameters,
-  d: filtrationD(standartDiameters, HKSH.D),
+  d: filtrationD(standartDiameters, HKSH),
   z: [1, 2],
   spool: spoolTypes,
   mountA: HKSHMountD,
@@ -32,6 +32,7 @@ const {
   throttle,
   check,
   directPress,
+  directPressValue,
   form,
   ...rest
 } = HKSH;
@@ -52,6 +53,7 @@ const {
         throttle,
         check,
         directPress,
+        directPressValue
       }" class="flex-col ml-5">
         <InputItem :data="i">
           <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="i" class="w-75"
@@ -60,6 +62,9 @@ const {
               {{ j }} {{ text(elem) }}
             </option>
           </select>
+
+          <input v-else-if="i === 'directPressValue'" type="number" min="0" max="350" v-model="HKSH[i]" :id="i"
+            class="input w-75" />
 
           <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="i" class="w-75">
             <option v-for="elem in getValue[i]" :value="elem">

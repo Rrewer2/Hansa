@@ -21,8 +21,8 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
     <label class="ml-10">
       <span class="fs-sm px-5 ml-10">{{ text("cooler") }}</span>
       <select v-model="meta.cooler" class="ml-10" id="cooler">
-        <option v-for="(_, c) in [0, 1, 2]" :value="c">
-          {{ c }}
+        <option v-for="(title, c) in ['Bez', 'Przed fitrem', 'Za filtrem']" :value="c">
+          {{ title }}
         </option>
       </select>
     </label>

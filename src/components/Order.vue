@@ -2,8 +2,9 @@
 import { getPriority } from "../services/data";
 import { KITtitle } from "../services/functions";
 import { text } from "../services/text";
+import Description from "./Description.vue";
 
-const { order } = defineProps(["order"]);
+const { order, project } = defineProps(["order", "project"]);
 const normalize = () => {
   const KIT = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
@@ -43,6 +44,7 @@ const normalize = () => {
       </tbody>
     </table>
   </article>
+  <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
 </template>
 
 <style scoped></style>

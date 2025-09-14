@@ -11,17 +11,17 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
 const filteredValves = () => {
   const cetop = (Q) => Q >= 35 ? 5 : 3;
   return powerUNIT.unit.map(({ HKSH, p, Q }, i) => 
-    HKSH.map(({ throttle, check, directPress, spool }, j) => {
+    HKSH.map(({ throttle, check, directPress, directPressValue, spool }, j) => {
       const CETOP = cetop(Q);
       const hq = throttle ? HKHQ.find(el => el.type === throttle && el.CETOP === CETOP) : {};
       const hr = check ? HKHR.find(el => el.type === check && el.CETOP === CETOP) : {};
-      const hmp = directPress ? HKHMP.find(el => el.type === directPress && el.pmax > p && el.CETOP === CETOP) : {};
+      const hmp = directPress ? HKHMP.find(el => el.type === directPress && el.pmax > directPressValue && el.CETOP === CETOP) : {};
       const valve = spoolData.find((el) => el.spool === spool && (!Q || el.CETOP === CETOP));
       const bolt = HKM.find((el) => el.L === (hq.h ?? 0) + (hr.h ?? 0) + (hmp.h ?? 0) + (valve.CETOP === 3 ? 30 : 40) && el.CETOP === CETOP);
       order[`throttle`+ i + j] = { title: hq.title };
       order[`check`+ i + j] = { title: hr.title };
-      order[`directPress`+ i + j] = { title: hmp.title }; //TODO: change p to directPress pressure
-      order[`valve`+ i + j] = { title: valve?.title };
+      order[`directPress`+ i + j] = { title: hmp.title };
+      order[`valve`+ i + j] = { title: valve?.title, valveData: valve };
       order[`bolt`+ i + j] = { title: bolt?.title };
       return valve
     }));
