@@ -17,7 +17,7 @@ const sorting = () => {
   const res = logic();
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
   if (!key.value) return res;
-  return res.sort((a,b) => a[key.value] - b[key.value]);
+  return res.sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
 };
 </script>
 
@@ -50,12 +50,16 @@ const sorting = () => {
           <td class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === order[Name + index]?.title" />
-            <a :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
+            <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
+              rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
+            <span v-else>{{ title }}</span>
             <CopyText :text="title" />
           </td>
-          <td v-for="item in Object.values(rest)">{{ JSON.stringify(item).replace(/[:{}"]/g, " ") }}</td>
+          <td v-for="item in Object.values(rest)">{{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:
+            $1`)
+          }}</td>
         </tr>
       </tbody>
     </table>

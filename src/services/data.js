@@ -151,7 +151,7 @@ const enginesHK = [
   {title: 'HK71A4B3142-4IE2', size: 71,power: 0.25,meta: 'E-Motor 230/400V 0,25kW 1380U B34 IE2'},
   {title: 'HK71A4B352-4IE2', size: 71,power: 0.25,meta: 'E-Motor 230/400V 0,25kW 1380U B35 IE2'},
   {title: 'HK71B4B3142-4IE2', size: 71,power: 0.37,meta: 'E-Motor 230/400V 0,37kW 1380U B34 IE2'},
-  {title: 'HK80A4B352-4IE2', size: 80,power: 0.75,meta: 'E-Motor 230/400V 0,75kW 1380U B35 IE3'},
+  {title: 'HK80A4B352-4IE2', size: 80,power: 0.55,meta: 'E-Motor 230/400V 0,75kW 1390U B35 IE3'},
   {title: 'HK80M4B352-4IE3', size: 80,power: 0.75,meta: 'E-Motor 230/400V 0,75kW 1400U B35 IE3'},
   {title: 'HK90S4B352-4IE3', size: 90,power: 1.1,meta: 'E-Motor 230/400V 1,1kW 1400U B35 IE3'},
   {title: 'HK90L4B352-4IE3', size: 90,power: 1.5,meta: 'E-Motor 230/400V 1,5kW 1400U B35 IE3'},

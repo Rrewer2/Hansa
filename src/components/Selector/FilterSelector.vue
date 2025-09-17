@@ -1,22 +1,13 @@
 <script setup>
 import { ref } from "vue";
-import {
-  engineMountData,
-  enginesData,
-  freqData,
-  motorData,
-  motorSizes,
-} from "../../services/data";
-import {
-  getMaxPower,
-  reducedPower,
-  round,
-  setPressure,
-} from "../../services/functions";
+import { pumpData, freqData, flanges, flangesPP } from "../../services/data";
+import { getQ, getVFU, round } from "../../services/functions";
+import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
+const group = ref("");
 const { project, meta, order, powerUNIT, i } = defineProps([
   "project",
   "meta",
@@ -24,64 +15,83 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "powerUNIT",
   "i",
 ]);
-const motorSize = ref("");
-const filteredMotors = () =>
-  enginesData.filter(
-    ({ power, mount }) =>
-      power * 1.25 >= reducedPower(powerUNIT.unit) &&
-      power * 0.75 <= reducedPower(powerUNIT.unit) &&
-      mount === powerUNIT.mount,
-  );
-const motorsByPower = () =>
-  enginesData.filter(
-    ({ power, mount }) =>
-      power === project[i].P && (!powerUNIT.mount || mount === powerUNIT.mount),
-  );
-const motorsBySize = () =>
-  enginesData.filter(
-    ({ size, mount }) =>
-      size === motorSize.value &&
-      (!powerUNIT.mount || mount === powerUNIT.mount),
-  );
-const motors = () =>
-project[i].P ? motorsByPower() : motorSize.value ? motorsBySize() : filteredMotors();
-const filteredMotorData = () => {
-  if (order[`pump${i}`]?.title) {
-    return motorData.filter(el => el <= getMaxPower({ VFU: order[`pump${i}`]?.pumpData.CC, n: powerUNIT.n, p: order[`pump${i}`]?.pumpData.pmax }))
+const filteredPumps = () => {
+  if (!meta.pumpType) return [];
+  if (powerUNIT.unit.length === 1) {
+    const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
+    const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
+    if (order[`pump${i}`]?.title) flangeSelector();
+    return pumpData[meta.pumpType].filter((item) => {
+      const pump = Object.values(item)[0];
+      const CC = pump.CC - VFU;
+      return (
+        CC >= -par &&
+        CC <= par &&
+        pump.pmax > powerUNIT.unit[0].p &&
+        (group.value === '' ||
+          meta.pumpType !== "gears" ||
+          group.value === pump.group)
+      );
+    }).map(el => {
+      const { title, CC, ...rest } = Object.values(el)[0];
+      return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
+    });
   }
-  return motorData;
+  
+  if (powerUNIT.unit.length > 1) return [];// TODO: create a functionality for multiple pump
+};
+
+const flangeSelector = () => {
+  const flangesData = order[`pump${i}`]?.pumpData.out.startsWith('Bore') ? flangesPP : flanges;
+  const flangeIn = flangesData.find(({ LK }) => LK === order[`pump${i}`]?.pumpData.in);
+  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
+
+  if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
+    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180));
+    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
+  } else order[`flangeOut${i}`] = {};
+};
+
+const selectedPump = () => {
+  powerUNIT.unit[0].Q = round(
+    getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n),
+  );
+  group.value = order[`pump${i}`]?.pumpData?.group;
+  flangeSelector();
 };
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="motor" :index="i" :logic="motors">
+  <SmthSelector v-bind="{ project, meta, order }" Name="pump" :index="i" :logic="filteredPumps">
+    <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
+      <InputItem data="Q">
+        <input type="number" min="0" v-model="pump.Q" id="Q" />
+      </InputItem>
+      <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
+      <InputItem data="p">
+        <input type="number" min="0" v-model="pump.p" id="pp" />
+      </InputItem>
+    </span>
+
     <InputItem data="n">
-      <select v-model="powerUNIT.n" id="motor-n">
-        <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
+      <select v-model="powerUNIT.n" id="n">
+        <option v-for="item in freqData" :value="item">{{ item }}</option>
       </select>
     </InputItem>
 
-    <InputItem data="mount">
-      <select v-model="powerUNIT.mount" id="mount">
-        <option v-for="item in engineMountData" :value="item">
-          {{ item }}
+    <InputItem data="pumpType">
+      <select v-model="meta.pumpType" id="pumpType">
+        <option v-for="item in Object.keys(pumpData)" :value="item">
+          {{ text(item) }}
         </option>
       </select>
     </InputItem>
 
-    <InputItem data="size">
-      <select v-model="motorSize" id="motorSize">
-        <option v-for="item in motorSizes" :value="item">
+    <InputItem v-if="meta.pumpType === 'gears'" data="group">
+      <select v-model="group" id="group">
+        <option v-for="item in ['', 0, 1, 2, 3]" :value="item">
           {{ item }}
         </option>
-      </select>
-    </InputItem>
-
-    <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" />
-
-    <InputItem data="P">
-      <select v-model="project[i].P" @change="() => setPressure(powerUNIT.unit, project[i].P)" id="P">
-        <option v-for="item in filteredMotorData()" :value="item">{{ item }}</option>
       </select>
     </InputItem>
   </SmthSelector>

@@ -34,8 +34,7 @@ export const getStandartTank = ({ tank }, T) =>
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
-export const setPressure = (unit, P) =>
-  (unit[0].p = round(pressure(unit[0].Q, P), 1));
+export const setPressure = (unit, P) => unit[0].Q ? unit[0].p = round(pressure(unit[0].Q, P), 1) : {};
 export const reducedPower = (unit) =>
   unit
     .map(({ Q, p, DBD }) => Power(Q, getPressure(DBD, p)))
