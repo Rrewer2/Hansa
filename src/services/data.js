@@ -681,9 +681,9 @@ export const couplingData = [
   {title: "HKA1914714184AL", size: 71, shaft: "Ø7", group: 0},
   {title: "HKA1914714184AL", size: 80, shaft: "Ø7", group: 0},
   
-  {title: "HKA1914N1AL", size: 71, shaft: "1: 8", group: 1},
-  {title: "HKA1914N1AL", size: 80, shaft: "1: 8", group: 1},
-  {title: "HKA192424N1AL", size: 90, shaft: "1: 8", group: 1},
+  {title: "HKA1914N125AL", size: 71, shaft: "1: 8", group: 1},
+  {title: "HKA1919N1AL", size: 80, shaft: "1: 8", group: 1},
+  {title: "HKA24197B17AL", size: 90, shaft: "1: 8", group: 1},
   {title: "HKA24322860N1AL", size: 100, shaft: "1: 8", group: 1},
   {title: "HKA24322860N1AL", size: 112, shaft: "1: 8", group: 1},
   
@@ -691,16 +691,27 @@ export const couplingData = [
   {title: "HKA2424N2AAL", size: 90, shaft: "1: 8", group: 2},
   {title: "HKA243228N2AAL", size: 100, shaft: "1: 8", group: 2},
   {title: "HKA243228N2AAL", size: 112, shaft: "1: 8", group: 2},
+  {title: "HKA28383860N2AAL", size: 132, shaft: "1: 8", group: 2},
+  {title: "HKA384542N2AAL", size: 160, shaft: "1: 8", group: 2},
   
   {title: "HKR2838N2A", size: 132, shaft: "1: 8", group: 2},
   {title: "HKR3842N2A", size: 160, shaft: "1: 8", group: 2},
   
   {title: "HKA243228N3AL", size: 100, shaft: "1: 8", group: 3},
   {title: "HKA243228N3AL", size: 112, shaft: "1: 8", group: 3},
+  {title: "HKA28383860N3AL", size: 132, shaft: "1: 8", group: 3},
+  {title: "HKA384542N3AL", size: 160, shaft: "1: 8", group: 3},
   
   {title: "HKR2838N3", size: 132, shaft: "1: 8", group: 3},
   {title: "HKR3842N3", size: 160, shaft: "1: 8", group: 3},
   {title: "HKR4248N3", size: 180, shaft: "1: 8", group: 3},
+  
+  {title: "HKA24197B17AL", size: 80, shaft: "1: 5", group: 2},
+  {title: "HKA24247B17AL", size: 90, shaft: "1: 5", group: 2},
+  {title: "HKA2432287B17AL", size: 100, shaft: "1: 5", group: 2},
+  {title: "HKA2432287B17AL", size: 112, shaft: "1: 5", group: 2},
+  {title: "HKA2838387B17AL", size: 132, shaft: "1: 5", group: 2},
+  {title: "HKA3845427B17AL", size: 160, shaft: "1: 5", group: 2},
 
   {title: "HKAGN009PBA83236", size: 132, shaft: "8x32x36 DIN-ISO14"},
   {title: "HKAGN015PBA83236", size: 160, shaft: "8x32x36 DIN-ISO14"},
