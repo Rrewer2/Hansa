@@ -27,7 +27,6 @@ const { project, meta, order, powerUNIT, i } = defineProps([
   "powerUNIT",
   "i",
 ]);
-const P = ref("");
 const motorSize = ref("");
 const filteredMotors = () =>
   enginesData.filter(
@@ -39,7 +38,7 @@ const filteredMotors = () =>
 const motorsByPower = () =>
   enginesData.filter(
     ({ power, mount }) =>
-      power === P.value && (!powerUNIT.mount || mount === powerUNIT.mount),
+      power === project[i].P && (!powerUNIT.mount || mount === powerUNIT.mount),
   );
 const motorsBySize = () =>
   enginesData.filter(
@@ -48,7 +47,7 @@ const motorsBySize = () =>
       (!powerUNIT.mount || mount === powerUNIT.mount),
   );
 const motors = () =>
-  P.value ? motorsByPower() : motorSize ? motorsBySize() : filteredMotors();
+project[i].P ? motorsByPower() : motorSize.value ? motorsBySize() : filteredMotors();
 const getTitle = () => order[`motor${i}`]?.title;
 const selectedMotor = ({ mount, size }) => {
   powerUNIT.mount = mount;
@@ -98,7 +97,7 @@ const filteredMotorData = () => {
       <ResultItem :data="{ P: round(reducedPower(powerUNIT.unit)) }" />
 
       <InputItem data="P">
-        <select v-model="P" @change="() => setPressure(powerUNIT.unit, P)" id="P">
+        <select v-model="project[i].P" @change="() => setPressure(powerUNIT.unit, project[i].P)" id="P">
           <option v-for="item in filteredMotorData()" :value="item">{{ item }}</option>
         </select>
       </InputItem>

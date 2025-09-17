@@ -39,7 +39,6 @@ const meta = ref({
   tank: "RA",
   cooler: 1,
   pumpType: "gears",
-  // spool: "G",
   lang: "pl",
 });
 provide("meta", meta);
@@ -50,6 +49,7 @@ const getNewPowerUnit = () =>
     unit: [getNewPump()],
     mount: "",
     n: 1500,
+    P: ''
   });
 getNewPowerUnit();
 const addCyl = (k, i) =>
@@ -116,7 +116,7 @@ const navPage = ref([false, false, true, false, false]);
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />
   <LanguageSwitcher :meta="meta" />
   <!-- <div>project {{ project }}</div> -->
-  <div>order {{ order }}</div>
+  <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
 </template>
 
@@ -137,7 +137,7 @@ const navPage = ref([false, false, true, false, false]);
 
 article,
 section {
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px;
 }
 
@@ -153,7 +153,7 @@ select {
   border: none;
   border-radius: 4px;
   min-height: 2.5vh;
-  font-size: 2vh;
+  font-size: 18px;
   max-width: 140px;
   min-width: 85px;
   width: 95px;

@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 import { engineMountData, freqData, motorData } from "../services/data";
 import { powerCounting, setPressure, unitTitle } from "../services/functions";
 import InputItem from "./InputItem.vue";
@@ -12,11 +11,10 @@ const { project, k, btnDisabled, order } = defineProps([
   "btnDisabled",
   "order",
 ]);
-const P = ref("");
 const { id, unit, ...rest } = project[k];
 </script>
 
-<template>
+<template>{{ rest }}
   <div class="text-left my-2">
     <div class="flex-row">
       <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>
@@ -27,18 +25,18 @@ const { id, unit, ...rest } = project[k];
             <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
           </select>
 
-          <select v-else v-model="project[k].mount" :disabled="order[`motor${k}`]" :id="ind" class="w-75">
+          <select v-if="ind === 'mount'" v-model="project[k].mount" :disabled="order[`motor${k}`]" :id="ind"
+            class="w-75">
             <option v-for="item in engineMountData" :value="item">
               {{ item }}
             </option>
           </select>
+          <select v-if="ind === 'P'" v-model="project[k].P" @change="() => setPressure(unit, P)"
+            :disabled="order[`motor${k}`]" :id="ind">
+            <option v-for="item in motorData" :value="item">{{ item }}</option>
+          </select>
         </InputItem>
       </div>
-      <InputItem data="P">
-        <select v-model="P" @change="() => setPressure(unit, P)" id="P">
-          <option v-for="item in motorData" :value="item">{{ item }}</option>
-        </select>
-      </InputItem>
       <ResultItem :data="powerCounting(unit)" />
     </div>
   </div>
