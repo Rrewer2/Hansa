@@ -53,8 +53,8 @@ const sorting = () => {
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr>
           <td :id="title" class="tal">
-            <label><input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
-              v-model="radio" /></label>
+            <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
+              v-model="radio" :value="title" />
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
