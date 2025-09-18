@@ -47,7 +47,7 @@ const flangeSelector = () => {
   order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
 
   if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
-    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180));
+    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180));
     order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
   } else order[`flangeOut${i}`] = {};
 };
@@ -60,7 +60,7 @@ const selectedPump = () => {
 };
 </script>
 
-<template>
+<template>{{order}}
   <SmthSelector v-bind="{ project, meta, order }" Name="pump" :index="i" :logic="filteredPumps" :after="selectedPump">
     <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
       <InputItem data="Q">
