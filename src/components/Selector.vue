@@ -23,13 +23,13 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
     <article class="grid ">
       <article class="left">
         <div v-for="(powerUNIT, i) in project">
-          <PumpSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+          <FilterSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+          <!-- <PumpSelector v-bind="{ project, meta, order, i, powerUNIT }" /> -->
           <MotorSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <BellhousingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <VibroSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <BlockSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <ValveSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <FilterSelector v-bind="{ project, meta, order, i, powerUNIT }" />
         </div>
         <TankSelector v-bind="{ project, meta, order }" />
         <CoolerSelector v-bind="{ project, meta, order }" />
