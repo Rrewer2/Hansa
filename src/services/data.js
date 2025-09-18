@@ -1112,6 +1112,45 @@ export const getPriority = (KIT) => {
     const sorted = array.sort(sorting);
   return Object.fromEntries(sorted)
 };
+
+export const ventilation = [
+  {title: "FIBL046FP10002", thread: "Ø41 3 x M5", q: 200},
+  {title: "FIBL080FP03080", thread: "Ø73 6 x M5", q: 450},
+  {title: "FIBL080GP03", thread: "G 3/4″ -14", q: 450},
+  {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 1600},
+  {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 2150},
+].map(({ title, ...rest }) => ({ title, ...rest, rating: title.split(8, 10) });
+console.log(ventilation);
+const HKRTR = [ { title: "HKRTR0502CG1P10", plug: "G 3/8″ -19", q: 25, type: 'PowerPack' }, ];
+const FIRL = [
+  {title: "FIRL024A10NVG1/2", plug: "G 1/2″ -14", q: 24},
+  {title: "FIRL048P10NVG1/2", plug: "G 1/2″ -14", q: 60},
+  {title: "FIRL053A10NVG1/2", plug: "G 1/2″ -14", q: 53},
+  {title: "FIRL064A10NVG3/4", plug: "G 3/4″ -14", q: 64},
+  {title: "FIRL086P10NVG3/4", plug: "G 3/4″ -14", q: 86},
+  {title: "FIRL110P10NVG1/2", plug: "G 1/2″ -14", q: 86},
+  {title: "FIRL110P10NVG3/4", plug: "G 3/4″ -14", q: 110},
+  {title: "FIRL150P10NVG1", plug: "G 1″ -11", q: 110},
+  {title: "FIRL150P10NVG3/4", plug: "G 3/4″ -14", q: 110},
+  {title: "FIRL225P10NVG1", plug: "G 1″ -11", q: 220},
+  {title: "FIRL225P10NVG3/4", plug: "G 3/4″ -14", q: 220},
+  {title: "FIRL281P10NVG11/4", plug: "G 1.1/4″ -11", q: 280},
+  {title: "FIRL290A10NVG11/4", plug: "G 1.1/4″ -11", q: 290},
+  {title: "FIRL320P10NVG11/2", plug: "G 1.1/2″ -11", q: 610},
+  {title: "FIRL610P10NVG11/2", plug: "G 1.1/2″ -11", q: 610},
+].map(el => ({ ...el, type: 'Immersion' }));
+const FISPR = [
+  {title: "FISPR48A10VG3/4", plug: "G 3/4″ -14", q: 48},
+  {title: "FISPR55P10VG3/4", plug: "G 3/4″ -14", q: 55},
+  {title: "FISPR110A10VG11/4", plug: "G 1.1/4″ -11", q: 110},
+  {title: "FISPR115A10VG11/4", plug: "G 1.1/4″ -11", q: 115},
+  {title: "FISPR150P10VG11/4", plug: "G 1.1/4″ -11", q: 150},
+  {title: "FISPR220A10VG11/2", plug: "G 1.1/2″ -11", q: 220},
+  {title: "FISPR250A10VG11/2", plug: "G 1.1/2″ -11", q: 250},
+  {title: "FISPR282P10VG11/2", plug: "G 1.1/2″ -11", q: 282},
+].map(el => ({ ...el, type: 'Spin-On' }));
+export const filtration = [ ...HKRTR ,...FIRL, ...FISPR ];
+
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
