@@ -20,8 +20,8 @@ const keys = () => Object.keys(logic()[0]);
 const sorting = () => {
   const res = logic();
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
-  if (!key.value) return res;
-  return res.sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
+  if (!key.value) return logic();
+  return logic().sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
 };
 </script>
 
