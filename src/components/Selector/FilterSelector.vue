@@ -55,8 +55,7 @@ const flangeSelector = () => {
 
 const selectedPump = () => {
   const currentQ = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
-  console.log(!currentQ === "-");
-  if (!currentQ === "-") powerUNIT.unit[0].Q = currentQ;
+  if (!(currentQ === "-")) powerUNIT.unit[0].Q = currentQ;
   //group.value = order[`pump${i}`]?.pumpData?.group;
   flangeSelector();
 };
