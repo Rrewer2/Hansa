@@ -54,6 +54,7 @@ const sorting = () => {
           <td class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === order[Name + index]?.title" />
+            {{ order[Name + index]?.title }}
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
