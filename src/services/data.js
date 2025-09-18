@@ -1119,7 +1119,7 @@ export const ventilation = [
   {title: "FIBL080GP03", thread: "G 3/4″ -14", q: 450},
   {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 1600},
   {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 2150},
-].map(({ title, ...rest }) => ({ title, ...rest, rating: title.split(8, 10) });
+].map(({ title, ...rest }) => ({ title, ...rest, rating: title.split(8, 10) }));
 console.log(ventilation);
 const HKRTR = [ { title: "HKRTR0502CG1P10", plug: "G 3/8″ -19", q: 25, type: 'PowerPack' }, ];
 const FIRL = [
