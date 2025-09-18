@@ -14,7 +14,7 @@ const { project, k, btnDisabled, order } = defineProps([
 const { id, unit, ...rest } = project[k];
 </script>
 
-<template>{{ rest }}
+<template>
   <div class="text-left my-2">
     <div class="flex-row">
       <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>

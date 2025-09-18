@@ -6,7 +6,7 @@ import MotorSelector from "./Selector/MotorSelector.vue";
 import CoolerSelector from "./Selector/CoolerSelector.vue";
 import ValveSelector from "./Selector/ValveSelector.vue";
 import BellhousingSelector from "./Selector/BellhousingSelector.vue";
-import CouplingSelector from "./Selector/CouplingSelector.vue";
+import OldValveSelector from "./Selector/OldValveSelector.vue";
 import BlockSelector from "./Selector/BlockSelector.vue";
 import VibroSelector from "./Selector/VibroSelector.vue";
 import Order from "../components/Order.vue";
@@ -23,7 +23,6 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
     <article class="grid ">
       <article class="left">
         <div v-for="(powerUNIT, i) in project">
-          <!-- <FilterSelector v-bind="{ project, meta, order, i, powerUNIT }" /> -->
           <PumpSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <MotorSelector v-bind="{ project, meta, order, i, powerUNIT }" />
           <BellhousingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
@@ -33,6 +32,8 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
         </div>
         <TankSelector v-bind="{ project, meta, order }" />
         <CoolerSelector v-bind="{ project, meta, order }" />
+        <FilterSelector v-bind="{ project, meta, order }" />
+        <OldValveSelector v-bind="{ project, meta, order }" />
         <!-- <FilterSelector v-bind="{ project, meta, order }" /> -->
       </article>
       <article class="right">

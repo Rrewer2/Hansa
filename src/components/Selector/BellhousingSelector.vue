@@ -11,7 +11,7 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 ]);
 
 const filteredBellhousing = () => {
-  const data = powerUNIT.mount.at(-1) === "4" ? manifoldData : bellhousingData;
+  const data = order[`motor${i}`]?.motorData?.mount.at(-1) === "4" ? manifoldData : bellhousingData;
   return data.filter(({ group, size, holePattern, pump, shaft }) => {
     return (
       (holePattern === order[`pump${i}`]?.pumpData?.holePattern) &&

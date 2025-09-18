@@ -6,13 +6,7 @@ import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, powerUNIT, i } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "powerUNIT",
-  "i",
-]);
+const { project, meta, order, powerUNIT, i } = defineProps([ "project", "meta", "order"]);
 
 const cooler = ref({ η: 70, vBT: 50, vZ: 30 });
 

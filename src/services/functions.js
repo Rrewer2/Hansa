@@ -121,11 +121,11 @@ export const agregatTitle = (project, meta, order) => {
   const P = project
     .map(({ unit }) => reducedPower(unit))
     .map((el) => getStandartPower(el));
+  const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({p}) => p)));
   const Q = getQfromProject(project).map((q) => round(q));
   const type = order.tank?.tankData?.type || meta.tank;
-  const size =
-    order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || "___";
-  return `HAG${type}${size}-${P.join("/")}-${Q.join("/")}`;
+  const size = order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || "___";
+  return `HAG${type}${size}-${P.join("/")}-${Q.join("/")}.${pmax}`;
 };
 
 export const agregatCounting = (project) => getT(getQfromProject(project));

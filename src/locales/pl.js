@@ -95,4 +95,9 @@ export default {
   size: ['BG'],
   block: ['Blok przyłączeniowy'],
   length: ['Ilość stacji'],
+  filter: ['Filtr na powrocie'],
+  ventilation: ['Filtr oddechowy'],
+  q: ['Przepływ objętościowy maks.'],
+  filterGrade: ['Materiał i dokładność'],
+  plug: ['Gwint przyłącza'],
 };
