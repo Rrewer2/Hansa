@@ -6,6 +6,7 @@ import { text } from "../../services/text";
 import CopyText from "./CopyText.vue";
 
 const key = ref();
+const radio = ref();
 
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 
@@ -52,8 +53,8 @@ const sorting = () => {
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr>
           <td :id="title" class="tal">
-            <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
-              :checked="title === order[Name + index]?.title" />
+            <label><input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
+              v-model="radio" /></label>
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
