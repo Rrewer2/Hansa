@@ -51,7 +51,7 @@ const sorting = () => {
       </thead>
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr>
-          <td class="tal">
+          <td :id="title" class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === order[Name + index]?.title" />
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
