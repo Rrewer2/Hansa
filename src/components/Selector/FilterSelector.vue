@@ -62,7 +62,7 @@ const selectedPump = () => {
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="pump" :index="i" :logic="filteredPumps">
+  <SmthSelector v-bind="{ project, meta, order }" Name="pump" :index="i" :logic="filteredPumps" :after="selectedPump">
     <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
       <InputItem data="Q">
         <input type="number" min="0" v-model="pump.Q" id="Q" />
