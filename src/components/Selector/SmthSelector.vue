@@ -7,9 +7,13 @@ import CopyText from "./CopyText.vue";
 
 const key = ref();
 
-const { Name, index, logic, project, meta, order } = defineProps(["Name", "index", "logic", "project", "meta", "order"]);
+const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 
-const setSmth = ({ title, ...rest }) => order[Name + index]?.title !== title ? order[Name + index] = { title, [Name + 'Data']: { ...rest } } : order[Name + index] = {};
+const setSmth = ({ title, ...rest }) => {
+  if (order[Name + index]?.title !== title) order[Name + index] = { title, [Name + 'Data']: { ...rest } }
+  else order[Name + index] = {};
+  if (after) after();
+};
 
 const keys = () => Object.keys(logic()[0]);
 
