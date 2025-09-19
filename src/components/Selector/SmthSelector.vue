@@ -37,19 +37,7 @@ const sorting = () => {
       <slot></slot>
     </div>
     <table v-if="logic().length">
-      <thead>
-        <tr>
-          <td v-for="a in keys()">
-            <b><i>
-                {{ text(a) }}
-                <button v-if="logic().length > 3" @click="key = a" class="sort" :class="key === a && 'active'"
-                  :value="a">
-                  ⏬
-                </button>
-              </i></b>
-          </td>
-        </tr>
-      </thead>
+
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr>
           <td :id="title" class="tal">
