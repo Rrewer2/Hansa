@@ -1138,7 +1138,7 @@ const priority = [
   "check",
   "directPress",
   "bolt",
-  "plug",
+  "valvePlug",
   'tank',
   'tankSeal',
   'tankLevel',

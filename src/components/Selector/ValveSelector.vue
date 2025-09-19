@@ -22,6 +22,7 @@ const filteredValves = () => {
       order[`check`+ i + j] = { title: hr.title };
       order[`directPress`+ i + j] = { title: hmp.title };
       order[`valve`+ i + j] = { title: valve?.title, valveData: valve };
+      order[`valvePlug`+ i + j] = { title: valve?.addition?.valvePlug?.title, n: valve.addition?.valvePlug?.n };
       order[`bolt`+ i + j] = { title: bolt?.title };
       return valve
     }));
@@ -47,7 +48,7 @@ const valves = () => {
     </h2>
     <table v-if="valves()[0].length">
       <thead>
-        <td v-for="item in Object.keys(valves()[0][0])">
+        <td v-for="item in Object.keys(valves()[0][0]).filter(item => item !== 'addition')">
           <b><i>{{ text(item) }}</i></b>
         </td>
       </thead>
@@ -62,7 +63,8 @@ const valves = () => {
             <span v-else>{{ title }}</span>
             <CopyText :text="title" />
           </td>
-          <td v-for="item in Object.values(rest)">{{ item }}</td>
+          <td v-for="item in Object.values(rest).filter(el => !(JSON.stringify(el)).includes('title'))">
+            {{ item }}</td>
         </tr>
       </tbody>
     </table>
