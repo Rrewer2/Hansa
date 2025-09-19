@@ -8,18 +8,14 @@ const props = defineProps(["tableData"]);
     <thead>
       <tr>
         <td v-for="head in props.tableData().head">
-          <b
-            ><i>{{ head }}</i></b
-          >
+          <b><i>{{ head }}</i></b>
         </td>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(body, i) in props.tableData().body">
         <td>
-          <b
-            ><i>{{ i }}</i></b
-          >
+          <b><i>{{ i }}</i></b>
         </td>
         <td v-for="item in body">{{ round(item) }}</td>
       </tr>

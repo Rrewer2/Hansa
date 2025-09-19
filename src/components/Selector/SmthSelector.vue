@@ -16,7 +16,7 @@ const setSmth = ({ title, ...rest }) => {
   }
   else {
     order[Name + index] = {};
-    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key] = {});
+    if (rest?.addition) Object.entries(rest.addition).forEach(([key]) => order[key] = {});
   }
   if (after) after();
 };

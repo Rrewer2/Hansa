@@ -13,7 +13,7 @@ const { data } = defineProps(["data"]);
       <slot></slot>
       <i v-if="text(data).split(', ')[1]" class="unit px-5">{{
         text(data).split(", ")[1]
-      }}</i>
+        }}</i>
     </div>
   </div>
 </template>

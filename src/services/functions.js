@@ -9,10 +9,10 @@ import {
 } from "./data";
 
 export const round = (num, param = 10) =>
-   typeof num === "string"
-      ? num :
-      num === Infinity || isNaN(num)
-      ? "-"      
+  typeof num === "string"
+    ? num
+    : num === Infinity || isNaN(num)
+      ? "-"
       : Math.round(num * param) / param;
 
 export const getId = (key) => key + Date.now();
@@ -34,7 +34,8 @@ export const getStandartTank = ({ tank }, T) =>
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
-export const setPressure = (unit, P) => unit[0].Q ? unit[0].p = round(pressure(unit[0].Q, P), 1) : {};
+export const setPressure = (unit, P) =>
+  unit[0].Q ? (unit[0].p = round(pressure(unit[0].Q, P), 1)) : {};
 export const reducedPower = (unit) =>
   unit
     .map(({ Q, p, DBD }) => Power(Q, getPressure(DBD, p)))
@@ -47,7 +48,7 @@ export const Qmax = (project) =>
     .map(({ unit }) => unit.map((item) => Qback(item)))
     .flat()
     .reduce((a, b) => a + b);
-    
+
 export const getVFU = (Q, n) => (Q * 1000) / (n * 0.96);
 export const getQ = (VFU, n) => (VFU * (n * 0.96)) / 1000;
 const pipe = (Q, VP) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
@@ -56,7 +57,7 @@ const pipeTmax = (QBack) => pipe(QBack, VPipe.T[0]);
 const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
 
-export const getMaxPower = (({ VFU, n, p }) => Power(getQ(VFU, n), p));//Потужність двигуна, яка є максимальною для вибраної помпи
+export const getMaxPower = ({ VFU, n, p }) => Power(getQ(VFU, n), p); //Потужність двигуна, яка є максимальною для вибраної помпи
 const getPressure = (DBD, p) => {
   if (DBD) {
     if (p) return Math.min(p, DBD);
@@ -121,10 +122,11 @@ export const agregatTitle = (project, meta, order) => {
   const P = project
     .map(({ unit }) => reducedPower(unit))
     .map((el) => getStandartPower(el));
-  const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({p}) => p)));
+  const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
   const Q = getQfromProject(project).map((q) => round(q));
   const type = order.tank?.tankData?.type || meta.tank;
-  const size = order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || "___";
+  const size =
+    order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || "___";
   return `HAG${type}${size}-${P.join("/")}-${Q.join("/")}.${pmax}`;
 };
 
@@ -147,7 +149,7 @@ export const powerCounting = (unit) => {
 export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
   const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
   const pipe_P = Object.entries(pipesData).find(
-    ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1),
+    ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
   );
   const pipeP = pipe_P ? pipe_P[0] : "∄";
   const pipe_T = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k);
@@ -159,7 +161,7 @@ export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
   return { pipeP, pipeT, pipeS, Qback, P };
 };
 
-export const filtrationD = (arr, { D }) => arr.filter(el => el < D);
+export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
 
 // const splitJoin = (arr, ö) => {
 //   const splitter = (A) => A.split('').map(str => str.split(','));
@@ -196,7 +198,7 @@ export const KITtitle = (order) => {
   const Qkeys = Object.keys(order).filter((key) => key.includes("pump"));
   const Q = Qkeys.length
     ? Qkeys.map((key) =>
-        round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1),
+        round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)
       ).join("/")
     : "___";
   return `HAG${type}${Size}-${P}-${Q} AGREGAT HYDRAULICZNY`;
@@ -208,7 +210,7 @@ export const KITtitle = (order) => {
 
 export const getSmthFromProject = (arr) =>
   arr.flatMap(({ unit }) =>
-    unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item)),
+    unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item))
   );
 export const uniqOrder = (elem, key, order) => {
   order[key] = {};
