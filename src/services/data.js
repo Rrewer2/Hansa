@@ -57,14 +57,14 @@ export const HKSHMountd2 = {
 };
 
 const RA = [
-  {title: "HKBAKRA03",Size: 3,CoolingCapacity: 0.16, addition: [{ title: "HKRSBAKRA03", n: 1 }, { title: "VHR90-1/2ED", n: 1 }]},
-  {title: "HKBAKRA06",Size: 6,CoolingCapacity: 0.36, addition: [{ title: "HKRSBAKRA06", n: 1 }, { title: "VHR90-1/2ED", n: 1 }]},
-  {title: "HKBAKRA12",Size: 12,CoolingCapacity: 0.6, addition: [{ title: "HKRSBAKRA12", n: 1 }, { title: "VHR90-1/2ED", n: 1 }]},
-  {title: "HKBAKRA20",Size: 20,CoolingCapacity: 0.72, addition: [{ title: "HKRSBAKRA20", n: 1 }, { title: "VHR90-1/2ED", n: 1 }]},
-  {title: "HKBAKRA30",Size: 30,CoolingCapacity: 0.92, addition: [{ title: "HKRSBAKRA30", n: 1 }, { title: "BOER1/2", n: 1 }]},
-  {title: "HKBAKRA44",Size: 44,CoolingCapacity: 1.04, addition: [{ title: "HKRSBAKRA44", n: 1 }, { title: "BOER1/2", n: 1 }]},
-  {title: "HKBAKRA70",Size: 70,CoolingCapacity: 1.16, addition: [{ title: "HKRSBAKRA70", n: 1 }, { title: "BOER1/2", n: 1 }]},
-  {title: "HKBAKRA130",Size: 130,CoolingCapacity: 2.1, addition: [{ title: "HKRSBAKRA130", n: 1 }, { title: "BOER1/2", n: 1 }]}
+  {title: "HKBAKRA03",Size: 3,CoolingCapacity: 0.16, addition: { tankSeal: { title: "HKRSBAKRA03", n: 1 }, tankCork: { title: "VHR90-1/2ED", n: 1 }}},
+  {title: "HKBAKRA06",Size: 6,CoolingCapacity: 0.36, addition: { tankSeal: { title: "HKRSBAKRA06", n: 1 }, tankCork: { title: "VHR90-1/2ED", n: 1 }}},
+  {title: "HKBAKRA12",Size: 12,CoolingCapacity: 0.6, addition: { tankSeal: { title: "HKRSBAKRA12", n: 1 }, tankCork: { title: "VHR90-1/2ED", n: 1 }}},
+  {title: "HKBAKRA20",Size: 20,CoolingCapacity: 0.72, addition: { tankSeal: { title: "HKRSBAKRA20", n: 1 }, tankCork: { title: "VHR90-1/2ED", n: 1 }}},
+  {title: "HKBAKRA30",Size: 30,CoolingCapacity: 0.92, addition: { tankSeal: { title: "HKRSBAKRA30", n: 1 }, tankCork: { title: "BOER1/2", n: 1 }}},
+  {title: "HKBAKRA44",Size: 44,CoolingCapacity: 1.04, addition: { tankSeal: { title: "HKRSBAKRA44", n: 1 }, tankCork: { title: "BOER1/2", n: 1 }}},
+  {title: "HKBAKRA70",Size: 70,CoolingCapacity: 1.16, addition: { tankSeal: { title: "HKRSBAKRA70", n: 1 }, tankCork: { title: "BOER1/2", n: 1 }}},
+  {title: "HKBAKRA130",Size: 130,CoolingCapacity: 2.1, addition: { tankSeal: { title: "HKRSBAKRA130", n: 1 }, tankCork: { title: "BOER1/2", n: 1 }}},
 ].map((el) => ({...el, type: "RA", material: 'Alu'}));
 const BSK = [
   {title: "HKBSK40",Size: 40},
