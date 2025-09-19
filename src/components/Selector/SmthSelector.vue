@@ -12,7 +12,7 @@ const { Name, index, logic, after, project, meta, order } = defineProps(["Name",
 const setSmth = ({ title, ...rest }) => {
   if (order[Name + index]?.title !== title) order[Name + index] = { title, [Name + 'Data']: { ...rest } };
   else order[Name + index] = {};
-  if (rest?.addition) rest.addition.forEach((el) => order[el?.title] = el);
+  //if (rest?.addition) rest.addition.forEach((el) => order[el?.title] = el);
   if (after) after();
 };
 
