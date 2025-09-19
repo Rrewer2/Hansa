@@ -62,7 +62,7 @@ const sorting = () => {
             <CopyText :text="title" />
           </td>
           <td v-for="item in Object.values(rest)">
-            <span v-if="item !== null && typeof item === 'object'">{{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}</span>
+            <span v-if="typeof item !== 'object'">{{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}</span>
           </td>
         </tr>
       </tbody>
