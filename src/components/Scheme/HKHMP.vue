@@ -29,6 +29,10 @@ const HKHMP = {
 
     <path :d="`M${x + 0.46 * sl} ${y} v${sh}`" stroke="black" stroke-width="2" fill="none" />
     <path :d="`M${x + (1 - 0.46) * sl} ${y} v${sh}`" stroke="black" stroke-width="2" fill="none" />
+    <text :x="x + sh * 1.9" :y="y + sh * 0.9" font-family="Arial" :font-size="r * 1.7" fill="black"
+      text-anchor="middle">
+      {{ data.directPressValue }} bar
+    </text>
 
     <template v-if="data.directPress === '011'">
       <Point :x="x" :y="y + sh / 2" />

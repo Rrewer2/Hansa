@@ -53,7 +53,7 @@ const {
         throttle,
         check,
         directPress,
-        directPressValue
+        // directPressValue
       }" class="flex-col ml-5">
         <InputItem :data="i">
           <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="i" class="w-75"
@@ -63,14 +63,13 @@ const {
             </option>
           </select>
 
-          <input v-else-if="i === 'directPressValue'" type="number" min="0" max="350" v-model="HKSH[i]" :id="i"
-            class="input w-75" />
-
           <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="i" class="w-75">
             <option v-for="elem in getValue[i]" :value="elem">
               {{ i === "form" ? text(elem) : elem }}
             </option>
           </select>
+          <label v-if="i === 'directPress' && HKSH.directPress"><input type="number" min="0" max="300"
+              v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />bar</label>
         </InputItem>
       </div>
     </div>
@@ -100,4 +99,9 @@ const {
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.w-55 {
+  min-width: 55px;
+  width: 55px;
+}
+</style>
