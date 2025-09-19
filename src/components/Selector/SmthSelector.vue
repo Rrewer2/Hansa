@@ -10,7 +10,8 @@ const key = ref();
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 
 const setSmth = ({ title, ...rest }) => {
-  if (order[Name + index]?.title !== title) order[Name + index] = { title, [Name + 'Data']: { ...rest } }
+  if (order[Name + index]?.title !== title) order[Name + index] = { title, [Name + 'Data']: { ...rest } };
+  if (rest?.addition) addition.forEach(el => order[el?.title])
   else order[Name + index] = {};
   if (after) after();
 };
@@ -61,7 +62,7 @@ const sorting = () => {
             <CopyText :text="title" />
           </td>
           <td v-for="item in Object.values(rest)">
-            {{ !Array.isArray(item) ?? JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`)}}
+            {{ !Array.isArray(item) ? JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1` : "")}}
           </td>
         </tr>
       </tbody>
