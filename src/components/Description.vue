@@ -12,7 +12,7 @@ const { project, order } = defineProps(['project', "order"]);
     <h5>Konstrukcja pompy - {{ order['pump' + 0]?.pumpData?.shaft ? 'Pompa z zewn. kołem zębatym' : `Wielotłokowa pompa
       osiowa`}}</h5>
 
-    <h5>Moc napędowa {{ order['motor' + 0]?.motorData?.power ?? '' }} kW</h5>
+    <h5>Moc napędowa {{ order['motor' + 0]?.motorData?.power ?? '' }} kW ({{ project[0]?.mount ?? '' }})</h5>
     <h5>Znamionowa prędkość obrotowa {{ order['motor' + 0]?.motorData?.n ?? '' }} obr/min</h5>
     <h5>Częstotliwość silnika 50 Hz</h5>
     <h5>Napięcie silnika {{ order['motor' + 0]?.motorData?.U ?? '' }} trójfazowy</h5>
