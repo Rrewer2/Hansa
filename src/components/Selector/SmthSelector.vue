@@ -40,7 +40,7 @@ const sorting = () => {
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <b><i>
+            <b v-if="a !== 'addition'" ><i>
                 {{ text(a) }}
                 <button v-if="logic().length > 3" @click="key = a" class="sort" :class="key === a && 'active'"
                   :value="a">
@@ -62,7 +62,7 @@ const sorting = () => {
             <CopyText :text="title" />
           </td>
           <td v-for="item in Object.values(rest)">
-            {{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}
+            <span v-if="!Array.isArray(item)">{{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}</span>
           </td>
         </tr>
       </tbody>
