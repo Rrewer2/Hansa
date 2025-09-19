@@ -29,8 +29,8 @@ const sorting = () => {
 <template>
   <article>
     <h2>
-      {{ text(Name) }} {{ index ? index + 1 : ""
-      }}<span> {{ order[Name + index]?.title }}</span>
+      {{ text(Name) }} {{ index ? index + 1 : "" }}
+      <span> {{ order[Name + index]?.title }}</span>
     </h2>
     <br />
     <div class="flex-row flex-center">
@@ -40,7 +40,7 @@ const sorting = () => {
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <b v-if="a !== 'addition'"><i>
+            <b><i>
                 {{ text(a) }}
                 <button v-if="logic().length > 3" @click="key = a" class="sort" :class="key === a && 'active'"
                   :value="a">
