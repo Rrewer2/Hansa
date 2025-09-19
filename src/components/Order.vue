@@ -8,13 +8,13 @@ const { order, project } = defineProps(["order", "project"]);
 const normalize = () => {
   const KIT = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
   Object.keys(order).forEach((key) => {
-    const { title } = order[key];
+    const { title, n } = order[key];
     if (title) {
       if (KIT[title]?.title) {
-        KIT[title].count++;
+        KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } 
       else {
-        KIT[title] = { title, count: 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
+        KIT[title] = { title, count: n ? n : 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
       }
     }
   });

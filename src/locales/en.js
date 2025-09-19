@@ -95,4 +95,8 @@ export default {
   size: ['Frame size'],
   block: ['Mounting plate'],
   length: ['Stations'],
+  join: ['Connection thread'],
+  plug: ['Coil voltage'],
+  material: ['Material'],
+  h: ['Height'],
 };

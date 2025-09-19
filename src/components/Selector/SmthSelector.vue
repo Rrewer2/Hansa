@@ -10,20 +10,30 @@ const key = ref();
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 
 const setSmth = ({ title, ...rest }) => {
-  if (order[Name + index]?.title !== title) order[Name + index] = { title, [Name + 'Data']: { ...rest } };
-  else order[Name + index] = {};
-  if (rest?.addition) order = { ...order, ...rest.addition };
+  if (order[Name + index]?.title !== title) {
+    order[Name + index] = { title, [Name + 'Data']: { ...rest } };
+    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key] = { ...values });
+  }
+  else {
+    order[Name + index] = {};
+    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key] = {});
+  }
   if (after) after();
 };
 
-const keys = () => Object.keys(logic()[0]);
+const keys = () => Object.keys(logic()[0]).filter(item => item !== 'addition');
 
 const sorting = () => {
   const res = logic();
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
-  if (!key.value) return logic();
-  return logic().sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
+  if (!key.value) return res;
+  return res.sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
 };
+const tableResults = (rest) => Object.values(rest)
+  .map(item => JSON.stringify(item)
+  .replace(/[{}"]/g, " ")
+  .replace(/\s:(\d)/g, ' $1'))
+  .filter(el => !el.includes('title'));
 </script>
 
 <template>
@@ -40,7 +50,7 @@ const sorting = () => {
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <b v-if="a !== 'addition'" ><i>
+            <b><i>
                 {{ text(a) }}
                 <button v-if="logic().length > 3" @click="key = a" class="sort" :class="key === a && 'active'"
                   :value="a">
@@ -61,8 +71,8 @@ const sorting = () => {
             </a>
             <CopyText :text="title" />
           </td>
-          <td v-for="item in Object.values(rest)">
-            <span v-if="typeof item !== 'object'">{{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}</span>
+          <td v-for="item in tableResults(rest)">
+            <span>{{ item }}</span>
           </td>
         </tr>
       </tbody>
