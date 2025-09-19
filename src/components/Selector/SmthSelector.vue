@@ -62,7 +62,7 @@ const sorting = () => {
             <CopyText :text="title" />
           </td>
           <td v-for="item in Object.values(rest)">
-            {{ !Array.isArray(item) ? JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1` : "")}}
+            {{ JSON.stringify(item).replace(/[{}"]/g, " ").replace(/:(\d)/g, `:$1`) }}
           </td>
         </tr>
       </tbody>
