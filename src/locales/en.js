@@ -102,4 +102,5 @@ export default {
   h: ["Height"],
   gauge: ['Pressure gauge'],
   gaugeShuttOff: ['Pressure gauge shut-off'],
+  levelTemp: ['Level-temperature switch'],
 };

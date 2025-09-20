@@ -41,7 +41,7 @@ if (!logic().length) order[Name + index] = {};
 </script>
 
 <template>
-  <article v-if="logic().length">
+  <article>
     <h2>
       {{ text(Name) }} {{ getIndex(index) }}
       <span> {{ order[Name + index]?.title }}</span>

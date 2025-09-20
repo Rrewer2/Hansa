@@ -106,4 +106,5 @@ export default {
   h: ["Wysokość"],
   gauge: ['Manometr'],
   gaugeShuttOff: ['Zawór odcinający'],
+  levelTemp: ['Wyłącznik poziom/temperatura'],
 };

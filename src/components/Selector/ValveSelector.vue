@@ -1,5 +1,6 @@
 <script setup>
 import { spoolData, HKHMP, HKHQ, HKHR, HKM } from "../../services/data";
+import { getQfromProject } from "../../services/functions";
 import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
@@ -13,11 +14,12 @@ const filteredValves = () => powerUNIT.unit.flatMap(({ HKSH, Q }, j) =>
     ['valve' + i + j + k]: () => spoolData.filter((el) => el.spool === spool && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)))
   })}));
 
-const getBolt = (index) => {
-  const key = filteredValves().map(el => Object.keys(el))[index][0].replace(/\D/g, '');
-  const arrayH = filteredValves().flatMap(el => Object.keys(el).map(key => order[key]?.[key.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0));
-  const bolt = HKM.find((el) => el.L === arrayH.reduce((a,b) => a+b) && (el.CETOP === order['valve' + key]?.['valve' + 'Data']?.CETOP));
-  order[`bolt` + key] = { title: bolt?.title };
+const getBolt = () => {
+  const Q = getQfromProject(project);
+  const keys = filteredValves().map(el => Object.keys(el)).map(([first]) => first.replace(/\D/g, ''));
+  const arrayH = filteredValves().map(el => Object.keys(el).map(elem => order[elem]?.[elem.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0)).map(row => row.reduce((a,b) => a+b));
+  const bolts = arrayH.map(length => HKM.find((el) => el.L === length && (!Q[i] || (el.CETOP === 5 && Q[i] > 34) || (el.CETOP === 3 && Q[i] < 35))));
+  bolts.forEach((bolt, i) => order[`bolt` + keys[i]] = { title: bolt?.title });
 };
 
 // const GA = () => spoolData.find(({ spool }) => spool === "GA");
@@ -30,17 +32,17 @@ const getBolt = (index) => {
 //     order['start' + i] = {};
 //     return filteredValves()
 //   };
-// };//TODO: smth with valves indexes valve0 or valve00
+// };//TODO: add start to valve
 </script>
 
-<template>
+<template>{{ order }}
   <div v-for="item, index in filteredValves()">
     <div v-for="_, key in item">
       <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
         :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)">
       </SmthSelector>
     </div>
-  </div>
+  </div>{{filteredValves().map(el => Object.keys(el))}}
 </template>
 
 <style scoped>
