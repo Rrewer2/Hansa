@@ -101,6 +101,7 @@ export default {
   filterGrade: ["Materiał i dokładność"],
   join: ["Gwint przyłącza"],
   plug: ["Napięcie cewki"],
+  valvePlug: ["Wtyczka cewki"],
   material: ["Materiał"],
   h: ["Wysokość"],
 };

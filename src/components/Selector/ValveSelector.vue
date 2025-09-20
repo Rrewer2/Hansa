@@ -10,7 +10,7 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
   
 const filteredValves = () => {
   const cetop = (Q) => Q >= 35 ? 5 : 3;
-  return powerUNIT.unit.map(({ HKSH, p, Q }, i) => 
+  return powerUNIT.unit.map(({ HKSH, Q }, i) => 
     HKSH.map(({ throttle, check, directPress, directPressValue, spool }, j) => {
       const CETOP = cetop(Q);
       const hq = throttle ? HKHQ.find(el => el.type === throttle && el.CETOP === CETOP) : {};
@@ -38,7 +38,7 @@ const valves = () => {
     order['start' + i] = {};
     return filteredValves()
   };
-};
+};//TODO: smth with valves indexes valve0 or valve00
 </script>
 
 <template>
@@ -53,9 +53,10 @@ const valves = () => {
         </td>
       </thead>
       <tbody v-for="unit in valves()">
-        <tr v-for="{ title, ...rest } in unit">
+        <tr v-for="{ title, ...rest }, i in unit">
           <td class="tal">
-            <input type="radio" :id="title" @click="order.valve = { title, valveData: { ...rest } }" class="mx" />
+            <!-- <input type="radio" :id="title" @click="order['valve' + i] = { title, valveData: { ...rest } }"
+              class="mx" /> -->
             <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
               rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}

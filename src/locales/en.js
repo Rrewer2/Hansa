@@ -97,6 +97,7 @@ export default {
   length: ["Stations"],
   join: ["Connection thread"],
   plug: ["Coil voltage"],
+  valvePlug: ["Coil connector"],
   material: ["Material"],
   h: ["Height"],
 };

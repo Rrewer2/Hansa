@@ -909,8 +909,8 @@ export const spoolData = [
   ...spoolEaton.map(({...rest})=>({...rest, h:30, plug: '24V'})),
   ...spoolRexroth.map(({...rest})=>({...rest, h:30, plug: '24V'})),
   ...spoolAtos.map(({...rest})=>({...rest, h:30, plug: '-'})),
-  ...spoolHansa.map(({title,CETOP,...rest})=>({title: title.replace('HK413','HK423'),...rest,CETOP: 5, h:40, plug: '24V'})),
-  ...spoolEaton.map(({title,CETOP,...rest})=>({title: title.replace('HKDG4V3','HKDG4V5'),...rest,CETOP: 5, h:40, plug: '24V'})),
+  ...spoolHansa.map(({title,CETOP,addition,...rest})=>({title: title.replace('HK413','HK423'),...rest,CETOP: 5,addition, h:40, plug: '24V'})),
+  ...spoolEaton.map(({title,CETOP,addition,...rest})=>({title: title.replace('HKDG4V3','HKDG4V5'),...rest,CETOP: 5,addition, h:40, plug: '24V'})),
   ...spoolAtosCetop5.map(({...rest})=>({...rest, h:40, plug: '-'})),
 ];
 export const gasketPump = [

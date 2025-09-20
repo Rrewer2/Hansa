@@ -11,7 +11,7 @@ const { project, meta, order, open } = defineProps([
   "order",
   "open",
 ]);
-const filteredTanks = () => getStandartTank(meta, agregatCounting(project)) ?? tankData[meta.tank]; //TODO: add all necessary elements to tank
+const filteredTanks = () => getStandartTank(meta, agregatCounting(project)) ?? tankData[meta.tank];
 </script>
 
 <template>
