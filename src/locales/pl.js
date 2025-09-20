@@ -51,9 +51,9 @@ export default {
   type: ["Typ"],
   tankMin: ["Minimalna pojemność", "L"],
   pumpType: ["Typ pompy"],
-  throttle: ["HKHQ"],
-  check: ["HKHR"],
-  directPress: ["HKHMP"],
+  throttle: ["Dławiący"],
+  check: ["Zwrotny"],
+  directPress: ["Reduktor"],
   DBD: ["DBD", "bar"],
   // Navigation items
   calculations: ["Obliczenia"],
@@ -104,4 +104,6 @@ export default {
   valvePlug: ["Wtyczka cewki"],
   material: ["Materiał"],
   h: ["Wysokość"],
+  gauge: ['Manometr'],
+  gaugeShuttOff: ['Zawór odcinający'],
 };

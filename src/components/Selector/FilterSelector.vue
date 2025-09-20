@@ -5,7 +5,7 @@ import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order } = defineProps([ "project", "meta", "order"]);
 
-const filteredFilter = () => order['pump' + 0]?.pumpData?.out?.startsWith('Bore') ? HKRTR : filterData.filter(({ title, q, type, filterGrade, plug }) => q >= 10 * Qmax(project));
+const filteredFilter = () => order['pump' + 0]?.pumpData?.out?.startsWith('Bore') ? HKRTR : filterData.filter(({ title, q, type, filterGrade, plug }) => q >= 5 * Qmax(project));
 const ventilationFilter = () => order['pump' + 0]?.pumpData?.out?.startsWith('Bore') ? [] : ventilation.filter(({ title, q, filterGrade, thread }) => q >= 10 * Qmax(project));
 </script>
 

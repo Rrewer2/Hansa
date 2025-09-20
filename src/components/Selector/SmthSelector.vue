@@ -12,17 +12,16 @@ const { Name, index, logic, after, project, meta, order } = defineProps(["Name",
 const setSmth = ({ title, ...rest }) => {
   if (order[Name + index]?.title !== title) {
     order[Name + index] = { title, [Name + 'Data']: { ...rest } };
-    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key] = { ...values });
+    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key + index] = { ...values });
   }
   else {
     order[Name + index] = {};
-    if (rest?.addition) Object.entries(rest.addition).forEach(([key]) => order[key] = {});
+    if (rest?.addition) Object.entries(rest.addition).forEach(([key]) => order[key + index] = {});
   }
   if (after) after();
 };
 
 const keys = () => Object.keys(logic()[0]).filter(item => item !== 'addition');
-
 const sorting = () => {
   const res = logic();
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
@@ -34,12 +33,17 @@ const tableResults = (rest) => Object.values(rest)
   .replace(/[{}"]/g, " ")
   .replace(/\s:(\d)/g, ' $1'))
   .filter(el => !el.includes('title'));
+const getIndex = (index) => {
+  if (typeof index === 'number') return index ? index + 1 : "";
+  return '';
+};
+if (!logic().length) order[Name + index] = {};
 </script>
 
 <template>
-  <article>
+  <article v-if="logic().length">
     <h2>
-      {{ text(Name) }} {{ index ? index + 1 : "" }}
+      {{ text(Name) }} {{ getIndex(index) }}
       <span> {{ order[Name + index]?.title }}</span>
     </h2>
     <br />

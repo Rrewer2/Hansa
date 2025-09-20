@@ -264,7 +264,7 @@ const FIRL = [
   {title: "FIRL290A10NVG11/4", join: "G 1.1/4″ -11", q: 290},
   {title: "FIRL320P10NVG11/2", join: "G 1.1/2″ -11", q: 610},
   {title: "FIRL610P10NVG11/2", join: "G 1.1/2″ -11", q: 610},
-].map(el => ({...el, type: 'In-Tank', filterGrade: el.title.match(/(A10|P10)/)?.[0]})); 
+].map(el => ({...el, type: 'In-Tank', filterGrade: el.title.match(/(A10|P10)/)?.[0], addition: { clogging: {title: 'HKVAVR'} }})); 
 const FISPR = [
   {title: "FISPR48A10VG3/4", join: "G 3/4″ -14", q: 48},
   {title: "FISPR55P10VG3/4", join: "G 3/4″ -14", q: 55},
@@ -274,7 +274,7 @@ const FISPR = [
   {title: "FISPR220A10VG11/2", join: "G 1.1/2″ -11", q: 220},
   {title: "FISPR250A10VG11/2", join: "G 1.1/2″ -11", q: 250},
   {title: "FISPR282P10VG11/2", join: "G 1.1/2″ -11", q: 282},
-].map(el => ({...el, type: 'Spin-On', filterGrade: el.title.match(/(A10|P10)/)?.[0]}));
+].map(el => ({...el, type: 'Spin-On', filterGrade: el.title.match(/(A10|P10)/)?.[0], addition: { clogging: {title: 'HKVAVR'} }}));
 export const filterData = [ ...HKRTR ,...FIRL, ...FISPR ];
 
 export const spoolTypes = ['G','GA','GB', 'E','EA','EB', 'J','JA','JB', 'H','HA','HB', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
@@ -1042,7 +1042,7 @@ export const blockData = [
   ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
-].map((el) => ({...el, start: !!el.start}));
+].map((el) => ({...el, start: !!el.start, addition: {minimess: {title: 'HFMMKR1/4ED'}}}));
 
 export const HKHQ = [
   {title: "HKHQ012", type: "012",CETOP: 3, h: 40},
@@ -1122,6 +1122,23 @@ export const HKM = [
   {title: "HKM6190", L: 190,CETOP: 5},
 ];
 
+const gaugeBottom = [
+  {title: "GMM63-40", pmax: 40, thread: 'G 1/4″ -19'},
+  {title: "GMM63-60", pmax: 60, thread: 'G 1/4″ -19'},
+  {title: "GMM63-100", pmax: 100, thread: 'G 1/4″ -19'},
+  {title: "GMM63-160", pmax: 160, thread: 'G 1/4″ -19'},
+  {title: "GMM63-250", pmax: 250, thread: 'G 1/4″ -19'},
+  {title: "GMM63-400", pmax: 400, thread: 'G 1/4″ -19'},
+  {title: "GMM63-600", pmax: 600, thread: 'G 1/4″ -19'},
+  {title: "GMM63-1000", pmax: 1000, thread: 'G 1/4″ -19'},
+];
+
+export const gauge = [
+  ...gaugeBottom.map(el => ({ ...el, mount: 'bottom', addition: { gaugeShuttOff: { title:'HKFT29101' } } })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'H', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101' } }  })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'HFR', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101' } }  }))
+]
+
 const priority = [
   "HAG",
   "pump",
@@ -1139,13 +1156,17 @@ const priority = [
   "directPress",
   "bolt",
   "valvePlug",
+  'minimess',
   'tank',
   'tankSeal',
   'tankLevel',
   'tankCork',
   'filter',
+  'clogging',
   'ventilation',
   'cooler',
+  'gauge',
+  'gaugeShutOff',
 ];
 export const getPriority = (KIT) => {
   const array = Object.entries(KIT);

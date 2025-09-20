@@ -35,16 +35,16 @@ const filteredBlocks = () => {
         </option>
       </select>
     </InputItem>
-    <InputItem data="p">
+    <!-- <InputItem data="p">
       <input type="number" min="0" v-model="powerUNIT.unit[i].p" id="press" />
-    </InputItem>
-    <InputItem data="DR2type">
+    </InputItem> -->
+    <!-- <InputItem data="DR2type">
       <select min="0" v-model="powerUNIT.unit[i].DR2type" id="DR2type">
         <option v-for="item in [0, 1, 2, 3]" :value="item">
           {{ item }}
         </option>
       </select>
-    </InputItem>
+    </InputItem> -->
   </SmthSelector>
 </template>
 <style scoped></style>

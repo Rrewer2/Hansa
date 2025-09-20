@@ -100,4 +100,6 @@ export default {
   valvePlug: ["Coil connector"],
   material: ["Material"],
   h: ["Height"],
+  gauge: ['Pressure gauge'],
+  gaugeShuttOff: ['Pressure gauge shut-off'],
 };

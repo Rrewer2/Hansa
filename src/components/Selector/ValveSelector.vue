@@ -1,75 +1,46 @@
 <script setup>
 import { spoolData, HKHMP, HKHQ, HKHR, HKM } from "../../services/data";
-import { getTextWithSpace } from "../../services/functions";
-import { links } from "../../services/links";
-import { text } from "../../services/text";
-import Valve from "../Scheme/Valve.vue";
-import CopyText from "./CopyText.vue";
+import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
-  
-const filteredValves = () => {
-  const cetop = (Q) => Q >= 35 ? 5 : 3;
-  return powerUNIT.unit.map(({ HKSH, Q }, i) => 
-    HKSH.map(({ throttle, check, directPress, directPressValue, spool }, j) => {
-      const CETOP = cetop(Q);
-      const hq = throttle ? HKHQ.find(el => el.type === throttle && el.CETOP === CETOP) : {};
-      const hr = check ? HKHR.find(el => el.type === check && el.CETOP === CETOP) : {};
-      const hmp = directPress ? HKHMP.find(el => el.type === directPress && el.pmax > directPressValue && el.CETOP === CETOP) : {};
-      const valve = spoolData.find((el) => el.spool === spool && (!Q || el.CETOP === CETOP));
-      const bolt = HKM.find((el) => el.L === (hq.h ?? 0) + (hr.h ?? 0) + (hmp.h ?? 0) + (valve.CETOP === 3 ? 30 : 40) && el.CETOP === CETOP);
-      order[`throttle`+ i + j] = { title: hq.title };
-      order[`check`+ i + j] = { title: hr.title };
-      order[`directPress`+ i + j] = { title: hmp.title };
-      order[`valve`+ i + j] = { title: valve?.title, valveData: valve };
-      order[`valvePlug`+ i + j] = { title: valve?.addition?.valvePlug?.title, n: valve.addition?.valvePlug?.n };
-      order[`bolt`+ i + j] = { title: bolt?.title };
-      return valve
-    }));
+
+const filteredValves = () => powerUNIT.unit.flatMap(({ HKSH, Q }, j) => 
+  HKSH.map(({ throttle, check, directPress, directPressValue, spool }, k) => {
+    return ({
+    ['throttle' + i + j + k]: () => HKHQ.filter(el => el.type === throttle && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35))),
+    ['check' + i + j + k]: () => HKHR.filter(el => el.type === check && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35))),
+    ['directPress' + i + j + k]: () => HKHMP.filter(el => el.type === directPress && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)) && el.pmax > directPressValue),
+    ['valve' + i + j + k]: () => spoolData.filter((el) => el.spool === spool && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)))
+  })}));
+
+const getBolt = (index) => {
+  const key = filteredValves().map(el => Object.keys(el))[index][0].replace(/\D/g, '');
+  const arrayH = filteredValves().flatMap(el => Object.keys(el).map(key => order[key]?.[key.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0));
+  const bolt = HKM.find((el) => el.L === arrayH.reduce((a,b) => a+b) && (el.CETOP === order['valve' + key]?.['valve' + 'Data']?.CETOP));
+  order[`bolt` + key] = { title: bolt?.title };
 };
 
-const GA = () => spoolData.find(({ spool }) => spool === "GA");
-const valves = () => {
-  if (powerUNIT.unit[i].DR2type === 3) {
-    const start = GA();
-    order['start' + i] = { title: start.title };
-    return [[ start ], ...filteredValves() ];
-  } else {
-    order['start' + i] = {};
-    return filteredValves()
-  };
-};//TODO: smth with valves indexes valve0 or valve00
+// const GA = () => spoolData.find(({ spool }) => spool === "GA");
+// const valves = () => {
+//   if (powerUNIT.unit[i].DR2type === 3) {
+//     const start = GA();
+//     order['start' + i] = { title: start.title };
+//     return [[ start ], ...filteredValves() ];
+//   } else {
+//     order['start' + i] = {};
+//     return filteredValves()
+//   };
+// };//TODO: smth with valves indexes valve0 or valve00
 </script>
 
 <template>
-  <article>
-    <h2 :class="open && 'bgc-g'">
-      {{ text("valve") }} <span> {{ order.valve?.title }}</span>
-    </h2>
-    <table v-if="valves()[0].length">
-      <thead>
-        <td v-for="item in Object.keys(valves()[0][0]).filter(item => item !== 'addition')">
-          <b><i>{{ text(item) }}</i></b>
-        </td>
-      </thead>
-      <tbody v-for="unit in valves()">
-        <tr v-for="{ title, ...rest }, i in unit">
-          <td class="tal">
-            <!-- <input type="radio" :id="title" @click="order['valve' + i] = { title, valveData: { ...rest } }"
-              class="mx" /> -->
-            <a v-if="title.includes('HK')" :href="`${links[meta.lang]}${title}`" target="_blank"
-              rel="noopener noreferrer">
-              {{ getTextWithSpace(title) }}
-            </a>
-            <span v-else>{{ title }}</span>
-            <CopyText :text="title" />
-          </td>
-          <td v-for="item in Object.values(rest).filter(el => !(JSON.stringify(el)).includes('title'))">
-            {{ item }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
+  <div v-for="item, index in filteredValves()">
+    <div v-for="_, key in item">
+      <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
+        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)">
+      </SmthSelector>
+    </div>
+  </div>
 </template>
 
 <style scoped>
