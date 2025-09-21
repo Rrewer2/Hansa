@@ -22,6 +22,19 @@ const getBolt = () => {
   bolts.forEach((bolt, i) => order[`bolt` + keys[i]] = { title: bolt?.title });
 };
 
+const filteredStart = () => powerUNIT.unit.flatMap(({ startValve, Q }) => {
+  // if (start) {
+    // const boltStart = HKM.find((el) => el.L === length && (!Q[i] || (el.CETOP === 5 && Q[i] > 34) || (el.CETOP === 3 && Q[i] < 35)))
+    // order['boltStart'] = { title: bolt?.title };
+    return spoolData.filter(({ spool }) => spool === startValve && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)))
+  // }
+});
+
+const boltStart = () => {
+  const bolt = HKM.find((el) => el.L === order['start' + i]?.startData?.h && el.CETOP === order['start' + i]?.startData?.CETOP);
+  order['boltStart' + i] = { title: bolt?.title };
+};
+
 // const GA = () => spoolData.find(({ spool }) => spool === "GA");
 // const valves = () => {
 //   if (powerUNIT.unit[i].DR2type === 3) {
@@ -35,14 +48,16 @@ const getBolt = () => {
 // };//TODO: add start to valve
 </script>
 
-<template>{{ order }}
+<template>
   <div v-for="item, index in filteredValves()">
     <div v-for="_, key in item">
       <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
-        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)">
-      </SmthSelector>
+        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
     </div>
-  </div>{{filteredValves().map(el => Object.keys(el))}}
+  </div>
+  <div v-if="powerUNIT.unit[i].start">
+    <SmthSelector v-bind="{ project, meta, order }" Name="start" :index="i" :logic="filteredStart" :after="boltStart" />
+  </div>
 </template>
 
 <style scoped>

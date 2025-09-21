@@ -27,7 +27,7 @@ const { project, order } = defineProps(['project', "order"]);
       <h5 v-for="item, i in Object.keys(order).filter(key => key.startsWith('valve0'))">
         {{ i + 1 }} Zawór elektromagnetyczny suwak {{ order[item]?.valveData?.spool }}
       </h5>
-      <h5>Napięcie magnetyczne - 24 VDC</h5>
+      <h5>Napięcie magnetyczne - 24 VDC 1,3A</h5>
     </div>
 
     <h5 v-if="order.tank?.tankData?.Size">

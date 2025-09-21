@@ -23,7 +23,7 @@ const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
 const getSL1 = (unit) =>
   getSL(unit) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type);
 const getSh = (unit) => getSL(unit) * 0.35;
-const xV = (unit, i) => x(c) + getSL1(unit) + i * (getSL(unit) * 1.1);
+const xV = (unit, i) => x(c) + getSL1(unit) + (i + unit.start) * (getSL(unit) * 1.1);
 const yV = y + 300 + getSh(unit) + getSh(unit) / 10;
 const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
 const yValve = (data) => {
@@ -49,8 +49,8 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
   <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
   <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y - 5 + unit.HKSH.length * 10"
     v-bind="{ sl: getSL(unit), data }" />
-  <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length"
-    v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
+  <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length" :start="unit.start"
+    :startValve="unit.startValve" v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
   <HKHR v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
     :x="xV(unit, i)" :y="yV" :r="getSL(unit) / 30" />
   <HKHQ v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"

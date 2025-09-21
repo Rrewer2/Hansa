@@ -3,6 +3,7 @@ import Hydrocylinder from "./Hydrocylinder.vue";
 import { buckling, pumpCounting, getVFU, round } from "../services/functions";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
+import { spoolTypes } from "../services/data";
 
 const { pumpData, btnDisabled, project, k, i, order } = defineProps([
   "pumpData",
@@ -13,7 +14,7 @@ const { pumpData, btnDisabled, project, k, i, order } = defineProps([
   "order",
 ]);
 
-const { id, HKSH, same, ...rest } = pumpData;
+const { id, HKSH, same, startValve, ...rest } = pumpData;
 </script>
 
 <template>
@@ -31,8 +32,15 @@ const { id, HKSH, same, ...rest } = pumpData;
           <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
           <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
           <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="ind">
-            <option v-for="item in [0, 1, 2, 3]" :value="item">
+            <option v-for="item in [0, 1, 2]" :value="item">
               {{ item }}
+            </option>
+          </select>
+          <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="ind" />
+          <select v-if="ind === 'start'" v-model="pumpData.startValve" :id="ind" class="w-75"
+            :disabled="same || !pumpData.start">
+            <option v-for="spool in spoolTypes" :value="spool" :id="'start' + spool">
+              {{ spool }}
             </option>
           </select>
         </InputItem>

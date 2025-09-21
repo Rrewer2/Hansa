@@ -9,14 +9,14 @@ const key = ref();
 
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 
-const setSmth = ({ title, ...rest }) => {
+const setSmth = ({ title, addition, ...rest }) => {
   if (order[Name + index]?.title !== title) {
     order[Name + index] = { title, [Name + 'Data']: { ...rest } };
-    if (rest?.addition) Object.entries(rest.addition).forEach(([key, values]) => order[key + index] = { ...values });
+    if (addition) Object.entries(addition).forEach(([key, values]) => order[key + index] = { ...values });
   }
   else {
     order[Name + index] = {};
-    if (rest?.addition) Object.entries(rest.addition).forEach(([key]) => order[key + index] = {});
+    if (addition) Object.entries(addition).forEach(([key]) => order[key + index] = {});
   }
   if (after) after();
 };

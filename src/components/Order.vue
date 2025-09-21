@@ -43,7 +43,7 @@ const normalize = () => {
         </tr>
       </tbody>
     </table>
-  </article>
+  </article>{{ order }}
   <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
 </template>
 

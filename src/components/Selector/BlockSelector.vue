@@ -40,7 +40,7 @@ const filteredBlocks = () => {
     </InputItem> -->
     <!-- <InputItem data="DR2type">
       <select min="0" v-model="powerUNIT.unit[i].DR2type" id="DR2type">
-        <option v-for="item in [0, 1, 2, 3]" :value="item">
+        <option v-for="item in [0, 1, 2]" :value="item">
           {{ item }}
         </option>
       </select>
