@@ -21,8 +21,8 @@ const { x, y, type, N, sl, sl1, sh, text, start, startValve } = defineProps([
   <DR2firstSection3 v-if="start" v-bind="{ x, y, type, sl, sl1, sh, text, startValve }" />
   <DR2firstSection v-bind="{ x, y, type, sl, sl1, sh, text }" />
   <DR2nextSection v-for="(_, n) in N" :sl="sl" :sh="sh" :x="x + sl1 + sl * 1.1 * (n + start)" :y="y" :r="sl / 40" />
-  <text :x="x + sh / 5" :y="y + sh / 4" font-family="Arial" :font-size="30" text-anchor="middle">P</text>
-  <text :x="x + sh / 5" :y="y + sh - sh / 10" font-family="Arial" :font-size="30" text-anchor="middle">T</text>
+  <text :x="x + sh / 5" :y="y - sh / 4" font-family="Arial" :font-size="30" text-anchor="middle">P</text>
+  <text :x="x + sh / 5" :y="y + sh + sh / 3" font-family="Arial" :font-size="30" text-anchor="middle">T</text>
   <text v-for="(_, n) in N" :x="x + sl1 + sl * 0.35 + sl * 1.1 * (n + start)" :y="y - sh / 10" font-family="Arial"
     :font-size="20" text-anchor="middle">A{{ n + 1 }}</text>
   <text v-for="(_, n) in N" :x="x + sl1 + sl * 0.65 + sl * 1.1 * (n + start)" :y="y - sh / 10" font-family="Arial"
