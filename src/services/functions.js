@@ -96,10 +96,10 @@ export const hkshCounting = ({ D, d, L, z }, { Q, p, DBD }) => {
   return { FOut, FIn, tOut, tIn, tC, VD, Vd, k, vOut, vIn, wall };
 };
 
-export const buckling = ({ HKSH: { D, d, L }, p, DBD }) => {
-  const SD = S(D);
+export const buckling = ({ HKSH, p, DBD }) => {
+  const SD = S(HKSH?.D);
   const FOut = F(getPressure(DBD, p), SD);
-  const F1 = FI(d, L);
+  const F1 = FI(HKSH?.d, HKSH?.L);
   return F1 <= FOut
     ? "error"
     : 1 - FOut / F1 < bucklingSafety / 100
@@ -126,7 +126,7 @@ export const agregatTitle = (project, meta, order) => {
   const Q = getQfromProject(project).map((q) => round(q));
   const type = order.tank?.tankData?.type || meta.tank;
   const size =
-    order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || "___";
+    order.tank?.tankData?.Size || getStandartTank(meta, getT(Q))?.Size || "___";
   return `HAG${type}${size}-${P.join("/")}-${Q.join("/")}.${pmax}`;
 };
 
