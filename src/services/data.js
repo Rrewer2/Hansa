@@ -1180,6 +1180,47 @@ export const getPriority = (KIT) => {
   return Object.fromEntries(sorted)
 };
 
+export const lid = [
+  {title: "M-4205-00000000010",tank: 20, addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: "K-HAGRA20-112RAL",tank: 20, addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: "M-4205-00000000005",tank: 44, addition: {XSVNW13HL: {title: 'XSVNW13HL'},['VHR90-1ED']: {title: 'VHR90-1ED'},['VHR90-1/2ED']: {title: 'VHR90-1/2ED'},XVEWONW13L: {title: 'XVEWONW13L'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: "M-4205-00000000012",tank: 30, addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},['VHR90-3/4ED']: {title: 'VHR90-3/4ED'},XVEWONW13L: {title: 'XVEWONW13L',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+];
+
+const xvrnw = [
+  {title: "XVRNW08HL1/2ED", pipe: 'L10', thread: 'G 1/2″ -14'},
+  {title: "XVRNW08HL1/8ED", pipe: 'L10', thread: 'G 1/8″'},
+  {title: "XVRNW08HL3/8ED", pipe: 'L10', thread: 'G 3/8″'},
+  {title: "XVRNW08HLED", pipe: 'L10', thread: 'G 1/4″'},
+  
+  {title: "XVRNW10HL1/2ED", pipe: 'L12', thread: 'G 1/2″ -14'},
+  {title: "XVRNW10HL1/4ED", pipe: 'L12', thread: 'G 1/4″'},
+  {title: "XVRNW10HL3/4ED", pipe: 'L12', thread: 'G 3/4″'},
+  {title: "XVRNW10HLED", pipe: 'L12', thread: 'G 3/8″'},
+  
+  {title: "XVRNW13HL3/4ED", pipe: 'L15', thread: 'G 3/4″'},
+  {title: "XVRNW13HL3/8ED", pipe: 'L15', thread: 'G 3/8″'},
+  {title: "XVRNW13HLED", pipe: 'L15', thread: 'G 1/2″ -14'},
+    
+  {title: "XVRNW16HL3/4ED", pipe: 'L18', thread: 'G 3/4″'},
+  {title: "XVRNW16HL3/8ED", pipe: 'L18', thread: 'G 3/8″'},
+  {title: "XVRNW16HLED", pipe: 'L18', thread: 'G 1/2″ -14'},
+  
+  {title: "XVRNW20HL1/2ED", pipe: 'L22', thread: 'G 1/2″'},
+  {title: "XVRNW20HL1ED", pipe: 'L22', thread: 'G 1″'},
+  {title: "XVRNW20HLED", pipe: 'L22', thread: 'G 3/4″'},
+  
+  {title: "XVRNW25HL11/4ED", pipe: 'L28', thread: 'G 1.1/4″'},
+  {title: "XVRNW25HL3/4ED", pipe: 'L28', thread: 'G 3/4″'},
+  {title: "XVRNW25HLED", pipe: 'L28', thread: 'G 1″'},
+  
+  {title: "XVRNW32HL11/2ED", pipe: 'L35', thread: 'G 1.1/2″'},
+  {title: "XVRNW32HL1ED", pipe: 'L35', thread: 'G 1″'},
+  {title: "XVRNW32HLED", pipe: 'L35', thread: 'G 1.1/4″'},
+  
+  {title: "XVRNW40HL11/4ED", pipe: 'L42', thread: 'G 1.1./4″'},
+  {title: "XVRNW40HLED", pipe: 'L42', thread: 'G 1.1/2″'},
+];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
 // {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
