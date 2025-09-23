@@ -6,7 +6,7 @@ import Filter from "./Scheme/Filter.vue";
 import NTM from "./Scheme/NTM.vue";
 import Tank from "./Scheme/Tank.vue";
 import FIBL from "./Scheme/FIBL.vue";
-import { getQfromProject, getStandartTank, getT } from "../services/functions";
+import { getQfromProject, getStandartTank, getT, reducedPower } from "../services/functions";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
