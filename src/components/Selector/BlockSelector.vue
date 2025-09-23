@@ -18,7 +18,7 @@ const sections = ref("");
 const filteredBlocks = () => {
   return powerUNIT.unit.flatMap(({ Q, p, DR2type, start: startUnit }, i) => blockData.filter(({ stations, cetop, pressure, DBV, start }) => {
     return (
-      (sections.value ? stations === sections.value + +startUnit : stations === powerUNIT.unit[i].HKSH.length + +(DR2type === 3)) &&
+      (sections.value ? stations === sections.value + +startUnit : stations === powerUNIT.unit[i].HKSH.length + +startUnit) &&
       (!Q || (cetop === 5 && Q > 34) || (cetop === 3 && Q < 35)) &&
       (pressure > +p + 20) 
       && ((DR2type === 0 && !DBV) || (DR2type === 1 && DBV && !start) || ((DR2type === 2 && DBV && start)))
