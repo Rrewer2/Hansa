@@ -60,12 +60,12 @@ const RA = [
   {title: "HKBAKRA03",Size: 3,CoolingCapacity: 0.16, addition: {tankSeal: {title: "HKRSBAKRA03"}, tankCork: {title: "VHR90-1/2ED"}, tankLevel: {title:'HKLVA20TM12'}}},
   {title: "HKBAKRA06",Size: 6,CoolingCapacity: 0.36, addition: {tankSeal: {title: "HKRSBAKRA06"}, tankCork: {title: "VHR90-1/2ED"}, tankLevel: {title:'HKLVA20TM12'}}},
   {title: "HKBAKRA12",Size: 12,CoolingCapacity: 0.6, addition: {tankSeal: {title: "HKRSBAKRA12"}, tankCork: {title: "VHR90-1/2ED"}, tankLevel: {title:'HKLVA20TM12'}}},
-  {title: "HKBAKRA20",Size: 20,CoolingCapacity: 0.72, addition: {tankSeal: {title: "HKRSBAKRA20"}, tankCork: {title: "VHR90-1/2ED"}, tankLevel: {title:'HKLVA20TM12'}, LevelTemp:{title: 'HKNTMM319070NC280'}}},
-  {title: "HKBAKRA30",Size: 30,CoolingCapacity: 0.92, addition: {tankSeal: {title: "HKRSBAKRA30"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, LevelTemp:{title: 'HKNTMM319070NC280'}}},
-  {title: "HKBAKRA44",Size: 44,CoolingCapacity: 1.04, addition: {tankSeal: {title: "HKRSBAKRA44"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, LevelTemp:{title: 'HKNTMM319070NC280'}}},
-  {title: "HKBAKRA70",Size: 70,CoolingCapacity: 1.16, addition: {tankSeal: {title: "HKRSBAKRA70"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, LevelTemp:{title: 'HKNTMM319070NC280'}}},
+  {title: "HKBAKRA20",Size: 20,CoolingCapacity: 0.72, addition: {tankSeal: {title: "HKRSBAKRA20"}, tankCork: {title: "VHR90-1/2ED"}, tankLevel: {title:'HKLVA20TM12'}, levelTemp:{title: 'HKNTMM319070NC280'}}},
+  {title: "HKBAKRA30",Size: 30,CoolingCapacity: 0.92, addition: {tankSeal: {title: "HKRSBAKRA30"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, levelTemp:{title: 'HKNTMM319070NC280'}}},
+  {title: "HKBAKRA44",Size: 44,CoolingCapacity: 1.04, addition: {tankSeal: {title: "HKRSBAKRA44"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, levelTemp:{title: 'HKNTMM319070NC280'}}},
+  {title: "HKBAKRA70",Size: 70,CoolingCapacity: 1.16, addition: {tankSeal: {title: "HKRSBAKRA70"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, levelTemp:{title: 'HKNTMM319070NC280'}}},
   {title: "HKBAKRA130",Size: 130,CoolingCapacity: 2.1, addition: {tankSeal: {title: "HKRSBAKRA130"}, tankCork: {title: "BOER1/2"}, tankLevel: {title:'HKLVA20TM12'}, levelTemp:{title: 'HKNTMM319070NC280'}}},
-].map((el) => ({...el, type: "RA", material: 'Alu'}));
+].map((el) => ({...el, type: "RA", material: 'Alu', addition: { ...el.addition,  oil: {title: 'K-OLEJ HV46', n: el.Size}}}));
 const BSK = [
   {title: "HKBSK40",Size: 40},
   {title: "HKBSK50",Size: 50},
@@ -226,7 +226,12 @@ export const screwISO = [ [5, 4.134, 0.8, 4.48, 4.2, 5.8], [6, 4.917, 1, 5.35, 5
 export const VPipe = {P: [3, 8], T: [1, 3]};
 
 // "średnica zewn. [mm], grubość ścianki [mm], średnica wewn. [mm], ciśn.teoretyczne* [bar] statyczne, dynamiczne";
-export const pipesData = {'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 'L10-1.5': {p: 282, Q: 12}, 'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 'L35-3': {p: 185, Q: 200}, 'L42-3': {p: 160, Q: 300}, 'S06-1.5': {p: 390, Q: 2}, 'S08-2': {p: 390, Q: 4}, 'S10-2': {p: 342, Q: 9}, 'S12-2.5': {p: 351, Q: 20}, 'S14-3.5': {p: 390, Q: 40}, 'S16-3.5': {p: 360, Q: 60}, 'S20-4': {p: 340, Q: 120}, 'S25-4': {p: 300, Q: 170}, 'S30-4': {p: 260, Q: 250}, 'S35-4': {p: 230, Q: 350},};
+export const pipesData = {
+  // 'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 
+'L10-1.5': {p: 282, Q: 12}, 'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 
+'L35-3': {p: 185, Q: 200}, 'L42-3': {p: 160, Q: 300}, 
+'S06-1.5': {p: 390, Q: 2}, 'S08-2': {p: 390, Q: 4}, 'S10-2': {p: 342, Q: 9}, 'S12-2.5': {p: 351, Q: 20}, 'S14-3.5': {p: 390, Q: 40}, 'S16-3.5': {p: 360, Q: 60}, 
+'S20-4': {p: 340, Q: 120}, 'S25-4': {p: 300, Q: 170}, 'S30-4': {p: 260, Q: 250}, 'S35-4': {p: 230, Q: 350},};
 
 export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},};
 
@@ -1166,21 +1171,38 @@ const priority = [
   'cooler',
   'gauge',
   'gaugeShutOff',
-  'xvrPumpIn',
-  'xvrPumpOut',
-  'xvrBlockP',
-  'xvrBlockA',
-  'xvrBlockB',
-  'xvrBlockT',
+  // 'xvrPumpIn',
+  // 'xvrPumpOut',
+  // 'xvrBlockP',
+  // 'xvrBlockA',
+  // 'xvrBlockB',
+  // 'xvrBlockT',
+
+
+
+
+
+  // ,'oil',
 ];
 export const getPriority = (KIT) => {
   const array = Object.entries(KIT);
   const sorting = (a, b) => {
-    const a1 = priority.findIndex(item => a[1].opis.includes(item));
-    const b1 = priority.findIndex(item => b[1].opis.includes(item));
-    return a1 - b1;
-    }
-    const sorted = array.sort(sorting);
+    // const a1 = priority.findIndex(item => a[1].opis.includes(item));
+    // const b1 = priority.findIndex(item => b[1].opis.includes(item));
+    // return a1 - b1;
+    const getIndex = (item) => {
+      if (item[1].opis?.trim().toUpperCase().startsWith("X")) {
+        return Number.MAX_SAFE_INTEGER;
+      }
+      if (item[1].opis === 'oil') {
+        return Infinity;
+      }
+      const idx = priority.findIndex((p) => item[1].opis.includes(p));
+      return idx === -1 ? priority.length + 1 : idx;
+    };
+    return getIndex(a) - getIndex(b);
+  }
+  const sorted = array.sort(sorting);
   return Object.fromEntries(sorted)
 };
 

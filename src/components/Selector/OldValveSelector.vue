@@ -39,7 +39,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
 <template>
   <article>
     <h2 :class="open && 'bgc-g'">
-      {{ text("valve") }}<span> {{ order.valve?.title }}</span>
+      {{ text("valve") }}
     </h2>
     <div class="grid ml-10">
       <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     </div>
     <table>
       <thead></thead>
-      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0])">
+      <td v-if="filtered().length" v-for="item in Object.keys(spoolData[0]).filter(item => item !== 'addition')">
         {{ text(item) }}
       </td>
       <tbody>
@@ -63,7 +63,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
             <span v-else>{{ getTextWithSpace(title) }} </span>
             <CopyText :text="title" />
           </td>
-          <td v-for="el in Object.values(rest)">{{ el }}</td>
+          <td v-for="el in Object.values(rest).filter(el => !el.valvePlug)">{{ el }}</td>
         </tr>
       </tbody>
     </table>

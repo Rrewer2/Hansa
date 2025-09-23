@@ -6,7 +6,7 @@ import Filter from "./Scheme/Filter.vue";
 import NTM from "./Scheme/NTM.vue";
 import Tank from "./Scheme/Tank.vue";
 import FIBL from "./Scheme/FIBL.vue";
-import { getQfromProject, getStandartTank, getT, reducedPower } from "../services/functions";
+import { reducedPower, round } from "../services/functions";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
@@ -47,8 +47,9 @@ const xFilter = tankGap + LTank - 150;
       {{ order.tank?.tankData?.Size }}<tspan v-if="order.tank?.tankData?.Size"> L</tspan>
     </Tank>
     <PumpUnit v-for="(pumps, i) in project" :x="tankGap + 200 + 1000 * i" :y="yTank() - 1.25 * R()" :pumps="pumps.unit"
-      :mount="pumps.mount" :R="R()" :text="order['motor'+i]?.motorData?.power ? order['motor'+i].motorData.power : round(reducedPower(pumps))">
-      {{ pumps.n }}
+      :mount="pumps.mount" :R="R()"
+      :text="order['motor' + i]?.motorData?.power ? order['motor' + i].motorData.power : round(reducedPower(pumps.unit))">
+      {{ order['motor' + i]?.motorData?.n || pumps.n }}
     </PumpUnit>
     <FIBL :x="tankGap + LTank - 400" :y="yTank()" :a="R() / 1.5" />
     <NTM :x="tankGap + LTank - 300" :y="yTank()" :a="R() / 1.5" />

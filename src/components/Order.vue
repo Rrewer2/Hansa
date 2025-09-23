@@ -25,19 +25,22 @@ const normalize = () => {
 <template>
   <article class="mt-20">
     <table>
-      <thead>
+      <thead class="noCopy">
         <td v-for="a in ['Nr', 'Title', 'Count', 'JM', 'Opis']">
           <b><i>{{ a }}</i></b>
         </td>
       </thead>
 
       <tbody>
-        <tr v-for="({ title, ...rest }, _, i) of normalize()">
-          <td>{{ (i + 1) * 100 }}</td>
+        <tr v-for="({ title, count, ...rest }, _, i) of normalize()">
+          <td class="noCopy">{{ (i + 1) * 100 }}</td>
           <td class="tal">
             {{ title }}
           </td>
-          <td v-for="item in rest">
+          <td class="tal">
+            {{ count }}
+          </td>
+          <td v-for="item in rest" class="noCopy">
             {{ text(item?.meta ? item.meta : item) }}
           </td>
         </tr>
@@ -47,4 +50,8 @@ const normalize = () => {
   <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.noCopy {
+  user-select: none;
+}
+</style>
