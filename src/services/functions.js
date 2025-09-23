@@ -146,7 +146,25 @@ export const powerCounting = (unit) => {
   const I = 2.4 * P ** 0.9;
   return { P, I };
 };
-export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
+const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
+const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(
+  ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
+);
+const getPipe = (Q1, k) => Object.entries(k ? pipesData: pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
+export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
+  const k = maxRatio(HKSH);
+  const pipe_P = getPipeP(Q, DBD, p);
+  const pipeP = pipe_P ? pipe_P[0] : "∄";
+  const pipe_T = getPipe(Q, k);
+  const pipeT = pipe_T ? pipe_T[0] : "∄";
+  const pipe_S = getPipe(Q);
+  const pipeS = pipe_S ? pipe_S[0] : "∄";
+  const Qback = Q * k;
+  const P = Power(Q, getPressure(DBD, p));
+  return { pipeP, pipeT, pipeS, Qback, P };
+};
+
+export const pipes = () => {
   const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
   const pipe_P = Object.entries(pipesData).find(
     ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
@@ -156,9 +174,7 @@ export const pumpCounting = ({ Q: Q1, p: p1, DBD, HKSH }) => {
   const pipeT = pipe_T ? pipe_T[0] : "∄";
   const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
   const pipeS = pipe_S ? pipe_S[0] : "∄";
-  const Qback = Q1 * k;
-  const P = Power(Q1, getPressure(DBD, p1));
-  return { pipeP, pipeT, pipeS, Qback, P };
+  return { pipeP, PipeT, PipeS }
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);

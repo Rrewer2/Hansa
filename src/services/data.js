@@ -226,11 +226,9 @@ export const screwISO = [ [5, 4.134, 0.8, 4.48, 4.2, 5.8], [6, 4.917, 1, 5.35, 5
 export const VPipe = {P: [3, 8], T: [1, 3]};
 
 // "średnica zewn. [mm], grubość ścianki [mm], średnica wewn. [mm], ciśn.teoretyczne* [bar] statyczne, dynamiczne";
-export const pipesData = {'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 'L10-1.5': {p: 282, Q: 12}, 'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 'L35-3': {p: 185, Q: 200}, 'L42-3': {p: 160, Q: 300}, 'S06-1.5': {p: 390, Q: 2}, 'S08-2': {p: 390, Q: 4}, 'S10-2': {p: 342, Q: 9}, 'S12-2.5': {p: 351, Q: 20}, 'S14-3.5': {p: 390, Q: 40}, 'S16-3.5': {p: 360, Q: 60}, 'S20-4': {p: 340, Q: 120}, 'S25-4': {p: 300, Q: 170}, 'S30-4': {p: 260, Q: 250}, 'S35-4': {p: 230, Q: 350},
-};
+export const pipesData = {'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 'L10-1.5': {p: 282, Q: 12}, 'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 'L35-3': {p: 185, Q: 200}, 'L42-3': {p: 160, Q: 300}, 'S06-1.5': {p: 390, Q: 2}, 'S08-2': {p: 390, Q: 4}, 'S10-2': {p: 342, Q: 9}, 'S12-2.5': {p: 351, Q: 20}, 'S14-3.5': {p: 390, Q: 40}, 'S16-3.5': {p: 360, Q: 60}, 'S20-4': {p: 340, Q: 120}, 'S25-4': {p: 300, Q: 170}, 'S30-4': {p: 260, Q: 250}, 'S35-4': {p: 230, Q: 350},};
 
-export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},
-};
+export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},};
 
 export const coolerData = [ {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},}, {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},}, {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},}, {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},}, {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},}, {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},}, {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},}, {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635},},
 ].map(({title,...rest})=>({title: 'HKOILAIR'+title, ...rest}));
@@ -241,8 +239,8 @@ export const ventilation = [
   {title: "FIBL080FP03080", thread: "Ø73 6 x M5", q: 450},
   {title: "FIBL080FP10080", thread: "Ø73 6 x M5", q: 550},
   {title: "FIBL080FP10150", thread: "Ø73 6 x M5", q: 550},
-  {title: "FIBL080GP03", thread: "G 3/4″ -14", q: 450},
-  {title: "FIBL080GP10", thread: "G 3/4″ -14", q: 550},
+  {title: "FIBL080GP03", thread:"G 3/4″ -14", q: 450},
+  {title: "FIBL080GP10", thread:"G 3/4″ -14", q: 550},
   {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 1600},
   {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 2150},
 ].map(({title, ...rest}) => ({title, ...rest, filterGrade: title.match(/(P10|P03)/)?.[0]}));
@@ -280,34 +278,34 @@ export const filterData = [ ...HKRTR ,...FIRL, ...FISPR ];
 export const spoolTypes = ['G','GA','GB', 'E','EA','EB', 'J','JA','JB', 'H','HA','HB', 'L', 'M', 'U', 'W', 'F', 'P', 'A', 'B', 'C', 'D', 'Y', 'D1', 'Y1'];
 
 export const flanges = [
-  {title: "WDA0.512", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14"}, 
-  {title: "WDA0.538", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19"}, 
-  {title: "WDA112", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14"}, 
-  {title: "WDA138", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19"}, 
-  {title: "WDA212", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14"}, 
-  {title: "WDA234", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14"}, 
-  {title: "WDA334", pressure: 180, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14"}, 
-  {title: "WDA3100", pressure: 180, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11"},
-  {title: "WDS0.512", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14"},
-  {title: "WDS0.538", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19"},
-  {title: "WDS112", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14"},
-  {title: "WDS138", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19"},
-  {title: "WDS212", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14"},
-  {title: "WDS234", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14"},
-  {title: "WDS3100", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 1″ -11"},
-  {title: "WDS334", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14"},
-  {title: "WDS3B100", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11"},
-  {title: "WDS3B34", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14"},
-  {title: "F1", pressure: 250, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19"},
-  {title: "F2", pressure: 250, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14"},
-  {title: "F3A", pressure: 250, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14"},
-  {title: "F3B", pressure: 250, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14"},
-  {title: "F3.5A", pressure: 180, LK: "LK Ø 62 mm / M 10", thread: "G 1″ -11"},
-  {title: "F3.5B", pressure: 180, LK: "LK Ø 62 mm / M 12", thread: "G 1″ -11"},
-  {title: "F4", pressure: 180, LK: "LK Ø 72.5 mm / M 12", thread: "G 1.1/4″ -11"},
-  {title: "GF35LKL12315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 18 x 1,5"},
-  {title: "GF35LKL15250", pressure: 250, LK: "LK Ø 35 mm / M 6", thread: "M 22 x 1,5"},
-  {title: "GF35LKS16315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 24 x 1,5"},
+  {title: "WDA0.538", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19", QS: 7, QP: 20}, 
+  {title: "WDA0.512", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14", QS: 16, QP: 35}, 
+  {title: "WDA138", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20}, 
+  {title: "WDA112", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14", QS: 20, QP: 40}, 
+  {title: "WDA212", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14", QS: 12, QP: 35}, 
+  {title: "WDA234", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14", QS: 35, QP: 75}, 
+  {title: "WDA334", pressure: 180, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14", QS: 25, QP: 75}, 
+  {title: "WDA3100", pressure: 180, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11", QS: 43, QP: 120},
+  {title: "WDS0.538", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19", QS: 7, QP: 20},
+  {title: "WDS0.512", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14", QS: 16, QP: 35},
+  {title: "WDS138", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20},
+  {title: "WDS112", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14", QS: 20, QP: 40},
+  {title: "WDS212", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14", QS: 12, QP: 35},
+  {title: "WDS234", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14", QS: 35, QP: 75},
+  {title: "WDS334", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14", QS: 25, QP: 75},
+  {title: "WDS3100", pressure: 315, LK: "LK Ø 51 mm / M 10", thread: "G 1″ -11", QS: 43, QP: 120},
+  {title: "WDS3B34", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14", QS: 25, QP: 75},
+  {title: "WDS3B100", pressure: 315, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11", QS: 43, QP: 120},
+  {title: "F1", pressure: 250, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20},
+  {title: "F2", pressure: 250, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14", QS: 12, QP: 35},
+  {title: "F3A", pressure: 250, LK: "LK Ø 51 mm / M 10", thread: "G 3/4″ -14", QS: 25, QP: 75},
+  {title: "F3B", pressure: 250, LK: "LK Ø 56 mm / M 10", thread: "G 3/4″ -14", QS: 25, QP: 75},
+  {title: "F3.5A", pressure: 180, LK: "LK Ø 62 mm / M 10", thread: "G 1″ -11", QS: 43, QP: 120},
+  {title: "F3.5B", pressure: 180, LK: "LK Ø 62 mm / M 12", thread: "G 1″ -11", QS: 43, QP: 120},
+  {title: "F4", pressure: 180, LK: "LK Ø 72.5 mm / M 12", thread: "G 1.1/4″ -11",QS:70, QP: 200},
+  {title: "GF35LKL12315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 18 x 1,5",QS:7, QP:20},
+  {title: "GF35LKL15250", pressure: 250, LK: "LK Ø 35 mm / M 6", thread: "M 22 x 1,5",QS:12, QP:35},
+  {title: "GF35LKS16315", pressure: 315, LK: "LK Ø 35 mm / M 6", thread: "M 24 x 1,5",QS:18, QP:45},
 ];
 
 export const flangesPP = [
@@ -1168,6 +1166,12 @@ const priority = [
   'cooler',
   'gauge',
   'gaugeShutOff',
+  'xvrPumpIn',
+  'xvrPumpOut',
+  'xvrBlockP',
+  'xvrBlockA',
+  'xvrBlockB',
+  'xvrBlockT',
 ];
 export const getPriority = (KIT) => {
   const array = Object.entries(KIT);
@@ -1181,45 +1185,88 @@ export const getPriority = (KIT) => {
 };
 
 export const lid = [
-  {title: "M-4205-00000000010",tank: 20, addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: "M-4205-00000000010",tank: 20, addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},namePlate: {filter: 'FIBL046FP10002'}}},
   {title: "K-HAGRA20-112RAL",tank: 20, addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
   {title: "M-4205-00000000005",tank: 44, addition: {XSVNW13HL: {title: 'XSVNW13HL'},['VHR90-1ED']: {title: 'VHR90-1ED'},['VHR90-1/2ED']: {title: 'VHR90-1/2ED'},XVEWONW13L: {title: 'XVEWONW13L'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
   {title: "M-4205-00000000012",tank: 30, addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},['VHR90-3/4ED']: {title: 'VHR90-3/4ED'},XVEWONW13L: {title: 'XVEWONW13L',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
 ];
 
-const xvrnw = [
-  {title: "XVRNW08HL1/2ED", pipe: 'L10', thread: 'G 1/2″ -14'},
-  {title: "XVRNW08HL1/8ED", pipe: 'L10', thread: 'G 1/8″'},
-  {title: "XVRNW08HL3/8ED", pipe: 'L10', thread: 'G 3/8″'},
-  {title: "XVRNW08HLED", pipe: 'L10', thread: 'G 1/4″'},
+export const xvrnw = [
+  {title: "XVRNW08HL1/8ED", pipe: 'L10-1.5', thread: 'G 1/8″ -28'},
+  {title: "XVRNW08HLED", pipe: 'L10-1.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW08HL1/2ED", pipe: 'L10-1.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW08HL3/8ED", pipe: 'L10-1.5', thread: 'G 3/8″ -19'},
   
-  {title: "XVRNW10HL1/2ED", pipe: 'L12', thread: 'G 1/2″ -14'},
-  {title: "XVRNW10HL1/4ED", pipe: 'L12', thread: 'G 1/4″'},
-  {title: "XVRNW10HL3/4ED", pipe: 'L12', thread: 'G 3/4″'},
-  {title: "XVRNW10HLED", pipe: 'L12', thread: 'G 3/8″'},
+  {title: "XVRNW10HL1/8", pipe: 'L12-1.5', thread: 'G 1/8″ -28'},
+  {title: "XVRNW10HL1/4ED", pipe: 'L12-1.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW10HL1/2ED", pipe: 'L12-1.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW10HLED", pipe: 'L12-1.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW10HL3/4ED", pipe: 'L12-1.5', thread: 'G 3/4″ -14'},
   
-  {title: "XVRNW13HL3/4ED", pipe: 'L15', thread: 'G 3/4″'},
-  {title: "XVRNW13HL3/8ED", pipe: 'L15', thread: 'G 3/8″'},
-  {title: "XVRNW13HLED", pipe: 'L15', thread: 'G 1/2″ -14'},
+  {title: "XVRNW13HL1/4", pipe: 'L15-1.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW13HL3/8ED", pipe: 'L15-1.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW13HLED", pipe: 'L15-1.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW13HL3/4ED", pipe: 'L15-1.5', thread: 'G 3/4″ -14'},
+  {title: "XVRNW13HL1", pipe: 'L15-1.5', thread: 'G 1″ -11'},
     
-  {title: "XVRNW16HL3/4ED", pipe: 'L18', thread: 'G 3/4″'},
-  {title: "XVRNW16HL3/8ED", pipe: 'L18', thread: 'G 3/8″'},
-  {title: "XVRNW16HLED", pipe: 'L18', thread: 'G 1/2″ -14'},
+  {title: "XVRNW16HL3/8ED", pipe: 'L18-2', thread: 'G 3/8″ -19'},
+  {title: "XVRNW16HLED", pipe: 'L18-2', thread: 'G 1/2″ -14'},
+  {title: "XVRNW16HL3/4ED", pipe: 'L18-2', thread: 'G 3/4″ -14'},
+  {title: "XVRNW16HL1", pipe: 'L18-2', thread: 'G 1″ -11'},
   
-  {title: "XVRNW20HL1/2ED", pipe: 'L22', thread: 'G 1/2″'},
-  {title: "XVRNW20HL1ED", pipe: 'L22', thread: 'G 1″'},
-  {title: "XVRNW20HLED", pipe: 'L22', thread: 'G 3/4″'},
+  {title: "XVRNW20HL1/2ED", pipe: 'L22-2', thread: 'G 1/2″ -14'},
+  {title: "XVRNW20HLED", pipe: 'L22-2', thread: 'G 3/4″ -14'},
+  {title: "XVRNW20HL1ED", pipe: 'L22-2', thread: 'G 1″ -11'},
   
-  {title: "XVRNW25HL11/4ED", pipe: 'L28', thread: 'G 1.1/4″'},
-  {title: "XVRNW25HL3/4ED", pipe: 'L28', thread: 'G 3/4″'},
-  {title: "XVRNW25HLED", pipe: 'L28', thread: 'G 1″'},
+  {title: "XVRNW25HL1/2", pipe: 'L28-2.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW25HL3/4ED", pipe: 'L28-2.5', thread: 'G 3/4″ -14'},
+  {title: "XVRNW25HLED", pipe: 'L28-2.5', thread: 'G 1″ -11'},
+  {title: "XVRNW25HL11/4ED", pipe: 'L28-2.5', thread: 'G 1.1/4″ -11'},
   
-  {title: "XVRNW32HL11/2ED", pipe: 'L35', thread: 'G 1.1/2″'},
-  {title: "XVRNW32HL1ED", pipe: 'L35', thread: 'G 1″'},
-  {title: "XVRNW32HLED", pipe: 'L35', thread: 'G 1.1/4″'},
+  {title: "XVRNW32HL3/4", pipe: 'L35-3', thread: 'G 3/4″ -14'},
+  {title: "XVRNW32HL1ED", pipe: 'L35-3', thread: 'G 1″ -11'},
+  {title: "XVRNW32HLED", pipe: 'L35-3', thread: 'G 1.1/4″ -11'},
+  {title: "XVRNW32HL11/2ED", pipe: 'L35-3', thread: 'G 1.1/2″ -11'},
   
-  {title: "XVRNW40HL11/4ED", pipe: 'L42', thread: 'G 1.1./4″'},
-  {title: "XVRNW40HLED", pipe: 'L42', thread: 'G 1.1/2″'},
+  {title: "XVRNW40HL11/4ED", pipe: 'L42-3', thread: 'G 1.1./4 -11″'},
+  {title: "XVRNW40HLED", pipe: 'L42-3', thread: 'G 1.1/2″ -11'},
+  
+  {title: "XVRNW06HS1/4ED", pipe: 'S10-2', thread: 'G 1/4″ -19'},
+  {title: "XVRNW06HSED", pipe: 'S10-2', thread: 'G 3/8″ -19'},
+  {title: "XVRNW06HS1/2ED", pipe: 'S10-2', thread: 'G 1/2″ -14'},
+
+  {title: "XVRNW08HS1/4ED", pipe: 'S12-2.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW08HSED", pipe: 'S12-2.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW08HS1/2ED", pipe: 'S12-2.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW08HS3/4", pipe: 'S12-2.5', thread: 'G 3/4″ -14'},
+  
+  {title: "XVRNW10HS3/8ED", pipe: 'S14-3.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW10HSED", pipe: 'S14-3.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW10HS3/4ED", pipe: 'S14-3.5', thread: 'G 3/4″ -14'},
+  
+  {title: "XVRNW13HS1/4", pipe: 'S16-3.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW13HS3/8ED", pipe: 'S16-3.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW13HSED", pipe: 'S16-3.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW13HS3/4ED", pipe: 'S16-3.5', thread: 'G 3/4″ -14'},
+  {title: "XVRNW13HS1ED", pipe: 'S16-3.5', thread: 'G 1″ -11'},
+    
+  {title: "XVRNW16HS1/2ED", pipe: 'S20-4', thread: 'G 1/2″ -14'},
+  {title: "XVRNW16HSED", pipe: 'S20-4', thread: 'G 3/4″ -14'},
+  {title: "XVRNW16HS1ED", pipe: 'S20-4', thread: 'G 1″ -11'},
+  
+  {title: "XVRNW20HS1/2ED", pipe: 'S25-4', thread: 'G 1/2″ -14'},
+  {title: "XVRNW20HS3/4ED", pipe: 'S25-4', thread: 'G 3/4″ -14'},
+  {title: "XVRNW20HSED", pipe: 'S25-4', thread: 'G 1″ -11'},
+  {title: "XVRNW20HS11/4", pipe: 'S25-4', thread: 'G 1.1/4″ -11'},
+  
+  {title: "XVRNW25HS3/4", pipe: 'S30-4', thread: 'G 3/4″ -14'},
+  {title: "XVRNW25HS1ED", pipe: 'S30-4', thread: 'G 1″ -11'},
+  {title: "XVRNW25HSED", pipe: 'S30-4', thread: 'G 1.1/4″ -11'},
+  {title: "XVRNW25HS11/2", pipe: 'S30-4', thread: 'G 1.1/2″ -11'},
+  
+  {title: "XVRNW32HS1", pipe: 'S38-4', thread: 'G 1″ -11'},
+  {title: "XVRNW32HS11/4ED", pipe: 'S38-4', thread: 'G 1.1/4″ -11'},
+  {title: "XVRNW32HSED", pipe: 'S38-4', thread: 'G 1.1/2″ -11'},
 ];
 // const d = 
 // [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},

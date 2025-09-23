@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
-import { blockData } from "../../services/data";
+import { blockData, xvrnw } from "../../services/data";
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
+import { pumpCounting } from "../../services/functions";
 
 const { project, meta, order, powerUNIT, i } = defineProps([
   "project",
@@ -24,10 +25,22 @@ const filteredBlocks = () => {
     )
   }));
 };
+const after = () => {
+    const { pipeP, pipeT } = pumpCounting(powerUNIT.unit[i]);
+    const getXvrP = (thread, pipe) => xvrnw.find(x => thread === x.thread && pipe === x.pipe);
+    const xvrBlockP = getXvrP(order['block'+i]?.blockData?.threadP, pipeP);
+    const xvrBlockA = getXvrP(order['block'+i]?.blockData?.threadA, pipeP);
+    const xvrBlockB = getXvrP(order['block'+i]?.blockData?.threadB, pipeP);
+    const xvrBlockT = getXvrP(order['block'+i]?.blockData?.threadT, pipeT);
+    order[`xvrBlockP${i}`] = xvrBlockP ? { title: xvrBlockP.title, xvrBlockPData: xvrBlockP} : {};
+    order[`xvrBlockA${i}`] = xvrBlockA ? { title: xvrBlockA.title, xvrBlockAData: xvrBlockA} : {};
+    order[`xvrBlockB${i}`] = xvrBlockB ? { title: xvrBlockB.title, xvrBlockBData: xvrBlockB} : {};
+    order[`xvrBlockT${i}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT} : {};
+};
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="block" :index="i" :logic="filteredBlocks">
+  <SmthSelector v-bind="{ project, meta, order }" Name="block" :index="i" :logic="filteredBlocks" :after="after">
     <InputItem data="length">
       <select v-model="sections" id="sections">
         <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
