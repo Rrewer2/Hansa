@@ -108,4 +108,10 @@ export default {
   gauge: ['Manometr'],
   gaugeShuttOff: ['Zawór odcinający'],
   levelTemp: ['Wyłącznik poziom/temperatura'],
+  lid: ['Pokrywa zbiornika'],
+  namePlate: ['Tablicka'],
+  oil: ['Olej'],
+  tankLevel: ['Wskaźnik poyiomu oleju'],
+  tankSeal: ['Uszczelka zbiornika'],
+  tankCork: ['Korek'],
 };

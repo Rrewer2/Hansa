@@ -14,7 +14,7 @@ const normalize = () => {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } 
       else {
-        KIT[title] = { title, count: n ? n : 1, JM: 'Szt', opis: key.replace(/\d+/g, "") };
+        KIT[title] = { title, count: n ? n : 1, JM: 'Szt', opis: /^x/i.test(key) ? 'Złączka' : key.replace(/\d+$/, "") };
       }
     }
   });

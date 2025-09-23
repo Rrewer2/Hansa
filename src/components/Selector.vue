@@ -12,6 +12,7 @@ import VibroSelector from "./Selector/VibroSelector.vue";
 import Order from "../components/Order.vue";
 import FilterSelector from "./Selector/FilterSelector.vue";
 import GaugeSelector from "./Selector/GaugeSelector.vue";
+import LidSelector from "./Selector/LidSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const selectorNav = ref([true, false, false]);
@@ -32,6 +33,7 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
           <ValveSelector v-bind="{ project, meta, order, i, powerUNIT }" />
         </div>
         <TankSelector v-bind="{ project, meta, order }" />
+        <LidSelector v-bind="{ project, meta, order }" />
         <CoolerSelector v-bind="{ project, meta, order }" />
         <FilterSelector v-bind="{ project, meta, order }" />
         <GaugeSelector v-bind="{ project, meta, order }" />

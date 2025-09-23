@@ -9,10 +9,10 @@ const k = 0.75;
   <HKSHhor :x="x + sl / 4" :y="y - sl / 4" :sl="sl * k" />
   <HKSHhor :x="x + sl / 4" :y="y - (sl * 3) / 4" :sl="sl * k" />
   <path
-    :d="`M${x + 0.46 * sl} ${y} A0.7 1 0 1 0 ${x + 0.46 * sl} ${y - sl / 12} v${-sl / 12} h${-sl / 3} v${(-sl * 5) / 12} h${sl / 6} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
+    :d="`M${x + 0.46 * sl} ${y - sl / 12} A0.7 1 0 1 0 ${x + 0.46 * sl} ${y - sl / 6} v${-sl / 24} h${-sl / 3} v${(-sl * 5) / 12 + sl / 24} h${sl / 6} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
     stroke="black" stroke-width="1" fill="none" />
   <path
-    :d="`M${x + (1 - 0.46) * sl} ${y} A0.7 1 0 1 0 ${x + (1 - 0.46) * sl} ${y - sl / 12} v${-sl / 12} h${sl / 3} h${sl / 20} v${(-sl * 5) / 12} h${-sl / 3} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
+    :d="`M${x + (1 - 0.46) * sl} ${y - sl / 12} A0.7 1 0 1 0 ${x + (1 - 0.46) * sl} ${y - sl / 6} v${-sl / 24} h${sl / 3} h${sl / 20} v${(-sl * 5) / 12 + sl / 24} h${-sl / 3} v${-sl / 6} v${sl / 6} v${(sl * k) / 5}`"
     stroke="black" stroke-width="1" fill="none" />
 
   <!-- <path

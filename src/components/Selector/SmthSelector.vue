@@ -69,7 +69,7 @@ if (!logic().length) order[Name + index] = {};
           <td :id="title" class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === order[Name + index]?.title" />
-            <span v-if="title.includes('K-')">{{ title }}</span>
+            <span v-if="title.includes('K-') || title.includes('M-')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>

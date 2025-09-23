@@ -65,12 +65,12 @@ const flangeSelector = () => {
     order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
     order[`xvrPumpOut${i}`] = xvrOut ? { title: xvrOut.title, xvrPumpOutData : xvrOut} : {};
     if(powerUNIT.mount === 'B34') powerUNIT.mount = 'B35';
-    if(powerUNIT.mount === 'B14') powerUNIT.mount = 'B5';
+    if(!powerUNIT.mount || powerUNIT.mount === 'B14') powerUNIT.mount = 'B5';
   } else {
     order[`flangeOut${i}`] = {};
     order[`xvrPumpOut${i}`] = {};
     if(powerUNIT.mount === 'B35') powerUNIT.mount = 'B34';
-    if(powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
+    if(!powerUNIT.mount || powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
   }
 };
 
