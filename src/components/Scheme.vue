@@ -47,7 +47,7 @@ const xFilter = tankGap + LTank - 150;
       {{ order.tank?.tankData?.Size }}<tspan v-if="order.tank?.tankData?.Size"> L</tspan>
     </Tank>
     <PumpUnit v-for="(pumps, i) in project" :x="tankGap + 200 + 1000 * i" :y="yTank() - 1.25 * R()" :pumps="pumps.unit"
-      :mount="pumps.mount" :R="R()">
+      :mount="pumps.mount" :R="R()" :text="order['motor'+i]?.motorData?.power ? order['motor'+i].motorData.power : round(reducedPower(pumps))">
       {{ pumps.n }}
     </PumpUnit>
     <FIBL :x="tankGap + LTank - 400" :y="yTank()" :a="R() / 1.5" />
