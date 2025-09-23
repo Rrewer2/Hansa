@@ -26,7 +26,7 @@ const filteredStart = () => powerUNIT.unit.flatMap(({ startValve, Q }) => {
   // if (start) {
     // const boltStart = HKM.find((el) => el.L === length && (!Q[i] || (el.CETOP === 5 && Q[i] > 34) || (el.CETOP === 3 && Q[i] < 35)))
     // order['boltStart'] = { title: bolt?.title };
-    return spoolData.filter(({ spool }) => spool === startValve && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)))
+    return spoolData.filter(({ spool, CETOP }) => spool === startValve && (!Q || (CETOP === 5 && Q > 34) || (CETOP === 3 && Q < 35)))
   // }
 });
 
