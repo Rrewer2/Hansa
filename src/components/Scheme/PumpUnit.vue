@@ -4,12 +4,13 @@ import Kielich from "./Kielich.vue";
 import Motor from "./Motor.vue";
 import Pump from "./Pump.vue";
 
-const { x, y, pumps, mount, R } = defineProps([
+const { x, y, pumps, mount, R, text } = defineProps([
   "x",
   "y",
   "pumps",
   "mount",
   "R",
+  "text",
 ]);
 </script>
 
@@ -20,7 +21,7 @@ const { x, y, pumps, mount, R } = defineProps([
   <text v-if="round(reducedPower(pumps))" :x="x - R * 2.5" :y="y - R / 4" font-family="Arial" :font-size="R / 2"
     fill="black" text-anchor="middle">
     <tspan :x="x - R * 2.5" :dy="0">
-      {{ round(reducedPower(pumps)) }} kW
+      {{ text }} kW
     </tspan>
     <tspan :x="x - R * 2.5" :dy="R / 2">
       <slot></slot> min⁻¹
