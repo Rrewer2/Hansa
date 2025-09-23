@@ -4,14 +4,14 @@ import { getQfromProject } from "../../services/functions";
 import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
-
+const isQFit = (Q, el) => (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35));
 const filteredValves = () => powerUNIT.unit.flatMap(({ HKSH, Q }, j) => 
   HKSH.map(({ throttle, check, directPress, directPressValue, spool }, k) => {
     return ({
-    ['throttle' + i + j + k]: () => HKHQ.filter(el => el.type === throttle && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35))),
-    ['check' + i + j + k]: () => HKHR.filter(el => el.type === check && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35))),
-    ['directPress' + i + j + k]: () => HKHMP.filter(el => el.type === directPress && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)) && el.pmax > directPressValue),
-    ['valve' + i + j + k]: () => spoolData.filter((el) => el.spool === spool && (!Q || (el.CETOP === 5 && Q > 34) || (el.CETOP === 3 && Q < 35)))
+    ['throttle' + i + j + k]: () => HKHQ.filter(el => el.type === throttle && isQFit(Q, el)),
+    ['check' + i + j + k]: () => HKHR.filter(el => el.type === check && isQFit(Q, el)),
+    ['directPress' + i + j + k]: () => HKHMP.filter(el => el.type === directPress && isQFit(Q, el) && el.pmax > directPressValue),
+    ['valve' + i + j + k]: () => spoolData.filter((el) => el.spool === spool && isQFit(Q, el))
   })}));
 
 const getBolt = () => {
@@ -22,37 +22,21 @@ const getBolt = () => {
   bolts.forEach((bolt, i) => order[`bolt` + keys[i]] = { title: bolt?.title });
 };
 
-const filteredStart = () => powerUNIT.unit.flatMap(({ startValve, Q }) => {
-  // if (start) {
-    // const boltStart = HKM.find((el) => el.L === length && (!Q[i] || (el.CETOP === 5 && Q[i] > 34) || (el.CETOP === 3 && Q[i] < 35)))
-    // order['boltStart'] = { title: bolt?.title };
-    return spoolData.filter(({ spool, CETOP }) => spool === startValve && (!Q || (CETOP === 5 && Q > 34) || (CETOP === 3 && Q < 35)))
-  // }
-});
+const filteredStart = () => powerUNIT.unit.flatMap(({ startValve, Q }) => 
+  spoolData.filter(({ spool, CETOP }) => spool === startValve && (!Q || (CETOP === 5 && Q > 34) || (CETOP === 3 && Q < 35))));
 
 const boltStart = () => {
   const bolt = HKM.find((el) => el.L === order['start' + i]?.startData?.h && el.CETOP === order['start' + i]?.startData?.CETOP);
   order['boltStart' + i] = { title: bolt?.title };
 };
-
-// const GA = () => spoolData.find(({ spool }) => spool === "GA");
-// const valves = () => {
-//   if (powerUNIT.unit[i].DR2type === 3) {
-//     const start = GA();
-//     order['start' + i] = { title: start.title };
-//     return [[ start ], ...filteredValves() ];
-//   } else {
-//     order['start' + i] = {};
-//     return filteredValves()
-//   };
-// };//TODO: add start to valve
 </script>
 
 <template>
   <div v-for="item, index in filteredValves()">
     <div v-for="_, key in item">
-      <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
-        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
+      <SmthSelector v-if="filteredValves()[index][key]().length" v-bind="{ project, meta, order }"
+        :Name="key.replace(/[^a-zA-Z]+/g, '')" :index="key.replace(/\D/g, '')"
+        :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
     </div>
   </div>
   <div v-if="powerUNIT.unit[i].start">
