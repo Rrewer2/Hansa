@@ -1,6 +1,5 @@
 <script setup>
 import { lidData } from "../../services/data";
-import { agregatCounting, getStandartTank, round } from "../../services/functions";
 import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order, open } = defineProps([

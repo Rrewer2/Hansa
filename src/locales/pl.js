@@ -109,9 +109,14 @@ export default {
   gaugeShuttOff: ['Zawór odcinający'],
   levelTemp: ['Wyłącznik poziom/temperatura'],
   lid: ['Pokrywa zbiornika'],
-  namePlate: ['Tablicka'],
+  namePlate: ['Tabliczka'],
   oil: ['Olej'],
-  tankLevel: ['Wskaźnik poyiomu oleju'],
+  tankLevel: ['Wskaźnik poziomu oleju'],
   tankSeal: ['Uszczelka zbiornika'],
   tankCork: ['Korek'],
+  flangeIn: ['Przyłącze pompy'],
+  flangeOut: ['Przyłącze pompy'],
+  minimess: ['Przyłącze pomiarowe'],
+  clogging: ['Wskaźnik zabrudzenia filtra'],
+  poz: ['Położenie']
 };

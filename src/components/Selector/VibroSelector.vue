@@ -15,7 +15,8 @@ const { project, meta, order, powerUNIT, i } = defineProps([
 const motorSize = ref("");
 
 const filteredVibro = () => {
-  if (powerUNIT.mount === "B14" || powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B14" || order[`motor${i}`]?.motorData?.mount === "B5") {
+  if (powerUNIT.mount === "B14" || order[`motor${i}`]?.motorData?.mount === "B14" || powerUNIT.mount === "B34" || order[`motor${i}`]?.motorData?.mount === "B34") return [];
+  if (powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B5") {
     return gasketPump.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
   }
   return dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);

@@ -15,30 +15,34 @@ import GaugeSelector from "./Selector/GaugeSelector.vue";
 import LidSelector from "./Selector/LidSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
-const selectorNav = ref([true, false, false]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
-// const selectData = ['Pompa', 'Silnik', 'Kielich / sprzęgło', 'Zbiornik', 'Rozdzielacz', 'Chłodnica', 'Filtr'];
+const pumpUnitComponents = [PumpSelector,MotorSelector,BellhousingSelector,VibroSelector,BlockSelector,ValveSelector,];
+const otherComponents = [TankSelector,LidSelector,CoolerSelector,FilterSelector,GaugeSelector,OldValveSelector];
+const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
+const other = () => Object.values(otherComponents).map(({ __name }) => __name);
+const items = () => [...project.flatMap((_, i) => pumpUnit().map(p => [p, i])), ...other().map((o, j) => [o, j])];
+const activeIndex = ref(items()[0]);
+const setActive = ([name, index]) => {
+  activeIndex.value = [name, index];
+};
 </script>
 
 <template>
   <main>
     <article class="grid ">
-      <article class="left">
-        <div v-for="(powerUNIT, i) in project">
-          <PumpSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <MotorSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <BellhousingSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <VibroSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <BlockSelector v-bind="{ project, meta, order, i, powerUNIT }" />
-          <ValveSelector v-bind="{ project, meta, order, i, powerUNIT }" />
+      <article class="accordion">
+        <div v-for="(powerUNIT, i) in project" :key="i">
+          <div v-for="selector in pumpUnitComponents" class="accordion-item" :key="selector.__name"
+            @click="() => setActive([selector.__name, i])"
+            :class="i === activeIndex[1] && selector.__name === activeIndex[0] && 'active'">
+            <component :is="selector" v-bind="{ project, meta, order, i, powerUNIT }" />
+          </div>
         </div>
-        <TankSelector v-bind="{ project, meta, order }" />
-        <LidSelector v-bind="{ project, meta, order }" />
-        <CoolerSelector v-bind="{ project, meta, order }" />
-        <FilterSelector v-bind="{ project, meta, order }" />
-        <GaugeSelector v-bind="{ project, meta, order }" />
-        <OldValveSelector v-bind="{ project, meta, order }" />
-        <!-- <FilterSelector v-bind="{ project, meta, order }" /> -->
+        <div v-for="selector, index in otherComponents" :key="selector.__name" class="accordion-item"
+          @click="() => setActive([selector.__name, index])"
+          :class="index === activeIndex[1] && selector.__name === activeIndex[0] && 'active'">
+          <component :is="selector" v-bind="{ project, meta, order }" />
+        </div>
       </article>
       <article class="right">
         <Order v-bind="{ project, order }" />
@@ -52,7 +56,7 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
 .grid {
   padding-left: 20px;
   display: grid;
-  grid-template-columns: 60% 30%;
+  grid-template-columns: 60% 35%;
 }
 
 /* .left {
@@ -61,7 +65,41 @@ const emits = defineEmits(["pumpSelected", "projectUpdated"]);
 
 .right {
   position: fixed;
-  top: 20;
+  top: 10px;
   left: 61vw;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
 }
+
+/* .accordion {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 3px solid #ccc;
+  overflow: hidden;
+  height: 38px;
+  font-size: 10px;
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.accordion-item.active {
+  background-color: #93a199;
+  flex: 1;
+  font-size: 25px;
+  height: inherit;
+}
+
+.accordion-header {
+  background: #e0e0e0;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.accordion-content {
+  padding: 1rem;
+} */
 </style>

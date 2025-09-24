@@ -41,7 +41,7 @@ export const reducedPower = (unit) =>
     .map(({ Q, p, DBD }) => Power(Q, getPressure(DBD, p)))
     .reduce((a, b) => a + b); // Сукупна потужність
 export const getStandartPower = (P) =>
-  motorData.find((N) => N >= 0.97 * P) || "___"; //Потужність каталогова
+  motorData.find((N) => N >= 0.97 * P); //Потужність каталогова
 export const Qback = (item) => pumpCounting(item).Qback;
 export const Qmax = (project) =>
   project
@@ -110,7 +110,7 @@ export const buckling = ({ HKSH, p, DBD }) => {
 export const unitTitle = (unit) => {
   const power = getStandartPower(reducedPower(unit));
   const pumpLitre = unit.map((item) => item.Q).join("x");
-  return round(power) && pumpLitre ? `${round(power)}kW - ${pumpLitre}L` : "";
+  return power && pumpLitre ? `${round(power)}kW - ${pumpLitre}L` : "";
 };
 export const getQfromProject = (project) =>
   project.map(({ unit }) => unit.map(({ Q }) => Q)).flat();
@@ -125,9 +125,15 @@ export const agregatTitle = (project, meta, order) => {
   const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
   const Q = getQfromProject(project).map((q) => round(q));
   const type = order.tank?.tankData?.type || meta.tank;
-  const size =
-    order.tank?.tankData?.Size || getStandartTank(meta, getT(Q))?.Size || "___";
-  return `HAG${type}${size}-${P.join("/")}-${Q.join("/")}.${pmax}`;
+  const size = order.tank?.tankData?.Size || getStandartTank(meta, getT(Q))?.Size;
+  const tank = type && size ? `HAG${type}${size}` : '';
+  const motor = P.some(el => el) ? `${P.join("/")}` : '';
+  const pump = Q.some(el => el) ? `${Q.join("/")}` : '';
+  const pressure = pmax ? `${pmax}` : '';
+  const sp1 = tank && motor ? '-' : '';
+  const sp2 = pump && motor ? '-' : '';
+  const sp3 = pump && pressure ? '.' : '';
+  return tank +sp1 + motor +sp2 + pump + sp3 + pressure;
 };
 
 export const agregatCounting = (project) => getT(getQfromProject(project));
@@ -203,25 +209,24 @@ export const Pv = (project, η) =>
 export const P01 = (project, cooler) =>
   Pv(project, cooler.η) / (cooler.vBT - cooler.vZ);
 
-export const KITtitle = (order) => {
-  const { Size, type } = order.tank?.title
-    ? order.tank?.tankData
-    : { Size: "__", type: "__" };
-  const Pkeys = Object.keys(order).filter((key) => key.includes("motor"));
-  const P = Pkeys.length
-    ? Pkeys.map((key) => order[key]?.motorData?.power).join("/")
-    : "___";
-  const Qkeys = Object.keys(order).filter((key) => key.includes("pump"));
-  const Q = Qkeys.length
-    ? Qkeys.map((key) =>
-        round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)
-      ).join("/")
-    : "___";
-  return `HAG${type}${Size}-${P}-${Q} AGREGAT HYDRAULICZNY`;
-  // const Q = getQfromProject(project).map(q => round(q));
-  // const type = order.tank?.tankData?.type || meta.tank;
-  // const size = order.tank?.tankData.Size || getStandartTank(meta, getT(Q))?.Size || '___';
-  // return `HAG${type}${size}-${P}-${Q.join("/")}`;
+export const KITtitle = (project, order) => {
+  const motorKeys = Object.keys(order).filter((key) => key.includes("motor"));
+  const pumpKeys = Object.keys(order).filter((key) => key.includes("pump"));
+  const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
+  const obj = {};
+  Object.keys(order).filter((key) => key.match(/valve\d+/)).map((key) => order[key]?.valveData?.spool).forEach((a) => obj[a] ? obj[a]++ : obj[a] = 1);
+
+  const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : '';
+  const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : '';
+  const pump = pumpKeys.length ? `${pumpKeys.map((key) => round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)).join("/")}` : '';
+  const pressure = pmax ? `${pmax}` : '';
+  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key + (value === 1 ? '' : value), 'R') : '';
+  // console.log('obj :>> ', obj);
+  const sp1 = tank && motor ? '-' : '';
+  const sp2 = pump && motor ? '-' : '';
+  const sp3 = pump && pressure ? '.' : '';
+  const sp4 = block && pressure ? '-' : '';
+  return tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat hydr.';
 };
 
 export const getSmthFromProject = (arr) =>

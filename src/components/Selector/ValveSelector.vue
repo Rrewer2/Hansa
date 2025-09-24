@@ -39,7 +39,7 @@ const boltStart = () => {
         :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
     </div>
   </div>
-  <div v-if="powerUNIT.unit[i].start">
+  <div v-if="powerUNIT?.unit[i]?.start">
     <SmthSelector v-bind="{ project, meta, order }" Name="start" :index="i" :logic="filteredStart" :after="boltStart" />
   </div>
 </template>

@@ -6,8 +6,8 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 </script>
 
 <template>
-  <section class="tal">
-    <h2>{{ text("powerUnit") }} {{ agregatTitle(project, meta, order) }}</h2>
+  <h2 class="title">{{ text("powerUnit") }} {{ agregatTitle(project, meta, order) }}</h2>
+  <section class="tal mt-20">
 
     <label>
       <span class="fs-sm px-5">{{ text("type") }}</span>
@@ -29,4 +29,10 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  position: sticky;
+  z-index: 100;
+  top: 5px;
+}
+</style>

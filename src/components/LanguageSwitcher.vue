@@ -2,16 +2,31 @@
 <template>
   <div class="language-switcher" ref="switcherRef">
     <button class="language-button" @click="toggleDropdown">
-      <span>{{ meta.lang }}</span>
+      <span>{{ meta.lang.toUpperCase() }}</span>
+      <img v-if="meta.lang === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24">
+      <img v-if="meta.lang === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24">
       <span>▼</span>
     </button>
 
     <div v-if="isOpen" class="language-dropdown" @click.stop>
       <div class="click-outside" @click="isOpen = false"></div>
       <button v-for="(_, locale) in messages" :key="locale" class="language-option" @click="selectLanguage(locale)">
-        <span>{{ locale }}</span>
+        <span>{{ locale.toUpperCase() }}</span>
+        <img v-if="locale === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24">
+        <img v-if="locale === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24">
       </button>
     </div>
+  </div>
+
+  <div class="storage">
+    <button class="language-button" @click="save">
+      SAVE
+      <img src="../resources/save.svg" alt="save" width="24" height="24">
+    </button>
+    <button class="language-button" @click="load">
+      LOAD
+      <img src="../resources/load.svg" alt="load" width="24" height="24">
+    </button>
   </div>
 </template>
 
@@ -22,7 +37,7 @@ import { messages } from "../locales";
 const isOpen = ref(false);
 const switcherRef = ref(null);
 
-const { meta } = defineProps(["meta"]);
+const { meta, save, load  } = defineProps(["meta", "save", "load" ]);
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
@@ -37,9 +52,12 @@ const selectLanguage = (locale) => {
 <style scoped>
 .language-switcher {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  /* z-index: -150; */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+
 }
 
 .language-button {
@@ -55,6 +73,7 @@ const selectLanguage = (locale) => {
   color: #333;
   transition: all 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .language-button:hover {
@@ -62,6 +81,7 @@ const selectLanguage = (locale) => {
 }
 
 .language-dropdown {
+  z-index: 100;
   position: absolute;
   top: 100%;
   left: 0;
@@ -99,6 +119,13 @@ const selectLanguage = (locale) => {
 }
 
 .language-option:hover {
-  background: #f5f5f5;
+  background: #898989;
+}
+
+.storage {
+  position: fixed;
+  left: 180px;
+  top: 0px;
+  display: flex;
 }
 </style>

@@ -6,7 +6,7 @@ import Description from "./Description.vue";
 
 const { order, project } = defineProps(["order", "project"]);
 const normalize = () => {
-  const KIT = { KIT: { title: 'KIT', count: 1, JM: 'Szt', opis: KITtitle(order) } };
+  const KIT = { KIT: { title: 'KIT', count: 1, JM: 'szt', opis: KITtitle(project, order) } };
   Object.keys(order).forEach((key) => {
     const { title, n } = order[key];
     if (title) {
@@ -14,7 +14,7 @@ const normalize = () => {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } 
       else {
-        KIT[title] = { title, count: n ? n : 1, JM: 'Szt', opis: /^x/i.test(key) ? 'Złączka' : key.replace(/\d+$/, "") };
+        KIT[title] = { title, count: n ? n : 1, JM: 'szt', opis: /^x/i.test(key) ? 'Złączka' : key.replace(/\d+$/, "") };
       }
     }
   });
@@ -26,8 +26,8 @@ const normalize = () => {
   <article class="mt-20">
     <table>
       <thead class="noCopy">
-        <td v-for="a in ['Nr', 'Title', 'Count', 'JM', 'Opis']">
-          <b><i>{{ a }}</i></b>
+        <td v-for="a in ['Nr', 'title', 'count', 'JM', 'Description']">
+          <b><i>{{ text(a) }}</i></b>
         </td>
       </thead>
 

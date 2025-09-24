@@ -1,6 +1,7 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script lang="js" setup>
 import { text } from "../services/text";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
 
 const navData = [
   "calculations",
@@ -9,22 +10,27 @@ const navData = [
   "offer",
   "similarity",
 ];
-const { navPage } = defineProps(["navPage"]);
+const { navPage, meta, save, load  } = defineProps(["navPage", "meta", "save", "load" ]);
 </script>
 
 <template>
-  <nav class="">
-    <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
-      {{ text(nav) }}
-    </div>
-  </nav>
+  <div class="header">
+    <LanguageSwitcher v-bind="{ meta, save, load }" />
+    <nav class="nav">
+
+      <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
+        {{ text(nav) }}
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style scoped>
-nav {
+.nav {
   position: fixed;
   top: 0;
   left: 61vw;
+  z-index: 150;
 }
 
 .slice {

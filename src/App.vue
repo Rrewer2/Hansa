@@ -8,7 +8,6 @@ import Scheme from "./components/Scheme.vue";
 import Order from "./components/Order.vue";
 import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
-import LanguageSwitcher from "./components/LanguageSwitcher.vue";
 import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
 
@@ -35,6 +34,35 @@ const getNewPump = () => ({
   HKSH: [{ ...cylInit, id: getId("c") }],
 });
 const project = ref([]);
+const load = () => {
+  try {
+    const storProject = JSON.parse(localStorage.getItem("hansa-project"));
+    const storMeta = JSON.parse(localStorage.getItem("hansa-meta"));
+    const storOrder = JSON.parse(localStorage.getItem("hansa-order"));
+    if (storProject && storMeta && storOrder) {
+      project.value = storProject;
+      meta.value = storMeta;
+      order.value = storOrder;
+    }
+    alert('Załadowano');
+    console.log('Ok');
+  } catch (error) {
+    alert('Coś popsułeś już, chłopie!');
+    console.error(error);
+  }
+};
+const save = () => {
+  try {
+  localStorage.setItem("hansa-project", JSON.stringify(project.value));
+  localStorage.setItem("hansa-meta", JSON.stringify(meta.value));
+  localStorage.setItem("hansa-order", JSON.stringify(order.value));
+  alert('Zapisano');
+  console.log('Ok');
+  } catch (error) {
+    alert('Coś popsułeś już, chłopie!');
+    console.error(error);
+  }
+};
 const meta = ref({
   tank: "RA",
   cooler: 1,
@@ -113,11 +141,10 @@ const navPage = ref([false, false, true, false, false]);
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
   </main>
-  <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" :navPage="navPage" />
-  <LanguageSwitcher :meta="meta" />
+  <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
-  <!-- <div>meta {{ meta }}</div> -->
+  <div>meta {{ meta }}</div>
 </template>
 
 <style>
@@ -138,7 +165,7 @@ const navPage = ref([false, false, true, false, false]);
 article,
 section {
   font-size: 18px;
-  padding: 5px;
+  padding: 2px;
 }
 
 svg {
@@ -360,5 +387,9 @@ td {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.absolute {
+  position: absolute;
 }
 </style>

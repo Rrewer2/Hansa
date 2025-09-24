@@ -71,6 +71,7 @@ const flangeSelector = () => {
     order[`xvrPumpOut${i}`] = {};
     if(powerUNIT.mount === 'B35') powerUNIT.mount = 'B34';
     if(!powerUNIT.mount || powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
+    meta.tank = 'KS';
   }
 };
 

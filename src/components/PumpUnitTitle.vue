@@ -21,18 +21,18 @@ const { id, unit, ...rest } = project[k];
       <h2 class="mr-100">{{ text("pumpUnit") }} {{ unitTitle(unit) }}</h2>
       <div v-for="(_, ind) in rest" class="flex-col ml-10">
         <InputItem :data="ind">
-          <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]" :id="ind">
+          <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]?.title" :id="ind">
             <option v-for="elem in freqData" :value="elem">{{ elem }}</option>
           </select>
 
-          <select v-if="ind === 'mount'" v-model="project[k].mount" :disabled="order[`motor${k}`]" :id="ind"
+          <select v-if="ind === 'mount'" v-model="project[k].mount" :disabled="order[`motor${k}`]?.title" :id="ind"
             class="w-75">
             <option v-for="item in engineMountData" :value="item">
               {{ item }}
             </option>
           </select>
           <select v-if="ind === 'P'" v-model="project[k].P" @change="() => setPressure(unit, P)"
-            :disabled="order[`motor${k}`]" :id="ind">
+            :disabled="order[`motor${k}`]?.title" :id="ind">
             <option v-for="item in motorData" :value="item">{{ item }}</option>
           </select>
         </InputItem>
