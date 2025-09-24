@@ -19,7 +19,7 @@ const setCooler = ({ title }) => order.cooler?.title !== title ? order.cooler = 
     <InputItem data="cooler">
       <select v-model="meta.cooler" class="ml-10" id="cooler"
         @click="meta.cooler === 0 ? setCooler({ title: order.cooler?.title }) : {}">
-        <option v-for="(title, c) in ['Bez', 'Przed fitrem', 'Za filtrem']" :value="c">
+        <option v-for="(title, c) in ['Bez', 'Za filtrem', 'Przed fitrem']" :value="c">
           {{ title }}
         </option>
       </select>

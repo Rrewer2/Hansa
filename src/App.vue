@@ -144,7 +144,7 @@ const navPage = ref([false, false, true, false, false]);
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
-  <div>meta {{ meta }}</div>
+  <!-- <div>meta {{ meta }}</div> -->
 </template>
 
 <style>
