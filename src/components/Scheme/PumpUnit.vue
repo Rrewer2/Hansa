@@ -13,7 +13,6 @@ const { x, y, pumps, mount, R, text, dir } = defineProps([
   "text",
   "dir"
 ]);
-console.log('dir :>> ', dir);
 </script>
 
 <template>
