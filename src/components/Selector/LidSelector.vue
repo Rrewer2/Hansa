@@ -8,7 +8,7 @@ const { project, meta, order, open } = defineProps([
   "order",
   "open",
 ]);
-const filteredLid = () => lidData.filter(lid => lid.tank === order['tank']?.tankData?.Size && (lid.type === order['tank']?.tankData?.type || lid.type === tankData[meta?.tank]));
+const filteredLid = () => lidData.filter(lid => lid.tank === order['tank']?.tankData?.Size && (lid.type === order['tank']?.tankData?.type || lid.type === order['tank']?.tankData?.[meta?.tank]));
 </script>
 
 <template>

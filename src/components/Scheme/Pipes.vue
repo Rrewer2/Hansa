@@ -31,9 +31,9 @@ const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
     :d="`M${x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)} 
     ${y + 300 + getSh(unit)}
     h${getSh(unit) * 1.5} 
-    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) / 4 < 0 ? R * 8 : 0} 
+    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 7 : 0} 
     h${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5} 
-    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) / 4 < 0 ? R * 8 : R * 16}`"
+    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 9 : R * 16}`"
     stroke="blue" stroke-width="5" fill="none" />
   <text :x="x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start) + 100"
     :y="y + 300 - 20 + getSh(unit)" font-family="Arial" :font-size="R * 0.5" fill="black" text-anchor="middle">

@@ -8,7 +8,7 @@ import HKSH from "./HKSH.vue";
 import Pipes from "./Pipes.vue";
 import Valve from "./Valve.vue";
 
-const { x, y, unit, R, xT, xM, yM, c } = defineProps([
+const { x, y, unit, R, xT, xM, yM, c, order } = defineProps([
   "x",
   "y",
   "unit",
@@ -17,6 +17,7 @@ const { x, y, unit, R, xT, xM, yM, c } = defineProps([
   "xM",
   "yM",
   "c",
+  "order"
 ]);
 const sectionLength = 320;
 const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
@@ -68,6 +69,26 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
   <path v-if="!unit.mount.startsWith('B3') && unit.same"
     :d="`M${x(c - 1)} ${y + 300} h${-getSh(unit) * 1.5} v${getSh(unit) * 5.5 - c * 15} h${xM - x(c - 1) + getSh(unit) * 1.5 + gap} v${yM - (getSh(unit) * 5.5 - c * 15) - 300 + gap}  h${-gap}`"
     stroke="red" stroke-width="15" fill="none" />
+  <text
+    v-for="x1 in [x(c) + getSh(unit) / 5, x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)]"
+    :x="x1" :y="y + 300 - getSh(unit) / 4" font-family="Arial" :font-size="16" text-anchor="middle">
+    {{ order['block' + c]?.blockData?.threadP.split('″')[0].replace(' ', '') }}
+  </text>
+  <text
+    v-for="x1 in [x(c) + getSh(unit) / 5, x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)]"
+    :x="x1" :y="y + 300 + getSh(unit) + getSh(unit) / 3" font-family="Arial" :font-size="16" text-anchor="middle">
+    {{ order['block' + c]?.blockData?.threadT.split('″')[0].replace(' ', '') }}
+  </text>
+  <text v-for="(_, n) in unit.HKSH.length + unit.start"
+    :x="x(c) + getSL1(unit) + getSL(unit) * 0.35 + getSL(unit) * 1.1 * n" :y="y + 300 - getSh(unit) / 10"
+    font-family="Arial" :font-size="16" text-anchor="middle">
+    {{ order['block' + c]?.blockData?.threadA.split('″')[0].replace(' ', '') }}
+  </text>
+  <text v-for="(_, n) in unit.HKSH.length + unit.start"
+    :x="x(c) + getSL1(unit) + getSL(unit) * 0.65 + getSL(unit) * 1.1 * n" :y="y + 300 - getSh(unit) / 10"
+    font-family="Arial" :font-size="16" text-anchor="middle">
+    {{ order['block' + c]?.blockData?.threadB.split('″')[0].replace(' ', '') }}
+  </text>
 </template>
 
 <style scoped></style>
