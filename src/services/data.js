@@ -293,7 +293,7 @@ export const flanges = [
   {title: "WDA3100", pressure: 180, LK: "LK Ø 56 mm / M 10", thread: "G 1″ -11", QS: 43, QP: 120},
   {title: "WDS0.538", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19", QS: 7, QP: 20},
   {title: "WDS0.512", pressure: 315, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14", QS: 16, QP: 35},
-  {title: "WDS138", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20},
+  // {title: "WDS138", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20},
   {title: "WDS112", pressure: 315, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14", QS: 20, QP: 40},
   {title: "WDS212", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14", QS: 12, QP: 35},
   {title: "WDS234", pressure: 315, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14", QS: 35, QP: 75},
@@ -1049,11 +1049,11 @@ export const blockData = [
 
 export const HKHQ = [
   {title: "HKHQ012", type: "012",CETOP: 3, h: 40},
-  {title: "HKHQ012U", type: "012",CETOP: 3, h: 40},
+  // {title: "HKHQ012U", type: "012",CETOP: 3, h: 40},
   {title: "HKHQ013", type: "013",CETOP: 3, h: 40},
   {title: "HKHQ014", type: "014",CETOP: 3, h: 40},
   {title: "HKHQ022", type: "022",CETOP: 3, h: 40},
-  {title: "HKHQ022U", type: "022",CETOP: 3, h: 40},
+  // {title: "HKHQ022U", type: "022",CETOP: 3, h: 40},
   {title: "HKHQ023", type: "023",CETOP: 3, h: 40},
   {title: "HKHQ024", type: "024",CETOP: 3, h: 40},
   {title: "HKKQ012", type: "012",CETOP: 5, h: 50},
@@ -1214,10 +1214,10 @@ export const lidData = [
 ];
 
 export const xvrnw = [
-  {title: "XVRNW08HL1/8ED", pipe: 'L10-1.5', thread: 'G 1/8″ -28'},
-  {title: "XVRNW08HLED", pipe: 'L10-1.5', thread: 'G 1/4″ -19'},
-  {title: "XVRNW08HL1/2ED", pipe: 'L10-1.5', thread: 'G 1/2″ -14'},
-  {title: "XVRNW08HL3/8ED", pipe: 'L10-1.5', thread: 'G 3/8″ -19'},
+  // {title: "XVRNW08HL1/8ED", pipe: 'L10-1.5', thread: 'G 1/8″ -28'},
+  // {title: "XVRNW08HLED", pipe: 'L10-1.5', thread: 'G 1/4″ -19'},
+  // {title: "XVRNW08HL1/2ED", pipe: 'L10-1.5', thread: 'G 1/2″ -14'},
+  // {title: "XVRNW08HL3/8ED", pipe: 'L10-1.5', thread: 'G 3/8″ -19'},
   
   {title: "XVRNW10HL1/8", pipe: 'L12-1.5', thread: 'G 1/8″ -28'},
   {title: "XVRNW10HL1/4ED", pipe: 'L12-1.5', thread: 'G 1/4″ -19'},
