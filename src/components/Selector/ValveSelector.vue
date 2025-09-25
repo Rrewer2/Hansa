@@ -18,7 +18,7 @@ const getBolt = () => {
   const Q = getQfromProject(project);
   const keys = filteredValves().map(el => Object.keys(el)).map(([first]) => first.replace(/\D/g, ''));
   const arrayH = filteredValves().map(el => Object.keys(el).map(elem => order[elem]?.[elem.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0)).map(row => row.reduce((a,b) => a+b));
-  const bolts = arrayH.map(length => HKM.find((el) => el.L === length && (!Q[i] || (el.CETOP === 5 && Q[i] > 34) || (el.CETOP === 3 && Q[i] < 35))));
+  const bolts = arrayH.map(length => HKM.find((el) => el.L === length && isQFit(Q[i], el)));
   bolts.forEach((bolt, i) => order[`bolt` + keys[i]] = { title: bolt?.title });
 };
 

@@ -1143,7 +1143,7 @@ export const gauge = [
 ]
 
 const priority = [
-  "HAG",
+  "Agregat",
   "pump",
   "flangeIn",
   "flangeOut",
@@ -1159,12 +1159,13 @@ const priority = [
   "directPress",
   "bolt",
   "valvePlug",
-  'minimess',
   'tank',
+  'lid',
   'tankSeal',
   'tankLevel',
   'tankCork',
   'levelTemp',
+  'minimess',
   'filter',
   'clogging',
   'ventilation',
