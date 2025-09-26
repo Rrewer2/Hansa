@@ -34,9 +34,8 @@ const boltStart = () => {
 <template>
   <div v-for="item, index in filteredValves()">
     <div v-for="_, key in item">
-      <SmthSelector v-if="filteredValves()[index][key]().length" v-bind="{ project, meta, order }"
-        :Name="key.replace(/[^a-zA-Z]+/g, '')" :index="key.replace(/\D/g, '')"
-        :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
+      <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
+        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
     </div>
   </div>
   <div v-if="powerUNIT?.unit[i]?.start">
