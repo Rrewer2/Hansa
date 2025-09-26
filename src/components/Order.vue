@@ -127,7 +127,7 @@ const totalPrice = () => {
     <h2 class="tar">Koszt {{ Math.round(totalPrice() * 100) / 100 }}</h2>
     <h2 class="tar">ZLO1 <input v-model="zlo" type="number" min="0" /></h2>
     <h2 class="tar">Marża <input v-model="margin" type="number" min="0" /></h2>
-    <h1>{{ Math.round(totalPrice() * 100 * (1 + margin / 100) + zlo) / 100 }} zł netto</h1>
+    <h1>{{ Math.round(totalPrice() * 100 * (1 + margin / 100) + zlo * 100) / 100 }} zł netto</h1>
   </article>
 </template>
 
