@@ -29,14 +29,14 @@ const zlo = ref(499,99);
 async function loadData() {
   magic.value = true;
   try {
-    const jsonData = await import('../services/SAP.json');
+    const jsonData = await import('../services/costsSap.json');
     SAP.value = jsonData.default;
     if (SAP.value) {
       const a = normalize();
       SAP.value.forEach(art => {
         if (a[art.title]?.title) {
           const { opis, ...rest } = a[art.title];
-          cracked.value[a[art.title]?.title] = ({ ...rest, opis: art.description, price: Math.round(+art.cost.replace(/\s/g,"").replace(',',".") * 100 / art.amount) / 100  || 0});
+          cracked.value[a[art.title]?.title] = ({ ...rest, price: +art.cost.replace(/\s/g,"").replace(',',".") || 0});
         }
       });
     }
