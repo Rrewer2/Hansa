@@ -99,7 +99,7 @@ const totalPrice = () => {
       </thead>
       <tbody>
         <tr v-for="({ title, count, opis, price, amount }, _, i) of cracked"
-          :class="price === 0 || amount === 0 ? 'red' : ''">
+          :class="price === '0,00' || amount === 0 ? 'red' : ''">
           <td class="tal">
             {{ (i + 1) * 100 }}
           </td>

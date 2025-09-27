@@ -396,4 +396,14 @@ td {
 .absolute {
   position: absolute;
 }
+
+.titleSelected {
+  color: darkgreen;
+  /* background-color: rgba(185, 249, 185, 0.2); */
+}
+
+.titleNotSelected {
+  color: darkred;
+  /* background-color: rgba(249, 185, 185, 0.5); */
+}
 </style>

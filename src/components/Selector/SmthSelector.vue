@@ -74,7 +74,7 @@ if (!logic().length) order[Name + index] = {};
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === order[Name + index]?.title"
               :disabled="order[Name + index]?.title && order[Name + index]?.title !== title" />
-            <span v-if="title.includes('K-') || title.includes('M-')">{{ title }}</span>
+            <span v-if="title.includes('K-') || title.includes('M-') || title.includes('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
@@ -114,16 +114,6 @@ if (!logic().length) order[Name + index] = {};
 .sort.active {
   background-color: unset;
   color: rgba(14, 44, 14, 1);
-}
-
-.titleSelected {
-  color: darkgreen;
-  /* background-color: rgba(185, 249, 185, 0.2); */
-}
-
-.titleNotSelected {
-  color: darkred;
-  /* background-color: rgba(249, 185, 185, 0.5); */
 }
 
 .selected {

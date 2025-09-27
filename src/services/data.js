@@ -213,7 +213,6 @@ const enginesT3A=[
 
 export const motorSizes = ['', 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 225, 250, 280, 315].sort((a, b) => a - b);
 export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title, ...rest})=>({title,...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0] || 'B35'}));
-// console.log('enginesData : >> ', enginesData);
 export const engineMountData = ['', 'B5', 'B35', 'B14', 'B34'];
 
 export const screwArr = [12.9, 10.9, 8.8, 6.8, 6.6, 5.8];
@@ -1172,25 +1171,10 @@ const priority = [
   'cooler',
   'gauge',
   'gaugeShutOff',
-  // 'xvrPumpIn',
-  // 'xvrPumpOut',
-  // 'xvrBlockP',
-  // 'xvrBlockA',
-  // 'xvrBlockB',
-  // 'xvrBlockT',
-
-
-
-
-
-  // ,'oil',
 ];
 export const getPriority = (KIT) => {
   const array = Object.entries(KIT);
   const sorting = (a, b) => {
-    // const a1 = priority.findIndex(item => a[1].opis.includes(item));
-    // const b1 = priority.findIndex(item => b[1].opis.includes(item));
-    // return a1 - b1;
     const getIndex = (item) => {
       if (item[1].opis?.trim().toUpperCase().startsWith("X")) {
         return Number.MAX_SAFE_INTEGER;
@@ -1291,125 +1275,3 @@ export const xvrnw = [
   {title: "XVRNW32HS11/4ED", pipe: 'S38-4', thread: 'G 1.1/4″ -11'},
   {title: "XVRNW32HSED", pipe: 'S38-4', thread: 'G 1.1/2″ -11'},
 ];
-// const d = 
-// [{title: "D1VW001CNJW",article: "K-D1VW001CNJW",description: "Zawór magrozdz4/3 WZ6 bez cewki"},
-// {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "n.v. => HK4132030302C1Q"},
-// {title: "D1VW001CNJW",article: "K-VED1W001CNJW",description: "n.v. => HK4132030302C1Q"},
-// {title: "D1VW003FNJW",article: "K-VED1VW035CNJW",description: "4/2-Wegeventil, 24VDC"},
-// {title: "D1VW035CNJW",article: "K-VED1VW035CNJW",description: "Wegeventil D1VW035CNJW91"},
-// {title: "D1VW006KNJW",article: "K-VED1VW006KNJW",description: "4/2-Wegeventil, NG6 24VDC"},
-// {title: "D1VW101BNJW",article: "K-D1VW101BNJW",description: "4/2 Wegeventil"},
-// {title: "D1VW011CNJW",article: "K-VED1VW011CNJW",description: "4/3-Wegeventil NG6 24 DC"},
-// {title: "D1VW020DNJW",article: "K-VED1VW020DNJW",description: "n.v. --> siehe HK4137510902C1Q"},
-// {title: "D1VW031CNJW",article: "K-VED1VW031CNJW",description: "Wegeventil NG6 24Volt"},
-// {title: "D1VW004CNJW",article: "HK4132080302C1Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW004KNJW",article: "K-VED1VW004KNJW",description: "4/2-Wegeventil NG6 24 VDC"},
-// {title: "D1VW021CNJW",article: "K-VED1VW021CNJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW003CNJW",article: "K-VED1VW003CNJW",description: "Wegeventil D1VW003CNJW, 24VDC"},
-// {title: "D1VW022CNJW",article: "K-VED1VW022CNJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW208BNJW",article: "K-VED1VW208BNJW",description: "4/2-WV 350bar 80l/mim neg.Überdeckung"},
-// {title: "D1VW026BNJW",article: "K-VED1VW026BNJW",description: "4/2-Wegeventil, NG6"},
-// {title: "D1VW014CNJW",article: "K-VED1VW014CNJW",description: "4/3 Wegeventil D1VW014CNJW   NG6"},
-// {title: "D1VW20HNJW",article: "K-VED1VW20HNJW",description: "4/2 wegeventil NG 6, 24 VDC"},
-// {title: "D1VW004CNJW",article: "K-VED1VW004CNJW",description: "4/3-Wegeventil 24 VDC"},
-// {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "4/3-Wegeventil NG6 24DC"},
-// {title: "D1VW022ENJW",article: "K-VED1VW022ENJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW002ENJW",article: "HK4131010601C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW015CNJW",article: "K-VED1VW015CNJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW008CNJW",article: "K-VED1VW008CNJW",description: "4/3-Wegeventil Ng6 24VDC"},
-// {title: "D1VW020BNJW",article: "K-VED1VW020BNJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW001FNJW",article: "K-VED1VW001FNJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW002KNJW",article: "K-VED1VW002KNJW",description: "4/3 Wegeventil NG6 24VDC"},
-// {title: "D1VW4CNJW",article: "K-VED1VW4CNJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW9ENJW",article: "K-VED1VW9ENJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW020DNJW",article: "K-D1VW020DNJW",description: ""},
-// {title: "D1VW101DNJW",article: "K-D1VW101DNJW",description: "Filterelement"},
-// {title: "D1VW002ENJW",article: "K-VED1VW002ENJW",description: "Valv.Dir.Ele.D1VW002ENJW"},
-// {title: "D1VW061CNJW",article: "K-VED1VW061CNJW",description: "4/3 Wegeventil NG06 24VDC"},
-// {title: "D1VW004ENJW",article: "K-4/2WEGEMAGNETVEN",description: "4/2 Wege-Magnetventil NG6"},
-// {title: "D1VW002CNJW",article: "K-VED1VW002CNJW",description: "4/3 Wegeventil NG6 24VDC"},
-// {title: "D1VW004FNJW",article: "K-VED1VW004FNJW",description: "4/3 Wegeventil NG6 24 VDC"},
-// {title: "D1VW002ENJW",article: "K-VED1VW002ENJW",description: "4/2-Wegev. NG6 24VDC => HK4131010601C1Q"},
-// {title: "D1VW004CNJW",article: "K-VED1VW004CNJW",description: "4/3-Wegeventil 24 VDC => HK4132080302C1Q"},
-// {title: "D1VW004CNJW",article: "K-VED1VW004CNJW",description: "n.v. => HK4132080302C1Q"},
-// {title: "D1VW020DNJW",article: "HK4137510902C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW001CNJW",article: "K-VED1W001CNJW",description: "4/3 Wege-Magnetventil"},
-// {title: "D1VW008KNJW",article: "K-VED1VW008KNJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW008CNJW",article: "K-VED1VW008CNJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW020DNJW",article: "K-VED1VW020DNJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW002ENJW",article: "HK41310106011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW001ENJW",article: "HK4131030601C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW001ENJW",article: "HK41310306011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW009KNJW",article: "HK4131070601C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW009KNJW",article: "HK41310706011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW004ENJW",article: "HK4131080601C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW004ENJW",article: "HK41310806011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW030BNJW",article: "HK4131110101C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW030BNJW",article: "HK41311101011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW020BNJW",article: "HK4131510101C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW020BNJW",article: "HK41315101011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW020HNJW",article: "HK4131510201C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW020HNJW",article: "HK41315102011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW020DNJW",article: "K-D1VW020DNJW1",description: "Ventil"},
-// {title: "D1VW020HNJW",article: "K-D1VW020HNJW",description: "Ventil"},
-// {title: "D1VW001FNJW",article: "K-VED1VW001FNJW",description: "4/2-Wegeventil 24 VDC (K-VEDHE067124DC)"},
-// {title: "D1VW001CNJW",article: "K-VED1VW001CNJW",description: "4/3-Wegeventil NG6, 24 Volt DC"},
-// {title: "D1VW001CNJW",article: "HK4132030302C1Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW076KNJW",article: "K-VED1VW076KNJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW078ENJW",article: "K-VED1VW078ENJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW004CNJW",article: "K-VED1VW4CNJW75",description: "Wegeventil"},
-// {title: "D1VW026HNJW",article: "K-VED1VW026HNJW",description: "4/2-Wegeventil, NG6"},
-// {title: "D1VW004CNJW",article: "K-D1VW004CNJW",description: "4/3 Valve NG6 ABT"},
-// {title: "D1VW004CNJW",article: "HK41320803021Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW001FNJW",article: "K-D1VW001FNJW",description: "4/2 magn. vožtuvas NG6 24VDC (Parker)"},
-// {title: "D1VW006CNJW",article: "K-VED1VW006CNJW",description: "4/3 Wegeventil NG6 24VDC"},
-// {title: "D1VW083BNJW",article: "K-VED1VW083BNJW",description: "4/2 Wegeventil  NG6 Sonderschieber 24VDC"},
-// {title: "D1VW004ENJW",article: "K-VED1VW004ENJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW001MNJW",article: "K-VED1VW001MNJW",description: "4/2 Wegeventil NG 6, 24 VDC"},
-// {title: "D1VW020HNJW",article: "K-VED1VW020HNJW",description: "Wegeventil"},
-// {title: "D1VW009CNJW",article: "K-VED1VW009CNJW",description: "4/3-Wegeventil NG6 24VDC"},
-// {title: "D1VW104KNJW",article: "K-VED1VW104KNJW",description: "3/2-Wegeventil, Sonderschieber"},
-// {title: "D1VW001MNJW",article: "K-VED1VW001MNJW",description: "4/2 wegeventil NG 6, 24 VDC"},
-// {title: "D1VW20BNJW",article: "K-VED1VW20BNJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW002KNJW",article: "K-VED1VW002KNJW",description: "4/2 Wegeventil NG6 24VDC"},
-// {title: "D1VW011BNJW",article: "K-VED1VW011BNJW",description: "4/2 Wegeventil"},
-// {title: "D1VW011DNJW",article: "K-VED1VW011DNJW",description: "4/2 Wegeventil"},
-// {title: "D1VW101BNJW",article: "K-VED1VW101BNJW",description: "4/2 Wegeventil"},
-// {title: "D1VW101DNJW",article: "K-VED1VW101DNJW",description: "4/2 Wegeventil"},
-// {title: "D1VW021KNJW",article: "K-D1VW021KNJW",description: "4/2 Wege Ventil NG 6 24 VDC"},
-// {title: "D1VW208BNJW",article: "K-D1VW208BNJW",description: "4/2 Wege Ventil NG 6 24 VDC"},
-// {title: "D1VW1CNJW",article: "K-VED1VW1CNJW",description: "4/3-Wegeventil"},
-// {title: "D1VW105KNJW",article: "K-VED1VW105KNJW",description: "4/2 Wegeventil NG6 24VDC"},
-// {title: "D1VW106CNJW",article: "K-VED1VW106CNJW",description: "4/3-Wegeventil D1VW106CNJW, 24VDC"},
-// {title: "D1VW003KNJW",article: "K-VED1VW003KNJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW002KNJW",article: "K-VED1VW002KNJW",description: "4/2 ventil NG6 24VDC"},
-// {title: "D1VW004ENJW",article: "K-4/2WEGEMAGNETVEN",description: "n.v. => HK4131080601C1Q"},
-// {title: "D1VW020BNJW",article: "K-HKVED1VW020BNJW",description: "n.v. => HK4131510101C1Q"},
-// {title: "D1VW020DNJW",article: "K-VED1VW020DNJW",description: "n.v. => HK4137510902C1Q"},
-// {title: "D1VW020HNJW",article: "K-D1VW020HNJW",description: "n.v. => HK4131510201C1Q"},
-// {title: "D1VW020HNJW",article: "K-VED1VW020HNJW",description: "n.v. => HK4131510201C1Q"},
-// {title: "D1VW020BNJW",article: "K-HKVED1VW020BNJW",description: "Wegeventil NG 6"},
-// {title: "D1VW081FNJW",article: "K-VED1VW081FNJW",description: "4/2-Wegeventil NG6, 24VDC"},
-// {title: "D1VW004CNJW",article: "K-D1VW004CNJW",description: "Wegeventil 24V= 210 bar 1,25 A"},
-// {title: "D1VW208BNJW",article: "HK4131520101C1Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW208BNJW",article: "HK41315201011Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW002CNJW",article: "HK4132010302C1Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW002CNJW",article: "HK41320103021Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW001CNJW",article: "HK41320303021Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW009CNJW",article: "HK4132070302C1Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW009CNJW",article: "HK41320703021Q",description: "Zawór magrozdz4/3 WZ6 24VDC"},
-// {title: "D1VW020DNJW",article: "HK41375109021Q",description: "Zawór magrozdz4/2 WZ6 24VDC"},
-// {title: "D1VW002ENJW",article: "K-VED1VW002ENJW",description: "4/2-Wegeventil NG6 24VDC"},
-// {title: "D1VW009ENJW",article: "K-VED1VW009ENJW",description: "4/2-Wegeventil 24 VDC"},
-// {title: "D1VW008FNJW",article: "K-VED1VW008FNJW",description: "4/2 Wegeventil NG6"},
-// {title: "D1VW055CNJW",article: "K-VED1VW055CNJW",description: "4/3-Wegeventil, Sonderschieber"},
-// {title: "D1VW006KNJW",article: "K-VED1VW006KNJW",description: "4/3-Wegeventil, NG6"},
-// {title: "D1VW026BNJW",article: "K-VED1VW026BNJW",description: "4/3-Wegeventil, NG6"}]
-
-// const set1 = new Set();
-// console.log(d.map(({title})=>spoolRexroth.some(el=> el.title === title) || console.log(title)))
-// spoolRexroth.forEach(({title})=>set1.add(title));
-// d.forEach(({title})=>{
-//   if (set1[title]) console.log(title);
-//   else set1.add(title)
-//})

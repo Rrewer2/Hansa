@@ -87,14 +87,17 @@ const selectedPump = () => {
 <template>
   <article>
     <h2>
-      {{ text("pump") }} {{ i ? i + 1 : ""
-      }}<span> {{ order[`pump${i}`]?.title }}</span>
+      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'">
+        {{ text("pump") }} {{ i ? i + 1 : "" }}
+      </span>
+      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'">
+        {{ order[`pump${i}`]?.title }}
+      </span>
     </h2>
 
     <div class="flex-row flex-center">
       <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
         <InputItem data="Q">
-          <!-- <input type="number" min="0" v-model="pump.Q" :disabled="order[`pump${i}`]" id="Q" /> -->
           <input type="number" min="0" v-model="pump.Q" id="Q" />
         </InputItem>
         <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
@@ -104,9 +107,6 @@ const selectedPump = () => {
       </span>
 
       <InputItem data="n">
-        <!-- <select v-model="powerUNIT.n" :disabled="order[`pump${i}`] ||
-          Object.keys(order).some((str) => str.includes(`motor${i}`))
-          " id="n"> -->
         <select v-model="powerUNIT.n" id="n">
           <option v-for="item in freqData" :value="item">{{ item }}</option>
         </select>
@@ -132,13 +132,9 @@ const selectedPump = () => {
     <br />
     <table v-if="meta.pumpType && filteredPumps().length">
       <thead>
-        <!-- <td>{{ text('title') }}</td> -->
         <td v-for="a in Object.keys(filteredPumps()[0])">
           <b><i>{{ text(a) }}</i></b>
         </td>
-        <!-- <td>
-          <b><i>L/min</i></b>
-        </td> -->
       </thead>
       <tbody v-for="{ title, ...rest } in filteredPumps()">
         <td class="tal">
@@ -154,8 +150,6 @@ const selectedPump = () => {
           <CopyText :text="title" />
         </td>
         <td v-for="item in Object.values(rest)">{{ item }}</td>
-        <!-- <td>{{ round(getQ(Object.values(...rest)[0].CC, powerUNIT.n)) }}</td>
-        <td v-for="item in Object.values(...rest)[0]">{{ item }}</td> -->
       </tbody>
     </table>
   </article>
