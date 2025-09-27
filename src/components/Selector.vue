@@ -64,11 +64,13 @@ const setActive = ([name, index]) => {
 } */
 
 .right {
+  /* width: 100%; */
   position: fixed;
   top: 10px;
   left: 61vw;
-  height: calc(100vh - 50px);
-  overflow-y: scroll;
+  max-height: calc(98vh);
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* .accordion {

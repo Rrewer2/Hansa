@@ -16,7 +16,7 @@ const normalize = () => {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } 
       else {
-        KIT[title] = { title, count: n ? n : 1, JM: 'szt', opis: /^x/i.test(key) ? 'Złączka' : key.replace(/\d+$/, "") };
+        KIT[title] = { title, count: n ? n : 1, JM: 'szt', opis: /^x/i.test(key) ? 'Złączka' : /^vhr/i.test(key) ? 'Korek' : key.replace(/\d+$/, "") };
       }
     }
   });
@@ -86,7 +86,7 @@ const totalPrice = () => {
     </table>
   </article>
   <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
-  <button v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" @click="loadData">
+  <button @click="loadData">
     Zrobić magię
   </button>
   <article v-if="magic" class="mt-20">

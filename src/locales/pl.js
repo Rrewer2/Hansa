@@ -113,7 +113,7 @@ export default {
   oil: ['Olej'],
   tankLevel: ['Wskaźnik poziomu oleju'],
   tankSeal: ['Uszczelka zbiornika'],
-  tankCork: ['Korek'],
+  tankCork: ['Zawór spustowy'],
   flangeIn: ['Przyłącze pompy'],
   flangeOut: ['Przyłącze pompy'],
   minimess: ['Przyłącze pomiarowe'],

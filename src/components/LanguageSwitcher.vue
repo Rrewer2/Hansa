@@ -1,7 +1,7 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <template>
   <div class="language-switcher" ref="switcherRef">
-    <button class="language-button" @click="toggleDropdown">
+    <button class="button" @click="toggleDropdown">
       <span>{{ meta.lang.toUpperCase() }}</span>
       <img v-if="meta.lang === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24">
       <img v-if="meta.lang === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24">
@@ -19,11 +19,11 @@
   </div>
 
   <div class="storage">
-    <button class="language-button" @click="save">
+    <button class="button" @click="save">
       SAVE
       <img src="../resources/save.svg" alt="save" width="24" height="24">
     </button>
-    <button class="language-button" @click="load">
+    <button class="button" @click="load">
       LOAD
       <img src="../resources/load.svg" alt="load" width="24" height="24">
     </button>
@@ -60,7 +60,7 @@ const selectLanguage = (locale) => {
 
 }
 
-.language-button {
+.button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -76,7 +76,7 @@ const selectLanguage = (locale) => {
   z-index: 100;
 }
 
-.language-button:hover {
+.button:hover {
   background: #e5e5e5;
 }
 

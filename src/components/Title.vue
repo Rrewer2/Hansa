@@ -6,7 +6,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 </script>
 
 <template>
-  <h2 class="title">{{ text("powerUnit") }} {{ agregatTitle(project, meta, order) }}</h2>
+  <span class="title">{{ text("powerUnit") }} {{ agregatTitle(project, meta, order) }}</span>
   <section class="tal mt-20">
 
     <label>
@@ -34,5 +34,12 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
   position: sticky;
   z-index: 100;
   top: 5px;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 </style>

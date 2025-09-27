@@ -247,7 +247,7 @@ export const ventilation = [
   {title: "FIBL080GP03", thread:"G 3/4″ -14", q: 450},
   {title: "FIBL080GP10", thread:"G 3/4″ -14", q: 550},
   {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 1600},
-  {title: "FIBL116FP03001", thread: "Ø73 6 x M5", q: 2150},
+  {title: "FIBL116FP03002", thread: "Ø73 6 x M5", q: 2150},
 ].map(({title, ...rest}) => ({title, ...rest, filterGrade: title.match(/(P10|P03)/)?.[0]}));
 
 export const HKRTR = [ {title: "HKRTR0502CG1P10", join: "G 3/8″ -19", q: 25, type: 'PowerPack', filterGrade: 'P10'}, ];
@@ -285,7 +285,7 @@ export const spoolTypes = ['G','GA','GB', 'E','EA','EB', 'J','JA','JB', 'H','HA'
 export const flanges = [
   {title: "WDA0.538", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 3/8″ -19", QS: 7, QP: 20}, 
   {title: "WDA0.512", pressure: 180, LK: "LK Ø 26 mm / M 5", thread: "G 1/2″ -14", QS: 16, QP: 35}, 
-  {title: "WDA138", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20}, 
+  // {title: "WDA138", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 3/8″ -19", QS: 7, QP: 20}, 
   {title: "WDA112", pressure: 180, LK: "LK Ø 30 mm / M 6", thread: "G 1/2″ -14", QS: 20, QP: 40}, 
   {title: "WDA212", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 1/2″ -14", QS: 12, QP: 35}, 
   {title: "WDA234", pressure: 180, LK: "LK Ø 40 mm / M 8", thread: "G 3/4″ -14", QS: 35, QP: 75}, 

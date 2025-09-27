@@ -214,19 +214,21 @@ export const KITtitle = (project, order) => {
   const pumpKeys = Object.keys(order).filter((key) => key.includes("pump"));
   const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
   const obj = {};
+  const blockKeys = Object.keys(order).filter((key) => key.includes("block"));
+  const blockSections = blockKeys.length ? `${blockKeys.map((key) => order[key]?.blockData?.stations).join("/")}` : '';
   Object.keys(order).filter((key) => key.match(/valve\d+/)).map((key) => order[key]?.valveData?.spool).forEach((a) => obj[a] ? obj[a]++ : obj[a] = 1);
 
   const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : '';
   const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : '';
   const pump = pumpKeys.length ? `${pumpKeys.map((key) => round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)).join("/")}` : '';
   const pressure = pmax ? `${pmax}` : '';
-  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key + (value === 1 ? '' : value), 'R') : '';
-  // console.log('obj :>> ', obj);
+  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, 'R'+ blockSections) : '';
+
   const sp1 = tank && motor ? '-' : '';
   const sp2 = pump && motor ? '-' : '';
   const sp3 = pump && pressure ? '.' : '';
   const sp4 = block && pressure ? '-' : '';
-  return tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat hydr.';
+  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat hydr.').replace('undefined', '');
 };
 
 export const getSmthFromProject = (arr) =>

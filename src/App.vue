@@ -65,7 +65,7 @@ const save = () => {
 };
 const meta = ref({
   tank: "RA",
-  cooler: 1,
+  cooler: 0,
   pumpType: "gears",
   lang: "pl",
 });

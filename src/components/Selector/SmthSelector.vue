@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, useSlots } from "vue";
 import { getTextWithSpace } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
@@ -8,7 +8,7 @@ import CopyText from "./CopyText.vue";
 const key = ref();
 
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
-
+const slots = useSlots()
 const setSmth = ({ title, addition, ...rest }) => {
   if (order[Name + index]?.title !== title) {
     order[Name + index] = { title, [Name + 'Data']: { ...rest } };
@@ -41,10 +41,14 @@ if (!logic().length) order[Name + index] = {};
 </script>
 
 <template>
-  <article>
+  <article :class="(!logic().length && !slots.default?.()?.length) ? 'hide' : ''">
     <h2>
-      {{ text(Name) }} {{ getIndex(index) }}
-      <span> {{ order[Name + index]?.title }}</span>
+      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
+        {{ text(Name) }} {{ getIndex(index) }}
+      </span>
+      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
+        {{ order[Name + index]?.title }}
+      </span>
     </h2>
     <br />
     <div class="flex-row flex-center">
@@ -65,10 +69,11 @@ if (!logic().length) order[Name + index] = {};
         </tr>
       </thead>
       <tbody v-for="{ title, ...rest } in sorting()">
-        <tr>
+        <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
-              :checked="title === order[Name + index]?.title" />
+              :checked="title === order[Name + index]?.title"
+              :disabled="order[Name + index]?.title && order[Name + index]?.title !== title" />
             <span v-if="title.includes('K-') || title.includes('M-')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
@@ -85,6 +90,11 @@ if (!logic().length) order[Name + index] = {};
 </template>
 
 <style scoped>
+.hide {
+  position: fixed;
+  top: -10000px;
+}
+
 .sort {
   width: 20px;
   color: rgba(14, 44, 14, 0.25);
@@ -104,5 +114,24 @@ if (!logic().length) order[Name + index] = {};
 .sort.active {
   background-color: unset;
   color: rgba(14, 44, 14, 1);
+}
+
+.titleSelected {
+  color: darkgreen;
+  /* background-color: rgba(185, 249, 185, 0.2); */
+}
+
+.titleNotSelected {
+  color: darkred;
+  /* background-color: rgba(249, 185, 185, 0.5); */
+}
+
+.selected {
+  background-color: rgba(185, 249, 185, 0.2);
+}
+
+.notSelected {
+  color: grey;
+  /* background-color: rgba(249, 185, 185, 0.5); */
 }
 </style>
