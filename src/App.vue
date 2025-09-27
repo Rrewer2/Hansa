@@ -278,6 +278,10 @@ td {
   justify-content: space-between;
 }
 
+.flex-evenly {
+  justify-content: space-evenly;
+}
+
 .border {
   border: 1px solid;
 }

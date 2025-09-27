@@ -1137,9 +1137,9 @@ const gaugeBottom = [
 ];
 
 export const gauge = [
-  ...gaugeBottom.map(el => ({ ...el, mount: 'bottom', addition: { gaugeShuttOff: { title:'HKFT29101' } } })),
-  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'H', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101' } }  })),
-  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'HFR', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101' } }  }))
+  ...gaugeBottom.map(el => ({ ...el, mount: 'bottom', addition: { gaugeShuttOff: { title:'HKFT29101-14' } } })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'H', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101-14' } }  })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + 'HFR', ...rest, mount: 'rear', addition: { gaugeShuttOff: { title:'HKFT29101-14' } }  }))
 ]
 
 const priority = [
@@ -1208,10 +1208,10 @@ export const getPriority = (KIT) => {
 };
 
 export const lidData = [
-  {title: "M-4205-00000000010", tank: 20, type: 'RA', addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
-  {title: "K-HAGRA20-112RAL", tank: 20, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13L: {title: 'XVEWONW13L',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
-  {title: "M-4205-00000000012", tank: 30, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13L: {title: 'XVEWONW13L',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
-  {title: "M-4205-00000000005", tank: 44, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13L: {title: 'XVEWONW13L'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: "M-4205-00000000010", tank: 20, type: 'RA', addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
+  {title: "K-HAGRA20-112RAL", tank: 20, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
+  {title: "M-4205-00000000012", tank: 30, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: "M-4205-00000000005", tank: 44, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13HL: {title: 'XVEWONW13HL'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
 ];
 
 export const xvrnw = [

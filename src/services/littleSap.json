@@ -1,451 +1,376 @@
 [{
   "title": "WDA0.512",
   "description": "Kołnierz pompy 3otw. KO26 IGR1/2\" 90° AL",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDA0.538",
   "description": "Kołnierz pompy 3otw. KO26 IGR3/8\" 90° AL",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDA112",
   "description": "Kołnierz pompy 3otw. KO30 IGR1/2\" 90° AL",
-  "amount": 4,
-  "cost": "70,99"
+  "amount": 4
 },
 {
   "title": "WDA138",
   "description": "Kołnierz pompy 3otw. KO30 IGR3/8\" 90° AL",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDA234",
   "description": "Kołnierz pompy 3otw. KO40 IGR3/4\" 90° AL",
-  "amount": 7,
-  "cost": "186,39"
+  "amount": 7
 },
 {
   "title": "WDA3100",
   "description": "Kołnierz pompy 3otwor KO56 IGR1\" 90° AL",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDA334",
   "description": "Kołnierz pompy 3otw. KO51 IGR3/4\" 90° AL",
-  "amount": 2,
-  "cost": "75,26"
+  "amount": 2
 },
 {
   "title": "WDS0.512",
   "description": "Kołnierz pompy 3otwor KO26 IGR1/2\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS0.538",
   "description": "Kołnierz pompy 3otwor KO26 IGR3/8\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS112",
   "description": "Kołnierz pompy 3otwor KO30 IGR1/2\" 90°",
-  "amount": 7,
-  "cost": "188,49"
+  "amount": 7
 },
 {
   "title": "WDS138",
   "description": "Kołnierz pompy 3otwor KO30 IGR3/8\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS212",
   "description": "Kołnierz pompy 3otwor KO40 IGR1/2\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS234",
   "description": "Kołnierz pompy 3otwor KO40 IGR3/4\" 90°",
-  "amount": 5,
-  "cost": "150,91"
+  "amount": 5
 },
 {
   "title": "WDS3100",
   "description": "Kołnierz pompy 3otwor KO51 IGR1\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS334",
   "description": "Kołnierz pompy 3otwor KO51 IGR3/4\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WDS3B34",
   "description": "Kołnierz pompy 3otwor KO56 IGR3/4\" 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WEO10SBG1/4ED",
   "description": "Gniazdo wtykowe WEO WZ10 AGR1/4\"-WD",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WEO13SBG3/8ED",
   "description": "Gniazdo wtykowe WEO WZ13 AGR3/8\"-WD",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WEO16SBG1/2ED",
   "description": "Gniazdo wtykowe WEO WZ16 AGR1/2\"-WD",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WEO23SBG3/4",
   "description": "Gniazdo wtykowe WEO WZ23 AGR3/4\"-flach",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WEO23SBHJ12",
   "description": "Gniazdo wtykowe WEO WZ23 AGJ1.1/16\"",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF106",
   "description": "Wąż hydrauliczny 1SN DN06",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF108",
   "description": "Wąż hydrauliczny 1SN DN08",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF110",
   "description": "Wąż hydrauliczny 1SN DN10",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF113",
   "description": "Wąż hydrauliczny 1SN DN12",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF206",
   "description": "Wąż hydrauliczny 2SN DN06",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF208",
   "description": "Wąż hydrauliczny 2SN DN08",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF210",
   "description": "Wąż hydrauliczny 2SN DN10",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF213",
   "description": "Wąż hydrauliczny 2SN DN12",
-  "amount": "0,00",
-  "cost": "0,00"
+  "amount": "0,00"
 },
 {
   "title": "WF30LKL12-3",
   "description": "Kołnierz pompy 3otwor KO30 CEL12 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF30LKL15-3",
   "description": "Kołnierz pompy 3otwor KO30 CEL15 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF35LKL10315",
   "description": "Kołnierz pompy 4otwor KO35 CEL10 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF35LKL12315",
   "description": "Kołnierz pompy 4otwor KO35 CEL12 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF35LKL15250",
   "description": "Kołnierz pompy 4otwor KO35 CEL15 90°",
-  "amount": 4,
-  "cost": "60,93"
+  "amount": 4
 },
 {
   "title": "WF35LKL18250",
   "description": "Kołnierz pompy 4otwor KO35 CEL18 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF35LKS16315",
   "description": "Kołnierz pompy 4otwor KO35 CES16 90°",
-  "amount": 6,
-  "cost": "104,10"
+  "amount": 6
 },
 {
   "title": "WF35LKS20315",
   "description": "Kołnierz pompy 4otwor KO35 CES20 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF40LKL15100",
   "description": "Kołnierz pompy 4otwor KO40 CEL15 90°",
-  "amount": 9,
-  "cost": "160,91"
+  "amount": 9
 },
 {
   "title": "WF40LKL18100",
   "description": "Kołnierz pompy 4otwor KO40 CEL18 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF40LKL22-3",
   "description": "Kołnierz pompy 3otwor KO40 CEL22 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF40LKL22100",
   "description": "Kołnierz pompy 4otwor KO40 CEL22 90°",
-  "amount": 4,
-  "cost": "62,84"
+  "amount": 4
 },
 {
   "title": "WF40LKL28100",
   "description": "Kołnierz pompy 4otwor KO40 CEL28 90°",
-  "amount": 3,
-  "cost": "57,16"
+  "amount": 3
 },
 {
   "title": "WF40LKL35100",
   "description": "Kołnierz pompy 4otwor KO40 CEL35 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF40LKS20250",
   "description": "Kołnierz pompy 4otwor KO40 CES20 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF55LKL35100",
   "description": "Kołnierz pompy 4otwor KO55 CEL35 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF55LKL42100",
   "description": "Kołnierz pompy 4otwor KO55 CEL42 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF55LKS20250",
   "description": "Kołnierz pompy 4otwor KO55 CES20 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WF55LKS25250",
   "description": "Kołnierz pompy 4otwor KO55 CES25 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3001/L15",
   "description": "Kołnierz SAE 1/2\" CEL15 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002/L18",
   "description": "Kołnierz SAE 3/4\" CEL18 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002/L22M",
   "description": "Kołnierz SAE 3/4\" CEL22 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002/S20",
   "description": "Kołnierz SAE 3/4\" CES20 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002/S25",
   "description": "Kołnierz SAE 3/4\" CES25 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002JIC11/16",
   "description": "Kołnierz SAE 3/4\" AGJ1.1/16\" 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3002JIC11/16M",
   "description": "Kołnierz SAE 3/4\" AGJ1.1/16\" 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3003/L28",
   "description": "Kołnierz SAE 1\" CEL28 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3003/L28M",
   "description": "Kołnierz SAE 1\" CEL28 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3004/L35",
   "description": "Kołnierz SAE 1.1/4\" CEL35 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3004/L35M",
   "description": "Kołnierz SAE 1.1/4\" CEL35 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3004/S25M",
   "description": "Kołnierz SAE 1.1/4\" CES25 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3004JIC15/8",
   "description": "KołnierzSAE 1.1/4\" AGJ1.5/8\" 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3005/L42",
   "description": "Kołnierz SAE 1.1/2\" CEL42 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG3005/L42M",
   "description": "Kołnierz SAE 1.1/2\" CEL42 3000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6001/S16",
   "description": "Kołnierz SAE 1/2\" CES16 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6002/S16",
   "description": "Kołnierz SAE 3/4\" CES16 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6002/S20",
   "description": "Kołnierz SAE 3/4\" CES20 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6002/S25",
   "description": "Kołnierz SAE 3/4\" CES25 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6002JIC15/16",
   "description": "Kołnierz SAE 3/4\" AGJ1.5/16\" 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6003/S25",
   "description": "Kołnierz SAE 1\" CES25 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6003/S30",
   "description": "Kołnierz SAE 1\" CES30 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6003JIC15/16",
   "description": "Kołnierz SAE 1\" AGJ1.5/16\" 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6004/S30",
   "description": "Kołnierz SAE 1.1/4\" CES30 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6004/S38M",
   "description": "Kołnierz SAE 1.1/4\" CES38 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6004JIC15/16",
   "description": "Kołnierz SAE 1.1/4\" AGJ1.5/16\" 6000 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 },
 {
   "title": "WFG6005/S38",
   "description": "Kołnierz SAE 1.1/2\" CES38 6000PSI 90°",
-  "amount": 0,
-  "cost": "0,00"
+  "amount": 0
 }
 ]

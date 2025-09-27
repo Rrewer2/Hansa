@@ -228,7 +228,7 @@ export const KITtitle = (project, order) => {
   const sp2 = pump && motor ? '-' : '';
   const sp3 = pump && pressure ? '.' : '';
   const sp4 = block && pressure ? '-' : '';
-  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat hydr.').replace('undefined', '');
+  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat').replace('undefined', '');
 };
 
 export const getSmthFromProject = (arr) =>

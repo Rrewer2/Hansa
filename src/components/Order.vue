@@ -29,17 +29,24 @@ const zlo = ref(499,99);
 async function loadData() {
   magic.value = true;
   try {
-    const jsonData = await import('../services/costsSap.json');
-    SAP.value = jsonData.default;
-    if (SAP.value) {
-      const a = normalize();
-      SAP.value.forEach(art => {
-        if (a[art.title]?.title) {
-          const { opis, ...rest } = a[art.title];
-          cracked.value[a[art.title]?.title] = ({ ...rest, price: +art.cost.replace(/\s/g,"").replace(',',".") || 0});
-        }
-      });
-    }
+    const costs = await import('../services/costsSap.json');
+    const availableQuantity = await import('../services/SAP.json');
+    const a = costs.default.reduce((acc, { title, ...rest }) => {
+        acc[title] = rest
+        return acc
+      }, {});
+    const c = availableQuantity.default.length;
+    cracked.value = Object.fromEntries(Object.entries(normalize()).map(poz => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || '0,00' }]));
+    // SAP.value = costs.default;
+    // if (SAP.value) {
+    //   const a = normalize();
+    //   SAP.value.forEach(art => {
+    //     if (a[art.title]?.title) {
+    //       const { opis, ...rest } = a[art.title];
+    //       cracked.value[a[art.title]?.title] = ({ ...rest, price: +art.cost.replace(/\s/g,"").replace(',',".") || 0});
+    //     }
+    //   });
+    // }
   } catch (error) {
     alert('Ni chuja!')
     console.error(error);
@@ -48,7 +55,7 @@ async function loadData() {
 const totalPrice = () => {
   let res = 0;
   for (let key in cracked.value) {
-    res += cracked.value[key]?.price * cracked.value[key]?.count;
+    res += +cracked.value[key]?.price.replace(/\s/g,"").replace(',',".") * cracked.value[key]?.count;
   }
   return res;
 };
@@ -92,13 +99,15 @@ const totalPrice = () => {
   <article v-if="magic" class="mt-20">
     <table>
       <thead class="noCopy">
-        <td v-for="a in ['title', 'count', 'Description', 'Cena']">
+        <td v-for="a in ['Nr', 'title', 'count', 'Description', 'Cena']">
           <b><i>{{ text(a) }}</i></b>
         </td>
       </thead>
-
       <tbody>
-        <tr v-for="({ title, count, opis, price }) of cracked" :class="price === 0 ? 'red' : ''">
+        <tr v-for="({ title, count, opis, price }, _, i) of cracked" :class="price === 0 ? 'red' : ''">
+          <td class="tal">
+            {{ (i + 1) * 100 }}
+          </td>
           <td class="tal">
             {{ title }}
           </td>
@@ -109,7 +118,7 @@ const totalPrice = () => {
             {{ text(opis) }}
           </td>
           <td class="tar">
-            {{ price }}
+            {{ price.replace(' ', '') }}
           </td>
         </tr>
       </tbody>
@@ -124,13 +133,18 @@ const totalPrice = () => {
         </tr>
       </tfoot>
     </table>
-    <h2 class="tar">Koszt {{ Math.round(totalPrice() * 100) / 100 }}</h2>
-    <h2 class="tar">ZLO1 <input v-model="zlo" type="number" min="0" /></h2>
-    <h2 class="tar">Marża <input v-model="margin" type="number" min="0" /></h2>
-    <h1>{{ Math.round(totalPrice() * 100 * (1 + margin / 100) + zlo * 100) / 100 }} zł netto</h1>
+    <h2 class="tar">Koszt {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice())
+    }}</h2>
+    <div class="flex-row flex-evenly">
+      <span class="tar">ZLO1 <input v-model="zlo" type="number" min="0" /></span>
+      <span class="tar">Marża <input v-model="margin" type="number" min="0" /></span>
+    </div>
+    <h2>
+      NETTO {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() * (1 + margin
+        / 100) + zlo) }}
+    </h2>
   </article>
 </template>
-
 <style scoped>
 .noCopy {
   user-select: none;
