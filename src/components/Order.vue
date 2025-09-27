@@ -32,21 +32,15 @@ async function loadData() {
     const costs = await import('../services/costsSap.json');
     const availableQuantity = await import('../services/SAP.json');
     const a = costs.default.reduce((acc, { title, ...rest }) => {
-        acc[title] = rest
-        return acc
+        acc[title] = rest;
+        return acc;
       }, {});
-    const c = availableQuantity.default.length;
-    cracked.value = Object.fromEntries(Object.entries(normalize()).map(poz => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || '0,00' }]));
-    // SAP.value = costs.default;
-    // if (SAP.value) {
-    //   const a = normalize();
-    //   SAP.value.forEach(art => {
-    //     if (a[art.title]?.title) {
-    //       const { opis, ...rest } = a[art.title];
-    //       cracked.value[a[art.title]?.title] = ({ ...rest, price: +art.cost.replace(/\s/g,"").replace(',',".") || 0});
-    //     }
-    //   });
-    // }
+    const c = availableQuantity.default.reduce((acc, { title, amount }) => {
+        acc[title] = amount;
+        return acc;
+      }, {});
+      console.log('c :>> ', c);
+    cracked.value = Object.fromEntries(Object.entries(normalize()).map(poz => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || '0,00', amount: c[poz[0]]}]));
   } catch (error) {
     alert('Ni chuja!')
     console.error(error);
@@ -99,12 +93,13 @@ const totalPrice = () => {
   <article v-if="magic" class="mt-20">
     <table>
       <thead class="noCopy">
-        <td v-for="a in ['Nr', 'title', 'count', 'Description', 'Cena']">
+        <td v-for="a in ['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']">
           <b><i>{{ text(a) }}</i></b>
         </td>
       </thead>
       <tbody>
-        <tr v-for="({ title, count, opis, price }, _, i) of cracked" :class="price === 0 ? 'red' : ''">
+        <tr v-for="({ title, count, opis, price, amount }, _, i) of cracked"
+          :class="price === 0 || amount === 0 ? 'red' : ''">
           <td class="tal">
             {{ (i + 1) * 100 }}
           </td>
@@ -116,6 +111,9 @@ const totalPrice = () => {
           </td>
           <td class="tal">
             {{ text(opis) }}
+          </td>
+          <td class="">
+            {{ amount }}
           </td>
           <td class="tar">
             {{ price.replace(' ', '') }}
