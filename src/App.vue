@@ -67,6 +67,7 @@ const meta = ref({
   tank: "RA",
   cooler: 0,
   pumpType: "gears",
+  CETOP: '',
   lang: "pl",
 });
 provide("meta", meta);
@@ -387,6 +388,11 @@ td {
 
 .mx {
   padding: 10;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mt-20 {

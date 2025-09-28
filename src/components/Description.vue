@@ -15,10 +15,11 @@ const { project, order } = defineProps(['project', "order"]);
     <h5>Moc napędowa {{ order['motor' + 0]?.motorData?.power ?? '' }} kW ({{ project[0]?.mount ?? '' }})</h5>
     <h5>Znamionowa prędkość obrotowa {{ order['motor' + 0]?.motorData?.n ?? '' }} obr/min</h5>
     <h5>Częstotliwość silnika 50 Hz</h5>
-    <h5>Napięcie silnika {{ order['motor' + 0]?.motorData?.U ?? '' }} trójfazowy</h5>
+    <h5>Napięcie silnika {{ order['motor' + 0]?.motorData?.U ?? '' }} {{ order['motor' + 0]?.motorData?.U === '230V'
+      ? 'jednofazowy' : 'trójfazowy' }}</h5>
     <h5>Kierunek obrotów - {{ order['pump' + 0]?.pumpData?.out.startsWith('Bore') ? '↺' : '↻' }}</h5>
 
-    <h5>Maks. ciśnienie nastawcze {{ project[0]?.unit[0]?.p ?? '' }} bar</h5>
+    <h5 v-if="project[0]?.unit[0]?.p">Maks. ciśnienie nastawcze {{ project[0]?.unit[0]?.p ?? '' }} bar</h5>
 
     <div v-if="order['block' + 0]?.title">
       <h5>Blok sterowniczy CETOP{{ order['block' + 0]?.blockData?.cetop }}</h5>
@@ -34,10 +35,12 @@ const { project, order } = defineProps(['project', "order"]);
       Wielkość zbiornika {{ order.tank?.tankData?.Size }} L ({{ order.tank?.tankData?.material ?? '' }})
     </h5>
 
-    <h5>Chłodnica olej-powietrze - {{ !!order.cooler?.title ? 'Tak' : 'Nie' }}</h5>
-    <h5>Wyłącznik poziomowo-temperaturowy</h5>
-    <h5>Filtr napowietrzający 10 µm</h5>
-    <h5>Filtr zlewowy 10 µm</h5>
+    <h5 v-if="order.cooler?.title">Chłodnica olej-powietrze</h5>
+    <h5 v-if="order.heater?.title">Podgrzewacz zbiornika</h5>
+    <h5 v-if="order.levelTemp">Wyłącznik poziomowo-temperaturowy</h5>
+    <h5 v-if="order.ventilation">Filtr napowietrzający {{ order.ventilation.title.match(/(P10|P03)/)?.[0] ?? 10 }} (µm)
+    </h5>
+    <h5 v-if="order.filter">Filtr zlewowy {{ order.filter?.filterData?.filterGrade ?? 10 }} (µm)</h5>
     <h5>Olej mineralny HLP zgodnie z DIN 51524 część 2, ISO VG 46</h5>
     <h5>Zakres lepkości 12 do 800 mm²/s (zalecany zakres 20 do 100)</h5>
     <!-- <h5>Rozdzielacz w położeniu normalnym P->T</h5>
