@@ -234,7 +234,7 @@ export const pipesData = {
 
 export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},};
 
-export const coolerData = [ {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},}, {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},}, {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},}, {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},}, {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},}, {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},}, {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},}, {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635}},{title: "HKOILAIRHPA30", flow:{min:40, max:160}, performance:{min:0.5,max: 0.77}},{title: "HKOILAIRHPA36", flow:{min:40, max:200}, performance:{min:0.7,max: 1.1}},{title: "HKOILAIRHPA52", flow:{min:80, max:280}, performance:{min:1.1,max: 1.55}},
+export const coolerData = [ {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},}, {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},}, {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},}, {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},}, {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},}, {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},}, {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},}, {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635}},{title: "HPA30", flow:{min:40, max:160}, performance:{min:0.5,max: 0.77}},{title: "HPA36", flow:{min:40, max:200}, performance:{min:0.7,max: 1.1}},{title: "HPA52", flow:{min:80, max:280}, performance:{min:1.1,max: 1.55}},
 ].map(({title,...rest})=>({title: 'HKOILAIR'+title, ...rest, addition:{thermostat:{title:'HKTM45A50'},damperCooler:{title:'HKGP4030M10B',n:4}}}));
 
 export const ventilation = [
@@ -251,21 +251,21 @@ export const ventilation = [
 
 export const HKRTR = [ {title: "HKRTR0502CG1P10", join: "G 3/8″ -19", q: 25, type: 'PowerPack', filterGrade: 'P10'}, ];
 const FIRL = [
-  {title: "FIRL024A10NVG1/2", join: "G 1/2″ -14", q: 24},
-  {title: "FIRL048P10NVG1/2", join: "G 1/2″ -14", q: 60},
-  {title: "FIRL053A10NVG1/2", join: "G 1/2″ -14", q: 53},
-  {title: "FIRL064A10NVG3/4", join: "G 3/4″ -14", q: 64},
-  {title: "FIRL086P10NVG3/4", join: "G 3/4″ -14", q: 86},
-  {title: "FIRL110P10NVG1/2", join: "G 1/2″ -14", q: 86},
-  {title: "FIRL110P10NVG3/4", join: "G 3/4″ -14", q: 110},
-  {title: "FIRL150P10NVG1", join: "G 1″ -11", q: 110},
-  {title: "FIRL150P10NVG3/4", join: "G 3/4″ -14", q: 110},
-  {title: "FIRL225P10NVG1", join: "G 1″ -11", q: 220},
-  {title: "FIRL225P10NVG3/4", join: "G 3/4″ -14", q: 220},
-  {title: "FIRL281P10NVG11/4", join: "G 1.1/4″ -11", q: 280},
-  {title: "FIRL290A10NVG11/4", join: "G 1.1/4″ -11", q: 290},
-  {title: "FIRL320P10NVG11/2", join: "G 1.1/2″ -11", q: 610},
-  {title: "FIRL610P10NVG11/2", join: "G 1.1/2″ -11", q: 610},
+  {title: "FIRL024A10NVG1/2", join: "G 1/2″ -14", q: 24,hole:66},
+  {title: "FIRL048P10NVG1/2", join: "G 1/2″ -14", q: 60,hole:66},
+  {title: "FIRL053A10NVG1/2", join: "G 1/2″ -14", q: 53,hole:88},
+  {title: "FIRL064A10NVG3/4", join: "G 3/4″ -14", q: 64,hole:88},
+  {title: "FIRL086P10NVG3/4", join: "G 3/4″ -14", q: 86,hole:88},
+  {title: "FIRL110P10NVG1/2", join: "G 1/2″ -14", q: 86,hole:88},
+  {title: "FIRL110P10NVG3/4", join: "G 3/4″ -14", q: 110,hole:88},
+  {title: "FIRL150P10NVG1", join: "G 1″ -11", q: 110,hole:88},
+  {title: "FIRL150P10NVG3/4", join: "G 3/4″ -14", q: 110,hole:88},
+  {title: "FIRL225P10NVG1", join: "G 1″ -11", q: 220,hole:88},
+  {title: "FIRL225P10NVG3/4", join: "G 3/4″ -14", q: 220,hole:88},
+  {title: "FIRL281P10NVG11/4", join: "G 1.1/4″ -11", q: 280,hole:129.5},
+  {title: "FIRL290A10NVG11/4", join: "G 1.1/4″ -11", q: 290,hole:173.5},
+  {title: "FIRL370P10NVG11/2", join: "G 1.1/2″ -11", q: 610,hole:173.5},
+  {title: "FIRL610P10NVG11/2", join: "G 1.1/2″ -11", q: 610,hole:173.5},
 ].map(el => ({...el, type: 'In-Tank', filterGrade: el.title.match(/(A10|P10)/)?.[0], addition: { clogging: {title: 'HKVAVR'} }})); 
 const FISPR = [
   {title: "FISPR48A10VG3/4", join: "G 3/4″ -14", q: 48},
@@ -1204,10 +1204,10 @@ export const lidData = [
   {title: "K-HAGRA20-112RAL", tank: 20,motor:112, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title:'XSWNW13HL'},XSVNW13HL: {title:'XSVNW13HL'},DMONW13L: {title:'DMONW13L',n:2},XVEWONW13HL: {title:'XVEWONW13HL',n:3},namePlate: {title:'K-TABLICZKA-GRAWER'},ventilation:{title: 'FIBL046FP10002'},filter:{title:'FISPR55P10VG3/4'},xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'XVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},}},
   {title: "M-4205-00000000012",tank: 30,motor:112, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'},filter:{title:'FISPR48A10VG3/4'}}},
   {title: "M-4205-???????????",tank: 30,motor:112, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
-  {title: "M-4205-00000000005",tank: 44,motor:112, type: 'RA', addition: {xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'AOVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13HL: {title: 'XVEWONW13HL'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
-  {title: 'M-4236-RA70132B5.1', tank: 70,motor:132, type: 'RA',addition: {adapter:{title:'K-HAGAP-NG10'},ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
-  {title: 'M-4236-HAGRA70-112', tank: 70,motor:112, type: 'RA',addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
-  {title: 'M-4236-HAGRA70-132', tank: 70,motor:132, type: 'RA',addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: "M-4205-00000000005",tank: 44,motor:112, type: 'RA', hole:88, addition: {xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'AOVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13HL: {title: 'XVEWONW13HL'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: 'M-4236-RA70132B5.1', tank: 70,motor:132, type: 'RA', hole:88,addition: {adapter:{title:'K-HAGAP-NG10'},ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: 'M-4236-HAGRA70-112', tank: 70,motor:112, type: 'RA', hole:88,addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: 'M-4236-HAGRA70-132', tank: 70,motor:132, type: 'RA', hole:88,addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
 ];
 
 export const xvrnw = [

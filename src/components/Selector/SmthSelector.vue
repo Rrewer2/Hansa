@@ -81,7 +81,7 @@ if (!logic().length) order[Name + index] = {};
               :checked="title === order[Name + index]?.title"
               :disabled="order[Name + index]?.title && order[Name + index]?.title !== title" />
             <span v-if="title.includes('K-') || title.includes('M-') || title.includes('D1V')">{{ title }}</span>
-            <a v-else :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
+            <a v-else :href="`${links[meta.lang]}${title.replace('/', '-')}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />

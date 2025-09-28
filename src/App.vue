@@ -45,6 +45,7 @@ const load = () => {
       order.value = storOrder;
     }
     alert('Załadowano');
+    navPage.value = [true, false, false, false, false];
     console.log('Ok');
   } catch (error) {
     alert('Coś popsułeś już, chłopie!');
@@ -102,7 +103,7 @@ const delPump = (k, x) =>
   (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
 const delUnit = (k) =>
   (project.value = project.value.filter((_, i) => i !== k));
-const navPage = ref([false, false, true, false, false]);
+const navPage = ref([true, false, false, false, false]);
 </script>
 
 <template>

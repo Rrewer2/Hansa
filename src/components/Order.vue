@@ -80,7 +80,7 @@ const totalPrice = () => {
         margin
         / 100) + zlo) }}
     </h2>
-  </div>
+  </div>{{ order.lid?.lidData?.hole }}
 </template>
 <style scoped>
 .tar {
