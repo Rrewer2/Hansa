@@ -4,6 +4,8 @@ import { getPriority } from "../services/data";
 import { KITtitle } from "../services/functions";
 import { text } from "../services/text";
 import Description from "./Description.vue";
+import Table from "./Table.vue";
+import TableSAP from "./TableSAP.vue";
 
 const { order, project } = defineProps(["order", "project"]);
 const cracked = ref({});
@@ -16,13 +18,15 @@ const normalize = () => {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } 
       else {
-        KIT[title] = { title, count: n ? n : 1, JM: 'szt', opis: /^x/i.test(key) ? 'Złączka' : /^vhr/i.test(key) ? 'Korek' : key.replace(/\d+$/, "") };
+        KIT[title] = { title, count: n ? n : 1, JM: 'szt', 
+        opis: /^x/i.test(key) ? 'Złączka' : /^vhr/i.test(key) ? 'Korek' : key.replace(/\d+$/, ""),
+        // opis: key
+       };
       }
     }
   });
   return getPriority(KIT);
 };
-const SAP = ref(null);
 const magic = ref(false);
 const margin = ref(50);
 const zlo = ref(499,99);
@@ -35,12 +39,11 @@ async function loadData() {
         acc[title] = rest;
         return acc;
       }, {});
-    const c = availableQuantity.default.reduce((acc, { title, amount }) => {
-        acc[title] = amount;
+    const c = availableQuantity.default.reduce((acc, { title, amount, description }) => {
+        acc[title] = {amount,description};
         return acc;
       }, {});
-      console.log('c :>> ', c);
-    cracked.value = Object.fromEntries(Object.entries(normalize()).map(poz => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || '0,00', amount: c[poz[0]]}]));
+    cracked.value = Object.fromEntries(Object.entries(normalize()).map(poz => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || '0,00', ...c[poz[0]]}]));
   } catch (error) {
     alert('Ni chuja!')
     console.error(error);
@@ -56,103 +59,57 @@ const totalPrice = () => {
 </script>
 
 <template>
-  <article class="mt-20">
-    <table>
-      <thead class="noCopy">
-        <td v-for="a in ['Nr', 'title', 'count', 'JM', 'Description']">
-          <b><i>{{ text(a) }}</i></b>
-        </td>
-      </thead>
+  <Table v-if="!magic" class="mx-auto" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
 
-      <tbody>
-        <tr v-for="({ title, count, JM, opis }, _, i) of normalize()">
-          <td class="noCopy">{{ (i + 1) * 100 }}</td>
-          <td class="tal">
-            {{ title }}
-          </td>
-          <td class="">
-            {{ count }}
-          </td>
-          <td class="noCopy">
-            {{ JM }}
-          </td>
-          <td v-if="!i" class="tal">
-            {{ opis }}
-          </td>
-          <td v-else class="tal noCopy">
-            {{ text(opis) }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
-  <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
-  <button @click="loadData">
+  <TableSAP v-if="magic" class="magic-article" :keys="['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']"
+    :data="cracked" />
+  <button v-if="!magic" @click="loadData" class="magic-btn">
     Zrobić magię
   </button>
-  <article v-if="magic" class="mt-20">
-    <table>
-      <thead class="noCopy">
-        <td v-for="a in ['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']">
-          <b><i>{{ text(a) }}</i></b>
-        </td>
-      </thead>
-      <tbody>
-        <tr v-for="({ title, count, opis, price, amount }, _, i) of cracked"
-          :class="price === '0,00' || amount === 0 ? 'red' : ''">
-          <td class="tal">
-            {{ (i + 1) * 100 }}
-          </td>
-          <td class="tal">
-            {{ title }}
-          </td>
-          <td class="">
-            {{ count }}
-          </td>
-          <td class="tal">
-            {{ text(opis) }}
-          </td>
-          <td class="">
-            {{ amount }}
-          </td>
-          <td class="tar">
-            {{ price.replace(' ', '') }}
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td class=""></td>
-          <td class=""></td>
-          <td></td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-      </tfoot>
-    </table>
-    <h2 class="tar">Koszt {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice())
-    }}</h2>
-    <div class="flex-row flex-evenly">
-      <span class="tar">ZLO1 <input v-model="zlo" type="number" min="0" /></span>
-      <span class="tar">Marża <input v-model="margin" type="number" min="0" /></span>
-    </div>
-    <h2>
-      NETTO {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() * (1 + margin
+  <button v-if="magic" @click="() => magic = false" class="magic-btn">
+    Wróćić
+  </button>
+  <div v-if="magic" class="final">
+    <h2 class="final mt-20">
+      Koszty {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice()) }}
+    </h2>
+    <div class="final mt-20">ZLO1 <input v-model="zlo" type="number" min="0" /></div>
+    <div class="mt-20">Marża <input v-model="margin" type="number" min="0" /></div>
+    <h2 class="final mt-20">
+      Netto {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() * (1 +
+        margin
         / 100) + zlo) }}
     </h2>
-  </article>
+  </div>
 </template>
 <style scoped>
-.noCopy {
-  user-select: none;
-}
-
 .tar {
   text-align: right;
 }
 
-.red {
-  background-color: rgb(255, 190, 190);
+.magic-btn {
+  background-color: rgba(255, 0, 0, 0.01);
+}
+
+.magic-btn:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+
+.magic-article {
+  background-color: #1D2A35;
+  margin: 20px auto
+}
+
+.table {
+  padding-top: 0;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  border: #3A4B57;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.final {
+  color: black;
+  text-align: center;
 }
 </style>
