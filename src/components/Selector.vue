@@ -13,11 +13,14 @@ import Order from "../components/Order.vue";
 import FilterSelector from "./Selector/FilterSelector.vue";
 import GaugeSelector from "./Selector/GaugeSelector.vue";
 import LidSelector from "./Selector/LidSelector.vue";
+import ExtraSelector from "./Selector/ExtraSelector.vue";
+import Title from "./Title.vue";
+import Description from "./Description.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
 const pumpUnitComponents = [PumpSelector,MotorSelector,BellhousingSelector,VibroSelector,BlockSelector,ValveSelector,];
-const otherComponents = [TankSelector,LidSelector,CoolerSelector,FilterSelector,GaugeSelector,OldValveSelector];
+const otherComponents = [TankSelector,LidSelector,FilterSelector,GaugeSelector,CoolerSelector,ExtraSelector,OldValveSelector,];
 const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
 const items = () => [...project.flatMap((_, i) => pumpUnit().map(p => [p, i])), ...other().map((o, j) => [o, j])];
@@ -28,8 +31,9 @@ const setActive = ([name, index]) => {
 </script>
 
 <template>
+  <Title v-bind="{ project, meta, order }" />
   <main>
-    <article class="grid ">
+    <article class="grid">
       <article class="accordion">
         <div v-for="(powerUNIT, i) in project" :key="i">
           <div v-for="selector in pumpUnitComponents" class="accordion-item" :key="selector.__name"
@@ -44,9 +48,10 @@ const setActive = ([name, index]) => {
           <component :is="selector" v-bind="{ project, meta, order }" />
         </div>
       </article>
-      <article class="right">
+      <div class="right mx-auto">
         <Order v-bind="{ project, order }" />
-      </article>
+        <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
+      </div>
     </article>
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
   </main>
@@ -56,7 +61,8 @@ const setActive = ([name, index]) => {
 .grid {
   padding-left: 20px;
   display: grid;
-  grid-template-columns: 60% 35%;
+  grid-template-columns: 60% 37%;
+  column-gap: 3%;
 }
 
 /* .left {
@@ -65,12 +71,12 @@ const setActive = ([name, index]) => {
 
 .right {
   /* width: 100%; */
-  position: fixed;
-  top: 10px;
-  left: 61vw;
+  position: sticky;
+  top: 4vh;
+  /* left: 65vw; */
   max-height: calc(98vh);
   overflow-y: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 /* .accordion {

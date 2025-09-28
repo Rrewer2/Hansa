@@ -12,11 +12,17 @@ const slots = useSlots()
 const setSmth = ({ title, addition, ...rest }) => {
   if (order[Name + index]?.title !== title) {
     order[Name + index] = { title, [Name + 'Data']: { ...rest } };
-    if (addition) Object.entries(addition).forEach(([key, values]) => order[key + index] = { ...values });
+    if (addition) Object.entries(addition).forEach(([key, values]) => {
+      if (order[key + index]?.n) order[key + index].n += values?.n;
+      else order[key + index] = { ...values }
+    });
   }
   else {
     order[Name + index] = {};
-    if (addition) Object.entries(addition).forEach(([key]) => order[key + index] = {});
+    if (addition) Object.entries(addition).forEach(([key, values]) => {
+      if (order[key + index]?.n && order[key + index]?.n - values?.n > 1) order[key + index].n -= values?.n; 
+      else order[key + index] = {}
+    });
   }
   if (after) after();
 };

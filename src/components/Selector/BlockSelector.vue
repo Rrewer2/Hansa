@@ -19,7 +19,7 @@ const filteredBlocks = () => {
   return powerUNIT.unit.flatMap(({ Q, p, DR2type, start: startUnit }, i) => blockData.filter(({ stations, cetop, pressure, DBV, start }) => {
     return (
       (sections.value ? stations === sections.value + +startUnit : stations === powerUNIT.unit[i].HKSH.length + +startUnit) &&
-      (!Q || (cetop === 5 && Q > 34) || (cetop === 3 && Q < 35)) &&
+      (!meta.CETOP || cetop === meta.CETOP) &&
       (pressure > +p + 20) 
       && ((DR2type === 0 && !DBV) || (DR2type === 1 && DBV && !start) || ((DR2type === 2 && DBV && start)))
     )
@@ -44,6 +44,13 @@ const after = () => {
     <InputItem data="length">
       <select v-model="sections" id="sections">
         <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
+          {{ i }}
+        </option>
+      </select>
+    </InputItem>
+    <InputItem data="CETOP">
+      <select v-model="meta.CETOP" id="sections">
+        <option v-for="i in ['', 3, 5]" :value="i">
           {{ i }}
         </option>
       </select>

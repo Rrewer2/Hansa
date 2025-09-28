@@ -118,5 +118,11 @@ export default {
   flangeOut: ['Przyłącze pompy'],
   minimess: ['Przyłącze pomiarowe'],
   clogging: ['Wskaźnik zabrudzenia filtra'],
-  poz: ['Położenie']
+  poz: ['Położenie'],
+  heater: ['Grzałka'],
+  frames: ['Zabudowa'],
+  trays: ['Wanna ociekowa'],
+  count: ['Ilość'],
+  thermostat:['Termostat'],
+  damper: ['Zderzak gumowy'],
 };

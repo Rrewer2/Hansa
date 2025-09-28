@@ -60,7 +60,7 @@ const flangeSelector = () => {
 
   if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
     const flangeOut = flanges.find(({ pressure, LK, QP }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180) && QP >= powerUNIT.unit[0].Q);
-    const getXVROut = () => xvrnw.find(x => ((flangeOut?.thread === x.thread) || (order[`pump${i}`]?.pumpData.out === x.thread)) && pipeP === x.pipe);
+    const getXVROut = () => xvrnw.find(x => ((flangeOut?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.out === x.thread)) && pipeP === x.pipe);
     const xvrOut = getXVROut();
     order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
     order[`xvrPumpOut${i}`] = xvrOut ? { title: xvrOut.title, xvrPumpOutData : xvrOut} : {};
