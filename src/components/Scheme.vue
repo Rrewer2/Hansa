@@ -11,7 +11,7 @@ import { reducedPower, round } from "../services/functions";
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
 const yTank = () => 1300;
-const LTank = 1100;
+const LTank = 1200;
 const controlElemLength = (project) => {
   const sectionLength = 320;
   const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
@@ -33,7 +33,7 @@ const screenSize =
   1650 + project.flatMap(({ unit }) => unit).length * R() * 0.8;
 const tankGap = screenSize - LTank / 2;
 const controlGap = (project) => screenSize - xControl(project).at(-1) / 2;
-const xFilter = tankGap + LTank - 150;
+const xFilter = tankGap + LTank - 126;
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const xFilter = tankGap + LTank - 150;
     )" :x="(c) => controlGap(project) + xControl(project)[c]" :y="100" v-bind="{ unit, c, order }" :R="R()"
       :xT="xFilter" :xM="tankGap + 200" :yM="yTank() - 1.25 * R() - 100" />
     <Tank :x="tankGap" :y="yTank()" :L="LTank" :H="() => screenSize - 150 - yTank()"
-      :pumps="project.flatMap(({ unit }) => unit)">
+      :pumps="project.flatMap(({ unit }) => unit)" :order="order">
       {{ order.tank?.tankData?.Size }}<tspan v-if="order.tank?.tankData?.Size"> L</tspan>
     </Tank>
     <PumpUnit v-for="(pumps, i) in project" :x="tankGap + 200 + 1000 * i" :y="yTank() - 1.25 * R()" :pumps="pumps.unit"

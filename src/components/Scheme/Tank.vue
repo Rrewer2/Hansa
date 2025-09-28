@@ -1,7 +1,8 @@
 <script setup>
+import Heater from "./Heater.vue";
 import ShutOff from "./ShutOff.vue";
 
-const { x, y, L, H, pumps } = defineProps(["x", "y", "L", "H", "pumps"]);
+const { x, y, L, H, pumps, order } = defineProps(["x", "y", "L", "H", "pumps", "order"]);
 // const H = () => H - 100 - y;
 const h = 0;
 const hZlew = 30;
@@ -28,6 +29,9 @@ const s = 8;
   <text :x="x + L - 400" :y="y + H()" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">
     <slot></slot>
   </text>
+  <Heater v-if="order.heater?.title" :x="x" :y="y" :u="u / 2" :H="H">
+    {{ order.heater?.heaterData?.heatingCapacity }} / {{ order.heater?.heaterData?.Voltage }}V
+  </Heater>
 </template>
 
 <style scoped></style>

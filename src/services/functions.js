@@ -30,7 +30,7 @@ const wallThick = (D, p) => (D * 2.6 * p) / 200 / 47;
 
 const tank = (Q) => 2 * Q; //Ємність баку
 export const getStandartTank = ({ tank }, T) =>
-  tankData[tank].filter(({ Size }) => Size >= T); // Розмір баку
+  tankData[tank].filter(({ Size }) => Size >= 0.8*T); // Розмір баку
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
@@ -130,10 +130,11 @@ export const agregatTitle = (project, meta, order) => {
   const motor = P.some(el => el) ? `${P.join("/")}` : '';
   const pump = Q.some(el => el) ? `${Q.join("/")}` : '';
   const pressure = pmax ? `${pmax}` : '';
+  const extra = order.frames?.title ? '-ZAB' : order.trays?.title ? '-W' : '';
   const sp1 = tank && motor ? '-' : '';
   const sp2 = pump && motor ? '-' : '';
   const sp3 = pump && pressure ? '.' : '';
-  return tank +sp1 + motor +sp2 + pump + sp3 + pressure;
+  return tank +sp1 + motor +sp2 + pump + sp3 + pressure + extra;
 };
 
 export const agregatCounting = (project) => getT(getQfromProject(project));
@@ -157,30 +158,18 @@ const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(
   ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
 );
 const getPipe = (Q1, k) => Object.entries(k ? pipesData: pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
+const getTPipe = (Q1, k) => Object.entries(pipesData).filter(el => el[0] !== 'L12-1.5').find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
 export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
   const k = maxRatio(HKSH);
   const pipe_P = getPipeP(Q, DBD, p);
   const pipeP = pipe_P ? pipe_P[0] : "∄";
-  const pipe_T = getPipe(Q, k);
+  const pipe_T = getTPipe(Q, k);
   const pipeT = pipe_T ? pipe_T[0] : "∄";
   const pipe_S = getPipe(Q);
   const pipeS = pipe_S ? pipe_S[0] : "∄";
   const Qback = Q * k;
   const P = Power(Q, getPressure(DBD, p));
   return { pipeP, pipeT, pipeS, Qback, P };
-};
-
-export const pipes = () => {
-  const k = Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
-  const pipe_P = Object.entries(pipesData).find(
-    ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
-  );
-  const pipeP = pipe_P ? pipe_P[0] : "∄";
-  const pipe_T = Object.entries(pipesData).find(([_, { Q }]) => Q > Q1 * k);
-  const pipeT = pipe_T ? pipe_T[0] : "∄";
-  const pipe_S = Object.entries(pipesSData).find(([_, { Q }]) => Q > Q1);
-  const pipeS = pipe_S ? pipe_S[0] : "∄";
-  return { pipeP, PipeT, PipeS }
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
@@ -223,12 +212,13 @@ export const KITtitle = (project, order) => {
   const pump = pumpKeys.length ? `${pumpKeys.map((key) => round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)).join("/")}` : '';
   const pressure = pmax ? `${pmax}` : '';
   const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, 'R'+ blockSections) : '';
+  const extra = order.frames?.title ? '-ZAB' : order.trays?.title ? '-W' : '';
 
   const sp1 = tank && motor ? '-' : '';
   const sp2 = pump && motor ? '-' : '';
   const sp3 = pump && pressure ? '.' : '';
   const sp4 = block && pressure ? '-' : '';
-  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + ' Agregat').replace('undefined', '');
+  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + extra + ' Agregat').replace('undefined', '');
 };
 
 export const getSmthFromProject = (arr) =>

@@ -226,16 +226,16 @@ export const VPipe = {P: [3, 8], T: [1, 3]};
 
 // "średnica zewn. [mm], grubość ścianki [mm], średnica wewn. [mm], ciśn.teoretyczne* [bar] statyczne, dynamiczne";
 export const pipesData = {
-  // 'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 
-'L10-1.5': {p: 282, Q: 12}, 'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 
+  // 'L06-1': {p: 300, Q: 4}, 'L08-1': {p: 248, Q: 5}, 'L10-1.5': {p: 282, Q: 12}, 
+'L12-1.5': {p: 248, Q: 20}, 'L15-1.5': {p: 210, Q: 35}, 'L18-2': {p: 227, Q: 45}, 'L22-2': {p: 194, Q: 75}, 'L28-2.5': {p: 192, Q: 120}, 
 'L35-3': {p: 185, Q: 200}, 'L42-3': {p: 160, Q: 300}, 
 'S06-1.5': {p: 390, Q: 2}, 'S08-2': {p: 390, Q: 4}, 'S10-2': {p: 342, Q: 9}, 'S12-2.5': {p: 351, Q: 20}, 'S14-3.5': {p: 390, Q: 40}, 'S16-3.5': {p: 360, Q: 60}, 
 'S20-4': {p: 340, Q: 120}, 'S25-4': {p: 300, Q: 170}, 'S30-4': {p: 260, Q: 250}, 'S35-4': {p: 230, Q: 350},};
 
 export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},};
 
-export const coolerData = [ {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},}, {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},}, {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},}, {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},}, {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},}, {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},}, {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},}, {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635},},
-].map(({title,...rest})=>({title: 'HKOILAIR'+title, ...rest}));
+export const coolerData = [ {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},}, {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},}, {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},}, {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},}, {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},}, {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},}, {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},}, {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635}},{title: "HKOILAIRHPA30", flow:{min:40, max:160}, performance:{min:0.5,max: 0.77}},{title: "HKOILAIRHPA36", flow:{min:40, max:200}, performance:{min:0.7,max: 1.1}},{title: "HKOILAIRHPA52", flow:{min:80, max:280}, performance:{min:1.1,max: 1.55}},
+].map(({title,...rest})=>({title: 'HKOILAIR'+title, ...rest, addition:{thermostat:{title:'HKTM45A50'},damperCooler:{title:'HKGP4030M10B',n:4}}}));
 
 export const ventilation = [
   {title: "FIBL046FP03002", thread: "Ø41 3 x M5", q: 150},
@@ -541,6 +541,11 @@ const gearPumpWPH = [
     '3PZ4-70/16-2-775': {CC: 70, in: 'LK Ø 51 mm / M 10', out: 'LK Ø 51 mm / M 10', shaft: '1: 8', pmax: 160, holePattern: '128 x 98 - Ø 50.8'},
  }
 ];
+const gearPumpEckerle = { 
+    HKEIPH2008RK03: {CC:7.9, in:'SAE J518C - 3/4″', out: 'SAE J518C - 1/2″', drain: '-', pmax:330, regulator: "-", holePattern:'106.4 - Ø 82.5', shaft: 'Ø 20'},
+    HKEIPH2011RK03: {CC:10.9, in:'SAE J518C - 1″', out: 'SAE J518C - 1/2″', drain: '-', pmax:330, regulator: "-", holePattern:'106.4 - Ø 82.5', shaft: 'Ø 20' },
+    HKEIPH3032RK23: {CC: 32, in:'SAE J518C - 1.1/4″', out: 'SAE J518C - 3/4″', drain: '-', pmax:330, regulator: "-", holePattern:'Ø 146 - Ø 101,6', shaft: 'Ø 25'},
+};
 const pistonPumpRexroth = {
   HKA10VSO18DRG31R: {CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain: 'M16 x 1.5', pmax: 280, regulator: 'Regulator ciśnienia', holePattern: 'Ø 106,4 - Ø 80', shaft: 'Ø18'},
   HKA10VSO18DFR31R: {CC: 18, in: 'SAE J518C - 1″', out: 'SAE J518C - 3/4″', drain: 'M16 x 1.5', pmax: 280, regulator: 'Kontroler wykrywania obciążenia', holePattern: 'Ø 106,4 - Ø 80', shaft: 'Ø18'},
@@ -592,7 +597,7 @@ export const pumpData = {
   .flatMap(([maker, pumpsByGroup]) => pumpsByGroup
     .flatMap((el, group) => Object.entries(el)
       .map(([title, data]) => ({[title]: {title, ...data, maker, group}})))),
-  piston: [['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA]]
+  piston: [['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA], ['ECKERLE', gearPumpEckerle]]
   .flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
     .map(([title, data]) => ({[title]: {title, ...data, shaft: data.shaft || '-', maker}})))
 };
@@ -947,7 +952,7 @@ const singleConnectionPlate = [
   {title: "HKEM103138X3F", cetop: 3, pressure: 350, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKEM105134X2F", cetop: 5, pressure: 120, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
   {title: "HKEM105134X3F", cetop: 5, pressure: 270, threadP: 'G 3/4″ -14', threadT: 'G 3/4″ -14', threadA: 'G 3/4″ -14', threadB: 'G 3/4″ -14', DBV: true},
-  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
+  {title: "K-DR2-06/11-AL", cetop: 3, pressure: 210, threadP: 'G 1/2″ -14', threadT: 'G 1/2″ -14', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true, addition:{SR1: {title: 'K-SR1A-B2/H25S'}}},
   {title: "HKBA201HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA202HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
   {title: "HKBA204HF", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: false},
@@ -1029,6 +1034,7 @@ const createMultipleConnectionPlateDR2 = (suffix) =>
       threadB: 'G 3/8″ -19',
       DBV: true,
       start: suffix === 1 ? false : true,
+      addition:{SR1:{title:'K-SR1A-B2/H25S'},start: suffix === 2 ? {title:'K-SD2E-B2/S2I11'} : {}},//TODO: check this start valve
     };
   });
 const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);
@@ -1044,7 +1050,7 @@ export const blockData = [
   ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
-].map((el) => ({...el, start: !!el.start, addition: {minimess: {title: 'HFMMKR1/4ED'}}}));
+].map((el) => ({...el, start: !!el.start, addition: {...el.addition, minimess: {title: 'HFMMKR1/4ED'}}}));
 
 export const HKHQ = [
   {title: "HKHQ012", type: "012",CETOP: 3, h: 40},
@@ -1192,17 +1198,23 @@ export const getPriority = (KIT) => {
 };
 
 export const lidData = [
-  {title: "M-4205-00000000010", tank: 20, type: 'RA', addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
-  {title: "K-HAGRA20-112RAL", tank: 20, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FIRL064A10NVG3/4'}}},
-  {title: "M-4205-00000000012", tank: 30, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
-  {title: "M-4205-00000000005", tank: 44, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13HL: {title: 'XVEWONW13HL'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: "M-4205-00000000010", tank: 20,motor: 100, type: 'RA', addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FISPR55P10VG3/4'}}},
+  {title: "M-4205-00000000010", tank: 20,motor: 112, type: 'RA', addition: {XSWNW13HL: {title: 'XSVNW13HL'},XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L',n:2},XVEWONW13HL: {title: 'XVEWONW13HL',n:2},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation: {title: 'FIBL046FP10002'},filter:{title:'FISPR55P10VG3/4'}}},
+  {title: "K-HAGRA20-112RAL", tank: 20,motor:100, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title:'XSWNW13HL'},XSVNW13HL: {title:'XSVNW13HL'},DMONW13L: {title:'DMONW13L',n:2},XVEWONW13HL: {title:'XVEWONW13HL',n:3},namePlate: {title:'K-TABLICZKA-GRAWER'},ventilation:{title: 'FIBL046FP10002'},filter:{title:'FISPR55P10VG3/4'},xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'XVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},}},
+  {title: "K-HAGRA20-112RAL", tank: 20,motor:112, type: 'RA', addition: {HKCBS1200000: {title: 'HKCBS1200000'},MR01: {title: 'K-HAG.MR01'},XSWNW13HL: {title:'XSWNW13HL'},XSVNW13HL: {title:'XSVNW13HL'},DMONW13L: {title:'DMONW13L',n:2},XVEWONW13HL: {title:'XVEWONW13HL',n:3},namePlate: {title:'K-TABLICZKA-GRAWER'},ventilation:{title: 'FIBL046FP10002'},filter:{title:'FISPR55P10VG3/4'},xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'XVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},}},
+  {title: "M-4205-00000000012",tank: 30,motor:112, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'},filter:{title:'FISPR48A10VG3/4'}}},
+  {title: "M-4205-???????????",tank: 30,motor:112, type: 'RA', addition: {XSVNW13HL: {title: 'XSVNW13HL'},DMONW13L: {title: 'DMONW13L'},'VHR90-3/4ED': {title: 'VHR90-3/4ED'},XVEWONW13HL: {title: 'XVEWONW13HL',n:4},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: "M-4205-00000000005",tank: 44,motor:112, type: 'RA', addition: {xvrPumpOut0: {title: 'XVRNW13HLED'},xvrBlockIn0: {title: 'AOVRNW13HLED'},xvrBlockOut0: {title: 'XVRNW13HLED'},XSVNW13HL: {title: 'XSVNW13HL'},'VHR90-1ED': {title: 'VHR90-1ED'},'VHR90-1/2ED': {title: 'VHR90-1/2ED'},XVEWONW13HL: {title: 'XVEWONW13HL'},namePlate: {title: 'K-TABLICZKA-GRAWER'},ventilation:{title:'FIBL080GP03'}}},
+  {title: 'M-4236-RA70132B5.1', tank: 70,motor:132, type: 'RA',addition: {adapter:{title:'K-HAGAP-NG10'},ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: 'M-4236-HAGRA70-112', tank: 70,motor:112, type: 'RA',addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
+  {title: 'M-4236-HAGRA70-132', tank: 70,motor:132, type: 'RA',addition: {ventilation:{title: 'FIBL116FP03002'},VHR34:{title:'VHR90-3/4ED',n:2},VHR12:{title:'VHR90-1/2ED'},namePlate: {title: 'K-TABLICZKA-GRAWER'}}},
 ];
 
 export const xvrnw = [
-  // {title: "XVRNW08HL1/8ED", pipe: 'L10-1.5', thread: 'G 1/8″ -28'},
-  // {title: "XVRNW08HLED", pipe: 'L10-1.5', thread: 'G 1/4″ -19'},
-  // {title: "XVRNW08HL1/2ED", pipe: 'L10-1.5', thread: 'G 1/2″ -14'},
-  // {title: "XVRNW08HL3/8ED", pipe: 'L10-1.5', thread: 'G 3/8″ -19'},
+  {title: "XVRNW08HL1/8ED", pipe: 'L10-1.5', thread: 'G 1/8″ -28'},
+  {title: "XVRNW08HLED", pipe: 'L10-1.5', thread: 'G 1/4″ -19'},
+  {title: "XVRNW08HL1/2ED", pipe: 'L10-1.5', thread: 'G 1/2″ -14'},
+  {title: "XVRNW08HL3/8ED", pipe: 'L10-1.5', thread: 'G 3/8″ -19'},
   
   {title: "XVRNW10HL1/8", pipe: 'L12-1.5', thread: 'G 1/8″ -28'},
   {title: "XVRNW10HL1/4ED", pipe: 'L12-1.5', thread: 'G 1/4″ -19'},
@@ -1275,3 +1287,10 @@ export const xvrnw = [
   {title: "XVRNW32HS11/4ED", pipe: 'S38-4', thread: 'G 1.1/4″ -11'},
   {title: "XVRNW32HSED", pipe: 'S38-4', thread: 'G 1.1/2″ -11'},
 ];
+
+export const extra = {
+  heater: [{title: 'HKTEHM1000',heatingCapacity:'1,000 W', Voltage: 230}, {title: 'HKEH1460650TA3X4',heatingCapacity:'1,460 W', Voltage: 400}, {title: 'HKEH14606503X4',heatingCapacity:'1,460 W', Voltage: 400}],
+  frames: [{title: "M-4236-HAGZAB04.01", tank: 70,addition:{SKM:{title:'SKM13IR2FS'},SKS:{title:'SKS13IR2FS'},MZUB:{title:'SKMZUBS2FS'},SZUB:{title:'SKSZUBS2FS'}}},{title:'M-4236-HAGZAB05.01', tank: 130}],
+  trays: [{title: 'K-HAG.OEWBAKRA30', tank:30},{title: 'HKOEWBAKRA30', tank:30},{title: 'K-HAG.OEWBAKRA44', tank:44},{title: 'HKOEWBAKRA44', tank:40},{title: 'K-HAG.OEWBAKRA701', tank:70},{title: 'HKOEWBAKRA70', tank:70},{title: "M-4236-HAGZAB-W125", tank: 70,addition:{damperTrays: {title:'HKGP4030M10B',n:4}}},{title: 'K-HAG.OEWBAKRA1301', tank:130}],
+};
+
