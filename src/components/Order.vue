@@ -28,7 +28,7 @@ const normalize = () => {
   return getPriority(KIT);
 };
 const magic = ref(false);
-const margin = ref(52.065);
+const margin = ref(50);
 const zlo = ref(0);
 async function loadData() {
   magic.value = true;
