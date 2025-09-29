@@ -46,7 +46,7 @@ const yHKHMP = (data) => {
 const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
 </script>
 
-<template>
+<template>{{ y }}
   <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
   <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y + 300"
     v-bind="{ sl: getSL(unit), data }" />
