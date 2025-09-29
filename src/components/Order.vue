@@ -28,8 +28,8 @@ const normalize = () => {
   return getPriority(KIT);
 };
 const magic = ref(false);
-const margin = ref(50);
-const zlo = ref(499,99);
+const margin = ref(52.065);
+const zlo = ref(0);
 async function loadData() {
   magic.value = true;
   try {
@@ -56,6 +56,15 @@ const totalPrice = () => {
   }
   return res;
 };
+const netto = () => {
+  // `m'/100 = 1 - c / (c / (1 - margin/100) - zlo)`
+  // const c = totalPrice();
+  // const m1 = 1 - totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value);
+  // console.log('m1 :>> ', m1);
+  // console.log('totalPrice()/(1-margin.value/100) :>> ', totalPrice()/(1-margin.value/100));
+  // console.log('totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value) :>> ', totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value));
+  return (zlo.value + totalPrice() / (totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value)));
+};
 </script>
 
 <template>
@@ -73,10 +82,11 @@ const totalPrice = () => {
     <h2 class="final mt-20">
       Koszty {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice()) }}
     </h2>
-    <div class="final mt-20">ZLO1 <input v-model="zlo" type="number" min="0" /></div>
+    <!-- <div class="final mt-20">ZLO1 <input v-model="zlo" type="number" min="0" /></div> -->
     <div class="mt-20">Marża <input v-model="margin" type="number" min="0" /></div>
     <h2 class="final mt-20">
-      Netto {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() * (1 - (totalPrice()*(1-margin/100)))/(totalPrice()-zlo*(1-margin/100)) + zlo) }}
+      Netto {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(zlo + totalPrice() /
+        (totalPrice() / (totalPrice() / (1 - margin / 100) - zlo))) }}
     </h2>
   </div>
 </template>
