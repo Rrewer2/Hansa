@@ -43,17 +43,14 @@ const { project, order } = defineProps(['project', "order"]);
     <h5 v-if="order.filter">Filtr zlewowy {{ order.filter?.filterData?.filterGrade ?? 10 }} (µm)</h5>
     <h5>Olej mineralny HLP zgodnie z DIN 51524 część 2, ISO VG 46</h5>
     <h5>Zakres lepkości 12 do 800 mm²/s (zalecany zakres 20 do 100)</h5>
-    <!-- <h5>Rozdzielacz w położeniu normalnym P->T</h5>
-    <h5>Sterowanie rozdzielaczem - 2 cewki 24VDC/1,3A</h5>
     <h5>Do agregatu jest załączona deklaracja włączenia maszyny nieukończonej oraz instrukcja obsługi ze schematem
       hydraulicznym i rysunkami złożeniowymi głównych podzespołów.</h5>
-    <h5>Agregat jest przeznaczony do sterowania 1 siłownikiem.</h5>
-    <h5>Przewidywany termin dostawy: do 2 tygodni od daty zamówienia.</h5>
+    <h5>Przewidywany termin dostawy: od 2 tygodni od daty zamówienia.</h5>
     <h5>Dokumentacja 3D dostępna po zamówieniu.</h5>
     <h5>Oferta nie obejmuje sterowania elektrycznego agregatu.
       Oferta nie obejmuje elementów instalacji wymaganych do połączenia poszczególnych bloków roboczych.
       Instalacja połączeniowa może być przedmiotem kolejnej oferty po udostępnieniu przez klienta informacji jej
-      dotyczącej.</h5> -->
+      dotyczącej.</h5>
   </article>
 </template>
 
