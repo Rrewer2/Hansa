@@ -48,7 +48,7 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
 
 <template>
   <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
-  <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y - 5 + unit.HKSH.length * 10"
+  <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y + 300"
     v-bind="{ sl: getSL(unit), data }" />
   <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length" :start="unit.start"
     :startValve="unit.startValve" v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
