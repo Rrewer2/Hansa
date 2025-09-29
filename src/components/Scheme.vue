@@ -51,10 +51,12 @@ const xFilter = tankGap + LTank - 126;
       :text="order['motor' + i]?.motorData?.power ? order['motor' + i].motorData.power : round(reducedPower(pumps.unit))">
       {{ order['motor' + i]?.motorData?.n || pumps.n }}
     </PumpUnit>
-    <FIBL :x="tankGap + LTank - 400" :y="yTank()" :a="R() / 1.5" />
+    <FIBL :x="tankGap + LTank - 450" :y="yTank()" :a="R() / 1"
+      :text="(order.ventilation?.title?.match(/(P10|P03)/)?.[0] ?? 10) + 'µm'" />
     <NTM :x="tankGap + LTank - 300" :y="yTank()" :a="R() / 1.5" />
     <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 180 : yTank() - 50" :a="R() / 1.5" />
-    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 180 : yTank()" :a="R()" />
+    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 180 : yTank() - 20" :a="R()"
+      :text="(order.filter?.filterData?.filterGrade ?? 10) + 'µm'" />
   </svg>
 </template>
 
