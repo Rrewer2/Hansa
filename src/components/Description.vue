@@ -17,7 +17,7 @@ const { project, order } = defineProps(['project', "order"]);
     <h5>Częstotliwość silnika 50 Hz</h5>
     <h5>Napięcie silnika {{ order['motor' + 0]?.motorData?.U ?? '' }} {{ order['motor' + 0]?.motorData?.U === '230V'
       ? 'jednofazowy' : 'trójfazowy' }}</h5>
-    <h5>Kierunek obrotów - {{ order['pump' + 0]?.pumpData?.out.startsWith('Bore') ? '↺' : '↻' }}</h5>
+    <h5>Kierunek obrotów - {{ order['pump' + 0]?.pumpData?.out.startsWith('Bore') ? '↺ lewy' : '↻ prawy' }}</h5>
 
     <h5 v-if="project[0]?.unit[0]?.p">Maks. ciśnienie nastawcze {{ project[0]?.unit[0]?.p ?? '' }} bar</h5>
 
