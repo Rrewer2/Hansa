@@ -19,7 +19,7 @@ const { x, y, unit, R, xT, xM, yM, c, order } = defineProps([
   "c",
   "order"
 ]);
-const sectionLength = 320;
+const sectionLength = 350;
 const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
 const getSL1 = (unit) =>
   getSL(unit) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type);
