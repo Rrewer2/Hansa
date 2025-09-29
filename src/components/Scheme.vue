@@ -7,6 +7,7 @@ import NTM from "./Scheme/NTM.vue";
 import Tank from "./Scheme/Tank.vue";
 import FIBL from "./Scheme/FIBL.vue";
 import { reducedPower, round } from "../services/functions";
+import Tray from "./Scheme/Tray.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
@@ -57,6 +58,7 @@ const xFilter = tankGap + LTank - 126;
     <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 180 : yTank() - 50" :a="R() / 1.5" />
     <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 180 : yTank() - 20" :a="R()"
       :text="(order.filter?.filterData?.filterGrade ?? 10) + 'µm'" />
+    <Tray v-if="order.trays?.title" :x="tankGap" :y="screenSize - 150" :L="LTank" />
   </svg>
 </template>
 
