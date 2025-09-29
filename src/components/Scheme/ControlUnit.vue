@@ -25,7 +25,7 @@ const getSL1 = (unit) =>
   getSL(unit) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type);
 const getSh = (unit) => getSL(unit) * 0.35;
 const xV = (unit, i) => x(c) + getSL1(unit) + (i + unit.start) * (getSL(unit) * 1.1);
-const yV = y + 300 + getSh(unit) + getSh(unit) / 10;
+const yV = () => y + 300 + getSh(unit) + getSh(unit) / 10;
 const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
 const yValve = (data) => {
   if (data.throttle && data.check && data.directPress) return 3 * getSh(unit);
@@ -47,19 +47,22 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
 </script>
 
 <template>
+  <text :x="x" :y="y" font-family="Arial" :font-size="0" fill="black" text-anchor="middle">
+    {{ y }}
+  </text>
   <Pipes v-if="!unit.same" v-bind="{ x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT }" />
   <HKSH v-if="!unit.same" v-for="(data, i) in unit.HKSH" :x="xV(unit, i)" :y="y + 300"
     v-bind="{ sl: getSL(unit), data }" />
   <DR2 v-if="!unit.same" :x="x(c)" :y="y + 300" :type="unit.DR2type" :N="unit.HKSH.length" :start="unit.start"
     :startValve="unit.startValve" v-bind="{ sl: getSL(unit), sl1: getSL1(unit), sh: getSh(unit) }" :text="unit.p" />
   <HKHR v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)" :y="yV" :r="getSL(unit) / 30" />
+    :x="xV(unit, i)" :y="yV()" :r="getSL(unit) / 30" />
   <HKHQ v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)" :y="yV + yHKHQ(data)" :r="getSL(unit) / 30" />
+    :x="xV(unit, i)" :y="yV() + yHKHQ(data)" :r="getSL(unit) / 30" />
   <HKHMP v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
-    :x="xV(unit, i)" :y="yV + yHKHMP(data)" :r="getSL(unit) / 30" />
+    :x="xV(unit, i)" :y="yV() + yHKHMP(data)" :r="getSL(unit) / 30" />
   <Valve v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), data }" :x="xV(unit, i)"
-    :y="yV + yValve(data)" />
+    :y="yV() + yValve(data)" />
 
   <DBD v-if="unit.DBD" :x="x(c) - getSh(unit)" :xSame="x(c - 1) - getSh(unit) / 2" :y="y + 300 + R * 8"
     :a="getSL(unit) / 6" :unit="unit" :line="() => getSh(unit) / 2" />
