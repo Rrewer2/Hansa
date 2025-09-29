@@ -31,7 +31,7 @@ const { id, unit, ...rest } = project[k];
               {{ item }}
             </option>
           </select>
-          <select v-if="ind === 'P'" v-model="project[k].P" @change="() => setPressure(unit, P)"
+          <select v-if="ind === 'P'" v-model="project[k].P" @change="() => setPressure(unit, project[k].P)"
             :disabled="order[`motor${k}`]?.title" :id="ind">
             <option v-for="item in motorData" :value="item">{{ item }}</option>
           </select>
