@@ -204,7 +204,8 @@ export const KITtitle = (project, order) => {
   const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
   const obj = {};
   const blockKeys = Object.keys(order).filter((key) => key.includes("block"));
-  const blockSections = blockKeys.length ? `${blockKeys.map((key) => order[key]?.blockData?.stations).join("/")}` : '';
+  const start = Object.keys(order).filter((key) => key.includes("start"));
+  const blockSections = blockKeys.length ? `${blockKeys.map((key, i) => order[key]?.blockData?.stations - order[start[i]]?.title.startsWith('HK4')).join("/")}` : '';
   Object.keys(order).filter((key) => key.match(/valve\d+/)).map((key) => order[key]?.valveData?.spool).forEach((a) => obj[a] ? obj[a]++ : obj[a] = 1);
 
   const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : '';

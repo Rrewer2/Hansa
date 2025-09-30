@@ -86,7 +86,7 @@ const netto = () => {
     <div class="mt-20">Marża <input v-model="margin" type="number" min="0" /></div>
     <h2 class="final mt-20">
       Netto {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(zlo + totalPrice() /
-        (totalPrice() / (totalPrice() / (1 - margin / 100) - zlo))) }}
+        (totalPrice() / (totalPrice() / (1 - margin / 100) - zlo)) || 0) }}
     </h2>
   </div>
 </template>
