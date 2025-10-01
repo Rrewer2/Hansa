@@ -6,10 +6,12 @@ import { text } from "../../services/text";
 import CopyText from "./CopyText.vue";
 
 const key = ref();
+const orderTitle = ref(null);
 
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
 const slots = useSlots()
 const setSmth = ({ title, addition, ...rest }) => {
+  orderTitle.value = orderTitle.value === title ? null : title
   if (order[Name + index]?.title !== title) {
     order[Name + index] = { title, [Name + 'Data']: { ...rest } };
     if (addition) Object.entries(addition).forEach(([key, values]) => {
@@ -78,7 +80,7 @@ if (!logic().length) order[Name + index] = {};
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
-              :checked="title === order[Name + index]?.title"
+              :checked="title === orderTitle" :value="title" v-model="orderTitle"
               :disabled="order[Name + index]?.title && order[Name + index]?.title !== title" />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank"

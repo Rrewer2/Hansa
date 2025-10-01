@@ -42,6 +42,12 @@ const filteredPumps = () => {
 };
 
 const flangeSelector = () => {
+  order[`flangeIn${i}`] = {};
+  order[`flangeOut${i}`] = {};
+  order[`xvrPumpIn${i}`] = {};
+  order[`xvrPumpOut${i}`] = {};
+  order[`filter`] = {};
+  order[`xvrFilterT`] = {};
   const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith('Bore') ? flangesPP : flanges;
   const flangeIn = flangesData.find(({ LK, QS }) => LK === order[`pump${i}`]?.pumpData?.in && QS >= powerUNIT.unit[0].Q);
   const { pipeP, pipeS } = pumpCounting(powerUNIT.unit[i]);
@@ -52,6 +58,7 @@ const flangeSelector = () => {
   order[`xvrPumpIn${i}`] = xvrIn ? { title: xvrIn.title, xvrPumpInData: xvrIn} : {};
 
   if (!order[`pump${i}`]?.pumpData?.out?.startsWith('Bore')) {
+    if(meta.tank === 'KS') meta.tank = 'RA';
     const flangeOut = flanges.find(({ pressure, LK, QP }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180) && QP >= powerUNIT.unit[0].Q);
     const getXVROut = () => xvrnw.find(x => ((flangeOut?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.out === x.thread)) && pipeP === x.pipe);
     const xvrOut = getXVROut();
@@ -60,8 +67,6 @@ const flangeSelector = () => {
     if(powerUNIT.mount === 'B34') powerUNIT.mount = 'B35';
     if(!powerUNIT.mount || powerUNIT.mount === 'B14') powerUNIT.mount = 'B5';
   } else {
-    order[`flangeOut${i}`] = {};
-    order[`xvrPumpOut${i}`] = {};
     if(powerUNIT.mount === 'B35') powerUNIT.mount = 'B34';
     if(!powerUNIT.mount || powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
     meta.tank = 'KS';
@@ -71,7 +76,7 @@ const flangeSelector = () => {
 const selectedPump = () => {
   const currentQ = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
   if (currentQ !== "") powerUNIT.unit[0].Q = currentQ;
-  group.value = order[`pump${i}`]?.pumpData?.group || '';
+  // group.value = order[`pump${i}`]?.pumpData?.group || '';
   flangeSelector();
 };
 </script>

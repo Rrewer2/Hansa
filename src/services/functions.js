@@ -12,7 +12,7 @@ export const round = (num, param = 10) =>
   typeof num === "string"
     ? num
     : num === Infinity || isNaN(num)
-      ? "-"
+      ? ""
       : Math.round(num * param) / param;
 
 export const getId = (key) => key + Date.now();
