@@ -28,7 +28,7 @@ const { project, order } = defineProps(['project', "order"]);
       <h5 v-for="item, i in Object.keys(order).filter(key => key.startsWith('valve0'))">
         {{ i + 1 }} Zawór elektromagnetyczny suwak {{ order[item]?.valveData?.spool }}
       </h5>
-      <h5>Napięcie magnetyczne - 24 VDC 1,3A</h5>
+      <h5>Napięcie magnetyczne - 24 VDC {{ order['block' + 0]?.blockData?.cetop === 5 ? '1.5' : '1.3' }} A</h5>
     </div>
 
     <h5 v-if="order.tank?.tankData?.Size">
@@ -39,7 +39,7 @@ const { project, order } = defineProps(['project', "order"]);
     <h5 v-if="order.heater?.title">Podgrzewacz zbiornika</h5>
     <h5 v-if="order.levelTemp?.title">Wyłącznik poziomowo-temperaturowy</h5>
     <h5 v-if="order.ventilation?.title">Filtr napowietrzający {{ order.ventilation?.title?.match(/(P10|P03)/)?.[0] ?? 10
-      }}
+    }}
       (µm)
     </h5>
     <h5 v-if="order.filter?.title">Filtr zlewowy {{ order.filter?.filterData?.filterGrade ?? 10 }} (µm)</h5>
