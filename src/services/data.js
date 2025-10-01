@@ -320,12 +320,12 @@ export const pumpGroups = [[0.25,2.3],[1,9.8],[4.5,36],[20,87],[60,150]];
 const gearPumpAPF = [
   {},
   {
-    HK1PF21L01Z01LBF: {CC: 2.1, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 200, holePattern: '40 x 40 - Ø 32'},
-    HK1PF27L01Z01LBF: {CC: 2.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 200, holePattern: '40 x 40 - Ø 32'},
-    HK1PF37L01Z01LBF: {CC: 3.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 200, holePattern: '40 x 40 - Ø 32'},
-    HK1PF42L01Z01LBF: {CC: 4.2, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 200, holePattern: '40 x 40 - Ø 32'},
-    HK1PF58L01Z01LBF: {CC: 5.8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 160, holePattern: '40 x 40 - Ø 32'},
-    HK1PF80L01Z01LBF: {CC: 8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: 'Ø7', pmax: 160, holePattern: '40 x 40 - Ø 32'},
+    HK1PF21L01Z01LBF: {CC: 2.1, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 200, holePattern: '40 x 40 - Ø 32'},
+    HK1PF27L01Z01LBF: {CC: 2.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 200, holePattern: '40 x 40 - Ø 32'},
+    HK1PF37L01Z01LBF: {CC: 3.7, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 200, holePattern: '40 x 40 - Ø 32'},
+    HK1PF42L01Z01LBF: {CC: 4.2, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 200, holePattern: '40 x 40 - Ø 32'},
+    HK1PF58L01Z01LBF: {CC: 5.8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 160, holePattern: '40 x 40 - Ø 32'},
+    HK1PF80L01Z01LBF: {CC: 8, in: 'G 3/8″ -19', out: 'Bore Ø 9 mm with O-Ring', shaft: '1: 8', pmax: 160, holePattern: '40 x 40 - Ø 32'},
  },
   {
     HK2APF04F02Z41RSS: {CC: 4, in: 'LK Ø 30 mm / M 6', out: 'LK Ø 30 mm / M 6', shaft: '1: 8', pmax: 200, holePattern: '96.2 x 71.5 - Ø 36.5'},
@@ -596,7 +596,7 @@ export const pumpData = {
   gears: [['VIVOLO', gearPumpVivolo], ['CASAPPA', gearPumpCasappa], ['REXROTH', gearPumpRexroth], ['WPH', gearPumpWPH], ['CHINA', gearPumpAPF]]
   .flatMap(([maker, pumpsByGroup]) => pumpsByGroup
     .flatMap((el, group) => Object.entries(el)
-      .map(([title, data]) => ({[title]: {title, ...data, maker, group}})))),
+      .map(([title, data]) => ({[title]: {title: title.startsWith('HK') ? title : 'K-' + title, ...data, maker, group}})))),
   piston: [['REXROTH', pistonPumpRexroth], ['KAWASAKI', pistonPumpKawasaki], ['DAIKIN', pistonPumpDaikin], ['HIDROCEL', pistonPumpPBA], ['ECKERLE', gearPumpEckerle]]
   .flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup)
     .map(([title, data]) => ({[title]: {title, ...data, shaft: data.shaft || '-', maker}})))
@@ -1034,7 +1034,7 @@ const createMultipleConnectionPlateDR2 = (suffix) =>
       threadB: 'G 3/8″ -19',
       DBV: true,
       start: suffix === 1 ? false : true,
-      addition:{SR1:{title:'K-SR1A-B2/H25S'},start: suffix === 2 ? {title:'K-SD2E-B2/S2I11'} : {}},//TODO: check this start valve
+      addition:{SR1:{title:'K-SR1A-B2/H25S'},start: suffix === 2 ? {title:'K-SD2E-B2/S2I11'} : {}},
     };
   });
 const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);

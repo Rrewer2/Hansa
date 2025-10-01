@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { pumpData, freqData, flanges, flangesPP } from "../../services/data";
-import { getQ, getVFU, round } from "../../services/functions";
+import { pumpData, freqData, flanges, flangesPP, xvrnw } from "../../services/data";
+import { getQ, getVFU, pumpCounting, round } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -42,21 +42,36 @@ const filteredPumps = () => {
 };
 
 const flangeSelector = () => {
-  const powerPack = order[`pump${i}`]?.pumpData?.out?.startsWith('Bore');
-  const flangesData = powerPack ? flangesPP : flanges;
-  const flangeIn = flangesData.find(({ LK }) => LK === order[`pump${i}`]?.pumpData?.in);
-  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn } : {};
+  const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith('Bore') ? flangesPP : flanges;
+  const flangeIn = flangesData.find(({ LK, QS }) => LK === order[`pump${i}`]?.pumpData?.in && QS >= powerUNIT.unit[0].Q);
+  const { pipeP, pipeS } = pumpCounting(powerUNIT.unit[i]);
+  const getXVRIn = () => xvrnw.find(x => ((flangeIn?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.in === x.thread)) && pipeS === x.pipe);
 
-  if (!powerPack) {
-    const flangeOut = flanges.find(({ pressure, LK }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180));
-    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut } : {};
-  } else order[`flangeOut${i}`] = {};
+  const xvrIn = getXVRIn();
+  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
+  order[`xvrPumpIn${i}`] = xvrIn ? { title: xvrIn.title, xvrPumpInData: xvrIn} : {};
+
+  if (!order[`pump${i}`]?.pumpData?.out?.startsWith('Bore')) {
+    const flangeOut = flanges.find(({ pressure, LK, QP }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180) && QP >= powerUNIT.unit[0].Q);
+    const getXVROut = () => xvrnw.find(x => ((flangeOut?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.out === x.thread)) && pipeP === x.pipe);
+    const xvrOut = getXVROut();
+    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
+    order[`xvrPumpOut${i}`] = xvrOut ? { title: xvrOut.title, xvrPumpOutData : xvrOut} : {};
+    if(powerUNIT.mount === 'B34') powerUNIT.mount = 'B35';
+    if(!powerUNIT.mount || powerUNIT.mount === 'B14') powerUNIT.mount = 'B5';
+  } else {
+    order[`flangeOut${i}`] = {};
+    order[`xvrPumpOut${i}`] = {};
+    if(powerUNIT.mount === 'B35') powerUNIT.mount = 'B34';
+    if(!powerUNIT.mount || powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
+    meta.tank = 'KS';
+  }
 };
 
 const selectedPump = () => {
   const currentQ = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
-  if (!(currentQ === "-")) powerUNIT.unit[0].Q = currentQ;
-  //group.value = order[`pump${i}`]?.pumpData?.group;
+  if (currentQ !== "") powerUNIT.unit[0].Q = currentQ;
+  group.value = order[`pump${i}`]?.pumpData?.group || '';
   flangeSelector();
 };
 </script>
