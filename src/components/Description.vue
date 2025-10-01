@@ -37,10 +37,12 @@ const { project, order } = defineProps(['project', "order"]);
 
     <h5 v-if="order.cooler?.title">Chłodnica olej-powietrze</h5>
     <h5 v-if="order.heater?.title">Podgrzewacz zbiornika</h5>
-    <h5 v-if="order.levelTemp">Wyłącznik poziomowo-temperaturowy</h5>
-    <h5 v-if="order.ventilation">Filtr napowietrzający {{ order.ventilation.title.match(/(P10|P03)/)?.[0] ?? 10 }} (µm)
+    <h5 v-if="order.levelTemp?.title">Wyłącznik poziomowo-temperaturowy</h5>
+    <h5 v-if="order.ventilation?.title">Filtr napowietrzający {{ order.ventilation?.title?.match(/(P10|P03)/)?.[0] ?? 10
+      }}
+      (µm)
     </h5>
-    <h5 v-if="order.filter">Filtr zlewowy {{ order.filter?.filterData?.filterGrade ?? 10 }} (µm)</h5>
+    <h5 v-if="order.filter?.title">Filtr zlewowy {{ order.filter?.filterData?.filterGrade ?? 10 }} (µm)</h5>
     <h5>Olej mineralny HLP zgodnie z DIN 51524 część 2, ISO VG 46</h5>
     <h5>Zakres lepkości 12 do 800 mm²/s (zalecany zakres 20 do 100)</h5>
     <h5>Do agregatu jest załączona deklaracja włączenia maszyny nieukończonej oraz instrukcja obsługi ze schematem
