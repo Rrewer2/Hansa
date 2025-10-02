@@ -942,7 +942,7 @@ export const dampingRail = [
   {title: "HKDLMDL180M", size: 180},
   {title: "HKDLMDL180L", size: 180},
   {title: "HKDLMDL200L", size: 200},
-];
+].map(el => ({...el, addition:{vibro1:{title:el.title}}}));
 const singleConnectionPlate = [
   {title: "HKES3B38X2F", cetop: 3, pressure: 210, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},
   {title: "HKES3B38X3F", cetop: 3, pressure: 350, threadP: 'G 3/8″ -19', threadT: 'G 3/8″ -19', threadA: 'G 3/8″ -19', threadB: 'G 3/8″ -19', DBV: true},

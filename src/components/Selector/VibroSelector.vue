@@ -19,7 +19,7 @@ const filteredVibro = () => {
   if (powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B5") {
     return gasketPump.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
   }
-  return dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value)?.map(el => ({...el, addition:{vibro1:{title:el.title}}}));
+  return dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
 };
 </script>
 

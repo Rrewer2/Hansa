@@ -6,9 +6,10 @@ import { text } from "../../services/text";
 import CopyText from "./CopyText.vue";
 
 const key = ref();
-const orderTitle = ref(null);
 
 const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
+
+const orderTitle = ref(order[Name + index]?.title || null);
 const slots = useSlots()
 const setSmth = ({ title, addition, ...rest }) => {
   orderTitle.value = orderTitle.value === title ? null : title
@@ -23,7 +24,7 @@ const setSmth = ({ title, addition, ...rest }) => {
     order[Name + index] = {};
     if (addition) Object.entries(addition).forEach(([key, values]) => {
       if (order[key + index]?.n && order[key + index]?.n - values?.n > 1) order[key + index].n -= values?.n; 
-      else order[key + index] = {}
+      else order[key + index] = {};
     });
   }
   if (after) after();

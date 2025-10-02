@@ -7,7 +7,7 @@ const { project, order } = defineProps(['project', "order"]);
   <article>
     <h5>Parametry agregatu:</h5>
     <h5>Wydajność pompy {{ order['pump' + 0]?.pumpData?.Q ?? '' }} L/min ({{ order['pump' + 0]?.pumpData?.CC ?? '' }}
-      cm³)
+      cm³/obr)
     </h5>
     <h5>Konstrukcja pompy - {{ order['pump' + 0]?.pumpData?.shaft ? 'Pompa z zewn. kołem zębatym' : `Wielotłokowa pompa
       osiowa`}}</h5>

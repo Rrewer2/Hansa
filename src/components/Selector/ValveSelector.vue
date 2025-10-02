@@ -34,13 +34,14 @@ const boltStart = () => {
 
 <template>
   <div v-for="item, index in filteredValves()">
-    <InputItem data="valve">
+    <!-- <InputItem data="valve">
       <select v-model="powerUNIT.unit[i].HKSH[index].spool" :id="'valve' + i + index">
         <option v-for="i in spoolTypes" :value="i">
           {{ i }}
         </option>
       </select>
-    </InputItem>
+    </InputItem> TODO: fix error in multiple pumps-->
+
     <div v-for="_, key in item">
       <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
         :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
