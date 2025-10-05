@@ -210,7 +210,7 @@ export const KITtitle = (project, order) => {
 
   const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : '';
   const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : '';
-  const pump = pumpKeys.length ? `${pumpKeys.map((key) => round(getQ(order[key]?.pumpData?.CC, order[key]?.pumpData?.n), 1)).join("/")}` : '';
+  const pump = pumpKeys.length ? `${pumpKeys.map((key, ind) => round(getQ(order[key]?.pumpData?.CC, order['motor'+ind]?.motorData?.n), 1)).join("/")}` : '';
   const pressure = pmax ? `${pmax}` : '';
   const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, 'R'+ blockSections) : '';
   const extra = order.frames?.title ? '-ZAB' : order.trays?.title ? '-W' : '';
@@ -219,7 +219,7 @@ export const KITtitle = (project, order) => {
   const sp2 = pump && motor ? '-' : '';
   const sp3 = pump && pressure ? '.' : '';
   const sp4 = block && pressure ? '-' : '';
-  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + extra + ' Agregat').replace('undefined', '');
+  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + extra).replace('undefined', '');
 };
 
 export const getSmthFromProject = (arr) =>

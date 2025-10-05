@@ -211,8 +211,9 @@ const enginesT3A=[
   {title: "K-T3A-132M3-4", size: 132,power: 11,meta: "Silnik prog. T3A 132M3-4, B35,11kW"}
 ].map(({meta, ...rest}) => ({...rest, U: meta.includes('230/400V') ? '230/400V' : '400V', n: '1440', meta}));
 
+const motorShaft = {63:11, 71:14, 80:19, 90:24, 100:28, 112:28, 132:38, 160:42, 180:48, 200:55, 225:60, 250:65, 280:75, 315:80};
 export const motorSizes = ['', 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 225, 250, 280, 315].sort((a, b) => a - b);
-export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title, ...rest})=>({title,...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0] || 'B35'}));
+export const enginesData = [...enginesK400,...enginesK230,...enginesT3A,...enginesHK,...enginesACMotoren].map(({meta, title, size, ...rest})=>({title, size, ...rest,meta, mount: meta.match(/B14|B34|B35|B5/)?.[0] || title.match(/B14|B34|B35|B5/)?.[0] || 'B35', shaft: motorShaft[size]}));
 export const engineMountData = ['', 'B5', 'B35', 'B14', 'B34'];
 
 export const screwArr = [12.9, 10.9, 8.8, 6.8, 6.6, 5.8];

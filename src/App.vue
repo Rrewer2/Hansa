@@ -68,7 +68,7 @@ const meta = ref({
   tank: "RA",
   cooler: 0,
   pumpType: "gears",
-  CETOP: '',
+  CETOP: 3,
   lang: "pl",
 });
 provide("meta", meta);

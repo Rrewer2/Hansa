@@ -10,7 +10,7 @@ import TableSAP from "./TableSAP.vue";
 const { order, project } = defineProps(["order", "project"]);
 const cracked = ref({});
 const normalize = () => {
-  const KIT = { KIT: { title: 'KIT', count: 1, JM: 'szt', opis: KITtitle(project, order) } };
+  const KIT = { KIT: { title: 'KIT', count: 1, JM: 'szt', opis: KITtitle(project, order) + ' Agregat hydr.'} };
   Object.keys(order).forEach((key) => {
     const { title, n } = order[key];
     if (title) {

@@ -46,7 +46,7 @@ const flangeSelector = () => {
   order[`flangeOut${i}`] = {};
   order[`xvrPumpIn${i}`] = {};
   order[`xvrPumpOut${i}`] = {};
-  order[`filter`] = {};
+  if (!order[`pump${i}`]?.pumpData?.out?.startsWith('Bore') && order[`filter`]?.title === 'HKRTR0502CG1P10') order[`filter`] = {};
   order[`xvrFilterT`] = {};
   const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith('Bore') ? flangesPP : flanges;
   const flangeIn = flangesData.find(({ LK, QS }) => LK === order[`pump${i}`]?.pumpData?.in && QS >= powerUNIT.unit[0].Q);

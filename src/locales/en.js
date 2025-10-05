@@ -16,7 +16,7 @@ export default {
   DR2type: ["Block type"],
   P: ["Power", "kW"],
   I: ["Current", "A"],
-  VFU: ["VFU", "cm³"],
+  VFU: ["VFU", "cm³/rev"],
   k: ["Ratio"],
   pipeP: ["Pipe P"],
   pipeT: ["Pipe T"],

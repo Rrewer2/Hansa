@@ -1,6 +1,5 @@
 <script setup>
 import { spoolData, HKHMP, HKHQ, HKHR, HKM, spoolTypes } from "../../services/data";
-import { getQfromProject } from "../../services/functions";
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
@@ -16,7 +15,6 @@ const filteredValves = () => powerUNIT.unit.flatMap(({ HKSH }, j) =>
   })}));
 
 const getBolt = () => {
-  const Q = getQfromProject(project);
   const keys = filteredValves().map(el => Object.keys(el)).map(([first]) => first.replace(/\D/g, ''));
   const arrayH = filteredValves().map(el => Object.keys(el).map(elem => order[elem]?.[elem.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0)).map(row => row.reduce((a,b) => a+b));
   const bolts = arrayH.map(length => HKM.find((el) => el.L === length && isQFit(el)));
