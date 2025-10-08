@@ -32,13 +32,38 @@ const boltStart = () => {
 
 <template>
   <div v-for="item, index in filteredValves()">
-    <!-- <InputItem data="valve">
+    <!-- <InputItem data="throttle">
+      <select v-model="powerUNIT.unit[i].HKSH[index].throttle" :id="'throttle' + i + index">
+        <option v-for="i in ['', '012', '013', '014', '022', '023', '024']" :value="i">
+          {{ i }}
+        </option>
+      </select>
+    </InputItem>
+    <InputItem data="check">
+      <select v-model="powerUNIT.unit[i].HKSH[index].check" :id="'check' + i + index">
+        <option v-for="i in ['', '011', '012', '013', '014', '016']" :value="i">
+          {{ i }}
+        </option>
+      </select>
+    </InputItem>
+    <InputItem data="directPress">
+      <select v-model="powerUNIT.unit[i].HKSH[index].directPress" :id="'directPress' + i + index">
+        <option v-for="i in ['', '011', '012', '013', '014', '015']" :value="i">
+          {{ i }}
+        </option>
+      </select>
+    </InputItem>
+    <label v-if="powerUNIT.unit[i].HKSH[index].directPress">
+      <input type="number" min="0" max="300" v-model="powerUNIT.unit[i].HKSH[index].directPressValue"
+        id="directPressValue" class="input w-55" />bar
+    </label>
+    <InputItem data="valve">
       <select v-model="powerUNIT.unit[i].HKSH[index].spool" :id="'valve' + i + index">
         <option v-for="i in spoolTypes" :value="i">
           {{ i }}
         </option>
       </select>
-    </InputItem> TODO: fix error in multiple pumps-->
+    </InputItem> TODO: fix error in multiple pumps -->
 
     <div v-for="_, key in item">
       <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"

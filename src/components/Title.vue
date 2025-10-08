@@ -6,8 +6,9 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 </script>
 
 <template>
-  <span class="title">{{ text("powerUnit") }} <span v-if="!order.pump0?.title">{{ agregatTitle(project, meta, order)
-  }}</span>
+  <span class="title">{{ text("powerUnit") }} <span v-if="!order.pump0?.title">
+      {{ agregatTitle(project, meta, order) }}
+    </span>
     <span v-else>{{ KITtitle(project, order) }}</span>
   </span>
   <section class="tal mt-20">
