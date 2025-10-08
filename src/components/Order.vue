@@ -2,13 +2,12 @@
 import { ref } from "vue";
 import { getPriority } from "../services/data";
 import { KITtitle } from "../services/functions";
-import { text } from "../services/text";
-import Description from "./Description.vue";
 import Table from "./Table.vue";
 import TableSAP from "./TableSAP.vue";
 
 const { order, project } = defineProps(["order", "project"]);
 const cracked = ref({});
+
 const normalize = () => {
   const KIT = { KIT: { title: 'KIT', count: 1, JM: 'szt', opis: KITtitle(project, order) + ' Agregat hydr.'} };
   Object.keys(order).forEach((key) => {
@@ -30,8 +29,10 @@ const normalize = () => {
 const magic = ref(false);
 const margin = ref(50);
 const zlo = ref(0);
+const loading = ref(false);
 async function loadData() {
   magic.value = true;
+  loading.value = true;
   try {
     const costs = await import('../services/costsSap.json');
     const availableQuantity = await import('../services/SAP.json');
@@ -48,6 +49,7 @@ async function loadData() {
     alert('Ni chuja!')
     console.error(error);
   }
+  loading.value = false;
 };
 const totalPrice = () => {
   let res = 0;
@@ -57,12 +59,6 @@ const totalPrice = () => {
   return res;
 };
 const netto = () => {
-  // `m'/100 = 1 - c / (c / (1 - margin/100) - zlo)`
-  // const c = totalPrice();
-  // const m1 = 1 - totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value);
-  // console.log('m1 :>> ', m1);
-  // console.log('totalPrice()/(1-margin.value/100) :>> ', totalPrice()/(1-margin.value/100));
-  // console.log('totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value) :>> ', totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value));
   return (zlo.value + totalPrice() / (totalPrice()/(totalPrice()/(1-margin.value/100)-zlo.value)));
 };
 </script>
@@ -73,10 +69,11 @@ const netto = () => {
   <TableSAP v-if="magic" class="magic-article" :keys="['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']"
     :data="cracked" />
   <button v-if="!magic" @click="loadData" class="magic-btn">
-    Zrobić magię
+    Zrobić magię / Magic
   </button>
+  {{ loading ? 'Thinking...' : '' }}
   <button v-if="magic" @click="() => magic = false" class="magic-btn">
-    Wróćić
+    Wróćić / Back
   </button>
   <div v-if="magic" class="final">
     <h2 class="final mt-20">
