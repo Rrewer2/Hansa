@@ -32,8 +32,8 @@ const setActive = ([name, index]) => {
 </script>
 
 <template>
-  <Title v-bind="{ project, meta, order }" />
   <main>
+    <Title v-bind="{ project, meta, order }" class="py-2" />
     <article class="grid">
       <article class="accordion">
         <div v-for="(powerUNIT, i) in project" :key="i">
@@ -64,6 +64,10 @@ const setActive = ([name, index]) => {
   display: grid;
   grid-template-columns: 60% 37%;
   column-gap: 3%;
+}
+
+main {
+  margin-top: 2px;
 }
 
 /* .left {

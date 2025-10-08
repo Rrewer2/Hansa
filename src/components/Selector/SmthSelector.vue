@@ -81,8 +81,8 @@ if (!logic().length) order[Name + index] = {};
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
             <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
-              :checked="title === orderTitle" :value="title" v-model="orderTitle"
-              :disabled="order[Name + index]?.title && order[Name + index]?.title !== title" />
+              :checked="title === orderTitle || order[Name + index]?.title === title" :value="title"
+              v-model="orderTitle" />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank"
               rel="noopener noreferrer">

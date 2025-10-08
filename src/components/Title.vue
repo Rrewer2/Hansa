@@ -37,8 +37,8 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 .title {
   position: sticky;
   z-index: 100;
-  top: 5px;
-  font-size: 1.5em;
+  top: 7px;
+  font-size: 1.5rem;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;

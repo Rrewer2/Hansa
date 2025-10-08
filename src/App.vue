@@ -110,7 +110,6 @@ const navPage = ref([true, false, false, false, false]);
   <main class="app">
     <article v-if="navPage[0]">
       <Title v-bind="{ project, meta, order }" />
-
       <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
         <div :key="id">
           <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2" @delUnit="delUnit" />
