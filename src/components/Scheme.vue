@@ -51,9 +51,12 @@ const xFilter = tankGap + LTank - 126;
     <FIBL :x="tankGap + LTank - 450" :y="yTank()" :a="R() / 1"
       :text="(+order.ventilation?.title?.match(/(P10|P03)/)?.[0]?.slice(1) || 10) + 'µm'" />
     <NTM :x="tankGap + LTank - 300" :y="yTank()" :a="R() / 1.5" />
-    <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 180 : yTank() - 25" :a="R() / 1.5" />
-    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 160 : yTank() - 20" :a="R()"
-      :text="(+order.filter?.filterData?.filterGrade?.slice(1) || 10) + 'µm'" />
+    <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 200 : yTank() - 25" :a="R() / 1.5"
+      :join="order.cooler?.coolerData?.join ? order.cooler?.coolerData?.join?.split('″')[0] + '″' : ''" />
+    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 190 : yTank() - 20" :a="R()"
+      :text="(+order.filter?.filterData?.filterGrade?.slice(1) || 10) + 'µm'"
+      :join="order.filter?.filterData?.join ? order.filter?.filterData?.join?.split('″')[0] + '″' : ''"
+      :hole="order.filter?.filterData?.hole" />
     <Tray v-if="order.trays?.title" :x="tankGap" :y="screenSize - 150" :L="LTank" />
   </svg>
 </template>
