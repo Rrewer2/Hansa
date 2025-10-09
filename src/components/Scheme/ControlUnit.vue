@@ -27,17 +27,7 @@ const getSh = (unit) => getSL(unit) * 0.35;
 const xV = (unit, i) => x(c) + getSL1(unit) + (i + unit.start) * (getSL(unit) * 1.1);
 const yV = () => y + 300 + getSh(unit) + getSh(unit) / 10;
 const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
-const yValve = (data) => {
-  if (data.throttle && data.check && data.directPress) return 3 * getSh(unit);
-  if (
-    (data.throttle && data.check) ||
-    (data.throttle && data.directPress) ||
-    (data.check && data.directPress)
-  )
-    return 2 * getSh(unit);
-  if (data.throttle || data.check || data.directPress) return getSh(unit);
-  return 0;
-};
+const yValve = ({ throttle, check, directPress }) => !!throttle + !!check + !!directPress;
 const yHKHMP = (data) => {
   if (data.throttle && data.check) return 2 * getSh(unit);
   if (data.throttle || data.check) return getSh(unit);
@@ -58,8 +48,8 @@ const yHKHQ = (data) => (data.check ? getSh(unit) : 0);
     :x="xV(unit, i)" :y="yV() + yHKHQ(data)" :r="getSL(unit) / 30" />
   <HKHMP v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
     :x="xV(unit, i)" :y="yV() + yHKHMP(data)" :r="getSL(unit) / 30" />
-  <Valve v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: getSL(unit), data }" :x="xV(unit, i)"
-    :y="yV() + yValve(data)" />
+  <Valve v-if="!unit.same" v-for="(data, i) in unit.HKSH" v-bind="{ sl: () => getSL(unit), data }"
+    :x="() => xV(unit, i)" :y="() => yV() + yValve(data) * getSh(unit)" />
 
   <DBD v-if="unit.DBD" :x="x(c) - getSh(unit)" :xSame="x(c - 1) - getSh(unit) / 2" :y="y + 300 + R * 8"
     :a="getSL(unit) / 6" :unit="unit" :line="() => getSh(unit) / 2" />

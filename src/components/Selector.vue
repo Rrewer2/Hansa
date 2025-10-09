@@ -33,7 +33,7 @@ const setActive = ([name, index]) => {
 
 <template>
   <main>
-    <Title v-bind="{ project, meta, order }" class="py-2" />
+    <Title v-bind="{ project, meta, order }" />
     <article class="grid">
       <article class="accordion">
         <div v-for="(powerUNIT, i) in project" :key="i">

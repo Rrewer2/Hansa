@@ -36,8 +36,8 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
               {{ item }}
             </option>
           </select>
-          <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="ind" />
-          <select v-if="ind === 'start'" v-model="pumpData.startValve" :id="ind" class="w-75"
+          <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="'start' + ind" />
+          <select v-if="ind === 'start'" v-model="pumpData.startValve" :id="'startValve' + ind" class="w-75"
             :disabled="same || !pumpData.start">
             <option v-for="spool in spoolTypes" :value="spool" :id="'start' + spool">
               {{ spool }}
