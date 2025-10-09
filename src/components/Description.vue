@@ -27,7 +27,8 @@ const { project, order } = defineProps(['project', "order"]);
 
     <div v-if="order['block' + 0]?.title">
       <h5>{{ text('descr18') }}{{ order['block' + 0]?.blockData?.cetop }}</h5>
-      <h5>{{ text('descr19') }} - {{ order['block' + 0]?.blockData?.stations }} {{ text('descr20') }}</h5>
+      <h5>{{ text('descr19') }} - {{ order['block' + 0]?.blockData?.stations - !!order['start' +
+        0]?.title?.startsWith('HK4') }} {{ text('descr20') }}</h5>
       <h5 v-if="order.start0?.title">{{ text('descr21') }} {{ order.start0?.startData?.spool }}</h5>
       <h5 v-for="item, i in Object.keys(order).filter(key => key.startsWith('valve0'))">
         {{ i + 1 }} {{ text('descr22') }} {{ order[item]?.valveData?.spool }}

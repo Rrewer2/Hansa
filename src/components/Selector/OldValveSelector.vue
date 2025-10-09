@@ -44,7 +44,7 @@ spoolData.forEach(({ spool }) => set.add(spool));
     <div class="grid ml-10">
       <svg v-for="spool in set" @click="() => (meta.spool = spool)" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 90" class="valve" :class="spool === meta.spool && 'clicked'">
-        <Valve :x="() => 0" :y="() => 10" :data="{ spool }" :sl="() => 200" />
+        <Valve :x="() => 0" :y="() => 5" :data="{ spool }" :sl="() => 200" />
       </svg>
     </div>
     <table>

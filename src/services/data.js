@@ -236,19 +236,19 @@ export const pipesData = {
 export const pipesSData = {'L12-1.5': {Q: 7}, 'L15-1.5': {Q: 12}, 'L18-2': {Q: 18}, 'L22-2': {Q: 25}, 'L28-2.5': {Q: 43}, 'L35-3': {Q: 70}, 'L42-3': {Q: 100}, 'L42-3': {Q: 100},};
 
 export const coolerData = [
-  {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031},},
-  {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06},},
+  {title: "2005K", flow: {min: 5, max: 75}, performance: {min: 0.021, max: 0.031}, join: "G 1/2″ -14"},
+  {title: "2010K", flow: {min: 20, max: 100}, performance: {min: 0.052, max: 0.06}, join: "G 1/2″ -14"},
   // {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},},
-  {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12},},
-  {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214},},
+  {title: "2020K", flow: {min: 20, max: 250}, performance: {min: 0.099, max: 0.12}, join: "G 1″ -11"},
+  {title: "2024K", flow: {min: 20, max: 250}, performance: {min: 0.165, max: 0.214}, join: "G 1″ -11"},
   // {title: "2030K", flow: {min: 50, max: 300}, performance: {min: 0.257, max: 0.309},},
-  {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425},},
+  {title: "2040K", flow: {min: 50, max: 350}, performance: {min: 0.337, max: 0.425}, join: "G 1.1/4″ -11"},
   // {title: "2050K", flow: {min: 50, max: 400}, performance: {min: 0.447, max: 0.635}},
-  {title: "HPA30", flow: {min: 40, max: 160}, performance: {min:0.5, max: 0.77}},
-  {title: "HPA36", flow: {min: 40, max: 200}, performance: {min:0.7, max: 1.1}},
-  {title: "HPA52", flow: {min: 80, max: 280}, performance: {min:1.1, max: 1.55}},
+  {title: "HPA30", flow: {min: 40, max: 160}, performance: {min:0.5, max: 0.77}, join: "G 1.1/4″ -11"},
+  {title: "HPA36", flow: {min: 40, max: 200}, performance: {min:0.7, max: 1.1}, join: "G 1.1/4″ -11"},
+  {title: "HPA52", flow: {min: 80, max: 280}, performance: {min:1.1, max: 1.55}, join: "G 1.1/2″ -11"},
 ].map(({title,...rest})=>({title: 'HKOILAIR'+title, ...rest, addition:{thermostat:{title:'HKTM45A50'},damperCooler:{title:'HKGP4030M10B',n:4}}}));
-// TODO: Add to cooler in and out threads and xvr function
+
 export const ventilation = [
   {title: "FIBL046FP03002", thread: "Ø41 3 x M5", q: 150},
   {title: "FIBL046FP10002", thread: "Ø41 3 x M5", q: 200},

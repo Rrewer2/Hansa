@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { coolerData, coolerVBT, coolerVZ } from "../../services/data";
-import { P01, Pv, Qmax } from "../../services/functions";
+import { coolerData, coolerVBT, coolerVZ, pipesData, xvrnw } from "../../services/data";
+import { P01, Pv, Qmax, pumpCounting } from "../../services/functions";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
@@ -11,9 +11,18 @@ const { project, meta, order } = defineProps([ "project", "meta", "order"]);
 const cooler = ref({ η: 70, vBT: 50, vZ: 30 });
 
 const filteredCooler = () => coolerData.filter(({ performance, flow }) => performance.max >= P01(project, cooler.value) && (flow.min + flow.max)/2 >= Qmax(project));
+const getXvrT = () => {
+  const Qback = project[0].unit.reduce((acc, unit) => acc + pumpCounting(unit).Qback, 0);
+  const pipeT = () => Object.entries(pipesData).filter(el => el[0] !== 'L12-1.5').find(([_, { Q }]) => Q > Qback);
+  const getXvrP = (thread, pipe) => xvrnw.find(x => thread === x.thread && pipe === x.pipe);
+  const xvrCoolerT = getXvrP(order['cooler']?.coolerData?.join, pipeT()[0]);
+  order[`xvrCoolerIn`] = xvrCoolerT ? { title: xvrCoolerT.title, xvrCoolerInData: xvrCoolerT} : {};
+  order[`xvrCoolerOut`] = xvrCoolerT ? { title: xvrCoolerT.title, xvrCoolerOutData: xvrCoolerT} : {};
+};
 const afterCoolerSelected = () => {
   if (order.cooler?.title) meta.cooler = 2;
   if (!order.cooler?.title) meta.cooler = 0;
+  getXvrT();
 };
 </script>
 
