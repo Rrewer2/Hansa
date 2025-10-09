@@ -11,7 +11,7 @@ import Tray from "./Scheme/Tray.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
-const yTank = () => 1300;
+const yTank = () => 1350;
 const LTank = 1200;
 const controlElemLength = (project) => {
   const sectionLength = 320;
@@ -39,7 +39,7 @@ const xFilter = tankGap + LTank - 126;
       unit.map((el) => ({ ...el, mount })),
     )" :x="() => controlGap(project) + xControl(project)[c]" :y="100" v-bind="{ unit, c, order }" :R="R()"
       :xT="xFilter" :xM="tankGap + 200" :yM="yTank() - 1.25 * R() - 100" />
-    <Tank :x="tankGap" :y="yTank()" :L="LTank" :H="() => screenSize - 150 - yTank()"
+    <Tank :x="tankGap" :y="yTank()" :L="LTank" :H="() => screenSize - 100 - yTank()"
       :pumps="project.flatMap(({ unit }) => unit)" :order="order">
       {{ order.tank?.tankData?.Size }}<tspan v-if="order.tank?.tankData?.Size"> L</tspan>
     </Tank>
@@ -51,8 +51,8 @@ const xFilter = tankGap + LTank - 126;
     <FIBL :x="tankGap + LTank - 450" :y="yTank()" :a="R() / 1"
       :text="(order.ventilation?.title?.match(/(P10|P03)/)?.[0].slice(1) ?? 10) + 'µm'" />
     <NTM :x="tankGap + LTank - 300" :y="yTank()" :a="R() / 1.5" />
-    <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 180 : yTank() - 50" :a="R() / 1.5" />
-    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 180 : yTank() - 20" :a="R()"
+    <Cooler v-if="meta.cooler" :x="xFilter" :y="meta.cooler === 2 ? yTank() - 180 : yTank() - 25" :a="R() / 1.5" />
+    <Filter :x="xFilter" :y="meta.cooler === 1 ? yTank() - 160 : yTank() - 20" :a="R()"
       :text="(order.filter?.filterData?.filterGrade.slice(1) ?? 10) + 'µm'" />
     <Tray v-if="order.trays?.title" :x="tankGap" :y="screenSize - 150" :L="LTank" />
   </svg>

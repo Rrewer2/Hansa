@@ -6,19 +6,22 @@ import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, powerUNIT, i } = defineProps([ "project", "meta", "order"]);
+const { project, meta, order } = defineProps([ "project", "meta", "order"]);
 
 const cooler = ref({ η: 70, vBT: 50, vZ: 30 });
 
 const filteredCooler = () => coolerData.filter(({ performance, flow }) => performance.max >= P01(project, cooler.value) && (flow.min + flow.max)/2 >= Qmax(project));
-const setCooler = ({ title }) => order.cooler?.title !== title ? order.cooler = { title } : order.cooler = {};
+const afterCoolerSelected = () => {
+  if (order.cooler?.title) meta.cooler = 2;
+  if (!order.cooler?.title) meta.cooler = 0;
+};
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="cooler" index="" :logic="filteredCooler">
+  <SmthSelector v-bind="{ project, meta, order }" Name="cooler" index="" :logic="filteredCooler"
+    :after="afterCoolerSelected">
     <InputItem data="cooler">
-      <select v-model="meta.cooler" class="ml-10" id="cooler"
-        @click="meta.cooler === 0 ? setCooler({ title: order.cooler?.title }) : {}">
+      <select v-model="meta.cooler" class="ml-10" id="cooler">
         <option v-for="(title, c) in ['Bez', 'Za filtrem', 'Przed fitrem']" :value="c">
           {{ title }}
         </option>

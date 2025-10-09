@@ -13,7 +13,7 @@ const {keys, data} = defineProps(["keys",'data']);
     </thead>
     <tbody>
       <tr v-for="({ title, count, description, opis, price, amount }, _, i) of data"
-        :class="price === '0,00' || amount === 0 ? 'red' : ''">
+        :class="price === '0,00' || amount === 0 ? 'red' : amount < count ? 'yellow' : ''">
         <td class="tal">
           {{ (i + 1) * 100 }}
         </td>
@@ -47,6 +47,11 @@ const {keys, data} = defineProps(["keys",'data']);
 
 .red {
   background-color: rgb(255, 190, 190);
+  color: #2C3E50;
+}
+
+.yellow {
+  background-color: rgb(247, 255, 190);
   color: #2C3E50;
 }
 </style>
