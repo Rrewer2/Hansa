@@ -19,7 +19,7 @@ const { id, unit, ...rest } = project[k];
     <div class="flex-row">
       <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>
       <h2 class="mr-100">{{ text("pumpUnit") }} {{ unitTitle(unit) }}</h2>
-      <div v-for="(_, ind) in rest" class="flex-col ml-10">
+      <div v-for="(_, ind) in rest" class="flex-col">
         <InputItem :data="ind">
           <select v-if="ind === 'n'" v-model="project[k].n" :disabled="order[`motor${k}`]?.title" :id="ind">
             <option v-for="elem in freqData" :value="elem">{{ elem }}</option>

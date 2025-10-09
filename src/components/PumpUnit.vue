@@ -4,6 +4,7 @@ import { buckling, pumpCounting, getVFU, round } from "../services/functions";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 import { spoolTypes } from "../services/data";
+import { text } from "../services/text";
 
 const { pumpData, btnDisabled, project, k, i, order } = defineProps([
   "pumpData",
@@ -25,7 +26,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       </div>
       <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
-      <div v-for="(_, ind) in rest" class="ml-10">
+      <div v-for="(_, ind) in rest">
         <InputItem :data="ind">
           <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
             :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
@@ -61,7 +62,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       </button>
     </Hydrocylinder>
     <div class="flex-row flex-left pl-25">
-      <button @click="$emit('addCyl')" class="btn-add my-2">+ Section</button>
+      <button @click="$emit('addCyl')" class="btn-add my-2">+ {{ text('section') }}</button>
     </div>
   </article>
 </template>

@@ -80,7 +80,7 @@ if (!logic().length) order[Name + index] = {};
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
-            <input type="radio" :id="title" @click="setSmth({ title, ...rest })" class="mx"
+            <input type="radio" :id="title + index" @click="setSmth({ title, ...rest })" class="mx"
               :checked="title === orderTitle || order[Name + index]?.title === title" :value="title"
               v-model="orderTitle" />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>

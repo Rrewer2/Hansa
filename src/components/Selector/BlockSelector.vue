@@ -49,7 +49,7 @@ const after = () => {
       </select>
     </InputItem>
     <InputItem data="CETOP">
-      <select v-model="meta.CETOP" id="sections">
+      <select v-model="meta.CETOP" id="blockCETOP">
         <option v-for="i in ['', 3, 5]" :value="i">
           {{ i }}
         </option>

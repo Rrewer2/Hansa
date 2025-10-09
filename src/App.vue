@@ -332,11 +332,11 @@ td {
 }
 
 .ml-5 {
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 .ml-10 {
-  margin-left: 10px;
+  margin-left: 0.5rem;
 }
 
 .mr-100 {

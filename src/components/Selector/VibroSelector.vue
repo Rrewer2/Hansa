@@ -26,7 +26,7 @@ const filteredVibro = () => {
 <template>
   <SmthSelector v-bind="{ project, meta, order }" Name="vibro" index="" :logic="filteredVibro">
     <InputItem data="mount">
-      <select v-model="powerUNIT.mount" id="mount">
+      <select v-model="powerUNIT.mount" id="vibroMount">
         <option v-for="item in engineMountData" :value="item">
           {{ item }}
         </option>
@@ -34,7 +34,7 @@ const filteredVibro = () => {
     </InputItem>
 
     <InputItem data="size">
-      <select v-model="motorSize" id="motorSize">
+      <select v-model="motorSize" id="vibroMotorSize">
         <option v-for="item in motorSizes" :value="item">
           {{ item }}
         </option>

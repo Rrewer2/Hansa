@@ -56,14 +56,14 @@ const {
         // directPressValue
       }" class="flex-col ml-5">
         <InputItem :data="i">
-          <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="i" class="w-75"
+          <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75"
             :disabled="pumpData.same">
             <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">
               {{ j }} {{ text(elem) }}
             </option>
           </select>
 
-          <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="i" class="w-75">
+          <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="id + i" class="w-75">
             <option v-for="elem in getValue[i]" :value="elem">
               {{ i === "form" ? text(elem) : elem }}
             </option>
@@ -76,17 +76,17 @@ const {
     <div class="flex-row">
       <div v-for="(_, i) in rest" class="flex-col ml-5 my-2">
         <InputItem :data="i">
-          <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="i" class="input w-75"
+          <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="id + i" class="input w-75"
             :disabled="pumpData.same" />
 
-          <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="i" class="w-75"
+          <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75"
             :disabled="pumpData.same">
             <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">
               <span>{{ j }} {{ elem }}</span>
             </option>
           </select>
 
-          <select v-else v-model="HKSH[i]" :id="i" class="w-75" :disabled="pumpData.same">
+          <select v-else v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
             <option v-for="elem in getValue[i]" :value="elem">
               {{ elem }}
             </option>

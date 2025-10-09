@@ -149,9 +149,9 @@ export const agregatCounting = (project) => getT(getQfromProject(project));
 //     return { Q1, pPmin, pPmax, pTmin, pTmax };
 // };
 export const powerCounting = (unit) => {
-  const P = reducedPower(unit);
-  const I = 2.4 * P ** 0.9;
-  return { P, I };
+  const Pcalc = reducedPower(unit);
+  const I = 2.4 * Pcalc ** 0.9;
+  return { Pcalc, I };
 };
 const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
 const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(
@@ -168,8 +168,8 @@ export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
   const pipe_S = getPipe(Q);
   const pipeS = pipe_S ? pipe_S[0] : "∄";
   const Qback = Q * k;
-  const P = Power(Q, getPressure(DBD, p));
-  return { pipeP, pipeT, pipeS, Qback, P };
+  const Pcalc = Power(Q, getPressure(DBD, p));
+  return { pipeP, pipeT, pipeS, Qback, Pcalc };
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
