@@ -15,16 +15,18 @@ const copyText = async (text) => {
 </script>
 <template>
   <button @click="() => copyText(text)" :class="btn === 'Copy' ? 'copy' : 'copied'">
-    {{ btn }}<span v-if="btn === 'Copied'">✅</span>
+    <span v-if="btn === 'Copied'">✅</span>
+    <span v-else>⧉</span>
   </button>
 </template>
 
 <style scoped>
 button {
-  width: 60px;
+  /* width: 10px; */
+  margin: 0;
   color: rgba(14, 44, 14, 0.25);
-  transition: 1s all;
-  min-height: 20px;
+  transition: 0.5s all;
+  /* min-height: 20px; */
   border: none;
 }
 

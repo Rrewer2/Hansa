@@ -131,7 +131,7 @@ export default {
   in: ["Wlot"],
   out: ["Wylot"],
   shaft: ["Wałek"],
-  maker: ["Producent"],
+  maker: ["Marka"],
   holePattern: ["Układ otworów"],
   pmax: ["p max", "bar"],
   cetop: ["CETOP"],

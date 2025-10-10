@@ -83,14 +83,10 @@ if (!logic().length) order[Name + index] = {};
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <b>
-              <i>
-                {{ text(a) }}
-                <button v-if="logic().length > 3" @click="sortKey = a" class="sort" :class="sortKey === a && 'active'" :value="a">
-                  ⏬
-                </button>
-              </i>
-            </b>
+            <span class="bi flex flex-row" :class="a === 'title' ? 'title' : ''">
+              {{ text(a) }}
+              <button v-if="logic().length > 3" @click="sortKey = a" class="sort" :class="sortKey === a && 'active'" :value="a">⏬</button>
+            </span>
           </td>
         </tr>
       </thead>
@@ -108,7 +104,7 @@ if (!logic().length) order[Name + index] = {};
             />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank" rel="noopener noreferrer">
-              {{ getTextWithSpace(title) }}
+              {{ title }}
             </a>
             <CopyText :text="title" />
           </td>
@@ -128,7 +124,6 @@ if (!logic().length) order[Name + index] = {};
 }
 
 .sort {
-  width: 20px;
   color: rgba(14, 44, 14, 0.25);
   transition: 1s all;
   min-height: 20px;
@@ -155,5 +150,16 @@ if (!logic().length) order[Name + index] = {};
 .notSelected {
   color: grey;
   /* background-color: rgba(249, 185, 185, 0.5); */
+}
+
+.bi {
+  font-style: italic;
+  font-weight: bold;
+}
+td {
+  padding: 0 5px;
+}
+.title {
+  width: 240px;
 }
 </style>
