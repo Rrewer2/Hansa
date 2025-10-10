@@ -3,35 +3,45 @@ import { spoolData, HKHMP, HKHQ, HKHR, HKM, spoolTypes } from "../../services/da
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open",]);
-const isQFit = (el) => (!order['block' + i]?.blockData?.cetop || order['block' + i]?.blockData?.cetop === el.CETOP) && (!meta.CETOP || el.CETOP === meta.CETOP);
-const filteredValves = () => powerUNIT.unit.flatMap(({ HKSH }, j) => 
-  HKSH.map(({ throttle, check, directPress, directPressValue, spool }, k) => {
-    return ({
-    ['throttle' + i + j + k]: () => HKHQ.filter(el => el.type === throttle && isQFit(el)),
-    ['check' + i + j + k]: () => HKHR.filter(el => el.type === check && isQFit(el)),
-    ['directPress' + i + j + k]: () => HKHMP.filter(el => el.type === directPress && isQFit(el) && el.pmax > directPressValue),
-    ['valve' + i + j + k]: () => spoolData.filter((el) => el.spool === spool && isQFit(el))
-  })}));
+const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "meta", "order", "i", "powerUNIT", "open"]);
+const isQFit = (el) =>
+  (!order["block" + i]?.blockData?.cetop || order["block" + i]?.blockData?.cetop === el.CETOP) && (!meta.CETOP || el.CETOP === meta.CETOP);
+const filteredValves = () =>
+  powerUNIT.unit.flatMap(({ HKSH }, j) =>
+    HKSH.map(({ throttle, check, directPress, directPressValue, spool }, k) => {
+      return {
+        ["throttle" + i + j + k]: () => HKHQ.filter((el) => el.type === throttle && isQFit(el)),
+        ["check" + i + j + k]: () => HKHR.filter((el) => el.type === check && isQFit(el)),
+        ["directPress" + i + j + k]: () => HKHMP.filter((el) => el.type === directPress && isQFit(el) && el.pmax > directPressValue),
+        ["valve" + i + j + k]: () => spoolData.filter((el) => el.spool === spool && isQFit(el)),
+      };
+    }),
+  );
 
 const getBolt = () => {
-  const keys = filteredValves().map(el => Object.keys(el)).map(([first]) => first.replace(/\D/g, ''));
-  const arrayH = filteredValves().map(el => Object.keys(el).map(elem => order[elem]?.[elem.replace(/[^a-zA-Z]+/g, '') + 'Data']?.h ?? 0)).map(row => row.reduce((a,b) => a+b));
-  const bolts = arrayH.map(length => HKM.find((el) => el.L === length && isQFit(el)));
-  bolts.forEach((bolt, i) => order[`bolt` + keys[i]] = { title: bolt?.title });
+  const keys = filteredValves()
+    .map((el) => Object.keys(el))
+    .map(([first]) => first.replace(/\D/g, ""));
+  const arrayH = filteredValves()
+    .map((el) => Object.keys(el).map((elem) => order[elem]?.[elem.replace(/[^a-zA-Z]+/g, "") + "Data"]?.h ?? 0))
+    .map((row) => row.reduce((a, b) => a + b));
+  const bolts = arrayH.map((length) => HKM.find((el) => el.L === length && isQFit(el)));
+  bolts.forEach((bolt, i) => (order[`bolt` + keys[i]] = { title: bolt?.title }));
 };
 
-const filteredStart = () => powerUNIT.unit.flatMap(({ startValve }) => 
-  spoolData.filter(({ spool, CETOP }) => spool === startValve && (!meta.CETOP || CETOP === meta.CETOP)));
+const filteredStart = () =>
+  powerUNIT.unit.flatMap(({ startValve }) =>
+    spoolData.filter(({ spool, CETOP }) => spool === startValve && (!meta.CETOP || CETOP === meta.CETOP)),
+  );
 
 const boltStart = () => {
-  const bolt = HKM.find((el) => el.L === order['start' + i]?.startData?.h && el.CETOP === order['start' + i]?.startData?.CETOP);
-  order['boltStart' + i] = { title: bolt?.title };
+  const bolt = HKM.find((el) => el.L === order["start" + i]?.startData?.h && el.CETOP === order["start" + i]?.startData?.CETOP);
+  order["boltStart" + i] = { title: bolt?.title };
 };
 </script>
 
 <template>
-  <div v-for="item, index in filteredValves()">
+  <div v-for="(item, index) in filteredValves()">
     <!-- <InputItem data="throttle">
       <select v-model="powerUNIT.unit[i].HKSH[index].throttle" :id="'throttle' + i + index">
         <option v-for="i in ['', '012', '013', '014', '022', '023', '024']" :value="i">
@@ -65,13 +75,18 @@ const boltStart = () => {
       </select>
     </InputItem> TODO: fix error in multiple pumps -->
 
-    <div v-for="_, key in item">
-      <SmthSelector v-bind="{ project, meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')"
-        :index="key.replace(/\D/g, '')" :logic="() => filteredValves()[index][key]()" :after="() => getBolt(index)" />
+    <div v-for="(_, key) in item">
+      <SmthSelector
+        v-bind="{ meta, order }"
+        :Name="key.replace(/[^a-zA-Z]+/g, '')"
+        :index="key.replace(/\D/g, '')"
+        :logic="() => filteredValves()[index][key]()"
+        :after="() => getBolt(index)"
+      />
     </div>
   </div>
   <div v-if="powerUNIT?.unit[i]?.start">
-    <SmthSelector v-bind="{ project, meta, order }" Name="start" :index="i" :logic="filteredStart" :after="boltStart" />
+    <SmthSelector v-bind="{ meta, order }" Name="start" :index="i" :logic="filteredStart" :after="boltStart" />
   </div>
 </template>
 

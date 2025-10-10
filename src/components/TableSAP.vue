@@ -1,7 +1,7 @@
 <script setup>
-import { text } from '../services/text';
+import { text } from "../services/text";
 
-const {keys, data} = defineProps(["keys",'data']);
+const { keys, data } = defineProps(["keys", "data"]);
 </script>
 
 <template>
@@ -12,8 +12,10 @@ const {keys, data} = defineProps(["keys",'data']);
       </td>
     </thead>
     <tbody>
-      <tr v-for="({ title, count, description, opis, price, amount }, _, i) of data"
-        :class="price === '0,00' || amount === 0 ? 'red' : amount < count ? 'yellow' : ''">
+      <tr
+        v-for="({ title, count, description, opis, price, amount }, _, i) of data"
+        :class="price === '0,00' || amount === 0 ? 'red' : amount < count ? 'yellow' : ''"
+      >
         <td class="tal">
           {{ (i + 1) * 100 }}
         </td>
@@ -33,7 +35,7 @@ const {keys, data} = defineProps(["keys",'data']);
           {{ amount }}
         </td>
         <td class="tar">
-          {{ price.replace(' ', '') }}
+          {{ price.replace(" ", "") }}
         </td>
       </tr>
     </tbody>
@@ -47,11 +49,11 @@ const {keys, data} = defineProps(["keys",'data']);
 
 .red {
   background-color: rgb(255, 190, 190);
-  color: #2C3E50;
+  color: #2c3e50;
 }
 
 .yellow {
   background-color: rgb(247, 255, 190);
-  color: #2C3E50;
+  color: #2c3e50;
 }
 </style>

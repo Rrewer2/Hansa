@@ -5,56 +5,62 @@ import { links } from "../../services/links";
 import { text } from "../../services/text";
 import CopyText from "./CopyText.vue";
 
-const key = ref();
+const sortKey = ref();
 
-const { Name, index, logic, after, project, meta, order } = defineProps(["Name", "index", "logic", "after", "project", "meta", "order"]);
+const { Name, index, logic, after, meta, order } = defineProps(["Name", "index", "logic", "after", "meta", "order"]);
 
-const orderTitle = ref(order[Name + index]?.title || null);
-const slots = useSlots()
+const selectedOne = ref({});
+const slots = useSlots();
 const setSmth = ({ title, addition, ...rest }) => {
-  orderTitle.value = orderTitle.value === title ? null : title
-  if (order[Name + index]?.title !== title) {
-    order[Name + index] = { title, [Name + 'Data']: { ...rest } };
-    if (addition) Object.entries(addition).forEach(([key, values]) => {
-      if (order[key + index]?.n) order[key + index].n += values?.n;
-      else order[key + index] = { ...values }
-    });
-  }
-  else {
+  if (order[Name + index]?.title !== title && selectedOne.title !== title) {
+    order[Name + index] = { title, [Name + "Data"]: { ...rest } };
+    selectedOne.value = { title, addition, ...rest };
+    if (addition)
+      Object.entries(addition).forEach(([key, values]) => {
+        if (order[key + index]?.n) order[key + index].n += values?.n;
+        else order[key + index] = { ...values };
+      });
+  } else {
     order[Name + index] = {};
-    if (addition) Object.entries(addition).forEach(([key, values]) => {
-      if (order[key + index]?.n && order[key + index]?.n - values?.n > 1) order[key + index].n -= values?.n; 
-      else order[key + index] = {};
-    });
+    if (addition)
+      Object.entries(addition).forEach(([key, values]) => {
+        if (order[key + index]?.n && order[key + index]?.n - values?.n > 1) order[key + index].n -= values?.n;
+        else order[key + index] = {};
+      });
   }
   if (after) after();
 };
 
-const keys = () => Object.keys(logic()[0]).filter(item => item !== 'addition');
+const keys = () => Object.keys(logic()[0]).filter((item) => item !== "addition");
 const sorting = () => {
   const res = logic();
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
-  if (!key.value) return res;
-  return res.sort((a,b) => typeof a[key.value] === 'number' ? a[key.value] - b[key.value] : a[key.value].toString().localeCompare(b[key.value].toString()));
+  if (!sortKey.value) return res;
+  return res.sort((a, b) =>
+    typeof a[sortKey.value] === "number"
+      ? a[sortKey.value] - b[sortKey.value]
+      : a[sortKey.value].toString().localeCompare(b[sortKey.value].toString()),
+  );
 };
-const tableResults = (rest) => Object.values(rest)
-  .map(item => JSON.stringify(item)
-  .replace(/[{}"]/g, " ")
-  .replace(/\s:(\d)/g, ' $1'))
-  .filter(el => !el.includes('title'));
+const tableResults = (rest) =>
+  Object.values(rest)
+    .map((item) =>
+      JSON.stringify(item)
+        .replace(/[{}"]/g, " ")
+        .replace(/\s:(\d)/g, " $1"),
+    )
+    .filter((el) => !el.includes("title"));
 const getIndex = (index) => {
-  if (typeof index === 'number') return index ? index + 1 : "";
-  return '';
+  if (typeof index === "number") return index ? index + 1 : "";
+  return "";
 };
 if (!logic().length) order[Name + index] = {};
 </script>
 
 <template>
-  <article :class="(!logic().length && !slots.default?.()?.length) ? 'hide' : ''">
+  <article :class="!logic().length && !slots.default?.()?.length ? 'hide' : ''">
     <h2>
-      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
-        {{ text(Name) }} {{ getIndex(index) }}
-      </span>
+      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'"> {{ text(Name) }} {{ getIndex(index) }} </span>
       <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
         {{ order[Name + index]?.title }}
       </span>
@@ -67,25 +73,29 @@ if (!logic().length) order[Name + index] = {};
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <b><i>
+            <b>
+              <i>
                 {{ text(a) }}
-                <button v-if="logic().length > 3" @click="key = a" class="sort" :class="key === a && 'active'"
-                  :value="a">
+                <button v-if="logic().length > 3" @click="sortKey = a" class="sort" :class="sortKey === a && 'active'" :value="a">
                   ⏬
                 </button>
-              </i></b>
+              </i>
+            </b>
           </td>
         </tr>
       </thead>
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
-            <input type="radio" :id="title + index" @click="setSmth({ title, ...rest })" class="mx"
-              :checked="title === orderTitle || order[Name + index]?.title === title" :value="title"
-              v-model="orderTitle" />
+            <input
+              type="radio"
+              :id="title + index"
+              @click="setSmth({ title, ...rest })"
+              class="mx"
+              :checked="order[Name + index]?.title === title"
+            />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
-            <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank"
-              rel="noopener noreferrer">
+            <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank" rel="noopener noreferrer">
               {{ getTextWithSpace(title) }}
             </a>
             <CopyText :text="title" />

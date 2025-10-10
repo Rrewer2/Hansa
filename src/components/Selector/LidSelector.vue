@@ -2,21 +2,18 @@
 import { lidData } from "../../services/data";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, open } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "open",
-]);
-const filteredLid = () => lidData.filter(lid => 
-  lid.tank === order['tank']?.tankData?.Size 
-  && (lid.type === order['tank']?.tankData?.type || lid.type === order['tank']?.tankData?.[meta?.tank]) 
-  && (!order['motor']?.motorData?.size || lid.motor === order['motor']?.motorData?.size)
-);
+const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
+const filteredLid = () =>
+  lidData.filter(
+    (lid) =>
+      lid.tank === order["tank"]?.tankData?.Size &&
+      (lid.type === order["tank"]?.tankData?.type || lid.type === order["tank"]?.tankData?.[meta?.tank]) &&
+      (!order["motor"]?.motorData?.size || lid.motor === order["motor"]?.motorData?.size),
+  );
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="lid" index="" :logic="filteredLid" />
+  <SmthSelector v-bind="{ meta, order }" Name="lid" index="" :logic="filteredLid" />
 </template>
 
 <style scoped></style>

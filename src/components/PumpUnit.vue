@@ -6,14 +6,7 @@ import InputItem from "./InputItem.vue";
 import { spoolTypes } from "../services/data";
 import { text } from "../services/text";
 
-const { pumpData, btnDisabled, project, k, i, order } = defineProps([
-  "pumpData",
-  "btnDisabled",
-  "project",
-  "k",
-  "i",
-  "order",
-]);
+const { pumpData, btnDisabled, project, k, i, order } = defineProps(["pumpData", "btnDisabled", "project", "k", "i", "order"]);
 
 const { id, HKSH, same, startValve, ...rest } = pumpData;
 </script>
@@ -28,8 +21,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
 
       <div v-for="(_, ind) in rest">
         <InputItem :data="ind">
-          <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]"
-            :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
+          <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]" :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
           <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
           <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
           <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="ind">
@@ -38,8 +30,13 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
             </option>
           </select>
           <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="'start' + ind" />
-          <select v-if="ind === 'start'" v-model="pumpData.startValve" :id="'startValve' + ind" class="w-75"
-            :disabled="same || !pumpData.start">
+          <select
+            v-if="ind === 'start'"
+            v-model="pumpData.startValve"
+            :id="'startValve' + ind"
+            class="w-75"
+            :disabled="same || !pumpData.start"
+          >
             <option v-for="spool in spoolTypes" :value="spool" :id="'start' + spool">
               {{ spool }}
             </option>
@@ -50,19 +47,18 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       <ResultItem :data="pumpCounting(pumpData)" />
     </div>
 
-    <Hydrocylinder v-for="(_, j) in pumpData.HKSH" :key="pumpData.HKSH[j].id" :HKSH="pumpData.HKSH[j]"
-      :pumpData="{ ...pumpData, same }" :class="buckling({ ...pumpData, HKSH: HKSH[j] })" class="my-2 border">
-      <button @click="
-        () =>
-        (pumpData.HKSH = pumpData.HKSH.filter(
-          ({ id }) => id !== pumpData.HKSH[j].id,
-        ))
-      " class="el">
-        ✕
-      </button>
+    <Hydrocylinder
+      v-for="(_, j) in pumpData.HKSH"
+      :key="pumpData.HKSH[j].id"
+      :HKSH="pumpData.HKSH[j]"
+      :pumpData="{ ...pumpData, same }"
+      :class="buckling({ ...pumpData, HKSH: HKSH[j] })"
+      class="my-2 border"
+    >
+      <button @click="() => (pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id))" class="el">✕</button>
     </Hydrocylinder>
     <div class="flex-row flex-left pl-25">
-      <button @click="$emit('addCyl')" class="btn-add my-2">+ {{ text('section') }}</button>
+      <button @click="$emit('addCyl')" class="btn-add my-2">+ {{ text("section") }}</button>
     </div>
   </article>
 </template>

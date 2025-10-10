@@ -5,17 +5,12 @@ import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, open } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "open",
-]);
+const { project, meta, order, open } = defineProps(["project", "meta", "order", "open"]);
 const filteredTanks = () => getStandartTank(meta, agregatCounting(project)) ?? tankData[meta.tank];
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="tank" index="" :logic="filteredTanks">
+  <SmthSelector v-bind="{ meta, order }" Name="tank" index="" :logic="filteredTanks">
     <InputItem data="type">
       <!-- <select v-model="meta.tank" :disabled="order.tank?.title" class="w-100" id="tank"> -->
       <select v-model="meta.tank" class="w-100" id="tank">

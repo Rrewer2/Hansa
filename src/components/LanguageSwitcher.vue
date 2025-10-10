@@ -3,18 +3,25 @@
   <div class="language-switcher" ref="switcherRef">
     <button class="button" @click="toggleDropdown">
       <span>{{ meta.lang.toUpperCase() }}</span>
-      <img v-if="meta.lang === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24">
-      <img v-if="meta.lang === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24">
+      <img v-if="meta.lang === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24" />
+      <img v-if="meta.lang === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24" />
       <span>▼</span>
     </button>
 
     <div v-if="isOpen" class="language-dropdown" @click.stop>
       <div class="click-outside" @click="isOpen = false"></div>
-      <button v-for="(_, locale) in messages" :key="locale" class="language-option"
-        @click="meta.lang = locale; isOpen = false">
+      <button
+        v-for="(_, locale) in messages"
+        :key="locale"
+        class="language-option"
+        @click="
+          meta.lang = locale;
+          isOpen = false;
+        "
+      >
         <span>{{ locale.toUpperCase() }}</span>
-        <img v-if="locale === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24">
-        <img v-if="locale === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24">
+        <img v-if="locale === 'pl'" src="../resources/PL.svg" alt="flagPL" width="24" height="24" />
+        <img v-if="locale === 'en'" src="../resources/EN.svg" alt="flagEN" width="24" height="24" />
       </button>
     </div>
   </div>
@@ -22,11 +29,11 @@
   <div class="storage">
     <button class="button" @click="save">
       SAVE
-      <img src="../resources/save.svg" alt="save" width="24" height="24">
+      <img src="../resources/save.svg" alt="save" width="24" height="24" />
     </button>
     <button class="button" @click="load">
       LOAD
-      <img src="../resources/load.svg" alt="load" width="24" height="24">
+      <img src="../resources/load.svg" alt="load" width="24" height="24" />
     </button>
   </div>
 </template>
@@ -38,7 +45,7 @@ import { messages } from "../locales";
 const isOpen = ref(false);
 const switcherRef = ref(null);
 
-const { meta, save, load  } = defineProps(["meta", "save", "load" ]);
+const { meta, save, load } = defineProps(["meta", "save", "load"]);
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
@@ -53,7 +60,6 @@ const toggleDropdown = () => {
   /* z-index: -150; */
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
-
 }
 
 .button {

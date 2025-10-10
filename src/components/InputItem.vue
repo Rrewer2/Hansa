@@ -11,9 +11,7 @@ const { data } = defineProps(["data"]);
     </h4>
     <div class="input-group">
       <slot></slot>
-      <i v-if="text(data).split(', ')[1]" class="unit px-5">{{
-        text(data).split(", ")[1]
-        }}</i>
+      <i v-if="text(data).split(', ')[1]" class="unit px-5">{{ text(data).split(", ")[1] }}</i>
     </div>
   </div>
 </template>
@@ -25,14 +23,5 @@ const { data } = defineProps(["data"]);
   background-color: #e5e5e5;
   border: 0.5px solid;
   width: 100%;
-}
-
-.unit {
-  /* position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    pointer-events: none; */
 }
 </style>

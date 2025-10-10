@@ -1,11 +1,6 @@
 <script setup>
 import { filtrationD, HKSHTitle, hkshCounting } from "../services/functions";
-import {
-  HKSHMountD,
-  HKSHMountd,
-  spoolTypes,
-  standartDiameters,
-} from "../services/data";
+import { HKSHMountD, HKSHMountd, spoolTypes, standartDiameters } from "../services/data";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 import { text } from "../services/text";
@@ -24,18 +19,7 @@ const getValue = {
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
 };
-const {
-  id,
-  mountA,
-  mountB,
-  spool,
-  throttle,
-  check,
-  directPress,
-  directPressValue,
-  form,
-  ...rest
-} = HKSH;
+const { id, mountA, mountB, spool, throttle, check, directPress, directPressValue, form, ...rest } = HKSH;
 </script>
 
 <template>
@@ -45,22 +29,22 @@ const {
         <slot></slot>
         {{ HKSHTitle(HKSH) }}
       </h2>
-      <div v-for="(_, i) in {
-        mountA,
-        mountB,
-        form,
-        spool,
-        throttle,
-        check,
-        directPress,
-        // directPressValue
-      }" class="flex-col ml-5">
+      <div
+        v-for="(_, i) in {
+          mountA,
+          mountB,
+          form,
+          spool,
+          throttle,
+          check,
+          directPress,
+          // directPressValue
+        }"
+        class="flex-col ml-5"
+      >
         <InputItem :data="i">
-          <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75"
-            :disabled="pumpData.same">
-            <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">
-              {{ j }} {{ text(elem) }}
-            </option>
+          <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
+            <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>
           </select>
 
           <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="id + i" class="w-75">
@@ -68,19 +52,27 @@ const {
               {{ i === "form" ? text(elem) : elem }}
             </option>
           </select>
-          <label v-if="i === 'directPress' && HKSH.directPress"><input type="number" min="0" max="300"
-              v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />bar</label>
+          <label v-if="i === 'directPress' && HKSH.directPress"
+            ><input type="number" min="0" max="300" v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />bar</label
+          >
         </InputItem>
       </div>
     </div>
     <div class="flex-row">
       <div v-for="(_, i) in rest" class="flex-col ml-5 my-2">
         <InputItem :data="i">
-          <input v-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="id + i" class="input w-75"
-            :disabled="pumpData.same" />
+          <input
+            v-if="i === 'L'"
+            type="number"
+            min="0"
+            max="3000"
+            v-model="HKSH[i]"
+            :id="id + i"
+            class="input w-75"
+            :disabled="pumpData.same"
+          />
 
-          <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75"
-            :disabled="pumpData.same">
+          <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
             <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">
               <span>{{ j }} {{ elem }}</span>
             </option>

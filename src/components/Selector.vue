@@ -20,11 +20,11 @@ import NotPumpSelector from "./Selector/NotPumpSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
-const pumpUnitComponents = [NotPumpSelector,MotorSelector,BellhousingSelector,VibroSelector,BlockSelector,ValveSelector,];
-const otherComponents = [TankSelector,LidSelector,FilterSelector,GaugeSelector,CoolerSelector,ExtraSelector,OldValveSelector,];
+const pumpUnitComponents = [NotPumpSelector, MotorSelector, BellhousingSelector, VibroSelector, BlockSelector, ValveSelector];
+const otherComponents = [TankSelector, LidSelector, FilterSelector, GaugeSelector, CoolerSelector, ExtraSelector, OldValveSelector];
 const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
-const items = () => [...project.flatMap((_, i) => pumpUnit().map(p => [p, i])), ...other().map((o, j) => [o, j])];
+const items = () => [...project.flatMap((_, i) => pumpUnit().map((p) => [p, i])), ...other().map((o, j) => [o, j])];
 const activeIndex = ref(items()[0]);
 const setActive = ([name, index]) => {
   activeIndex.value = [name, index];
@@ -37,15 +37,23 @@ const setActive = ([name, index]) => {
     <article class="grid">
       <article class="accordion">
         <div v-for="(powerUNIT, i) in project" :key="i">
-          <div v-for="selector in pumpUnitComponents" class="accordion-item" :key="selector.__name"
+          <div
+            v-for="selector in pumpUnitComponents"
+            class="accordion-item"
+            :key="selector.__name"
             @click="() => setActive([selector.__name, i])"
-            :class="i === activeIndex[1] && selector.__name === activeIndex[0] && 'active'">
+            :class="i === activeIndex[1] && selector.__name === activeIndex[0] && 'active'"
+          >
             <component :is="selector" v-bind="{ project, meta, order, i, powerUNIT }" />
           </div>
         </div>
-        <div v-for="selector, index in otherComponents" :key="selector.__name" class="accordion-item"
+        <div
+          v-for="(selector, index) in otherComponents"
+          :key="selector.__name"
+          class="accordion-item"
           @click="() => setActive([selector.__name, index])"
-          :class="index === activeIndex[1] && selector.__name === activeIndex[0] && 'active'">
+          :class="index === activeIndex[1] && selector.__name === activeIndex[0] && 'active'"
+        >
           <component :is="selector" v-bind="{ project, meta, order }" />
         </div>
       </article>

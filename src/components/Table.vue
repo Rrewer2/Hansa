@@ -1,14 +1,16 @@
 <script setup>
-import { text } from '../services/text';
+import { text } from "../services/text";
 
-const {keys, data} = defineProps(["keys",'data']);
+const { keys, data } = defineProps(["keys", "data"]);
 </script>
 
 <template>
   <table>
     <thead class="noCopy">
       <td v-for="a in keys">
-        <b><i>{{ text(a) }}</i></b>
+        <b>
+          <i>{{ text(a) }}</i>
+        </b>
       </td>
     </thead>
 

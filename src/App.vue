@@ -27,7 +27,7 @@ const cylInit = {
   directPress: "",
   directPressValue: "",
 };
-const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: 'GA', DBD: "" };
+const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
@@ -44,23 +44,23 @@ const load = () => {
       meta.value = storMeta;
       order.value = storOrder;
     }
-    alert('Załadowano');
+    alert("Załadowano");
     navPage.value = [true, false, false, false, false];
-    console.log('Ok');
+    console.log("Ok");
   } catch (error) {
-    alert('Coś popsułeś już, chłopie!');
+    alert("Coś popsułeś już, chłopie!");
     console.error(error);
   }
 };
 const save = () => {
   try {
-  localStorage.setItem("hansa-project", JSON.stringify(project.value));
-  localStorage.setItem("hansa-meta", JSON.stringify(meta.value));
-  localStorage.setItem("hansa-order", JSON.stringify(order.value));
-  alert('Zapisano');
-  console.log('Ok');
+    localStorage.setItem("hansa-project", JSON.stringify(project.value));
+    localStorage.setItem("hansa-meta", JSON.stringify(meta.value));
+    localStorage.setItem("hansa-order", JSON.stringify(order.value));
+    alert("Zapisano");
+    console.log("Ok");
   } catch (error) {
-    alert('Coś popsułeś już, chłopie!');
+    alert("Coś popsułeś już, chłopie!");
     console.error(error);
   }
 };
@@ -79,7 +79,7 @@ const getNewPowerUnit = () =>
     unit: [getNewPump()],
     mount: "",
     n: 1500,
-    P: ''
+    P: "",
   });
 getNewPowerUnit();
 const addCyl = (k, i) =>
@@ -99,10 +99,8 @@ const addPumpSame = (k) =>
     HKSH: project.value[k].unit.at(-1).HKSH,
     same: true,
   });
-const delPump = (k, x) =>
-  (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
-const delUnit = (k) =>
-  (project.value = project.value.filter((_, i) => i !== k));
+const delPump = (k, x) => (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
+const delUnit = (k) => (project.value = project.value.filter((_, i) => i !== k));
 const navPage = ref([true, false, false, false, false]);
 </script>
 
@@ -114,24 +112,24 @@ const navPage = ref([true, false, false, false, false]);
         <div :key="id">
           <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2" @delUnit="delUnit" />
           <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
-            <PumpUnit :key="unit[i].id" :pumpData="unit[i]" v-bind="{ project, order, i, k }"
-              @addCyl="() => addCyl(k, i)" :btnDisabled="unit.length < 2" @delPump="() => delPump(k, unit[i].id)" />
+            <PumpUnit
+              :key="unit[i].id"
+              :pumpData="unit[i]"
+              v-bind="{ project, order, i, k }"
+              @addCyl="() => addCyl(k, i)"
+              :btnDisabled="unit.length < 2"
+              @delPump="() => delPump(k, unit[i].id)"
+            />
           </div>
           <div class="flex-row flex-left pl-25">
-            <button @click="() => addPump(k)" class="btn-add my-2">
-              + {{ text("separatePump", meta) }}
-            </button>
-            <button @click="() => addPumpSame(k)" class="btn-add my-2">
-              + {{ text("samePump", meta) }}
-            </button>
+            <button @click="() => addPump(k)" class="btn-add my-2">+ {{ text("separatePump", meta) }}</button>
+            <button @click="() => addPumpSame(k)" class="btn-add my-2">+ {{ text("samePump", meta) }}</button>
           </div>
         </div>
       </section>
 
       <div class="flex-row flex-left my-2">
-        <button @click="getNewPowerUnit" class="btn-add">
-          + {{ text("pumpUnit", meta) }}
-        </button>
+        <button @click="getNewPowerUnit" class="btn-add">+ {{ text("pumpUnit", meta) }}</button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
     </article>
@@ -144,7 +142,7 @@ const navPage = ref([true, false, false, false, false]);
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <!-- <div>project {{ project }}</div> -->
-  <!-- <div>order {{ order }}</div> -->
+  <div>order {{ order }}</div>
   <!-- <div>meta {{ meta }}</div> -->
 </template>
 

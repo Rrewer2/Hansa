@@ -1305,4 +1305,3 @@ export const extra = {
   frames: [{title: "M-4236-HAGZAB04.01", tank: 70,addition:{SKM:{title:'SKM13IR2FS'},SKS:{title:'SKS13IR2FS'},MZUB:{title:'SKMZUBS2FS'},SZUB:{title:'SKSZUBS2FS'}}},{title:'M-4236-HAGZAB05.01', tank: 130}],
   trays: [{title: 'K-HAG.OEWBAKRA30', tank:30},{title: 'HKOEWBAKRA30', tank:30},{title: 'K-HAG.OEWBAKRA44', tank:44},{title: 'HKOEWBAKRA44', tank:40},{title: 'K-HAG.OEWBAKRA701', tank:70},{title: 'HKOEWBAKRA70', tank:70},{title: "M-4236-HAGZAB-W125", tank: 70,addition:{damperTrays: {title:'HKGP4030M10B',n:4}}},{title: 'K-HAG.OEWBAKRA1301', tank:130}],
 };
-

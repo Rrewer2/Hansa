@@ -4,18 +4,18 @@ import { gasketPump, dampingRail, engineMountData, motorSizes } from "../../serv
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
-const { project, meta, order, powerUNIT, i } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "powerUNIT",
-  "i",
-]);
+const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
 const motorSize = ref("");
 
 const filteredVibro = () => {
-  if (powerUNIT.mount === "B14" || order[`motor${i}`]?.motorData?.mount === "B14" || powerUNIT.mount === "B34" || order[`motor${i}`]?.motorData?.mount === "B34") return [];
+  if (
+    powerUNIT.mount === "B14" ||
+    order[`motor${i}`]?.motorData?.mount === "B14" ||
+    powerUNIT.mount === "B34" ||
+    order[`motor${i}`]?.motorData?.mount === "B34"
+  )
+    return [];
   if (powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B5") {
     return gasketPump.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
   }
@@ -24,7 +24,7 @@ const filteredVibro = () => {
 </script>
 
 <template>
-  <SmthSelector v-bind="{ project, meta, order }" Name="vibro" index="" :logic="filteredVibro">
+  <SmthSelector v-bind="{ meta, order }" Name="vibro" index="" :logic="filteredVibro">
     <InputItem data="mount">
       <select v-model="powerUNIT.mount" id="vibroMount">
         <option v-for="item in engineMountData" :value="item">

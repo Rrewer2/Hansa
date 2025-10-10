@@ -3,21 +3,14 @@
 import { text } from "../services/text";
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 
-const navData = [
-  "calculations",
-  "scheme",
-  "partsSelection",
-  "offer",
-  "similarity",
-];
-const { navPage, meta, save, load  } = defineProps(["navPage", "meta", "save", "load" ]);
+const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity"];
+const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "load"]);
 </script>
 
 <template>
   <div class="header">
     <LanguageSwitcher v-bind="{ meta, save, load }" />
     <nav class="nav">
-
       <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
         {{ text(nav) }}
       </div>

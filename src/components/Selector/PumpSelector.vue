@@ -1,13 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { pumpData, freqData, flanges, flangesPP, xvrnw } from "../../services/data";
-import {
-  getQ,
-  getTextWithSpace,
-  getVFU,
-  pumpCounting,
-  round,
-} from "../../services/functions";
+import { getQ, getTextWithSpace, getVFU, pumpCounting, round } from "../../services/functions";
 import { links } from "../../services/links";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
@@ -15,70 +9,69 @@ import ResultItem from "../ResultItem.vue";
 import CopyText from "./CopyText.vue";
 
 const group = ref("");
-const { project, meta, order, powerUNIT, i } = defineProps([
-  "project",
-  "meta",
-  "order",
-  "powerUNIT",
-  "i",
-]);
+const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 const filteredPumps = () => {
   if (!meta.pumpType) return [];
   if (powerUNIT.unit.length === 1) {
     const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
     const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
     if (order[`pump${i}`]?.title) flangeSelector();
-    return pumpData[meta.pumpType].filter((item) => {
-      const pump = Object.values(item)[0];
-      const CC = pump.CC - VFU;
-      return (
-        CC >= -par &&
-        CC <= par &&
-        pump.pmax > powerUNIT.unit[0].p &&
-        (group.value === '' ||
-          meta.pumpType !== "gears" ||
-          group.value === pump.group)
-      );
-    }).map(el => {
-      const { title, CC, ...rest } = Object.values(el)[0];
-      return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
-    });
+    return pumpData[meta.pumpType]
+      .filter((item) => {
+        const pump = Object.values(item)[0];
+        const CC = pump.CC - VFU;
+        return (
+          CC >= -par &&
+          CC <= par &&
+          pump.pmax > powerUNIT.unit[0].p &&
+          (group.value === "" || meta.pumpType !== "gears" || group.value === pump.group)
+        );
+      })
+      .map((el) => {
+        const { title, CC, ...rest } = Object.values(el)[0];
+        return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
+      });
   }
-  
-  if (powerUNIT.unit.length > 1) return [];// TODO: create a functionality for multiple pump
+
+  if (powerUNIT.unit.length > 1) return []; // TODO: create a functionality for multiple pump
 };
 
 const flangeSelector = () => {
-  const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith('Bore') ? flangesPP : flanges;
+  const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith("Bore") ? flangesPP : flanges;
   const flangeIn = flangesData.find(({ LK, QS }) => LK === order[`pump${i}`]?.pumpData?.in && QS >= powerUNIT.unit[0].Q);
   const { pipeP, pipeS } = pumpCounting(powerUNIT.unit[i]);
-  const getXVRIn = () => xvrnw.find(x => ((flangeIn?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.in === x.thread)) && pipeS === x.pipe);
+  const getXVRIn = () =>
+    xvrnw.find((x) => (flangeIn?.thread === x.thread || order[`pump${i}`]?.pumpData?.in === x.thread) && pipeS === x.pipe);
 
   const xvrIn = getXVRIn();
-  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn} : {};
-  order[`xvrPumpIn${i}`] = xvrIn ? { title: xvrIn.title, xvrPumpInData: xvrIn} : {};
+  order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn } : {};
+  order[`xvrPumpIn${i}`] = xvrIn ? { title: xvrIn.title, xvrPumpInData: xvrIn } : {};
 
-  if (!order[`pump${i}`]?.pumpData.out.startsWith('Bore')) {
-    const flangeOut = flanges.find(({ pressure, LK, QP }) => LK === order[`pump${i}`]?.pumpData?.out && pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180) && QP >= powerUNIT.unit[0].Q);
-    const getXVROut = () => xvrnw.find(x => ((flangeOut?.thread === x.thread) || (order[`pump${i}`]?.pumpData?.out === x.thread)) && pipeP === x.pipe);
+  if (!order[`pump${i}`]?.pumpData.out.startsWith("Bore")) {
+    const flangeOut = flanges.find(
+      ({ pressure, LK, QP }) =>
+        LK === order[`pump${i}`]?.pumpData?.out &&
+        pressure > (powerUNIT.unit[0].p > 180 ? powerUNIT.unit[0].p : 180) &&
+        QP >= powerUNIT.unit[0].Q,
+    );
+    const getXVROut = () =>
+      xvrnw.find((x) => (flangeOut?.thread === x.thread || order[`pump${i}`]?.pumpData?.out === x.thread) && pipeP === x.pipe);
     const xvrOut = getXVROut();
-    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData : flangeOut} : {};
-    order[`xvrPumpOut${i}`] = xvrOut ? { title: xvrOut.title, xvrPumpOutData : xvrOut} : {};
-    if(powerUNIT.mount === 'B34') powerUNIT.mount = 'B35';
-    if(!powerUNIT.mount || powerUNIT.mount === 'B14') powerUNIT.mount = 'B5';
+    order[`flangeOut${i}`] = flangeOut ? { title: flangeOut.title, flangeData: flangeOut } : {};
+    order[`xvrPumpOut${i}`] = xvrOut ? { title: xvrOut.title, xvrPumpOutData: xvrOut } : {};
+    if (powerUNIT.mount === "B34") powerUNIT.mount = "B35";
+    if (!powerUNIT.mount || powerUNIT.mount === "B14") powerUNIT.mount = "B5";
   } else {
     order[`flangeOut${i}`] = {};
     order[`xvrPumpOut${i}`] = {};
-    if(powerUNIT.mount === 'B35') powerUNIT.mount = 'B34';
-    if(!powerUNIT.mount || powerUNIT.mount === 'B5') powerUNIT.mount = 'B14';
-    meta.tank = 'KS';
+    if (powerUNIT.mount === "B35") powerUNIT.mount = "B34";
+    if (!powerUNIT.mount || powerUNIT.mount === "B5") powerUNIT.mount = "B14";
+    meta.tank = "KS";
   }
 };
 
 const selectedPump = () => {
-  powerUNIT.unit[0].Q = round(
-    getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n),
-  );
+  powerUNIT.unit[0].Q = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
   group.value = order[`pump${i}`]?.pumpData?.group;
   flangeSelector();
 };
@@ -87,9 +80,7 @@ const selectedPump = () => {
 <template>
   <article>
     <h2>
-      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'">
-        {{ text("pump") }} {{ i ? i + 1 : "" }}
-      </span>
+      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'"> {{ text("pump") }} {{ i ? i + 1 : "" }} </span>
       <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'">
         {{ order[`pump${i}`]?.title }}
       </span>
@@ -133,17 +124,27 @@ const selectedPump = () => {
     <table v-if="meta.pumpType && filteredPumps().length">
       <thead>
         <td v-for="a in Object.keys(filteredPumps()[0])">
-          <b><i>{{ text(a) }}</i></b>
+          <b
+            ><i>{{ text(a) }}</i></b
+          >
         </td>
       </thead>
       <tbody v-for="{ title, ...rest } in filteredPumps()">
         <td class="tal">
-          <input type="radio" :id="title" v-model="order[`pump${i}`]" @change="selectedPump" :value="{
-            title,
-            pumpData: { ...rest, n: powerUNIT.n },
-          }" name="pump" :checked="title === order[`pump${i}`]?.title" class="mx" />
-          <a v-if="rest.maker !== 'WPH'" :href="`${links[meta.lang]}${title}`" target="_blank"
-            rel="noopener noreferrer">
+          <input
+            type="radio"
+            :id="title"
+            v-model="order[`pump${i}`]"
+            @change="selectedPump"
+            :value="{
+              title,
+              pumpData: { ...rest, n: powerUNIT.n },
+            }"
+            name="pump"
+            :checked="title === order[`pump${i}`]?.title"
+            class="mx"
+          />
+          <a v-if="rest.maker !== 'WPH'" :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
             {{ getTextWithSpace(title) }}
           </a>
           <span v-else>{{ getTextWithSpace(title) }}</span>
