@@ -1,19 +1,6 @@
-import {
-  bucklingSafety,
-  tankData,
-  motorData,
-  VPipe,
-  pipesData,
-  pipesSData,
-  coolerData,
-} from "./data";
+import { bucklingSafety, tankData, motorData, VPipe, pipesData, pipesSData, coolerData } from "./data";
 
-export const round = (num, param = 10) =>
-  typeof num === "string"
-    ? num
-    : num === Infinity || isNaN(num)
-      ? ""
-      : Math.round(num * param) / param;
+export const round = (num, param = 10) => (typeof num === "string" ? num : num === Infinity || isNaN(num) ? "" : Math.round(num * param) / param);
 
 export const getId = (key) => key + Date.now();
 
@@ -29,19 +16,13 @@ const wallThick = (D, p) => (D * 2.6 * p) / 200 / 47;
 // const wallThick = () => (D() * P()) / (2.3 * 800 - P());
 
 const tank = (Q) => 2 * Q; //Ємність баку
-export const getStandartTank = ({ tank }, T) =>
-  tankData[tank].filter(({ Size }) => Size >= 0.8*T); // Розмір баку
+export const getStandartTank = ({ tank }, T) => tankData[tank].filter(({ Size }) => Size >= 0.8 * T); // Розмір баку
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
-export const setPressure = (unit, P) =>
-  unit[0].Q ? (unit[0].p = round(pressure(unit[0].Q, P), 1)) : {};
-export const reducedPower = (unit) =>
-  unit
-    .map(({ Q, p, DBD }) => Power(Q, getPressure(DBD, p)))
-    .reduce((a, b) => a + b); // Сукупна потужність
-export const getStandartPower = (P) =>
-  motorData.find((N) => N >= 0.97 * P); //Потужність каталогова
+export const setPressure = (unit, P) => (unit[0].Q ? (unit[0].p = round(pressure(unit[0].Q, P), 1)) : {});
+export const reducedPower = (unit) => unit.map(({ Q, p, DBD }) => Power(Q, getPressure(DBD, p))).reduce((a, b) => a + b); // Сукупна потужність
+export const getStandartPower = (P) => motorData.find((N) => N >= 0.97 * P); //Потужність каталогова
 export const Qback = (item) => pumpCounting(item).Qback;
 export const Qmax = (project) =>
   project
@@ -68,15 +49,7 @@ const getPressure = (DBD, p) => {
 };
 
 export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
-  return (
-    "HKSH" +
-    mountA +
-    mountB +
-    "." +
-    ("000" + D).slice(-3) +
-    ("000" + d).slice(-3) +
-    ("000" + L).slice(-4)
-  );
+  return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 };
 
 export const hkshCounting = ({ D, d, L, z }, { Q, p, DBD }) => {
@@ -100,11 +73,7 @@ export const buckling = ({ HKSH, p, DBD }) => {
   const SD = S(HKSH?.D);
   const FOut = F(getPressure(DBD, p), SD);
   const F1 = FI(HKSH?.d, HKSH?.L);
-  return F1 <= FOut
-    ? "error"
-    : 1 - FOut / F1 < bucklingSafety / 100
-      ? "yellow"
-      : "";
+  return F1 <= FOut ? "error" : 1 - FOut / F1 < bucklingSafety / 100 ? "yellow" : "";
 };
 
 export const unitTitle = (unit) => {
@@ -112,29 +81,25 @@ export const unitTitle = (unit) => {
   const pumpLitre = unit.map((item) => item.Q).join("x");
   return power && pumpLitre ? `${round(power)}kW - ${pumpLitre}L` : "";
 };
-export const getQfromProject = (project) =>
-  project.map(({ unit }) => unit.map(({ Q }) => Q)).flat();
+export const getQfromProject = (project) => project.map(({ unit }) => unit.map(({ Q }) => Q)).flat();
 export const getT = (Q) => tank(Q.reduce((a, b) => a + b));
-export const getTankSize = (project, meta) =>
-  getStandartTank(meta, agregatCounting(project));
+export const getTankSize = (project, meta) => getStandartTank(meta, agregatCounting(project));
 
 export const agregatTitle = (project, meta, order) => {
-  const P = project
-    .map(({ unit }) => reducedPower(unit))
-    .map((el) => getStandartPower(el));
+  const P = project.map(({ unit }) => reducedPower(unit)).map((el) => getStandartPower(el));
   const pmax = Math.max(project.flatMap(({ unit }) => unit.map(({ p }) => p)));
   const Q = getQfromProject(project).map((q) => round(q));
   const type = order.tank?.tankData?.type || meta.tank;
   const size = order.tank?.tankData?.Size || getStandartTank(meta, getT(Q))?.Size;
-  const tank = type && size ? `HAG${type}${size}` : '';
-  const motor = P.some(el => el) ? `${P.join("/")}` : '';
-  const pump = Q.some(el => el) ? `${Q.join("/")}` : '';
-  const pressure = pmax ? `${pmax}` : '';
-  const extra = order.frames?.title ? '-ZAB' : order.trays?.title ? '-W' : '';
-  const sp1 = tank && motor ? '-' : '';
-  const sp2 = pump && motor ? '-' : '';
-  const sp3 = pump && pressure ? '.' : '';
-  return tank +sp1 + motor +sp2 + pump + sp3 + pressure + extra;
+  const tank = type && size ? `HAG${type}${size}` : "";
+  const motor = P.some((el) => el) ? `${P.join("/")}` : "";
+  const pump = Q.some((el) => el) ? `${Q.join("/")}` : "";
+  const pressure = pmax ? `${pmax}` : "";
+  const extra = order.frames?.title ? "-ZAB" : order.trays?.title ? "-W" : "";
+  const sp1 = tank && motor ? "-" : "";
+  const sp2 = pump && motor ? "-" : "";
+  const sp3 = pump && pressure ? "." : "";
+  return tank + sp1 + motor + sp2 + pump + sp3 + pressure + extra;
 };
 
 export const agregatCounting = (project) => getT(getQfromProject(project));
@@ -154,11 +119,12 @@ export const powerCounting = (unit) => {
   return { Pcalc, I };
 };
 const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
-const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(
-  ([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1)
-);
-const getPipe = (Q1, k) => Object.entries(k ? pipesData: pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
-const getTPipe = (Q1, k) => Object.entries(pipesData).filter(el => el[0] !== 'L12-1.5').find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
+const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > getPressure(DBD, p1));
+const getPipe = (Q1, k) => Object.entries(k ? pipesData : pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
+const getTPipe = (Q1, k) =>
+  Object.entries(pipesData)
+    .filter((el) => el[0] !== "L12-1.5")
+    .find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
 export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
   const k = maxRatio(HKSH);
   const pipe_P = getPipeP(Q, DBD, p);
@@ -186,17 +152,11 @@ export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
 //   return c;
 // };
 // console.log(splitJoin('407.5,572 409,575 413,572'));
-export const getTextWithSpace = (text) =>
-  text.match(/HK|[a-zA-Z.\-\/]+|\d+\.+\d+|\d+/g).join(" ");
+export const getTextWithSpace = (text) => text.match(/HK|[a-zA-Z.\-\/]+|\d+\.+\d+|\d+/g).join(" ");
 
-export const Pv = (project, η) =>
-  project
-    .map(({ unit }) => reducedPower(unit))
-    .reduce((prev, cur) => prev + cur) *
-  (1 - η / 100);
+export const Pv = (project, η) => project.map(({ unit }) => reducedPower(unit)).reduce((prev, cur) => prev + cur) * (1 - η / 100);
 
-export const P01 = (project, cooler) =>
-  Pv(project, cooler.η) / (cooler.vBT - cooler.vZ);
+export const P01 = (project, cooler) => Pv(project, cooler.η) / (cooler.vBT - cooler.vZ);
 
 export const KITtitle = (project, order) => {
   const motorKeys = Object.keys(order).filter((key) => key.includes("motor"));
@@ -205,27 +165,27 @@ export const KITtitle = (project, order) => {
   const obj = {};
   const blockKeys = Object.keys(order).filter((key) => key.includes("block"));
   const start = Object.keys(order).filter((key) => key.includes("start"));
-  const blockSections = blockKeys.length ? `${blockKeys.map((key, i) => order[key]?.blockData?.stations - order[start[i]]?.title?.startsWith('HK4')).join("/")}` : '';
-  Object.keys(order).filter((key) => key.match(/valve\d+/)).map((key) => order[key]?.valveData?.spool).forEach((a) => obj[a] ? obj[a]++ : obj[a] = 1);
+  const blockSections = blockKeys.length ? `${blockKeys.map((key, i) => order[key]?.blockData?.stations - !!order[start[i]]?.title?.startsWith("HK4")).join("/")}` : "";
+  Object.keys(order)
+    .filter((key) => key.match(/valve\d+/))
+    .map((key) => order[key]?.valveData?.spool)
+    .forEach((a) => (obj[a] ? obj[a]++ : (obj[a] = 1)));
 
-  const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : '';
-  const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : '';
-  const pump = pumpKeys.length ? `${pumpKeys.map((key, ind) => round(getQ(order[key]?.pumpData?.CC, order['motor'+ind]?.motorData?.n), 1)).join("/")}` : '';
-  const pressure = pmax ? `${pmax}` : '';
-  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, 'R'+ blockSections) : '';
-  const extra = order.frames?.title ? '-ZAB' : order.trays?.title ? '-W' : '';
+  const tank = order.tank?.tankData?.type && order.tank?.tankData?.Size ? `HAG${order.tank?.tankData?.type}${order.tank?.tankData?.Size}` : "";
+  const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : "";
+  const pump = pumpKeys.length ? `${pumpKeys.map((key, ind) => round(getQ(order[key]?.pumpData?.CC, order["motor" + ind]?.motorData?.n), 1)).join("/")}` : "";
+  const pressure = pmax ? `${pmax}` : "";
+  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, "R" + blockSections) : "";
+  const extra = order.frames?.title ? "-ZAB" : order.trays?.title ? "-W" : "";
 
-  const sp1 = tank && motor ? '-' : '';
-  const sp2 = pump && motor ? '-' : '';
-  const sp3 = pump && pressure ? '.' : '';
-  const sp4 = block && pressure ? '-' : '';
-  return (tank +sp1 + motor +sp2 + pump + sp3 + pressure + sp4 + block + extra).replace('undefined', '');
+  const sp1 = tank && motor ? "-" : "";
+  const sp2 = pump && motor ? "-" : "";
+  const sp3 = pump && pressure ? "." : "";
+  const sp4 = block && pressure ? "-" : "";
+  return (tank + sp1 + motor + sp2 + pump + sp3 + pressure + sp4 + block + extra).replace("undefined", "");
 };
 
-export const getSmthFromProject = (arr) =>
-  arr.flatMap(({ unit }) =>
-    unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item))
-  );
+export const getSmthFromProject = (arr) => arr.flatMap(({ unit }) => unit.flatMap(({ HKSH }) => HKSH.flatMap((item) => item)));
 export const uniqOrder = (elem, key, order) => {
   order[key] = {};
   const unit = order[key];

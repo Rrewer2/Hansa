@@ -19,5 +19,13 @@
   "useTabs": false,
   "embeddedLanguageFormatting": "auto",
   "vueIndentScriptAndStyle": false,
-  "experimentalTernaries": false
+  "experimentalTernaries": false,
+  "overrides": [
+    {
+      "files": ["src/services/*.js", "src/services/*.ts"],
+      "options": {
+        "printWidth": 260
+      }
+    }
+  ]
 }

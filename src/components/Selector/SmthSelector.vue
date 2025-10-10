@@ -9,24 +9,34 @@ const sortKey = ref();
 
 const { Name, index, logic, after, meta, order } = defineProps(["Name", "index", "logic", "after", "meta", "order"]);
 
-const selectedOne = ref({});
+const orderTitle = ref(null);
 const slots = useSlots();
 const setSmth = ({ title, addition, ...rest }) => {
-  if (order[Name + index]?.title !== title && selectedOne.title !== title) {
-    order[Name + index] = { title, [Name + "Data"]: { ...rest } };
-    selectedOne.value = { title, addition, ...rest };
+  orderTitle.value = orderTitle.value === title ? null : title;
+  const setIt = () => {
+    order[Name + index] = { title, [Name + "Data"]: { ...rest, addition } };
     if (addition)
       Object.entries(addition).forEach(([key, values]) => {
         if (order[key + index]?.n) order[key + index].n += values?.n;
         else order[key + index] = { ...values };
       });
-  } else {
+  };
+  const unsetIt = (addition) => {
     order[Name + index] = {};
     if (addition)
       Object.entries(addition).forEach(([key, values]) => {
         if (order[key + index]?.n && order[key + index]?.n - values?.n > 1) order[key + index].n -= values?.n;
         else order[key + index] = {};
       });
+  };
+  if (!order[Name + index]?.title) setIt();
+  else {
+    if (order[Name + index]?.title !== title) {
+      unsetIt(order[Name + index]?.[Name + "Data"]?.addition);
+      setIt();
+    } else {
+      unsetIt(addition);
+    }
   }
   if (after) after();
 };
@@ -92,7 +102,9 @@ if (!logic().length) order[Name + index] = {};
               :id="title + index"
               @click="setSmth({ title, ...rest })"
               class="mx"
-              :checked="order[Name + index]?.title === title"
+              :checked="title === orderTitle || (order[Name + index]?.title && order[Name + index]?.title === title)"
+              :value="title"
+              v-model="orderTitle"
             />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank" rel="noopener noreferrer">
