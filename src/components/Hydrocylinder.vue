@@ -9,7 +9,7 @@ const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
 
 const getValue = {
   D: standartDiameters,
-  d: filtrationD(standartDiameters, HKSH),
+  d: "",
   z: [1, 2],
   spool: spoolTypes,
   mountA: HKSHMountD,
@@ -43,18 +43,18 @@ const { id, mountA, mountB, spool, throttle, check, directPress, directPressValu
         class="flex-col ml-5"
       >
         <InputItem :data="i">
-          <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
-            <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>
-          </select>
-
-          <select v-else v-model="HKSH[i]" :disabled="pumpData.same" :id="id + i" class="w-75">
-            <option v-for="elem in getValue[i]" :value="elem">
+          <select v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
+            <option v-if="i === 'mountA' || i === 'mountB'" v-for="(elem, j) in getValue[i]" :value="j" class="tal">
+              {{ j }} {{ text(elem) }}
+            </option>
+            <option v-else v-for="elem in getValue[i]" :value="elem">
               {{ i === "form" ? text(elem) : elem }}
             </option>
           </select>
-          <label v-if="i === 'directPress' && HKSH.directPress"
-            ><input type="number" min="0" max="300" v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />bar</label
-          >
+          <label v-if="i === 'directPress' && HKSH.directPress">
+            <input type="number" min="0" max="300" v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />
+            bar
+          </label>
         </InputItem>
       </div>
     </div>
@@ -71,15 +71,11 @@ const { id, mountA, mountB, spool, throttle, check, directPress, directPressValu
             class="input w-75"
             :disabled="pumpData.same"
           />
-
-          <select v-else-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
-            <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">
-              <span>{{ j }} {{ elem }}</span>
-            </option>
-          </select>
-
           <select v-else v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
-            <option v-for="elem in getValue[i]" :value="elem">
+            <option v-if="i === 'd'" v-for="elem in filtrationD(standartDiameters, HKSH)" :value="elem">
+              {{ elem }}
+            </option>
+            <option v-else v-for="elem in getValue[i]" :value="elem">
               {{ elem }}
             </option>
           </select>
