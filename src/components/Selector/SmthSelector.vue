@@ -101,6 +101,7 @@ if (!logic().length) order[Name + index] = {};
               :checked="title === orderTitle || (order[Name + index]?.title && order[Name + index]?.title === title)"
               :value="title"
               v-model="orderTitle"
+              title="Select"
             />
             <span v-if="title.startsWith('K-') || title.startsWith('M-') || title.startsWith('D1V')">{{ title }}</span>
             <a v-else :href="`${links[meta.lang]}${title.replace('/', '-').replace('.', '-')}`" target="_blank" rel="noopener noreferrer">

@@ -14,7 +14,7 @@ const copyText = async (text) => {
 };
 </script>
 <template>
-  <button @click="() => copyText(text)" :class="btn === 'Copy' ? 'copy' : 'copied'">
+  <button @click="() => copyText(text)" :class="btn === 'Copy' ? 'copy' : 'copied'" title="Copy">
     <span v-if="btn === 'Copied'">✅</span>
     <span v-else>⧉</span>
   </button>
