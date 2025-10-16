@@ -60,5 +60,6 @@ const { project, order } = defineProps(["project", "order"]);
 <style scoped>
 h5 {
   text-align: left;
+  font-size: 1rem;
 }
 </style>
