@@ -90,7 +90,7 @@ HKHQ012 2`"
 <style scoped>
 textarea {
   text-align: left;
-  font-size: xx-large;
+  font-size: 1.25rem;
   height: 50vh;
   width: 40%;
   margin: 20px 10px;

@@ -25,19 +25,4 @@ const { data } = defineProps(["data"]);
 .mw {
   min-width: 6rem;
 }
-
-/* .text {
-    padding-right: 50px;
-    height: 40px;
-    font-size: 16px;
-} */
-
-/* .unit {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
-    pointer-events: none;
-} */
 </style>

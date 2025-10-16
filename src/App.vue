@@ -163,7 +163,7 @@ const navPage = ref([true, false, false, false, false]);
 
 article,
 section {
-  font-size: 18px;
+  font-size: 1rem;
   padding: 2px;
 }
 
@@ -179,7 +179,7 @@ select {
   border: none;
   border-radius: 4px;
   min-height: 2.5vh;
-  font-size: 18px;
+  font-size: 1rem;
   max-width: 140px;
   min-width: 85px;
   width: 95px;

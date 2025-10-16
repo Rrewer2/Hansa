@@ -71,7 +71,7 @@ const toggleDropdown = () => {
   border: 1px solid #d4d4d4;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1rem;
   color: #333;
   transition: all 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@ const toggleDropdown = () => {
   background: none;
   cursor: pointer;
   text-align: left;
-  font-size: 14px;
+  font-size: 1rem;
   color: #333;
   position: relative;
   z-index: 1;

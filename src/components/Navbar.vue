@@ -32,7 +32,7 @@ const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "l
   padding: 0.4vw 0.8vw;
   margin: 0 0.2vw;
   border-radius: 0 0 1vw 1vw;
-  font-size: 18px;
+  font-size: 1.1rem;
   cursor: pointer;
   min-width: 7vw;
   height: 40px;
