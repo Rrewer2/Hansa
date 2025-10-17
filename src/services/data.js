@@ -1365,7 +1365,7 @@ export const lidData = [
     hole: 88,
     addition: {
       xvrPumpOut0: { title: "XVRNW13HLED" },
-      xvrBlockIn0: { title: "AOVRNW13HLED" },
+      xvrBlockIn0: { title: "AOVRNW13LED" },
       xvrBlockOut0: { title: "XVRNW13HLED" },
       XSVNW13HL: { title: "XSVNW13HL" },
       "VHR90-1ED": { title: "VHR90-1ED" },
