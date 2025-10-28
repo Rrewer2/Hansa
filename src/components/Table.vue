@@ -35,6 +35,18 @@ const { keys, data } = defineProps(["keys", "data"]);
       </tr>
     </tbody>
   </table>
+  <table>
+    <thead>
+      <tr>
+        <td>N</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="_ of data()">
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <style scoped>

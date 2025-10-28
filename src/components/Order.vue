@@ -68,7 +68,9 @@ const netto = () => {
 </script>
 
 <template>
-  <Table v-if="!magic" class="mx-auto" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
+  <div class="flex flex-row flex-center items-start">
+    <Table v-if="!magic" class="" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
+  </div>
 
   <TableSAP v-if="magic" class="magic-article" :keys="['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']" :data="cracked" />
   <button v-if="!magic" @click="loadData" class="magic-btn">Zrobić magię / Magic</button>
@@ -105,7 +107,9 @@ const netto = () => {
   background-color: #1d2a35;
   margin: 20px auto;
 }
-
+.items-start {
+  align-items: start;
+}
 .table {
   padding-top: 0;
   background-color: #2c3e50;
