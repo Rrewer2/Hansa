@@ -1,7 +1,9 @@
 <script setup>
+import { ref } from "vue";
 import { text } from "../services/text";
 
 const { keys, data } = defineProps(["keys", "data"]);
+const N = ref(100);
 </script>
 
 <template>
@@ -38,12 +40,14 @@ const { keys, data } = defineProps(["keys", "data"]);
   <table>
     <thead>
       <tr>
-        <td>N</td>
+        <td>
+          <input type="number" v-model="N" id="100" class="simple" min="0" />
+        </td>
       </tr>
     </thead>
     <tbody>
       <tr v-for="_ of data()">
-        <td>100</td>
+        <td>{{ N }}</td>
       </tr>
     </tbody>
   </table>
@@ -52,5 +56,11 @@ const { keys, data } = defineProps(["keys", "data"]);
 <style scoped>
 .noCopy {
   user-select: none;
+}
+.simple {
+  min-height: 1rem;
+  max-width: 60px;
+  min-width: 60px;
+  width: 60px;
 }
 </style>

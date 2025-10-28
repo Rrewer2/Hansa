@@ -69,7 +69,7 @@ const netto = () => {
 
 <template>
   <div class="flex flex-row flex-center items-start">
-    <Table v-if="!magic" class="" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
+    <Table v-if="!magic" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
   </div>
 
   <TableSAP v-if="magic" class="magic-article" :keys="['Nr', 'title', 'count', 'Description', 'Ilosc ATP', 'Cena']" :data="cracked" />
