@@ -183,4 +183,6 @@ export default {
   descr35: ["Oferta nie obejmuje sterowania elektrycznego agregatu."],
   descr36: ["Oferta nie obejmuje elementów instalacji wymaganych do połączenia poszczególnych bloków roboczych."],
   descr37: ["Instalacja połączeniowa może być przedmiotem kolejnej oferty po udostępnieniu przez klienta informacji jej dotyczącej."],
+  descr38: ["Agregat jest wzposażony w wannę ociekową"],
+  descr39: ["Agregat w zabudowie rurowej"],
 };

@@ -64,6 +64,12 @@ const description = computed(() => {
   if (order.filter?.title) {
     arr.push(`${text("descr29")} ${order.filter?.filterData?.filterGrade ?? 10} (µm)`);
   }
+  if (order.trays?.title) {
+    arr.push(text("descr38"));
+  }
+  if (order.frames?.title) {
+    arr.push(text("descr39"));
+  }
 
   // решта статичних описів
   for (let i = 30; i <= 37; i++) arr.push(text(`descr${i}`));

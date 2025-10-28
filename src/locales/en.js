@@ -145,4 +145,6 @@ export default {
   descr35: ["The offer does not include the electrical control system of the power unit."],
   descr36: ["The offer does not include the installation components required to connect the working blocks."],
   descr37: ["The connection installation may be the subject of a separate offer after the customer provides relevant information."],
+  descr38: ["The aggregate is equipped with a drip tray"],
+  descr39: ["The aggregate is in a tubular housing"],
 };
