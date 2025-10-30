@@ -39,20 +39,13 @@ const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
 
 export const getMaxPower = ({ VFU, n, p }) => Power(getQ(VFU, n), p); //Потужність двигуна, яка є максимальною для вибраної помпи
-const getPressure = (DBD, p) => {
-  if (DBD) {
-    if (p) return Math.min(p, DBD);
-    return DBD;
-  }
-  if (p) return p;
-  return 0;
-};
+const getPressure = ({ DBD, p, directPressValue }) => return Math.min(p, DBD, directPressValue) ?? 0;
 
 export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
   return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 };
 
-export const hkshCounting = ({ D, d, L, z }, { Q, p, DBD }) => {
+export const hkshCounting = ({ D, d, L, z, directPressValue }, { Q, p, DBD }) => {
   const SD = S(D);
   const Sd = S(D, d);
   const VD = V(SD, L);
@@ -60,8 +53,8 @@ export const hkshCounting = ({ D, d, L, z }, { Q, p, DBD }) => {
   const tOut = t(VD, z, Q);
   const tIn = t(Vd, z, Q);
   const tC = tIn + tOut;
-  const FOut = F(getPressure(DBD, p), SD);
-  const FIn = F(getPressure(DBD, p), Sd);
+  const FOut = F(getPressure({ DBD, p, directPressValue }), SD);
+  const FIn = F(getPressure({ DBD, p, directPressValue }), Sd);
   const vOut = v(L, tOut);
   const vIn = v(L, tIn);
   const wall = wallThick(D, getPressure(DBD, p));
