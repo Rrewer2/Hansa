@@ -39,7 +39,7 @@ const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
 
 export const getMaxPower = ({ VFU, n, p }) => Power(getQ(VFU, n), p); //Потужність двигуна, яка є максимальною для вибраної помпи
-const getPressure = ({ DBD, p, directPressValue }) => return Math.min(p, DBD, directPressValue) ?? 0;
+const getPressure = ({ DBD, p, directPressValue }) => Math.min(p, DBD, directPressValue) ?? 0;
 
 export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
   return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
