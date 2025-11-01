@@ -48,7 +48,7 @@ const getPressure = ({ DBD, p, directPressValue }) => {
 export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
   return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 };
-
+//Comment for Netlify
 export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, directPressValueB }, { Q, p, DBD }) => {
   const SD = S(D);
   const Sd = S(D, d);
