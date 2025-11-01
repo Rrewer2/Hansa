@@ -19,7 +19,7 @@ const getValue = {
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
 };
-const { id, mountA, mountB, spool, throttle, check, directPress, directPressValue, form, ...rest } = HKSH;
+const { id, mountA, mountB, spool, throttle, check, directPress, directPressValue, directPressValueB, form, ...rest } = HKSH;
 </script>
 
 <template>
@@ -52,9 +52,11 @@ const { id, mountA, mountB, spool, throttle, check, directPress, directPressValu
             </option>
           </select>
           <label v-if="i === 'directPress' && HKSH.directPress">
-            <input type="number" min="0" max="300" v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" />
-            bar
+            <input type="number" min="0" max="300" v-model="HKSH.directPressValue" id="directPressValue" class="input w-55" /> bar
           </label>
+          <span v-if="i === 'directPress' && HKSH.directPress && (HKSH.directPress === '012' || HKSH.directPress === '015')">
+            <input type="number" min="0" max="300" v-model="HKSH.directPressValueB" id="directPressValueB" class="input w-55" /> bar
+          </span>
         </InputItem>
       </div>
     </div>

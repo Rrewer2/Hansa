@@ -26,6 +26,7 @@ const cylInit = {
   check: "",
   directPress: "",
   directPressValue: "",
+  directPressValueB: "",
 };
 const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
 const getNewPump = () => ({
