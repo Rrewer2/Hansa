@@ -39,17 +39,16 @@ const pipePmin = (Q) => pipe(Q, VPipe.P[1]);
 const pipeTmin = (QBack) => pipe(QBack, VPipe.T[1]);
 
 export const getMaxPower = ({ VFU, n, p }) => Power(getQ(VFU, n), p); //Потужність двигуна, яка є максимальною для вибраної помпи
-const getPressure = ({ DBD, p, directPressValue }) => {
+const getPressure = ({ DBD, p, directPressValue, minDirectPressure }) => {
   // const direct = directPress === "011" ? directPressValue : null;
-  const vals = [directPressValue, DBD, p].filter((v) => v);
+  const vals = [directPressValue, DBD, p, minDirectPressure].filter((v) => v);
   return vals.length ? Math.min(...vals) : 0;
 };
 
 export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
   return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
 };
-//Comment for Netlify
-export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, directPressValueB }, { Q, p, DBD }) => {
+export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, directPressValueB }, { Q, p, DBD, HKSH }) => {
   const SD = S(D);
   const Sd = S(D, d);
   const VD = V(SD, L);
@@ -57,8 +56,9 @@ export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, direct
   const tOut = t(VD, z, Q);
   const tIn = t(Vd, z, Q);
   const tC = tIn + tOut;
-  const FOut = F(getPressure(["011", "012", "013"].some((el) => directPress === el) ? { DBD, p, directPressValue } : { DBD, p }), SD);
-  const FIn = F(getPressure(["011", "012", "014"].some((el) => directPress === el) ? { DBD, p, directPressValue: directPress === "012" ? directPressValueB : directPressValue } : { DBD, p }), Sd);
+  const minDirectPressure = Math.min(...HKSH.map(({ directPress, directPressValue }) => (directPress === "011" ? directPressValue : null)).filter((v) => v));
+  const FOut = F(getPressure(["011", "012", "013"].some((el) => directPress === el) ? { DBD, p, directPressValue, minDirectPressure } : { DBD, p, minDirectPressure }), SD);
+  const FIn = F(getPressure(["011", "012", "014"].some((el) => directPress === el) ? { DBD, p, directPressValue: directPress === "012" ? directPressValueB : directPressValue, minDirectPressure } : { DBD, p, minDirectPressure }), Sd);
   const vOut = v(L, tOut);
   const vIn = v(L, tIn);
   const wall = wallThick(D, getPressure({ DBD, p, directPressValue, directPress }));
@@ -131,7 +131,8 @@ export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
   const pipe_S = getPipe(Q);
   const pipeS = pipe_S ? pipe_S[0] : "∄";
   const Qback = Q * k;
-  const Pcalc = Power(Q, getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress }));
+  const minDirectPressure = Math.min(...HKSH.map(({ directPress, directPressValue }) => (directPress === "011" ? directPressValue : null)).filter((v) => v));
+  const Pcalc = Power(Q, getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress, minDirectPressure }));
   return { pipeP, pipeT, pipeS, Qback, Pcalc };
 };
 
