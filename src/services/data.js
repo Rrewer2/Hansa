@@ -1128,12 +1128,27 @@ export const HKHQ = [
   // {title: "HKHQ022U", type: "022",CETOP: 3, h: 40},
   { title: "HKHQ023", type: "023", CETOP: 3, h: 40 },
   { title: "HKHQ024", type: "024", CETOP: 3, h: 40 },
+
   { title: "HKKQ012", type: "012", CETOP: 5, h: 50 },
   { title: "HKKQ013", type: "013", CETOP: 5, h: 50 },
   { title: "HKKQ014", type: "014", CETOP: 5, h: 50 },
   { title: "HKKQ022", type: "022", CETOP: 5, h: 50 },
   { title: "HKKQ023", type: "023", CETOP: 5, h: 50 },
   { title: "HKKQ024", type: "024", CETOP: 5, h: 50 },
+
+  { title: "HKJPQ212", type: "012", CETOP: 7, h: 60 },
+  { title: "HKJPQ213", type: "013", CETOP: 7, h: 60 },
+  { title: "HKJPQ214", type: "014", CETOP: 7, h: 60 },
+  { title: "HKJPQ222", type: "022", CETOP: 7, h: 60 },
+  { title: "HKJPQ223", type: "023", CETOP: 7, h: 60 },
+  { title: "HKJPQ224", type: "024", CETOP: 7, h: 60 },
+
+  { title: "HKJPQ312", type: "012", CETOP: 8, h: 80 },
+  { title: "HKJPQ313", type: "013", CETOP: 8, h: 80 },
+  { title: "HKJPQ314", type: "014", CETOP: 8, h: 80 },
+  { title: "HKJPQ322", type: "022", CETOP: 8, h: 80 },
+  { title: "HKJPQ323", type: "023", CETOP: 8, h: 80 },
+  { title: "HKJPQ324", type: "024", CETOP: 8, h: 80 },
 ];
 
 export const HKHR = [
@@ -1146,6 +1161,13 @@ export const HKHR = [
   { title: "HKKR012", type: "012", CETOP: 5, h: 50 },
   { title: "HKKR013", type: "013", CETOP: 5, h: 50 },
   { title: "HKKR014", type: "014", CETOP: 5, h: 50 },
+
+  { title: "HKJPR212", type: "012", CETOP: 7, h: 60 },
+  { title: "HKJPR213", type: "013", CETOP: 7, h: 60 },
+  { title: "HKJPR214", type: "014", CETOP: 7, h: 60 },
+  { title: "HKJPR312", type: "012", CETOP: 8, h: 80 },
+  { title: "HKJPR313", type: "013", CETOP: 8, h: 80 },
+  { title: "HKJPR314", type: "014", CETOP: 8, h: 80 },
 ];
 
 export const HKHMP = [
@@ -1160,6 +1182,15 @@ export const HKHMP = [
   { title: "HKHMP013350", type: "013", CETOP: 3, pmax: 350, h: 40 },
   { title: "HKHMP014350", type: "014", CETOP: 3, pmax: 350, h: 40 },
 
+  { title: "HKZDVP011S0D1", type: "011", CETOP: 3, pmax: 70, h: 40 },
+  { title: "HKZDVP015S0D1", type: "011", CETOP: 3, pmax: 350, h: 40 },
+  { title: "HKZDVAB011S0D1", type: "012", CETOP: 3, pmax: 70, h: 40 },
+  { title: "HKZDVAB015S0D1", type: "012", CETOP: 3, pmax: 350, h: 40 },
+  { title: "HKZDVA011S0D1", type: "013", CETOP: 3, pmax: 70, h: 40 },
+  { title: "HKZDVA015S0D1", type: "013", CETOP: 3, pmax: 350, h: 40 },
+  { title: "HKZDVB011S0D1", type: "014", CETOP: 3, pmax: 70, h: 40 },
+  { title: "HKZDVB015S0D1", type: "014", CETOP: 3, pmax: 350, h: 40 },
+
   { title: "HKKM011100", type: "011", CETOP: 5, pmax: 100, h: 50 },
   { title: "HKKM011210", type: "011", CETOP: 5, pmax: 210, h: 50 },
   { title: "HKKM011350", type: "011", CETOP: 5, pmax: 350, h: 50 },
@@ -1172,6 +1203,15 @@ export const HKHMP = [
   { title: "HKKM014100", type: "014", CETOP: 5, pmax: 100, h: 50 },
   { title: "HKKM014210", type: "014", CETOP: 5, pmax: 210, h: 50 },
   { title: "HKKM014350", type: "014", CETOP: 5, pmax: 350, h: 50 },
+
+  { title: "HKZDVP021S0D1", type: "011", CETOP: 5, pmax: 70, h: 50 },
+  { title: "HKZDVP025S0D1", type: "011", CETOP: 5, pmax: 315, h: 50 },
+  { title: "HKZDVAB021S0D1", type: "012", CETOP: 5, pmax: 70, h: 50 },
+  { title: "HKZDVAB025S0D1", type: "012", CETOP: 5, pmax: 315, h: 50 },
+  { title: "HKZDVA021S0D1", type: "013", CETOP: 5, pmax: 70, h: 50 },
+  { title: "HKZDVA025S0D1", type: "013", CETOP: 5, pmax: 315, h: 50 },
+  { title: "HKZDVB021S0D1", type: "014", CETOP: 5, pmax: 70, h: 50 },
+  { title: "HKZDVB025S0D1", type: "014", CETOP: 5, pmax: 315, h: 50 },
 ];
 
 export const HKM = [
@@ -1482,6 +1522,7 @@ export const extra = {
     { title: "HKOEWBAKRA44", tank: 40 },
     { title: "K-HAG.OEWBAKRA701", tank: 70 },
     { title: "HKOEWBAKRA70", tank: 70 },
+    { title: "K-HAG.W70", tank: 70 },
     { title: "M-4236-HAGZAB-W125", tank: 70, addition: { damperTrays: { title: "HKGP4030M10B", n: 4 } } },
     { title: "K-HAG.OEWBAKRA1301", tank: 130 },
   ],
