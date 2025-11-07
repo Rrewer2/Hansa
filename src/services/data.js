@@ -507,7 +507,7 @@ const gearPumpHydrosila = [
   {},
   {},
   {
-    "K-PZ2-4.5EUP" : { CC: 4.5, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "PZ2-4.5EUP" : { CC: 4.5, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
   }
 ];
 const gearPumpCasappa = [
@@ -662,6 +662,7 @@ const pistonPumpPBA = {
 export const pumpData = {
   gears: [
     ["VIVOLO", gearPumpVivolo],
+    ["HYDROSILA", gearPumpHydrosila],
     ["CASAPPA", gearPumpCasappa],
     ["REXROTH", gearPumpRexroth],
     ["WPH", gearPumpWPH],
