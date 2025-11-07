@@ -1305,6 +1305,26 @@ export const getPriority = (KIT) => {
 };
 
 export const lidData = [
+    {
+    title: "K-HAG2RA20-90",
+    tank: 20,
+    motor: 90,
+    type: "RA",
+    addition: {
+      HKCBS1200000: { title: "HKCBS1200000" },
+      XSVNW10HL: { title: "XSVNW10HL" },
+      XSVNW13HL: { title: "XSVNW13HL" },
+      DMONW13L: { title: "DMONW13L", n: 2 },
+      XVEWONW13HL: { title: "XVEWONW13HL", n: 2 },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      ventilation: { title: "FIBL046FP10002" },
+      filter: { title: "FISPR55P10VG3/4" },
+      HKVAVR: { title: "HKVAVR" },
+      XVRNW13HL3/4ED: { title: "XVRNW13HL3/4ED", n: 2 },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
+    },
+  },
   {
     title: "M-4205-00000000010",
     tank: 20,
