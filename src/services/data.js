@@ -503,6 +503,13 @@ const gearPumpVivolo = [
     HKX3P8702ACBA: { CC: 74.46, in: "Ø62mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 180, holePattern: "128 x 98 - Ø50.8" },
   },
 ];
+const gearPumpHydrosila = [
+  {},
+  {},
+  {
+    "K-PZ2-4.5EUP" : { CC: 4.5, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
+  }
+];
 const gearPumpCasappa = [
   {},
   {},
