@@ -1327,7 +1327,7 @@ export const lidData = [
       ventilation: { title: "FIBL046FP10002" },
       filter: { title: "FISPR55P10VG3/4" },
       HKVAVR: { title: "HKVAVR" },
-      XVRNW13HL3/4ED: { title: "XVRNW13HL3/4ED", n: 2 },
+      "XVRNW13HL3/4ED": { title: "XVRNW13HL3/4ED", n: 2 },
       levelTemp: { title: "HKNTMM319070NC280" },
       Przedluzka: { title: "M-4221-PG3476" },
     },
