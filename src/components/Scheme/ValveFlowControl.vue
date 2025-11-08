@@ -5,9 +5,9 @@ import Throttle from "./Throttle.vue";
 const { x, y, r, sl, sh, data } = defineProps(["x", "y", "r", "sl", "sh", "data"]);
 
 const HKHQ = {
-  AB: { left: true, right: true, check: false },
-  A: { left: true, right: false, check: false },
-  B: { left: false, right: true, check: false },
+  "⨘AB": { left: true, right: true, check: false },
+  "⨘A": { left: true, right: false, check: false },
+  "⨘B": { left: false, right: true, check: false },
   "⇑AB": { left: true, right: true, check: true, deg: 180 },
   "⇑A": { left: true, right: false, check: true, deg: 180 },
   "⇑B": { left: false, right: true, check: true, deg: 180 },

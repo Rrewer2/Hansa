@@ -16,11 +16,19 @@ import LidSelector from "./Selector/LidSelector.vue";
 import ExtraSelector from "./Selector/ExtraSelector.vue";
 import Title from "./Title.vue";
 import Description from "./Description.vue";
-import NotPumpSelector from "./Selector/NotPumpSelector.vue";
+import NonCETOPValveSelector from "./Selector/NonCETOPValveSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
-const pumpUnitComponents = [NotPumpSelector, MotorSelector, BellhousingSelector, VibroSelector, BlockSelector, ValveSelector];
+const pumpUnitComponents = [
+  PumpSelector,
+  MotorSelector,
+  BellhousingSelector,
+  VibroSelector,
+  BlockSelector,
+  ValveSelector,
+  NonCETOPValveSelector,
+];
 const otherComponents = [TankSelector, LidSelector, FilterSelector, GaugeSelector, CoolerSelector, ExtraSelector, OldValveSelector];
 const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);

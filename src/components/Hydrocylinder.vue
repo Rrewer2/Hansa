@@ -19,7 +19,7 @@ const getValue = {
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
   nonReturn: ["", "AB", "A", "B"],
-  flowControl: ["", "AB", "A", "B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
+  flowControl: ["", "⨘AB", "⨘A", "⨘B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
 };
 const {
   id,

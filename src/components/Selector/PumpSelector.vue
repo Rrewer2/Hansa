@@ -1,12 +1,11 @@
 <script setup>
 import { ref } from "vue";
 import { pumpData, freqData, flanges, flangesPP, xvrnw } from "../../services/data";
-import { getQ, getTextWithSpace, getVFU, pumpCounting, round } from "../../services/functions";
-import { links } from "../../services/links";
+import { getQ, getVFU, pumpCounting, round } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
-import CopyText from "./CopyText.vue";
+import SmthSelector from "./SmthSelector.vue";
 
 const group = ref("");
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
@@ -30,13 +29,20 @@ const filteredPumps = () => {
       .map((el) => {
         const { title, CC, ...rest } = Object.values(el)[0];
         return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
-      });
+      })
+      .sort((a, b) => a.CC - b.CC);
   }
 
   if (powerUNIT.unit.length > 1) return []; // TODO: create a functionality for multiple pump
 };
 
 const flangeSelector = () => {
+  order[`flangeIn${i}`] = {};
+  order[`flangeOut${i}`] = {};
+  order[`xvrPumpIn${i}`] = {};
+  order[`xvrPumpOut${i}`] = {};
+  if (!order[`pump${i}`]?.pumpData?.out?.startsWith("Bore") && order[`filter`]?.title === "HKRTR0502CG1P10") order[`filter`] = {};
+  order[`xvrFilterT`] = {};
   const flangesData = order[`pump${i}`]?.pumpData?.out?.startsWith("Bore") ? flangesPP : flanges;
   const flangeIn = flangesData.find(({ LK, QS }) => LK === order[`pump${i}`]?.pumpData?.in && QS >= powerUNIT.unit[0].Q);
   const { pipeP, pipeS } = pumpCounting(powerUNIT.unit[i]);
@@ -47,7 +53,8 @@ const flangeSelector = () => {
   order[`flangeIn${i}`] = flangeIn ? { title: flangeIn.title, flangeData: flangeIn } : {};
   order[`xvrPumpIn${i}`] = xvrIn ? { title: xvrIn.title, xvrPumpInData: xvrIn } : {};
 
-  if (!order[`pump${i}`]?.pumpData.out.startsWith("Bore")) {
+  if (!order[`pump${i}`]?.pumpData?.out?.startsWith("Bore")) {
+    if (meta.tank === "KS") meta.tank = "RA";
     const flangeOut = flanges.find(
       ({ pressure, LK, QP }) =>
         LK === order[`pump${i}`]?.pumpData?.out &&
@@ -62,8 +69,6 @@ const flangeSelector = () => {
     if (powerUNIT.mount === "B34") powerUNIT.mount = "B35";
     if (!powerUNIT.mount || powerUNIT.mount === "B14") powerUNIT.mount = "B5";
   } else {
-    order[`flangeOut${i}`] = {};
-    order[`xvrPumpOut${i}`] = {};
     if (powerUNIT.mount === "B35") powerUNIT.mount = "B34";
     if (!powerUNIT.mount || powerUNIT.mount === "B5") powerUNIT.mount = "B14";
     meta.tank = "KS";
@@ -71,89 +76,47 @@ const flangeSelector = () => {
 };
 
 const selectedPump = () => {
-  powerUNIT.unit[0].Q = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
-  group.value = order[`pump${i}`]?.pumpData?.group;
+  const currentQ = round(getQ(order[`pump${i}`]?.pumpData?.CC, powerUNIT.n));
+  if (currentQ !== "") powerUNIT.unit[0].Q = currentQ;
+  // group.value = order[`pump${i}`]?.pumpData?.group || '';
   flangeSelector();
 };
 </script>
 
 <template>
-  <article>
-    <h2>
-      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'"> {{ text("pump") }} {{ i ? i + 1 : "" }} </span>
-      <span :class="order[`pump${i}`]?.title ? 'titleSelected' : 'titleNotSelected'">
-        {{ order[`pump${i}`]?.title }}
-      </span>
-    </h2>
-
-    <div class="flex-row flex-center">
-      <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
-        <InputItem data="Q">
-          <input type="number" min="0" v-model="pump.Q" id="Q" />
-        </InputItem>
-        <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
-        <InputItem data="p">
-          <input type="number" min="0" v-model="pump.p" id="pp" />
-        </InputItem>
-      </span>
-
-      <InputItem data="n">
-        <select v-model="powerUNIT.n" id="n">
-          <option v-for="item in freqData" :value="item">{{ item }}</option>
-        </select>
+  <SmthSelector v-bind="{ meta, order }" Name="pump" :index="i" :logic="filteredPumps" :after="selectedPump">
+    <span v-for="pump in powerUNIT.unit" class="flex-row flex-center">
+      <InputItem data="Q">
+        <input type="number" min="0" v-model="pump.Q" id="Q" />
       </InputItem>
-
-      <InputItem data="pumpType">
-        <select v-model="meta.pumpType" id="pumpType">
-          <option v-for="item in Object.keys(pumpData)" :value="item">
-            {{ text(item) }}
-          </option>
-        </select>
+      <ResultItem :data="{ VFU: round(getVFU(pump.Q, powerUNIT.n)) }" />
+      <InputItem data="p">
+        <input type="number" min="0" v-model="pump.p" id="pp" />
       </InputItem>
+    </span>
 
-      <InputItem v-if="meta.pumpType === 'gears'" data="group">
-        <select v-model="group" id="group">
-          <option v-for="item in ['', 0, 1, 2, 3]" :value="item">
-            {{ item }}
-          </option>
-        </select>
-      </InputItem>
-    </div>
+    <InputItem data="n">
+      <select v-model="powerUNIT.n" id="n">
+        <option v-for="item in freqData" :value="item">{{ item }}</option>
+      </select>
+    </InputItem>
 
-    <br />
-    <table v-if="meta.pumpType && filteredPumps().length">
-      <thead>
-        <td v-for="a in Object.keys(filteredPumps()[0])">
-          <b
-            ><i>{{ text(a) }}</i></b
-          >
-        </td>
-      </thead>
-      <tbody v-for="{ title, ...rest } in filteredPumps()">
-        <td class="tal">
-          <input
-            type="radio"
-            :id="title"
-            v-model="order[`pump${i}`]"
-            @change="selectedPump"
-            :value="{
-              title,
-              pumpData: { ...rest, n: powerUNIT.n },
-            }"
-            name="pump"
-            :checked="title === order[`pump${i}`]?.title"
-            class="mx"
-          />
-          <a v-if="rest.maker !== 'WPH'" :href="`${links[meta.lang]}${title}`" target="_blank" rel="noopener noreferrer">
-            {{ getTextWithSpace(title) }}
-          </a>
-          <span v-else>{{ getTextWithSpace(title) }}</span>
-          <CopyText :text="title" />
-        </td>
-        <td v-for="item in Object.values(rest)">{{ item }}</td>
-      </tbody>
-    </table>
-  </article>
+    <InputItem data="pumpType">
+      <select v-model="meta.pumpType" id="pumpType">
+        <option v-for="item in Object.keys(pumpData)" :value="item">
+          {{ text(item) }}
+        </option>
+      </select>
+    </InputItem>
+
+    <InputItem v-if="meta.pumpType === 'gears'" data="group">
+      <select v-model="group" id="group">
+        <option v-for="item in ['', 0, 1, 2, 3]" :value="item">
+          {{ item }}
+        </option>
+      </select>
+    </InputItem>
+  </SmthSelector>
 </template>
 
 <style scoped></style>

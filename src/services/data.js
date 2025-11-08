@@ -1222,6 +1222,22 @@ export const HKHMP = [
   { title: "HKZDVB025S0D1", type: "014", CETOP: 5, pmax: 315, h: 50 },
 ];
 
+export const HKZNS = [
+  { title: "HKZNSA012S0D1", type: "A", CETOP: 3, pmax: 175, h: 40 },
+  { title: "HKZNSA015S0D1", type: "A", CETOP: 3, pmax: 350, h: 40 },
+  { title: "HKZNSB012S0D1", type: "B", CETOP: 3, pmax: 175, h: 40 },
+  { title: "HKZNSB015S0D1", type: "B", CETOP: 3, pmax: 350, h: 40 },
+  { title: "HKZNSAB012S0D1", type: "AB", CETOP: 3, pmax: 175, h: 40 },
+  { title: "HKZNSAB015S0D1", type: "AB", CETOP: 3, pmax: 350, h: 40 },
+
+  { title: "HKZNSA022S0D1", type: "A", CETOP: 5, pmax: 175, h: 50 },
+  { title: "HKZNSA025S0D1", type: "A", CETOP: 5, pmax: 350, h: 50 },
+  { title: "HKZNSB022S0D1", type: "B", CETOP: 5, pmax: 175, h: 50 },
+  { title: "HKZNSB025S0D1", type: "B", CETOP: 5, pmax: 350, h: 50 },
+  { title: "HKZNSAB022S0D1", type: "AB", CETOP: 5, pmax: 175, h: 50 },
+  { title: "HKZNSAB025S0D1", type: "AB", CETOP: 5, pmax: 350, h: 50 },
+];
+
 export const HKM = [
   { title: "HKM530", L: 30, CETOP: 3 },
   { title: "HKM550", L: 50, CETOP: 3 },
@@ -1243,6 +1259,73 @@ export const HKM = [
   { title: "HKM6140", L: 140, CETOP: 5 },
   { title: "HKM6175", L: 175, CETOP: 5 },
   { title: "HKM6190", L: 190, CETOP: 5 },
+];
+
+export const HKV1 = [
+  { title: "HKV18650400", type: "AB", flowMax: 20, thread: "G 1/4″ -19", pmax: 350 },
+  { title: "HKV1865M18X15", type: "AB", flowMax: 20, thread: "M 18 x 1.5", pmax: 350 },
+  { title: "HKV186506NT", type: "AB", flowMax: 30, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HKV18660600", type: "AB", flowMax: 30, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HKV18650800", type: "AB", flowMax: 45, thread: "G 1/2″ -14", pmax: 350 },
+
+  { title: "HKVRDE10CIL", type: "AB", flowMax: 20, thread: "G 1/4″ -19", pmax: 300 },
+  { title: "HKVRDE20CIL", type: "AB", flowMax: 20, thread: "G 3/8″ -19", pmax: 300 },
+
+  { title: "HK055343109700", type: "AB", flowMax: 30, thread: "G 3/8″ -19", pmax: 210 },
+  { title: "HK055301000300", type: "AB", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HK055301000400", type: "AB", flowMax: 100, thread: "G 3/4″ -14", pmax: 210 },
+
+  { title: "HK055211000900", type: "A", flowMax: 20, thread: "G 1/4″ -19", pmax: 210 },
+  { title: "HK055211000300", type: "A", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
+
+  { title: "HK055211000900", type: "B", flowMax: 20, thread: "G 1/4″ -19", pmax: 210 },
+  { title: "HK055211000300", type: "B", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
+];
+export const HKV2 = [
+  { title: "HKV2572-1/8", type: "⨘", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
+  { title: "HKV2572-1/4", type: "⨘", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
+  { title: "HKV2572-3/8", type: "⨘", flowMax: 38, thread: "G 3/8″ -19", pmax: 400 },
+  { title: "HKV2572-1/2", type: "⨘", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
+  { title: "HKV2572-3/4", type: "⨘", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
+  { title: "HKV2572-1", type: "⨘", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+
+  { title: "HKV2575-1/8", type: "⇑", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
+  { title: "HKV2575-1/4", type: "⇑", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
+  { title: "HKV2575-3/8", type: "⇑", flowMax: 38, thread: "G 3/8″ -19", pmax: 400 },
+  { title: "HKV2575-1/2", type: "⇑", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
+  { title: "HKV2575-3/4", type: "⇑", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
+  { title: "HKV2575-1", type: "⇑", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+
+  { title: "HKV2575-1/8", type: "⇓", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
+  { title: "HKV2575-1/4", type: "⇓", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
+  { title: "HKV2575-3/8", type: "⇓", flowMax: 38, thread: "G 3/8″ -19", pmax: 400 },
+  { title: "HKV2575-1/2", type: "⇓", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
+  { title: "HKV2575-3/4", type: "⇓", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
+  { title: "HKV2575-1", type: "⇓", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+];
+export const HKVCounterBalance = [
+  { title: "HK054247100220", type: "AB", flowMax: 40, thread: "G 3/8″ -19", pmax: 210 },
+  { title: "HK054247100235", type: "AB", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HK054201030320", type: "AB", flowMax: 60, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HK054201030335", type: "AB", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+  { title: "HK054201030435", type: "AB", flowMax: 140, thread: "G 3/4″ -14", pmax: 350 },
+
+  { title: "HKV2290A600", type: "AB", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HKV2290A800", type: "AB", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+
+  { title: "HKV2190A600", type: "A", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HKV2190A800", type: "A", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+  { title: "HKV2190A600", type: "B", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HKV2190A800", type: "B", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+
+  { title: "HK054322100220", type: "A", flowMax: 40, thread: "G 3/8″ -19", pmax: 210 },
+  { title: "HK054322100235", type: "A", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HK054322415770", type: "A", flowMax: 60, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HK054322415771", type: "A", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+  { title: "HK054322100220", type: "B", flowMax: 40, thread: "G 3/8″ -19", pmax: 210 },
+  { title: "HK054322100235", type: "B", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
+  { title: "HK054322415770", type: "B", flowMax: 60, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HK054322415771", type: "B", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
 ];
 
 const gaugeBottom = [
