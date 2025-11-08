@@ -15,7 +15,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
   <article>
     <div class="flex-row">
       <div>
-        <button :disabled="btnDisabled" @click="$emit('delPump')">✕</button>
+        <button :disabled="btnDisabled" @click="$emit('delPump')" :title="text('btDelPump', meta)">✕</button>
       </div>
       <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
@@ -55,10 +55,16 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       :class="buckling({ ...pumpData, HKSH: HKSH[j] })"
       class="my-2 border"
     >
-      <button @click="() => (pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id))" class="el">✕</button>
+      <button
+        @click="() => (pumpData.HKSH = pumpData.HKSH.filter(({ id }) => id !== pumpData.HKSH[j].id))"
+        class="el"
+        :title="text('btDelSection', meta)"
+      >
+        ✕
+      </button>
     </Hydrocylinder>
     <div class="flex-row flex-left pl-25">
-      <button @click="$emit('addCyl')" class="btn-add my-2">+ {{ text("section") }}</button>
+      <button @click="$emit('addCyl')" class="btn-add my-2" :title="text('btnSection', meta)">+ {{ text("section") }}</button>
       <!-- <button @click="$emit('addGer')" class="btn-add my-2">+ {{ text("gerotor") }}</button> -->
     </div>
   </article>

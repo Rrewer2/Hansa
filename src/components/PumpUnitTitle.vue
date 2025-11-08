@@ -5,14 +5,14 @@ import InputItem from "./InputItem.vue";
 import ResultItem from "./ResultItem.vue";
 import { text } from "../services/text";
 
-const { project, k, btnDisabled, order } = defineProps(["project", "k", "btnDisabled", "order"]);
+const { project, k, btnDisabled, order, meta } = defineProps(["project", "k", "btnDisabled", "order", "meta"]);
 const { id, unit, ...rest } = project[k];
 </script>
 
 <template>
   <div class="text-left my-2">
     <div class="flex-row">
-      <button :disabled="btnDisabled" @click="$emit('delUnit', k)">✕</button>
+      <button :disabled="btnDisabled" @click="$emit('delUnit', k)" :title="text('btDelPumpUnit', meta)">✕</button>
       <h2 class="mr-100">{{ text("pumpUnit") }} {{ unitTitle(unit) }}</h2>
       <div v-for="(_, ind) in rest" class="flex-col">
         <InputItem :data="ind">

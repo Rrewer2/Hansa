@@ -113,7 +113,7 @@ const navPage = ref([true, false, false, false, false]);
       <Title v-bind="{ project, meta, order }" />
       <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
         <div :key="id">
-          <PumpUnitTitle v-bind="{ project, k, order }" :btnDisabled="project.length < 2" @delUnit="delUnit" />
+          <PumpUnitTitle v-bind="{ project, k, order, meta }" :btnDisabled="project.length < 2" @delUnit="delUnit" />
           <div v-for="(_, i) in unit" class="border-l pl-25 my-2">
             <PumpUnit
               :key="unit[i].id"
@@ -125,14 +125,18 @@ const navPage = ref([true, false, false, false, false]);
             />
           </div>
           <div class="flex-row flex-left pl-25">
-            <button @click="() => addPump(k)" class="btn-add my-2">+ {{ text("separatePump", meta) }}</button>
-            <button @click="() => addPumpSame(k)" class="btn-add my-2">+ {{ text("samePump", meta) }}</button>
+            <button @click="() => addPump(k)" class="btn-add my-2" :title="text('btnSeparatePump', meta)">
+              + {{ text("separatePump", meta) }}
+            </button>
+            <button @click="() => addPumpSame(k)" class="btn-add my-2" :title="text('btnSamePump', meta)">
+              + {{ text("samePump", meta) }}
+            </button>
           </div>
         </div>
       </section>
 
       <div class="flex-row flex-left my-2">
-        <button @click="getNewPowerUnit" class="btn-add">+ {{ text("pumpUnit", meta) }}</button>
+        <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)">+ {{ text("pumpUnit", meta) }}</button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
     </article>
