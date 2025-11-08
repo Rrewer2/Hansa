@@ -507,8 +507,8 @@ const gearPumpHydrosila = [
   {},
   {},
   {
-    "PZ2-4.5EUP" : { CC: 4.5, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
-  }
+    "PZ2-4.5EUP": { CC: 4.5, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
+  },
 ];
 const gearPumpCasappa = [
   {},
@@ -1313,11 +1313,33 @@ export const getPriority = (KIT) => {
 };
 
 export const lidData = [
-    {
+  {
+    title: "K-HAGRA20-90",
+    tank: 20,
+    motor: 90,
+    type: "RA",
+    blockType: "HKES",
+    addition: {
+      HKCBS1200000: { title: "HKCBS1200000" },
+      XSVNW10HL: { title: "XSVNW10HL" },
+      XSVNW13HL: { title: "XSVNW13HL" },
+      DMONW13L: { title: "DMONW13L", n: 2 },
+      XVEWONW13HL: { title: "XVEWONW13HL", n: 2 },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      ventilation: { title: "FIBL046FP10002" },
+      filter: { title: "FISPR55P10VG3/4" },
+      HKVAVR: { title: "HKVAVR" },
+      "XVRNW13HL3/4ED": { title: "XVRNW13HL3/4ED", n: 2 },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
+    },
+  },
+  {
     title: "K-HAG2RA20-90",
     tank: 20,
     motor: 90,
     type: "RA",
+    blockType: "HKEM",
     addition: {
       HKCBS1200000: { title: "HKCBS1200000" },
       XSVNW10HL: { title: "XSVNW10HL" },
@@ -1338,6 +1360,7 @@ export const lidData = [
     tank: 20,
     motor: 100,
     type: "RA",
+    blockType: "HKES",
     addition: {
       XSWNW13HL: { title: "XSVNW13HL" },
       XSVNW13HL: { title: "XSVNW13HL" },
@@ -1346,6 +1369,8 @@ export const lidData = [
       namePlate: { title: "K-TABLICZKA-GRAWER" },
       ventilation: { title: "FIBL046FP10002" },
       filter: { title: "FISPR55P10VG3/4" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
     },
   },
   {
@@ -1353,6 +1378,7 @@ export const lidData = [
     tank: 20,
     motor: 112,
     type: "RA",
+    blockType: "HKES",
     addition: {
       XSWNW13HL: { title: "XSVNW13HL" },
       XSVNW13HL: { title: "XSVNW13HL" },
@@ -1361,6 +1387,8 @@ export const lidData = [
       namePlate: { title: "K-TABLICZKA-GRAWER" },
       ventilation: { title: "FIBL046FP10002" },
       filter: { title: "FISPR55P10VG3/4" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
     },
   },
   {
@@ -1368,6 +1396,7 @@ export const lidData = [
     tank: 20,
     motor: 100,
     type: "RA",
+    blockType: "HKES",
     addition: {
       HKCBS1200000: { title: "HKCBS1200000" },
       MR01: { title: "K-HAG.MR01" },
@@ -1381,6 +1410,8 @@ export const lidData = [
       xvrPumpOut0: { title: "XVRNW13HLED" },
       xvrBlockIn0: { title: "XVRNW13HLED" },
       xvrBlockOut0: { title: "XVRNW13HLED" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
     },
   },
   {
@@ -1388,6 +1419,7 @@ export const lidData = [
     tank: 20,
     motor: 112,
     type: "RA",
+    blockType: "HKES",
     addition: {
       HKCBS1200000: { title: "HKCBS1200000" },
       MR01: { title: "K-HAG.MR01" },
@@ -1401,6 +1433,8 @@ export const lidData = [
       xvrPumpOut0: { title: "XVRNW13HLED" },
       xvrBlockIn0: { title: "XVRNW13HLED" },
       xvrBlockOut0: { title: "XVRNW13HLED" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
     },
   },
   {
@@ -1408,6 +1442,7 @@ export const lidData = [
     tank: 30,
     motor: 112,
     type: "RA",
+    // blockType: "K-DR2",
     addition: {
       XSVNW13HL: { title: "XSVNW13HL" },
       DMONW13L: { title: "DMONW13L" },
@@ -1416,14 +1451,30 @@ export const lidData = [
       namePlate: { title: "K-TABLICZKA-GRAWER" },
       ventilation: { title: "FIBL080GP03" },
       filter: { title: "FISPR48A10VG3/4" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
     },
   },
   {
-    title: "M-4205-???????????",
+    title: "K-HAG2RA30-112",
     tank: 30,
     motor: 112,
     type: "RA",
-    addition: { XSVNW13HL: { title: "XSVNW13HL" }, DMONW13L: { title: "DMONW13L" }, "VHR90-3/4ED": { title: "VHR90-3/4ED" }, XVEWONW13HL: { title: "XVEWONW13HL", n: 4 }, namePlate: { title: "K-TABLICZKA-GRAWER" }, ventilation: { title: "FIBL080GP03" } },
+    blockType: "HKEM",
+    addition: {
+      HKCBS1200000: { title: "HKCBS1200000" },
+      XSVNW10HL: { title: "XSVNW10HL" },
+      XSVNW13HL: { title: "XSVNW13HL" },
+      DMONW13L: { title: "DMONW13L", n: 2 },
+      XVEWONW13HL: { title: "XVEWONW13HL", n: 2 },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      ventilation: { title: "FIBL046FP10002" },
+      filter: { title: "FISPR55P10VG3/4" },
+      HKVAVR: { title: "HKVAVR" },
+      "XVRNW13HL3/4ED": { title: "XVRNW13HL3/4ED", n: 2 },
+      levelTemp: { title: "HKNTMM319070NC280" },
+      Przedluzka: { title: "M-4221-PG3476" },
+    },
   },
   {
     title: "M-4205-00000000005",
@@ -1431,6 +1482,7 @@ export const lidData = [
     motor: 112,
     type: "RA",
     hole: 88,
+    // blockType: "---",
     addition: {
       xvrPumpOut0: { title: "XVRNW13HLED" },
       xvrBlockIn0: { title: "AOVRNW13LED" },
@@ -1441,6 +1493,7 @@ export const lidData = [
       XVEWONW13HL: { title: "XVEWONW13HL" },
       namePlate: { title: "K-TABLICZKA-GRAWER" },
       ventilation: { title: "FIBL080GP03" },
+      levelTemp: { title: "HKNTMM319070NC280" },
     },
   },
   {
@@ -1449,10 +1502,43 @@ export const lidData = [
     motor: 132,
     type: "RA",
     hole: 88,
-    addition: { adapter: { title: "K-HAGAP-NG10" }, ventilation: { title: "FIBL116FP03002" }, VHR34: { title: "VHR90-3/4ED", n: 2 }, VHR12: { title: "VHR90-1/2ED" }, namePlate: { title: "K-TABLICZKA-GRAWER" } },
+    addition: {
+      adapter: { title: "K-HAGAP-NG10" },
+      ventilation: { title: "FIBL116FP03002" },
+      VHR34: { title: "VHR90-3/4ED", n: 2 },
+      VHR12: { title: "VHR90-1/2ED" },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+    },
   },
-  { title: "M-4236-HAGRA70-112", tank: 70, motor: 112, type: "RA", hole: 88, addition: { ventilation: { title: "FIBL116FP03002" }, VHR34: { title: "VHR90-3/4ED", n: 2 }, VHR12: { title: "VHR90-1/2ED" }, namePlate: { title: "K-TABLICZKA-GRAWER" } } },
-  { title: "M-4236-HAGRA70-132", tank: 70, motor: 132, type: "RA", hole: 88, addition: { ventilation: { title: "FIBL116FP03002" }, VHR34: { title: "VHR90-3/4ED", n: 2 }, VHR12: { title: "VHR90-1/2ED" }, namePlate: { title: "K-TABLICZKA-GRAWER" } } },
+  {
+    title: "M-4236-HAGRA70-112",
+    tank: 70,
+    motor: 112,
+    type: "RA",
+    hole: 88,
+    addition: {
+      ventilation: { title: "FIBL116FP03002" },
+      VHR34: { title: "VHR90-3/4ED", n: 2 },
+      VHR12: { title: "VHR90-1/2ED" },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+    },
+  },
+  {
+    title: "M-4236-HAGRA70-132",
+    tank: 70,
+    motor: 132,
+    type: "RA",
+    hole: 88,
+    addition: {
+      ventilation: { title: "FIBL116FP03002" },
+      VHR34: { title: "VHR90-3/4ED", n: 2 },
+      VHR12: { title: "VHR90-1/2ED" },
+      namePlate: { title: "K-TABLICZKA-GRAWER" },
+      levelTemp: { title: "HKNTMM319070NC280" },
+    },
+  },
 ];
 
 export const xvrnw = [

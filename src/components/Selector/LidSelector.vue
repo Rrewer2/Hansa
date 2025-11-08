@@ -8,7 +8,8 @@ const filteredLid = () =>
     (lid) =>
       lid.tank === order["tank"]?.tankData?.Size &&
       (lid.type === order["tank"]?.tankData?.type || lid.type === order["tank"]?.tankData?.[meta?.tank]) &&
-      (!order["motor0"]?.motorData?.size || lid.motor === order["motor0"]?.motorData?.size),
+      (!order["motor0"]?.motorData?.size || lid.motor === order["motor0"]?.motorData?.size) &&
+      (!lid.blockType || order["block0"]?.title?.startsWith(lid.blockType)),
   );
 </script>
 
