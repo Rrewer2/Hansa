@@ -20,13 +20,15 @@ const cylInit = {
   mountA: "2",
   mountB: "2",
   z: 1,
-  form: "formHorizontal",
+  form: "⇒",
   spool: "G",
   throttle: "",
   check: "",
   directPress: "",
   directPressValue: "",
   directPressValueB: "",
+  nonReturn: "",
+  flowControl: "",
 };
 const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
 const getNewPump = () => ({

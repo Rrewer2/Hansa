@@ -59,6 +59,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
     </Hydrocylinder>
     <div class="flex-row flex-left pl-25">
       <button @click="$emit('addCyl')" class="btn-add my-2">+ {{ text("section") }}</button>
+      <!-- <button @click="$emit('addGer')" class="btn-add my-2">+ {{ text("gerotor") }}</button> -->
     </div>
   </article>
 </template>

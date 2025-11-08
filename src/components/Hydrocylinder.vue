@@ -10,16 +10,32 @@ const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
 const getValue = {
   D: standartDiameters,
   d: "",
-  z: [1, 2],
+  z: [1, 2, 3, 4, 5, 6, 7, 8],
   spool: spoolTypes,
   mountA: HKSHMountD,
   mountB: HKSHMountd,
-  form: ["formHorizontal", "formVertical"],
+  form: ["⇑", "⇓", "⇐", "⇒"],
   throttle: ["", "012", "013", "014", "022", "023", "024"],
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
+  nonReturn: ["", "AB", "A", "B"],
+  flowControl: ["", "AB", "A", "B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
 };
-const { id, mountA, mountB, spool, throttle, check, directPress, directPressValue, directPressValueB, form, ...rest } = HKSH;
+const {
+  id,
+  mountA,
+  mountB,
+  spool,
+  throttle,
+  check,
+  directPress,
+  directPressValue,
+  directPressValueB,
+  form,
+  nonReturn,
+  flowControl,
+  ...rest
+} = HKSH;
 </script>
 
 <template>
@@ -39,6 +55,8 @@ const { id, mountA, mountB, spool, throttle, check, directPress, directPressValu
           check,
           directPress,
           // directPressValue
+          nonReturn,
+          flowControl,
         }"
         class="flex-col ml-5"
       >

@@ -11,7 +11,7 @@ import Tray from "./Scheme/Tray.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
-const yTank = () => 1350;
+const yTank = () => 1700;
 const LTank = 1200;
 const controlElemLength = (project) => {
   const sectionLength = 320;
@@ -21,7 +21,7 @@ const controlElemLength = (project) => {
 };
 const xControl = (project) =>
   controlElemLength(project).reduce((acc, curr) => [...acc, (acc.length ? acc[acc.length - 1] : 0) + curr + 300], [300]);
-const screenSize = 1650 + project.flatMap(({ unit }) => unit).length * R() * 0.8;
+const screenSize = 2000 + project.flatMap(({ unit }) => unit).length * R() * 0.8;
 const tankGap = screenSize - LTank / 2;
 const controlGap = (project) => screenSize - xControl(project).at(-1) / 2;
 const xFilter = tankGap + LTank - 126;
@@ -32,7 +32,7 @@ const xFilter = tankGap + LTank - 126;
     <ControlUnit
       v-for="(unit, c) in project.flatMap(({ unit, mount }) => unit.map((el) => ({ ...el, mount })))"
       :x="() => controlGap(project) + xControl(project)[c]"
-      :y="100"
+      :y="400"
       v-bind="{ unit, c, order }"
       :R="R()"
       :xT="xFilter"
