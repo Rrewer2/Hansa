@@ -1,7 +1,7 @@
 <script setup>
 import { pumpCounting } from "../../services/functions";
 
-const { x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT } = defineProps([
+const { x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT, aboveBlock, belowBlock } = defineProps([
   "x",
   "y",
   "unit",
@@ -13,6 +13,8 @@ const { x, y, unit, R, xM, yM, c, getSL, getSL1, getSh, xT } = defineProps([
   "getSL1",
   "getSh",
   "xT",
+  "aboveBlock",
+  "belowBlock",
 ]);
 const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
 </script>
@@ -20,14 +22,23 @@ const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
 <template>
   <path
     v-if="unit.mount.startsWith('B3')"
-    :d="`M${x(c)} ${y + 300} h${-getSh(unit) * 1.5} v${R * 10.5 - c * 10} h${xM - x(c) + getSh(unit) * 1.5 + gap} v${yM - (R * 10.5 - c * 10) - 600}`"
+    :d="`M${x(c)} ${y + 300}
+    h${-getSh(unit) * 1.5}
+    v${R * 6 - c * 10 + getSh(unit) * belowBlock()}
+    h${xM - x(c) + getSh(unit) * 1.5 + gap}
+    v${yM - (R * 10.5 - c * 10 + getSh(unit) * belowBlock()) - 100}`"
     stroke="red"
     stroke-width="3"
     fill="none"
   />
   <path
     v-else
-    :d="`M${x(c)} ${y + 300} h${-getSh(unit) * 1.5} v${R * 10.5 - c * 10} h${xM - x(c) + getSh(unit) * 1.5 + gap} v${yM - (R * 10.5 - c * 10) - 600 + gap}  h${-gap}`"
+    :d="`M${x(c)} ${y + 300}
+      h${-getSh(unit) * 1.5}
+      v${R * 6 - c * 10 + getSh(unit) * belowBlock()}
+      h${xM - x(c) + getSh(unit) * 1.5 + gap}
+      v${yM - (R * 6 - c * 10 + getSh(unit) * belowBlock()) - 300 - getSh(unit) * aboveBlock() + gap}
+      h${-gap}`"
     stroke="red"
     stroke-width="3"
     fill="none"
@@ -39,9 +50,10 @@ const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
     :d="`M${x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)} 
     ${y + 300 + getSh(unit)}
     h${getSh(unit) * 1.5} 
-    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 10.5 - c * 10 - getSh(unit) : 0} 
+    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 6 - c * 10 + getSh(unit) * belowBlock() - getSh(unit) : 0} 
     h${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5} 
-    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 7 : R * 16}`"
+    v${xT - (x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start)) - getSh(unit) * 1.5 < 0 ? R * 7 : R * 4 - c * 10 + getSh(unit) * belowBlock() + R * 7}
+    `"
     stroke="blue"
     stroke-width="5"
     fill="none"

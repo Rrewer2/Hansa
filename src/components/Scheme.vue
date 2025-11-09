@@ -11,39 +11,49 @@ import Tray from "./Scheme/Tray.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
-const yTank = () => 1700;
 const LTank = 1200;
+const sectionLength = 350;
+const getSL = () => sectionLength - project[0].unit[0].HKSH.length * 12;
+const getSh = () => getSL() * 0.35;
 const controlElemLength = (project) => {
-  const sectionLength = 320;
-  const getSL = (unit) => sectionLength - unit.HKSH.length * 12;
   const getSL1 = (unit) => getSL(unit) * (0.5 * (!unit.DR2type ? 0.5 : unit.DR2type) + unit.start);
   return project.flatMap((powerUnit) => powerUnit.unit.map((unit) => getSL1(unit) + getSL(unit) * unit.HKSH.length));
 };
 const xControl = (project) =>
-  controlElemLength(project).reduce((acc, curr) => [...acc, (acc.length ? acc[acc.length - 1] : 0) + curr + 300], [300]);
-const screenSize = 2000 + project.flatMap(({ unit }) => unit).length * R() * 0.8;
-const tankGap = screenSize - LTank / 2;
-const controlGap = (project) => screenSize - xControl(project).at(-1) / 2;
-const xFilter = tankGap + LTank - 126;
+  controlElemLength(project).reduce((acc, curr) => [...acc, (acc.length ? acc[acc.length - 1] : 0) + curr + 400], [300]);
+const aboveBlock = () =>
+  project[0].unit
+    .flatMap(({ HKSH }) => HKSH.map(({ nonReturn, flowControl, balance }) => !!nonReturn + !!flowControl + !!balance))
+    .reduce((cur, prev) => Math.max(cur, prev), 0);
+const belowBlock = () =>
+  project[0].unit
+    .flatMap(({ HKSH }) => HKSH.map(({ throttle, check, directPress, counter }) => !!throttle + !!check + !!directPress + !!counter))
+    .reduce((cur, prev) => Math.max(cur, prev), 0);
+const yTank = () => 1000 + belowBlock() * getSh() + aboveBlock() * getSh();
+const screenSizex = () => 1 * (1600 + project.flatMap(({ unit }) => unit).length * R() * 0.8);
+const screenSizey = () => 1300 + belowBlock() * getSh() + aboveBlock() * getSh() + project.flatMap(({ unit }) => unit).length * R() * 0.8;
+const xTank = screenSizex() / 2 - LTank / 2;
+const xControlUnit = (project) => screenSizex() / 2 - xControl(project).at(-1) / 2;
+const xFilter = xTank + LTank - 126;
 </script>
 
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" :viewBox="`0 0 ${screenSize * 2} ${screenSize}`">
+  <svg xmlns="http://www.w3.org/2000/svg" :viewBox="`0 0 ${screenSizex()} ${screenSizey()}`">
     <ControlUnit
       v-for="(unit, c) in project.flatMap(({ unit, mount }) => unit.map((el) => ({ ...el, mount })))"
-      :x="() => controlGap(project) + xControl(project)[c]"
-      :y="400"
-      v-bind="{ unit, c, order }"
+      :x="() => xControlUnit(project) + xControl(project)[c]"
+      :y="() => aboveBlock(unit) * getSh() + 100"
+      v-bind="{ unit, c, order, aboveBlock, belowBlock }"
       :R="R()"
       :xT="xFilter"
-      :xM="tankGap + 200"
+      :xM="xTank + 200"
       :yM="yTank() - 1.25 * R() - 100"
     />
     <Tank
-      :x="tankGap"
+      :x="xTank"
       :y="yTank()"
       :L="LTank"
-      :H="() => screenSize - 100 - yTank()"
+      :H="() => screenSizey() - 100 - yTank()"
       :pumps="project.flatMap(({ unit }) => unit)"
       :order="order"
     >
@@ -52,7 +62,7 @@ const xFilter = tankGap + LTank - 126;
     </Tank>
     <PumpUnit
       v-for="(pumps, i) in project"
-      :x="tankGap + 200 + 1000 * i"
+      :x="xTank + 200 + 1000 * i"
       :y="yTank() - 1.25 * R()"
       :pumps="pumps.unit"
       :mount="pumps.mount"
@@ -63,12 +73,12 @@ const xFilter = tankGap + LTank - 126;
       {{ order["motor" + i]?.motorData?.n || pumps.n }}
     </PumpUnit>
     <FIBL
-      :x="tankGap + LTank - 450"
+      :x="xTank + LTank - 450"
       :y="yTank()"
       :a="R() / 1"
       :text="(+order.ventilation?.title?.match(/(P10|P03)/)?.[0]?.slice(1) || 10) + 'µm'"
     />
-    <NTM :x="tankGap + LTank - 300" :y="yTank()" :a="R() / 1.5" />
+    <NTM :x="xTank + LTank - 300" :y="yTank()" :a="R() / 1.5" />
     <Cooler
       v-if="meta.cooler"
       :x="xFilter"
@@ -84,7 +94,7 @@ const xFilter = tankGap + LTank - 126;
       :join="order.filter?.filterData?.join ? order.filter?.filterData?.join?.split('″')[0] + '″' : ''"
       :hole="!!order.filter?.filterData?.hole"
     />
-    <Tray v-if="order.trays?.title" :x="tankGap" :y="screenSize - 150" :L="LTank" />
+    <Tray v-if="order.trays?.title" :x="xTank" :y="screenSizey() - 150" :L="LTank" />
   </svg>
 </template>
 
