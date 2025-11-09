@@ -12,7 +12,7 @@ const { x, y, sl, sh, data } = defineProps(["x", "y", "sl", "sh", "data"]);
   <HKSH2 v-if="data.z === 2" :x="x" :y="y" :sl="sl" :sh="sh" :data="data" />
   <HKSH3 v-if="data.z > 2" :x="x" :y="y" :sl="sl" :sh="sh" :data="data" />
 
-  <text :x="x" :y="y - sh * 2" font-family="Arial" :font-size="sl / 12" fill="black" text-anchor="middle">
+  <text :x="x" :y="y - sh * 1.25" font-family="Arial" :font-size="sl / 12" fill="black" text-anchor="middle">
     {{ HKSHTitle(data) }}
   </text>
 </template>

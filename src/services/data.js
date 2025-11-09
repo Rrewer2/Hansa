@@ -1282,12 +1282,12 @@ export const HKV1 = [
   { title: "HK055211000300", type: "B", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
 ];
 export const HKV2 = [
-  { title: "HKV2572-1/8", type: "⨘", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
-  { title: "HKV2572-1/4", type: "⨘", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
-  { title: "HKV2572-3/8", type: "⨘", flowMax: 38, thread: "G 3/8″ -19", pmax: 400 },
-  { title: "HKV2572-1/2", type: "⨘", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
-  { title: "HKV2572-3/4", type: "⨘", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
-  { title: "HKV2572-1", type: "⨘", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+  { title: "HKV2572-1/8", type: "⟯|⟮", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
+  { title: "HKV2572-1/4", type: "⟯|⟮", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
+  { title: "HKV2572-3/8", type: "⟯|⟮", flowMax: 38, thread: "G 3/8″ -19", pmax: 400 },
+  { title: "HKV2572-1/2", type: "⟯|⟮", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
+  { title: "HKV2572-3/4", type: "⟯|⟮", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
+  { title: "HKV2572-1", type: "⟯|⟮", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
 
   { title: "HKV2575-1/8", type: "⇑", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
   { title: "HKV2575-1/4", type: "⇑", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
@@ -1360,6 +1360,7 @@ const priority = [
   "throttle",
   "check",
   "directPress",
+  "counter",
   "bolt",
   "valvePlug",
   "tank",

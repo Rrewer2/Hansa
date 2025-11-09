@@ -1,5 +1,5 @@
 <script setup>
-import { spoolData, HKHMP, HKHQ, HKHR, HKM, spoolTypes } from "../../services/data";
+import { spoolData, HKHMP, HKHQ, HKHR, HKZNS, HKM, spoolTypes } from "../../services/data";
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 
@@ -8,11 +8,12 @@ const isQFit = (el) =>
   (!order["block" + i]?.blockData?.cetop || order["block" + i]?.blockData?.cetop === el.CETOP) && (!meta.CETOP || el.CETOP === meta.CETOP);
 const filteredValves = () =>
   powerUNIT.unit.flatMap(({ HKSH }, j) =>
-    HKSH.map(({ throttle, check, directPress, directPressValue, spool }, k) => {
+    HKSH.map(({ throttle, check, directPress, directPressValue, counter, spool }, k) => {
       return {
         ["throttle" + i + j + k]: () => HKHQ.filter((el) => el.type === throttle && isQFit(el)),
         ["check" + i + j + k]: () => HKHR.filter((el) => el.type === check && isQFit(el)),
         ["directPress" + i + j + k]: () => HKHMP.filter((el) => el.type === directPress && isQFit(el) && el.pmax > directPressValue),
+        ["counter" + i + j + k]: () => HKZNS.filter((el) => el.type === counter && isQFit(el)),
         ["valve" + i + j + k]: () => spoolData.filter((el) => el.spool === spool && isQFit(el)),
       };
     }),

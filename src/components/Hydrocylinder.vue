@@ -18,8 +18,10 @@ const getValue = {
   throttle: ["", "012", "013", "014", "022", "023", "024"],
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
+  counter: ["", "AB", "A", "B"],
   nonReturn: ["", "AB", "A", "B"],
-  flowControl: ["", "⨘AB", "⨘A", "⨘B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
+  flowControl: ["", "⟯|⟮AB", "⟯|⟮A", "⟯|⟮B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
+  balance: ["", "AB", "A", "B"],
 };
 const {
   id,
@@ -32,8 +34,10 @@ const {
   directPressValue,
   directPressValueB,
   form,
+  counter,
   nonReturn,
   flowControl,
+  balance,
   ...rest
 } = HKSH;
 </script>
@@ -54,9 +58,11 @@ const {
           throttle,
           check,
           directPress,
-          // directPressValue
+          // directPressValue,
+          counter,
           nonReturn,
           flowControl,
+          balance,
         }"
         class="flex-col ml-5"
       >

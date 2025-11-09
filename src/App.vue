@@ -27,8 +27,10 @@ const cylInit = {
   directPress: "",
   directPressValue: "",
   directPressValueB: "",
+  counter: "",
   nonReturn: "",
   flowControl: "",
+  balance: "",
 };
 const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
 const getNewPump = () => ({
@@ -118,7 +120,7 @@ const navPage = ref([true, false, false, false, false]);
             <PumpUnit
               :key="unit[i].id"
               :pumpData="unit[i]"
-              v-bind="{ project, order, i, k }"
+              v-bind="{ project, order, i, k, meta }"
               @addCyl="() => addCyl(k, i)"
               :btnDisabled="unit.length < 2"
               @delPump="() => delPump(k, unit[i].id)"

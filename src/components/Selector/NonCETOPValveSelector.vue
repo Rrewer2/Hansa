@@ -1,5 +1,5 @@
 <script setup>
-import { HKV1, HKV2 } from "../../services/data";
+import { HKV1, HKV2, HKVCounterBalance } from "../../services/data";
 import { Qback } from "../../services/functions";
 import SmthSelector from "./SmthSelector.vue";
 
@@ -7,10 +7,11 @@ const { project, meta, order, i, powerUNIT, open } = defineProps(["project", "me
 
 const filteredValves = () =>
   powerUNIT.unit.flatMap(({ Q, p, HKSH }, j) =>
-    HKSH.map(({ nonReturn, flowControl }, k) => {
+    HKSH.map(({ nonReturn, flowControl, balance }, k) => {
       return {
         ["nonReturn" + i + j + k]: () => HKV1.filter((el) => nonReturn === el.type && el.flowMax > Q && el.pmax > p),
         ["flowControl" + i + j + k]: () => HKV2.filter((el) => flowControl.startsWith(el.type) && el.flowMax > Q && el.pmax > p),
+        ["balance" + i + j + k]: () => HKVCounterBalance.filter((el) => balance === el.type && el.flowMax > Q && el.pmax > p),
       };
     }),
   );

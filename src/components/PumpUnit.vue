@@ -6,7 +6,15 @@ import InputItem from "./InputItem.vue";
 import { spoolTypes } from "../services/data";
 import { text } from "../services/text";
 
-const { pumpData, btnDisabled, project, k, i, order } = defineProps(["pumpData", "btnDisabled", "project", "k", "i", "order"]);
+const { pumpData, btnDisabled, project, k, i, order, meta } = defineProps([
+  "pumpData",
+  "btnDisabled",
+  "project",
+  "k",
+  "i",
+  "order",
+  "meta",
+]);
 
 const { id, HKSH, same, startValve, ...rest } = pumpData;
 </script>
