@@ -55,6 +55,10 @@ export default {
   throttle: ["Dławiący"],
   check: ["Zwrotny"],
   directPress: ["Reduktor"],
+  counter: ["Przeciwwagi"],
+  balance: ["Hamulec opu.*"],
+  flowControl: ["Dławiący*"],
+  nonReturn: ["Zwrotny*"],
   DBD: ["DBD", "bar"],
   // Navigation items
   calculations: ["Obliczenia"],

@@ -33,7 +33,7 @@ const getSL1 = (unit) => getSL(unit) * 0.5 * (!unit.DR2type ? 0.5 : unit.DR2type
 const getSh = (unit) => getSL(unit) * 0.35;
 const xV = (unit, i) => x(c) + getSL1(unit) + (i + unit.start) * (getSL(unit) * 1.1);
 const yV = () => y() + 300 + getSh(unit) + getSh(unit) / 10;
-const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
+const gap = 2 * R() + 0.8 * R() + 2 * c * R() * 0.8;
 const yValve = ({ throttle, check, directPress, counter }) => (!!throttle + !!check + !!directPress + !!counter) * getSh(unit);
 const yHKHMP = ({ throttle, check, counter }) => (!!throttle + !!check + !!counter) * getSh(unit);
 const yHKHQ = (data) => !!data.check * getSh(unit);
@@ -47,7 +47,7 @@ const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!
 </script>
 
 <template>
-  <Pipes v-if="!unit.same" v-bind="{ x, y: y(), unit, R, xM, yM, c, getSL, getSL1, getSh, xT, aboveBlock, belowBlock }" />
+  <Pipes v-if="!unit.same" v-bind="{ x, y: y(), unit, R: R(), xM, yM, c, getSL, getSL1, getSh, xT, aboveBlock, belowBlock }" />
 
   <DR2
     v-if="!unit.same"
@@ -150,14 +150,14 @@ const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!
     v-if="unit.DBD"
     :x="x(c) - getSh(unit)"
     :xSame="x(c - 1) - getSh(unit) / 2"
-    :y="y() + 300 + R * 8"
+    :y="y() + 300 + R() * 8"
     :a="getSL(unit) / 6"
     :unit="unit"
     :line="() => getSh(unit) / 2"
   />
   <path
     v-if="unit.mount.startsWith('B3') && unit.same"
-    :d="`M${x(c - 1)} ${y() + 300} h${-getSh(unit) * 1.5} v${R * 6} h${getSh(unit) * 2} v${R * 3.5} h${xM - x(c - 1) - getSh(unit) / 2 + gap} v${yM - R * 9.5 - 300}`"
+    :d="`M${x(c - 1)} ${y() + 300} h${-getSh(unit) * 1.5} v${R() * 6} h${getSh(unit) * 2} v${R() * 3.5} h${xM - x(c - 1) - getSh(unit) / 2 + gap} v${yM - R() * 9.5 - 300}`"
     stroke="red"
     stroke-width="3"
     fill="none"

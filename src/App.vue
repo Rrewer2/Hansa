@@ -188,10 +188,10 @@ select {
   border: none;
   border-radius: 4px;
   min-height: 2.5vh;
-  font-size: 1rem;
-  max-width: 140px;
-  min-width: 85px;
-  width: 95px;
+  font-size: 1.1rem;
+  max-width: 120px;
+  /* min-width: 65px; */
+  width: 4rem;
 }
 
 select {
@@ -346,8 +346,8 @@ td {
   margin-left: 0.5rem;
 }
 
-.mr-100 {
-  margin-right: 100px;
+.mr-30 {
+  margin-right: 30px;
 }
 
 .invisible {

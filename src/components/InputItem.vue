@@ -20,8 +20,13 @@ const { data } = defineProps(["data"]);
 .input-group {
   position: relative;
   display: inline-block;
-  background-color: #e5e5e5;
+  background-color: white;
   border: 0.5px solid;
   width: 100%;
+}
+.unit {
+  padding-top: 0.1rem;
+  background-color: #e5e5e5;
+  font-size: 1rem;
 }
 </style>

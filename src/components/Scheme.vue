@@ -7,7 +7,6 @@ import NTM from "./Scheme/NTM.vue";
 import Tank from "./Scheme/Tank.vue";
 import FIBL from "./Scheme/FIBL.vue";
 import { reducedPower, round } from "../services/functions";
-import Tray from "./Scheme/Tray.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
@@ -43,8 +42,7 @@ const xFilter = xTank + LTank - 126;
       v-for="(unit, c) in project.flatMap(({ unit, mount }) => unit.map((el) => ({ ...el, mount })))"
       :x="() => xControlUnit(project) + xControl(project)[c]"
       :y="() => aboveBlock(unit) * getSh() + 100"
-      v-bind="{ unit, c, order, aboveBlock, belowBlock }"
-      :R="R()"
+      v-bind="{ unit, c, order, aboveBlock, belowBlock, R }"
       :xT="xFilter"
       :xM="xTank + 200"
       :yM="yTank() - 1.25 * R() - 100"
@@ -94,7 +92,6 @@ const xFilter = xTank + LTank - 126;
       :join="order.filter?.filterData?.join ? order.filter?.filterData?.join?.split('″')[0] + '″' : ''"
       :hole="!!order.filter?.filterData?.hole"
     />
-    <Tray v-if="order.trays?.title" :x="xTank" :y="screenSizey() - 150" :L="LTank" />
   </svg>
 </template>
 

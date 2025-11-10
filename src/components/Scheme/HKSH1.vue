@@ -18,7 +18,7 @@ const deg = () => {
 </script>
 
 <template>
-  <HKSHSimple :x="x" :y="y" :sl="sl" :sh="sh" :deg="deg()" />
+  <HKSHSimple :x="x" :y="y" :sl="sl" :sh="sh" :deg="deg" />
   <!-- <Point :x="x - 0.25 * sl" :y="y" /> -->
   <template v-if="data.form === '⇑'">
     <path :d="`M${x - 0.25 * sl} ${y + sh} v${-sl / 10} h${sl / 8}`" stroke="black" stroke-width="2" fill="none" />

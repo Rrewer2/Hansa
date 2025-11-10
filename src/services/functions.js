@@ -92,7 +92,7 @@ export const agregatTitle = (project, meta, order) => {
   const motor = P.some((el) => el) ? `${P.join("/")}` : "";
   const pump = Q.some((el) => el) ? `${Q.join("/")}` : "";
   const pressure = pmax ? `${pmax}` : "";
-  const extra = order.frames?.title ? "-ZAB" : order.trays?.title ? "-W" : "";
+  const extra = order.frames?.title ? "-ZAB" : "";
   const sp1 = tank && motor ? "-" : "";
   const sp2 = pump && motor ? "-" : "";
   const sp3 = pump && pressure ? "." : "";
@@ -174,7 +174,7 @@ export const KITtitle = (project, order) => {
   const pump = pumpKeys.length ? `${pumpKeys.map((key, ind) => round(getQ(order[key]?.pumpData?.CC, order["motor" + ind]?.motorData?.n), 1)).join("/")}` : "";
   const pressure = pmax ? `${pmax}` : "";
   const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, "R" + blockSections) : "";
-  const extra = order.frames?.title ? "-ZAB" : order.trays?.title ? "-W" : "";
+  const extra = order.frames?.title ? "-ZAB" : "";
 
   const sp1 = tank && motor ? "-" : "";
   const sp2 = pump && motor ? "-" : "";

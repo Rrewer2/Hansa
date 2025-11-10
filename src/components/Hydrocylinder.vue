@@ -45,7 +45,7 @@ const {
 <template>
   <section class="pl-25 my-2">
     <div class="flex-row">
-      <h2 class="text-left mr-100">
+      <h2 class="text-left mr-30">
         <slot></slot>
         {{ HKSHTitle(HKSH) }}
       </h2>
