@@ -12,15 +12,7 @@ import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
 
 const simile = ref({ zlec: "", lista: "" });
-
-const cylInit = {
-  D: 100,
-  d: 60,
-  L: 500,
-  mountA: "2",
-  mountB: "2",
-  z: 1,
-  form: "⇒",
+const init = {
   spool: "G",
   throttle: "",
   check: "",
@@ -32,6 +24,18 @@ const cylInit = {
   flowControl: "",
   balance: "",
 };
+const cylInit = {
+  D: 100,
+  d: 60,
+  L: 500,
+  mountA: "2",
+  mountB: "2",
+  z: 1,
+  form: "⇒",
+  ...init,
+};
+const gerotorInit = { CC: 50, z: 1, spool: "G", ...init };
+const addGerotor = (k, i) => project.value[k].unit[i].HKSH.push({ ...gerotorInit, id: getId("g") });
 const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
 const getNewPump = () => ({
   ...pumpInit,
@@ -51,7 +55,6 @@ const load = () => {
     }
     alert("Załadowano");
     navPage.value = [true, false, false, false, false];
-    console.log("Ok");
   } catch (error) {
     alert("Coś popsułeś już, chłopie!");
     console.error(error);
@@ -63,7 +66,6 @@ const save = () => {
     localStorage.setItem("hansa-meta", JSON.stringify(meta.value));
     localStorage.setItem("hansa-order", JSON.stringify(order.value));
     alert("Zapisano");
-    console.log("Ok");
   } catch (error) {
     alert("Coś popsułeś już, chłopie!");
     console.error(error);
@@ -89,12 +91,12 @@ const getNewPowerUnit = () =>
 getNewPowerUnit();
 const addCyl = (k, i) =>
   project.value[k].unit[i].HKSH.push(
-    project.value[k].unit[i].HKSH.length
-      ? {
-          ...project.value[k].unit[i].HKSH.at(-1),
-          id: getId("c"),
-        }
-      : { ...cylInit, id: getId("c") },
+    // project.value[k].unit[i].HKSH.length
+    //   ? {
+    //       ...project.value[k].unit[i].HKSH.at(-1),
+    //       id: getId("c"),
+    //     } :
+    { ...cylInit, id: getId("c") },
   );
 
 const addPump = (k) => project.value[k].unit.push(getNewPump());
@@ -122,6 +124,7 @@ const navPage = ref([true, false, false, false, false]);
               :pumpData="unit[i]"
               v-bind="{ project, order, i, k, meta }"
               @addCyl="() => addCyl(k, i)"
+              @addGer="() => addGerotor(k, i)"
               :btnDisabled="unit.length < 2"
               @delPump="() => delPump(k, unit[i].id)"
             />

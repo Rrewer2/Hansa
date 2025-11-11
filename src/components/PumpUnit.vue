@@ -5,6 +5,7 @@ import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 import { spoolTypes } from "../services/data";
 import { text } from "../services/text";
+import Section from "./Section.vue";
 
 const { pumpData, btnDisabled, project, k, i, order, meta } = defineProps([
   "pumpData",
@@ -16,7 +17,7 @@ const { pumpData, btnDisabled, project, k, i, order, meta } = defineProps([
   "meta",
 ]);
 
-const { id, HKSH, same, startValve, ...rest } = pumpData;
+const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
 </script>
 
 <template>
@@ -55,7 +56,7 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       <ResultItem :data="pumpCounting(pumpData)" />
     </div>
 
-    <Hydrocylinder
+    <Section
       v-for="(_, j) in pumpData.HKSH"
       :key="pumpData.HKSH[j].id"
       :HKSH="pumpData.HKSH[j]"
@@ -70,10 +71,10 @@ const { id, HKSH, same, startValve, ...rest } = pumpData;
       >
         ✕
       </button>
-    </Hydrocylinder>
+    </Section>
     <div class="flex-row flex-left pl-25">
       <button @click="$emit('addCyl')" class="btn-add my-2" :title="text('btnSection', meta)">+ {{ text("section") }}</button>
-      <!-- <button @click="$emit('addGer')" class="btn-add my-2">+ {{ text("gerotor") }}</button> -->
+      <button @click="$emit('addGer')" class="btn-add my-2">+ {{ text("gerotor") }}</button>
     </div>
   </article>
 </template>

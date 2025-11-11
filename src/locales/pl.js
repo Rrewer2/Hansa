@@ -34,6 +34,8 @@ export default {
   wall: ["Ścianka", "mm"],
   Qback: ["Powrót oleju", "L/min"],
   Qmax: ["Powrót oleju max", "L/min"],
+  M: ["Moment obrotowy", "Nm"],
+  gerotor: ["Gerotor"],
   // tank: [ 'Pojemność zbiornika', 'L'],
   gears: ["Zębata"],
   piston: ["Wiełotłoczkowa"],

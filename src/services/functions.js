@@ -14,6 +14,7 @@ const FI = (d, L) => (Math.PI * sqr(d) ** 2) / L / 2; //Сила вигину
 const wallThick = (D, p) => (D * 2.6 * p) / 200 / 47;
 // const wallThick = () => (D() * P()) / (2 * 138 + 0.6 * P());
 // const wallThick = () => (D() * P()) / (2.3 * 800 - P());
+const ratio = (D, d) => S(D) / S(D, d);
 
 const tank = (Q) => 2 * Q; //Ємність баку
 export const getStandartTank = ({ tank }, T) => tankData[tank].filter(({ Size }) => Size >= 0.8 * T); // Розмір баку
@@ -62,13 +63,21 @@ export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, direct
   const vOut = v(L, tOut);
   const vIn = v(L, tIn);
   const wall = wallThick(D, getPressure({ DBD, p, directPressValue, directPress }));
-  const k = S(D) / S(D, d);
+  const k = ratio(D, d);
   return { FOut, FIn, tOut, tIn, tC, VD, Vd, k, vOut, vIn, wall };
 };
 
+export const gerotorCounting = ({ CC, directPress, directPressValue, directPressValueB }, { Q, p, DBD, HKSH }) => {
+  const n = (Q * 990) / CC;
+  const M = (getPressure({ DBD, p, directPressValue }) / 5300) * CC * ((17 / 1200) * (18 - Q) ** 2 + 70.8);
+  return { M, n };
+};
+export const GerotorTitle = ({ CC }) => {
+  return "Gerotor " + "MR" + CC;
+};
 export const buckling = ({ HKSH, p, DBD }) => {
   const SD = S(HKSH?.D);
-  const FOut = F(getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress }), SD);
+  const FOut = F(getPressure({ DBD, p, directPressValue: HKSH?.directPressValue, directPress: HKSH?.directPress }), SD);
   const F1 = FI(HKSH?.d, HKSH?.L);
   return F1 <= FOut ? "error" : 1 - FOut / F1 < bucklingSafety / 100 ? "yellow" : "";
 };
@@ -115,7 +124,7 @@ export const powerCounting = (unit) => {
   const I = 2.4 * Pcalc ** 0.9;
   return { Pcalc, I };
 };
-const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => S(D) / S(D, d)));
+const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => ratio(D, d) || 1));
 const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > Math.max(DBD, p1));
 const getPipe = (Q1, k) => Object.entries(k ? pipesData : pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
 const getTPipe = (Q1, k) =>
@@ -173,7 +182,7 @@ export const KITtitle = (project, order) => {
   const motor = motorKeys.length ? `${motorKeys.map((key) => order[key]?.motorData?.power).join("/")}` : "";
   const pump = pumpKeys.length ? `${pumpKeys.map((key, ind) => round(getQ(order[key]?.pumpData?.CC, order["motor" + ind]?.motorData?.n), 1)).join("/")}` : "";
   const pressure = pmax ? `${pmax}` : "";
-  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key, value]) => str + key, "R" + blockSections) : "";
+  const block = Object.entries(obj).length ? Object.entries(obj).reduce((str, [key]) => str + key, "R" + blockSections) : "";
   const extra = order.frames?.title ? "-ZAB" : "";
 
   const sp1 = tank && motor ? "-" : "";
