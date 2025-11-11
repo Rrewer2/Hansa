@@ -91,12 +91,9 @@ const getNewPowerUnit = () =>
 getNewPowerUnit();
 const addCyl = (k, i) =>
   project.value[k].unit[i].HKSH.push(
-    // project.value[k].unit[i].HKSH.length
-    //   ? {
-    //       ...project.value[k].unit[i].HKSH.at(-1),
-    //       id: getId("c"),
-    //     } :
-    { ...cylInit, id: getId("c") },
+    project.value[k].unit[i].HKSH.filter((el) => el.id.startsWith("c")).length
+      ? { ...project.value[k].unit[i].HKSH.filter((el) => el.id.startsWith("c")).at(-1), id: getId("c") }
+      : { ...cylInit, id: getId("c") },
   );
 
 const addPump = (k) => project.value[k].unit.push(getNewPump());
