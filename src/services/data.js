@@ -609,9 +609,9 @@ const gearPumpWPH = [
   },
 ];
 const gearPumpEckerle = {
-  HKEIPH2008RK03: { CC: 7.9, in: "SAE J518C - 3/4″", out: "SAE J518C - 1/2″", drain: "-", pmax: 330, regulator: "-", holePattern: "106.4 - Ø82.5", shaft: "Ø20" },
-  HKEIPH2011RK03: { CC: 10.9, in: "SAE J518C - 1″", out: "SAE J518C - 1/2″", drain: "-", pmax: 330, regulator: "-", holePattern: "106.4 - Ø82.5", shaft: "Ø20" },
-  HKEIPH3032RK23: { CC: 32, in: "SAE J518C - 1.1/4″", out: "SAE J518C - 3/4″", drain: "-", pmax: 330, regulator: "-", holePattern: "Ø146 - Ø101,6", shaft: "Ø25" },
+  HKEIPH2008RK03: { CC: 7.9, in: "SAE J518C - 3/4″", out: "SAE J518C - 1/2″", drain: false, pmax: 330, regulator: false, holePattern: "106.4 - Ø82.5", shaft: "Ø20" },
+  HKEIPH2011RK03: { CC: 10.9, in: "SAE J518C - 1″", out: "SAE J518C - 1/2″", drain: false, pmax: 330, regulator: false, holePattern: "106.4 - Ø82.5", shaft: "Ø20" },
+  HKEIPH3032RK23: { CC: 32, in: "SAE J518C - 1.1/4″", out: "SAE J518C - 3/4″", drain: false, pmax: 330, regulator: false, holePattern: "Ø146 - Ø101,6", shaft: "Ø25" },
 };
 const pistonPumpRexroth = {
   HKA10VSO18DRG31R: { CC: 18, in: "SAE J518C - 1″", out: "SAE J518C - 3/4″", drain: "M16 x 1.5", pmax: 280, regulator: "Regulator ciśnienia", holePattern: "Ø106,4 - Ø80", shaft: "Ø18" },
@@ -648,16 +648,16 @@ const pistonPumpDaikin = {
   HKJV38SA4CRX95: { CC: 37.7, in: "G1″", out: "G1″", drain: "1/2″", pmax: 250, regulator: "Kontroler wykrywania obciążenia", holePattern: "Ø146 - Ø101,6", shaft: "Ø22,2" },
 };
 const pistonPumpPBA = {
-  HKPBA012L8051SF: { CC: 12, in: "G3/4″", out: "G3/4″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA018L8051SF: { CC: 18, in: "G3/4″", out: "G3/4″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA025L8051SF: { CC: 25, in: "G3/4″", out: "G3/4″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA032L8051SF: { CC: 32, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA040L8051SF: { CC: 40, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA063L8051SF: { CC: 63, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA080L8051SF: { CC: 80, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA080L8064SF: { CC: 80, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA108L8051SF: { CC: 108, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
-  HKPBA108L8064SF: { CC: 108, in: "G1″", out: "G1″", drain: "-", pmax: 350, regulator: "-", holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA012L8051SF: { CC: 12, in: "G3/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA018L8051SF: { CC: 18, in: "G3/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA025L8051SF: { CC: 25, in: "G3/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA032L8051SF: { CC: 32, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA040L8051SF: { CC: 40, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA063L8051SF: { CC: 63, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA080L8051SF: { CC: 80, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA080L8064SF: { CC: 80, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA108L8051SF: { CC: 108, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKPBA108L8064SF: { CC: 108, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
 };
 export const pumpData = {
   gears: [
@@ -674,7 +674,7 @@ export const pumpData = {
     ["DAIKIN", pistonPumpDaikin],
     ["HIDROCEL", pistonPumpPBA],
     ["ECKERLE", gearPumpEckerle],
-  ].flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup).map(([title, data]) => ({ [title]: { title, ...data, shaft: data.shaft || "-", maker } }))),
+  ].flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup).map(([title, data]) => ({ [title]: { title, ...data, shaft: data.shaft || false, maker } }))),
 };
 
 export const coolerVBT = Array.from(Array(11), (_, i) => i * 5 + 20);
@@ -990,10 +990,10 @@ export const spoolData = [
   ...spoolHansa.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolEaton.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolRexroth.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
-  ...spoolAtos.map(({ ...rest }) => ({ ...rest, h: 30, plug: "-" })),
+  ...spoolAtos.map(({ ...rest }) => ({ ...rest, h: 30, plug: false })),
   ...spoolHansa.map(({ title, CETOP, addition, ...rest }) => ({ title: title.replace("HK413", "HK423"), ...rest, CETOP: 5, addition, h: 40, plug: "24V" })),
   ...spoolEaton.map(({ title, CETOP, addition, ...rest }) => ({ title: title.replace("HKDG4V3", "HKDG4V5"), ...rest, CETOP: 5, addition, h: 40, plug: "24V" })),
-  ...spoolAtosCetop5.map(({ ...rest }) => ({ ...rest, h: 40, plug: "-" })),
+  ...spoolAtosCetop5.map(({ ...rest }) => ({ ...rest, h: 40, plug: false })),
 ];
 export const gasketPump = [
   { title: "HKDPT160NBR", size: 71 },

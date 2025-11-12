@@ -198,4 +198,7 @@ export default {
   descr37: ["Instalacja połączeniowa może być przedmiotem kolejnej oferty po udostępnieniu przez klienta informacji jej dotyczącej."],
   descr38: ["Agregat jest wzposażony w wannę ociekową"],
   descr39: ["Agregat w zabudowie rurowej"],
+  false: ["❌"],
+  "-": ["❌"],
+  true: ["✅"],
 };

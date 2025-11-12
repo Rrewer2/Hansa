@@ -8,7 +8,7 @@ const h = H / 10;
 <template>
   <path
     :transform="`rotate(${deg} ${x} ${y})`"
-    :d="`M${x - L / 2} ${y + H / 2} h${L} v${-h} v${h} h${-L} v${-H} h${L} v${h}`"
+    :d="`M${x - L / 2} ${y + H / 2} h${L} v${-h * 3} v${h * 3} h${-L} v${-H} h${L} v${h * 3}`"
     stroke="black"
     stroke-width="3"
     fill="none"

@@ -36,7 +36,7 @@ const s = 8;
     :d="`M${x + L - 3.5 * u + s} ${y + h + s + H() / 4 + s} v${H() / 2 - 2 * s} h${u - 2 * s} v${-H() / 2 + 2 * s}z`"
     stroke="#000"
     stroke-width="2"
-    fill="none"
+    fill="white"
   />
   <ShutOff :x="x + L - 2 * u" :y="y + h + s + H() + hZlew / 2" :a="2 * s" deg="90" />
   <text :x="x + L - 400" :y="y + H() - u" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">Olej L-HV 46</text>

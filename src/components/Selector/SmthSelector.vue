@@ -110,7 +110,7 @@ if (!logic().length) order[Name + index] = {};
             <CopyText :text="title" />
           </td>
           <td v-for="item in tableResults(rest)">
-            <span>{{ item }}</span>
+            <span>{{ text(item) }}</span>
           </td>
         </tr>
       </tbody>
