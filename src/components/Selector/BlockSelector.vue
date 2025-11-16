@@ -10,10 +10,10 @@ const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "
 const sections = ref("");
 
 const filteredBlocks = () => {
-  return powerUNIT.unit.flatMap(({ Q, p, DR2type, start: startUnit }, i) =>
+  return powerUNIT.unit.map(({ Q, p, DR2type, start: startUnit, HKSH }) =>
     blockData.filter(({ stations, cetop, pressure, DBV, start }) => {
       return (
-        (sections.value ? stations === sections.value + +startUnit : stations === powerUNIT.unit[i].HKSH.length + +startUnit) &&
+        (sections.value ? stations === sections.value + +startUnit : stations === HKSH.length + +startUnit) &&
         (!meta.CETOP || cetop === meta.CETOP) &&
         pressure > +p + 20 &&
         ((DR2type === 0 && !DBV) || (DR2type === 1 && DBV && !start) || (DR2type === 2 && DBV && start))
@@ -21,22 +21,29 @@ const filteredBlocks = () => {
     }),
   );
 };
-const after = () => {
-  const { pipeP, pipeT } = pumpCounting(powerUNIT.unit[i]);
+const after = (k) => {
+  const { pipeP, pipeT } = pumpCounting(powerUNIT.unit[k]);
   const getXvrP = (thread, pipe) => xvrnw.find((x) => thread === x.thread && pipe === x.pipe);
-  const xvrBlockP = getXvrP(order["block" + i]?.blockData?.threadP, pipeP);
-  const xvrBlockA = getXvrP(order["block" + i]?.blockData?.threadA, pipeP);
-  const xvrBlockB = getXvrP(order["block" + i]?.blockData?.threadB, pipeP);
-  const xvrBlockT = getXvrP(order["block" + i]?.blockData?.threadT, pipeT);
-  order[`xvrBlockP${i}`] = xvrBlockP ? { title: xvrBlockP.title, xvrBlockPData: xvrBlockP } : {};
-  order[`xvrBlockA${i}`] = xvrBlockA ? { title: xvrBlockA.title, xvrBlockAData: xvrBlockA } : {};
-  order[`xvrBlockB${i}`] = xvrBlockB ? { title: xvrBlockB.title, xvrBlockBData: xvrBlockB } : {};
-  order[`xvrBlockT${i}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT } : {};
+  const xvrBlockP = getXvrP(order["block" + k]?.blockData?.threadP, pipeP);
+  const xvrBlockA = getXvrP(order["block" + k]?.blockData?.threadA, pipeP);
+  const xvrBlockB = getXvrP(order["block" + k]?.blockData?.threadB, pipeP);
+  const xvrBlockT = getXvrP(order["block" + k]?.blockData?.threadT, pipeT);
+  order[`xvrBlockP${k}`] = xvrBlockP ? { title: xvrBlockP.title, xvrBlockPData: xvrBlockP } : {};
+  order[`xvrBlockA${k}`] = xvrBlockA ? { title: xvrBlockA.title, xvrBlockAData: xvrBlockA } : {};
+  order[`xvrBlockB${k}`] = xvrBlockB ? { title: xvrBlockB.title, xvrBlockBData: xvrBlockB } : {};
+  order[`xvrBlockT${k}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT } : {};
 };
 </script>
 
 <template>
-  <SmthSelector v-bind="{ meta, order }" Name="block" :index="i" :logic="filteredBlocks" :after="after">
+  <SmthSelector
+    v-for="(block, ind) in filteredBlocks()"
+    v-bind="{ meta, order }"
+    Name="block"
+    :index="ind"
+    :logic="() => block"
+    :after="() => after(ind)"
+  >
     <InputItem data="length">
       <select v-model="sections" id="sections">
         <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">

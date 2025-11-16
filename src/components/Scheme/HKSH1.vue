@@ -1,10 +1,9 @@
 <script setup>
 import HKSHSimple from "./HKSHSimple.vue";
-import Point from "./Point.vue";
 
 const { x, y, sl, sh, data } = defineProps(["x", "y", "sl", "sh", "data"]);
-const deg = () => {
-  switch (data.form) {
+const deg = (form) => {
+  switch (form) {
     case "⇑":
       return 270;
     case "⇐":
@@ -18,8 +17,8 @@ const deg = () => {
 </script>
 
 <template>
-  <HKSHSimple :x="x" :y="y" :sl="sl" :sh="sh" :deg="deg()" />
-  <!-- <Point :x="x - 0.25 * sl" :y="y" /> -->
+  <HKSHSimple :x="x" :y="y" :sl="sl" :sh="sh" :deg="deg" :data="data" />
+
   <template v-if="data.form === '⇑'">
     <path :d="`M${x - 0.25 * sl} ${y + sh} v${-sl / 10} h${sl / 8}`" stroke="black" stroke-width="2" fill="none" />
     <path :d="`M${x + 0.25 * sl} ${y + sh} v${-sl / 10 - sl / 2} h${-sl / 8}`" stroke="black" stroke-width="2" fill="none" />

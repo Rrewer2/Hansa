@@ -30,19 +30,26 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
 
       <div v-for="(_, ind) in rest">
         <InputItem :data="ind">
-          <input v-if="ind === 'Q'" type="number" min="0" v-model="pumpData[ind]" :disabled="order[`pump${i}-${k}`]?.title" :id="ind" />
-          <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
-          <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="ind" />
-          <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="ind">
+          <input
+            v-if="ind === 'Q'"
+            type="number"
+            min="0"
+            v-model="pumpData[ind]"
+            :disabled="order[`pump${i}-${k}`]?.title"
+            :id="id + ind"
+          />
+          <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="id + ind" />
+          <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="id + ind">
             <option v-for="item in [0, 1, 2]" :value="item">
               {{ item }}
             </option>
           </select>
-          <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="'start' + ind" />
+          <input v-if="ind === 'start'" type="checkbox" v-model="pumpData.start" :id="id + 'start' + ind" />
           <select
             v-if="ind === 'start'"
             v-model="pumpData.startValve"
-            :id="'startValve' + ind"
+            :id="id + 'startValve' + ind"
             class="w-75"
             :disabled="same || !pumpData.start"
           >

@@ -366,6 +366,10 @@ export const flanges = [
   { title: "GF35LKL12315", pressure: 315, LK: "Ø35mm / M6", thread: "M 18 x 1,5", QS: 7, QP: 20 },
   { title: "GF35LKL15250", pressure: 250, LK: "Ø35mm / M6", thread: "M 22 x 1,5", QS: 12, QP: 35 },
   { title: "GF35LKS16315", pressure: 315, LK: "Ø35mm / M6", thread: "M 24 x 1,5", QS: 18, QP: 45 },
+  { title: "GF40LKL15100", pressure: 100, LK: "Ø40mm / M6", thread: "M 22 x 1,5", QS: 12, QP: 35 },
+  { title: "GF40LKL18100", pressure: 100, LK: "Ø40mm / M6", thread: "M 26 x 1,5", QS: 7, QP: 20 },
+  { title: "GF40LKL22100", pressure: 100, LK: "Ø40mm / M6", thread: "M 30 x 2", QS: 18, QP: 45 },
+  { title: "GF40LKL28100", pressure: 100, LK: "Ø40mm / M6", thread: "M 36 x 2", QS: 18, QP: 45 },
 ];
 
 export const flangesPP = [{ title: "HKK234069000", pressure: 10, LK: "G3/8″ -19" }];
@@ -573,39 +577,49 @@ const gearPumpRexroth = [
 const gearPumpWPH = [
   {},
   {
-    "1PZ4-1/28-2-776": { CC: 1, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-1.2/28-2-776": { CC: 1.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-1.6/28-2-776": { CC: 1.6, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-2/28-2-776": { CC: 2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-2.5/28-2-776": { CC: 2.5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-3.2/28-2-776": { CC: 3.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-4/22-2-776": { CC: 4, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 220, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-5/22-2-776": { CC: 5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 220, holePattern: "71.9 x 52.4 - Ø25.4" },
-    "1PZ4-6.3/17-2-776": { CC: 6.3, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 170, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-1/28-2-776": { CC: 1, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-1.2/28-2-776": { CC: 1.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-1.6/28-2-776": { CC: 1.6, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-2/28-2-776": { CC: 2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-2.5/28-2-776": { CC: 2.5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-3.2/28-2-776": { CC: 3.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-4/22-2-776": { CC: 4, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 220, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-5/22-2-776": { CC: 5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 220, holePattern: "71.9 x 52.4 - Ø25.4" },
+    // "1PZ4-6.3/17-2-776": { CC: 6.3, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 170, holePattern: "71.9 x 52.4 - Ø25.4" },
+
+    "1PZ43.225277G": { CC: 3.2, in: "G3/8″ -19", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "71.9 x 52.4 - Ø25.4" },
+    "1PZ4-4/22-2-77G": { CC: 4, in: "G3/8″ -19", out: "G1/2″ -14", shaft: "1: 8", pmax: 220, holePattern: "71.9 x 52.4 - Ø25.4" },
   },
   {
-    "2PZ4-4/28-2-775": { CC: 4, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-5.5/28-2-775": { CC: 5.5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-6.3/28-2-775": { CC: 6.3, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-8/28-2-775": { CC: 8, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-4/28-2-775": { CC: 4, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-5.5/28-2-775": { CC: 5.5, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-6.3/28-2-775": { CC: 6.3, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-8/28-2-775": { CC: 8, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
     "2PZ4-11/28-2-775": { CC: 11, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-12.5/28-2-775": { CC: 12.5, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-14/25-2-775": { CC: 14, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-16/22-2-775": { CC: 16, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-20/22-2-775": { CC: 20, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-12.5/28-2-775": { CC: 12.5, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-14/25-2-775": { CC: 14, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-16/22-2-775": { CC: 16, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-20/22-2-775": { CC: 20, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
     "2PZ4-22/22-2-775": { CC: 22, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
-    "2PZ4-25/18-2-775": { CC: 25, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 180, holePattern: "96.2 x 71.5 - Ø36.5" },
+    // "2PZ4-25/18-2-775": { CC: 25, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 180, holePattern: "96.2 x 71.5 - Ø36.5" },
+
+    "2PZ4-4/25-2-77G": { CC: 4, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "2PZ4-6.3/25-277G": { CC: 6.3, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "2PZ4-8/25-2-57G": { CC: 8, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "2PZ4-11/25-2-77G": { CC: 11, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "2PZ4-20/22-2-7": { CC: 20, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
   },
   {
-    "3PZ4-16/28-2-775": { CC: 16, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-20/28-2-775": { CC: 20, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-25/28-2-775": { CC: 25, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-28/28-2-775": { CC: 28, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-32/28-2-775": { CC: 32, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-40/22-2-775": { CC: 40, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 220, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-52/20-2-775": { CC: 52, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 200, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-60/18-2-775": { CC: 60, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 180, holePattern: "128 x 98 - Ø50.8" },
-    "3PZ4-70/16-2-775": { CC: 70, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 160, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-16/28-2-775": { CC: 16, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-20/28-2-775": { CC: 20, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-25/28-2-775": { CC: 25, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-28/28-2-775": { CC: 28, in: "Ø40mm / M8", out: "Ø40mm / M8", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-32/28-2-775": { CC: 32, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 280, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-40/22-2-775": { CC: 40, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 220, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-52/20-2-775": { CC: 52, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 200, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-60/18-2-775": { CC: 60, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 180, holePattern: "128 x 98 - Ø50.8" },
+    // "3PZ4-70/16-2-775": { CC: 70, in: "Ø51mm / M10", out: "Ø51mm / M10", shaft: "1: 8", pmax: 160, holePattern: "128 x 98 - Ø50.8" },
+    "3PZ4T1-80/12.5": { CC: 80, in: "M 48 x 2", out: "M48x2", shaft: "Ø32", pmax: 125, holePattern: "170 x 110 - Ø110" },
   },
 ];
 const gearPumpEckerle = {
@@ -676,7 +690,39 @@ export const pumpData = {
     ["ECKERLE", gearPumpEckerle],
   ].flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup).map(([title, data]) => ({ [title]: { title, ...data, shaft: data.shaft || false, maker } }))),
 };
-
+const pump2WPH = {
+  "2PZW4-11X11-2": [
+    { CC: 11, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 11, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+  "2PZW4-20X4-2-77G": [
+    { CC: 20, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 4, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+  "2PZW4-20X6.3-2": [
+    { CC: 20, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 6.3, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+  "2PZW4-20X8-2-776": [
+    { CC: 20, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 8, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+  "2PZW4-22X20-1": [
+    { CC: 22, in: "Ø40mm / M6", out: "Ø35mm / M6", shaft: "1: 5", pmax: 220, holePattern: "60 x 60 - Ø50" },
+    { CC: 20, in: "Ø40mm / M6", out: "Ø35mm / M6", shaft: "1: 5", pmax: 220, holePattern: "60 x 60 - Ø50" },
+  ],
+  "2PZW4-22X8-2-776": [
+    { CC: 22, in: "G3/4″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 8, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+  "2PZW4-6.3X6.3-2": [
+    { CC: 6.3, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 6.3, in: "G1/2″ -14", out: "G1/2″ -14", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
+};
+export const gear2Pump = [["WPH", pump2WPH]].flatMap(([maker, pump2]) =>
+  Object.entries(pump2).map(([title, [p1, p2]]) => ({ title: "K-" + title, CC1: p1.CC, CC2: p2.CC, in1: p1.in, in2: p2.in, out1: p1.out, out2: p2.out, pmax: Math.min(p1.pmax, p2.pmax), shaft: p1.shaft, holePattern: p1.holePattern, maker })),
+);
 export const coolerVBT = Array.from(Array(11), (_, i) => i * 5 + 20);
 export const coolerVZ = Array.from(Array(11), (_, i) => i * 5 + 10);
 

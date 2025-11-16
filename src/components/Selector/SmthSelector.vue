@@ -61,7 +61,7 @@ const tableResults = (rest) =>
     )
     .filter((el) => !el.includes("title"));
 const getIndex = (index) => {
-  if (typeof index === "number") return index ? index + 1 : "";
+  if (typeof index === "number" && !order[Name + index]?.title) return index ? index + 1 : "";
   return "";
 };
 if (!logic().length) order[Name + index] = {};

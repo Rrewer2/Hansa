@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { pumpData, freqData, flanges, flangesPP, xvrnw } from "../../services/data";
+import { pumpData, gear2Pump, freqData, flanges, flangesPP, xvrnw } from "../../services/data";
 import { getQ, getVFU, pumpCounting, round } from "../../services/functions";
 import { text } from "../../services/text";
 import InputItem from "../InputItem.vue";
@@ -33,7 +33,16 @@ const filteredPumps = () => {
       .sort((a, b) => a.CC - b.CC);
   }
 
-  if (powerUNIT.unit.length > 1) return []; // TODO: create a functionality for multiple pump
+  if (powerUNIT.unit.length > 1) {
+    return gear2Pump.map(({ title, CC1, CC2, ...rest }) => ({
+      title,
+      CC1,
+      Q1: round(getQ(CC1, powerUNIT.n)),
+      CC2,
+      Q2: round(getQ(CC2, powerUNIT.n)),
+      ...rest,
+    }));
+  }
 };
 
 const flangeSelector = () => {
