@@ -29,8 +29,12 @@ const after = (k) => {
   const xvrBlockB = getXvrP(order["block" + k]?.blockData?.threadB, pipeP);
   const xvrBlockT = getXvrP(order["block" + k]?.blockData?.threadT, pipeT);
   order[`xvrBlockP${k}`] = xvrBlockP ? { title: xvrBlockP.title, xvrBlockPData: xvrBlockP } : {};
-  order[`xvrBlockA${k}`] = xvrBlockA ? { title: xvrBlockA.title, xvrBlockAData: xvrBlockA } : {};
-  order[`xvrBlockB${k}`] = xvrBlockB ? { title: xvrBlockB.title, xvrBlockBData: xvrBlockB } : {};
+  order[`xvrBlockA${k}`] = xvrBlockA
+    ? { title: xvrBlockA.title, xvrBlockAData: xvrBlockA, n: order["block" + k]?.blockData?.stations }
+    : {};
+  order[`xvrBlockB${k}`] = xvrBlockB
+    ? { title: xvrBlockB.title, xvrBlockBData: xvrBlockB, n: order["block" + k]?.blockData?.stations }
+    : {};
   order[`xvrBlockT${k}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT } : {};
 };
 </script>
