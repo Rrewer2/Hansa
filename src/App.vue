@@ -36,7 +36,7 @@ const cylInit = {
 };
 const gerotorInit = { CC: 50, z: 1, spool: "G", ...init };
 const addGerotor = (k, i) => project.value[k].unit[i].HKSH.push({ ...gerotorInit, id: getId("g") });
-const pumpInit = { Q: "", p: "", DR2type: 1, start: false, startValve: "GA", DBD: "" };
+const pumpInit = { Q: "", p: "", DR2type: 1, start: "", startValve: "GA", DBD: "", aku: "" };
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
@@ -84,7 +84,7 @@ const getNewPowerUnit = () =>
   project.value.push({
     id: getId("u"),
     unit: [getNewPump()],
-    mount: "",
+    mount: "B5",
     n: 1500,
     P: "",
   });

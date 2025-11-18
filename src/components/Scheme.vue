@@ -41,7 +41,7 @@ const xFilter = xTank + LTank - 126;
     <ControlUnit
       v-for="(unit, c) in project.flatMap(({ unit, mount }) => unit.map((el) => ({ ...el, mount })))"
       :x="() => xControlUnit(project) + xControl(project)[c]"
-      :y="() => aboveBlock(unit) * getSh() + 100"
+      :y="() => aboveBlock() * getSh() + 100"
       v-bind="{ unit, c, order, aboveBlock, belowBlock, R }"
       :xT="xFilter"
       :xM="xTank + 200"

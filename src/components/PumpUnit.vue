@@ -57,6 +57,7 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
               {{ spool }}
             </option>
           </select>
+          <input v-if="ind === 'aku'" type="checkbox" v-model="pumpData.aku" :id="id + ind" />
         </InputItem>
       </div>
 

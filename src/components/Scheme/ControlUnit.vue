@@ -12,7 +12,7 @@ import ValveFlowControl from "./ValveFlowControl.vue";
 import ValveHoses from "./ValveHoses.vue";
 import ValveCounterBalance from "./ValveCounterBalance.vue";
 import HKSH from "./HKSH.vue";
-import Gerotor from "./Gerotor.vue";
+import AkumSafety from "./AkumSafety.vue";
 
 const { x, y, unit, R, xT, xM, yM, c, order, aboveBlock, belowBlock } = defineProps([
   "x",
@@ -138,19 +138,18 @@ const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!
     :y="yHKSH(data)"
     v-bind="{ sh: getSh(unit), sl: getSL(unit), data }"
   />
-  <!-- <Gerotor
-    v-if="!unit.same"
-    v-for="(data, i) in unit.HKSH"
-    :x="xHKSH(unit, i)"
-    :y="yHKSH(data)"
-    v-bind="{ sh: getSh(unit), sl: getSL(unit), data }"
-  /> -->
-
+  <AkumSafety
+    v-if="unit.aku"
+    :x="() => x(c) - getSh(unit) * 1.5 - getSL1(unit) * 2"
+    :y="y() + 300 - getSh(unit)"
+    :sl="() => getSL(unit)"
+    :sh="() => getSh(unit)"
+  />
   <DBD
     v-if="unit.DBD"
     :x="x(c) - getSh(unit)"
     :xSame="x(c - 1) - getSh(unit) / 2"
-    :y="y() + 300 + R() * 8"
+    :y="y() + R() * 8"
     :a="getSL(unit) / 6"
     :unit="unit"
     :line="() => getSh(unit) / 2"

@@ -62,6 +62,7 @@ export default {
   flowControl: ["Dławiący*"],
   nonReturn: ["Zwrotny*"],
   DBD: ["DBD", "bar"],
+  aku: ["AKU"],
   // Navigation items
   calculations: ["Obliczenia"],
   scheme: ["Schemat"],
