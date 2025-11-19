@@ -17,7 +17,7 @@ const after = () => {
 </script>
 
 <template>akuData {{ akuData }}
-  </br>
+  <br/>
   filteredAku {{ filteredAku() }}
   <SmthSelector
     v-if="true"
