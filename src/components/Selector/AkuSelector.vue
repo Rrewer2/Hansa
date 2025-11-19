@@ -6,7 +6,7 @@ import SmthSelector from "./SmthSelector.vue";
 const { project, meta, order } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
 const filteredAku = () => {
-  return akuData.filter(({ title, pmax, q, threadA, threadC }) => 
+  return akuData.filter(({ title, pmax, q, thread, connection }) => 
       pmax > project[0]?.unit[0]?.p * 1.3
     );
 };
