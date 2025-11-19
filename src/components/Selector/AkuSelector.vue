@@ -17,6 +17,7 @@ const after = () => {
 </script>
 
 <template>
+  {{ project[0]?.unit }}
   <SmthSelector
     v-if="true"
     v-bind="{ meta, order }"
