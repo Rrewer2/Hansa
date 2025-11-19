@@ -17,9 +17,8 @@ const after = () => {
 </script>
 
 <template>
-  {{ project[0]?.unit }}
   <SmthSelector
-    v-if="true"
+    v-if="project[0]?.unit[0]?.aku"
     v-bind="{ meta, order }"
     Name="aku"
     :index="ind"
