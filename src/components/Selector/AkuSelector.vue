@@ -16,7 +16,9 @@ const after = () => {
 };
 </script>
 
-<template>
+<template>akuData {{ akuData }}
+  </br>
+  filteredAku {{ filteredAku() }}
   <SmthSelector
     v-if="true"
     v-bind="{ meta, order }"
