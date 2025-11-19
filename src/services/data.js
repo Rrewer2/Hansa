@@ -1916,7 +1916,7 @@ export const akuData = [
   { title: "HKHMS2.8250ECOC" },
 ]
   .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|350/gi)[0], q: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5/gi)[0] }))
-  .map(({ title, pmax, q }) => ({ title, pmax, q, ["thread" + title.at(-1)]: q >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14" }));
+  .map(({ title, pmax, q }) => ({ title, pmax, q, thread: q >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14", connection: title.at(-1) }));
 export const akuSafetyData = [
   { title: "HKSAB10M100N", pmax: 100, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: "831,03" },
   { title: "HKSAB10M210N", pmax: 210, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.222,71" },
