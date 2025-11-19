@@ -7,7 +7,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order", "power
 
 const filteredAku = () => {
   return akuData.filter(({ title, pmax, q, threadA, threadC }) => 
-      pmax > project[0]?.unit[0]?.p * 1.3;
+      pmax > project[0]?.unit[0]?.p * 1.3
     );
 };
 const after = () => {
@@ -18,6 +18,7 @@ const after = () => {
 
 <template>
   <SmthSelector
+    v-if="true"
     v-bind="{ meta, order }"
     Name="aku"
     :index="ind"
