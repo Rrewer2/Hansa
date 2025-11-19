@@ -17,7 +17,7 @@ const getDiffBetween = (orderStr, modelStr) => {
   model.forEach(([title, N]) => {
     if (!title) return;
     if (title.match(/^M\d+[A-Za-z]*/)) return;
-    if (title.match(/^rura|wąż|imb/gi)) return;
+    if (title.match(/rura|wąż|imb/gi)) return;
     const trimTitle = title.trim();
     modelObj[trimTitle] ? modelObj[trimTitle].push(N * (KIT || 1)) : (modelObj[trimTitle] = [N * (KIT || 1)]);
   });

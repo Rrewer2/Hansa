@@ -1889,7 +1889,42 @@ export const xvrnw = [
   { title: "XVRNW32HS11/4ED", pipe: "S38-4", thread: "G1.1/4″ -11" },
   { title: "XVRNW32HSED", pipe: "S38-4", thread: "G1.1/2″ -11" },
 ];
-
+export const akuData = [
+  { title: "HKOLM0.075250A" },
+  { title: "HKOLM0.16250A" },
+  { title: "HKOLM0.32210A" },
+  { title: "HKOLM0.5210A" },
+  { title: "HKOLM0.5210C" },
+  { title: "HKOLM0.75210A" },
+  { title: "HKOLM0.75210C" },
+  { title: "HKOLM0.75350A" },
+  { title: "HKOLM1.0210A" },
+  { title: "HKOLM1.0210C" },
+  { title: "HKOLM1.4140C" },
+  { title: "HKOLM1.4210A" },
+  { title: "HKOLM1.4210C" },
+  { title: "HKOLM2.0100A" },
+  { title: "HKOLM2.0250A" },
+  { title: "HKOLM2.8250A" },
+  { title: "HKOLM3.5250A" },
+  { title: "HKHMS0.5210ECOC" },
+  { title: "HKHMS0.75350ECOC" },
+  { title: "HKHMS1.0210ECOA" },
+  { title: "HKHMS1.0210ECOC" },
+  { title: "HKHMS1.4210ECOA" },
+  { title: "HKHMS1.4210ECOC" },
+  { title: "HKHMS2.8250ECOC" },
+]
+  .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|350/gi)[0], q: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5/gi)[0] }))
+  .map(({ title, pmax, q }) => ({ title, pmax, q, ["thread" + title.at(-1)]: q >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14" }));
+export const akuSafetyData = [
+  { title: "HKSAB10M100N", pmax: 100, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: "831,03" },
+  { title: "HKSAB10M210N", pmax: 210, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.222,71" },
+  { title: "HKSAB10M250N", pmax: 250, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.227,68" },
+  { title: "HKSAB10M330N", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.232,32" },
+  { title: "HKSAB20M330", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.270,24" },
+  { title: "HKSAB20M330N", pmax: 330, threadP: "G1″ -11", threadT: "G3/4″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.502,22" },
+];
 export const extra = {
   heater: [
     { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230 },
