@@ -16,16 +16,14 @@ const after = () => {
 };
 </script>
 
-<template>akuData {{ akuData }}
-  <br/>
-  filteredAku {{ filteredAku() }}
+<template>
   <SmthSelector
     v-if="true"
     v-bind="{ meta, order }"
     Name="aku"
     :index="ind"
-    :logic="() => filteredAku"
-    :after="() => after()"
+    :logic="filteredAku"
+    :after="after"
   >
   </SmthSelector>
 </template>
