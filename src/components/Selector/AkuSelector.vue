@@ -10,6 +10,11 @@ const filteredAku = () => {
       pmax > project[0]?.unit[0]?.p * 1.3
     );
 };
+const filteredSafetyAku = () => {
+  return akuSafetyData.filter(({ title, pmax, threadP, threadT, threadM, threadS }) => 
+      pmax > project[0]?.unit[0]?.p * 1.3
+    );
+};
 const after = () => {
   //300 barolitrow max!
   //order[`xvrBlockT${k}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT } : {};
@@ -24,7 +29,14 @@ const after = () => {
     :index="ind"
     :logic="filteredAku"
     :after="after"
-  >
-  </SmthSelector>
+  />
+  <SmthSelector
+    v-if="project[0]?.unit[0]?.aku"
+    v-bind="{ meta, order }"
+    Name="aku"
+    :index="ind"
+    :logic="filteredSafetyAku"
+    :after="after"
+  />
 </template>
 <style scoped></style>
