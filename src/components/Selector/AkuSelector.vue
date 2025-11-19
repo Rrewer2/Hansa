@@ -9,7 +9,7 @@ const filteredAku = () => {
   return akuData.filter(({ title, pmax, q, threadA, threadC }) => {
       return (
         pmax > project[0]?.unit[0]?.p * 1.3
-        ))
+        ););
 };
 const after = () => {
   //300 barolitrow max!
