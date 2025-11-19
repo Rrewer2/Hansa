@@ -6,14 +6,10 @@ import SmthSelector from "./SmthSelector.vue";
 const { project, meta, order } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
 const filteredAku = () => {
-  return akuData.filter(({ title, pmax, q, thread, connection }) => 
-      pmax > project[0]?.unit[0]?.p * 1.3
-    );
+  return akuData.filter(({ title, pmax, qg, thread, connection }) => pmax > project[0]?.unit[0]?.p * 1.3);
 };
 const filteredSafetyAku = () => {
-  return akuSafetyData.filter(({ title, pmax, threadP, threadT, threadM, threadS }) => 
-      pmax > project[0]?.unit[0]?.p * 1.3
-    );
+  return akuSafetyData.filter(({ title, pmax, threadP, threadT, threadM, threadS }) => pmax > project[0]?.unit[0]?.p * 1.3);
 };
 const after = () => {
   //300 barolitrow max!
@@ -22,14 +18,7 @@ const after = () => {
 </script>
 
 <template>
-  <SmthSelector
-    v-if="project[0]?.unit[0]?.aku"
-    v-bind="{ meta, order }"
-    Name="aku"
-    :index="ind"
-    :logic="filteredAku"
-    :after="after"
-  />
+  <SmthSelector v-if="project[0]?.unit[0]?.aku" v-bind="{ meta, order }" Name="aku" :index="ind" :logic="filteredAku" :after="after" />
   <SmthSelector
     v-if="project[0]?.unit[0]?.aku"
     v-bind="{ meta, order }"

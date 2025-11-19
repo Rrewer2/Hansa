@@ -1915,15 +1915,15 @@ export const akuData = [
   { title: "HKHMS1.4210ECOC" },
   { title: "HKHMS2.8250ECOC" },
 ]
-  .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|350/gi)[0], q: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5/gi)[0] }))
-  .map(({ title, pmax, q }) => ({ title, pmax, q, thread: q >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14", connection: title.at(-1) }));
+  .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|350/gi)[0], qg: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5/gi)[0] }))
+  .map(({ title, pmax, qg }) => ({ title, pmax, qg, threadS: qg >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14", connection: title.at(-1) }));
 export const akuSafetyData = [
-  { title: "HKSAB10M100N", pmax: 100, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: "831,03" },
-  { title: "HKSAB10M210N", pmax: 210, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.222,71" },
-  { title: "HKSAB10M250N", pmax: 250, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.227,68" },
-  { title: "HKSAB10M330N", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.232,32" },
-  { title: "HKSAB20M330", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.270,24" },
-  { title: "HKSAB20M330N", pmax: 330, threadP: "G1″ -11", threadT: "G3/4″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2", cost: " 1.502,22" },
+  { title: "HKSAB10M100N", pmax: 100, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
+  { title: "HKSAB10M210N", pmax: 210, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
+  { title: "HKSAB10M250N", pmax: 250, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
+  { title: "HKSAB10M330N", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
+  { title: "HKSAB20M330", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
+  { title: "HKSAB20M330N", pmax: 330, threadP: "G1″ -11", threadT: "G3/4″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
 ];
 export const extra = {
   heater: [
