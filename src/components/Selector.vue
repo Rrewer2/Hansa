@@ -12,6 +12,7 @@ import VibroSelector from "./Selector/VibroSelector.vue";
 import Order from "../components/Order.vue";
 import FilterSelector from "./Selector/FilterSelector.vue";
 import GaugeSelector from "./Selector/GaugeSelector.vue";
+import AkuSelector from "./Selector/AkuSelector.vue"; 
 import LidSelector from "./Selector/LidSelector.vue";
 import ExtraSelector from "./Selector/ExtraSelector.vue";
 import Title from "./Title.vue";
@@ -29,7 +30,7 @@ const pumpUnitComponents = [
   ValveSelector,
   NonCETOPValveSelector,
 ];
-const otherComponents = [TankSelector, LidSelector, FilterSelector, GaugeSelector, CoolerSelector, ExtraSelector, OldValveSelector];
+const otherComponents = [TankSelector, LidSelector, FilterSelector, GaugeSelector, AkuSelector, CoolerSelector, ExtraSelector, OldValveSelector];
 const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
 const items = () => [...project.flatMap((_, i) => pumpUnit().map((p) => [p, i])), ...other().map((o, j) => [o, j])];
