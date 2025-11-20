@@ -5,15 +5,7 @@ import Start from "./Start.vue";
 import Hline from "./Hline.vue";
 import Manometr from "./Manometr.vue";
 
-const { x, y, type, sl, sl1, sh } = defineProps([
-  "x",
-  "y",
-  "type",
-  "N",
-  "sl",
-  "sl1",
-  "sh",
-]);
+const { x, y, type, sl, sl1, sh } = defineProps(["x", "y", "type", "N", "sl", "sl1", "sh"]);
 const width = 2;
 </script>
 
@@ -30,7 +22,7 @@ const width = 2;
 
   <Start v-if="type === 2" :x="x + sl1 * 0.6" :y="y + sh / 2 - sl / 8" :a="sl / 5" />
   <Hline v-for="p in [0, sh]" :x="x" :y="p + y" :L="sl1" :width="width" />
-  <Manometr :x="x + sl / 4" :y="y" :a="sl / 8" />
+  <Manometr :x="x + sl / 4" :y="y" :a="sl / 12" />
 </template>
 
 <style scoped></style>

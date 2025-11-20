@@ -7,7 +7,7 @@ import CopyText from "./CopyText.vue";
 
 const sortKey = ref();
 
-const { Name, index, logic, after, meta, order } = defineProps(["Name", "index", "logic", "after", "meta", "order"]);
+const { Name, index = 0, logic, after, meta, order } = defineProps(["Name", "index", "logic", "after", "meta", "order"]);
 
 const orderTitle = ref(null);
 const slots = useSlots();

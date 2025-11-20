@@ -18,12 +18,12 @@ const after = () => {
 </script>
 
 <template>
-  <SmthSelector v-if="project[0]?.unit[0]?.aku" v-bind="{ meta, order }" Name="aku" :index="ind" :logic="filteredAku" :after="after" />
+  <SmthSelector v-if="project[0]?.unit[0]?.aku" v-bind="{ meta, order }" Name="aku" :index="0" :logic="filteredAku" :after="after" />
   <SmthSelector
     v-if="project[0]?.unit[0]?.aku"
     v-bind="{ meta, order }"
-    Name="aku"
-    :index="ind"
+    Name="akuSafety"
+    :index="0"
     :logic="filteredSafetyAku"
     :after="after"
   />
