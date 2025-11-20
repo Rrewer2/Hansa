@@ -199,3 +199,26 @@ export const uniqOrder = (elem, key, order) => {
   if (unit[elem]) unit[elem].count ? unit[elem].count++ : 1;
   else unit[elem] = { count: 1 };
 };
+
+export const deepMerge = (oldData, newData) => {
+  if (typeof oldData !== "object" || oldData === null) return newData;
+  if (typeof newData !== "object" || newData === null) return newData;
+
+  let result = Array.isArray(oldData) ? [...oldData] : { ...oldData };
+
+  for (let key of Object.keys(newData)) {
+    if (key in oldData) {
+      result[key] = deepMerge(oldData[key], newData[key]);
+    } else {
+      result[key] = newData[key];
+    }
+  }
+
+  for (let key of Object.keys(oldData)) {
+    if (!(key in newData)) {
+      result[key] = oldData[key];
+    }
+  }
+
+  return result;
+};

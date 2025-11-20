@@ -1,7 +1,7 @@
 <script lang="js" setup>
 import { ref, provide } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
-import { getId } from "./services/functions";
+import { deepMerge, getId } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
 import Title from "./components/Title.vue";
 import Scheme from "./components/Scheme.vue";
@@ -49,14 +49,14 @@ const load = () => {
     const storMeta = JSON.parse(localStorage.getItem("hansa-meta"));
     const storOrder = JSON.parse(localStorage.getItem("hansa-order"));
     if (storProject && storMeta && storOrder) {
-      project.value = storProject;
-      meta.value = storMeta;
+      project.value = deepMerge(project.value, storProject);
+      meta.value = deepMerge(meta.value, storMeta);
       order.value = storOrder;
     }
     alert("Załadowano");
     navPage.value = [true, false, false, false, false];
   } catch (error) {
-    alert("Coś popsułeś już, chłopie!");
+    alert("ERROR!");
     console.error(error);
   }
 };
@@ -67,7 +67,7 @@ const save = () => {
     localStorage.setItem("hansa-order", JSON.stringify(order.value));
     alert("Zapisano");
   } catch (error) {
-    alert("Coś popsułeś już, chłopie!");
+    alert("ERROR!");
     console.error(error);
   }
 };
