@@ -1914,9 +1914,24 @@ export const akuData = [
   { title: "HKHMS1.4210ECOA" },
   { title: "HKHMS1.4210ECOC" },
   { title: "HKHMS2.8250ECOC" },
+  { title: "HKBLAK1.0350114" },
+  { title: "HKBLAK4.0350114" },
+  { title: "HKBLAK6.0350114" },
+  { title: "HKBLAK10.0330K2" },
+  { title: "HKBLAK10.03502" },
+  { title: "HKBLAK20.03302" },
+  { title: "HKBLAK32.03302" },
+  { title: "HKBLAK50.03302" },
 ]
-  .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|350/gi)[0], qg: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5/gi)[0] }))
-  .map(({ title, pmax, qg }) => ({ title, pmax, qg, threadS: qg >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14", connection: title.at(-1) }));
+  .map(({ title }) => ({ title, pmax: +title.match(/100|140|210|250|330|350/gi)[0], qg: +title.match(/0.075|0.16|0.32|0.5|0.75|1.0|1.4|2.0|2.8|3.5|4.0|6.0|10.0|20.0|32.0|50.0/gi)[0] }))
+  .map(({ title, pmax, qg }) => ({
+    title,
+    pmax,
+    qg,
+    threadP: title.slice(-3) === "114" ? "G1.1/4″ -11" : title.at(-1) === "2" ? "G2″ -11" : qg >= 2 && pmax >= 250 ? "G3/4″ -14" : "G1/2″ -14",
+    connection: title.at(-1).match(/\d/) ? "BLAK" : title.at(-1),
+  }))
+  .map((el) => (el.connection === "C" ? { ...el, addition: { akuNut: { title: el.qg === 2.8 ? "HKMSM45-15" : "HKMSM33-15" } } } : el));
 export const akuSafetyData = [
   { title: "HKSAB10M100N", pmax: 100, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
   { title: "HKSAB10M210N", pmax: 210, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
@@ -1925,6 +1940,56 @@ export const akuSafetyData = [
   { title: "HKSAB20M330", pmax: 330, threadP: "G1/2″ -14", threadT: "G1/2″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
   { title: "HKSAB20M330N", pmax: 330, threadP: "G1″ -11", threadT: "G3/4″ -14", threadM: "G1/4″ -19", threadS: "M 33 x 2" },
 ];
+export const HKAS = [
+  { title: "HKAS1211/4", threadP: "G1.1/4″ -11" },
+  { title: "HKAS132", threadP: "G2″ -11" },
+  { title: "HKAS313/4", threadP: "G3/4″ -14" },
+  { title: "HKAS321/2", threadP: "G1/2″ -14" },
+].map((a) => ({ ...a, threadS: "M 33 x 2" }));
+export const DBDData = [
+  { title: "HKVLPP12C01A", pmax: 100, thread: "SAE 12/2" },
+  { title: "HKVLPP12C02A", pmax: 250, thread: "SAE 12/2" },
+  { title: "HKVLPP12C03A", pmax: 350, thread: "SAE 12/2" },
+];
+export const GEHData = [
+  { title: "HKGEH12C1040ST" },
+  { title: "HKGEH12C1220" },
+  { title: "HKGEH12C1220GGG" },
+  { title: "HKGEH12C1230" },
+  { title: "HKGEH12C1230GGG" },
+  { title: "HKGEH34C1020" },
+  { title: "HKGEH34C1220" },
+  { title: "HKGEH34C1220GGG" },
+  { title: "HKGEH38C0820" },
+  { title: "HKGEH38C0820GGG" },
+  { title: "HKGEH38C0830" },
+  { title: "HKGEH38C1020" },
+  { title: "HKGEH38C1020GGG" },
+  { title: "HKGEH38C1030" },
+  { title: "HKGEHB08212ST" },
+  { title: "HKGEHB08238ST" },
+  { title: "HKGEHB08338ST" },
+  { title: "HKGEHB10212ST" },
+  { title: "HKGEHB12212ST" },
+  { title: "HKGEHB12234ST" },
+  { title: "HKGEHB12312ST" },
+  { title: "HKGEHB12334ST" },
+  { title: "HKGEHDFR10312ST" },
+  { title: "HKGEHDFR10338ST" },
+]
+  .map(({ title }) => ({
+    title,
+    thread: title.match(/C0820|C0830|C1020|C1030|C1040|C1220|C1230|C1240|B082|B083|B102|B103|B122|B123|R103/gi)[0],
+    threadA: title.match(/38ST|12ST|34ST|38C|12C|34C/gi)[0].slice(0, 2),
+    material: title.endsWith("GGG") || title.endsWith("ST") ? "Steel" : "Alu",
+  }))
+  .map(({ title, thread, threadA, material }) => ({
+    title,
+    thread: ["B", "R"].some((a) => thread[0] === a) ? "SAE " + thread.slice(1, 3) + "/" + thread.at(-1) : thread,
+    threadA: `G${threadA[0]}/${threadA[1]}″`,
+    pmax: material === "Steel" ? 350 : 250,
+    material,
+  }));
 export const extra = {
   heater: [
     { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230 },
