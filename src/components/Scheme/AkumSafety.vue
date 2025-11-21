@@ -47,6 +47,7 @@ const x3 = () => x() + (sl() * 5) / 6;
   <ShutOffWithHand :x="x3()" :y="y + sh() / 2" :a="sh() / 6" :deg="0" :fill="true" />
   <Akum :x="x1()" :y="y - sh() * 1.25" :r="sh() / 1.5" />
   <Text :x="x1()" :y="y - sh() * 2" :text="data?.qg" afterText="L" />
+  <Text :x="x1()" :y="y - sh() * 2.2" :text="data?.aku" afterText="bar" />
 
   <path :d="`M${x1()} ${y + sh()} v${sh() / 2}`" stroke="blue" stroke-width="3" fill="none" />
   <path :d="`M${x1() - sh() / 6} ${y + sh() * 1.4} v${sh() / 6} h${sh() / 3} v${-sh() / 6}`" stroke="black" stroke-width="2" fill="none" />

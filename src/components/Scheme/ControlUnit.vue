@@ -144,7 +144,7 @@ const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!
     :y="y() + 300 - getSh(unit)"
     :sl="() => getSL(unit)"
     :sh="() => getSh(unit)"
-    :data="{ ...order['aku' + 0]?.akuData, ...order['akuSafety' + 0]?.akuSafetyData }"
+    :data="{ qg: order['aku' + 0]?.akuData?.qg, ...order['akuSafety' + 0]?.akuSafetyData, aku: unit.aku }"
   />
   <DBD
     v-if="unit.DBD"
