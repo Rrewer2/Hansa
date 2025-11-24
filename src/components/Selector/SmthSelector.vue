@@ -70,7 +70,15 @@ if (!logic().length) order[Name + index] = {};
 <template>
   <article :class="!logic().length && !slots.default?.()?.length ? 'hide' : ''">
     <h2>
-      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'"> {{ text(Name) }} {{ getIndex(index) }} </span>
+      <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
+        {{
+          Name.split(" ")
+            .map((el) => text(el))
+            .join(" ")
+        }}
+        {{ getIndex(index) }}
+        <span v-if="index"> {{ +index + 1 }} {{ text("section") + " " }} </span>
+      </span>
       <span :class="order[Name + index]?.title ? 'titleSelected' : 'titleNotSelected'">
         {{ order[Name + index]?.title }}
       </span>

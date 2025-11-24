@@ -1,5 +1,5 @@
 <script setup>
-import { HKV1, HKV2, HKVCounterBalance } from "../../services/data";
+import { GEHData, GEHSUNData, HKV1, HKV2, HKVCounterBalance } from "../../services/data";
 import { Qback } from "../../services/functions";
 import SmthSelector from "./SmthSelector.vue";
 
@@ -15,16 +15,25 @@ const filteredValves = () =>
       };
     }),
   );
+
+const filteredGEH = (key) => {
+  return [...GEHData, ...GEHSUNData].filter(
+    ({ title, thread, threadA, pmax }) =>
+      // pmax >= order[u+key]?.[u+"DATA"]?.pmax &&
+      thread === order[key]?.[key.replace(/[^a-zA-Z]+/g, "") + "Data"]?.thread,
+  );
+};
 </script>
 
 <template>
-  <div v-for="(item, index) in filteredValves()">
+  <div v-for="item in filteredValves()">
     <div v-for="(_, key) in item">
+      <SmthSelector v-bind="{ meta, order }" :Name="key.replace(/[^a-zA-Z]+/g, '')" :index="key.replace(/\D/g, '')" :logic="item[key]" />
       <SmthSelector
         v-bind="{ meta, order }"
-        :Name="key.replace(/[^a-zA-Z]+/g, '')"
+        :Name="'GEH ' + key.replace(/[^a-zA-Z]+/g, '')"
         :index="key.replace(/\D/g, '')"
-        :logic="() => filteredValves()[index][key]()"
+        :logic="() => filteredGEH(key)"
       />
     </div>
   </div>

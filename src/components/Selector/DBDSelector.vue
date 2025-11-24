@@ -1,22 +1,24 @@
 <script setup>
 import { ref } from "vue";
-import { DBDData, GEHData } from "../../services/data";
+import { DBDData, GEHData, GEHSUNData } from "../../services/data";
 import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
 const filteredDBD = () => {
-  return DBDData.filter(({ title, pmax, thread }) => pmax > project[0]?.unit[0]?.DBD);
+  return DBDData.filter(({ title, pmax, thread, qmax }) => pmax > project[0]?.unit[0]?.DBD && qmax > project[0]?.unit[0]?.Q);
 };
 const filteredGEH = () => {
-  return GEHData.filter(
+  return [...GEHData, ...GEHSUNData].filter(
     ({ title, thread, threadA, pmax }) =>
       pmax > project[0]?.unit[0]?.DBD &&
       (!order["DBD" + 0]?.DBDData?.pmax || pmax >= order["DBD" + 0]?.DBDData?.pmax) &&
       (!order["DBD" + 0]?.DBDData?.thread || thread === order["DBD" + 0]?.DBDData?.thread),
   );
 };
-const after = () => {
+const after = async () => {
+  // const availableQuantity = await import("../../services/SAP.json");
+  // console.log(availableQuantity.default.filter(({ description }) => description.startsWith("Obudowa zaworu")));
   // order["HKAS"] =
   //   HKAS.find(
   //     ({ threadS, threadP }) =>

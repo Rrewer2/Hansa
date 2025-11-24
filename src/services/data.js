@@ -172,6 +172,7 @@ const enginesHK = [
   { title: "HK160M4B54-6IE3", size: 160, power: 11, meta: "E-MOTOR 400/690V 11,0KW 1470U B5 IE3" },
   { title: "HK160L4B354-6IE3", size: 160, power: 15, meta: "E-MOTOR 400/690V 15,0KW 1475U B35 IE3" },
   { title: "HK180M4B354-6IE3", size: 180, power: 18.5, meta: "E-MOTOR 400/690V 18,5KW 1470U B35 IE3" },
+  { title: "HK180L4B354-6IE3", size: 180, power: 22, meta: "E-MOTOR 400/690V 22,0KW 1465U B35 IE3" },
   { title: "HK200L4B354-6IE3", size: 200, power: 30, meta: "E-MOTOR 400/690V 30,0KW 1475U B35 IE3" },
   { title: "HK180M4B354-6IE3", size: 225, power: 45, meta: "E-MOTOR 400/690V 45,0KW 1475U B35 IE3" },
 ].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("230/400V") ? "230/400V" : "400/690V", n: meta.match(/(\d{2,4})U/)[1], meta }));
@@ -1323,9 +1324,13 @@ export const HKV1 = [
 
   { title: "HK055211000900", type: "A", flowMax: 20, thread: "G 1/4″ -19", pmax: 210 },
   { title: "HK055211000300", type: "A", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HKCKEBXCN", type: "A", flowMax: 120, thread: "T-2A", pmax: 350 },
+  { title: "HKCKCBXCN", type: "A", flowMax: 60, thread: "T-11A", pmax: 350 },
 
   { title: "HK055211000900", type: "B", flowMax: 20, thread: "G 1/4″ -19", pmax: 210 },
   { title: "HK055211000300", type: "B", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
+  { title: "HKCKEBXCN", type: "B", flowMax: 120, thread: "T-2A", pmax: 350 },
+  { title: "HKCKCBXCN", type: "B", flowMax: 60, thread: "T-11A", pmax: 350 },
 ];
 export const HKV2 = [
   { title: "HKV2572-1/8", type: "⟯|⟮", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
@@ -1334,6 +1339,15 @@ export const HKV2 = [
   { title: "HKV2572-1/2", type: "⟯|⟮", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
   { title: "HKV2572-3/4", type: "⟯|⟮", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
   { title: "HKV2572-1", type: "⟯|⟮", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+
+  { title: "HKPCFC08NS003", type: "⟯|⟮", flowMax: 22, thread: "SAE 08/2", pmax: 300 },
+  { title: "HKPCFC10NS008", type: "⟯|⟮", flowMax: 45, thread: "SAE 10/2", pmax: 300 },
+  { title: "HKPCFC12NS015", type: "⟯|⟮", flowMax: 90, thread: "SAE 12/2", pmax: 300 },
+
+  { title: "HKRF208CVEI10", type: "⟯|⟮", flowMax: 10, thread: "SAE 08/2", pmax: 350 },
+  { title: "HKRF208CVEI18", type: "⟯|⟮", flowMax: 18, thread: "SAE 08/2", pmax: 350 },
+  { title: "HKRF210CVEI30", type: "⟯|⟮", flowMax: 30, thread: "SAE 10/2", pmax: 350 },
+  { title: "HKRF27012CA70", type: "⟯|⟮", flowMax: 70, thread: "SAE 12/2", pmax: 350 },
 
   { title: "HKV2575-1/8", type: "⇑", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
   { title: "HKV2575-1/4", type: "⇑", flowMax: 14, thread: "G 1/4″ -19", pmax: 400 },
@@ -1348,6 +1362,24 @@ export const HKV2 = [
   { title: "HKV2575-1/2", type: "⇓", flowMax: 50, thread: "G 1/2″ -14", pmax: 400 },
   { title: "HKV2575-3/4", type: "⇓", flowMax: 80, thread: "G 3/4″ -14", pmax: 400 },
   { title: "HKV2575-1", type: "⇓", flowMax: 190, thread: "G 1″ -11", pmax: 320 },
+
+  { title: "HKFDBALCN", type: "⇑", flowMax: 4, thread: "T-13A", pmax: 350 },
+  { title: "HKFDBALBN", type: "⇑", flowMax: 8, thread: "T-13A", pmax: 350 },
+  { title: "HKFDBALAN", type: "⇑", flowMax: 23, thread: "T-13A", pmax: 350 },
+  { title: "HKFDCBLBN", type: "⇑", flowMax: 11.5, thread: "T-5A", pmax: 350 },
+  { title: "HKFDCBLWN", type: "⇑", flowMax: 30, thread: "T-5A", pmax: 350 },
+  { title: "HKFDCBLAN", type: "⇑", flowMax: 45, thread: "T-5A", pmax: 350 },
+  { title: "HKFDEALAN", type: "⇑", flowMax: 95, thread: "T-16A", pmax: 350 },
+  { title: "HKFDEALBN", type: "⇑", flowMax: 60, thread: "T-16A", pmax: 350 },
+
+  { title: "HKFDBALCN", type: "⇓", flowMax: 4, thread: "T-13A", pmax: 350 },
+  { title: "HKFDBALBN", type: "⇓", flowMax: 8, thread: "T-13A", pmax: 350 },
+  { title: "HKFDBALAN", type: "⇓", flowMax: 23, thread: "T-13A", pmax: 350 },
+  { title: "HKFDCBLBN", type: "⇓", flowMax: 11.5, thread: "T-5A", pmax: 350 },
+  { title: "HKFDCBLWN", type: "⇓", flowMax: 30, thread: "T-5A", pmax: 350 },
+  { title: "HKFDCBLAN", type: "⇓", flowMax: 45, thread: "T-5A", pmax: 350 },
+  { title: "HKFDEALAN", type: "⇓", flowMax: 95, thread: "T-16A", pmax: 350 },
+  { title: "HKFDEALBN", type: "⇓", flowMax: 60, thread: "T-16A", pmax: 350 },
 ];
 export const HKVCounterBalance = [
   { title: "HK054247100220", type: "AB", flowMax: 40, thread: "G 3/8″ -19", pmax: 210 },
@@ -1372,6 +1404,17 @@ export const HKVCounterBalance = [
   { title: "HK054322100235", type: "B", flowMax: 40, thread: "G 3/8″ -19", pmax: 350 },
   { title: "HK054322415770", type: "B", flowMax: 60, thread: "G 1/2″ -14", pmax: 210 },
   { title: "HK054322415771", type: "B", flowMax: 60, thread: "G 1/2″ -14", pmax: 350 },
+
+  { title: "HKCBBYLHN", type: "A", flowMax: 20, thread: "T-11A", pmax: 280 },
+  { title: "HKCBCALIN", type: "A", flowMax: 60, thread: "T-11A", pmax: 105 },
+  { title: "HKCBCALHN", type: "A", flowMax: 60, thread: "T-11A", pmax: 280 },
+  { title: "HKCBEALIN", type: "A", flowMax: 120, thread: "T-2A", pmax: 105 },
+  { title: "HKCBEALHN", type: "A", flowMax: 120, thread: "T-2A", pmax: 280 },
+  { title: "HKCBBYLHN", type: "B", flowMax: 20, thread: "T-11A", pmax: 280 },
+  { title: "HKCBCALIN", type: "B", flowMax: 60, thread: "T-11A", pmax: 105 },
+  { title: "HKCBCALHN", type: "B", flowMax: 60, thread: "T-11A", pmax: 280 },
+  { title: "HKCBEALIN", type: "B", flowMax: 120, thread: "T-2A", pmax: 105 },
+  { title: "HKCBEALHN", type: "B", flowMax: 120, thread: "T-2A", pmax: 280 },
 ];
 
 const gaugeBottom = [
@@ -1947,9 +1990,21 @@ export const HKAS = [
   { title: "HKAS321/2", threadP: "G1/2″ -14" },
 ].map((a) => ({ ...a, threadS: "M 33 x 2" }));
 export const DBDData = [
-  { title: "HKVLPP12C01A", pmax: 100, thread: "SAE 12/2" },
-  { title: "HKVLPP12C02A", pmax: 250, thread: "SAE 12/2" },
-  { title: "HKVLPP12C03A", pmax: 350, thread: "SAE 12/2" },
+  { title: "HKVLPP12C01A", pmax: 100, thread: "SAE 12/2", qmax: 100 },
+  { title: "HKVLPP12C02A", pmax: 250, thread: "SAE 12/2", qmax: 100 },
+  { title: "HKVLPP12C03A", pmax: 350, thread: "SAE 12/2", qmax: 100 },
+
+  { title: "HKRDFALAN", pmax: 210, thread: "T-3A", qmax: 200 },
+  { title: "HKRDFALWN", pmax: 315, thread: "T-3A", qmax: 200 },
+
+  { title: "HKRDDALDN", pmax: 55, thread: "T-10A", qmax: 95 },
+  { title: "HKRDDALBN", pmax: 105, thread: "T-10A", qmax: 95 },
+  { title: "HKRDDALAN", pmax: 210, thread: "T-10A", qmax: 95 },
+  { title: "HKRPECLAN", pmax: 210, thread: "T-10A", qmax: 95 },
+  { title: "HKRPGCLAN", pmax: 210, thread: "T-10A", qmax: 95 },
+  { title: "HKRPECLWN", pmax: 315, thread: "T-10A", qmax: 95 },
+  { title: "HKRPGCLWN", pmax: 315, thread: "T-10A", qmax: 95 },
+  { title: "HKRDDALWN", pmax: 315, thread: "T-10A", qmax: 95 },
 ];
 export const GEHData = [
   { title: "HKGEH12C1040ST" },
@@ -1976,6 +2031,18 @@ export const GEHData = [
   { title: "HKGEHB12334ST" },
   { title: "HKGEHDFR10312ST" },
   { title: "HKGEHDFR10338ST" },
+  // { title: 'HK00513' },
+  // { title: 'HK00613' },
+  // { title: 'HK00613' },
+  // { title: 'HK00713' },
+  // { title: 'HK00813' },
+  // { title: 'HK01812' },
+  // { title: 'HK01812' },
+  // { title: 'HK02313' },
+  // { title: 'HK02413' },
+  // { title: 'HK05213' },
+  // { title: 'HK06013' },
+  // { title: 'HK06113' },
 ]
   .map(({ title }) => ({
     title,
@@ -1990,6 +2057,46 @@ export const GEHData = [
     pmax: material === "Steel" ? 350 : 250,
     material,
   }));
+export const GEHSUNData = [
+  { title: "HKBCV", thread: "T-2A" },
+  { title: "HKBCVS", thread: "T-2A" },
+  { title: "HKBCW", thread: "T-2A" },
+  { title: "HKBCWS", thread: "T-2A" },
+  { title: "HKYAV", thread: "T-2A" },
+  { title: "HKCAV", thread: "T-3A" },
+  { title: "HKCAVS", thread: "T-3A" },
+  { title: "HKCAW", thread: "T-3A" },
+  { title: "HKCAWS", thread: "T-3A" },
+  { title: "HKDAV", thread: "T-55A" },
+  { title: "HKDAVS", thread: "T-5A" },
+  { title: "HKFAU", thread: "T-10A" },
+  { title: "HKFAUS", thread: "T-10A" },
+  { title: "HKFAV", thread: "T-10A" },
+  { title: "HKFAVS", thread: "T-10A" },
+  { title: "HKECU", thread: "T-11A" },
+  { title: "HKECUS", thread: "T-11A" },
+  { title: "HKYEU", thread: "T-11A" },
+  { title: "HKGAU", thread: "T-13A" },
+  { title: "HKGAUS", thread: "T-13A" },
+  { title: "HKGAV", thread: "T-13A" },
+  { title: "HKGBA", thread: "T-13A", ö: "Cetop3" },
+  { title: "HKGBY", thread: "T-13A", ö: "Cetop3" },
+  { title: "HKIAW", thread: "T-16A" },
+  { title: "HKIAWS", thread: "T-16A" },
+  { title: "HKIAX", thread: "T-16A" },
+  { title: "HKIAXS", thread: "T-16A" },
+  { title: "HKMBJM", thread: "T-31A", ö: "Cetop3" },
+  { title: "HKMMU", thread: "T-31A" },
+  { title: "HKMMUS", thread: "T-31A" },
+  { title: "HKMMV", thread: "T-31A" },
+  { title: "HKMMVS", thread: "T-31A" },
+  { title: "HKPMW", thread: "T-33A" },
+  { title: "HKPMWS", thread: "T-33A" },
+  { title: "HKPMX", thread: "T-33A" },
+  { title: "HKPMXS", thread: "T-33A" },
+]
+  .map(({ title, thread, threadA }) => ({ title, thread, threadA: threadA ? threadA : title.includes("X") ? "G1″ -11" : title.includes("W") ? "G3/4″ -14" : title.includes("V") ? "G1/2″ -14" : "G3/8″ -19", material: title.endsWith("S") ? "Steel" : "Alu" }))
+  .map(({ title, thread, threadA, material }) => ({ title, thread, threadA, pmax: material === "Steel" ? 350 : 210, material }));
 export const extra = {
   heater: [
     { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230 },
