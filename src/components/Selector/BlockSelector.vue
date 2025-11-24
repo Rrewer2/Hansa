@@ -41,11 +41,11 @@ const after = (k) => {
 
 <template>
   <SmthSelector
-    v-for="(block, ind) in filteredBlocks()"
+    v-for="(_, ind) in filteredBlocks()"
     v-bind="{ meta, order }"
     Name="block"
     :index="ind"
-    :logic="() => block"
+    :logic="() => filteredBlocks()[ind]"
     :after="() => after(ind)"
   >
     <InputItem data="length">

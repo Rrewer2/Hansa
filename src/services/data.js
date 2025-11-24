@@ -174,7 +174,8 @@ const enginesHK = [
   { title: "HK180M4B354-6IE3", size: 180, power: 18.5, meta: "E-MOTOR 400/690V 18,5KW 1470U B35 IE3" },
   { title: "HK180L4B354-6IE3", size: 180, power: 22, meta: "E-MOTOR 400/690V 22,0KW 1465U B35 IE3" },
   { title: "HK200L4B354-6IE3", size: 200, power: 30, meta: "E-MOTOR 400/690V 30,0KW 1475U B35 IE3" },
-  { title: "HK180M4B354-6IE3", size: 225, power: 45, meta: "E-MOTOR 400/690V 45,0KW 1475U B35 IE3" },
+  { title: "HK225S4B354-6IE3", size: 225, power: 37, meta: "E-MOTOR 400/690V 37,0KW 1480U B35 IE3" },
+  { title: "HK225M4B354-6IE3", size: 225, power: 45, meta: "E-MOTOR 400/690V 45,0KW 1480U B35 IE3" },
 ].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("230/400V") ? "230/400V" : "400/690V", n: meta.match(/(\d{2,4})U/)[1], meta }));
 const enginesK400 = [
   { title: "K-400B5-1.1-90S", size: 90, power: 1.1, meta: "Silnik 3faz. 400V; 1.1kW 1420obr/min; B5" },
