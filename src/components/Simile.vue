@@ -5,7 +5,10 @@ const { simile } = defineProps(["simile"]);
 const getDiffBetween = (orderStr, modelStr) => {
   if (!orderStr.trim().length || !modelStr.trim().length) return ["", ""];
   const order = orderStr.split("\n").map((row) => row.split("\t"));
-  const model = modelStr.split("\n").map((row) => row.split("\t"));
+  const model = modelStr
+    .replace(/^.*?Kategoria\s*\n/s, "")
+    .split("\n")
+    .map((row) => row.split("\t"));
   const orderObj = {};
   let KIT = 0;
   order.forEach(([nr, title, N]) => {

@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { blockData, xvrnw } from "../../services/data";
 import InputItem from "../InputItem.vue";
 import SmthSelector from "./SmthSelector.vue";
-import { pumpCounting } from "../../services/functions";
+import { Qmax, pumpCounting } from "../../services/functions";
 
 const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "order", "powerUNIT", "i"]);
 
@@ -37,6 +37,15 @@ const after = (k) => {
     : {};
   order[`xvrBlockT${k}`] = xvrBlockT ? { title: xvrBlockT.title, xvrBlockTData: xvrBlockT } : {};
 };
+const getCetop = () => {
+  const res = [""];
+  if (Qmax(project) <= 33) res.push(3);
+  if (Qmax(project) >= 28 && Qmax(project) <= 63) res.push(5);
+  if (Qmax(project) >= 58 && Qmax(project) <= 145) res.push(7);
+  if (Qmax(project) >= 115 && Qmax(project) <= 185) res.push(8);
+  if (Qmax(project) >= 190) res.push(10);
+  return res;
+};
 </script>
 
 <template>
@@ -57,7 +66,7 @@ const after = (k) => {
     </InputItem>
     <InputItem data="CETOP">
       <select v-model="meta.CETOP" id="blockCETOP">
-        <option v-for="i in ['', 3, 5, 7, 8]" :value="i">
+        <option v-for="i in getCetop()" :value="i">
           {{ i }}
         </option>
       </select>
