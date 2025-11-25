@@ -654,6 +654,8 @@ const pistonPumpKawasaki = {
   HKK3VL112B1NRMML0: { CC: 112, in: "SAE J518C - 2.1/2″", out: "SAE J518C - 1.1/4″", drain: "M27 x 2", pmax: 320, regulator: "Kontroler wykrywania obciążenia", holePattern: "Ø224 - Ø180 ISO 3019/2", shaft: "Ø45" },
   HKK3VL140B1NRMML0: { CC: 140, in: "SAE J518C - 2.1/2″", out: "SAE J518C - 1.1/4″", drain: "M27 x 2", pmax: 320, regulator: "Kontroler wykrywania obciążenia", holePattern: "Ø224 - Ø180 ISO 3019/2", shaft: "Ø45" },
   HKK3VL200B1NRMML0: { CC: 200, in: "SAE J518C - 3″", out: "SAE J518C - 1.1/2″", drain: "3/4″", pmax: 320, regulator: "Kontroler wykrywania obciążenia", holePattern: "224,5 x 224,5 - Ø165,1 ISO 3019/2", shaft: "Ø44,45" },
+  "K-K3VL45/B-1NRMM": { CC: 45, in: "SAE J518C - 1.1/2″", out: "SAE J518C - 1″", drain: "M22 x 1.5", pmax: 320, regulator: "Regulator stałej mocy", holePattern: "Ø140 - Ø100 ISO 3019/2", shaft: "Ø25" },
+  "K-K3VL80/B-1NRMM": { CC: 80, in: "SAE J518C - 2″", out: "SAE J518C - 1″", drain: "M22 x 1.5", pmax: 320, regulator: "Regulator stałej mocy", holePattern: "Ø180 - Ø125 ISO 3019/2", shaft: "Ø32" },
 };
 const pistonPumpDaikin = {
   HKJV15A3RX95: { CC: 14.8, in: "G1″", out: "G1″", drain: "3/8″", pmax: 210, regulator: "Regulator ciśnienia", holePattern: "Ø105,6 - Ø82,55", shaft: "Ø19,05" },
