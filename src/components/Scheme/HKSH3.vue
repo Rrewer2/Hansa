@@ -18,10 +18,10 @@ const deg = () => {
 </script>
 
 <template>
-  <HKSHSimple v-if="data.form === '⇑' || data.form === '⇓'" :x="x - sh" :y="y" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg()" />
-  <HKSHSimple v-else :x="x" :y="y - sh / 2" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg()" />
-  <HKSHSimple v-if="data.form === '⇑' || data.form === '⇓'" :x="x + sh" :y="y" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg()" />
-  <HKSHSimple v-else :x="x" :y="y + sh / 2" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg()" />
+  <HKSHSimple v-if="data.form === '⇑' || data.form === '⇓'" :x="x - sh" :y="y" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg" :data="data" />
+  <HKSHSimple v-else :x="x" :y="y - sh / 2" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg" :data="data" />
+  <HKSHSimple v-if="data.form === '⇑' || data.form === '⇓'" :x="x + sh" :y="y" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg" :data="data" />
+  <HKSHSimple v-else :x="x" :y="y + sh / 2" :sl="sl * 0.75" :sh="sh * 0.75" :deg="deg" :data="data" />
   <!-- <Point :x="x - 0.25 * sl" :y="y" /> -->
   <template v-if="data.form === '⇑'">
     <path
