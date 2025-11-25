@@ -57,7 +57,7 @@ const after = (k) => {
     </InputItem>
     <InputItem data="CETOP">
       <select v-model="meta.CETOP" id="blockCETOP">
-        <option v-for="i in ['', 3, 5]" :value="i">
+        <option v-for="i in ['', 3, 5, 7, 8]" :value="i">
           {{ i }}
         </option>
       </select>
