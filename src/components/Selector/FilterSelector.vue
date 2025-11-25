@@ -10,10 +10,9 @@ const filteredFilter = () =>
     ? HKRTR
     : filterData.filter(
         ({ title, q, type, filterGrade, hole }) =>
-          q >= Qmax(project) && (
+          q >= Qmax(project) && 
               //(!order.lid?.lidData?.hole && !hole) || (order.lid?.lidData?.hole && order.lid?.lidData?.hole === hole)),
-            (!order.lid?.lidData?.hole || order.lid?.lidData?.hole === hole),
-      );
+            (!order.lid?.lidData?.hole || order.lid?.lidData?.hole === hole));
 
 const ventilationFilter = () =>
   order["pump" + 0]?.pumpData?.out?.startsWith("Bore")
