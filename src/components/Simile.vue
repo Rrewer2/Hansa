@@ -8,7 +8,8 @@ const getDiffBetween = (orderStr, modelStr) => {
   const model = modelStr
     .replace(/^.*?Kategoria\s*\n/s, "")
     .split("\n")
-    .map((row) => row.split("\t"));
+    .map((row) => row.split("\t"))
+    .map(([a1, a2]) => [a1, a2]);
   const orderObj = {};
   let KIT = 0;
   order.forEach(([nr, title, N]) => {
