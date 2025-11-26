@@ -1037,6 +1037,12 @@ const spoolAtosCetop5 = [
   { title: "HKDKE16312AX00DC", spool: "Y", CETOP: 5, addition: { valvePlug: { title: "HKSP66824" }, coil: { title: "HKSPCAE24DC" } } },
   { title: "HKDKE17512X00DC", spool: "D^", CETOP: 5, addition: { valvePlug: { title: "HKSP66824" }, coil: { title: "HKSPCAE24DC" } } },
 ];
+const spoolAtosCetop7 = [
+  { title: "HKDPH2710DRSPIL", spool: "H", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDPH2711DSPIL", spool: "E", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDPH2713DSPIL", spool: "J", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDPH2714DSPIL", spool: "J", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+];
 export const spoolData = [
   ...spoolHansa.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolEaton.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
@@ -1045,6 +1051,7 @@ export const spoolData = [
   ...spoolHansa.map(({ title, CETOP, addition, ...rest }) => ({ title: title.replace("HK413", "HK423"), ...rest, CETOP: 5, addition, h: 40, plug: "24V" })),
   ...spoolEaton.map(({ title, CETOP, addition, ...rest }) => ({ title: title.replace("HKDG4V3", "HKDG4V5"), ...rest, CETOP: 5, addition, h: 40, plug: "24V" })),
   ...spoolAtosCetop5.map(({ ...rest }) => ({ ...rest, h: 40, plug: false })),
+  ...spoolAtosCetop7.map(({ ...rest }) => ({ ...rest, h: 50, plug: false })),
 ];
 export const gasketPump = [
   { title: "HKDPT160NBR", size: 71 },
@@ -1082,6 +1089,8 @@ const singleConnectionPlate = [
   { title: "HKBA201HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
   { title: "HKBA202HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
   { title: "HKBA204HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
+  
+  { title: "HKBA518HF", cetop: 7, pressure: 350, threadP: "G1″", threadT: "1″", threadA: "1″", threadB: "1″", DBV: false },
 ];
 const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   const stations = 2 + i;
@@ -1166,6 +1175,32 @@ const createMultipleConnectionPlateDR2 = (suffix) =>
 const multipleConnectionPlateDR21 = createMultipleConnectionPlateDR2(1);
 const multipleConnectionPlateDR22 = createMultipleConnectionPlateDR2(2);
 
+const multipleConnectionPlateNG16 = [
+  {
+      title: 'HKEM2072Y',
+      cetop: 7,
+      pressure: 220,
+      stations: 2,
+      threadP: "G1″",
+      threadT: "G1.1/4″",
+      threadA: "G1″",
+      threadB: "G1″",
+      DBV: false,
+      start: false,
+    },
+    {
+      title: 'HKEM2073Y',
+      cetop: 7,
+      pressure: 220,
+      stations: 3,
+      threadP: "G1″",
+      threadT: "G1.1/4″",
+      threadA: "G1″",
+      threadB: "G1″",
+      DBV: false,
+      start: false,
+    }
+];
 export const blockData = [
   ...singleConnectionPlate.map(({ title, cetop, pressure, ...rest }) => ({ title, cetop, pressure, stations: 1, ...rest })),
   ...multipleConnectionPlateBA214,
@@ -1176,6 +1211,7 @@ export const blockData = [
   ...multipleConnectionPlateEM1053F,
   ...multipleConnectionPlateDR21,
   ...multipleConnectionPlateDR22,
+  ...multipleConnectionPlateNG16,
 ].map((el) => ({ ...el, start: !!el.start, addition: { ...el.addition, minimess: { title: "HFMMKR1/4ED" } } }));
 
 export const HKHQ = [
