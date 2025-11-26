@@ -1041,7 +1041,7 @@ const spoolAtosCetop7 = [
   { title: "HKDPH2710DRSPIL", spool: "H", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
   { title: "HKDPH2711DSPIL", spool: "E", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
   { title: "HKDPH2713DSPIL", spool: "J", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
-  { title: "HKDPH2714DSPIL", spool: "J", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDPH2714DSPIL", spool: "G", CETOP: 7, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
 ];
 export const spoolData = [
   ...spoolHansa.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
