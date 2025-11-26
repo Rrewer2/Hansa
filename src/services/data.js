@@ -1090,7 +1090,7 @@ const singleConnectionPlate = [
   { title: "HKBA202HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
   { title: "HKBA204HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
   
-  { title: "HKBA518HF", cetop: 7, pressure: 350, threadP: "G1″", threadT: "1″", threadA: "1″", threadB: "1″", DBV: false },
+  { title: "HKBA518HF", cetop: 7, pressure: 350, threadP: "G1″", threadT: "G1″", threadA: "G1″", threadB: "G1″", DBV: false },
 ];
 const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   const stations = 2 + i;
