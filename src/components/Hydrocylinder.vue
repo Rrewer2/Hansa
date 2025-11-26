@@ -19,7 +19,7 @@ const getValue = {
   check: ["", "011", "012", "013", "014", "016"],
   directPress: ["", "011", "012", "013", "014", "015"],
   counter: ["", "AB", "A", "B"],
-  nonReturn: ["", "AB", "A", "B"],
+  nonReturn: ["", "ABpilot", "Apilot", "Bpilot", "AB", "A", "B"],
   flowControl: ["", "⟯|⟮AB", "⟯|⟮A", "⟯|⟮B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
   balance: ["", "AB", "A", "B"],
 };

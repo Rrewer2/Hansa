@@ -14,7 +14,7 @@ const description = computed(() => {
     `${text("descr2")} ${[order["pump0"]?.pumpData?.Q, order["pump0"]?.pumpData?.Q1, order["pump0"]?.pumpData?.Q2].filter((el) => el).join("/") ?? ""} L/min (${[order["pump0"]?.pumpData?.CC, order["pump0"]?.pumpData?.CC1, order["pump0"]?.pumpData?.CC2].filter((el) => el).join("/") ?? ""} ${text("descr3")})`,
   );
 
-  arr.push(`${text("descr4")} - ${order["pump0"]?.pumpData?.shaft ? text("descr5") : text("descr6")}`);
+  arr.push(`${text("descr4")} - ${order["pump0"]?.pumpData?.group ? text("descr5") : text("descr6")}`);
 
   arr.push(`${text("descr7")} ${order["motor0"]?.motorData?.power ?? ""} kW (${project[0]?.mount ?? ""})`);
 
