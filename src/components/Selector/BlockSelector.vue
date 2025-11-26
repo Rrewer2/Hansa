@@ -40,9 +40,9 @@ const after = (k) => {
 const getCetop = () => {
   const res = [""];
   if (Qmax(project) <= 33) res.push(3);
-  if (Qmax(project) >= 28 && Qmax(project) <= 63) res.push(5);
-  if (Qmax(project) >= 58 && Qmax(project) <= 145) res.push(7);
-  if (Qmax(project) >= 115 && Qmax(project) <= 185) res.push(8);
+  if (Qmax(project) >= 28 && Qmax(project) <= 65) res.push(5);
+  if (Qmax(project) >= 50 && Qmax(project) <= 185) res.push(7);
+  if (Qmax(project) >= 100 && Qmax(project) <= 220) res.push(8);
   if (Qmax(project) >= 190) res.push(10);
   return res;
 };
