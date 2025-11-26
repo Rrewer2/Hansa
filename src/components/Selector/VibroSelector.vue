@@ -19,7 +19,11 @@ const filteredVibro = () => {
   if (powerUNIT.mount === "B5" || order[`motor${i}`]?.motorData?.mount === "B5") {
     return gasketPump.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
   }
-  return dampingRail.filter(({ size }) => size === order[`motor${i}`]?.motorData?.size || size === motorSize.value);
+  return dampingRail.filter(
+    ({ title, size }) =>
+      (size === order[`motor${i}`]?.motorData?.size && order[`motor${i}`]?.title.includes(title.replace("HKDLMDL", ""))) ||
+      size === motorSize.value,
+  );
 };
 </script>
 

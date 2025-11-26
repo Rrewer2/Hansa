@@ -84,7 +84,7 @@ const BSK = [
   { title: "HKBSK400", Size: 400 },
   { title: "HKBSK450", Size: 450 },
   { title: "HKBSK500", Size: 500 },
-].map((el) => ({ ...el, type: "BSK", material: "Steel" }));
+].map((el) => ({ ...el, type: "BSK", material: "Steel", addition: { tankCork: { title: "BOER1" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" }, oil: { title: "K-OLEJ HV46", n: el.Size } } }));
 const BEK = [
   { title: "HKBEK12", Size: 12 },
   { title: "HKBEK20", Size: 20 },
@@ -96,17 +96,22 @@ const BEK = [
   { title: "HKBEK150", Size: 150 },
   { title: "HKBEK225", Size: 225 },
   { title: "HKBEK300", Size: 300 },
-].map((el) => ({ ...el, type: "BEK", material: "Steel" }));
+].map((el) => ({
+  ...el,
+  type: "BEK",
+  material: "Steel",
+  addition: { tankCork: { title: el.Size < 61 ? "BOER1/2" : "BOER1" }, tankLevel: { title: el.Size < 61 ? "HKLVA10TM12" : "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" }, oil: { title: "K-OLEJ HV46", n: el.Size } },
+}));
 const SBT = [
-  { title: "HKSBT006", Size: 6 },
-  { title: "HKSBT012", Size: 12 },
-  { title: "HKSBT025", Size: 25 },
-  { title: "HKSBT040", Size: 40 },
-  { title: "HKSBT070", Size: 70 },
-  { title: "HKSBT100", Size: 100 },
-  { title: "HKSBT160", Size: 160 },
-  { title: "HKSBT250", Size: 250 },
-].map((el) => ({ ...el, type: "SBT", material: "Steel" }));
+  { title: "HKSBT006", Size: 6, addition: { tankCork: { title: "BOER1/2" }, tankLevel: { title: "HKLVA10TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT012", Size: 12, addition: { tankCork: { title: "BOER1/2" }, tankLevel: { title: "HKLVA10TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT025", Size: 25, addition: { tankCork: { title: "BOER1/2" }, tankLevel: { title: "HKLVA10TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT040", Size: 40, addition: { tankCork: { title: "BOER1/2" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT070", Size: 70, addition: { tankCork: { title: "BOER3/4" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT100", Size: 100, addition: { tankCork: { title: "BOER1/2" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT160", Size: 160, addition: { tankCork: { title: "BOER3/4" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+  { title: "HKSBT250", Size: 250, addition: { tankCork: { title: "BOER3/4" }, tankLevel: { title: "HKLVA20TM12" }, levelTemp: { title: "HKNTMM319070NC280" } } },
+].map((el) => ({ ...el, type: "SBT", material: "Steel", addition: { ...el.addition, oil: { title: "K-OLEJ HV46", n: el.Size } } }));
 const KS = [
   { title: "HKKS01", Size: 1, poz: "h" },
   { title: "HKKS01V", Size: 1, poz: "v" },
@@ -140,7 +145,7 @@ const KS = [
   { title: "HKKS92", Size: 18, poz: "h" },
   { title: "HKKS92V", Size: 18, poz: "v" },
   { title: "HKKS94", Size: 8, poz: "h" },
-].map((el) => ({ ...el, type: "KS", material: "Steel" }));
+].map((el) => ({ ...el, type: "KS", material: "Steel", addition: { ...el.addition, oil: { title: "K-OLEJ HV46", n: el.Size } } }));
 export const tankData = { RA, BSK, BEK, SBT, KS };
 
 export const motorData = ["", 0.37, 0.55, 0.75, 1.1, 1.5, 2.2, 3, 4, 5.5, 7.5, 9.2, 11, 15, 18.5, 22, 30, 37, 45, 55, 75, 90, 110, 132, 160, 200];
@@ -307,7 +312,7 @@ export const ventilation = [
   { title: "FIBL116FP03002", thread: "Ø73 6 x M5", q: 2150 },
 ].map(({ title, ...rest }) => ({ title, ...rest, filterGrade: title.match(/(P10|P03)/)?.[0] }));
 
-export const HKRTR = [{ title: "HKRTR0502CG1P10", join: "G3/8″", q: 25, type: "PowerPack", filterGrade: "P10" }];
+export const HKRTR = [{ title: "HKRTR0502CG1P10", join: "G3/8″", q: 25, hole: false, type: "PowerPack", filterGrade: "P10" }];
 const FIRL = [
   { title: "FIRL024A10NVG1/2", join: "G1/2″", q: 24, hole: 66 },
   { title: "FIRL048P10NVG1/2", join: "G1/2″", q: 60, hole: 66 },
@@ -334,7 +339,7 @@ const FISPR = [
   { title: "FISPR220A10VG11/2", join: "G1.1/2″", q: 220 },
   { title: "FISPR250A10VG11/2", join: "G1.1/2″", q: 250 },
   { title: "FISPR282P10VG11/2", join: "G1.1/2″", q: 282 },
-].map((el) => ({ ...el, type: "Spin-On", filterGrade: el.title.match(/(A10|P10)/)?.[0], addition: { clogging: { title: "HKVAVR" } } }));
+].map((el) => ({ ...el, hole: false, type: "Spin-On", filterGrade: el.title.match(/(A10|P10)/)?.[0], addition: { clogging: { title: "HKVAVR" } } }));
 export const filterData = [...HKRTR, ...FIRL, ...FISPR];
 
 export const spoolTypes = ["G", "GA", "GB", "E", "EA", "EB", "J", "JA", "JB", "H", "HA", "HB", "L", "M", "U", "W", "F", "P", "A", "B", "C", "D", "Y", "D1", "Y1"];

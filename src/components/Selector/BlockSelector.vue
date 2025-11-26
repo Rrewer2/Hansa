@@ -57,6 +57,13 @@ const getCetop = () => {
     :logic="() => filteredBlocks()[ind]"
     :after="() => after(ind)"
   >
+    <InputItem data="DR2type">
+      <select v-model="powerUNIT.unit[0].DR2type" class="w-100" id="DR2type">
+        <option v-for="item in [0, 1, 2]" :value="item">
+          {{ item }}
+        </option>
+      </select>
+    </InputItem>
     <InputItem data="length">
       <select v-model="sections" id="sections">
         <option v-for="i in ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :value="i">
