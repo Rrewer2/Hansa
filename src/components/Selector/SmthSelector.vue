@@ -91,7 +91,7 @@ if (!logic().length) order[Name + index] = {};
       <thead>
         <tr>
           <td v-for="a in keys()">
-            <span class="bi flex flex-row" :class="a === 'title' ? 'title' : ''">
+            <span class="bi flex flex-col" :class="a === 'title' ? 'title' : ''">
               {{ text(a) }}
               <button v-if="logic().length > 3" @click="sortKey = a" class="sort" :class="sortKey === a && 'active'" :value="a">⏬</button>
             </span>
