@@ -1366,11 +1366,25 @@ export const HKV1 = [
   { title: "HK055211000300", type: "A", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
   { title: "HKCKEBXCN", type: "A", flowMax: 120, thread: "T-2A", pmax: 350 },
   { title: "HKCKCBXCN", type: "A", flowMax: 60, thread: "T-11A", pmax: 350 },
-
+  
+  { title: "HKV15010004", type: "A", flowMax: 20, thread: "G 1/4″", pmax: 350 },
+  { title: "HKV15010006", type: "A", flowMax: 40, thread: "G 3/8″", pmax: 350 },
+  { title: "HKV15010008", type: "A", flowMax: 60, thread: "G 1/2″", pmax: 350 },
+  { title: "HKV15010012", type: "A", flowMax: 100, thread: "G 3/4″", pmax: 300 },
+  { title: "HKV15010016", type: "A", flowMax: 150, thread: "G 1″", pmax: 300 },
+  { title: "HKV15010020", type: "A", flowMax: 200, thread: "G 1.1/4″", pmax: 250 },
+  
   { title: "HK055211000900", type: "B", flowMax: 20, thread: "G 1/4″ -19", pmax: 210 },
   { title: "HK055211000300", type: "B", flowMax: 50, thread: "G 1/2″ -14", pmax: 210 },
   { title: "HKCKEBXCN", type: "B", flowMax: 120, thread: "T-2A", pmax: 350 },
   { title: "HKCKCBXCN", type: "B", flowMax: 60, thread: "T-11A", pmax: 350 },
+
+  { title: "HKV15010004", type: "B", flowMax: 20, thread: "G 1/4″", pmax: 350 },
+  { title: "HKV15010006", type: "B", flowMax: 40, thread: "G 3/8″", pmax: 350 },
+  { title: "HKV15010008", type: "B", flowMax: 60, thread: "G 1/2″", pmax: 350 },
+  { title: "HKV15010012", type: "B", flowMax: 100, thread: "G 3/4″", pmax: 300 },
+  { title: "HKV15010016", type: "B", flowMax: 150, thread: "G 1″", pmax: 300 },
+  { title: "HKV15010020", type: "B", flowMax: 200, thread: "G 1.1/4″", pmax: 250 },
 ];
 export const HKV2 = [
   { title: "HKV2572-1/8", type: "⟯|⟮", flowMax: 8, thread: "G 1/8″ -28", pmax: 400 },
