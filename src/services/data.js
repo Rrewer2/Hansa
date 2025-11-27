@@ -286,7 +286,14 @@ export const pipesData = {
 
 export const pipesSData = { "L12-1.5": { Q: 7 }, "L15-1.5": { Q: 12 }, "L18-2": { Q: 18 }, "L22-2": { Q: 25 }, "L28-2.5": { Q: 43 }, "L35-3": { Q: 70 }, "L42-3": { Q: 100 }, "L42-3": { Q: 100 } };
 
-export const coolerData = [
+const coolerAgregat = [
+  { title: "HKS3E15SC400B02", flow: 10, performance: { min: 0.06, max: 0.3 }, join: "G1/2″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
+  { title: "HKS3E25SC400B02", flow: 40, performance: { min: 0.2, max: 1 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
+  { title: "HKS3E35SC400B02", flow: 40, performance: { min: 0.3, max: 1.5 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
+  { title: "HKS3E55SC400B02", flow: 40, performance: { min: 0.6, max: 3 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
+]; 
+
+const coolerOilAir = [
   { title: "2005K", flow: { min: 5, max: 75 }, performance: { min: 0.021, max: 0.031 }, join: "G1/2″" },
   { title: "2010K", flow: { min: 20, max: 100 }, performance: { min: 0.052, max: 0.06 }, join: "G1/2″" },
   // {title: "2015K", flow: {min: 20, max: 200}, performance: {min: 0.084, max: 0.101},},
@@ -299,7 +306,7 @@ export const coolerData = [
   { title: "HPA36", flow: { min: 40, max: 200 }, performance: { min: 0.7, max: 1.1 }, join: "G1.1/4″" },
   { title: "HPA52", flow: { min: 80, max: 280 }, performance: { min: 1.1, max: 1.55 }, join: "G1.1/2″" },
 ].map(({ title, ...rest }) => ({ title: "HKOILAIR" + title, ...rest, addition: { thermostat: { title: "HKTM45A50" }, damperCooler: { title: "HKGP4030M10B", n: 4 } } }));
-
+export const coolerData = [...coolerOilAir, ...coolerAgregat];
 export const ventilation = [
   { title: "FIBL046FP03002", thread: "Ø41 3 x M5", q: 150 },
   { title: "FIBL046FP10002", thread: "Ø41 3 x M5", q: 200 },
