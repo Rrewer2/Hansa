@@ -11,7 +11,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const cooler = ref({ η: 70, vBT: 50, vZ: 30 });
 
 const filteredCooler = () =>
-  coolerData.filter(({ performance, flow }) => performance.max >= P01(project, cooler.value) && (flow.min + flow.max) / 2 >= Qmax(project));
+  coolerData.filter(({ performance, flow }) => performance.max >= P01(project, cooler.value) && (!flow.min ? flow >= Qmax(project) : (flow.min + flow.max) / 2 >= Qmax(project)));
 const getXvrT = () => {
   const Qback = project[0].unit.reduce((acc, unit) => acc + pumpCounting(unit).Qback, 0);
   const pipeT = () =>
