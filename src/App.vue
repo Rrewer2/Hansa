@@ -10,6 +10,7 @@ import Selector from "./components/Selector.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
+import Picture from "./components/Picture.vue";
 
 const simile = ref({ zlec: "", lista: "" });
 const init = {
@@ -141,6 +142,7 @@ const navPage = ref([true, false, false, false, false]);
         <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)">+ {{ text("pumpUnit", meta) }}</button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
+      <Picture class="picture" />
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
@@ -418,5 +420,14 @@ td {
 .titleNotSelected {
   color: darkred;
   /* background-color: rgba(249, 185, 185, 0.5); */
+}
+
+.relative {
+  position: relative;
+}
+.picture {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 </style>
