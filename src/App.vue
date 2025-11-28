@@ -1,5 +1,5 @@
 <script lang="js" setup>
-import { ref, provide } from "vue";
+import { ref, provide, onMounted } from "vue";
 import PumpUnit from "./components/PumpUnit.vue";
 import { deepMerge, getId } from "./services/functions";
 import Navbar from "./components/Navbar.vue";
@@ -11,6 +11,7 @@ import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
 import Picture from "./components/Picture.vue";
+import LogoStart from "./components/LogoStart.vue";
 
 const simile = ref({ zlec: "", lista: "" });
 const init = {
@@ -107,11 +108,18 @@ const addPumpSame = (k) =>
 const delPump = (k, x) => (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
 const delUnit = (k) => (project.value = project.value.filter((_, i) => i !== k));
 const navPage = ref([true, false, false, false, false]);
+
+const showBox = ref(true);
+onMounted(() => {
+  setTimeout(() => {
+    showBox.value = false;
+  }, 1500);
+});
 </script>
 
 <template>
-  <main class="app">
-    <article v-if="navPage[0]">
+  <main class="app" v-if="!showBox">
+    <article v-if="navPage[0]" class="first">
       <Title v-bind="{ project, meta, order }" />
       <section v-for="({ id, unit }, k) in project" class="border px-5 my-2">
         <div :key="id">
@@ -142,7 +150,7 @@ const navPage = ref([true, false, false, false, false]);
         <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)">+ {{ text("pumpUnit", meta) }}</button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
-      <Picture class="picture" />
+      <!-- <Picture class="picture" /> -->
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
@@ -152,6 +160,7 @@ const navPage = ref([true, false, false, false, false]);
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
+  <LogoStart class="logo" />
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
@@ -166,12 +175,31 @@ const navPage = ref([true, false, false, false, false]);
 }
 
 .app {
-  background-color: rgba(14, 44, 14, 0.25);
+  background-color: rgba(70, 70, 70, 0.35);
   min-height: 100vh;
   padding: 5px;
   padding-top: 40px;
 }
-
+.first::before {
+  content: "";
+  position: fixed;
+  /* inset: 0; */
+  left: 60vw;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  background-image: url("/agregat.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: -1;
+}
+.logo {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  width: 100vw;
+}
 article,
 section {
   font-size: 1rem;
@@ -359,7 +387,7 @@ td {
 .scheme {
   height: 95vh;
   width: 95vw;
-  /* background-color: #969696; */
+  background-color: #e0e0e0;
 }
 
 .schemeMin {
