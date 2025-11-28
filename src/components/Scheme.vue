@@ -7,6 +7,7 @@ import NTM from "./Scheme/NTM.vue";
 import Tank from "./Scheme/Tank.vue";
 import FIBL from "./Scheme/FIBL.vue";
 import { reducedPower, round } from "../services/functions";
+import CoolerUnit from "./Scheme/CoolerUnit.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const R = () => 60;
@@ -71,19 +72,28 @@ const xFilter = xTank + LTank - 126;
       {{ order["motor" + i]?.motorData?.n || pumps.n }}
     </PumpUnit>
     <FIBL
-      :x="xTank + LTank - 450"
+      :x="xTank + 55"
       :y="yTank()"
-      :a="R() / 1"
+      :a="R() * 0.75"
       :text="(+order.ventilation?.title?.match(/(P10|P03)/)?.[0]?.slice(1) || 10) + 'µm'"
     />
     <NTM :x="xTank + LTank - 300" :y="yTank()" :a="R() / 1.5" />
-    <Cooler
-      v-if="meta.cooler"
-      :x="xFilter"
-      :y="meta.cooler === 2 ? yTank() - 200 : yTank() - 25"
-      :a="R() / 1.5"
-      :join="order.cooler?.coolerData?.join ? order.cooler?.coolerData?.join?.split('″')[0] + '″' : ''"
-    />
+    <template v-if="meta.cooler">
+      <CoolerUnit
+        v-if="meta.cooler && order.cooler?.title?.startsWith('HKS3E')"
+        :x="xTank + LTank - 550"
+        :y="yTank() - 50"
+        :a="R() / 1.5"
+        :join="order.cooler?.coolerData?.join ? order.cooler?.coolerData?.join?.split('″')[0] + '″' : ''"
+      />
+      <Cooler
+        v-else
+        :x="xFilter"
+        :y="meta.cooler === 2 ? yTank() - 200 : yTank() - 25"
+        :a="R() / 1.5"
+        :join="order.cooler?.coolerData?.join ? order.cooler?.coolerData?.join?.split('″')[0] + '″' : ''"
+      />
+    </template>
     <Filter
       :x="xFilter"
       :y="meta.cooler === 1 ? yTank() - 190 : yTank() - 20"
