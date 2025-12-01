@@ -291,7 +291,7 @@ const coolerAgregat = [
   { title: "HKS3E25SC400B02", flow: 40, performance: { min: 0.2, max: 1 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
   { title: "HKS3E35SC400B02", flow: 40, performance: { min: 0.3, max: 1.5 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
   { title: "HKS3E55SC400B02", flow: 40, performance: { min: 0.6, max: 3 }, join: "G1″", addition: { damperCooler: { title: "HKGP7540M12B", n: 4 } } },
-]; 
+];
 
 const coolerOilAir = [
   { title: "2005K", flow: { min: 5, max: 75 }, performance: { min: 0.021, max: 0.031 }, join: "G1/2″" },
@@ -737,7 +737,7 @@ const pump2WPH = {
   ],
 };
 export const gear2Pump = [["WPH", pump2WPH]].flatMap(([maker, pump2]) =>
-  Object.entries(pump2).map(([title, [p1, p2]]) => ({ title: "K-" + title, CC1: p1.CC, CC2: p2.CC, in1: p1.in, in2: p2.in, out1: p1.out, out2: p2.out, pmax: Math.min(p1.pmax, p2.pmax), shaft: p1.shaft, holePattern: p1.holePattern, maker })),
+  Object.entries(pump2).map(([title, [p1, p2]]) => ({ title: "K-" + title, CC1: p1.CC, CC2: p2.CC, in1: p1.in, in2: p2.in, out1: p1.out, out2: p2.out, pmax: Math.min(p1.pmax, p2.pmax), shaft: p1.shaft, holePattern: p1.holePattern, group: 2, maker })),
 );
 export const coolerVBT = Array.from(Array(11), (_, i) => i * 5 + 20);
 export const coolerVZ = Array.from(Array(11), (_, i) => i * 5 + 10);

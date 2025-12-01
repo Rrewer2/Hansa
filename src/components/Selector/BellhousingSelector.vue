@@ -11,8 +11,8 @@ const filteredBellhousing = () => {
       holePattern === order[`pump${i}`]?.pumpData?.holePattern &&
       size === order[`motor${i}`]?.motorData?.size &&
       (!group || group === order[`pump${i}`]?.pumpData?.group) &&
-      (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft)
-      //  &&      (!pump || pump.split(",").some((p) => order[`pump${i}`]?.title?.startsWith(p)))
+      (!shaft || shaft === order[`pump${i}`]?.pumpData?.shaft) &&
+      (!pump || pump.split(",").some((p) => order[`pump${i}`]?.title?.startsWith(p)))
     );
   });
 };
