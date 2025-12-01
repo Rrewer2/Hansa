@@ -166,7 +166,7 @@ export default {
   descr2: ["Wydajność pompy"],
   descr3: ["cm³/obr"],
   descr4: ["Konstrukcja pompy"],
-  descr5: ["Pompa z zewn. kołem zębatym"],
+  descr5: ["Pompa zębata z zazębieniem zewnętrznym"],
   descr6: ["Wielotłokowa pompa osiowa"],
   descr7: ["Moc napędowa"],
   descr8: ["Znamionowa prędkość obrotowa"],
