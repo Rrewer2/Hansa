@@ -33,14 +33,14 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
           <input
             v-if="ind === 'Q'"
             type="number"
-            min="0"
+            min="0" max="350"
             v-model="pumpData[ind]"
             :disabled="order[`pump${i}-${k}`]?.title"
             :id="id + ind"
           />
-          <input v-if="ind === 'p'" type="number" min="0" v-model="pumpData[ind]" :id="id + ind" />
-          <input v-if="ind === 'DBD'" type="number" min="0" v-model="pumpData[ind]" :id="id + ind" />
-          <input v-if="ind === 'aku'" type="number" min="0" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'p'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'DBD'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'aku'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
           <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="id + ind">
             <option v-for="item in [0, 1, 2]" :value="item">
               {{ item }}
