@@ -150,7 +150,7 @@ onMounted(() => {
         <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)">+ {{ text("pumpUnit", meta) }}</button>
       </div>
       <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
-      <Picture class="picture" />
+      <!-- <Picture class="picture" /> -->
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
 
