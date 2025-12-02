@@ -8,8 +8,8 @@ const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "l
 </script>
 
 <template>
-  <div class="header">
-    <LanguageSwitcher v-bind="{ meta, save, load }" />
+  <div class="header no-print">
+    <LanguageSwitcher v-bind="{ meta, save, load, navPage }" />
     <nav class="nav">
       <div v-for="(nav, i) in navData" @click="() => $emit('nav', i)" class="slice" :class="navPage[i] && 'active'">
         {{ text(nav) }}

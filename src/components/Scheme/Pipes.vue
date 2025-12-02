@@ -43,7 +43,7 @@ const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
     stroke-width="3"
     fill="none"
   />
-  <text :x="x(c) - 100" :y="y + 300 - 20" font-family="Arial" :font-size="R * 0.5" fill="black" text-anchor="middle">
+  <text v-if="unit.Q" :x="x(c) - 100" :y="y + 300 - 20" font-family="Arial" :font-size="R * 0.5" fill="black" text-anchor="middle">
     {{ pumpCounting(unit).pipeP }}
   </text>
   <path
@@ -59,6 +59,7 @@ const gap = 2 * R + 0.8 * R + 2 * c * R * 0.8;
     fill="none"
   />
   <text
+    v-if="unit.Q"
     :x="x(c) + getSL1(unit) + getSL(unit) * 1.1 * (unit.HKSH.length + unit.start) + 100"
     :y="y + 300 - 20 + getSh(unit)"
     font-family="Arial"

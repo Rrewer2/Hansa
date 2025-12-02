@@ -24,6 +24,7 @@ const { x, y, type, N, sl, sl1, sh, text, start, startValve } = defineProps([
   <text :x="x + sh" :y="y - sh / 8" font-family="Arial" :font-size="30" text-anchor="middle">P</text>
   <text :x="x + sh" :y="y + sh + sh / 3" font-family="Arial" :font-size="30" text-anchor="middle">T</text>
   <text
+    v-if="!!N + !!start"
     v-for="(_, n) in N + start"
     :x="x + sl1 + sl * 0.35 + sl * 1.1 * n"
     :y="y + sh / 5"
@@ -33,6 +34,7 @@ const { x, y, type, N, sl, sl1, sh, text, start, startValve } = defineProps([
     >A{{ n + 1 }}</text
   >
   <text
+    v-if="!!N + !!start"
     v-for="(_, n) in N + start"
     :x="x + sl1 + sl * 0.65 + sl * 1.1 * n"
     :y="y + sh / 5"

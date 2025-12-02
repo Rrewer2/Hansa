@@ -29,11 +29,15 @@
   <div class="storage">
     <button class="button" @click="save" title="Save your project to storage">
       SAVE
-      <img src="../resources/save.svg" alt="save" width="24" height="24" />
+      <img src="/save.svg" alt="save" width="24" height="24" />
     </button>
     <button class="button" @click="load" title="Load your project from storage">
       LOAD
-      <img src="../resources/load.svg" alt="load" width="24" height="24" />
+      <img src="/load.svg" alt="load" width="24" height="24" />
+    </button>
+    <button v-if="navPage[1]" class="button" @click="printPage">
+      PDF
+      <img src="/pdf.svg" alt="load" width="24" height="24" />
     </button>
   </div>
 </template>
@@ -45,10 +49,13 @@ import { messages } from "../locales";
 const isOpen = ref(false);
 const switcherRef = ref(null);
 
-const { meta, save, load } = defineProps(["meta", "save", "load"]);
+const { meta, save, load, navPage } = defineProps(["meta", "save", "load", "navPage"]);
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
+};
+const printPage = () => {
+  window.print();
 };
 </script>
 

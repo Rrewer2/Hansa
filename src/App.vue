@@ -42,7 +42,9 @@ const pumpInit = { Q: "", p: "", DR2type: 1, start: "", startValve: "GA", DBD: "
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
-  HKSH: [{ ...cylInit, id: getId("c") }],
+  HKSH: [
+    // { ...cylInit, id: getId("c") }
+  ],
 });
 const project = ref([]);
 const load = () => {
@@ -136,10 +138,10 @@ onMounted(() => {
             />
           </div>
           <div class="flex-row flex-left pl-25">
-            <button @click="() => addPump(k)" class="btn-add my-2" :title="text('btnSeparatePump', meta)">
+            <button @click="() => addPump(k)" class="btn-add my-2" :title="text('btnSeparatePump', meta)" :disabled="unit.length > 1">
               + {{ text("separatePump", meta) }}
             </button>
-            <button @click="() => addPumpSame(k)" class="btn-add my-2" :title="text('btnSamePump', meta)">
+            <button @click="() => addPumpSame(k)" class="btn-add my-2" :title="text('btnSamePump', meta)" :disabled="unit.length > 1">
               + {{ text("samePump", meta) }}
             </button>
           </div>
@@ -147,12 +149,14 @@ onMounted(() => {
       </section>
 
       <div class="flex-row flex-left my-2">
-        <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)">+ {{ text("pumpUnit", meta) }}</button>
+        <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)" :disabled="project.length > 1">
+          + {{ text("pumpUnit", meta) }}
+        </button>
       </div>
-      <Scheme class="schemeMin" v-bind="{ project, meta, order }" />
+      <Scheme class="schemeMin" v-bind="{ project, meta, order, scale: 0.5 }" />
       <!-- <Picture class="picture" /> -->
     </article>
-    <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" />
+    <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" scale="1" />
 
     <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
 
@@ -189,6 +193,7 @@ onMounted(() => {
   width: 50%;
   height: 50%;
   background-image: url("/agregat.jpg");
+  /* background-image: url("/tank.png"); */
   background-size: cover;
   background-position: center;
   opacity: 0.15;
@@ -385,14 +390,14 @@ td {
 }
 
 .scheme {
-  height: 95vh;
-  width: 95vw;
-  background-color: #e0e0e0;
+  /* height: 95vh; */
+  /* width: 95vw; */
+  /* background-color: #e0e0e0; */
 }
 
 .schemeMin {
-  height: 60vh;
-  width: 80vw;
+  /* height: 40vh;
+  width: 80vw; */
   /* position: fixed;
     background-color: rgb(255, 255, 255, 0.7);
     top: 40px;
@@ -457,5 +462,16 @@ td {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+  .avoid-break {
+    page-break-inside: avoid;
+  }
 }
 </style>

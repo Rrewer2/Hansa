@@ -39,7 +39,7 @@ const s = 8;
     fill="white"
   />
   <ShutOff :x="x + L - 2 * u" :y="y + h + s + H() + hZlew / 2" :a="2 * s" deg="90" />
-  <text :x="x + L - 400" :y="y + H() - u" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">Olej L-HV 46</text>
+  <text :x="x + L / 2" :y="y + H()" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">Olej L-HV 46</text>
   <text :x="x + L - 400" :y="y + H()" font-family="Arial" :font-size="u" fill="black" text-anchor="middle">
     <slot></slot>
   </text>

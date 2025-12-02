@@ -16,7 +16,7 @@ const { x, y, a, text } = defineProps(["x", "y", "a", "text"]);
   <path :d="`M${x + a / 4} ${y - 2.25 * a} v${a / 2}`" stroke="black" stroke-width="2" />
   <path :d="`M${x - a / 2} ${y - 2 * a - a / 10} A ${a / 2} ${a / 2} 0 0 1 ${x + a / 2} ${y - 2 * a - a / 10}`"
   fill="none" stroke="black" stroke-width="2" /> -->
-  <text :x="x - a" :y="y - a * 2.5" font-family="Arial" :font-size="30" text-anchor="middle">
+  <text :x="x - a * 1.25" :y="y - a * 2.35" font-family="Arial" :font-size="30" text-anchor="middle">
     {{ text }}
   </text>
 </template>

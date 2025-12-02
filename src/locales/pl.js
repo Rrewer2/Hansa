@@ -68,7 +68,7 @@ export default {
   scheme: ["Schemat"],
   partsSelection: ["Dobór części"],
   offer: ["Oferta"],
-  similarity: ["Podobieństwo"],
+  similarity: ["Porównanie"],
   // Power unit title
   powerUnit: ["Agregat"],
   pumpUnit: ["Zespół pompujacy"],
