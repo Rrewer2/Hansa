@@ -196,6 +196,7 @@ const enginesK400 = [
   { title: "K-400B35-5.5-132", size: 132, power: 5.5, meta: "Silnik 3-faz. 400V; 5.5kW 1420obr/min; B" },
   { title: "K-400B35-7.5132M", size: 132, power: 7.5, meta: "Silnik el. 400/690V 7,5KW 1465U B35 IE3" },
   { title: "K-400B5-11-132L", size: 132, power: 11, meta: "Silnik prog. 400/690V 11kW 1465 B5 132L2" },
+  { title: "K-400B35-11-132L", size: 132, power: 11, meta: "Silnik prog. 400/690V 11kW 1465 B5 132L2" },
 ].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("400V") ? "400V" : "400/690V", n: meta.match(/(\d{4})/)[1], meta }));
 const enginesK230 = [
   { title: "K-230B14-0.18-63", size: 63, power: 0.18, meta: "Siln.1-faz. 230V; 0,18kW 1390obr.B34; MY" },
@@ -986,6 +987,10 @@ const spoolHansa = [
   { title: "HK4131510201C1Q", spool: "Y", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
   { title: "HK4137510902C1Q", spool: "D^", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
 ];
+const spoolWarynski = [
+  { title: "K-NG6E24", spool: "E", CETOP: 3 },
+  { title: "K-NG6G24", spool: "G", CETOP: 3 },
+];
 const spoolEaton = [
   { title: "HKDG4V30CVMU24DC", spool: "H", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
   { title: "HKDG4V30BVMU24DC", spool: "HA", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
@@ -1057,6 +1062,7 @@ const spoolAtosCetop7 = [
 ];
 export const spoolData = [
   ...spoolHansa.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
+  ...spoolWarynski.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolEaton.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolRexroth.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolAtos.map(({ ...rest }) => ({ ...rest, h: 30, plug: false })),
