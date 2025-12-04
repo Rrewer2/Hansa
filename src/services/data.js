@@ -986,6 +986,10 @@ const spoolHansa = [
   { title: "HK4131510201C1Q", spool: "Y", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
   { title: "HK4137510902C1Q", spool: "D^", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
 ];
+const spoolWarynski = [
+  { title: "K-NG6E24", spool: "E", CETOP: 3 },
+  { title: "K-NG6G24", spool: "G", CETOP: 3 },
+];
 const spoolEaton = [
   { title: "HKDG4V30CVMU24DC", spool: "H", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
   { title: "HKDG4V30BVMU24DC", spool: "HA", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
@@ -1057,6 +1061,7 @@ const spoolAtosCetop7 = [
 ];
 export const spoolData = [
   ...spoolHansa.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
+  ...spoolWarynski.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolEaton.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolRexroth.map(({ ...rest }) => ({ ...rest, h: 30, plug: "24V" })),
   ...spoolAtos.map(({ ...rest }) => ({ ...rest, h: 30, plug: false })),
