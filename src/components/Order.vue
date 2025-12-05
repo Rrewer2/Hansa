@@ -9,7 +9,10 @@ const { order, project } = defineProps(["order", "project"]);
 const cracked = ref({});
 
 const normalize = () => {
-  const KIT = { KIT: { title: "KIT", count: 1, JM: "szt", opis: KITtitle(project, order) + " Agregat hydr." } };
+  const KIT = {
+    KIT: { title: "KIT", count: 1, JM: "szt", opis: KITtitle(project, order) + " Agregat hydr." },
+    fracht: { title: "T-FRA", count: 1, JM: "szt", opis: "Fracht" },
+  };
   Object.keys(order).forEach((key) => {
     const { title, n } = order[key];
     if (title) {

@@ -14,7 +14,7 @@ const c = 0;
   <!-- <path :d="`M${x - r / 5} ${y} l${r / 5} ${r / 5} l${r / 5} ${-r / 5}z`" stroke="black" stroke-width="1.5" fill="white" />
   <path :d="`M${x} ${y + r} v${r}`" stroke="black" stroke-width="1.5" fill="white" /> -->
   <Text v-bind="{ x: b - 250, y: a - 65, text: title, fs: 30 }" />
-  <g :transform="`translate(${b - 490}, ${a - 45}) scale(0.5)`">
+  <g :transform="`translate(${b - 460}, ${a - 45}) scale(0.5)`">
     <path
       d="M319.67,14.47l13.92,5.81s-2.5,5.24-3.67,8.67c-1.07,3.17-3.66,11-3.66,11s-7.36,8.75-11.17,23.9a103.39,103.39,0,0,0-3.2,22.44H306a160.81,160.81,0,0,1,3.38-36.36C312.23,36.44,319.67,14.47,319.67,14.47Z"
       transform="translate(-13.91 -14.47)"

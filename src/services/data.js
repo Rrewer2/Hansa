@@ -1553,6 +1553,9 @@ export const getPriority = (KIT) => {
         return Number.MAX_SAFE_INTEGER;
       }
       if (item[1].opis === "oil") {
+        return 10000000;
+      }
+      if (item[1].opis === "Fracht") {
         return Infinity;
       }
       const idx = priority.findIndex((p) => item[1].opis.includes(p));
