@@ -20,11 +20,13 @@ const description = computed(() => {
 
   arr.push(`${text("descr8")} ${order["motor0"]?.motorData?.n ?? ""} ${text("descr9")}`);
 
-  arr.push(`${text("descr10")} 50 Hz`);
+  if (order["motor0"]?.motorData?.U.slice(-2) !== "DC") {
+    arr.push(`${text("descr10")} 50 Hz`);
+  }
 
   arr.push(
     `${text("descr11")} ${order["motor0"]?.motorData?.U ?? ""} ${
-      order["motor0"]?.motorData?.U === "230V" ? text("descr12") : text("descr13")
+      order["motor0"]?.motorData?.U.slice(-2) === "DC" ? "" : order["motor0"]?.motorData?.U === "230V" ? text("descr12") : text("descr13")
     }`,
   );
 

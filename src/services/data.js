@@ -219,26 +219,35 @@ const enginesT3A = [
 ].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("230/400V") ? "230/400V" : "400V", n: "1440", meta }));
 
 const enginesHKKC = [
-  { title: "HKKC25", size: "DC motor 0.5 - 0.8 kW", power: 0.8, meta: "Silnik-E 12V 0,8kW 2000U B14" },
-  { title: "HKKC94", size: "DC motor 0.5 - 0.8 kW", power: 0.8, meta: "Silnik-E 24V 0,8kW 4000U B14" },
-  { title: "HKKC94CN", size: "DC motor 0.5 - 0.8 kW", power: 0.8, meta: "E-Motor 24V 0,8kW 4000U B14" },
-  { title: "HKKC78", size: "DC motor 1.5 - 2.0 kW", power: 1.5, meta: "Silnik-E 12V 1,5kW 2300U B14 LU" },
-  { title: "HKKC102", size: "DC motor 1.5 - 2.0 kW", power: 1.6, meta: "Silnik-E 12V 1,6kW 2600U B14 MS" },
-  { title: "HKKC102CN", size: "DC motor 1.5 - 2.0 kW", power: 1.6, meta: "E-Motor 12V 1,6kW 2600U B14 TS" },
-  { title: "HKKC91", size: "DC motor 1.5 - 2.0 kW", power: 1.6, meta: "Silnik-E 12V 1,6kW 2600U B14" },
-  { title: "HKKC91CN", size: "DC motor 1.5 - 2.0 kW", power: 1.6, meta: "E-Motor 12V 1,6kW 2600U B14" },
-  { title: "HKKC79", size: "DC motor 1.5 - 2.0 kW", power: 2, meta: "Silnik-E 24V 2,0kW 2200U B14 LU" },
-  { title: "HKKC97", size: "DC motor 1.5 - 2.0 kW", power: 2, meta: "Silnik-E 24V 2,0kW 2200U B14" },
-  { title: "HKKC103", size: "DC motor 2.4 - 3.0 kW", power: 2.2, meta: "Silnik-E 24V 2,2kW 2600U B14 MS" },
-  { title: "HKKC103", size: "DC motor 2.4 - 3.0 kW", power: 2.2, meta: "Silnik-E 24V 2,2kW 2600U B14 MS" },
-  { title: "HKKC103CN", size: "DC motor 2.4 - 3.0 kW", power: 2.2, meta: "E-Motor 24V 2,2kW 2600U B14 TS" },
-  { title: "HKKC92CN", size: "DC motor 2.4 - 3.0 kW", power: 2.2, meta: "E-Motor 24V 2,2kW 2600U B14" },
-  { title: "HKKC104", size: "DC motor 2.4 - 3.0 kW", power: 3, meta: "Silnik-E 24V 3,0kW 2600U B14 MS" },
-  { title: "HKKC111", size: "DC motor 2.4 - 3.0 kW", power: 3, meta: "Silnik-E 24V 3,0kW 3300U B14 LU" },
-].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("12V") ? "12V" : "24V", n: meta.match(/(\d{4})/)[1], meta }));
+  { title: "HKKC25", size: "DC motor 0.5 - 0.8 kW", meta: "Silnik-E 12V 0,8kW 2000U B14" },
+  { title: "HKKC94", size: "DC motor 0.5 - 0.8 kW", meta: "Silnik-E 24V 0,8kW 4000U B14" },
+  { title: "HKKC94CN", size: "DC motor 0.5 - 0.8 kW", meta: "E-Motor 24V 0,8kW 4000U B14" },
+  { title: "HKKC78", size: "DC motor 1.5 - 2.0 kW", meta: "Silnik-E 12V 1,5kW 2300U B14 LU" },
+  { title: "HKKC102", size: "DC motor 1.5 - 2.0 kW", meta: "Silnik-E 12V 1,6kW 2600U B14 MS" },
+  { title: "HKKC102CN", size: "DC motor 1.5 - 2.0 kW", meta: "E-Motor 12V 1,6kW 2600U B14 TS" },
+  { title: "HKKC91", size: "DC motor 1.5 - 2.0 kW", meta: "Silnik-E 12V 1,6kW 2600U B14" },
+  { title: "HKKC91CN", size: "DC motor 1.5 - 2.0 kW", meta: "E-Motor 12V 1,6kW 2600U B14" },
+  { title: "HKKC79", size: "DC motor 1.5 - 2.0 kW", meta: "Silnik-E 24V 2,0kW 2200U B14 LU" },
+  { title: "HKKC97", size: "DC motor 1.5 - 2.0 kW", meta: "Silnik-E 24V 2,0kW 2200U B14" },
+  { title: "HKKC103", size: "DC motor 2.4 - 3.0 kW", meta: "Silnik-E 24V 2,2kW 2600U B14 MS" },
+  { title: "HKKC103", size: "DC motor 2.4 - 3.0 kW", meta: "Silnik-E 24V 2,2kW 2600U B14 MS" },
+  { title: "HKKC103CN", size: "DC motor 2.4 - 3.0 kW", meta: "E-Motor 24V 2,2kW 2600U B14 TS" },
+  { title: "HKKC92CN", size: "DC motor 2.4 - 3.0 kW", meta: "E-Motor 24V 2,2kW 2600U B14" },
+  { title: "HKKC104", size: "DC motor 2.4 - 3.0 kW", meta: "Silnik-E 24V 3,0kW 2600U B14 MS" },
+  { title: "HKKC111", size: "DC motor 2.4 - 3.0 kW", meta: "Silnik-E 24V 3,0kW 3300U B14 LU" },
+].map(({ meta, ...rest }) => ({
+  ...rest,
+  power: +meta
+    .match(/(\d,\d)/)[1]
+    .split(",")
+    .join("."),
+  U: meta.match(/12V|24V|48V/)?.[0] + "DC",
+  n: meta.match(/(\d{4})/)[1],
+  meta,
+}));
 
 const motorShaft = { 63: 11, 71: 14, 80: 19, 90: 24, 100: 28, 112: 28, 132: 38, 160: 42, 180: 48, 200: 55, 225: 60, 250: 65, 280: 75, 315: 80 };
-export const motorSizes = ["", 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 225, 250, 280, 315, "DC motor 0.5 - 0.8 kW", "DC motor 1.5 - 2.0 kW", "DC motor 2.4 - 3.0 kW" ];
+export const motorSizes = ["", 63, 71, 80, 90, 100, 112, 132, 160, 180, 200, 225, 250, 280, 315, "DC motor 0.5 - 0.8 kW", "DC motor 1.5 - 2.0 kW", "DC motor 2.4 - 3.0 kW"];
 export const enginesData = [...enginesK400, ...enginesK230, ...enginesT3A, ...enginesHK, ...enginesACMotoren, ...enginesHKKC].map(({ meta, title, size, ...rest }) => ({
   title,
   size,
@@ -862,6 +871,9 @@ export const manifoldData = [
   { title: "HKKA12", size: 90, holePattern: "40 x 40 - Ø32", group: 1 },
   { title: "HKKA12", size: 100, holePattern: "40 x 40 - Ø32", group: 1 },
   { title: "HKKA12", size: 112, holePattern: "40 x 40 - Ø32", group: 1 },
+  { title: "HKKA12", size: "DC motor 0.5 - 0.8 kW", holePattern: "Ø66 - Ø22", group: 0 },
+  { title: "HKKA12", size: "DC motor 1.5 - 2.0 kW", holePattern: "40 x 40 - Ø32", group: 1 },
+  { title: "HKKA12", size: "DC motor 2.4 - 3.0 kW", holePattern: "40 x 40 - Ø32", group: 1 },
 ];
 
 export const couplingsKitData = [
