@@ -12,7 +12,7 @@
   {
     "title": "08BS023",
     "description": "Pierścień Usit 17,28x23,8x2,1 NBR",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "08BS029",
@@ -187,7 +187,7 @@
   {
     "title": "08BS9232",
     "description": "PierśUsit centr. M18 26,0x20,4x1,5 NBR",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "08BS9233",
@@ -197,7 +197,7 @@
   {
     "title": "08BS9236",
     "description": "PierśUsit centr. M22 30,00x24,40x2 NBR",
-    "amount": "4"
+    "amount": "16"
   },
   {
     "title": "08BS9238",
@@ -232,7 +232,7 @@
   {
     "title": "08BS925",
     "description": "PierśUsit centr. 21,54x28,58x2,4 NBR",
-    "amount": "6"
+    "amount": "10"
   },
   {
     "title": "08BS925FPM",
@@ -247,7 +247,7 @@
   {
     "title": "08BS927",
     "description": "PierśUsit centr. 27,05x34,93x2,4 NBR",
-    "amount": "1"
+    "amount": "23"
   },
   {
     "title": "08BS929",
@@ -257,7 +257,7 @@
   {
     "title": "08BS930",
     "description": "PierśUsit centr. 33,89x42,80x3,4 NBR",
-    "amount": "3"
+    "amount": "44"
   },
   {
     "title": "08BS930FPM",
@@ -1582,7 +1582,7 @@
   {
     "title": "AOVRNW10L1/2ED",
     "description": "Element wkręcany AGR1/2\"-WD DKOL12",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "AOVRNW10L1/2EDVA",
@@ -1592,12 +1592,12 @@
   {
     "title": "AOVRNW10L1/4ED",
     "description": "Element wkręcany AGR1/4\"-WD DKOL12",
-    "amount": "46"
+    "amount": "66"
   },
   {
     "title": "AOVRNW10LED",
     "description": "Element wkręcany AGR3/8\"-WD DKOL12",
-    "amount": "138"
+    "amount": "158"
   },
   {
     "title": "AOVRNW10SED",
@@ -1607,7 +1607,7 @@
   {
     "title": "AOVRNW13LED",
     "description": "Element wkręcany AGR1/2\"-WD DKOL15",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "AOVRNW13LEDVA",
@@ -2292,7 +2292,7 @@
   {
     "title": "AVRNW13L3/8ED",
     "description": "Element wkręcany AGR3/8\"-WD L15",
-    "amount": "10"
+    "amount": "9"
   },
   {
     "title": "AVRNW13LED",
@@ -2932,7 +2932,7 @@
   {
     "title": "BETON85-80-12",
     "description": "Wąż do tłoczen beton DN80 GŚ12mm 85bar",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "BFH204",
@@ -3482,7 +3482,7 @@
   {
     "title": "BKR13",
     "description": "2kierunkowykurek blok DN12 IGR1/2\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "BKR13HRND",
@@ -3767,7 +3767,7 @@
   {
     "title": "BOER1/2",
     "description": "Zawór spustowy oleju AGR1/2\"",
-    "amount": "9"
+    "amount": "13"
   },
   {
     "title": "BOER1/4",
@@ -3847,7 +3847,7 @@
   {
     "title": "BREMS11-3.5",
     "description": "Wąż do układów pneumatycznych 11x3,5mm",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "BU135",
@@ -4757,22 +4757,22 @@
   {
     "title": "DAMPF13-6B",
     "description": "Wąż DAMPF B DN 13x6, EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "DAMPF16-6B",
     "description": "Wąż DAMPF B DN 16x6, EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "DAMPF19-6B",
     "description": "Wąż DAMPF B DN 19x6, EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "DAMPF19-7B",
     "description": "Wąż DAMPF B DN 19x7, EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "DAS10075",
@@ -5882,7 +5882,7 @@
   {
     "title": "DMONW10L",
     "description": "Nakrętka dwustronna DKOL12 DKOL12",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "DMONW10L06S",
@@ -5927,7 +5927,7 @@
   {
     "title": "DMONW13L",
     "description": "Nakrętka dwustronna DKOL15 DKOL15",
-    "amount": "3"
+    "amount": "6"
   },
   {
     "title": "DMONW13L10S",
@@ -8032,7 +8032,7 @@
   {
     "title": "F3A",
     "description": "Kołnierz pompy 4otwor KO51 IGR3/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "F3B",
@@ -8042,181 +8042,186 @@
   {
     "title": "FARBSPRITZ09-3.5",
     "description": "Wąż do malowania natryskowego 9x3,5",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS014",
     "description": "Wąż żaroodporny ŚW14 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS016",
     "description": "Wąż żaroodporny ŚW16 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS018",
     "description": "Wąż żaroodporny ŚW18 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS022",
     "description": "Wąż żaroodporny ŚW22 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS025",
     "description": "Wąż żaroodporny ŚW25 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS028",
     "description": "Wąż żaroodporny ŚW28 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS030",
     "description": "Wąż żaroodporny ŚW30 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS035",
     "description": "Wąż żaroodporny ŚW35 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS040",
     "description": "Wąż żaroodporny ŚW40 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS050",
     "description": "Wąż żaroodporny ŚW50 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS055",
     "description": "Wąż żaroodporny ŚW55 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS060",
     "description": "Wąż żaroodporny ŚW60 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS068",
     "description": "Wąż żaroodporny ŚW68 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBS080",
     "description": "Wąż żaroodporny ŚW80 Krzemia",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB-TAPE38",
     "description": "Owijkataśmasilikon 38x1,5 maks.246°C cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB010",
     "description": "Wąż żaroodporny ŚW10 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB013",
     "description": "Wąż żaroodporny ŚW13 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB016",
     "description": "Wąż żaroodporny ŚW16 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB019",
     "description": "Wąż żaroodporny ŚW19 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB022",
     "description": "Wąż żaroodporny ŚW22 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB025",
     "description": "Wąż żaroodporny ŚW25 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB029",
     "description": "Wąż żaroodporny ŚW29 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB032",
     "description": "Wąż żaroodporny ŚW32 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB035",
     "description": "Wąż żaroodporny ŚW35 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB038",
     "description": "Wąż żaroodporny ŚW38 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB041",
     "description": "Wąż żaroodporny ŚW41 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB044",
     "description": "Wąż żaroodporny ŚW44 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB051",
     "description": "Wąż żaroodporny ŚW51 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB057",
     "description": "Wąż żaroodporny ŚW57 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB064",
     "description": "Wąż żaroodporny ŚW64 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB070",
     "description": "Wąż żaroodporny ŚW70 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB076",
     "description": "Wąż żaroodporny ŚW76 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSB089",
     "description": "Wąż żaroodporny ŚW89 silikon cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSS018",
     "description": "Wąż żaroodporny włóknoszk ŚW18",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "FBSS020",
     "description": "Wąż żaroodporny włóknoszk ŚW20",
+    "amount": "0,00"
+  },
+  {
+    "title": "FD18-12-2PT",
+    "description": "Flat Seal-Ring 18-12-2mm PTFE",
     "amount": "0"
   },
   {
@@ -8417,12 +8422,12 @@
   {
     "title": "FIBL046FP03002",
     "description": "Belüftungsfilter org. 3my Bayonett",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "FIBL046FP10002",
     "description": "Belüftungsfilter org. 10my Bayonet Kette",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "FIBL080FP03080",
@@ -8452,7 +8457,7 @@
   {
     "title": "FIBL116FP03001",
     "description": "Belüftungsfilter org. 3my Flansch BG1",
-    "amount": "7"
+    "amount": "9"
   },
   {
     "title": "FIBL116FP03002",
@@ -8462,7 +8467,7 @@
   {
     "title": "FIBLEMP0071P03",
     "description": "Belüftungsfilterelement organ. 3my BG1",
-    "amount": "4"
+    "amount": "1"
   },
   {
     "title": "FIBLEMP0072P03",
@@ -8602,12 +8607,12 @@
   {
     "title": "FIRL150P10NVG3/4",
     "description": "Rücklauffilter 110l 10my V1,75 3/4\"",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "FIRL225P10NVG1",
     "description": "Rücklauffilter 220l 10my V1,75 1\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "FIRL225P10NVG3/4",
@@ -8642,7 +8647,7 @@
   {
     "title": "FIRLEMP0085A10",
     "description": "Filterelement anorg. 10my 85x70x29,5",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "FIRLEMP0085P10",
@@ -8672,7 +8677,7 @@
   {
     "title": "FIRLEMP0211A10",
     "description": "Filterelement anorg. 10my 211,5x70x40,5",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "FIRLEMP0211P10",
@@ -8822,12 +8827,12 @@
   {
     "title": "FISPR48A10VG3/4",
     "description": "Spin-On Rücklauffilter 48l 10my 3/4\"",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "FISPR55P10VG3/4",
     "description": "Spin-On Rücklauffilter 55l 10my 3/4\"",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "FISPRFK001G11/4",
@@ -8837,7 +8842,7 @@
   {
     "title": "FISPRFK001G3/4",
     "description": "Spin-On Rücklauffilterkopf 3/4\"",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "FISPRFK002G11/2",
@@ -9537,7 +9542,7 @@
   {
     "title": "GAB08HB06",
     "description": "Adaptery DKR1/2\" AGR3/8\"",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "GAB08HB10",
@@ -11237,7 +11242,7 @@
   {
     "title": "GEHRED04HB",
     "description": "Adaptery AGR1/4\"-WD AGR1/4\"",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "GEHRED04HB02",
@@ -11307,7 +11312,7 @@
   {
     "title": "GEHRED06HB",
     "description": "Adaptery AGR3/8\"-WD AGR3/8\"",
-    "amount": "8"
+    "amount": "20"
   },
   {
     "title": "GEHRED06HB04",
@@ -11317,7 +11322,7 @@
   {
     "title": "GEHRED06HB08",
     "description": "Adaptery AGR3/8\"-WD AGR1/2\"",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "GEHRED06HJ",
@@ -11397,17 +11402,12 @@
   {
     "title": "GEHRED08HB",
     "description": "Adaptery AGR1/2\"-WD AGR1/2\"",
-    "amount": "0"
-  },
-  {
-    "title": "GEHRED08HB",
-    "description": "Adaptery AGR1/2\"-WD AGR1/2\"",
-    "amount": "6"
+    "amount": "7"
   },
   {
     "title": "GEHRED08HB06",
     "description": "Adaptery AGR1/2\"-WD AGR3/8\"",
-    "amount": "1"
+    "amount": "6"
   },
   {
     "title": "GEHRED08HB10",
@@ -11492,7 +11492,7 @@
   {
     "title": "GEHRED12HB",
     "description": "Adaptery AGR3/4\"-WD AGR3/4\"",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "GEHRED12HB08",
@@ -11502,7 +11502,7 @@
   {
     "title": "GEHRED12HB16",
     "description": "Adaptery AGR3/4\"-WD AGR1\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "GEHRED12HJ",
@@ -11572,7 +11572,7 @@
   {
     "title": "GEHRED16HB12",
     "description": "Adaptery AGR1\"-WD AGR3/4\"",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "GEHRED16HJ",
@@ -12612,7 +12612,7 @@
   {
     "title": "GHB04HB08",
     "description": "Adaptery AGR1/4\" AGR1/2\"",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "GHB04HB08VA",
@@ -12692,7 +12692,7 @@
   {
     "title": "GHB06HB12",
     "description": "Adaptery AGR3/8\" AGR3/4\"",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "GHB06HB16",
@@ -12752,7 +12752,7 @@
   {
     "title": "GHB08HB16",
     "description": "Adaptery AGR1/2\" AGR1\"",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "GHB08HB20",
@@ -14032,7 +14032,7 @@
   {
     "title": "GMM63-250",
     "description": "Manometr glicerynowy 63 250bar",
-    "amount": "49"
+    "amount": "59"
   },
   {
     "title": "GMM63-250H",
@@ -14042,7 +14042,7 @@
   {
     "title": "GMM63-250HFR",
     "description": "Manometr glicerynowy 63 250bar",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "GMM63-250HKR",
@@ -14087,7 +14087,7 @@
   {
     "title": "GMM63-400HFR",
     "description": "Manometr glicerynowy 63 400bar",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "GMM63-400HKR",
@@ -14522,62 +14522,62 @@
   {
     "title": "GT15042-30",
     "description": "Taśma prow. GT 1,5x4,2 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT20042-55",
     "description": "Taśma prow. GT 2x4,2 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT20063-55",
     "description": "Taśma prow. GT 2x6,3 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT20081-55",
     "description": "Taśma prow. GT 2x8,1 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT20097-55",
     "description": "Taśma prow. GT 2x9,7 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT20150-55",
     "description": "Taśma prow. GT 2x15 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25081-55",
     "description": "Taśma prow. GT 2,5x8,1 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25097-55",
     "description": "Taśma prow. GT 2,5x9,7 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25128-55",
     "description": "Taśma prow. GT 2,5x12,8 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25150-55",
     "description": "Taśma prow. GT 2,5x15 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25200-55",
     "description": "Taśma prow. GT 2,5x20 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GT25300-55",
     "description": "Taśma prow. GT 2,5x30 PTBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "GV90NW06HLH",
@@ -15740,164 +15740,169 @@
     "amount": "0"
   },
   {
+    "title": "HBKHL10BVZ",
+    "description": "Hubbegrenzer DN13 CEL12 Typ B",
+    "amount": "2"
+  },
+  {
     "title": "HD104",
     "description": "Wąż hydrauliczny 1SN DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD106",
     "description": "Wąż hydrauliczny 1SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD106T",
     "description": "Wąż hydrauliczny 1SN DN06 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD108",
     "description": "Wąż hydrauliczny 1SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD108T",
     "description": "Wąż hydrauliczny 1SN DN08 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD110",
     "description": "Wąż hydrauliczny 1SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD110T",
     "description": "Wąż hydrauliczny 1SN DN10 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD113",
     "description": "Wąż hydrauliczny 1SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD113T",
     "description": "Wąż hydrauliczny 1SN DN12 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD116",
     "description": "Wąż hydrauliczny 1SN DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD116T",
     "description": "Wąż hydrauliczny 1SN DN16 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD120",
     "description": "Wąż hydrauliczny 1SN DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD120T",
     "description": "Wąż hydrauliczny 1SN DN19 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD125",
     "description": "Wąż hydrauliczny 1SN DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD125T",
     "description": "Wąż hydrauliczny 1SN DN25 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD132",
     "description": "Wąż hydrauliczny 1SN DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD140",
     "description": "Wąż hydrauliczny 1SN DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD150",
     "description": "Wąż hydrauliczny 1SN DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD204",
     "description": "Wąż hydrauliczny 2SN DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD206",
     "description": "Wąż hydrauliczny 2SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD206RM",
     "description": "Wąż hydrauliczny 2SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD206T",
     "description": "Wąż hydrauliczny 2SN DN06 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD208",
     "description": "Wąż hydrauliczny 2SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD208T",
     "description": "Wąż hydrauliczny 2SN DN08 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD210",
     "description": "Wąż hydrauliczny 2SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD210T",
     "description": "Wąż hydrauliczny 2SN DN10 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD213",
     "description": "Wąż hydrauliczny 2SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD213RM",
     "description": "Wąż hydrauliczny 2SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD213S",
     "description": "Wąż hydrauliczny 2SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD213T",
     "description": "Wąż hydrauliczny 2SN DN12 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD216",
     "description": "Wąż hydrauliczny 2SN DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD216RM",
     "description": "Wąż hydrauliczny 2SN DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD216S",
@@ -15907,202 +15912,202 @@
   {
     "title": "HD216T",
     "description": "Wąż hydrauliczny 2SN DN16 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD220",
     "description": "Wąż hydrauliczny 2SN DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD220RM",
     "description": "Wąż hydrauliczny 2SN DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD220S",
     "description": "Wąż hydrauliczny 2SN DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD220T",
     "description": "Wąż hydrauliczny 2SN DN19 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD225",
     "description": "Wąż hydrauliczny 2SN DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD225S",
     "description": "Wąż hydrauliczny 2SN DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD225T",
     "description": "Wąż hydrauliczny 2SN DN25 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD232",
     "description": "Wąż hydrauliczny 2SN DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD232RM",
     "description": "Wąż hydrauliczny 2SN DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD232T",
     "description": "Wąż hydrauliczny 2SN DN31 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD240",
     "description": "Wąż hydrauliczny 2SN DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD240T",
     "description": "Wąż hydrauliczny 2SN DN38 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD250",
     "description": "Wąż hydrauliczny 2SN DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD250T",
     "description": "Wąż hydrauliczny 2SN DN51 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD260",
     "description": "Wąż hydrauliczny 2SN DN60",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD276",
     "description": "Wąż hydrauliczny 2SN DN76",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD410",
     "description": "Wąż hydrauliczny 4SP DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD413",
     "description": "Wąż hydrauliczny 4SP DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD416",
     "description": "Wąż hydrauliczny 4SP DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD420",
     "description": "Wąż hydrauliczny 4SP DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD425",
     "description": "Wąż hydrauliczny 4SP DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD432",
     "description": "Wąż hydrauliczny 4SP DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD520",
     "description": "Wąż hydrauliczny 4SH DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD525",
     "description": "Wąż hydrauliczny 4SH DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD532",
     "description": "Wąż hydrauliczny 4SH DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD540",
     "description": "Wąż hydrauliczny 4SH DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD550",
     "description": "Wąż hydrauliczny 4SH DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD650",
     "description": "Wąż hydrauliczny SAE100 R13 DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD716PRO",
     "description": "Wąż hydrauliczny 4SH DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD720",
     "description": "Wąż hydrauliczny SAE100 R15 DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD720PRO",
     "description": "Wąż hydrauliczny SAE100 R15 DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD725",
     "description": "Wąż hydrauliczny SAE100 R15 DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD725PRO",
     "description": "Wąż hydrauliczny SAE100 R15 DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD732",
     "description": "Wąż hydrauliczny SAE100 R15 DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD732PRO",
     "description": "Wąż hydrauliczny SAE100 R15 DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD740",
     "description": "Wąż hydrauliczny SAE100 R15 DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD740PRO",
     "description": "Wąż hydrauliczny SAE100 R15 DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD750",
     "description": "Wąż hydrauliczny SAE100 R15 DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HD750LL",
     "description": "Hydraulikschl. SAE100 R15 DN51 LongLife",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HDH113",
@@ -16117,42 +16122,42 @@
   {
     "title": "HF106",
     "description": "Wąż do wody gorącej 1SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF108",
     "description": "Wąż do wody gorącej 1SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF110",
     "description": "Wąż do wody gorącej 1SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF113",
     "description": "Wąż do wody gorącej 1SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF206",
     "description": "Wąż do wody gorącej 2SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF208",
     "description": "Wąż do wody gorącej 2SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF210",
     "description": "Wąż do wody gorącej 2SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF213",
     "description": "Wąż do wody gorącej 2SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HF3002",
@@ -16292,7 +16297,7 @@
   {
     "title": "HFMKL15",
     "description": "Złącze pomiarowe M16x2 DKOL15",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HFMKL18",
@@ -16662,7 +16667,7 @@
   {
     "title": "HFMMKR1/4ED",
     "description": "Złącze pomiarowe M16x2 AGR1/4\"-WD",
-    "amount": "14"
+    "amount": "16"
   },
   {
     "title": "HFMMKR1/4S",
@@ -16722,7 +16727,7 @@
   {
     "title": "HFMMKR3/8ED",
     "description": "Złącze pomiarowe M16x2 AGR3/8\"-WD",
-    "amount": "1"
+    "amount": "4"
   },
   {
     "title": "HFMMKR3/8S",
@@ -16752,7 +16757,7 @@
   {
     "title": "HFMMMA1/4",
     "description": "Adapterdomanometruprzeg M16x2 IGR1/4\"",
-    "amount": "49"
+    "amount": "59"
   },
   {
     "title": "HFMMMA1/4-12",
@@ -16782,7 +16787,7 @@
   {
     "title": "HFMSKE1000",
     "description": "Przewód pomiaro. M16x2 DN02 D=1000",
-    "amount": "51"
+    "amount": "61"
   },
   {
     "title": "HFMSKE1000-12",
@@ -16907,7 +16912,7 @@
   {
     "title": "HK00613",
     "description": "Obudowa zaworu 2kieru WZ6 IGR3/8\"",
-    "amount": "37"
+    "amount": "56"
   },
   {
     "title": "HK00713",
@@ -16987,7 +16992,7 @@
   {
     "title": "HK093AXIAL",
     "description": "Przyłącze oleju osiow kątow IGR3/8\"",
-    "amount": "12"
+    "amount": "11"
   },
   {
     "title": "HK094AXIAL1/2",
@@ -17032,7 +17037,7 @@
   {
     "title": "HK112M4B354-6IE3",
     "description": "E-Motor 400/690V 4,0kW 1460U B3/B5 IE3",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK121004028",
@@ -17117,6 +17122,16 @@
   {
     "title": "HK160M4B54-6IE3",
     "description": "E-MOTOR 400/690V 11,0KW 1470U B5 IE3",
+    "amount": "0"
+  },
+  {
+    "title": "HK180L4B354-6IE3",
+    "description": "E-MOTOR 400/690V 22,0KW 1465U B35 IE3",
+    "amount": "0"
+  },
+  {
+    "title": "HK180L4B54-6IE3",
+    "description": "E-MOTOR 400/690V 22,0KW 1465U B5 IE3",
     "amount": "0"
   },
   {
@@ -17262,7 +17277,7 @@
   {
     "title": "HK2APF06F02Z41RSS",
     "description": "Zahnradpumpe Grp2 6,0 EU Welle 1:8 Re",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HK2APF08F02Z41RSS",
@@ -17312,7 +17327,7 @@
   {
     "title": "HK2P4102EOOA",
     "description": "Pompa zębata TW2 4,20 wałek EU 1:8 PS",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HK2P4131CSRA",
@@ -17332,7 +17347,7 @@
   {
     "title": "HK2P4302EOOA",
     "description": "Pompa zębata TW2 6,00 wałek EU 1:8 PS",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK2P4332CSRA",
@@ -17452,7 +17467,7 @@
   {
     "title": "HK2P4902EPOA",
     "description": "Pompa zębata TW2 14,4 wałek EU 1:8 PS",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK2P4932CSRA",
@@ -17622,7 +17637,7 @@
   {
     "title": "HK4131510101C1Q",
     "description": "Zawór magrozdz4/2 WZ6 24VDC",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "HK4131510201C1Q",
@@ -17657,7 +17672,7 @@
   {
     "title": "HK4132030302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "46"
+    "amount": "44"
   },
   {
     "title": "HK4132030302C1R",
@@ -17672,7 +17687,7 @@
   {
     "title": "HK4132070302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "3"
+    "amount": "8"
   },
   {
     "title": "HK4132070302C1R",
@@ -17682,7 +17697,7 @@
   {
     "title": "HK4132080302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "HK4132080302C1R",
@@ -17702,7 +17717,7 @@
   {
     "title": "HK4137510902C1Q",
     "description": "Zawór magrozdz4/2 WZ6 24VDC",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK4231010601C1Q",
@@ -17757,7 +17772,7 @@
   {
     "title": "HK4232070302C1Q",
     "description": "Zawór magrozdz4/3 WZ10 24VDC",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK4232080302C1Q",
@@ -17832,7 +17847,7 @@
   {
     "title": "HK90L4B352-4IE3",
     "description": "E-Motor 230/400V 1,5kW 1400U B3/B5 IE3",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HK90S4B352-4IE3",
@@ -17947,7 +17962,7 @@
   {
     "title": "HKA2424N2AAL",
     "description": "Coupling Spidex A24 M24 P1:8 17.28 AL",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "HKA24322860N1AL",
@@ -17962,7 +17977,7 @@
   {
     "title": "HKA243228N2AAL",
     "description": "Coupling Spidex A24 M28 P1:8 17.28 AL",
-    "amount": "6"
+    "amount": "13"
   },
   {
     "title": "HKA243228N3AL",
@@ -17972,7 +17987,7 @@
   {
     "title": "HKA28383860N2AAL",
     "description": "Coupling Spidex A28 M38 P1:8 17.28 AL",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKA28383860N3AL",
@@ -18072,6 +18087,11 @@
   {
     "title": "HKARE1575R",
     "description": "Reduktor ciśnienia IGR1/2\" 75bar",
+    "amount": "1"
+  },
+  {
+    "title": "HKAS103/4",
+    "description": "Adaptery do przeponakumuciśn IGR3/4\"",
     "amount": "1"
   },
   {
@@ -18192,7 +18212,7 @@
   {
     "title": "HKBA210ABHF",
     "description": "Zwischenplatte Messanschluss AB NG6",
-    "amount": "3"
+    "amount": "0"
   },
   {
     "title": "HKBA210PT",
@@ -18222,7 +18242,7 @@
   {
     "title": "HKBA2144",
     "description": "Płytka przyłączeniowa 4x WZ6",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKBA2145",
@@ -18232,6 +18252,11 @@
   {
     "title": "HKBA2146",
     "description": "Płytka przyłączeniowa 6x WZ6",
+    "amount": "0"
+  },
+  {
+    "title": "HKBA2147",
+    "description": "Płytka przyłączeniowa 7x WZ6",
     "amount": "0"
   },
   {
@@ -18312,7 +18337,7 @@
   {
     "title": "HKBABP6HF",
     "description": "Abdeckplatte NG6",
-    "amount": "1"
+    "amount": "5"
   },
   {
     "title": "HKBAKRA12",
@@ -18327,12 +18352,12 @@
   {
     "title": "HKBAKRA20",
     "description": "Zbiornik bez krawęd 20L AL",
-    "amount": "6"
+    "amount": "7"
   },
   {
     "title": "HKBAKRA30",
     "description": "Zbiornik bez krawęd 30L AL",
-    "amount": "7"
+    "amount": "9"
   },
   {
     "title": "HKBAKRA44",
@@ -18342,7 +18367,7 @@
   {
     "title": "HKBAKRA70",
     "description": "Zbiornik bez krawęd 70L AL",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HKBCWS",
@@ -18570,9 +18595,14 @@
     "amount": "0"
   },
   {
+    "title": "HKBM40B",
+    "description": "Tłok zaworu typ B do HKBM40",
+    "amount": "0"
+  },
+  {
     "title": "HKBM40C0",
     "description": "Przekaźnik ciśnienia C0 do HKBM40",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKBM40D",
@@ -18597,6 +18627,11 @@
   {
     "title": "HKBM40E",
     "description": "Tłok zaworu typ E do HKBM40",
+    "amount": "0"
+  },
+  {
+    "title": "HKBM40F",
+    "description": "Tłok zaworu typ F do HKBM40",
     "amount": "0"
   },
   {
@@ -18692,6 +18727,11 @@
   {
     "title": "HKBM70C0",
     "description": "Przekaźnik ciśnienia C0 do HKBM70",
+    "amount": "0"
+  },
+  {
+    "title": "HKBM70D",
+    "description": "Tłok zaworu typ D do HKBM70",
     "amount": "0"
   },
   {
@@ -18807,7 +18847,7 @@
   {
     "title": "HKC24VDC",
     "description": "Cewka magnet. do cartridgea 24VDC",
-    "amount": "48"
+    "amount": "58"
   },
   {
     "title": "HKC24VDC33",
@@ -18957,7 +18997,7 @@
   {
     "title": "HKCBS1200000",
     "description": "Gwint przyłącza oleju IGR3/4\"",
-    "amount": "57"
+    "amount": "61"
   },
   {
     "title": "HKCBS1600000",
@@ -20562,7 +20602,7 @@
   {
     "title": "HKDFE0523ZAW24DC",
     "description": "3/2-Magnetventil IGR3/8\" 200bar 24VDC",
-    "amount": "33"
+    "amount": "47"
   },
   {
     "title": "HKDFE0523ZAY24DC",
@@ -20917,17 +20957,17 @@
   {
     "title": "HKDHE0613X00DC",
     "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
-  },
-  {
-    "title": "HKDHE0613X00DC",
-    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKDHE0614X00DC",
     "description": "Zawór magrozdz4/2 WZ6 bez cewki",
     "amount": "5"
+  },
+  {
+    "title": "HKDHE06302X00DC",
+    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
+    "amount": "0"
   },
   {
     "title": "HKDHE06302X00DC",
@@ -20950,6 +20990,11 @@
     "amount": "0"
   },
   {
+    "title": "HKDHE06322X00DC",
+    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
+    "amount": "0"
+  },
+  {
     "title": "HKDHE0710X00DC",
     "description": "Zawór magrozdz4/3 WZ6 bez cewki",
     "amount": "2"
@@ -20962,12 +21007,17 @@
   {
     "title": "HKDHE0711X00DC",
     "description": "Zawór magrozdz4/3 WZ6 bez cewki",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HKDHE0713X00DC",
     "description": "Zawór magrozdz4/3 WZ6 bez cewki",
     "amount": "1"
+  },
+  {
+    "title": "HKDHE0714X00AC",
+    "description": "4/3-Magnetventil NG6 ohne Spule",
+    "amount": "0"
   },
   {
     "title": "HKDHE0714X00DC",
@@ -21105,6 +21155,11 @@
     "amount": "0"
   },
   {
+    "title": "HKDHQ023OI24DC",
+    "description": "Zawórbiegszybki/pełzaj do QV06 A WZ6 PZ",
+    "amount": "1"
+  },
+  {
     "title": "HKDHZEA071L5",
     "description": "4/3-Magnetventil prop. NG6 o. Wegaufn.",
     "amount": "0"
@@ -21122,7 +21177,7 @@
   {
     "title": "HKDICHTBANDMOOSGUM",
     "description": "Taśma uszczel. do zbor. 15x5mm gumaporow",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HKDK1141",
@@ -21267,12 +21322,12 @@
   {
     "title": "HKDLMDL100L",
     "description": "Listwa amortująca MDL 100L",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "HKDLMDL112M",
     "description": "Listwa amortująca MDL 112M",
-    "amount": "6"
+    "amount": "8"
   },
   {
     "title": "HKDLMDL132M",
@@ -21293,6 +21348,11 @@
     "title": "HKDLMDL160M",
     "description": "Listwa amortująca MDL 160M",
     "amount": "2"
+  },
+  {
+    "title": "HKDLMDL180L",
+    "description": "Listwa amortująca MDL 180L",
+    "amount": "0"
   },
   {
     "title": "HKDLMDL180M",
@@ -21327,17 +21387,17 @@
   {
     "title": "HKDPT200NBR",
     "description": "Uszczelka do wspornik pomp 200mm NBR",
-    "amount": "13"
+    "amount": "12"
   },
   {
     "title": "HKDPT250NBR",
     "description": "Uszczelka do wspornik pomp 250mm NBR",
-    "amount": "5"
+    "amount": "7"
   },
   {
     "title": "HKDPT300NBR",
     "description": "Uszczelka do wspornik pomp 300mm NBR",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HKDPT350NBR",
@@ -21417,12 +21477,7 @@
   {
     "title": "HKEASBUSBOPT",
     "description": "Isolator Adapter USB A",
-    "amount": "0"
-  },
-  {
-    "title": "HKEASBUSBOPT",
-    "description": "Isolator Adapter USB A",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKEBMASPS01H",
@@ -21497,7 +21552,7 @@
   {
     "title": "HKEM103338X2F",
     "description": "Anschlussplatte 3x NG6 DBV 50-210 bar",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKEM103338X3F",
@@ -21632,7 +21687,7 @@
   {
     "title": "HKEMDV12NC424DC",
     "description": "Elektomagnetzawór2/2 Cartr. WZ12",
-    "amount": "5"
+    "amount": "3"
   },
   {
     "title": "HKEMEAC01FRR43",
@@ -21832,7 +21887,7 @@
   {
     "title": "HKES3B38X3F",
     "description": "Connection plate 1x NG6 DBV 100-350 bar",
-    "amount": "5"
+    "amount": "6"
   },
   {
     "title": "HKES5B34PLX2F",
@@ -21842,7 +21897,7 @@
   {
     "title": "HKES5B34PLX3F",
     "description": "Connection plate 1x NG10 DBV 80-270 bar",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HKEV0822CY24VDC",
@@ -21870,9 +21925,14 @@
     "amount": "0"
   },
   {
+    "title": "HKEV0830C24VDC",
+    "description": "Magnetsitzventil 3/2 Cart. NG8 24DC",
+    "amount": "0"
+  },
+  {
     "title": "HKEV1022C24VDC",
     "description": "Magnetsitzventil 2/2 Cart. NG10 NC 24DC",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKEV1022DTC24VDC",
@@ -21982,7 +22042,7 @@
   {
     "title": "HKFDCV10N022",
     "description": "Dzielnikst. 50:50 Cartr. WZ10 7,5-15L",
-    "amount": "7"
+    "amount": "6"
   },
   {
     "title": "HKFDCV10N033",
@@ -22012,6 +22072,11 @@
   {
     "title": "HKFIADSK040",
     "description": "Adsorbent Silikagel Orange 4,0kg",
+    "amount": "0"
+  },
+  {
+    "title": "HKFIBFU015",
+    "description": "Befüllpumpe 230 V 15 l/min",
     "amount": "0"
   },
   {
@@ -22062,22 +22127,22 @@
   {
     "title": "HKFT03002000",
     "description": "Rura walcowa 30-20mm zimno HPS",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HKFT290-14",
     "description": "Zawór odcinający manometru AGR+IGR1/4\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKFT29001-14",
     "description": "Manometerabsperrventil IGR+IGR1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKFT291-14",
     "description": "Zawór odcinający manomet 90° AGR+IGR1/4\"",
-    "amount": "11"
+    "amount": "9"
   },
   {
     "title": "HKFT29101-14",
@@ -22112,7 +22177,7 @@
   {
     "title": "HKGEH12C1040ST",
     "description": "Obudowa zawor 3D SAE10 IGR1/2\" do HKFDCV",
-    "amount": "16"
+    "amount": "15"
   },
   {
     "title": "HKGEH12C1220",
@@ -22147,7 +22212,7 @@
   {
     "title": "HKGEH34C1220",
     "description": "Obudowa zaworu 2kieru SAE12 IGR3/4\" Alu",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "HKGEH34C1220GGG",
@@ -22157,7 +22222,7 @@
   {
     "title": "HKGEH38C0820",
     "description": "Obudowa zaworu 2kieru SAE08 IGR3/8\" Alu",
-    "amount": "15"
+    "amount": "23"
   },
   {
     "title": "HKGEH38C0820GGG",
@@ -22202,7 +22267,7 @@
   {
     "title": "HKGEHB10212ST",
     "description": "Ventilgehäuse 2-Wege SAE10 IGR1/2\" Stahl",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKGEHB12212ST",
@@ -22752,7 +22817,7 @@
   {
     "title": "HKGP4030M10B",
     "description": "Zderzak gumowy 40x30mm M10",
-    "amount": "40"
+    "amount": "48"
   },
   {
     "title": "HKGP7540M12B",
@@ -22767,12 +22832,12 @@
   {
     "title": "HKHDS1200K71",
     "description": "Wyłącznik ciśnieniowy 20-200bar",
-    "amount": "34"
+    "amount": "56"
   },
   {
     "title": "HKHDS1320K71",
     "description": "Wyłącznik ciśnieniowy 30-320bar",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKHE15",
@@ -23190,6 +23255,11 @@
     "amount": "0"
   },
   {
+    "title": "HKHMS0.75210ECOC",
+    "description": "Membranspeicher 0,75L 210bar TT",
+    "amount": "0"
+  },
+  {
     "title": "HKHMS0.75350ECOC",
     "description": "Membranspeicher 0,75L 350bar TT",
     "amount": "0"
@@ -23207,7 +23277,7 @@
   {
     "title": "HKHMS1.4210ECOA",
     "description": "Membranspeicher 1,4L 210bar TT",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKHMS1.4210ECOC",
@@ -23237,7 +23307,7 @@
   {
     "title": "HKHQ012",
     "description": "Zawór przeciwzwr. dław. AB odpł WZ6 PZ",
-    "amount": "12"
+    "amount": "10"
   },
   {
     "title": "HKHQ013",
@@ -23272,12 +23342,12 @@
   {
     "title": "HKHR012",
     "description": "Zawór zwrotny AB pilotowany WZ6 PZ",
-    "amount": "5"
+    "amount": "3"
   },
   {
     "title": "HKHR013",
     "description": "Zawór zwrotny A pilotowany WZ6 PZ",
-    "amount": "3"
+    "amount": "0"
   },
   {
     "title": "HKHR014",
@@ -23487,7 +23557,7 @@
   {
     "title": "HKK18",
     "description": "Pompa zębata TW1 4,94 wałwieloklEU LR",
-    "amount": "18"
+    "amount": "28"
   },
   {
     "title": "HKK18CON",
@@ -23540,6 +23610,11 @@
     "amount": "0"
   },
   {
+    "title": "HKK203FCSP",
+    "description": "Silnik-E 230V 0,37kW 1410U 1ph BK B314 F",
+    "amount": "0"
+  },
+  {
     "title": "HKK205FBSPHT",
     "description": "SilnikE 230V 0,75kW 1410U 1ph ABK B314 F",
     "amount": "0"
@@ -23547,6 +23622,16 @@
   {
     "title": "HKK205FCSP",
     "description": "Silnik-E 230V 0,75kW 1410U 1ph BK B314 F",
+    "amount": "0"
+  },
+  {
+    "title": "HKK206FBSPHT",
+    "description": "Silnik-E 230V 1,1kW 1410U 1ph ABK B314 F",
+    "amount": "0"
+  },
+  {
+    "title": "HKK206FBSPHT",
+    "description": "Silnik-E 230V 1,1kW 1410U 1ph ABK B314 F",
     "amount": "0"
   },
   {
@@ -23617,7 +23702,7 @@
   {
     "title": "HKK234076000",
     "description": "Saugrohr PVC 98mm AGR3/8\"",
-    "amount": "19"
+    "amount": "29"
   },
   {
     "title": "HKK234716000",
@@ -23725,6 +23810,16 @@
     "amount": "0"
   },
   {
+    "title": "HKK408A100LA4IE2",
+    "description": "Silnik-E 230/400V 2,2kW 1440U B3B14 IE2",
+    "amount": "0"
+  },
+  {
+    "title": "HKK408A100LA4IE2",
+    "description": "Silnik-E 230/400V 2,2kW 1440U B3B14 IE2",
+    "amount": "0"
+  },
+  {
     "title": "HKK408A100LA4IE3",
     "description": "E-Motor 230/400V 2,2kW 1445U B3/B14 IE3",
     "amount": "3"
@@ -23747,7 +23842,7 @@
   {
     "title": "HKKA12",
     "description": "Kołnierz centralny A12 CZR 90-250bar",
-    "amount": "47"
+    "amount": "56"
   },
   {
     "title": "HKKA16Z",
@@ -23767,7 +23862,7 @@
   {
     "title": "HKKAS0003",
     "description": "Filtr na ssaniu 15L kątow",
-    "amount": "47"
+    "amount": "57"
   },
   {
     "title": "HKKAS010",
@@ -23788,6 +23883,11 @@
     "title": "HKKC102CN",
     "description": "E-Motor 12V 1,6kW 2600U B14 TS",
     "amount": "1"
+  },
+  {
+    "title": "HKKC103",
+    "description": "Silnik-E 24V 2,2kW 2600U B14 MS",
+    "amount": "0"
   },
   {
     "title": "HKKC103",
@@ -23882,7 +23982,7 @@
   {
     "title": "HKKEA12.7N",
     "description": "2/2-Magnetsitzventil NO f. ZF",
-    "amount": "46"
+    "amount": "56"
   },
   {
     "title": "HKKEAN",
@@ -23922,7 +24022,7 @@
   {
     "title": "HKKF16",
     "description": "Kupplungskit Pumpe Gr.1 + AC-Motor BG90",
-    "amount": "18"
+    "amount": "28"
   },
   {
     "title": "HKKF18",
@@ -24052,7 +24152,7 @@
   {
     "title": "HKKN03",
     "description": "Zwischenplatte (p) 49mm, 3/8\" für NG6",
-    "amount": "42"
+    "amount": "52"
   },
   {
     "title": "HKKN09",
@@ -24092,7 +24192,7 @@
   {
     "title": "HKKOCN",
     "description": "Magnetspule 24VDC",
-    "amount": "42"
+    "amount": "56"
   },
   {
     "title": "HKKONS219",
@@ -24172,7 +24272,7 @@
   {
     "title": "HKKQ012",
     "description": "Zawór przeciwzwr. dław. AB odpł WZ10 PZ",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HKKQ014",
@@ -24312,7 +24412,7 @@
   {
     "title": "HKKS140",
     "description": "Zbiornik pionowy 12L prostokątn z zamoc.",
-    "amount": "19"
+    "amount": "29"
   },
   {
     "title": "HKKS141",
@@ -24367,7 +24467,7 @@
   {
     "title": "HKKS90",
     "description": "Zbiornik poziomy 12L Ś250mm",
-    "amount": "18"
+    "amount": "28"
   },
   {
     "title": "HKKS90V",
@@ -24500,6 +24600,11 @@
     "amount": "0"
   },
   {
+    "title": "HKL72131P6AIOB",
+    "description": "6/2-Magnetventil IGR 3/8“ 12VDC 250bar",
+    "amount": "0"
+  },
+  {
     "title": "HKL72131P6AIOC",
     "description": "6/2-Magnetventil IGR 3/8“ 24VDC 250bar",
     "amount": "0"
@@ -24562,7 +24667,7 @@
   {
     "title": "HKLVA20TM12",
     "description": "Wskaźnik napełnienia opt 127mm M12 z te.",
-    "amount": "16"
+    "amount": "18"
   },
   {
     "title": "HKLVA30TM12",
@@ -24582,7 +24687,7 @@
   {
     "title": "HKM1035",
     "description": "Zestaw śrub imbusowych M10x35 (4szt.)",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKM1050",
@@ -24602,7 +24707,7 @@
   {
     "title": "HKM5110",
     "description": "Zestaw śrub imbusowych M5x110 (4szt.)",
-    "amount": "13"
+    "amount": "11"
   },
   {
     "title": "HKM5120",
@@ -24682,7 +24787,7 @@
   {
     "title": "HKM530",
     "description": "Zestaw śrub imbusowych M5x30 (4szt.)",
-    "amount": "28"
+    "amount": "37"
   },
   {
     "title": "HKM550",
@@ -24702,7 +24807,7 @@
   {
     "title": "HKM570",
     "description": "Zestaw śrub imbusowych M5x70 (4szt.)",
-    "amount": "30"
+    "amount": "35"
   },
   {
     "title": "HKM580",
@@ -24717,7 +24822,7 @@
   {
     "title": "HKM590",
     "description": "Zestaw śrub imbusowych M5x90 (4szt.)",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "HKM6140",
@@ -24767,12 +24872,12 @@
   {
     "title": "HKM690",
     "description": "Zestaw śrub imbusowych M6x90 (4szt.)",
-    "amount": "10"
+    "amount": "9"
   },
   {
     "title": "HKM835",
     "description": "Zestaw śrub imbusowych M8x35 (4szt.)",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKMA3",
@@ -24862,7 +24967,7 @@
   {
     "title": "HKMMV",
     "description": "Obudowa zaworu IGR1/2\" HKFSBS+HKFSCS AL",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKMPS100150RG1",
@@ -24922,7 +25027,7 @@
   {
     "title": "HKNTMM319070NC280",
     "description": "Wył poziomowo-temperaturo 190 70° NC 280",
-    "amount": "6"
+    "amount": "3"
   },
   {
     "title": "HKNTMM319080NC280",
@@ -24992,12 +25097,12 @@
   {
     "title": "HKOILAIR2010K",
     "description": "Kühler Öl-Luft 2010K 230VAC o. T.",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKOILAIR2020K",
     "description": "Kühler Öl-Luft 2020K 230/400VAC o. T.",
-    "amount": "3"
+    "amount": "5"
   },
   {
     "title": "HKOILAIR2024K",
@@ -25082,7 +25187,7 @@
   {
     "title": "HKOLM1.4210C",
     "description": "Zbiornik przeponowy 1,4L 210bar",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKOLM2.0100A",
@@ -25102,6 +25207,11 @@
   {
     "title": "HKOLM3.5250A",
     "description": "Zbiornik przeponowy 3,5L 250bar",
+    "amount": "0"
+  },
+  {
+    "title": "HKPAM0141201",
+    "description": "Pompa ręczna 12,0 z.zbiornik z CZR",
     "amount": "0"
   },
   {
@@ -25160,6 +25270,16 @@
     "amount": "0"
   },
   {
+    "title": "HKPAM0151200",
+    "description": "Pompa ręczna 12,0 z.zbiornik z ZTW",
+    "amount": "0"
+  },
+  {
+    "title": "HKPAM0151202",
+    "description": "Pompa ręczna 12,0 z.zbiornik z ZR+CZR",
+    "amount": "0"
+  },
+  {
     "title": "HKPAM0151202",
     "description": "Pompa ręczna 12,0 z.zbiornik z ZR+CZR",
     "amount": "0"
@@ -25167,6 +25287,11 @@
   {
     "title": "HKPAM0152500",
     "description": "Pompa ręczna 25,0 z.zbiornik z ZTW",
+    "amount": "0"
+  },
+  {
+    "title": "HKPAM0152502",
+    "description": "Pompa ręczna 25,0 z.zbiornik z ZR+CZR",
     "amount": "0"
   },
   {
@@ -25365,6 +25490,11 @@
     "amount": "1"
   },
   {
+    "title": "HKPK350062600",
+    "description": "Pumpenträger A10VSO71+BG180",
+    "amount": "0"
+  },
+  {
     "title": "HKPK400040900",
     "description": "Pumpenträger A10VSO71,88, K3VL80+BG200",
     "amount": "0"
@@ -25372,7 +25502,7 @@
   {
     "title": "HKPL250030500",
     "description": "Bell housing PFE31, JV15+BG100, 112",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKPL250034400",
@@ -25392,6 +25522,11 @@
   {
     "title": "HKPM00220002",
     "description": "Zbiornik do pompyręczne HKPAM 2L",
+    "amount": "0"
+  },
+  {
+    "title": "HKPM00220003",
+    "description": "Zbiornik do pompyręczne HKPAM 3L",
     "amount": "0"
   },
   {
@@ -25432,7 +25567,7 @@
   {
     "title": "HKPN2070PN400SER",
     "description": "Drucksensor 400bar IGR1/4\",2farb Display",
-    "amount": "6"
+    "amount": "2"
   },
   {
     "title": "HKPQT03SS",
@@ -25482,7 +25617,7 @@
   {
     "title": "HKPRRS10NS015",
     "description": "3kierunkowyciśni zawór reduk Cartr. WZ10",
-    "amount": "34"
+    "amount": "54"
   },
   {
     "title": "HKPRRS10NS030",
@@ -25542,12 +25677,22 @@
   {
     "title": "HKPTRV20096446ZFV",
     "description": "Bell housing AL (PumpSz2+EM80/90)",
-    "amount": "3"
+    "amount": "4"
+  },
+  {
+    "title": "HKPTRV250110441",
+    "description": "Pumpenträger AL (PUMPBG2 1:5+EM100/112)",
+    "amount": "0"
+  },
+  {
+    "title": "HKPTRV250110441",
+    "description": "Pumpenträger AL (PUMPBG2 1:5+EM100/112)",
+    "amount": "0"
   },
   {
     "title": "HKPTRV250110446",
     "description": "Bell housing AL (PumpSz2+EM100/112)",
-    "amount": "5"
+    "amount": "9"
   },
   {
     "title": "HKPTRV250110448",
@@ -25572,7 +25717,7 @@
   {
     "title": "HKPTRV300130446",
     "description": "Bell housing AL (PumpSz2+EM132)",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKPTRV300144465",
@@ -25617,7 +25762,7 @@
   {
     "title": "HKQV0611",
     "description": "2kierunkowy zawór reg. ISO06 PL 0,1-11L",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKQV0616",
@@ -25632,7 +25777,7 @@
   {
     "title": "HKR2428-19.05A",
     "description": "Kupplung Rotex 24 M28 P19,05 ST 92Sh",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKR2838-19.05A",
@@ -25662,6 +25807,11 @@
   {
     "title": "HKR3842N3",
     "description": "Coupling Rotex 38 M42 P1:8 22 ST 92Sh",
+    "amount": "0"
+  },
+  {
+    "title": "HKR4248-32",
+    "description": "Kupplung Rotex 42 M48 P32 GG 92Sh",
     "amount": "0"
   },
   {
@@ -25772,7 +25922,7 @@
   {
     "title": "HKRSBAKRA20",
     "description": "Uszczelka płaska do HKBAKRA20",
-    "amount": "5"
+    "amount": "9"
   },
   {
     "title": "HKRSBAKRA30",
@@ -25782,7 +25932,7 @@
   {
     "title": "HKRSBAKRA30",
     "description": "Uszczelnienie o-ringiem do HKBAKRA30",
-    "amount": "5"
+    "amount": "6"
   },
   {
     "title": "HKRSBAKRA44",
@@ -25792,12 +25942,12 @@
   {
     "title": "HKRSBAKRA44",
     "description": "Uszczelnienie o-ringiem do HKBAKRA44",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HKRSBAKRA70",
     "description": "Uszczelnienie o-ringiem do HKBAKRA70",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "HKRTR0501CG1P10",
@@ -25812,7 +25962,7 @@
   {
     "title": "HKRTR0502CG1P10",
     "description": "Filtr na powrocie zbiornik z IGR3/8\" 20L",
-    "amount": "47"
+    "amount": "57"
   },
   {
     "title": "HKRV0630400",
@@ -25897,7 +26047,7 @@
   {
     "title": "HKSAB10M210N",
     "description": "Sicherheitsabsperrblock man. NG10 210bar",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKSAB10M250N",
@@ -26052,12 +26202,12 @@
   {
     "title": "HKSP66724",
     "description": "Wtyk LED 12/24VDC przezroczys",
-    "amount": "59"
+    "amount": "57"
   },
   {
     "title": "HKSP66824",
     "description": "Stecker LED Schutzschaltung transparent",
-    "amount": "263"
+    "amount": "327"
   },
   {
     "title": "HKSP669",
@@ -26117,6 +26267,11 @@
   {
     "title": "HKSPCAU24DC",
     "description": "Cewka magnet. 24VDC do HKDKI",
+    "amount": "0"
+  },
+  {
+    "title": "HKSPCOE110AC",
+    "description": "Cewka magnet. 110VAC do HKDHE AC",
     "amount": "0"
   },
   {
@@ -26437,7 +26592,7 @@
   {
     "title": "HKTM45A50",
     "description": "Thermostat für Ölkühler 50C NO AGR1/2",
-    "amount": "4"
+    "amount": "5"
   },
   {
     "title": "HKTM46A60",
@@ -26782,7 +26937,7 @@
   {
     "title": "HKV15010008",
     "description": "Zawór zwrotny IGR1/2\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKV15010012",
@@ -26837,7 +26992,7 @@
   {
     "title": "HKV16010800",
     "description": "Zawórzabezpieczprzedpęknięcia AGR1/2\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV16011200",
@@ -26912,6 +27067,11 @@
   {
     "title": "HKV2190A800",
     "description": "Zawór hamulca opu jed.dz. IGR1/2\" 350bar",
+    "amount": "0"
+  },
+  {
+    "title": "HKV2290A600",
+    "description": "Zawór hamulca opu dd IGR3/8\" 350bar",
     "amount": "0"
   },
   {
@@ -27022,7 +27182,7 @@
   {
     "title": "HKV2575-1/4",
     "description": "Zawór przeciwzwr. dław. IGR1/4\" 400bar",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "HKV2575-1/8",
@@ -27087,7 +27247,7 @@
   {
     "title": "HKV62150320",
     "description": "3kierunkowy zawór reg. pr nast. IGR3/8\"",
-    "amount": "6"
+    "amount": "4"
   },
   {
     "title": "HKV62150321",
@@ -27097,7 +27257,7 @@
   {
     "title": "HKV62150322",
     "description": "3kierunkowy zawór reg. pr nast. IGR1/2\"",
-    "amount": "2"
+    "amount": "4"
   },
   {
     "title": "HKV62150323",
@@ -27207,7 +27367,7 @@
   {
     "title": "HKVAFX",
     "description": "Wskaźnik zabrudzenia elektr. 1,3bar W",
-    "amount": "9"
+    "amount": "8"
   },
   {
     "title": "HKVAN8",
@@ -27295,6 +27455,16 @@
     "amount": "0"
   },
   {
+    "title": "HKVML1080300",
+    "description": "Sprężyna do HKV0590 80-300bar",
+    "amount": "0"
+  },
+  {
+    "title": "HKVML1080300",
+    "description": "Sprężyna do HKV0590 80-300bar",
+    "amount": "0"
+  },
+  {
     "title": "HKVMPBL0538V",
     "description": "Reduktor ciśnienia IGR3/8\" pokr Alu",
     "amount": "0"
@@ -27302,6 +27472,11 @@
   {
     "title": "HKVMPBL1012V",
     "description": "Reduktor ciśnienia IGR1/2\" pokr Alu",
+    "amount": "3"
+  },
+  {
+    "title": "HKVMPBL12040",
+    "description": "Sprężyna do DBV VMPBL IGR1/2\" 4-40bar",
     "amount": "0"
   },
   {
@@ -27525,6 +27700,11 @@
     "amount": "0"
   },
   {
+    "title": "HKX2M4701EOOE",
+    "description": "Zahnradmotor Gr2 10,8 EU Welle 1:8 rev",
+    "amount": "0"
+  },
+  {
     "title": "HKX3P7201ABAA",
     "description": "Pompa zębata TW3 26,06 wałek EU 1:8 LR",
     "amount": "0"
@@ -27557,7 +27737,7 @@
   {
     "title": "HKX3P8302ACBA",
     "description": "Pompa zębata TW3 60,81 wałek EU 1:8 PS",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKX3P8701ACBA",
@@ -27722,7 +27902,7 @@
   {
     "title": "HM102",
     "description": "Wąż pomiarowy DN02",
-    "amount": "2,4"
+    "amount": "0,80"
   },
   {
     "title": "HSM06",
@@ -27867,32 +28047,32 @@
   {
     "title": "HW106",
     "description": "Wąż do wody gorącej 1SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HW108",
     "description": "Wąż do wody gorącej 1SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HW110",
     "description": "Wąż do wody gorącej 1SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HW206",
     "description": "Wąż do wody gorącej 2SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HW208",
     "description": "Wąż do wody gorącej 2SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "HW210",
     "description": "Wąż do wody gorącej 2SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "I-DWR100-3-12.8",
@@ -28677,62 +28857,62 @@
   {
     "title": "K-025H8-35",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-030H8-40",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-032H8-042",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-032H9-42",
     "description": "Rura Cylindrowa",
-    "amount": "5,4"
+    "amount": "5,40"
   },
   {
     "title": "K-035H8-045",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-040H8-050",
     "description": "Rura Cylindryczna",
-    "amount": "8,4"
+    "amount": "7,55"
   },
   {
     "title": "K-040H8-052",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-040H8-60",
     "description": "Rura cylindrowa",
-    "amount": "9"
+    "amount": "9,00"
   },
   {
     "title": "K-045H8-55",
     "description": "Rura Cylindrowa",
-    "amount": "0,51"
+    "amount": "0,00"
   },
   {
     "title": "K-045H9-055",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-050H8-062",
     "description": "Rura Cylindryczna",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-050H9-065",
     "description": "Rura Cylindrowa 50H9 x 65",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-0532004112",
@@ -28747,12 +28927,12 @@
   {
     "title": "K-055H8-065",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-055H8-070",
     "description": "Rura Cylindryczna",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-06-040/3PU",
@@ -28762,22 +28942,22 @@
   {
     "title": "K-060H8-072",
     "description": "Rura Cylindryczna",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-060H8-075",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-060H8-75",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-063.5H8X076.2",
     "description": "Rura Cylindrowa",
-    "amount": "1,3"
+    "amount": "1,30"
   },
   {
     "title": "K-063H8-083",
@@ -28787,7 +28967,7 @@
   {
     "title": "K-063H8-75",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-063H9-075",
@@ -28802,17 +28982,17 @@
   {
     "title": "K-065H8-75",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-065H8-85",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-070H8-100",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-070H8-82",
@@ -28822,12 +29002,12 @@
   {
     "title": "K-070H8-85",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-070H8-90",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-07100265",
@@ -28847,7 +29027,7 @@
   {
     "title": "K-075H8-85",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-080H8-100",
@@ -28857,17 +29037,17 @@
   {
     "title": "K-080H8-110",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-080H8-95",
     "description": "Rura dogniatana",
-    "amount": "3,9"
+    "amount": "3,90"
   },
   {
     "title": "K-085H8-100",
     "description": "Rura Cylindryczna",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-085H8-105",
@@ -28877,7 +29057,7 @@
   {
     "title": "K-090H8-105",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-090H8-110",
@@ -28887,12 +29067,12 @@
   {
     "title": "K-090H8-120",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-095H8-115",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-100120H8",
@@ -28902,42 +29082,42 @@
   {
     "title": "K-100CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-100CR-42CRMO4IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-100CR-CK45IH",
     "description": "Pręt hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-100CR2-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-100H8-120",
     "description": "Rura stalowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-101.6H8-114.3",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-105H8-125",
     "description": "Rura Cylindrowa",
-    "amount": "1,5"
+    "amount": "1,50"
   },
   {
     "title": "K-110CR-CK45",
     "description": "Pręt chromowany tol.f7",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-110H8-130",
@@ -28947,37 +29127,37 @@
   {
     "title": "K-115H8-135",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-120H8-140",
     "description": "Rura dogniatana",
-    "amount": "0,8"
+    "amount": "0,80"
   },
   {
     "title": "K-120H8-160",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-125H8-150",
     "description": "RURA 125H8-150",
-    "amount": "4,8"
+    "amount": "4,80"
   },
   {
     "title": "K-12CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-12CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-130X20PLASKOW355",
     "description": "Płaskownik",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-140/110-2434",
@@ -28987,7 +29167,7 @@
   {
     "title": "K-140CR-42CRMO4IH",
     "description": "Pręt chromowany Hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-140H8-170",
@@ -28997,12 +29177,12 @@
   {
     "title": "K-145H8-165",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-14CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-160H8-190",
@@ -29017,32 +29197,32 @@
   {
     "title": "K-16CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-16CR-CK45IH",
     "description": "Pręt chromowany hartowany CK45",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-170H8-244.5",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-177.8CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-180H8-215",
     "description": "Rura dogniatana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-180H8-244.5",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-183/144-3136",
@@ -29057,7 +29237,7 @@
   {
     "title": "K-18CR-42CRMO4IH",
     "description": "Pręt chromowany Indukcyjnie Hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-19-180-157",
@@ -29067,7 +29247,7 @@
   {
     "title": "K-19.05CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-1LE10031CB634AJ4",
@@ -29087,17 +29267,17 @@
   {
     "title": "K-20CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-20CR-42CRMO4IH",
     "description": "Pręt chromowany Hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-20CR-AISI304",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-211PZW4-11X5X5",
@@ -29107,7 +29287,7 @@
   {
     "title": "K-22CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-22CR-42CRMO4IH",
@@ -29117,12 +29297,12 @@
   {
     "title": "K-22CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-22CR-CK45IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-230B14-0.18-63",
@@ -29147,27 +29327,27 @@
   {
     "title": "K-254H8-292",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-25CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-25CR-42CRMO4IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-25CR-CK45IH",
     "description": "Pręt tłoczyskowy indukcyjnie hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-25CR2-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-28.57CR-20MNV6",
@@ -29177,7 +29357,7 @@
   {
     "title": "K-28CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-28CR-42CRMO4IH",
@@ -29187,12 +29367,12 @@
   {
     "title": "K-28CR-CK45IH",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-28F7X16",
     "description": "Rura Tłoczyskowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-2PZ4-11/25-2-77G",
@@ -29235,6 +29415,11 @@
     "amount": "0"
   },
   {
+    "title": "K-2PZW4-16X6.3-2",
+    "description": "Pompa dwusekcyjna 2PZW4-16x6,3-2-77G pra",
+    "amount": "2"
+  },
+  {
     "title": "K-2PZW4-20X4-2-77G",
     "description": "Pompa dwusekcyjna",
     "amount": "1"
@@ -29247,6 +29432,11 @@
   {
     "title": "K-2PZW4-20X8-2-776",
     "description": "Dwu sekcyjna pompa zębata",
+    "amount": "0"
+  },
+  {
+    "title": "K-2PZW4-20X9-2",
+    "description": "Pompa dwusekcyjna 2PZW4-20x9-2-77G prawa",
     "amount": "0"
   },
   {
@@ -29277,22 +29467,22 @@
   {
     "title": "K-30CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-30CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-30X30X2",
     "description": "PROFIL STALOWY",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-30X4",
     "description": "PŁASKOWNIK STALOWY",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-31.75CR-20MNV6",
@@ -29307,12 +29497,12 @@
   {
     "title": "K-32CR-42CRMO4IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-32CR-CK45IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "2,7"
+    "amount": "2,70"
   },
   {
     "title": "K-33-060/2PU",
@@ -29342,17 +29532,17 @@
   {
     "title": "K-35CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "3"
+    "amount": "3,00"
   },
   {
     "title": "K-35CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-35CR-CK45IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "2,1"
+    "amount": "2,10"
   },
   {
     "title": "K-36CR-20MNV6",
@@ -29367,7 +29557,7 @@
   {
     "title": "K-37CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-38-045/2PU",
@@ -29435,6 +29625,11 @@
     "amount": "5"
   },
   {
+    "title": "K-400B35-11-132L",
+    "description": "Silnik prog. 400/690V 11kW 1465 B35 132L",
+    "amount": "1"
+  },
+  {
     "title": "K-400B35-2.2-90L",
     "description": "Silnik 3-faz. B35; 400V; 2,2kW 1410obr/m",
     "amount": "2"
@@ -29442,7 +29637,7 @@
   {
     "title": "K-400B35-3-100L",
     "description": "Silnik elektr. 3 kW; B35; 230/400V; 1450",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "K-400B35-3-132S",
@@ -29462,12 +29657,12 @@
   {
     "title": "K-400B35-7.5132M",
     "description": "Silnik el. 400/690V 7,5KW 1465U B35 IE3",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-400B5-1.1-90S",
     "description": "Silnik 3faz. 400V; 1.1kW 1420obr/min; B5",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-400B5-11-132L",
@@ -29477,12 +29672,12 @@
   {
     "title": "K-400B5-2.2-100L",
     "description": "Silnik 3faz. 400V; 2.2kW 1420obr/min; B5",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "K-40CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-40CR-42CRMO4",
@@ -29492,22 +29687,22 @@
   {
     "title": "K-40CR-42CRMO4IH",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-40CR-42CRMO4U",
     "description": "Pręt chromowany ulepszony",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-40CR-CK45IH",
     "description": "Pręt tłoczyskowy  ind  hart",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-40X20X2",
     "description": "Profil zg. 40x20x2 S235JRH",
-    "amount": "6"
+    "amount": "6,00"
   },
   {
     "title": "K-40X25CR-20MNV6",
@@ -29517,7 +29712,7 @@
   {
     "title": "K-40X40X2-S235JRH",
     "description": "Profil stalowy",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-42CR-20MNV6",
@@ -29532,22 +29727,22 @@
   {
     "title": "K-45CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-45CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "8"
+    "amount": "7,60"
   },
   {
     "title": "K-45CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-45CR2-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0,7"
+    "amount": "0,70"
   },
   {
     "title": "K-45F7X25",
@@ -29557,12 +29752,12 @@
   {
     "title": "K-45X30CR-20MNV6",
     "description": "Tłoczysko drążone",
-    "amount": "2,6"
+    "amount": "2,60"
   },
   {
     "title": "K-46-CUSN12",
     "description": "Pręt brązowy fi 46",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-50.8CR-20MNV6",
@@ -29577,72 +29772,72 @@
   {
     "title": "K-506-12.7X3.18",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-12.8X3",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-15X2.5",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-15X3",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-20X2.5",
     "description": "05-Prowadzenie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-20X3",
     "description": "Taśma prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-20X4",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-25X2.5",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-25X4",
     "description": "05-Prowadzenie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-30X3",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-40X2.5",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-5.6X2.5",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-6.1X4",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-9.7X2.5",
     "description": "Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-9.7X3",
@@ -29652,42 +29847,42 @@
   {
     "title": "K-506-9.7X3.0",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-506-9.7X4",
     "description": "05 Taśma Prowadząca",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-50CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-50CR-42CRMO4IH",
     "description": "Pręt chromowany",
-    "amount": "0,6"
+    "amount": "0,60"
   },
   {
     "title": "K-50CR2-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-50F7X30",
     "description": "Rura chromowana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-52CR-20MNV6",
     "description": "Pręt 52Cr-20MnV6",
-    "amount": "2"
+    "amount": "2,00"
   },
   {
     "title": "K-530H8X660",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-55CR-20MNV6",
@@ -29707,12 +29902,12 @@
   {
     "title": "K-56CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "2,4"
+    "amount": "2,40"
   },
   {
     "title": "K-56CR-42CRMO4UH",
     "description": "Pręt chromowany ulepszany IH",
-    "amount": "2,8"
+    "amount": "2,80"
   },
   {
     "title": "K-56CR-CK45IH",
@@ -29762,7 +29957,7 @@
   {
     "title": "K-60CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "2,3"
+    "amount": "2,30"
   },
   {
     "title": "K-60CR-42CRMO4IH",
@@ -29772,12 +29967,12 @@
   {
     "title": "K-60F7X40",
     "description": "Rura chromowana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-60X60X3",
     "description": "Profil zg. 60x60x3 S235JRH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-616-40X51X4.2",
@@ -29797,7 +29992,7 @@
   {
     "title": "K-63CR-42CRMO4IH",
     "description": "Pręt chromowany Hartowany",
-    "amount": "2,75"
+    "amount": "2,15"
   },
   {
     "title": "K-652-100X115X16",
@@ -29817,17 +30012,17 @@
   {
     "title": "K-65CR-42CRMO4IH",
     "description": "Pręt chromowany Hartowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-70CR-20MNV6",
     "description": "PRĘT CHROMOWANY",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-70CR-42CRMO4IH",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-70CR-CK45IH",
@@ -29837,7 +30032,7 @@
   {
     "title": "K-70CRX45-20MNV6",
     "description": "Rura chromowana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-714-3.5X2.9X0.28",
@@ -29852,7 +30047,7 @@
   {
     "title": "K-75CR-20MNV6",
     "description": "Pręt chromowany Fi75f7",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-75CR-42CRMO4IH",
@@ -29862,7 +30057,7 @@
   {
     "title": "K-75H8-90",
     "description": "RURA DOGNIATANA",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-75W",
@@ -29872,12 +30067,12 @@
   {
     "title": "K-76.2CR-42CRMO4IH",
     "description": "Pręt chromowany",
-    "amount": "3"
+    "amount": "3,00"
   },
   {
     "title": "K-76.2H8-88.9",
     "description": "Rura cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-80-62-22.5",
@@ -29887,12 +30082,12 @@
   {
     "title": "K-80CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-80CR-42CRMO4IH",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-81-165",
@@ -29902,7 +30097,7 @@
   {
     "title": "K-82.55H8-101.6",
     "description": "Rura Cylindrowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-839-180X196X9.5",
@@ -29937,17 +30132,17 @@
   {
     "title": "K-85CR-20MNV6",
     "description": "Pręt Chromowany",
-    "amount": "1,7"
+    "amount": "1,70"
   },
   {
     "title": "K-85CR-CK45IH",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-85F7X75",
     "description": "Rura Tłoczyskowa",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-860-125X141X9/12",
@@ -29997,7 +30192,7 @@
   {
     "title": "K-90CR-CK45",
     "description": "Pręt chromowany",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-90CRF7X70",
@@ -30117,7 +30312,7 @@
   {
     "title": "K-AFR30-PDST.115X5",
     "description": "Mocowanie filtra AFR30",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "K-AFR30C10NR",
@@ -30337,7 +30532,7 @@
   {
     "title": "K-CARBOLN10-19",
     "description": "13-Wąż CARBO LN10 DN19x27mm, NBR",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-CBCALHN",
@@ -30372,7 +30567,7 @@
   {
     "title": "K-CR091C10R",
     "description": "Wkład filtra do  AFR30C10NR",
-    "amount": "20"
+    "amount": "17"
   },
   {
     "title": "K-CR111C10R",
@@ -30381,7 +30576,7 @@
   },
   {
     "title": "K-CR112C10R",
-    "description": " Wkład filtra do AFR100C10NR",
+    "description": "Wkład filtra do AFR100C10NR",
     "amount": "0"
   },
   {
@@ -30396,7 +30591,7 @@
   },
   {
     "title": "K-D101000-140555",
-    "description": "",
+    "description": "DK140(DE)90-79-4,2NB/H-PU",
     "amount": "0"
   },
   {
@@ -30717,22 +30912,22 @@
   {
     "title": "K-FI120-S355J2",
     "description": "Wałek S355",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-FI140-S355J2",
     "description": "WAŁEK S355J2",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-FI170-S355J2",
     "description": "Pręt stalowy",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-FI90-S355J2",
     "description": "Wałek S355J2",
-    "amount": "0"
+    "amount": "0,000"
   },
   {
     "title": "K-FICS150A03A",
@@ -30866,7 +31061,7 @@
   },
   {
     "title": "K-GE30ES2RS",
-    "description": " Łożysko",
+    "description": "Łożysko",
     "amount": "0"
   },
   {
@@ -31122,7 +31317,7 @@
   {
     "title": "K-HAG.MA01",
     "description": "Mocowanie hydroakumulatora",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "K-HAG.MAM8053",
@@ -31160,6 +31355,11 @@
     "amount": "0"
   },
   {
+    "title": "K-HAG.MD02",
+    "description": "Mocowanie czujnika",
+    "amount": "16"
+  },
+  {
     "title": "K-HAG.ME02",
     "description": "Mocowanie szafki el. HAG.ME02",
     "amount": "0"
@@ -31177,12 +31377,12 @@
   {
     "title": "K-HAG.MM01",
     "description": "Mocowanie manometru",
-    "amount": "9"
+    "amount": "8"
   },
   {
     "title": "K-HAG.MR01",
     "description": "Mocowanie robocze",
-    "amount": "26"
+    "amount": "22"
   },
   {
     "title": "K-HAG.MR02",
@@ -31207,7 +31407,7 @@
   {
     "title": "K-HAG.MR06",
     "description": "Mocowanie profil 30X30",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "K-HAG.MS-01",
@@ -31402,7 +31602,7 @@
   {
     "title": "K-HAG.ZAB-EL.KRAIS",
     "description": "Mocowanie skrzynki el. Krais",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "K-HAG.ZB25-PLYTA",
@@ -31462,7 +31662,7 @@
   {
     "title": "K-HAG2RA44-112",
     "description": "Pokrywa zbiornika",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "K-HAGAP-NG10",
@@ -31556,7 +31756,7 @@
   },
   {
     "title": "K-HAGRA30.01RAL",
-    "description": " Płyta połączeniowa RAL",
+    "description": "Płyta połączeniowa RAL",
     "amount": "0"
   },
   {
@@ -31647,7 +31847,7 @@
   {
     "title": "K-HKBM40A1",
     "description": "ROZDZIELACZ 1 SEKCYJNY 40L",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "K-HKBM40A1WARYNSKI",
@@ -31658,6 +31858,11 @@
     "title": "K-HKBM40A1X3WARYNS",
     "description": "ROZDZIELACZ 3 SEKCJE 40 L",
     "amount": "0"
+  },
+  {
+    "title": "K-HKBM40A1Z",
+    "description": "ROZDZIELACZ 1 SEKCYJNY 40L Z ZATRZASKIEM",
+    "amount": "1"
   },
   {
     "title": "K-HKBM40A1ZWAR",
@@ -32132,11 +32337,16 @@
   {
     "title": "K-KP110",
     "description": "Parker Elite 3/8\"",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-KPL-USZCZ-TEL",
     "description": "Kpl.uszcz.siłownika teleskopowego NBR",
+    "amount": "0"
+  },
+  {
+    "title": "K-KPL-USZCZ.ZAWORU",
+    "description": "Uszczelnienia zaworu PU",
     "amount": "0"
   },
   {
@@ -32300,6 +32510,16 @@
     "amount": "0"
   },
   {
+    "title": "K-NG6E24",
+    "description": "Rozdzielacz V-4WE6, 50l. suwak E, 24VDC",
+    "amount": "0"
+  },
+  {
+    "title": "K-NG6G24",
+    "description": "Rozdzielacz V-4WE6, 50l. suwak G, 24VDC",
+    "amount": "2"
+  },
+  {
     "title": "K-NILEX_400G",
     "description": "Smar do sworzni EP NLGI 2,400g",
     "amount": "0"
@@ -32312,7 +32532,7 @@
   {
     "title": "K-OLEJ HV46",
     "description": "OLEJ HYDRAULICZNY HV 46",
-    "amount": "202"
+    "amount": "362"
   },
   {
     "title": "K-OLEJ-AMORTYZOL15",
@@ -32547,7 +32767,7 @@
   {
     "title": "K-PAKIET-ZEW-4",
     "description": "pakiet zewnętrzny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-PAKIET-ZEW.",
@@ -32632,6 +32852,11 @@
   {
     "title": "K-PLOMBA",
     "description": "Plomba termokurczliwa",
+    "amount": "3,00"
+  },
+  {
+    "title": "K-PODKLAD-CZARNA",
+    "description": "PODKŁ. CZARNY SPRAY",
     "amount": "0"
   },
   {
@@ -32727,7 +32952,7 @@
   {
     "title": "K-PRET-32_CHROM.",
     "description": "PRĘT CHROMOWANY",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-PS08-80X69X4.2",
@@ -32760,9 +32985,14 @@
     "amount": "0"
   },
   {
+    "title": "K-PZ2-20/6.3EUP",
+    "description": "Pompa 20/6,3 2gr",
+    "amount": "0"
+  },
+  {
     "title": "K-PZ2-4.5EUP",
     "description": "Pompa zębata 4,5cc 1:8 gr2EU",
-    "amount": "7"
+    "amount": "2"
   },
   {
     "title": "K-PZE-044.45",
@@ -32957,7 +33187,7 @@
   {
     "title": "K-RURA-63/75",
     "description": "RURA STALOWA",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "K-S1-10X13.8X2.1",
@@ -33227,12 +33457,12 @@
   {
     "title": "K-SCPV5.RA30K-01",
     "description": "Blacha korpusowa",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "K-SCPV5.RA30K-02",
     "description": "Blacha dolna",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "K-SD2E-A3/L2D21-A",
@@ -33297,7 +33527,7 @@
   {
     "title": "K-SL8470",
     "description": "Wkład filtra powietrza SL8470",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "K-SLH89002",
@@ -33377,7 +33607,7 @@
   {
     "title": "K-SR4E2-B2/H35V",
     "description": "ZAWÓR PRZELEWOWO-ODCIĄŻAJĄCY 350 BAR",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "K-SS-50.8X57X3.5",
@@ -33457,7 +33687,7 @@
   {
     "title": "K-TABLICZKA-GRAWER",
     "description": "tabliczka hansa-flex grawerowana",
-    "amount": "165"
+    "amount": "162"
   },
   {
     "title": "K-TABLICZKA-M22S",
@@ -33487,7 +33717,7 @@
   {
     "title": "K-TAFTR26300AP01",
     "description": "Tankflansch",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-TAFTR32350AP01",
@@ -33797,7 +34027,7 @@
   {
     "title": "K-W-E12DVS6/2",
     "description": "04-ELEKTROZAWÓR KIERUNKOWY 1/2\" 80L",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-W-E38DVS6/2",
@@ -33985,6 +34215,11 @@
     "amount": "5"
   },
   {
+    "title": "K-ZATRZASK-040",
+    "description": "Zatrzask do rozdz.ręczny 40;V-R40L-ZAT-",
+    "amount": "3"
+  },
+  {
     "title": "K-ZATRZASK-120",
     "description": "zatrzask do rozdz. sterow.  ręcznie120",
     "amount": "0"
@@ -34082,7 +34317,12 @@
   {
     "title": "K-ZPGWO3/8",
     "description": "Zaślepka GW 3/8” O-ring",
-    "amount": "151"
+    "amount": "122"
+  },
+  {
+    "title": "K-ZPGWOM18X1.5",
+    "description": "Zaślepka GW M18x1.5 z uszcz. Nr467039",
+    "amount": "0"
   },
   {
     "title": "K-ZS-116",
@@ -34177,17 +34417,17 @@
   {
     "title": "KANALDN13S250",
     "description": "Wąż do płukania kanalizacji DN12S 250bar",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KAX080",
     "description": "Strip wound exhaust hose DN80, SS",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KAX100",
     "description": "Strip wound exhaust hose DN100, SS",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KBINDER200-2.5S",
@@ -34342,27 +34582,27 @@
   {
     "title": "KLIMA04",
     "description": "Wąż chłodniczy KLIMA DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KLIMA08",
     "description": "Wąż chłodniczy KLIMA DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KLIMA10",
     "description": "Wąż chłodniczy KLIMA DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KLIMA13",
     "description": "Wąż chłodniczy KLIMA DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KLIMA16",
     "description": "Wąż chłodniczy KLIMA DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KM04BSP",
@@ -34442,7 +34682,7 @@
   {
     "title": "KM18",
     "description": "Przeciwnakrętka M18x1,5",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "KM18VA",
@@ -34462,7 +34702,7 @@
   {
     "title": "KM22",
     "description": "Przeciwnakrętka M22x1,5",
-    "amount": "7"
+    "amount": "12"
   },
   {
     "title": "KM24",
@@ -34547,7 +34787,7 @@
   {
     "title": "KP106",
     "description": "HD- Kompaktowy wąż 1SC DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP106S",
@@ -34557,7 +34797,7 @@
   {
     "title": "KP108",
     "description": "HD- Kompaktowy wąż 1SC DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP108S",
@@ -34567,7 +34807,7 @@
   {
     "title": "KP110",
     "description": "HD- Kompaktowy wąż 1SC DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP110S",
@@ -34577,27 +34817,27 @@
   {
     "title": "KP113",
     "description": "HD- Kompaktowy wąż 1SC DN12",
-    "amount": "0,43"
+    "amount": "0,00"
   },
   {
     "title": "KP113S",
     "description": "HD-Kompaktschlauch 1SC DN12 S-Ausf.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP116",
     "description": "HD- Kompaktowy wąż 1SC DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP116S",
     "description": "HD-Kompaktschlauch 1SC DN16 S-Ausf.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP120",
     "description": "HD- Kompaktowy wąż 1SC DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP120S",
@@ -34607,147 +34847,147 @@
   {
     "title": "KP125",
     "description": "HD- Kompaktowy wąż 1SC DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP206",
     "description": "HD- Kompaktowy wąż 2SC DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP206S",
     "description": "HD- Kompaktowy wąż 2SC DN06 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP208",
     "description": "HD- Kompaktowy wąż 2SC DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP208PRO",
     "description": "HD- Kompaktowy wąż 2SC DN08 ścieranie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP208S",
     "description": "HD- Kompaktowy wąż 2SC DN08 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP210",
     "description": "HD- Kompaktowy wąż 2SC DN10",
-    "amount": "19,8"
+    "amount": "14,20"
   },
   {
     "title": "KP210NO",
     "description": "HD- Kompaktowy wąż 2SC DN10 NOZONE",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP210PRO",
     "description": "HD- Kompaktowy wąż 2SC DN10 ścieranie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP210S",
     "description": "HD- Kompaktowy wąż 2SC DN10 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP213",
     "description": "HD- Kompaktowy wąż 2SC DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP213PRO",
     "description": "HD- Kompaktowy wąż 2SC DN12 ścieranie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP213S",
     "description": "HD- Kompaktowy wąż 2SC DN12 wykonanie S",
-    "amount": "1,82"
+    "amount": "0,00"
   },
   {
     "title": "KP216",
     "description": "HD- Kompaktowy wąż 2SC DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP216PRO",
     "description": "HD- Kompaktowy wąż 2SC DN16 ścieranie",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP216S",
     "description": "HD- Kompaktowy wąż 2SC DN16 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP220",
     "description": "HD- Kompaktowy wąż 2SC DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP220S",
     "description": "HD- Kompaktowy wąż 2SC DN19 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP225",
     "description": "HD- Kompaktowy wąż 2SC DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP225S",
     "description": "HD- Kompaktowy wąż 2SC DN25 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP232S",
     "description": "HD- Kompaktowy wąż 2SC DN31 wykonanie S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP413",
     "description": "HD- Kompaktowy wąż R12 DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP610",
     "description": "Wąż hydrauliczny ISO18752-CC DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP613",
     "description": "Wąż hydrauliczny ISO18752-CC DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP616",
     "description": "Wąż hydrauliczny ISO18752-CC DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP620",
     "description": "Wąż hydrauliczny ISO18752-CC DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP625",
     "description": "Wąż hydrauliczny ISO18752-CC DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KP632",
     "description": "Wąż hydrauliczny ISO18752-CC DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KPZ210",
     "description": "HD-Kompaktschlauch Zwilling 2SC DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KSKL115-145",
@@ -34792,12 +35032,12 @@
   {
     "title": "KUEHLER16-3.5",
     "description": "Wąż do chłodnic 16x3,5",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "KUEHLER22-3.5",
     "description": "Wąż do chłodnic 22x3,5",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "LAB04HB",
@@ -35982,12 +36222,12 @@
   {
     "title": "M-4205-00000000007",
     "description": "Rura PR15-1.5VZx605x90st",
-    "amount": "18"
+    "amount": "17"
   },
   {
     "title": "M-4205-00000000009",
     "description": "Rura PR15-1.5VZx355x90st",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "M-4205-00000000010",
@@ -36017,7 +36257,7 @@
   {
     "title": "M-4221-PG3476",
     "description": "PRZEDŁUŻKA PG3476 SONKO",
-    "amount": "19"
+    "amount": "18"
   },
   {
     "title": "M-4236-HAGRA70-112",
@@ -36026,23 +36266,23 @@
   },
   {
     "title": "M-4236-HAGRA70-132",
-    "description": " Płyta zbiornika 70l kołnierz M132; fi30",
+    "description": "Płyta zbiornika 70l kołnierz M132; fi30",
     "amount": "0"
   },
   {
     "title": "M-4236-HAGZAB-W125",
     "description": "Wanna ociekowa",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "M-4236-HAGZAB04.01",
     "description": "Zabudowa agregatu",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "M-4236-RA70132B5.1",
     "description": "Kompletna płyta do zb. 70l.132 B5",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "MBK100110",
@@ -36287,42 +36527,42 @@
   {
     "title": "MD106",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD108",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD113",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD116",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD120",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN22",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD125",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN28",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD132",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN35",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MD140",
     "description": "Wąż średniociśnieniowy SAE100 R5 DN46",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MDR25",
@@ -37272,7 +37512,7 @@
   {
     "title": "MULTI19-4.2EPDM",
     "description": "Wąż uniwersalny 19x4,2mm EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "MULTISPRAY44",
@@ -37367,7 +37607,7 @@
   {
     "title": "MVONW10L",
     "description": "Złączka gwint. do mano IGR1/4\" DKOL12",
-    "amount": "47"
+    "amount": "57"
   },
   {
     "title": "MVR04HJ",
@@ -37497,7 +37737,7 @@
   {
     "title": "ND110",
     "description": "Niskociśnieniowy wąż wtykany DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND13AB",
@@ -37567,52 +37807,52 @@
   {
     "title": "ND306",
     "description": "Wąż niskociśnieniow SAE100 R6 DN06 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND306T",
     "description": "Niskociśnieniowy wąż wtykany DN06 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND310",
     "description": "Wąż niskociśnieniow SAE100 R6 DN10 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND313",
     "description": "Wąż niskociśnieniow SAE100 R6 DN12 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND313BL",
     "description": "Niskociśnieniowy wąż wtykany DN12 nieb",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND313R",
     "description": "Niskociśnieniowy wąż wtykany DN12 cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND313T",
     "description": "Niskociśnieniowy wąż wtykany DN12 temp.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND316",
     "description": "Wąż niskociśnieniow SAE100 R6 DN16 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND320",
     "description": "Wąż niskociśnieniow SAE100 R6 DN19 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ND325",
     "description": "Wąż niskociśnieniow SAE100 R6 DN25 cięż.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NDGRIFFK0613BA",
@@ -38122,242 +38362,242 @@
   {
     "title": "NY104",
     "description": "Wąż termoplastyczny DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY106",
     "description": "Wąż termoplastyczny DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY108",
     "description": "Wąż termoplastyczny DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY110",
     "description": "Wąż termoplastyczny DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY113",
     "description": "Wąż termoplastyczny DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY116PA",
     "description": "Wąż termoplastyczny poliamid DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY120PA",
     "description": "Wąż termoplastyczny poliamid DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY125PA",
     "description": "Wąż termoplastyczny poliamid DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY2106",
     "description": "Wąż termoplastyczny ciśnienie DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY2106R",
     "description": "Wąż termoplastyczny ciśnienie DN06 cze",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY3016",
     "description": "Thermoplast-Schlauch DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY3020",
     "description": "Thermoplast-Schlauch DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY3025",
     "description": "Thermoplast-Schlauch DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY306",
     "description": "Wąż termoplastyczny DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY308",
     "description": "Wąż termoplastyczny DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY310",
     "description": "Wąż termoplastyczny DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY313",
     "description": "Wąż termoplastyczny DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY316",
     "description": "Wąż termoplastyczny DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY320",
     "description": "Wąż termoplastyczny DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY325",
     "description": "Wąż termoplastyczny DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY408",
     "description": "Wąż termoplastyczny ciśnienie DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY410",
     "description": "Wąż termoplastyczny ciśnienie DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY506",
     "description": "Wąż termoplastyczny DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY508",
     "description": "Wąż termoplastyczny DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY510",
     "description": "Wąż termoplastyczny DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY513",
     "description": "Wąż termoplastyczny DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY704",
     "description": "Wąż termoplastyczny SAE100 R7 DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY706",
     "description": "Wąż termoplastyczny SAE100 R7 DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY708",
     "description": "Wąż termoplastyczny SAE100 R7 DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY710",
     "description": "Wąż termoplastyczny SAE100 R7 DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY713",
     "description": "Wąż termoplastyczny SAE100 R7 DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY808",
     "description": "Wąż termoplastyczny SAE100 R8 DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY810",
     "description": "Wąż termoplastyczny SAE100 R8 DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY810NC",
     "description": "Wąż termoplastyczny SAE100 R8 DN10 NC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NY813",
     "description": "Wąż termoplastyczny SAE100 R8 DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ106",
     "description": "Wąż termoplastyczny DN06 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ108",
     "description": "Wąż termoplastyczny DN08 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ110",
     "description": "Wąż termoplastyczny DN10 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ113",
     "description": "Wąż termoplastyczny DN12 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ2106GE",
     "description": "Wąż termoplastyczny ciśnienie DN06 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ2106R",
     "description": "Wąż termoplastyczny ciśnienie DN06 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ704",
     "description": "Wąż termoplastyczny SAE100 R7 DN05 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ706",
     "description": "Wąż termoplastyczny SAE100 R7 DN06 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ708",
     "description": "Wąż termoplastyczny SAE100 R7 DN08 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ710",
     "description": "Wąż termoplastyczny SAE100 R7 DN10 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ713",
     "description": "Wąż termoplastyczny SAE100 R7 DN12 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ810",
     "description": "Wąż termoplastyczny SAE100 R8 DN10 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "NYZ813",
     "description": "Wąż termoplastyczny SAE100 R8 DN12 bl.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "O-RINGPICKSET",
@@ -42922,7 +43162,7 @@
   {
     "title": "OR4.48-1.78",
     "description": "O-ring 4,48x1,78 NBR 70SH",
-    "amount": "0"
+    "amount": "50"
   },
   {
     "title": "OR4.5-1",
@@ -45477,7 +45717,7 @@
   {
     "title": "OR9.25-1.78",
     "description": "O-ring 9,25x1,78 NBR 70SH",
-    "amount": "20"
+    "amount": "12"
   },
   {
     "title": "OR9.25-1.78N90",
@@ -45802,97 +46042,97 @@
   {
     "title": "ORSCHNUR1.5",
     "description": "Sznur do o-ringu Ś=1,5mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR1.78",
     "description": "Sznur do o-ringu Ś=1,78mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR10",
     "description": "Sznur do o-ringu Ś=10,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR2",
     "description": "Sznur do o-ringu Ś=2,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR2.4",
     "description": "Sznur do o-ringu Ś=2,4mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR2.5",
     "description": "Sznur do o-ringu Ś=2,5mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR2.62",
     "description": "Sznur do o-ringu Ś=2,62mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR3",
     "description": "Sznur do o-ringu Ś=3,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR3.53",
     "description": "Sznur do o-ringu Ś=3,53mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR4",
     "description": "Sznur do o-ringu Ś=4,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR4.5",
     "description": "Sznur do o-ringu Ś=4,5mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR5",
     "description": "Sznur do o-ringu Ś=5,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR5.33",
     "description": "Sznur do o-ringu Ś=5,33mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR5.7",
     "description": "Sznur do o-ringu Ś=5,7mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR6",
     "description": "Sznur do o-ringu Ś=6,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR6.5",
     "description": "Sznur do o-ringu Ś=6,5mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR7",
     "description": "Sznur do o-ringu Ś=7,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR8",
     "description": "Sznur do o-ringu Ś=8,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "ORSCHNUR9",
     "description": "Sznur do o-ringu Ś=9,0mm NBR 70SH",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PA532AJF45A",
@@ -47952,7 +48192,7 @@
   {
     "title": "PCA006",
     "description": "Metal hose DN06, 1 braid, SS",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PG08BS",
@@ -48012,7 +48252,7 @@
   {
     "title": "PHD110",
     "description": "Oprawka zdzierająca 1SN DN10",
-    "amount": "14"
+    "amount": "16"
   },
   {
     "title": "PHD11095",
@@ -48032,7 +48272,7 @@
   {
     "title": "PHD113",
     "description": "Oprawka zdzierająca 1SN DN12",
-    "amount": "8"
+    "amount": "12"
   },
   {
     "title": "PHD113E",
@@ -48237,7 +48477,7 @@
   {
     "title": "PHD213",
     "description": "Oprawka zdzierająca 2SN DN12",
-    "amount": "10"
+    "amount": "6"
   },
   {
     "title": "PHD213E",
@@ -48635,11 +48875,6 @@
     "amount": "0"
   },
   {
-    "title": "PHN216",
-    "description": "Oprawka niezdzierająca 2SN DN16",
-    "amount": "0"
-  },
-  {
     "title": "PHN216E",
     "description": "Oprawka niezdzierająca 2SN DN16",
     "amount": "0"
@@ -48967,7 +49202,7 @@
   {
     "title": "PMH102",
     "description": "Oprawka wtłaczana wąż pomiar. DN02",
-    "amount": "8"
+    "amount": "4"
   },
   {
     "title": "PN02AB",
@@ -49022,7 +49257,7 @@
   {
     "title": "PN02AOL06",
     "description": "Złączki wtłaczane DN02 DKOL08",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "PN02AOL0690",
@@ -49182,7 +49417,7 @@
   {
     "title": "PN02SKE",
     "description": "Złączki wtłaczane DN02 M16x2",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "PN02SKE12",
@@ -50917,7 +51152,7 @@
   {
     "title": "PN10AOL",
     "description": "Złączki wtłaczane DN10 DKOL12",
-    "amount": "8"
+    "amount": "11"
   },
   {
     "title": "PN10AOL06",
@@ -50982,7 +51217,7 @@
   {
     "title": "PN10AOL90",
     "description": "Złączki wtłaczane DN10 DKOL12 90°",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "PN10AOL90L50",
@@ -51692,7 +51927,7 @@
   {
     "title": "PN13AOL",
     "description": "Złączki wtłaczane DN12 DKOL15",
-    "amount": "4"
+    "amount": "5"
   },
   {
     "title": "PN13AOL10",
@@ -51737,7 +51972,7 @@
   {
     "title": "PN13AOL90",
     "description": "Złączki wtłaczane DN12 DKOL15 90°",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "PN13AOL90VA",
@@ -52627,11 +52862,6 @@
   {
     "title": "PN16HJOF20",
     "description": "Złączki wtłaczane DN16 AGORFS1.3/16\"",
-    "amount": "0"
-  },
-  {
-    "title": "PN16HL",
-    "description": "Złączki wtłaczane DN16 CEL18",
     "amount": "0"
   },
   {
@@ -54997,272 +55227,272 @@
   {
     "title": "PR04-0.5",
     "description": "Rura hydrauliczna 4x0,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR04-0.5BLANK",
     "description": "Rura hydrauliczna 4x0,5 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR04-1",
     "description": "Rura hydrauliczna 4x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR04-1BLANK",
     "description": "Rura hydrauliczna 4x1 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR04-1VZ",
     "description": "Rura hydrauliczna 4x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR04-1VZCF",
     "description": "Rura hydrauliczna 4x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR05-1",
     "description": "Rura hydrauliczna 5x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR05-1BLANK",
     "description": "Rura hydrauliczna 5x1 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1",
     "description": "Rura hydrauliczna 6x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1.5",
     "description": "Rura hydrauliczna 6x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1.5BLANK",
     "description": "Rura hydrauliczna 6x1,5 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1.5VZ",
     "description": "Rura hydrauliczna 6x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1.5VZCF",
     "description": "Rura hydrauliczna 6x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1BLANK",
     "description": "Rura hydrauliczna 6x1 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1V1",
     "description": "Rura hydrauliczna 6x1 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1V2",
     "description": "Rura hydrauliczna 6x1 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1VZ",
     "description": "Rura hydrauliczna 6x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-1VZCF",
     "description": "Rura hydrauliczna 6x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-2",
     "description": "Rura hydrauliczna 6x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-2BLANK",
     "description": "Rura hydrauliczna 6x2 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR06-2VZCF",
     "description": "Rura hydrauliczna 6x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1",
     "description": "Rura hydrauliczna 8x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1.5",
     "description": "Rura hydrauliczna 8x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1.5BLANK",
     "description": "Rura hydrauliczna 8x1,5 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1.5V4",
     "description": "Rura hydrauliczna 8x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1.5VZ",
     "description": "Rura hydrauliczna 8x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1.5VZCF",
     "description": "Rura hydrauliczna 8x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1V1",
     "description": "Rura hydrauliczna 8x1 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1V2",
     "description": "Rura hydrauliczna 8x1 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1V4",
     "description": "Rura hydrauliczna 8x1 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1VZ",
     "description": "Rura hydrauliczna 8x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-1VZCF",
     "description": "Rura hydrauliczna 8x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-2",
     "description": "Rura hydrauliczna 8x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-2BLANK",
     "description": "Rura hydrauliczna 8x2 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR08-2VZ",
     "description": "Rura hydrauliczna 8x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1",
     "description": "Rura hydrauliczna 10x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1.5",
     "description": "Rura hydrauliczna 10x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1.5V1",
     "description": "Rura hydrauliczna 10x1,5 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1.5V4",
     "description": "Rura hydrauliczna 10x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1.5VZ",
     "description": "Rura hydrauliczna 10x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1.5VZCF",
     "description": "Rura hydrauliczna 10x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1BLANK",
     "description": "Rura hydrauliczna 10x1 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1V1",
     "description": "Rura hydrauliczna 10x1 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1V2",
     "description": "Rura hydrauliczna 10x1 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1V4",
     "description": "Rura hydrauliczna 10x1 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1VZ",
     "description": "Rura hydrauliczna 10x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-1VZCF",
     "description": "Rura hydrauliczna 10x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-2",
     "description": "Rura hydrauliczna 10x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-2.5BLANK",
     "description": "Rura hydrauliczna 10x2,5 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-2V2",
     "description": "Rura hydrauliczna 10x2 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-2VZ",
     "description": "Rura hydrauliczna 10x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-2VZCF",
     "description": "Rura hydrauliczna 10x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR10-3BLANK",
     "description": "Rura hydrauliczna 10x3 jasny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1",
     "description": "Rura hydrauliczna 12x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5",
@@ -55272,587 +55502,587 @@
   {
     "title": "PR12-1.5ST52ZS",
     "description": "Hydraulikrohr N 012,00x01,50 E355+N ZS",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5V1",
     "description": "Rura hydrauliczna 12x1,5 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5V2",
     "description": "Rura hydrauliczna 12x1,5 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5V4",
     "description": "Rura hydrauliczna 12x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5VZ",
     "description": "Rura hydrauliczna 12x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1.5VZCF",
     "description": "Rura hydrauliczna 12x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1V4",
     "description": "Rura hydrauliczna 12x1 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1VZ",
     "description": "Rura hydrauliczna 12x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-1VZCF",
     "description": "Rura hydrauliczna 12x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-2",
     "description": "Rura hydrauliczna 12x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-2VZ",
     "description": "Rura hydrauliczna 12x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-2VZCF",
     "description": "Rura hydrauliczna 12x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR12-3",
     "description": "Rura hydrauliczna 12x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR13-1.5",
     "description": "Hydraulikrohr 13x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR14-1.5",
     "description": "Rura hydrauliczna 14x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR14-1.5VZCF",
     "description": "Rura hydrauliczna 14x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR14-2",
     "description": "Rura hydrauliczna 14x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR14-2VZCF",
     "description": "Rura hydrauliczna 14x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR14-3",
     "description": "Rura hydrauliczna 14x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1",
     "description": "Rura hydrauliczna 15x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1.5",
     "description": "Rura hydrauliczna 15x1,5 ST37.4 NBK",
-    "amount": "1"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1.5V1",
     "description": "Rura hydrauliczna 15x1,5 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1.5V4",
     "description": "Rura hydrauliczna 15x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1.5VZ",
     "description": "Rura hydrauliczna 15x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1.5VZCF",
     "description": "Rura hydrauliczna 15x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1V1GG",
     "description": "Rura hydrauliczna 15x1 1.4301 spawana",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1V2",
     "description": "Rura hydrauliczna 15x1 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1VZ",
     "description": "Rura hydrauliczna 15x1 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-1VZCF",
     "description": "Rura hydrauliczna 15x1 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-2",
     "description": "Rura hydrauliczna 15x2 ST37.4 NBK",
-    "amount": "2"
+    "amount": "2,00"
   },
   {
     "title": "PR15-2.5",
     "description": "Rura hydrauliczna 15x2,5 ST37.4 NBK",
-    "amount": "5,6"
+    "amount": "5,60"
   },
   {
     "title": "PR15-2V4",
     "description": "Rura hydrauliczna 15x2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-2VZ",
     "description": "Rura hydrauliczna 15x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-2VZCF",
     "description": "Rura hydrauliczna 15x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR15-3",
     "description": "Rura hydrauliczna 15x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-1",
     "description": "Rura hydrauliczna 16x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-1.5",
     "description": "Rura hydrauliczna 16x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-1.5V2",
     "description": "Rura hydrauliczna 16x1,5 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-1.5VZ",
     "description": "Rura hydrauliczna 16x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-1.5VZCF",
     "description": "Rura hydrauliczna 16x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2",
     "description": "Rura hydrauliczna 16x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2.5",
     "description": "Rura hydrauliczna 16x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2.5VZ",
     "description": "Rura hydrauliczna 16x2,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2V1",
     "description": "Rura hydrauliczna 16x2 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2V4",
     "description": "Rura hydrauliczna 16x2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2VZ",
     "description": "Rura hydrauliczna 16x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-2VZCF",
     "description": "Rura hydrauliczna 16x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-3",
     "description": "Rura hydrauliczna 16x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR16-3VZCF",
     "description": "Rura hydrauliczna 16x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5",
     "description": "Rura hydrauliczna 18x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5V1",
     "description": "Rura hydrauliczna 18x1,5 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5V2",
     "description": "Rura hydrauliczna 18x1,5 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5V4",
     "description": "Rura hydrauliczna 18x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5VZ",
     "description": "Rura hydrauliczna 18x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-1.5VZCF",
     "description": "Rura hydrauliczna 18x1,5 ocynk., bez CR6",
-    "amount": "24"
+    "amount": "0,00"
   },
   {
     "title": "PR18-2",
     "description": "Rura hydrauliczna 18x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-2.5VZCF",
     "description": "Rura hydrauliczna 18x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-2VZ",
     "description": "Rura hydrauliczna 18x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-2VZCF",
     "description": "Rura hydrauliczna 18x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR18-3",
     "description": "Rura hydrauliczna 18x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-1.5",
     "description": "Rura hydrauliczna 20x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-1.5VZCF",
     "description": "Rura hydrauliczna 20x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2",
     "description": "Rura hydrauliczna 20x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2.5",
     "description": "Rura hydrauliczna 20x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2.5VZ",
     "description": "Rura hydrauliczna 20x2,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2.5VZCF",
     "description": "Rura hydrauliczna 20x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2V1",
     "description": "Rura hydrauliczna 20x2 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2VZ",
     "description": "Rura hydrauliczna 20x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-2VZCF",
     "description": "Rura hydrauliczna 20x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-3",
     "description": "Rura hydrauliczna 20x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-3VZ",
     "description": "Rura hydrauliczna 20x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR20-3VZCF",
     "description": "Rura hydrauliczna 20x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR21.3-2V4",
     "description": "Rura hydrauliczna 21,3x2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1",
     "description": "Rura hydrauliczna 22x1 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5",
     "description": "Rura hydrauliczna 22x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5V1",
     "description": "Rura hydrauliczna 22x1,5 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5V2",
     "description": "Rura hydrauliczna 22x1,5 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5V4",
     "description": "Rura hydrauliczna 22x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5VZ",
     "description": "Rura hydrauliczna 22x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-1.5VZCF",
     "description": "Rura hydrauliczna 22x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2",
     "description": "Rura hydrauliczna 22x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2.5",
     "description": "Rura hydrauliczna 22x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2.5VZCF",
     "description": "Rura hydrauliczna 22x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2V1",
     "description": "Rura hydrauliczna 22x2 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2VZ",
     "description": "Rura hydrauliczna 22x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-2VZCF",
     "description": "Rura hydrauliczna 22x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR22-3",
     "description": "Rura hydrauliczna 22x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-1.5",
     "description": "Rura hydrauliczna 25x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2",
     "description": "Rura hydrauliczna 25x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2.5",
     "description": "Rura hydrauliczna 25x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2.5VZ",
     "description": "Rura hydrauliczna 25x2,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2.5VZCF",
     "description": "Rura hydrauliczna 25x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2V2",
     "description": "Rura hydrauliczna 25x2 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-2VZCF",
     "description": "Rura hydrauliczna 25x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-3",
     "description": "Rura hydrauliczna 25x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-3VZ",
     "description": "Rura hydrauliczna 25x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-3VZCF",
     "description": "Rura hydrauliczna 25x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-4",
     "description": "Rura hydrauliczna 25x4 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-4VZCF",
     "description": "Rura hydrauliczna 25x4 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR25-5",
     "description": "Rura hydrauliczna 25x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-1.5",
     "description": "Rura hydrauliczna 28x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-1.5V4",
     "description": "Rura hydrauliczna 28x1,5 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-1.5VZ",
     "description": "Rura hydrauliczna 28x1,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-1.5VZCF",
     "description": "Rura hydrauliczna 28x1,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-1.5ZP",
     "description": "Hydraulikrohr 28x1,5 ST37.4 NBK ZP",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2",
     "description": "Rura hydrauliczna 28x2 ST37.4 NBK",
-    "amount": "0,5"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2.5",
     "description": "Rura hydrauliczna 28x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2.5VZ",
     "description": "Rura hydrauliczna 28x2,5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2.5VZCF",
     "description": "Rura hydrauliczna 28x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2V1",
     "description": "Rura hydrauliczna 28x2 1.4301",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2VZ",
     "description": "Rura hydrauliczna 28x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-2VZCF",
     "description": "Rura hydrauliczna 28x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-3",
     "description": "Rura hydrauliczna 28x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-3VZ",
     "description": "Rura hydrauliczna 28x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-3VZCF",
     "description": "Rura hydrauliczna 28x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR28-4",
     "description": "Rura hydrauliczna 28x4 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-1.5",
     "description": "Rura hydrauliczna 30x1,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-2",
@@ -55862,222 +56092,222 @@
   {
     "title": "PR30-2.5",
     "description": "Rura hydrauliczna 30x2,5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-2.5VZCF",
     "description": "Rura hydrauliczna 30x2,5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-2V2",
     "description": "Rura hydrauliczna 30x2 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-2VZCF",
     "description": "Rura hydrauliczna 30x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-3",
     "description": "Rura hydrauliczna 30x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-3VZ",
     "description": "Rura hydrauliczna 30x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-3VZCF",
     "description": "Rura hydrauliczna 30x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-4",
     "description": "Rura hydrauliczna 30x4 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-4V2",
     "description": "Rura hydrauliczna 30x4 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-4VZ",
     "description": "Rura hydrauliczna 30x4 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-4VZCF",
     "description": "Rura hydrauliczna 30x4 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR30-5",
     "description": "Rura hydrauliczna 30x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR32-2V2",
     "description": "Rura hydrauliczna 32x2 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR33.7-3.2V4",
     "description": "Rura hydrauliczna 33,7x3,2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-2",
     "description": "Rura hydrauliczna 35x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-2VZ",
     "description": "Rura hydrauliczna 35x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-2VZCF",
     "description": "Rura hydrauliczna 35x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-3",
     "description": "Rura hydrauliczna 35x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-3VZ",
     "description": "Rura hydrauliczna 35x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-3VZCF",
     "description": "Rura hydrauliczna 35x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-4",
     "description": "Rura hydrauliczna 35x4 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-4VZCF",
     "description": "Rura hydrauliczna 35x4 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR35-5",
     "description": "Rura hydrauliczna 35x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-3",
     "description": "Rura hydrauliczna 38x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-3VZ",
     "description": "Rura hydrauliczna 38x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-3VZCF",
     "description": "Rura hydrauliczna 38x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-4",
     "description": "Rura hydrauliczna 38x4 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-4VZ",
     "description": "Rura hydrauliczna 38x4 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-4VZCF",
     "description": "Rura hydrauliczna 38x4 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-5",
     "description": "Rura hydrauliczna 38x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-5VZ",
     "description": "Rura hydrauliczna 38x5 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR38-5VZCF",
     "description": "Rura hydrauliczna 38x5 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-2",
     "description": "Rura hydrauliczna 42x2 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-2V2",
     "description": "Rura hydrauliczna 42x2 1.4541",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-2V4",
     "description": "Rura hydrauliczna 42x2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-2VZ",
     "description": "Rura hydrauliczna 42x2 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-2VZCF",
     "description": "Rura hydrauliczna 42x2 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-3",
     "description": "Rura hydrauliczna 42x3 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-3VZ",
     "description": "Rura hydrauliczna 42x3 ST37.4 NBK oc.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-3VZCF",
     "description": "Rura hydrauliczna 42x3 ocynk., bez CR6",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42-5",
     "description": "Rura hydrauliczna 42x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR42.4-2.6V4",
     "description": "Rura hydrauliczna 42,4x2,6 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR48.3-3.2V4",
     "description": "Rura hydrauliczna 48,3x3,2 1.4571",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PR50-5",
     "description": "Rura hydrauliczna 50x5 ST37.4 NBK",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PRESSEUPS1",
@@ -56087,22 +56317,22 @@
   {
     "title": "PSG05-3",
     "description": "Wąż w oplocie z PCW 5x3mm przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSG06-3",
     "description": "Wąż w oplocie z PCW 6x3mm przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSG10-3",
     "description": "Wąż w oplocie z PCW 10x3mm przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSG10-3BLAU",
     "description": "Wąż w oplocie z PCW 10x3mm nieb",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSG120",
@@ -56132,7 +56362,7 @@
   {
     "title": "PSG25-4.5",
     "description": "Wąż w oplocie z PCW 25x4,5mm przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSGB120",
@@ -56167,17 +56397,17 @@
   {
     "title": "PSK13-2",
     "description": "Wąż z PCW przezroc 13x2",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSK13-3",
     "description": "Wąż z PCW przezroc 13x3",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSK30-3.5",
     "description": "Wąż z PCW przezroc 30x3,5",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PSV3CMG120.5-102",
@@ -56187,7 +56417,7 @@
   {
     "title": "PVC12TRANSPST",
     "description": "Wąż z miękkiego PCW DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "PW100-U",
@@ -56357,7 +56587,7 @@
   {
     "title": "PYROWAS75RT",
     "description": "Wąż składany strażacki gładk DN75 woda",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "QR10",
@@ -56792,7 +57022,7 @@
   {
     "title": "RIKNW2513ED",
     "description": "Redukcja AGR1\"-WD IGR1/2\"",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "RIKNW2513EDVA",
@@ -59132,272 +59362,272 @@
   {
     "title": "SG132RI",
     "description": "Wąż ssący DN31 żłobkow",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG140RIEP",
     "description": "Wąż ssący DN38 żłobkow EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG150RI",
     "description": "Wąż ssący DN51 żłobkow",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG150RIEP",
     "description": "Wąż ssący DN51 żłobkow EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG160RI",
     "description": "Wąż ssący DN60 żłobkow",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG176RIEP",
     "description": "Wąż ssący DN76 żłobkow EPDM",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SG190RI",
     "description": "Wąż ssący DN90 żłobkow",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB1102",
     "description": "Wąż ssący DN100",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB1110",
     "description": "Wąż ssący DN110",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB120",
     "description": "Wąż ssący DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB125",
     "description": "Wąż ssący DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB132",
     "description": "Wąż ssący DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB140",
     "description": "Wąż ssący DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB145",
     "description": "Wąż ssący DN45",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB150",
     "description": "Wąż ssący DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB160",
     "description": "Wąż ssący DN60",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB163",
     "description": "Wąż ssący DN63",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB170",
     "description": "Wąż ssący DN70",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB176",
     "description": "Wąż ssący DN76",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGB180",
     "description": "Wąż ssący DN80",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF08",
     "description": "Oplot ochronny ŚW08mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF10",
     "description": "Oplot ochronny ŚW10mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF13",
     "description": "Oplot ochronny ŚW13mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF15",
     "description": "Oplot ochronny ŚW15mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF18",
     "description": "Oplot ochronny ŚW18mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF20",
     "description": "Oplot ochronny ŚW20mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF22",
     "description": "Oplot ochronny ŚW22mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF24",
     "description": "Oplot ochronny ŚW24mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF28",
     "description": "Oplot ochronny ŚW28mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF30",
     "description": "Oplot ochronny ŚW30mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF42",
     "description": "Oplot ochronny ŚW42mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF44",
     "description": "Oplot ochronny ŚW44mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF50",
     "description": "Oplot ochronny ŚW50mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF52",
     "description": "Oplot ochronny ŚW52mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SGF60",
     "description": "Oplot ochronny ŚW60mm OC",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI103",
     "description": "Wąż paliwowy z 1 opl. DN02",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI104",
     "description": "Wąż paliwowy z 1 opl. DN04",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI106",
     "description": "Wąż paliwowy z 1 opl. DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI108",
     "description": "Wąż paliwowy z 1 opl. DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI110",
     "description": "Wąż paliwowy z 1 opl. DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI113",
     "description": "Wąż paliwowy z 1 opl. DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI116",
     "description": "Wąż paliwowy z 1 opl. DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI202",
     "description": "Wąż paliwowy z 1 opl. DN02",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI203",
     "description": "Wąż paliwowy z 1 opl. DN03",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI204",
     "description": "Wąż paliwowy z 1 opl. DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI206",
     "description": "Wąż paliwowy z 1 opl. DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI206RME",
     "description": "Wąż paliwowy DN06 RME gładk",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI208",
     "description": "Wąż paliwowy z 1 opl. DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI208RME",
     "description": "Wąż paliwowy DN08 RME gładk",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI210",
     "description": "Wąż paliwowy z 1 opl. DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI210RME",
     "description": "Wąż paliwowy DN10 RME gładk",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI304",
     "description": "Wąż paliwowy z 2 opl. DN04",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI306",
     "description": "Wąż paliwowy z 2 opl. DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SI308",
     "description": "Wąż paliwowy z 2 opl. DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SIH103",
@@ -60997,7 +61227,7 @@
   {
     "title": "SKM10IR2FS",
     "description": "Kielich złącza wtykowego FS IGR3/8\" TW2",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "SKM10IR3",
@@ -61087,7 +61317,7 @@
   {
     "title": "SKM13IR2FS",
     "description": "Kielich złącza wtykowego FS IGR1/2\" TW2",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "SKM13IR2MULTIQ",
@@ -61742,7 +61972,7 @@
   {
     "title": "SKS10IR2FS",
     "description": "Wtyk złącza wtykowego FS IGR3/8\" TW2",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "SKS10IR3",
@@ -61827,7 +62057,7 @@
   {
     "title": "SKS13IR2FS",
     "description": "Wtyk złącza wtykowego FS IGR1/2\" TW2",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "SKS13IR2MULTIQ",
@@ -62627,7 +62857,7 @@
   {
     "title": "SRD12",
     "description": "Pierścień zacinający L12 S12",
-    "amount": "72"
+    "amount": "64"
   },
   {
     "title": "SRD12LL",
@@ -62652,7 +62882,7 @@
   {
     "title": "SRD15",
     "description": "Pierścień zacinający L15",
-    "amount": "22"
+    "amount": "5"
   },
   {
     "title": "SRD15VA",
@@ -62672,11 +62902,6 @@
   {
     "title": "SRD16VA",
     "description": "Pierścień zacinający S16 VA",
-    "amount": "0"
-  },
-  {
-    "title": "SRD18",
-    "description": "Pierścień zacinający L18",
     "amount": "0"
   },
   {
@@ -62952,7 +63177,7 @@
   {
     "title": "SRS0215PP",
     "description": "Opaska rurowa lekka TW2 15,0 PP",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "SRS0216AL",
@@ -63287,11 +63512,6 @@
   {
     "title": "SRS3018AL",
     "description": "Opaska rurowa ciężka TW1 18,0 AL",
-    "amount": "0"
-  },
-  {
-    "title": "SRS3018PP",
-    "description": "Opaska rurowa ciężka TW1 18,0 PP",
     "amount": "0"
   },
   {
@@ -63635,11 +63855,6 @@
     "amount": "0"
   },
   {
-    "title": "SRSAS30",
-    "description": "Śrubazłbemsześcio opaska rurowa cięż TW1",
-    "amount": "0"
-  },
-  {
     "title": "SRSAS3D",
     "description": "Śrubazłbemsześcio rurapodwój TW3",
     "amount": "0"
@@ -63707,7 +63922,7 @@
   {
     "title": "SRSASDP2",
     "description": "Śrubazłbemsześcio opaska rurowa leka TW2",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "SRSASDP3",
@@ -63762,7 +63977,7 @@
   {
     "title": "SRSDP2",
     "description": "Płyta mask do opaski jednorur lekka TW2",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "SRSDP2D",
@@ -63782,11 +63997,6 @@
   {
     "title": "SRSDP3",
     "description": "Płyta mask do opaski jednorur lekka TW3",
-    "amount": "0"
-  },
-  {
-    "title": "SRSDP30",
-    "description": "Płyta mask do opaski jednorur ciężka TW1",
     "amount": "0"
   },
   {
@@ -64022,7 +64232,7 @@
   {
     "title": "SRSSP2",
     "description": "Płytka do przyspawania krót lekka TW2",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "SRSSP2D",
@@ -64242,282 +64452,282 @@
   {
     "title": "SSF15-1",
     "description": "Osłona przeciw ocieraniu płask ŚW15 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF17-1",
     "description": "Osłona przeciw ocieraniu płask ŚW17 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF19-1",
     "description": "Osłona przeciw ocieraniu płask ŚW19 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF21-1",
     "description": "Osłona przeciw ocieraniu płask ŚW21 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF23-1",
     "description": "Osłona przeciw ocieraniu płask ŚW23 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF26-1",
     "description": "Osłona przeciw ocieraniu płask ŚW26 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF33-1",
     "description": "Osłona przeciw ocieraniu płask ŚW34 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF41-1",
     "description": "Osłona przeciw ocieraniu płask ŚW41 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSF48-1",
     "description": "Osłona przeciw ocieraniu płask ŚW48 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK07",
     "description": "Osłonaocieran płask ŚW7,5 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK09",
     "description": "Osłonaocieran płask ŚW9,5 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK13",
     "description": "Osłonaocieran płask ŚW13 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK16",
     "description": "Osłonaocieran płask ŚW16 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK20",
     "description": "Osłonaocieran płask ŚW20 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK25",
     "description": "Osłonaocieran płask ŚW25 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSK30",
     "description": "Osłonaocieran płask ŚW30 Polyamid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC09",
     "description": "Osłonaocieran płask ŚW9,5 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC13",
     "description": "Osłonaocieran płask ŚW13 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC16",
     "description": "Osłonaocieran płask ŚW16 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC23",
     "description": "Osłonaocieran płask ŚW23 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC30",
     "description": "Osłonaocieran płask ŚW30 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC40",
     "description": "Osłonaocieran płask ŚW40 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC50",
     "description": "Osłonaocieran płask ŚW50 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC60",
     "description": "Osłonaocieran płask ŚW60 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKC80",
     "description": "Osłonaocieran płask ŚW80 twardPCW",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE113",
     "description": "Osłonaocieran ŚW113,2mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE127",
     "description": "Osłonaocieran ŚW127,0mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE13",
     "description": "Osłonaocieran ŚW13,4mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE16",
     "description": "Osłonaocieran ŚW16,0mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE16GE",
     "description": "Osłonaocieran ŚW16,0mm Polyethylen żółt",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE20",
     "description": "Osłonaocieran ŚW20,6mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE20GE",
     "description": "Osłonaocieran ŚW20,6mm Polyethylen żółt",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE27",
     "description": "Osłonaocieran ŚW27,0mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE27GE",
     "description": "Osłonaocieran ŚW27,0mm Polyethylen żółt",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE34",
     "description": "Osłonaocieran ŚW34,6mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE43",
     "description": "Osłonaocieran ŚW43,2mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE66",
     "description": "Osłonaocieran ŚW66,2mm Polyethylen",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSKPE80GE",
     "description": "Osłonaocieran ŚW80,2mm Polyethylen żółt",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR14-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW14 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR18-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW18 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR20-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW20 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR23-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW22 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR25-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW25 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR27-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW27 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR30-2",
     "description": "Osłona przeciw ocieraniu okrą ŚW30 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR34-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW34 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR41-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW41 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR48-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW48 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR51-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW51 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR54-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW54 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR56-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW56 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSR68-3",
     "description": "Osłona przeciw ocieraniu okrą ŚW68 ST",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SST25",
     "description": "Wąż kurczliwy ŚW25 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSTK1906T",
     "description": "Wąż kurczliwy z klejem ŚW19 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSTK4012",
     "description": "Wąż kurczliwy z klejem ŚW40 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "SSTK5018",
     "description": "Wąż kurczliwy z klejem ŚW50 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "STAHLBOX12F",
@@ -65387,7 +65597,7 @@
   {
     "title": "TAB06HB",
     "description": "Adaptery T DKR3/8\" AGR3/8\"",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "TAB08",
@@ -65397,7 +65607,7 @@
   {
     "title": "TAB08HB",
     "description": "Adaptery T DKR1/2\" AGR1/2\"",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "TAB10",
@@ -65457,17 +65667,17 @@
   {
     "title": "TAF104",
     "description": "Wąż termoplastyczny AF4",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TAF106",
     "description": "Wąż termoplastyczny AF6,3",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TAF108",
     "description": "Wąż termoplastyczny AF8",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TAJ04HJ",
@@ -65577,37 +65787,37 @@
   {
     "title": "TBF204",
     "description": "Wąż termoplastyczny BF4",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBF206",
     "description": "Wąż termoplastyczny BF6,3",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBF208",
     "description": "Wąż termoplastyczny BF8",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBF210",
     "description": "Wąż termoplastyczny BF10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBF213",
     "description": "Wąż termoplastyczny BF13",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBFZ206",
     "description": "Wąż termoplastyczny BF6,3 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TBFZ210",
     "description": "Wąż termoplastyczny BF10 bliźniac",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TDOP063-1",
@@ -65672,162 +65882,162 @@
   {
     "title": "TE104",
     "description": "Wąż hydrauliczny 1TE DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE106",
     "description": "Wąż hydrauliczny 1TE DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE108",
     "description": "Wąż hydrauliczny 1TE DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE110",
     "description": "Wąż hydrauliczny 1TE DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE113",
     "description": "Wąż hydrauliczny 1TE DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE116",
     "description": "Wąż hydrauliczny 1TE DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE120",
     "description": "Wąż hydrauliczny 1TE DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE125",
     "description": "Wąż hydrauliczny 1TE DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE204B",
     "description": "Wąż hydrauliczny 2TE DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE206B",
     "description": "Wąż hydrauliczny 2TE DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE208",
     "description": "Wąż hydrauliczny 2TE DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE208B",
     "description": "Wąż hydrauliczny 2TE DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE210B",
     "description": "Wąż hydrauliczny 2TE DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE213B",
     "description": "Wąż hydrauliczny 2TE DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE216B",
     "description": "Wąż hydrauliczny 2TE DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE220B",
     "description": "Wąż hydrauliczny 2TE DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE225B",
     "description": "Wąż hydrauliczny 2TE DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE232B",
     "description": "Hydraulikschlauch 2TE DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE306",
     "description": "Wąż hydrauliczny 3TE DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE306B",
     "description": "Wąż hydrauliczny 3TE DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE308",
     "description": "Wąż hydrauliczny 3TE DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE310",
     "description": "Wąż hydrauliczny 3TE DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE310B",
     "description": "Wąż hydrauliczny 3TE DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE313",
     "description": "Wąż hydrauliczny 3TE DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE316",
     "description": "Wąż hydrauliczny 3TE DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE320",
     "description": "Wąż hydrauliczny 3TE DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE320B",
     "description": "Wąż hydrauliczny 3TE DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE325",
     "description": "Wąż hydrauliczny 3TE DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE332",
     "description": "Wąż hydrauliczny 3TE DN31",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE340",
     "description": "Wąż hydrauliczny 3TE DN38",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE350",
     "description": "Wąż hydrauliczny 3TE DN51",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TE360",
     "description": "Wąż hydrauliczny 3TE DN60",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TECALANSCHERE",
@@ -65837,77 +66047,77 @@
   {
     "title": "TF104",
     "description": "Wąż gładki PTFE 1 opl. DN05",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF106",
     "description": "Wąż gładki PTFE 1 opl. DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF108",
     "description": "Wąż gładki PTFE 1 opl. DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF110",
     "description": "Wąż gładki PTFE 1 opl. DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF113",
     "description": "Wąż gładki PTFE 1 opl. DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF116",
     "description": "Wąż gładki PTFE 1 opl. DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF120",
     "description": "Wąż gładki PTFE 1 opl. DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF125",
     "description": "Wąż gładki PTFE 1 opl. DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF206",
     "description": "Wąż gładki PTFE 2 opl. DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF208",
     "description": "Wąż gładki PTFE 2 opl. DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF210",
     "description": "Wąż gładki PTFE 2 opl. DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF213",
     "description": "Wąż gładki PTFE 2 opl. DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF216",
     "description": "Wąż gładki PTFE 2 opl. DN16",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF220",
     "description": "Wąż gładki PTFE 2 opl. DN19",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TF225",
     "description": "Wąż gładki PTFE 2 opl. DN25",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFBAND",
@@ -65947,37 +66157,37 @@
   {
     "title": "TFW010",
     "description": "PTFE-Hose corrugat., white DN10, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFW013",
     "description": "PTFE-Hose corrugat., white DN12, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFW016",
     "description": "PTFE-Hose corrugat., white DN16, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFW020",
     "description": "PTFE-Hose corrugat., white DN20, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFW025",
     "description": "PTFE-Hose corrugat., white DN25, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TFW040",
     "description": "PTFE-Hose corrugat., white DN40, 1 braid",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TG306S",
     "description": "Wąż gazu napędowego DN06S",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGD604-604",
@@ -66007,77 +66217,77 @@
   {
     "title": "TGFISO20",
     "description": "Wąż ochronny ŚW20 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO23",
     "description": "Wąż ochronny ŚW23 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO25",
     "description": "Wąż ochronny ŚW25 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO27",
     "description": "Wąż ochronny ŚW27 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO31",
     "description": "Wąż ochronny ŚW31 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO33",
     "description": "Wąż ochronny ŚW33 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO36",
     "description": "Wąż ochronny ŚW36 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO40",
     "description": "Wąż ochronny ŚW40 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO44",
     "description": "Wąż ochronny ŚW44 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO55",
     "description": "Wąż ochronny ŚW55 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISO60",
     "description": "Wąż ochronny ŚW60 oplot nylonowy",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISOK050",
     "description": "Akcesoria wią węży z zap. na rzepy ŚW50",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISOK075",
     "description": "Akcesoria wią węży z zap. na rzepy ŚW75",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISOK100",
     "description": "Akcesoria wią węży z zap. na rzepy ŚW100",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TGFISOK125",
     "description": "Akcesoria wią węży z zap. na rzepy ŚW125",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "THB02",
@@ -66472,7 +66682,7 @@
   {
     "title": "TIR06",
     "description": "Adaptery T IGR3/8\"",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "TIR08",
@@ -66592,12 +66802,12 @@
   {
     "title": "TR04-1WS",
     "description": "Rura poliamidowa mięki 4x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR04-1WT",
     "description": "Rura poliamidowa mięki 4x1 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR04FL",
@@ -66607,12 +66817,12 @@
   {
     "title": "TR05-1WS",
     "description": "Rura poliamidowa mięki 5x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR05-1WT",
     "description": "Rura poliamidowa mięki 5x1 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR05GVB",
@@ -66632,12 +66842,12 @@
   {
     "title": "TR06-1.5WS",
     "description": "Rura poliamidowa mięki 6x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR06-1.5WT",
     "description": "Rura poliamidowa mięki 6x1,5 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR06-1EH",
@@ -66647,12 +66857,12 @@
   {
     "title": "TR06-1WS",
     "description": "Rura poliamidowa mięki 6x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR06-1WT",
     "description": "Rura poliamidowa mięki 6x1 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR06B04",
@@ -66677,12 +66887,12 @@
   {
     "title": "TR08-1.5WS",
     "description": "Rura poliamidowa mięki 8x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR08-1.5WT",
     "description": "Rura poliamidowa mięki 8x1,5 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR08-1EH",
@@ -66692,17 +66902,17 @@
   {
     "title": "TR08-1WS",
     "description": "Rura poliamidowa mięki 8x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR08-1WT",
     "description": "Rura poliamidowa mięki 8x1 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR08-2WS",
     "description": "Rura poliamidowa mięki 8x2 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR08B06",
@@ -66727,7 +66937,7 @@
   {
     "title": "TR10-1.5WS",
     "description": "Rura poliamidowa mięki 10x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR10-1EH",
@@ -66737,17 +66947,17 @@
   {
     "title": "TR10-1WS",
     "description": "Rura poliamidowa mięki 10x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR10-1WT",
     "description": "Rura poliamidowa mięki 10x1 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR10-2WT",
     "description": "Rura poliamidowa mięki 10x2 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR10B",
@@ -66772,7 +66982,7 @@
   {
     "title": "TR11-1.5WS",
     "description": "Rura poliamidowa mięki 11x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR12-1.5EH",
@@ -66782,7 +66992,7 @@
   {
     "title": "TR12-1.5WS",
     "description": "Rura poliamidowa mięki 12x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR12-1EH",
@@ -66792,7 +67002,7 @@
   {
     "title": "TR12-1WS",
     "description": "Rura poliamidowa mięki 12x1 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR12-2EH",
@@ -66802,7 +67012,7 @@
   {
     "title": "TR12-2WS",
     "description": "Rura poliamidowa mięki 12x2 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR12TVB",
@@ -66817,12 +67027,12 @@
   {
     "title": "TR14-1.5WS",
     "description": "Rura poliamidowa mięki 14x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR14-1.5WT",
     "description": "Rura poliamidowa mięki 14x1,5 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR14GVB",
@@ -66837,7 +67047,7 @@
   {
     "title": "TR15-1.5WS",
     "description": "Rura poliamidowa mięki 15x1,5 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR15-2EH",
@@ -66852,7 +67062,7 @@
   {
     "title": "TR16-2WS",
     "description": "Rura poliamidowa mięki 16x2 czarny",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR18-2EH",
@@ -66867,12 +67077,12 @@
   {
     "title": "TR25-2.5WT",
     "description": "Rura poliamidowa mięki 25x2,5 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TR30-2.5WT",
     "description": "Rura poliamidowa mięki 30x2,5 przezr.",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TRN04A",
@@ -67072,7 +67282,7 @@
   {
     "title": "TRPE12-2WT",
     "description": "Rura polietylenowa 12x2 przezroczys",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "TS100108-L",
@@ -68187,7 +68397,7 @@
   {
     "title": "UEMNW10L",
     "description": "Nakrętka kołpakowa L12 M18x1,5",
-    "amount": "55"
+    "amount": "69"
   },
   {
     "title": "UEMNW10LB",
@@ -68227,7 +68437,7 @@
   {
     "title": "UEMNW13L",
     "description": "Nakrętka kołpakowa L15 M22x1,5",
-    "amount": "48"
+    "amount": "32"
   },
   {
     "title": "UEMNW13LB",
@@ -68267,11 +68477,6 @@
   {
     "title": "UEMNW16FMS",
     "description": "Nakrętka kołpakowa S20 M30x2 FM",
-    "amount": "0"
-  },
-  {
-    "title": "UEMNW16L",
-    "description": "Nakrętka kołpakowa L18 M26x1,5",
     "amount": "0"
   },
   {
@@ -69992,7 +70197,7 @@
   {
     "title": "VHR90-1/2ED",
     "description": "Śruba zamykająca ISK AGR1/2\"-WD",
-    "amount": "40"
+    "amount": "61"
   },
   {
     "title": "VHR90-1/2EDVA",
@@ -70002,7 +70207,7 @@
   {
     "title": "VHR90-1/4ED",
     "description": "Śruba zamykająca ISK AGR1/4\"-WD",
-    "amount": "14"
+    "amount": "11"
   },
   {
     "title": "VHR90-1/4EDVA",
@@ -70032,7 +70237,7 @@
   {
     "title": "VHR90-1ED",
     "description": "Śruba zamykająca ISK AGR1\"-WD",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "VHR90-1EDVA",
@@ -70047,7 +70252,7 @@
   {
     "title": "VHR90-3/4ED",
     "description": "Śruba zamykająca ISK AGR3/4\"-WD",
-    "amount": "24"
+    "amount": "22"
   },
   {
     "title": "VHR90-3/4EDV",
@@ -70067,7 +70272,7 @@
   {
     "title": "VHR90-3/8ED",
     "description": "Śruba zamykająca ISK AGR3/8\"-WD",
-    "amount": "57"
+    "amount": "47"
   },
   {
     "title": "VHR90-3/8EDVA",
@@ -70107,12 +70312,12 @@
   {
     "title": "VLMNW06",
     "description": "Nakrętka zamykająca DKOL08",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "VLMNW08",
     "description": "Nakrętka zamykająca DKOL10",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "VLMNW08VA",
@@ -70122,7 +70327,7 @@
   {
     "title": "VLMNW10",
     "description": "Nakrętka zamykająca DKOL12",
-    "amount": "10"
+    "amount": "13"
   },
   {
     "title": "VLMNW13",
@@ -70840,6 +71045,11 @@
     "amount": "0"
   },
   {
+    "title": "W-KALENDER4TEILER",
+    "description": "Calendar, 4 month's",
+    "amount": "0"
+  },
+  {
     "title": "W-KATALOG-KOMP-PL",
     "description": "Katalog kompaktowy polski 04/2011",
     "amount": "0"
@@ -71027,6 +71237,46 @@
   {
     "title": "W-ORDNERHFA4SCHMAL",
     "description": "DIN A4 Ordner 230x297mm",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-01-DE",
+    "description": "Verbindungstechnik, DIN A1, DE",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-01-EN",
+    "description": "Verbindungstechnik, DIN A1, EN",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-02-DE",
+    "description": "Schneidringmontage, DIN A1, DE",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-02-EN",
+    "description": "Schneidringmontage, DIN A1, EN",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-03-DE",
+    "description": "Schlauchtechnik, DIN A1, DE",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-03-EN",
+    "description": "Schlauchtechnik, DIN A1, EN",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-04-DE",
+    "description": "Symbole der Hydraulik, DIN A1, DE",
+    "amount": "0"
+  },
+  {
+    "title": "W-P-TECH-04-EN",
+    "description": "Symbole der Hydraulik, DIN A1, EN",
     "amount": "0"
   },
   {
@@ -71817,7 +72067,7 @@
   {
     "title": "W90AB06HB",
     "description": "Adaptery 90° DKR3/8\" AGR3/8\"",
-    "amount": "5"
+    "amount": "11"
   },
   {
     "title": "W90AB06HJ",
@@ -71832,7 +72082,7 @@
   {
     "title": "W90AB08HB",
     "description": "Adaptery 90° DKR1/2\" AGR1/2\"",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "W90AB10",
@@ -73472,7 +73722,7 @@
   {
     "title": "WDA112",
     "description": "Kołnierz pompy 3otw. KO30 IGR1/2\" 90° AL",
-    "amount": "9"
+    "amount": "8"
   },
   {
     "title": "WDA138",
@@ -73482,7 +73732,7 @@
   {
     "title": "WDA234",
     "description": "Kołnierz pompy 3otw. KO40 IGR3/4\" 90° AL",
-    "amount": "8"
+    "amount": "6"
   },
   {
     "title": "WDA3100",
@@ -73527,7 +73777,7 @@
   {
     "title": "WDS112",
     "description": "Kołnierz pompy 3otwor KO30 IGR1/2\" 90°",
-    "amount": "10"
+    "amount": "7"
   },
   {
     "title": "WDS138",
@@ -73587,42 +73837,42 @@
   {
     "title": "WF106",
     "description": "Wąż hydrauliczny 1SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF108",
     "description": "Wąż hydrauliczny 1SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF110",
     "description": "Wąż hydrauliczny 1SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF113",
     "description": "Wąż hydrauliczny 1SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF206",
     "description": "Wąż hydrauliczny 2SN DN06",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF208",
     "description": "Wąż hydrauliczny 2SN DN08",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF210",
     "description": "Wąż hydrauliczny 2SN DN10",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF213",
     "description": "Wąż hydrauliczny 2SN DN12",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WF30LKL12-3",
@@ -73667,7 +73917,7 @@
   {
     "title": "WF40LKL15100",
     "description": "Kołnierz pompy 4otwor KO40 CEL15 90°",
-    "amount": "9"
+    "amount": "0"
   },
   {
     "title": "WF40LKL18100",
@@ -74017,7 +74267,7 @@
   {
     "title": "WRM-P18",
     "description": "Zgarniacz WRM-P 18x24,6x3,8 PUR",
-    "amount": "2"
+    "amount": "6"
   },
   {
     "title": "WRM-P180",
@@ -74607,7 +74857,7 @@
   {
     "title": "WVG025",
     "description": "Strip wound hose DN25, steel galvanised",
-    "amount": "0"
+    "amount": "0,00"
   },
   {
     "title": "WVNW08HS",
@@ -74642,7 +74892,7 @@
   {
     "title": "X-CODESET",
     "description": "Zestaw do kodowania węży",
-    "amount": "28"
+    "amount": "25"
   },
   {
     "title": "XAHNW04S03",
@@ -76357,7 +76607,7 @@
   {
     "title": "XEWORNW25HL",
     "description": "Króciec wkręcany 90° AGR1\"-OR CEL28",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "XEWORNW25HS",
@@ -76737,7 +76987,7 @@
   {
     "title": "XHFMTHL10",
     "description": "Króciec przy. pomiarowy T M16x2 CEL12",
-    "amount": "47"
+    "amount": "61"
   },
   {
     "title": "XHFMTHL10S",
@@ -77897,7 +78147,7 @@
   {
     "title": "XSANW13HL",
     "description": "Króciec do przyspawania CEL15 rura19",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "XSANW13HS",
@@ -78522,7 +78772,7 @@
   {
     "title": "XSVNW10HL",
     "description": "Króciec dwuzłączki przegrodowej CEL12",
-    "amount": "3"
+    "amount": "6"
   },
   {
     "title": "XSVNW10HLVA",
@@ -78537,7 +78787,7 @@
   {
     "title": "XSVNW13HL",
     "description": "Króciec dwuzłączki przegrodowej CEL15",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "XSVNW13HLV",
@@ -78632,7 +78882,7 @@
   {
     "title": "XSVRNW06HLED",
     "description": "Króciecwkręcanyprzegrod AGR1/4\"-WD CEL08",
-    "amount": "6"
+    "amount": "2"
   },
   {
     "title": "XSVRNW08HLED",
@@ -78782,7 +79032,7 @@
   {
     "title": "XSWNW13HL",
     "description": "Króciec dwuzłączki przegr. 90° CEL15",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "XSWNW13HLVA",
@@ -79352,7 +79602,7 @@
   {
     "title": "XVELONW10HL",
     "description": "Króciec dwuzłączki L DKOL12 CEL12",
-    "amount": "150"
+    "amount": "188"
   },
   {
     "title": "XVELONW10HLVA",
@@ -79367,7 +79617,7 @@
   {
     "title": "XVELONW13HL",
     "description": "Króciec dwuzłączki L DKOL15 CEL15",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "XVELONW13HLVA",
@@ -79617,7 +79867,7 @@
   {
     "title": "XVETONW10HL",
     "description": "Króciec dwuzłączki T DKOL12 CEL12",
-    "amount": "41"
+    "amount": "61"
   },
   {
     "title": "XVETONW10HLVA",
@@ -79632,7 +79882,7 @@
   {
     "title": "XVETONW13HL",
     "description": "Króciec dwuzłączki T DKOL15 CEL15",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVETONW13HLVA",
@@ -79977,7 +80227,7 @@
   {
     "title": "XVEWONW10HL",
     "description": "Króciec dwuzłączki 90° DKOL12 CEL12",
-    "amount": "422"
+    "amount": "469"
   },
   {
     "title": "XVEWONW10HLVA",
@@ -80022,7 +80272,7 @@
   {
     "title": "XVEWONW16HS",
     "description": "Króciec dwuzłączki 90° DKOS20 CES20",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVEWONW20HL",
@@ -80067,7 +80317,7 @@
   {
     "title": "XVEWONW32HL",
     "description": "Króciec dwuzłączki 90° DKOL35 CEL35",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVEWONW32HS",
@@ -81337,7 +81587,7 @@
   {
     "title": "XVNW10HL",
     "description": "Króciec dwuzłączki CEL12",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVNW10HL04",
@@ -81392,7 +81642,7 @@
   {
     "title": "XVNW13HL",
     "description": "Króciec dwuzłączki CEL15",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "XVNW13HL04",
@@ -81472,11 +81722,6 @@
   {
     "title": "XVNW13HSVA",
     "description": "Króciec dwuzłączki CES16 VA",
-    "amount": "0"
-  },
-  {
-    "title": "XVNW16HL",
-    "description": "Króciec dwuzłączki CEL18",
     "amount": "0"
   },
   {
@@ -82047,7 +82292,7 @@
   {
     "title": "XVRNW06HL3/8ED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL08",
-    "amount": "3"
+    "amount": "0"
   },
   {
     "title": "XVRNW06HLED",
@@ -82227,7 +82472,7 @@
   {
     "title": "XVRNW10HL1/2ED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL12",
-    "amount": "9"
+    "amount": "11"
   },
   {
     "title": "XVRNW10HL1/2EDVA",
@@ -82242,7 +82487,7 @@
   {
     "title": "XVRNW10HL1/4ED",
     "description": "Króciec wkręcany AGR1/4\"-WD CEL12",
-    "amount": "48"
+    "amount": "58"
   },
   {
     "title": "XVRNW10HL1/4EDVA",
@@ -82262,12 +82507,12 @@
   {
     "title": "XVRNW10HL3/4",
     "description": "Króciec wkręcany AGR3/4\" CEL12",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVRNW10HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL12",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "XVRNW10HL3/4EDVA",
@@ -82282,7 +82527,7 @@
   {
     "title": "XVRNW10HLED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL12",
-    "amount": "358"
+    "amount": "567"
   },
   {
     "title": "XVRNW10HLEDVA",
@@ -82332,7 +82577,7 @@
   {
     "title": "XVRNW13HL1",
     "description": "Króciec wkręcany AGR1\" CEL15",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "XVRNW13HL1/4",
@@ -82352,7 +82597,7 @@
   {
     "title": "XVRNW13HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL15",
-    "amount": "2"
+    "amount": "5"
   },
   {
     "title": "XVRNW13HL3/4EDVA",
@@ -82367,12 +82612,12 @@
   {
     "title": "XVRNW13HL3/8ED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL15",
-    "amount": "9"
+    "amount": "3"
   },
   {
     "title": "XVRNW13HLED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL15",
-    "amount": "13"
+    "amount": "16"
   },
   {
     "title": "XVRNW13HLEDVA",
@@ -82417,7 +82662,7 @@
   {
     "title": "XVRNW13HSED",
     "description": "Króciec wkręcany AGR1/2\"-WD CES16",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "XVRNW13HSVA",
@@ -82432,7 +82677,7 @@
   {
     "title": "XVRNW16HL1",
     "description": "Króciec wkręcany AGR1\" CEL18",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "XVRNW16HL1EDV",
@@ -82457,7 +82702,7 @@
   {
     "title": "XVRNW16HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL18",
-    "amount": "2"
+    "amount": "11"
   },
   {
     "title": "XVRNW16HL3/4EDVA",
@@ -82482,7 +82727,7 @@
   {
     "title": "XVRNW16HLED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL18",
-    "amount": "2"
+    "amount": "10"
   },
   {
     "title": "XVRNW16HLEDVA",
@@ -82527,7 +82772,7 @@
   {
     "title": "XVRNW16HSED",
     "description": "Króciec wkręcany AGR3/4\"-WD CES20",
-    "amount": "23"
+    "amount": "20"
   },
   {
     "title": "XVRNW16HSEDVA",
@@ -82577,7 +82822,7 @@
   {
     "title": "XVRNW20HLED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL22",
-    "amount": "13"
+    "amount": "12"
   },
   {
     "title": "XVRNW20HLEDVA",
@@ -82662,7 +82907,7 @@
   {
     "title": "XVRNW25HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL28",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVRNW25HL3/4EDVA",
@@ -82677,7 +82922,7 @@
   {
     "title": "XVRNW25HLED",
     "description": "Króciec wkręcany AGR1\"-WD CEL28",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "XVRNW25HLEDVA",
@@ -82742,7 +82987,7 @@
   {
     "title": "XVRNW32HL1ED",
     "description": "Króciec wkręcany AGR1\"-WD CEL35",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVRNW32HL1EDVA",
@@ -83727,7 +83972,7 @@
   {
     "title": "XWSANW13HL",
     "description": "Króciec do przyspawania 90° CEL15 rura19",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "XWSANW13HS",
