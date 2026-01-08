@@ -2212,9 +2212,11 @@ export const GEHSUNData = [
   .map(({ title, thread, threadA, material }) => ({ title, thread, threadA, pmax: material === "Steel" ? 350 : 210, material }));
 export const extra = {
   heater: [
-    { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230 },
-    { title: "HKEH1460650TA3X4", heatingCapacity: "1,460 W", Voltage: 400 },
-    { title: "HKEH14606503X4", heatingCapacity: "1,460 W", Voltage: 400 },
+    { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230, tempController: false },
+    { title: "HKEH1460650TA3X4", heatingCapacity: "1,460 W", Voltage: 400, tempController: true },
+    { title: "HKEH14606503X4", heatingCapacity: "1,460 W", Voltage: 400, tempController: false },
+    { title: "HKEH230010003X4", heatingCapacity: "2,300 W", Voltage: 400, tempController: false },
+    { title: "HKEH23001000TA3X4", heatingCapacity: "2,300 W", Voltage: 400, tempController: true },
   ],
   frames: [
     { title: "M-4236-HAGZAB04.01", tank: 70, addition: { SKM: { title: "SKM13IR2FS" }, SKS: { title: "SKS13IR2FS" }, MZUB: { title: "SKMZUBS2FS" }, SZUB: { title: "SKSZUBS2FS" } } },
