@@ -12,25 +12,29 @@ const { project, meta, order, powerUNIT, i } = defineProps(["project", "meta", "
 const filteredPumps = () => {
   if (!meta.pumpType) return [];
   if (powerUNIT.unit.length === 1) {
-    const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
-    const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
-    if (order[`pump${i}`]?.title) flangeSelector();
-    return pumpData[meta.pumpType]
-      .filter((item) => {
-        const pump = Object.values(item)[0];
-        const CC = pump.CC - VFU;
-        return (
-          CC >= -par &&
-          CC <= par &&
-          pump.pmax > powerUNIT.unit[0].p &&
-          (group.value === "" || meta.pumpType !== "gears" || group.value === pump.group)
-        );
-      })
-      .map((el) => {
-        const { title, CC, ...rest } = Object.values(el)[0];
-        return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
-      })
-      .sort((a, b) => a.CC - b.CC);
+    try {
+      const VFU = getVFU(powerUNIT.unit[0].Q, powerUNIT.n);
+      const par = meta.pumpType === "gears" ? 0.2 * VFU : 0.5 * VFU;
+      if (order[`pump${i}`]?.title) flangeSelector();
+      return pumpData[meta.pumpType]
+        .filter((item) => {
+          const pump = Object.values(item)[0];
+          const CC = pump.CC - VFU;
+          return (
+            CC >= -par &&
+            CC <= par &&
+            pump.pmax > powerUNIT.unit[0].p &&
+            (group.value === "" || meta.pumpType !== "gears" || group.value === pump.group)
+          );
+        })
+        .map((el) => {
+          const { title, CC, ...rest } = Object.values(el)[0];
+          return { title, CC, Q: round(getQ(CC, powerUNIT.n)), ...rest };
+        })
+        .sort((a, b) => a.CC - b.CC);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   if (powerUNIT.unit.length > 1) {
