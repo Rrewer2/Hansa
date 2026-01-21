@@ -1540,9 +1540,9 @@ const gaugeBottom = [
 ];
 
 export const gauge = [
-  ...gaugeBottom.map((el) => ({ ...el, mount: "bottom", addition: { gaugeShuttOff: { title: "HKFT29101-14" } } })),
-  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "H", ...rest, mount: "rear", addition: { gaugeShuttOff: { title: "HKFT29101-14" } } })),
-  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "HFR", ...rest, mount: "rear", addition: { gaugeShuttOff: { title: "HKFT29101-14" } } })),
+  ...gaugeBottom.map((el) => ({ ...el, mount: "bottom", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "H", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
+  ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "HFR", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
 ];
 
 const priority = [

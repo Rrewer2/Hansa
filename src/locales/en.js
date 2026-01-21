@@ -104,7 +104,7 @@ export default {
   material: ["Material"],
   h: ["Height"],
   gauge: ["Pressure gauge"],
-  gaugeShuttOff: ["Pressure gauge shut-off"],
+  gaugeShutOff: ["Pressure gauge shut-off"],
   levelTemp: ["Level-temperature switch"],
   descr1: ["Power unit parameters:"],
   descr2: ["Pump flow rate"],
