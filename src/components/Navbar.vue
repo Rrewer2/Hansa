@@ -3,7 +3,7 @@
 import { text } from "../services/text";
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 
-const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity"];
+const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity", "draw"];
 const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "load"]);
 </script>
 
@@ -22,7 +22,7 @@ const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "l
 .nav {
   position: fixed;
   top: 0;
-  left: 61vw;
+  left: 62vw;
   z-index: 150;
 }
 
@@ -30,11 +30,11 @@ const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "l
   display: inline-block;
   background-color: #a2a1a1;
   padding: 0.4vw 0.8vw;
-  margin: 0 0.2vw;
+  margin: 0 0.1vw;
   border-radius: 0 0 1vw 1vw;
   font-size: 1.1rem;
   cursor: pointer;
-  min-width: 7vw;
+  min-width: 5vw;
   height: 40px;
   transition: all ease 0.2s;
 }

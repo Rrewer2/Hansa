@@ -12,6 +12,7 @@ import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
 import Picture from "./components/Picture.vue";
 import LogoStart from "./components/LogoStart.vue";
+import Drawings from "./components/Drawings.vue";
 
 const simile = ref({ zlec: "", lista: "" });
 const init = {
@@ -42,9 +43,7 @@ const pumpInit = { Q: "", p: "", DR2type: 1, start: "", startValve: "GA", DBD: "
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
-  HKSH: [
-    // { ...cylInit, id: getId("c") }
-  ],
+  HKSH: [{ ...cylInit, id: getId("c") }],
 });
 const project = ref([]);
 const load = () => {
@@ -162,6 +161,7 @@ onMounted(() => {
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
+    <!-- <Drawings v-if="navPage[5]" /> -->
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <LogoStart class="logo" />
