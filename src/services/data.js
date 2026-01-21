@@ -197,6 +197,7 @@ const enginesK400 = [
   { title: "K-400B35-7.5132M", size: 132, power: 7.5, meta: "Silnik el. 400/690V 7,5KW 1465U B35 IE3" },
   { title: "K-400B5-11-132L", size: 132, power: 11, meta: "Silnik prog. 400/690V 11kW 1465 B5 132L2" },
   { title: "K-400B35-11-132L", size: 132, power: 11, meta: "Silnik prog. 400/690V 11kW 1465 B5 132L2" },
+  { title: "K-400B35-22-180", size: 180, power: 22, meta: "Silnik elektr. 22 kW; B35; 1400; 180L B35" },
 ].map(({ meta, ...rest }) => ({ ...rest, U: meta.includes("400V") ? "400V" : "400/690V", n: meta.match(/(\d{4})/)[1], meta }));
 const enginesK230 = [
   { title: "K-230B14-0.18-63", size: 63, power: 0.18, meta: "Siln.1-faz. 230V; 0,18kW 1390obr.B34; MY" },
