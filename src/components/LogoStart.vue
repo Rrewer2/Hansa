@@ -3,11 +3,11 @@ import { ref, onMounted } from "vue";
 
 const showBox = ref(true);
 
-onMounted(() => {
-  setTimeout(() => {
-    showBox.value = false;
-  }, 1500);
-});
+// onMounted(() => {
+//   setTimeout(() => {
+//     showBox.value = false;
+//   }, 1500);
+// });
 </script>
 
 <template>

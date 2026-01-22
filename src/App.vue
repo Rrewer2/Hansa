@@ -164,7 +164,7 @@ onMounted(() => {
     <!-- <Drawings v-if="navPage[5]" /> -->
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
-  <LogoStart class="logo" />
+  <!-- <LogoStart class="logo" /> -->
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
@@ -192,7 +192,7 @@ onMounted(() => {
   bottom: 0;
   width: 50%;
   height: 50%;
-  background-image: url("/agregat.jpg");
+  /* background-image: url("/agregat.jpg"); */
   /* background-image: url("/tank.png"); */
   background-size: cover;
   background-position: center;

@@ -3,7 +3,14 @@
 import { text } from "../services/text";
 import LanguageSwitcher from "./LanguageSwitcher.vue";
 
-const navData = ["calculations", "scheme", "partsSelection", "offer", "similarity", "draw"];
+const navData = [
+  "calculations",
+  "scheme",
+  "partsSelection",
+  "offer",
+  "similarity",
+  // , "draw"
+];
 const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "load"]);
 </script>
 
