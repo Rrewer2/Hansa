@@ -721,6 +721,18 @@ const pistonPumpPBA = {
   HKPBA108L8051SF: { CC: 108, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
   HKPBA108L8064SF: { CC: 108, in: "G1″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
 };
+const pistonPumpOMFB = {
+  HKHDSBAPP12R: { CC: 12.6, in: "G1″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP17R: { CC: 16.9, in: "G1″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP25R: { CC: 25.1, in: "G1″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP34R: { CC: 33.8, in: "G1″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP47R: { CC: 47.1, in: "G1.1/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP56R: { CC: 56.7, in: "G1.1/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP64R: { CC: 63.5, in: "G1.1/4″", out: "G3/4″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP84R: { CC: 84.3, in: "G1.1/4″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP108R: { CC: 107.2, in: "G1.1/4″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+  HKHDSBAPP130R: { CC: 131.6, in: "G1.1/4″", out: "G1″", drain: false, pmax: 350, regulator: false, holePattern: "80 x 80 - Ø80", shaft: "8x32x36 DIN-ISO14" },
+};
 export const pumpData = {
   gears: [
     ["VIVOLO", gearPumpVivolo],
@@ -736,6 +748,7 @@ export const pumpData = {
     ["DAIKIN", pistonPumpDaikin],
     ["HIDROCEL", pistonPumpPBA],
     ["ECKERLE", gearPumpEckerle],
+    ["OMFB", pistonPumpOMFB],
   ].flatMap(([maker, pumpsByGroup]) => Object.entries(pumpsByGroup).map(([title, data]) => ({ [title]: { title, ...data, shaft: data.shaft || false, maker } }))),
 };
 const pump2WPH = {
