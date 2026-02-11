@@ -756,6 +756,10 @@ const pump2WPH = {
     { CC: 11, in: "G3/4″", out: "G1/2″", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
     { CC: 11, in: "G3/4″", out: "G1/2″", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
   ],
+  "PZ2-20/6.3EUP": [
+    { CC: 20, in: "G3/4″", out: "G1/2″", shaft: "1: 8", pmax: 210, holePattern: "96.2 x 71.5 - Ø36.5" },
+    { CC: 6.3, in: "G1/2″", out: "G1/2″", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  ],
   "2PZW4-20X4-2-77G": [
     { CC: 20, in: "G3/4″", out: "G1/2″", shaft: "1: 8", pmax: 220, holePattern: "96.2 x 71.5 - Ø36.5" },
     { CC: 4, in: "G1/2″", out: "G1/2″", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
