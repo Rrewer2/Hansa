@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-    <path d="M550 500v25-1" stroke="black" stroke-width="2"/>
-    <path d="M550 575v30-1" stroke="black" stroke-width="2"/>
-    <path d="M525 550l25-25 25 25-25 25z" stroke="black" stroke-width="1" fill="white"/>
-    <path d="M530 550h40-1" stroke="black" stroke-dasharray="5 2" stroke-width="1"/>
-    <circle cx="584" cy="550" r="8" stroke="black" stroke-width="1" fill="white"/>
-    <path d="M580 546l8+8" stroke="black" stroke-width="1" fill="white"/>
-    <path d="M580 554l8-8" stroke="black" stroke-width="1" fill="white"/>
-</svg>
