@@ -3,16 +3,16 @@ import { ref, onMounted } from "vue";
 
 const showBox = ref(true);
 
-// onMounted(() => {
-//   setTimeout(() => {
-//     showBox.value = false;
-//   }, 1500);
-// });
+onMounted(() => {
+  setTimeout(() => {
+    showBox.value = false;
+  }, 8000);
+});
 </script>
 
 <template>
   <transition name="fade">
-    <img v-if="showBox" class="logo" src="/agregat.jpg" />
+    <img v-if="showBox" class="logo" src="/joke.png" />
   </transition>
 </template>
 
@@ -20,7 +20,7 @@ const showBox = ref(true);
 /* Тривалість анімації */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
 }
 
 /* Початок та кінець */

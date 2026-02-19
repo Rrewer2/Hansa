@@ -164,7 +164,7 @@ onMounted(() => {
     <!-- <Drawings v-if="navPage[5]" /> -->
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
-  <!-- <LogoStart class="logo" /> -->
+  <LogoStart class="logo" />
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
@@ -203,7 +203,8 @@ onMounted(() => {
   position: absolute;
   inset: 0;
   z-index: 1000;
-  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
 }
 article,
 section {
