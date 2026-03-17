@@ -97,7 +97,7 @@
   },
   {
     "title": "08BS921",
-    "cost": "0,35"
+    "cost": "0,34"
   },
   {
     "title": "08BS9212",
@@ -141,7 +141,7 @@
   },
   {
     "title": "08BS923",
-    "cost": "0,46"
+    "cost": "0,47"
   },
   {
     "title": "08BS9230",
@@ -149,7 +149,7 @@
   },
   {
     "title": "08BS9232",
-    "cost": "0,52"
+    "cost": "0,53"
   },
   {
     "title": "08BS9233",
@@ -165,7 +165,7 @@
   },
   {
     "title": "08BS9239",
-    "cost": "0,86"
+    "cost": "0,96"
   },
   {
     "title": "08BS923FPM",
@@ -181,7 +181,7 @@
   },
   {
     "title": "08BS9245",
-    "cost": "2,04"
+    "cost": "2,01"
   },
   {
     "title": "08BS925",
@@ -669,7 +669,7 @@
   },
   {
     "title": "AFS100SCHRM",
-    "cost": "2,45"
+    "cost": "2,75"
   },
   {
     "title": "AFS100SCHRU",
@@ -789,7 +789,7 @@
   },
   {
     "title": "AFS106SCHRM",
-    "cost": "3,06"
+    "cost": "4,96"
   },
   {
     "title": "AFS106SCHRU",
@@ -1261,7 +1261,7 @@
   },
   {
     "title": "AOVRNW10L1/2ED",
-    "cost": "5,76"
+    "cost": "5,74"
   },
   {
     "title": "AOVRNW10L1/2EDVA",
@@ -1269,11 +1269,11 @@
   },
   {
     "title": "AOVRNW10L1/4ED",
-    "cost": "5,51"
+    "cost": "5,52"
   },
   {
     "title": "AOVRNW10LED",
-    "cost": "4,72"
+    "cost": "4,67"
   },
   {
     "title": "AOVRNW10SED",
@@ -1281,7 +1281,7 @@
   },
   {
     "title": "AOVRNW13LED",
-    "cost": "6,18"
+    "cost": "5,98"
   },
   {
     "title": "AOVRNW13LEDVA",
@@ -1829,7 +1829,7 @@
   },
   {
     "title": "AVRNW13L3/8ED",
-    "cost": "6,06"
+    "cost": "6,17"
   },
   {
     "title": "AVRNW13LED",
@@ -2289,7 +2289,7 @@
   },
   {
     "title": "B492433-NEI",
-    "cost": "28,81"
+    "cost": "32,92"
   },
   {
     "title": "B511433-NEI",
@@ -2885,7 +2885,7 @@
   },
   {
     "title": "BKR50ND",
-    "cost": "60,69"
+    "cost": "90,1"
   },
   {
     "title": "BKR75ND",
@@ -3009,7 +3009,7 @@
   },
   {
     "title": "BOER1/2",
-    "cost": "29,39"
+    "cost": "29,32"
   },
   {
     "title": "BOER1/4",
@@ -3057,7 +3057,7 @@
   },
   {
     "title": "BOXG",
-    "cost": "30,52"
+    "cost": "40,27"
   },
   {
     "title": "BOXGNBR90",
@@ -4825,7 +4825,7 @@
   },
   {
     "title": "DMONW10L",
-    "cost": "5,95"
+    "cost": "5,96"
   },
   {
     "title": "DMONW10L06S",
@@ -4861,7 +4861,7 @@
   },
   {
     "title": "DMONW13L",
-    "cost": "9,13"
+    "cost": "9,07"
   },
   {
     "title": "DMONW13L10S",
@@ -4901,7 +4901,7 @@
   },
   {
     "title": "DMONW16L",
-    "cost": "12,07"
+    "cost": "11,11"
   },
   {
     "title": "DMONW16L16S",
@@ -4917,7 +4917,7 @@
   },
   {
     "title": "DMONW16S",
-    "cost": "15,07"
+    "cost": "15,22"
   },
   {
     "title": "DMONW16S20",
@@ -4965,7 +4965,7 @@
   },
   {
     "title": "DMONW25L",
-    "cost": "23,08"
+    "cost": "22,9"
   },
   {
     "title": "DMONW25L13S",
@@ -5665,7 +5665,7 @@
   },
   {
     "title": "EGTP1250560600A",
-    "cost": "9,63"
+    "cost": "9,46"
   },
   {
     "title": "EGTP1250560630A",
@@ -6529,15 +6529,15 @@
   },
   {
     "title": "F1",
-    "cost": "13,07"
+    "cost": "13,27"
   },
   {
     "title": "F2",
-    "cost": "16,53"
+    "cost": "16,54"
   },
   {
     "title": "F3.5A",
-    "cost": "59,35"
+    "cost": "59,37"
   },
   {
     "title": "F3.5B",
@@ -6705,7 +6705,7 @@
   },
   {
     "title": "FE2",
-    "cost": "34,53"
+    "cost": "34,54"
   },
   {
     "title": "FE3A",
@@ -6757,7 +6757,7 @@
   },
   {
     "title": "FH3006",
-    "cost": "6,54"
+    "cost": "7,14"
   },
   {
     "title": "FH3007",
@@ -6857,7 +6857,7 @@
   },
   {
     "title": "FIBL046FP03002",
-    "cost": "29,52"
+    "cost": "29,23"
   },
   {
     "title": "FIBL046FP10002",
@@ -6877,7 +6877,7 @@
   },
   {
     "title": "FIBL080GP03",
-    "cost": "33,79"
+    "cost": "33,62"
   },
   {
     "title": "FIBL080GP10",
@@ -6885,15 +6885,15 @@
   },
   {
     "title": "FIBL116FP03001",
-    "cost": "78,21"
+    "cost": "77,92"
   },
   {
     "title": "FIBL116FP03002",
-    "cost": "116,19"
+    "cost": "115,03"
   },
   {
     "title": "FIBLEMP0071P03",
-    "cost": "16,44"
+    "cost": "16,4"
   },
   {
     "title": "FIBLEMP0072P03",
@@ -7001,11 +7001,11 @@
   },
   {
     "title": "FIRL150P10NVG3/4",
-    "cost": "80,45"
+    "cost": "80,39"
   },
   {
     "title": "FIRL225P10NVG1",
-    "cost": "94,14"
+    "cost": "94,71"
   },
   {
     "title": "FIRL225P10NVG3/4",
@@ -7025,7 +7025,7 @@
   },
   {
     "title": "FIRL610P10NVG11/2",
-    "cost": "207,05"
+    "cost": "187,43"
   },
   {
     "title": "FIRLEMP0072P10",
@@ -7053,7 +7053,7 @@
   },
   {
     "title": "FIRLEMP0204P10",
-    "cost": "32,31"
+    "cost": "51,02"
   },
   {
     "title": "FIRLEMP0211A10",
@@ -7085,7 +7085,7 @@
   },
   {
     "title": "FISGEMP0095M903/4",
-    "cost": "25,99"
+    "cost": "26,05"
   },
   {
     "title": "FISGEMP0135M9011/4",
@@ -7121,7 +7121,7 @@
   },
   {
     "title": "FISPEMP0147P10",
-    "cost": "35,01"
+    "cost": "34,72"
   },
   {
     "title": "FISPEMP0182A10",
@@ -7181,7 +7181,7 @@
   },
   {
     "title": "FISPR55P10VG3/4",
-    "cost": "92,54"
+    "cost": "92,57"
   },
   {
     "title": "FISPRFK001G11/4",
@@ -7189,7 +7189,7 @@
   },
   {
     "title": "FISPRFK001G3/4",
-    "cost": "54,57"
+    "cost": "54,49"
   },
   {
     "title": "FISPRFK002G11/2",
@@ -7201,7 +7201,7 @@
   },
   {
     "title": "FIVDEA50HA50",
-    "cost": "134,39"
+    "cost": "134,38"
   },
   {
     "title": "FKKG31IR25DAL",
@@ -7261,7 +7261,7 @@
   },
   {
     "title": "FS-16",
-    "cost": "1,13"
+    "cost": "1,22"
   },
   {
     "title": "FS-20",
@@ -7273,7 +7273,7 @@
   },
   {
     "title": "FS-32",
-    "cost": "1,43"
+    "cost": "1,52"
   },
   {
     "title": "FS-40",
@@ -7621,7 +7621,7 @@
   },
   {
     "title": "GA7080-7",
-    "cost": "3,09"
+    "cost": "2,66"
   },
   {
     "title": "GA7585-7",
@@ -7705,7 +7705,7 @@
   },
   {
     "title": "GAB06HB",
-    "cost": "3,1"
+    "cost": "3,09"
   },
   {
     "title": "GAB06HB04",
@@ -7741,7 +7741,7 @@
   },
   {
     "title": "GAB08HB",
-    "cost": "4,48"
+    "cost": "4,31"
   },
   {
     "title": "GAB08HB04",
@@ -9165,7 +9165,7 @@
   },
   {
     "title": "GEHRED06HB",
-    "cost": "3,44"
+    "cost": "3,43"
   },
   {
     "title": "GEHRED06HB04",
@@ -9237,11 +9237,11 @@
   },
   {
     "title": "GEHRED08HB",
-    "cost": "3,97"
+    "cost": "3,95"
   },
   {
     "title": "GEHRED08HB06",
-    "cost": "4,07"
+    "cost": "4,05"
   },
   {
     "title": "GEHRED08HB10",
@@ -9309,7 +9309,7 @@
   },
   {
     "title": "GEHRED12HB",
-    "cost": "6,2"
+    "cost": "6,19"
   },
   {
     "title": "GEHRED12HB08",
@@ -10193,7 +10193,7 @@
   },
   {
     "title": "GHB04",
-    "cost": "1,95"
+    "cost": "1,94"
   },
   {
     "title": "GHB04HB06",
@@ -10217,7 +10217,7 @@
   },
   {
     "title": "GHB04HB12",
-    "cost": "4,42"
+    "cost": "4,38"
   },
   {
     "title": "GHB04HB16",
@@ -10253,11 +10253,11 @@
   },
   {
     "title": "GHB06",
-    "cost": "2,26"
+    "cost": "2,24"
   },
   {
     "title": "GHB06HB08",
-    "cost": "3,37"
+    "cost": "3,36"
   },
   {
     "title": "GHB06HB08VA",
@@ -11341,7 +11341,7 @@
   },
   {
     "title": "GMM63-250",
-    "cost": "22,1"
+    "cost": "22,27"
   },
   {
     "title": "GMM63-250H",
@@ -11349,7 +11349,7 @@
   },
   {
     "title": "GMM63-250HFR",
-    "cost": "29,53"
+    "cost": "29,42"
   },
   {
     "title": "GMM63-250HKR",
@@ -11385,7 +11385,7 @@
   },
   {
     "title": "GMM63-400HFR",
-    "cost": "30,93"
+    "cost": "31,32"
   },
   {
     "title": "GMM63-400HKR",
@@ -11669,7 +11669,7 @@
   },
   {
     "title": "GPS60",
-    "cost": "12,12"
+    "cost": "11,82"
   },
   {
     "title": "GPS60-1",
@@ -12018,6 +12018,26 @@
   {
     "title": "H-BUNDJACKE64",
     "cost": "146,84"
+  },
+  {
+    "title": "H-BUNDJACKEL",
+    "cost": "172,58"
+  },
+  {
+    "title": "H-BUNDJACKEM",
+    "cost": "172,58"
+  },
+  {
+    "title": "H-BUNDJACKES",
+    "cost": "172,58"
+  },
+  {
+    "title": "H-BUNDJACKEXL",
+    "cost": "172,58"
+  },
+  {
+    "title": "H-BUNDJACKEXXL",
+    "cost": "172,58"
   },
   {
     "title": "H-CUTTERMESSERLI",
@@ -12705,7 +12725,7 @@
   },
   {
     "title": "HBKHL10BVZ",
-    "cost": "70,93"
+    "cost": "71,05"
   },
   {
     "title": "HD104",
@@ -12761,7 +12781,7 @@
   },
   {
     "title": "HD125",
-    "cost": "17,07"
+    "cost": "17,56"
   },
   {
     "title": "HD125T",
@@ -13149,7 +13169,7 @@
   },
   {
     "title": "HFMKL15",
-    "cost": "11,57"
+    "cost": "11,56"
   },
   {
     "title": "HFMKL18",
@@ -13493,7 +13513,7 @@
   },
   {
     "title": "HFMMKR3/8ED",
-    "cost": "9,93"
+    "cost": "9,92"
   },
   {
     "title": "HFMMKR3/8S",
@@ -13517,7 +13537,7 @@
   },
   {
     "title": "HFMMMA1/4",
-    "cost": "8,59"
+    "cost": "8,61"
   },
   {
     "title": "HFMMMA1/4-12",
@@ -13541,7 +13561,7 @@
   },
   {
     "title": "HFMSKE1000",
-    "cost": "16,98"
+    "cost": "17,02"
   },
   {
     "title": "HFMSKE1000-12",
@@ -13637,7 +13657,7 @@
   },
   {
     "title": "HK00613",
-    "cost": "73,15"
+    "cost": "73,16"
   },
   {
     "title": "HK00713",
@@ -13677,7 +13697,7 @@
   },
   {
     "title": "HK055211000900",
-    "cost": "227,61"
+    "cost": "230,89"
   },
   {
     "title": "HK055301000300",
@@ -13710,6 +13730,10 @@
   {
     "title": "HK0P0401ABBA",
     "cost": "237,41"
+  },
+  {
+    "title": "HK0P0501ABBA",
+    "cost": "204,55"
   },
   {
     "title": "HK0P0502ABBA",
@@ -13857,7 +13881,7 @@
   },
   {
     "title": "HK1P2502FBBA",
-    "cost": "263,22"
+    "cost": "263,23"
   },
   {
     "title": "HK1P2502FIIA",
@@ -13877,11 +13901,11 @@
   },
   {
     "title": "HK1P3102FBBA",
-    "cost": "287,85"
+    "cost": "288,65"
   },
   {
     "title": "HK1P3402FBBA",
-    "cost": "219,15"
+    "cost": "291,52"
   },
   {
     "title": "HK1P3402FIIA",
@@ -13917,7 +13941,7 @@
   },
   {
     "title": "HK2APF06F02Z41RSS",
-    "cost": "152,6"
+    "cost": "140,9"
   },
   {
     "title": "HK2APF08F02Z41RSS",
@@ -13944,6 +13968,10 @@
     "cost": "169,33"
   },
   {
+    "title": "HK2APF20F06Z41LSS",
+    "cost": "145,24"
+  },
+  {
     "title": "HK2APF20F06Z41RSS",
     "cost": "169,33"
   },
@@ -13952,12 +13980,20 @@
     "cost": "183,44"
   },
   {
+    "title": "HK2MS124VDC001",
+    "cost": "1 015,83"
+  },
+  {
+    "title": "HK2MS224VDC001",
+    "cost": "1 291,23"
+  },
+  {
     "title": "HK2P4102EBBA",
-    "cost": "332,32"
+    "cost": "345,37"
   },
   {
     "title": "HK2P4102EOOA",
-    "cost": "333,4"
+    "cost": "339,05"
   },
   {
     "title": "HK2P4131CSRA",
@@ -13973,7 +14009,7 @@
   },
   {
     "title": "HK2P4302EOOA",
-    "cost": "341,88"
+    "cost": "341,37"
   },
   {
     "title": "HK2P4332CSRA",
@@ -13997,7 +14033,7 @@
   },
   {
     "title": "HK2P4502EOOA",
-    "cost": "355,13"
+    "cost": "353,38"
   },
   {
     "title": "HK2P4531CSRA",
@@ -14029,7 +14065,7 @@
   },
   {
     "title": "HK2P4702EOOA",
-    "cost": "357,32"
+    "cost": "353,24"
   },
   {
     "title": "HK2P4711FSRA",
@@ -14129,7 +14165,7 @@
   },
   {
     "title": "HK2P5502EPOA",
-    "cost": "375,58"
+    "cost": "375,53"
   },
   {
     "title": "HK2P5512FSRA",
@@ -14189,7 +14225,7 @@
   },
   {
     "title": "HK4131070601C1Q",
-    "cost": "325,11"
+    "cost": "323,25"
   },
   {
     "title": "HK4131070601C1R",
@@ -14205,7 +14241,7 @@
   },
   {
     "title": "HK4131510101C1Q",
-    "cost": "308,15"
+    "cost": "307,48"
   },
   {
     "title": "HK4131510201C1Q",
@@ -14214,6 +14250,10 @@
   {
     "title": "HK4131510201C1R",
     "cost": "163,75"
+  },
+  {
+    "title": "HK41320103021Q",
+    "cost": "166,41"
   },
   {
     "title": "HK4132010302C17",
@@ -14233,7 +14273,7 @@
   },
   {
     "title": "HK4132030302C1Q",
-    "cost": "337,07"
+    "cost": "337,16"
   },
   {
     "title": "HK4132030302C1R",
@@ -14245,7 +14285,7 @@
   },
   {
     "title": "HK4132070302C1Q",
-    "cost": "362,11"
+    "cost": "361,86"
   },
   {
     "title": "HK4132070302C1R",
@@ -14301,7 +14341,7 @@
   },
   {
     "title": "HK4232010302C1Q",
-    "cost": "523,2"
+    "cost": "527,73"
   },
   {
     "title": "HK4232030302C1Q",
@@ -14313,7 +14353,7 @@
   },
   {
     "title": "HK4232070302C1Q",
-    "cost": "544,4"
+    "cost": "545,9"
   },
   {
     "title": "HK4232080302C1Q",
@@ -14368,8 +14408,16 @@
     "cost": "3 808,96"
   },
   {
+    "title": "HK80M4B352-4IE2",
+    "cost": "275,48"
+  },
+  {
     "title": "HK80M4B352-4IE3",
     "cost": "385,16"
+  },
+  {
+    "title": "HK80M4B52-4IE3",
+    "cost": "280,43"
   },
   {
     "title": "HK90L4B352-4IE3",
@@ -14477,7 +14525,7 @@
   },
   {
     "title": "HKA243228N2AAL",
-    "cost": "46,24"
+    "cost": "46,08"
   },
   {
     "title": "HKA243228N3AL",
@@ -14485,7 +14533,7 @@
   },
   {
     "title": "HKA28383860N2AAL",
-    "cost": "72,2"
+    "cost": "71,5"
   },
   {
     "title": "HKA28383860N3AL",
@@ -14581,7 +14629,7 @@
   },
   {
     "title": "HKAS321/2",
-    "cost": "73,46"
+    "cost": "73,2"
   },
   {
     "title": "HKASEP030000",
@@ -14617,7 +14665,7 @@
   },
   {
     "title": "HKAZPJ016RH030MB",
-    "cost": "863,79"
+    "cost": "864,03"
   },
   {
     "title": "HKAZPJ019RH030MB",
@@ -14745,7 +14793,7 @@
   },
   {
     "title": "HKBA434HF",
-    "cost": "197,39"
+    "cost": "238,74"
   },
   {
     "title": "HKBA518",
@@ -14765,7 +14813,7 @@
   },
   {
     "title": "HKBAKRA12",
-    "cost": "141,88"
+    "cost": "188,97"
   },
   {
     "title": "HKBAKRA130",
@@ -14773,19 +14821,19 @@
   },
   {
     "title": "HKBAKRA20",
-    "cost": "180,74"
+    "cost": "180,81"
   },
   {
     "title": "HKBAKRA30",
-    "cost": "254,17"
+    "cost": "254,23"
   },
   {
     "title": "HKBAKRA44",
-    "cost": "432,2"
+    "cost": "430,52"
   },
   {
     "title": "HKBAKRA70",
-    "cost": "491,96"
+    "cost": "490,08"
   },
   {
     "title": "HKBCWS",
@@ -14938,6 +14986,10 @@
   {
     "title": "HKBM408",
     "cost": "31,41"
+  },
+  {
+    "title": "HKBM40A",
+    "cost": "22,68"
   },
   {
     "title": "HKBM40A1",
@@ -15140,12 +15192,16 @@
     "cost": "695,32"
   },
   {
+    "title": "HKBSKRD324HF",
+    "cost": "168,05"
+  },
+  {
     "title": "HKBSKRDDICHT250",
     "cost": "28,49"
   },
   {
     "title": "HKBSKRDDICHT324",
-    "cost": "15,14"
+    "cost": "17,77"
   },
   {
     "title": "HKC12VDC",
@@ -15157,7 +15213,7 @@
   },
   {
     "title": "HKC24VDC",
-    "cost": "75,23"
+    "cost": "75,36"
   },
   {
     "title": "HKC24VDC33",
@@ -15273,15 +15329,15 @@
   },
   {
     "title": "HKCBS0800000",
-    "cost": "3,05"
+    "cost": "3,04"
   },
   {
     "title": "HKCBS1200000",
-    "cost": "7,71"
+    "cost": "7,69"
   },
   {
     "title": "HKCBS1600000",
-    "cost": "9,37"
+    "cost": "9,38"
   },
   {
     "title": "HKCBS2000000",
@@ -16561,7 +16617,7 @@
   },
   {
     "title": "HKDFE0523ZAW24DC",
-    "cost": "369,58"
+    "cost": "370,7"
   },
   {
     "title": "HKDFE0523ZAY24DC",
@@ -16745,7 +16801,7 @@
   },
   {
     "title": "HKDG4V30CVMU24DC",
-    "cost": "250,52"
+    "cost": "251,27"
   },
   {
     "title": "HKDG4V322AVMU24DC",
@@ -16876,12 +16932,16 @@
     "cost": "123,43"
   },
   {
+    "title": "HKDHE0711X00AC",
+    "cost": "140,85"
+  },
+  {
     "title": "HKDHE0711X00DC",
     "cost": "141,4"
   },
   {
     "title": "HKDHE0713X00DC",
-    "cost": "145,84"
+    "cost": "143,63"
   },
   {
     "title": "HKDHE0714X00AC",
@@ -16889,7 +16949,7 @@
   },
   {
     "title": "HKDHE0714X00DC",
-    "cost": "191,64"
+    "cost": "183,59"
   },
   {
     "title": "HKDHE07512X00DC",
@@ -17009,7 +17069,7 @@
   },
   {
     "title": "HKDICHTBANDMOOSGUM",
-    "cost": "17,18"
+    "cost": "16,25"
   },
   {
     "title": "HKDK1141",
@@ -17018,6 +17078,10 @@
   {
     "title": "HKDKE1610X00DC",
     "cost": "320,49"
+  },
+  {
+    "title": "HKDKE1611X00AC",
+    "cost": "112,29"
   },
   {
     "title": "HKDKE1611X00DC",
@@ -17066,6 +17130,10 @@
   {
     "title": "HKDKE1713X00DC",
     "cost": "205,02"
+  },
+  {
+    "title": "HKDKE1714X00AC",
+    "cost": "120,28"
   },
   {
     "title": "HKDKE1714X00DC",
@@ -17117,7 +17185,7 @@
   },
   {
     "title": "HKDLMDL100L",
-    "cost": "88,24"
+    "cost": "87,36"
   },
   {
     "title": "HKDLMDL112M",
@@ -17125,7 +17193,7 @@
   },
   {
     "title": "HKDLMDL132M",
-    "cost": "95,51"
+    "cost": "94,25"
   },
   {
     "title": "HKDLMDL132S",
@@ -17141,11 +17209,15 @@
   },
   {
     "title": "HKDLMDL180L",
-    "cost": "109,98"
+    "cost": "206,7"
   },
   {
     "title": "HKDLMDL180M",
     "cost": "108,7"
+  },
+  {
+    "title": "HKDLMDL200L",
+    "cost": "108,87"
   },
   {
     "title": "HKDLMDL90L",
@@ -17157,7 +17229,7 @@
   },
   {
     "title": "HKDPH2714DRSPIL",
-    "cost": "1 042,34"
+    "cost": "1 371,23"
   },
   {
     "title": "HKDPH4711DSPIL",
@@ -17168,20 +17240,28 @@
     "cost": "1 306,63"
   },
   {
+    "title": "HKDPT160NBR",
+    "cost": "9,18"
+  },
+  {
     "title": "HKDPT200NBR",
     "cost": "9,15"
   },
   {
     "title": "HKDPT250NBR",
-    "cost": "14,37"
+    "cost": "14,29"
   },
   {
     "title": "HKDPT300NBR",
-    "cost": "19,2"
+    "cost": "19,15"
   },
   {
     "title": "HKDPT350NBR",
     "cost": "11,96"
+  },
+  {
+    "title": "HKDRH3",
+    "cost": "591,36"
   },
   {
     "title": "HKDRV1250",
@@ -17221,7 +17301,7 @@
   },
   {
     "title": "HKDSA10N420A400",
-    "cost": "224,78"
+    "cost": "223,08"
   },
   {
     "title": "HKDSFL350",
@@ -17229,7 +17309,7 @@
   },
   {
     "title": "HKDSRM124POL5.0W",
-    "cost": "65,51"
+    "cost": "65,01"
   },
   {
     "title": "HKDTDFMCN",
@@ -17242,6 +17322,10 @@
   {
     "title": "HKEASBUSBOPT",
     "cost": "612,67"
+  },
+  {
+    "title": "HKEBAT",
+    "cost": "328,01"
   },
   {
     "title": "HKEBMASPS01H",
@@ -17284,12 +17368,16 @@
     "cost": "3 442,12"
   },
   {
+    "title": "HKEIPH3050RK23",
+    "cost": "4 726,57"
+  },
+  {
     "title": "HKEM103138X2F",
-    "cost": "246,68"
+    "cost": "247,67"
   },
   {
     "title": "HKEM103138X3F",
-    "cost": "248,47"
+    "cost": "247,06"
   },
   {
     "title": "HKEM103238X2F",
@@ -17301,7 +17389,7 @@
   },
   {
     "title": "HKEM103338X2F",
-    "cost": "415"
+    "cost": "414,49"
   },
   {
     "title": "HKEM103338X3F",
@@ -17328,6 +17416,10 @@
     "cost": "680,92"
   },
   {
+    "title": "HKEM105134X2F",
+    "cost": "374,82"
+  },
+  {
     "title": "HKEM105134X3F",
     "cost": "390,34"
   },
@@ -17350,6 +17442,10 @@
   {
     "title": "HKEM105434X3F",
     "cost": "704,03"
+  },
+  {
+    "title": "HKEM105534X3F",
+    "cost": "804,76"
   },
   {
     "title": "HKEM2072Y",
@@ -17417,7 +17513,7 @@
   },
   {
     "title": "HKEMIASIR01HM12",
-    "cost": "270,53"
+    "cost": "395,34"
   },
   {
     "title": "HKEPM032CD",
@@ -17465,7 +17561,7 @@
   },
   {
     "title": "HKEPMM032C",
-    "cost": "247,51"
+    "cost": "420,04"
   },
   {
     "title": "HKEPMMF",
@@ -17561,11 +17657,11 @@
   },
   {
     "title": "HKES3B38X2F",
-    "cost": "170,38"
+    "cost": "167,64"
   },
   {
     "title": "HKES3B38X3F",
-    "cost": "194,07"
+    "cost": "193,1"
   },
   {
     "title": "HKES5B34PLX2F",
@@ -17573,11 +17669,11 @@
   },
   {
     "title": "HKES5B34PLX3F",
-    "cost": "365,86"
+    "cost": "362,95"
   },
   {
     "title": "HKEV0822CY24VDC",
-    "cost": "155,38"
+    "cost": "154,17"
   },
   {
     "title": "HKEV0822DTC24VDC",
@@ -17589,7 +17685,7 @@
   },
   {
     "title": "HKEV0823DTC24VDC",
-    "cost": "158,67"
+    "cost": "160,92"
   },
   {
     "title": "HKEV0830C230RAC",
@@ -17605,7 +17701,7 @@
   },
   {
     "title": "HKEV1022DTC24VDC",
-    "cost": "173,7"
+    "cost": "172,33"
   },
   {
     "title": "HKEV1023C24VDC",
@@ -17633,7 +17729,7 @@
   },
   {
     "title": "HKEVH06A5",
-    "cost": "282,33"
+    "cost": "282,34"
   },
   {
     "title": "HKEVH06C3",
@@ -17765,7 +17861,7 @@
   },
   {
     "title": "HKFT29001-14",
-    "cost": "38,68"
+    "cost": "39,1"
   },
   {
     "title": "HKFT291-14",
@@ -17773,11 +17869,15 @@
   },
   {
     "title": "HKFT29101-14",
-    "cost": "38,95"
+    "cost": "38,69"
   },
   {
     "title": "HKFUSS150ALU",
-    "cost": "62,68"
+    "cost": "62,4"
+  },
+  {
+    "title": "HKFUSS75ALU",
+    "cost": "54,91"
   },
   {
     "title": "HKGASVSCHL232505",
@@ -17821,7 +17921,7 @@
   },
   {
     "title": "HKGEH34C1220",
-    "cost": "145,04"
+    "cost": "145,2"
   },
   {
     "title": "HKGEH34C1220GGG",
@@ -17829,7 +17929,7 @@
   },
   {
     "title": "HKGEH38C0820",
-    "cost": "88,12"
+    "cost": "88,15"
   },
   {
     "title": "HKGEH38C0820GGG",
@@ -17865,7 +17965,11 @@
   },
   {
     "title": "HKGEHB10212ST",
-    "cost": "64,08"
+    "cost": "63,57"
+  },
+  {
+    "title": "HKGEHB10338ST",
+    "cost": "65,99"
   },
   {
     "title": "HKGEHB12212ST",
@@ -18305,11 +18409,11 @@
   },
   {
     "title": "HKGP4030M10B",
-    "cost": "5,86"
+    "cost": "5,83"
   },
   {
     "title": "HKGP7540M12B",
-    "cost": "17,61"
+    "cost": "20,17"
   },
   {
     "title": "HKHDS1120K71",
@@ -18317,7 +18421,7 @@
   },
   {
     "title": "HKHDS1200K71",
-    "cost": "158,26"
+    "cost": "158,64"
   },
   {
     "title": "HKHDS1320K71",
@@ -18528,6 +18632,10 @@
     "cost": "342,12"
   },
   {
+    "title": "HKHM01200250",
+    "cost": "113,78"
+  },
+  {
     "title": "HKHM012100",
     "cost": "226,66"
   },
@@ -18621,7 +18729,7 @@
   },
   {
     "title": "HKHMP011210",
-    "cost": "256,17"
+    "cost": "256,97"
   },
   {
     "title": "HKHMP011350",
@@ -18629,7 +18737,7 @@
   },
   {
     "title": "HKHMP012100",
-    "cost": "356,03"
+    "cost": "353,4"
   },
   {
     "title": "HKHMP012210",
@@ -18673,7 +18781,7 @@
   },
   {
     "title": "HKHMS1.4210ECOA",
-    "cost": "537,99"
+    "cost": "536,67"
   },
   {
     "title": "HKHMS1.4210ECOC",
@@ -18705,7 +18813,7 @@
   },
   {
     "title": "HKHQ022",
-    "cost": "234,91"
+    "cost": "240,97"
   },
   {
     "title": "HKHQ022U",
@@ -18721,7 +18829,7 @@
   },
   {
     "title": "HKHR012",
-    "cost": "224,58"
+    "cost": "224,78"
   },
   {
     "title": "HKHR013",
@@ -18801,7 +18909,7 @@
   },
   {
     "title": "HKJV15A3RX95",
-    "cost": "2 100,20"
+    "cost": "2 080,88"
   },
   {
     "title": "HKJV23A4RX30",
@@ -18885,7 +18993,7 @@
   },
   {
     "title": "HKK18",
-    "cost": "306,19"
+    "cost": "306,41"
   },
   {
     "title": "HKK18CON",
@@ -18952,8 +19060,12 @@
     "cost": "297,43"
   },
   {
+    "title": "HKK207FBSPHT",
+    "cost": "495,44"
+  },
+  {
     "title": "HKK207FCSP",
-    "cost": "856,65"
+    "cost": "945,26"
   },
   {
     "title": "HKK208FCSP",
@@ -18961,7 +19073,7 @@
   },
   {
     "title": "HKK20CON",
-    "cost": "308,23"
+    "cost": "308,77"
   },
   {
     "title": "HKK21",
@@ -19012,12 +19124,16 @@
     "cost": "1 160,95"
   },
   {
+    "title": "HKK24V3.0-23088",
+    "cost": "1 554,56"
+  },
+  {
     "title": "HKK2501S1060",
     "cost": "21,25"
   },
   {
     "title": "HKK2501S1061",
-    "cost": "21,91"
+    "cost": "22,02"
   },
   {
     "title": "HKK3VL045B1NRMML0",
@@ -19085,7 +19201,7 @@
   },
   {
     "title": "HKK408A100LA4IE3",
-    "cost": "823,12"
+    "cost": "823,13"
   },
   {
     "title": "HKK409A100LB4IE3",
@@ -19097,7 +19213,7 @@
   },
   {
     "title": "HKKA12",
-    "cost": "215,74"
+    "cost": "216,11"
   },
   {
     "title": "HKKA16Z",
@@ -19113,7 +19229,7 @@
   },
   {
     "title": "HKKAS0003",
-    "cost": "18,96"
+    "cost": "19"
   },
   {
     "title": "HKKAS010",
@@ -19181,7 +19297,7 @@
   },
   {
     "title": "HKKE52",
-    "cost": "22,71"
+    "cost": "21,88"
   },
   {
     "title": "HKKE55",
@@ -19205,7 +19321,7 @@
   },
   {
     "title": "HKKEA12.7N",
-    "cost": "113,14"
+    "cost": "113,61"
   },
   {
     "title": "HKKEAN",
@@ -19253,7 +19369,7 @@
   },
   {
     "title": "HKKF26",
-    "cost": "246,02"
+    "cost": "246,96"
   },
   {
     "title": "HKKF68",
@@ -19269,7 +19385,7 @@
   },
   {
     "title": "HKKFDW",
-    "cost": "124,93"
+    "cost": "172,78"
   },
   {
     "title": "HKKG031100",
@@ -19333,7 +19449,7 @@
   },
   {
     "title": "HKKN01",
-    "cost": "40,92"
+    "cost": "42,15"
   },
   {
     "title": "HKKN02",
@@ -19341,7 +19457,7 @@
   },
   {
     "title": "HKKN03",
-    "cost": "67,6"
+    "cost": "67,69"
   },
   {
     "title": "HKKN09",
@@ -19373,7 +19489,7 @@
   },
   {
     "title": "HKKOCN",
-    "cost": "26,82"
+    "cost": "26,94"
   },
   {
     "title": "HKKONS219",
@@ -19401,7 +19517,7 @@
   },
   {
     "title": "HKKP2014D082E2L",
-    "cost": "817,74"
+    "cost": "791,51"
   },
   {
     "title": "HKKP2016D082E2L",
@@ -19409,7 +19525,7 @@
   },
   {
     "title": "HKKP2020D082E2L",
-    "cost": "847,76"
+    "cost": "833,28"
   },
   {
     "title": "HKKP2025D082E2L",
@@ -19461,7 +19577,7 @@
   },
   {
     "title": "HKKR012",
-    "cost": "496,06"
+    "cost": "488,73"
   },
   {
     "title": "HKKR013",
@@ -19545,7 +19661,7 @@
   },
   {
     "title": "HKKS140",
-    "cost": "296,93"
+    "cost": "297,04"
   },
   {
     "title": "HKKS141",
@@ -19589,7 +19705,7 @@
   },
   {
     "title": "HKKS90",
-    "cost": "264,94"
+    "cost": "267,4"
   },
   {
     "title": "HKKS90V",
@@ -19737,7 +19853,7 @@
   },
   {
     "title": "HKLENKROLLE150",
-    "cost": "45,96"
+    "cost": "58,15"
   },
   {
     "title": "HKLVA10TM10",
@@ -19745,11 +19861,11 @@
   },
   {
     "title": "HKLVA10TM12",
-    "cost": "24,8"
+    "cost": "24,32"
   },
   {
     "title": "HKLVA20TM12",
-    "cost": "33,99"
+    "cost": "33,82"
   },
   {
     "title": "HKLVA30TM12",
@@ -19765,11 +19881,11 @@
   },
   {
     "title": "HKM1035",
-    "cost": "2,55"
+    "cost": "6,32"
   },
   {
     "title": "HKM1050",
-    "cost": "2,76"
+    "cost": "6,78"
   },
   {
     "title": "HKM1090",
@@ -19813,7 +19929,7 @@
   },
   {
     "title": "HKM530",
-    "cost": "2,59"
+    "cost": "2,58"
   },
   {
     "title": "HKM550",
@@ -19821,19 +19937,19 @@
   },
   {
     "title": "HKM560",
-    "cost": "1,88"
+    "cost": "1,87"
   },
   {
     "title": "HKM570",
-    "cost": "5,57"
+    "cost": "5,58"
   },
   {
     "title": "HKM580",
-    "cost": "4,86"
+    "cost": "4,72"
   },
   {
     "title": "HKM590",
-    "cost": "3,63"
+    "cost": "6,06"
   },
   {
     "title": "HKM6140",
@@ -19861,7 +19977,7 @@
   },
   {
     "title": "HKM835",
-    "cost": "4,38"
+    "cost": "4,34"
   },
   {
     "title": "HKMA3",
@@ -19953,7 +20069,7 @@
   },
   {
     "title": "HKNTMM319070NC280",
-    "cost": "177,06"
+    "cost": "176,58"
   },
   {
     "title": "HKNTMM319080NC280",
@@ -19977,7 +20093,7 @@
   },
   {
     "title": "HKNTMXPMS2S280",
-    "cost": "619,9"
+    "cost": "613,23"
   },
   {
     "title": "HKNTMXPMS2S370",
@@ -19992,16 +20108,20 @@
     "cost": "638,04"
   },
   {
+    "title": "HKOEW400BSK",
+    "cost": "1 007,66"
+  },
+  {
     "title": "HKOEWBAKRA30",
     "cost": "319,89"
   },
   {
     "title": "HKOEWBAKRA44",
-    "cost": "416,96"
+    "cost": "681,76"
   },
   {
     "title": "HKOEWBAKRA70",
-    "cost": "523,02"
+    "cost": "987,05"
   },
   {
     "title": "HKOILAIR2005K",
@@ -20009,7 +20129,7 @@
   },
   {
     "title": "HKOILAIR2010K",
-    "cost": "690,82"
+    "cost": "691,21"
   },
   {
     "title": "HKOILAIR2020K",
@@ -20017,7 +20137,7 @@
   },
   {
     "title": "HKOILAIR2024K",
-    "cost": "1 358,33"
+    "cost": "1 354,37"
   },
   {
     "title": "HKOILAIR2040K",
@@ -20057,7 +20177,7 @@
   },
   {
     "title": "HKOLM0.75210C",
-    "cost": "159,89"
+    "cost": "175,13"
   },
   {
     "title": "HKOLM0.75350A",
@@ -20069,7 +20189,7 @@
   },
   {
     "title": "HKOLM1.0210C",
-    "cost": "290,73"
+    "cost": "284,46"
   },
   {
     "title": "HKOLM1.4140C",
@@ -20153,7 +20273,7 @@
   },
   {
     "title": "HKPAM0152502",
-    "cost": "275,36"
+    "cost": "275,35"
   },
   {
     "title": "HKPAM0154500",
@@ -20172,8 +20292,16 @@
     "cost": "21,7"
   },
   {
+    "title": "HKPAM190PIO",
+    "cost": "489,14"
+  },
+  {
     "title": "HKPAMDSV7646",
     "cost": "8,31"
+  },
+  {
+    "title": "HKPAMHR0190102",
+    "cost": "6,71"
   },
   {
     "title": "HKPAMSAL05",
@@ -20301,7 +20429,7 @@
   },
   {
     "title": "HKPL250030500",
-    "cost": "78,58"
+    "cost": "77,79"
   },
   {
     "title": "HKPL250034400",
@@ -20345,7 +20473,7 @@
   },
   {
     "title": "HKPN2070PN400SER",
-    "cost": "552,59"
+    "cost": "551,06"
   },
   {
     "title": "HKPQT03SS",
@@ -20378,6 +20506,10 @@
   {
     "title": "HKPRMP06E10",
     "cost": "98,12"
+  },
+  {
+    "title": "HKPROBEF-LDPE500D",
+    "cost": "6,69"
   },
   {
     "title": "HKPRRS10NS015",
@@ -20425,7 +20557,7 @@
   },
   {
     "title": "HKPTRV20096446ZFV",
-    "cost": "88,29"
+    "cost": "87,88"
   },
   {
     "title": "HKPTRV250110441",
@@ -20433,7 +20565,7 @@
   },
   {
     "title": "HKPTRV250110446",
-    "cost": "80,69"
+    "cost": "80,87"
   },
   {
     "title": "HKPTRV250110448",
@@ -20449,7 +20581,7 @@
   },
   {
     "title": "HKPTRV300130446",
-    "cost": "96,57"
+    "cost": "95,73"
   },
   {
     "title": "HKPTRV300144465",
@@ -20485,7 +20617,7 @@
   },
   {
     "title": "HKQV0611",
-    "cost": "709,45"
+    "cost": "709,85"
   },
   {
     "title": "HKQV0616",
@@ -20497,7 +20629,7 @@
   },
   {
     "title": "HKR2428-19.05A",
-    "cost": "47,22"
+    "cost": "46,75"
   },
   {
     "title": "HKR2838-19.05A",
@@ -20601,19 +20733,19 @@
   },
   {
     "title": "HKRSBAKRA20",
-    "cost": "5,3"
+    "cost": "5,34"
   },
   {
     "title": "HKRSBAKRA30",
-    "cost": "9,45"
+    "cost": "9,37"
   },
   {
     "title": "HKRSBAKRA44",
-    "cost": "9,65"
+    "cost": "9,83"
   },
   {
     "title": "HKRSBAKRA70",
-    "cost": "13,03"
+    "cost": "13,01"
   },
   {
     "title": "HKRTR0501CG1P10",
@@ -20621,7 +20753,7 @@
   },
   {
     "title": "HKRTR0502CG1P10",
-    "cost": "47,89"
+    "cost": "47,93"
   },
   {
     "title": "HKRV0630400",
@@ -20673,7 +20805,7 @@
   },
   {
     "title": "HKS3E35SC400B02",
-    "cost": "4 606,67"
+    "cost": "4 540,13"
   },
   {
     "title": "HKS3E55SC400B02",
@@ -20685,7 +20817,7 @@
   },
   {
     "title": "HKSAB10M210N",
-    "cost": "1 222,71"
+    "cost": "1 219,71"
   },
   {
     "title": "HKSAB10M250N",
@@ -20801,7 +20933,7 @@
   },
   {
     "title": "HKSP667110",
-    "cost": "18,33"
+    "cost": "8,36"
   },
   {
     "title": "HKSP667220",
@@ -20813,7 +20945,7 @@
   },
   {
     "title": "HKSP66824",
-    "cost": "7,5"
+    "cost": "7,51"
   },
   {
     "title": "HKSP669",
@@ -20833,7 +20965,7 @@
   },
   {
     "title": "HKSPCAE12DC",
-    "cost": "43,66"
+    "cost": "89,1"
   },
   {
     "title": "HKSPCAE220DC",
@@ -20872,8 +21004,16 @@
     "cost": "45,74"
   },
   {
+    "title": "HKSPCOE230AC",
+    "cost": "45,28"
+  },
+  {
+    "title": "HKSPCOE230RC",
+    "cost": "56,9"
+  },
+  {
     "title": "HKSPCOE24DC",
-    "cost": "45,64"
+    "cost": "45,14"
   },
   {
     "title": "HKSPCOEK24DC",
@@ -20916,6 +21056,14 @@
     "cost": "106,72"
   },
   {
+    "title": "HKSPSET6DH103500",
+    "cost": "18,82"
+  },
+  {
+    "title": "HKSPSET6OE101116",
+    "cost": "3,61"
+  },
+  {
     "title": "HKSPSVS0812VDC",
     "cost": "69,45"
   },
@@ -20929,11 +21077,15 @@
   },
   {
     "title": "HKSPWPDHS",
-    "cost": "111,01"
+    "cost": "105,2"
   },
   {
     "title": "HKSPWPDKEDC",
     "cost": "152,15"
+  },
+  {
+    "title": "HKSPZH5P",
+    "cost": "29,68"
   },
   {
     "title": "HKSPZH7P",
@@ -21005,7 +21157,7 @@
   },
   {
     "title": "HKSVT0S08NC24DC",
-    "cost": "141,16"
+    "cost": "142"
   },
   {
     "title": "HKSZ100",
@@ -21013,7 +21165,7 @@
   },
   {
     "title": "HKTEHM1000",
-    "cost": "1 584,11"
+    "cost": "1 569,72"
   },
   {
     "title": "HKTLA10M3015",
@@ -21021,7 +21173,7 @@
   },
   {
     "title": "HKTLA1G14",
-    "cost": "3,73"
+    "cost": "9,55"
   },
   {
     "title": "HKTLA2G38",
@@ -21093,7 +21245,7 @@
   },
   {
     "title": "HKTM45A50",
-    "cost": "100,28"
+    "cost": "99,92"
   },
   {
     "title": "HKTM46A60",
@@ -21145,7 +21297,7 @@
   },
   {
     "title": "HKTSF1G14",
-    "cost": "5,12"
+    "cost": "5,44"
   },
   {
     "title": "HKTSF1M1415",
@@ -21153,11 +21305,11 @@
   },
   {
     "title": "HKTSF2G38",
-    "cost": "6,18"
+    "cost": "7,43"
   },
   {
     "title": "HKTSF3G12",
-    "cost": "7,47"
+    "cost": "7,28"
   },
   {
     "title": "HKTSF3M1815",
@@ -21165,7 +21317,7 @@
   },
   {
     "title": "HKTSF4G34",
-    "cost": "10,12"
+    "cost": "25,21"
   },
   {
     "title": "HKTSF5G1",
@@ -21173,7 +21325,7 @@
   },
   {
     "title": "HKTSF5M2215",
-    "cost": "16,16"
+    "cost": "17,84"
   },
   {
     "title": "HKTSF6G114",
@@ -21189,7 +21341,7 @@
   },
   {
     "title": "HKTSF8M3320",
-    "cost": "15,63"
+    "cost": "16,47"
   },
   {
     "title": "HKTSK1TKO60L280",
@@ -21198,6 +21350,10 @@
   {
     "title": "HKTSK1TKO60L340",
     "cost": "158,34"
+  },
+  {
+    "title": "HKTSK1TKO70L340",
+    "cost": "211"
   },
   {
     "title": "HKV01205003",
@@ -21269,7 +21425,7 @@
   },
   {
     "title": "HKV01230012",
-    "cost": "89,65"
+    "cost": "89,64"
   },
   {
     "title": "HKV05900490",
@@ -21293,7 +21449,7 @@
   },
   {
     "title": "HKV15010008",
-    "cost": "20,79"
+    "cost": "20,47"
   },
   {
     "title": "HKV15010012",
@@ -21425,11 +21581,11 @@
   },
   {
     "title": "HKV2575-1/2",
-    "cost": "136,43"
+    "cost": "125,66"
   },
   {
     "title": "HKV2575-1/4",
-    "cost": "88,24"
+    "cost": "88,34"
   },
   {
     "title": "HKV2575-1/8",
@@ -21441,7 +21597,7 @@
   },
   {
     "title": "HKV2575-3/8",
-    "cost": "99,62"
+    "cost": "106,47"
   },
   {
     "title": "HKV2705-3/8",
@@ -21465,7 +21621,7 @@
   },
   {
     "title": "HKV62150320",
-    "cost": "345,27"
+    "cost": "343,76"
   },
   {
     "title": "HKV62150321",
@@ -21549,7 +21705,7 @@
   },
   {
     "title": "HKVAFX",
-    "cost": "105,99"
+    "cost": "103,67"
   },
   {
     "title": "HKVAN8",
@@ -21557,7 +21713,7 @@
   },
   {
     "title": "HKVAV1",
-    "cost": "27,96"
+    "cost": "27,9"
   },
   {
     "title": "HKVAV8",
@@ -21565,7 +21721,7 @@
   },
   {
     "title": "HKVAVR",
-    "cost": "26,54"
+    "cost": "25,41"
   },
   {
     "title": "HKVAVS",
@@ -21621,7 +21777,7 @@
   },
   {
     "title": "HKVMPBL1012V",
-    "cost": "192,6"
+    "cost": "192,72"
   },
   {
     "title": "HKVMPBL12040",
@@ -21817,7 +21973,7 @@
   },
   {
     "title": "HKX3P8102ABAA",
-    "cost": "702,88"
+    "cost": "807,81"
   },
   {
     "title": "HKX3P8302ACBA",
@@ -21881,11 +22037,11 @@
   },
   {
     "title": "HKZKSPIDEX1998SH",
-    "cost": "2,93"
+    "cost": "3,51"
   },
   {
     "title": "HKZKSPIDEX2492SH",
-    "cost": "3,35"
+    "cost": "3,38"
   },
   {
     "title": "HKZKSPIDEX2898SH",
@@ -21953,7 +22109,7 @@
   },
   {
     "title": "HM102",
-    "cost": "6,54"
+    "cost": "6,45"
   },
   {
     "title": "HSM06",
@@ -23044,6 +23200,10 @@
     "cost": "360"
   },
   {
+    "title": "K-1PZD4-2X2-2-776",
+    "cost": "750"
+  },
+  {
     "title": "K-20CR-20MNV6",
     "cost": "27,33"
   },
@@ -23081,7 +23241,7 @@
   },
   {
     "title": "K-230B34-1.5-90L",
-    "cost": "610"
+    "cost": "395"
   },
   {
     "title": "K-24CR-CK45IH",
@@ -23177,7 +23337,7 @@
   },
   {
     "title": "K-2PZW4-20X8-2-776",
-    "cost": "1 960,00"
+    "cost": "1 982,40"
   },
   {
     "title": "K-2PZW4-20X9-2",
@@ -23213,7 +23373,7 @@
   },
   {
     "title": "K-30X30X2",
-    "cost": "6,24"
+    "cost": "6,72"
   },
   {
     "title": "K-30X4",
@@ -23312,6 +23472,10 @@
     "cost": "7,76"
   },
   {
+    "title": "K-4003B34-3-100",
+    "cost": "495"
+  },
+  {
     "title": "K-400B14-1.5-90L",
     "cost": "450,73"
   },
@@ -23324,20 +23488,36 @@
     "cost": "480,79"
   },
   {
+    "title": "K-400B14-3100L4B",
+    "cost": "1 049,75"
+  },
+  {
     "title": "K-400B34-1.5-90L",
     "cost": "350"
   },
   {
+    "title": "K-400B34-2.2100L",
+    "cost": "495"
+  },
+  {
     "title": "K-400B34-3-100L",
-    "cost": "640"
+    "cost": "460"
   },
   {
     "title": "K-400B35-11-132L",
-    "cost": "1 600,00"
+    "cost": "1 800,00"
   },
   {
     "title": "K-400B35-2.2-90L",
-    "cost": "445"
+    "cost": "462,5"
+  },
+  {
+    "title": "K-400B35-2.2100L",
+    "cost": "485"
+  },
+  {
+    "title": "K-400B35-22-180",
+    "cost": "2 450,00"
   },
   {
     "title": "K-400B35-3-100L",
@@ -23349,15 +23529,15 @@
   },
   {
     "title": "K-400B35-4-112M",
-    "cost": "810"
+    "cost": "765"
   },
   {
     "title": "K-400B35-5.5-132",
-    "cost": "950"
+    "cost": "975"
   },
   {
     "title": "K-400B35-7.5132M",
-    "cost": "1 238,00"
+    "cost": "1 225,40"
   },
   {
     "title": "K-400B5-1.1-90S",
@@ -23370,6 +23550,10 @@
   {
     "title": "K-400B5-2.2-100L",
     "cost": "560"
+  },
+  {
+    "title": "K-400SOFTST-22KW",
+    "cost": "1 972,80"
   },
   {
     "title": "K-40CR-20MNV6",
@@ -23401,7 +23585,7 @@
   },
   {
     "title": "K-40X40X2-S235JRH",
-    "cost": "3,85"
+    "cost": "4"
   },
   {
     "title": "K-42CR-20MNV6",
@@ -23438,6 +23622,10 @@
   {
     "title": "K-46-CUSN12",
     "cost": "44"
+  },
+  {
+    "title": "K-4WE6-G-32/G24NZ4",
+    "cost": "508"
   },
   {
     "title": "K-50.8CR-20MNV6",
@@ -23609,7 +23797,7 @@
   },
   {
     "title": "K-60X60X3",
-    "cost": "20,21"
+    "cost": "20,67"
   },
   {
     "title": "K-616-40X51X4.2",
@@ -23653,7 +23841,7 @@
   },
   {
     "title": "K-70CR-CK45IH",
-    "cost": "307,59"
+    "cost": "307,6"
   },
   {
     "title": "K-70CRX45-20MNV6",
@@ -23673,7 +23861,7 @@
   },
   {
     "title": "K-75CR-42CRMO4IH",
-    "cost": "773,47"
+    "cost": "773,48"
   },
   {
     "title": "K-75H8-90",
@@ -23873,7 +24061,7 @@
   },
   {
     "title": "K-AFR100C10NR",
-    "cost": "129,12"
+    "cost": "128,26"
   },
   {
     "title": "K-AFR180C10NR",
@@ -24028,6 +24216,26 @@
     "cost": "204,81"
   },
   {
+    "title": "K-BSK400",
+    "cost": "1 900,00"
+  },
+  {
+    "title": "K-BSK400-ZAB0111",
+    "cost": "50"
+  },
+  {
+    "title": "K-BSK400-ZAB0112",
+    "cost": "12"
+  },
+  {
+    "title": "K-BSK400-ZAB102",
+    "cost": "4"
+  },
+  {
+    "title": "K-BSK400WO-01",
+    "cost": "1 200,00"
+  },
+  {
     "title": "K-BWR01",
     "cost": "467,85"
   },
@@ -24052,8 +24260,16 @@
     "cost": "32,36"
   },
   {
+    "title": "K-C19B-02400E1-25",
+    "cost": "35,23"
+  },
+  {
+    "title": "K-C19B-11550E5-433",
+    "cost": "55,77"
+  },
+  {
     "title": "K-C22B-024E1-18.6N",
-    "cost": "43,52"
+    "cost": "44,03"
   },
   {
     "title": "K-CARBOLN10-19",
@@ -24064,12 +24280,24 @@
     "cost": "239,18"
   },
   {
+    "title": "K-CEWKA.24V-120A",
+    "cost": "61,34"
+  },
+  {
+    "title": "K-CEWKA.851020-024",
+    "cost": "123"
+  },
+  {
     "title": "K-CEWKA.C19B-01200",
     "cost": "50,97"
   },
   {
     "title": "K-CEWKA.C19B-02400",
     "cost": "35,57"
+  },
+  {
+    "title": "K-CEWKA.ZAW.3/2-24",
+    "cost": "79,09"
   },
   {
     "title": "K-CH1-28X40X22.5",
@@ -24085,7 +24313,7 @@
   },
   {
     "title": "K-CR091C10R",
-    "cost": "23,42"
+    "cost": "23,32"
   },
   {
     "title": "K-CR111C10R",
@@ -24165,7 +24393,7 @@
   },
   {
     "title": "K-DIGR1100BPU30447",
-    "cost": "27,58"
+    "cost": "25,5"
   },
   {
     "title": "K-DIGR1150BPU30447",
@@ -24205,7 +24433,7 @@
   },
   {
     "title": "K-DR2-06/21-AL",
-    "cost": "265,6"
+    "cost": "268,48"
   },
   {
     "title": "K-DR2-06/21-ST",
@@ -24213,7 +24441,7 @@
   },
   {
     "title": "K-DR2-06/22-AL",
-    "cost": "299,54"
+    "cost": "322,37"
   },
   {
     "title": "K-DR2-06/22ST-B",
@@ -24221,7 +24449,7 @@
   },
   {
     "title": "K-DR2-06/31-AL",
-    "cost": "327,85"
+    "cost": "336,18"
   },
   {
     "title": "K-DR2-06/31-ST",
@@ -24229,7 +24457,7 @@
   },
   {
     "title": "K-DR2-06/32-AL",
-    "cost": "357,09"
+    "cost": "361,56"
   },
   {
     "title": "K-DR2-06/41-AL",
@@ -24268,6 +24496,10 @@
     "cost": "88"
   },
   {
+    "title": "K-DZWIGNIA-Q25",
+    "cost": "4"
+  },
+  {
     "title": "K-E90-7080",
     "cost": "43,66"
   },
@@ -24276,12 +24508,24 @@
     "cost": "30"
   },
   {
+    "title": "K-ELI2-D-8.2-T0",
+    "cost": "1 029,31"
+  },
+  {
+    "title": "K-ELI2-D-9.6-T0",
+    "cost": "1 113,96"
+  },
+  {
     "title": "K-EM3-2F",
     "cost": "216"
   },
   {
     "title": "K-EU01",
     "cost": "40,57"
+  },
+  {
+    "title": "K-EZB-12.6MG-230VA",
+    "cost": "195"
   },
   {
     "title": "K-F2-120X125X1.5",
@@ -24333,7 +24577,15 @@
   },
   {
     "title": "K-FARBA-CZARNA",
-    "cost": "20,99"
+    "cost": "23,32"
+  },
+  {
+    "title": "K-FARBA-EPINOX77",
+    "cost": "42,73"
+  },
+  {
+    "title": "K-FARBA-HKE80D",
+    "cost": "25"
   },
   {
     "title": "K-FCA90LC4/PHE",
@@ -24732,6 +24984,10 @@
     "cost": "37,83"
   },
   {
+    "title": "K-HAG.MHKS3E35",
+    "cost": "200"
+  },
+  {
     "title": "K-HAG.MM01",
     "cost": "100"
   },
@@ -24745,7 +25001,7 @@
   },
   {
     "title": "K-HAG.MR03-GMM63",
-    "cost": "25,68"
+    "cost": "40"
   },
   {
     "title": "K-HAG.MR04-FISPRFK",
@@ -24758,6 +25014,10 @@
   {
     "title": "K-HAG.MR06",
     "cost": "10"
+  },
+  {
+    "title": "K-HAG.MRA12",
+    "cost": "60"
   },
   {
     "title": "K-HAG.MS-01",
@@ -24889,15 +25149,15 @@
   },
   {
     "title": "K-HAG.ZAB-03-01",
-    "cost": "52,63"
+    "cost": "58,3"
   },
   {
     "title": "K-HAG.ZAB-03-01RAL",
-    "cost": "150"
+    "cost": "208,3"
   },
   {
     "title": "K-HAG.ZAB-03-02",
-    "cost": "38,51"
+    "cost": "45"
   },
   {
     "title": "K-HAG.ZAB-03-03",
@@ -24909,11 +25169,11 @@
   },
   {
     "title": "K-HAG.ZAB-04-04",
-    "cost": "11,75"
+    "cost": "12,95"
   },
   {
     "title": "K-HAG.ZAB-EL.KRAIS",
-    "cost": "38,59"
+    "cost": "50"
   },
   {
     "title": "K-HAG.ZB25-PLYTA",
@@ -24929,7 +25189,7 @@
   },
   {
     "title": "K-HAG.ZS100-01",
-    "cost": "390"
+    "cost": "450"
   },
   {
     "title": "K-HAG.ZS100-03",
@@ -24948,12 +25208,20 @@
     "cost": "23,13"
   },
   {
+    "title": "K-HAG2RA12-100",
+    "cost": "350"
+  },
+  {
     "title": "K-HAG2RA20-100",
     "cost": "400"
   },
   {
     "title": "K-HAG2RA20-90",
     "cost": "400"
+  },
+  {
+    "title": "K-HAG2RA20-90M",
+    "cost": "320"
   },
   {
     "title": "K-HAG2RA30-112",
@@ -24964,8 +25232,12 @@
     "cost": "400"
   },
   {
+    "title": "K-HAGAP-HKEM",
+    "cost": "60"
+  },
+  {
     "title": "K-HAGAP-NG10",
-    "cost": "46,11"
+    "cost": "30"
   },
   {
     "title": "K-HAGAP-NG6",
@@ -24984,6 +25256,10 @@
     "cost": "35,58"
   },
   {
+    "title": "K-HAGBSK400",
+    "cost": "800"
+  },
+  {
     "title": "K-HAGOEWBAKRA1301",
     "cost": "386,15"
   },
@@ -24994,6 +25270,10 @@
   {
     "title": "K-HAGRA0001",
     "cost": "15,25"
+  },
+  {
+    "title": "K-HAGRA12-LS168",
+    "cost": "60"
   },
   {
     "title": "K-HAGRA130-2X112",
@@ -25013,7 +25293,7 @@
   },
   {
     "title": "K-HAGRA20-90L/S",
-    "cost": "370"
+    "cost": "400"
   },
   {
     "title": "K-HAGRA20-GRAF0101",
@@ -25109,11 +25389,19 @@
   },
   {
     "title": "K-HKBM40A1",
-    "cost": "116,99"
+    "cost": "119,96"
   },
   {
     "title": "K-HKBM40A1WARYNSKI",
     "cost": "169,99"
+  },
+  {
+    "title": "K-HKBM40A1X2",
+    "cost": "169,99"
+  },
+  {
+    "title": "K-HKBM40A1X3",
+    "cost": "229,99"
   },
   {
     "title": "K-HKBM40A1X3WARYNS",
@@ -25130,6 +25418,18 @@
   {
     "title": "K-HKBM40CO",
     "cost": "16,99"
+  },
+  {
+    "title": "K-HKBM808",
+    "cost": "27,99"
+  },
+  {
+    "title": "K-HKBM80A1",
+    "cost": "234,99"
+  },
+  {
+    "title": "K-HKBM80A1X5",
+    "cost": "525"
   },
   {
     "title": "K-HKCB-M16-G38",
@@ -25248,6 +25548,10 @@
     "cost": "49"
   },
   {
+    "title": "K-HMAP00340212",
+    "cost": "13,33"
+  },
+  {
     "title": "K-HRC304030",
     "cost": "18"
   },
@@ -25360,6 +25664,10 @@
     "cost": "120"
   },
   {
+    "title": "K-K1PS2.5G",
+    "cost": "557,76"
+  },
+  {
     "title": "K-K2-140X115X32",
     "cost": "57,5"
   },
@@ -25382,6 +25690,10 @@
   {
     "title": "K-K3VL45/B-1NRMM",
     "cost": "6 346,58"
+  },
+  {
+    "title": "K-K3VL80/B-1NRMM",
+    "cost": "6 819,03"
   },
   {
     "title": "K-K49-120X99X10.5",
@@ -25532,12 +25844,20 @@
     "cost": "60,77"
   },
   {
+    "title": "K-L35C-125C-K3VL",
+    "cost": "232,92"
+  },
+  {
     "title": "K-LCW/MPAE/125/KDS",
     "cost": "67,48"
   },
   {
     "title": "K-LF300-37X47X8",
     "cost": "14,55"
+  },
+  {
+    "title": "K-LINKA STERUJACA",
+    "cost": "50"
   },
   {
     "title": "K-LOCTIT5980-100ML",
@@ -25561,7 +25881,11 @@
   },
   {
     "title": "K-LOCTITE-480-20G",
-    "cost": "58,89"
+    "cost": "76,3"
+  },
+  {
+    "title": "K-LOCTITE-518-50ML",
+    "cost": "82,17"
   },
   {
     "title": "K-LOCTITE-55/150MB",
@@ -25572,12 +25896,20 @@
     "cost": "10,15"
   },
   {
+    "title": "K-LS618",
+    "cost": "116,03"
+  },
+  {
     "title": "K-M-8XSVNW10HL",
     "cost": "26"
   },
   {
     "title": "K-M.3BKR32L",
     "cost": "104,17"
+  },
+  {
+    "title": "K-M14450001",
+    "cost": "89,23"
   },
   {
     "title": "K-MAL.41-08",
@@ -25640,6 +25972,14 @@
     "cost": "3,7"
   },
   {
+    "title": "K-NG16DSP7-S4/20",
+    "cost": "1 743,87"
+  },
+  {
+    "title": "K-NG16ES710LLX2F",
+    "cost": "742,72"
+  },
+  {
     "title": "K-NG6E24",
     "cost": "179,99"
   },
@@ -25652,12 +25992,16 @@
     "cost": "27,65"
   },
   {
+    "title": "K-NKP-64011",
+    "cost": "204,18"
+  },
+  {
     "title": "K-NPSL-P30",
     "cost": "15"
   },
   {
     "title": "K-OLEJ HV46",
-    "cost": "7,76"
+    "cost": "7,58"
   },
   {
     "title": "K-OLEJ-AMORTYZOL15",
@@ -25682,6 +26026,14 @@
   {
     "title": "K-OMT4080C47-K3V",
     "cost": "109,32"
+  },
+  {
+    "title": "K-OMT5050D43-K3V",
+    "cost": "145,11"
+  },
+  {
+    "title": "K-OMT5110C54-K3V",
+    "cost": "172,12"
   },
   {
     "title": "K-OR-8.73X1.78",
@@ -25849,7 +26201,11 @@
   },
   {
     "title": "K-PAKIET-ZEW.",
-    "cost": "300"
+    "cost": "500"
+  },
+  {
+    "title": "K-PB2B-T11A-LBN",
+    "cost": "242,02"
   },
   {
     "title": "K-PDE-75X55X35",
@@ -25870,6 +26226,10 @@
   {
     "title": "K-PDK035-02",
     "cost": "8,85"
+  },
+  {
+    "title": "K-PDM123/12F",
+    "cost": "272,15"
   },
   {
     "title": "K-PDP-50X36X9",
@@ -25904,6 +26264,10 @@
     "cost": "413,06"
   },
   {
+    "title": "K-PKDWHRB-50",
+    "cost": "21,93"
+  },
+  {
     "title": "K-PKR18",
     "cost": "27"
   },
@@ -25916,16 +26280,32 @@
     "cost": "22,36"
   },
   {
+    "title": "K-PLYTA-E53A38P",
+    "cost": "100,76"
+  },
+  {
+    "title": "K-PLYTA-EA0633",
+    "cost": "125"
+  },
+  {
     "title": "K-PODKLAD-CZARNA",
     "cost": "20,99"
   },
   {
     "title": "K-PODKLAD-SZARA",
-    "cost": "20,99"
+    "cost": "23,32"
   },
   {
     "title": "K-POL-4-K3VL45",
     "cost": "27,89"
+  },
+  {
+    "title": "K-POL-5-K3VL80",
+    "cost": "35,96"
+  },
+  {
+    "title": "K-POMPA_KV2P/17+17",
+    "cost": "1 071,35"
   },
   {
     "title": "K-PP020195102000",
@@ -26016,6 +26396,14 @@
     "cost": "4,96"
   },
   {
+    "title": "K-PZ1-4.5EUP",
+    "cost": "130,2"
+  },
+  {
+    "title": "K-PZ1-5EUP",
+    "cost": "126,19"
+  },
+  {
     "title": "K-PZ1-5PPL",
     "cost": "132,82"
   },
@@ -26025,11 +26413,19 @@
   },
   {
     "title": "K-PZ2-4.5EUP",
-    "cost": "214,61"
+    "cost": "214,06"
+  },
+  {
+    "title": "K-PZ3E-221/7",
+    "cost": "217"
   },
   {
     "title": "K-PZE-044.45",
     "cost": "15"
+  },
+  {
+    "title": "K-Q25F1SN-103/A1M1",
+    "cost": "185,9"
   },
   {
     "title": "K-R.HKPTRV300-200",
@@ -26077,7 +26473,7 @@
   },
   {
     "title": "K-RA70132B5.01RAL",
-    "cost": "242"
+    "cost": "550"
   },
   {
     "title": "K-RBS10-EHW8X3",
@@ -26384,6 +26780,10 @@
     "cost": "9,9"
   },
   {
+    "title": "K-SB-A3-0103AL",
+    "cost": "64,31"
+  },
+  {
     "title": "K-SB-B2-0103ST",
     "cost": "97,69"
   },
@@ -26409,11 +26809,11 @@
   },
   {
     "title": "K-SD2E-B2/S2I11",
-    "cost": "108,6"
+    "cost": "104,79"
   },
   {
     "title": "K-SD3E-B2/H2O2-A",
-    "cost": "212,25"
+    "cost": "220,55"
   },
   {
     "title": "K-SE-090-G-10-V/4",
@@ -26453,7 +26853,7 @@
   },
   {
     "title": "K-SL8470",
-    "cost": "25,37"
+    "cost": "22,99"
   },
   {
     "title": "K-SLH89002",
@@ -26466,6 +26866,10 @@
   {
     "title": "K-SOLVENT_SPRAY",
     "cost": "24,26"
+  },
+  {
+    "title": "K-SOSPC050ONGP",
+    "cost": "331,15"
   },
   {
     "title": "K-SP4204018512",
@@ -26489,7 +26893,7 @@
   },
   {
     "title": "K-SR1A-B2/H25L-B1",
-    "cost": "184,96"
+    "cost": "193,8"
   },
   {
     "title": "K-SR1A-B2/H25S",
@@ -26517,7 +26921,7 @@
   },
   {
     "title": "K-SR4E2-B2/H35V",
-    "cost": "244,37"
+    "cost": "244,63"
   },
   {
     "title": "K-SS-50.8X57X3.5",
@@ -26601,11 +27005,11 @@
   },
   {
     "title": "K-TAFTR22250AP01",
-    "cost": "13,58"
+    "cost": "16,97"
   },
   {
     "title": "K-TAFTR26300AP01",
-    "cost": "13,57"
+    "cost": "16,97"
   },
   {
     "title": "K-TAFTR32350AP01",
@@ -26646,6 +27050,10 @@
   {
     "title": "K-TL-32X24X15.5",
     "cost": "13"
+  },
+  {
+    "title": "K-TLTE127B1A7A10S",
+    "cost": "273,86"
   },
   {
     "title": "K-TPM-100X75X22.4",
@@ -26780,8 +27188,16 @@
     "cost": "650"
   },
   {
+    "title": "K-UTWARDZACZ-B",
+    "cost": "45,83"
+  },
+  {
     "title": "K-UZPR-6-42/350-2P",
     "cost": "348"
+  },
+  {
+    "title": "K-V-FCR1GT3/8",
+    "cost": "136,33"
   },
   {
     "title": "K-V-R40L-1E",
@@ -26802,6 +27218,10 @@
   {
     "title": "K-V7.1560-103K8",
     "cost": "1 274,07"
+  },
+  {
+    "title": "K-VD34-12-14",
+    "cost": "790"
   },
   {
     "title": "K-VE260070145000",
@@ -26828,8 +27248,16 @@
     "cost": "2 420,06"
   },
   {
+    "title": "K-VEDHU0711X00",
+    "cost": "397,08"
+  },
+  {
     "title": "K-VEEMDV10N3D012DG",
     "cost": "405,81"
+  },
+  {
+    "title": "K-VERPE3043Z110120",
+    "cost": "218"
   },
   {
     "title": "K-VERPGCLBN",
@@ -26838,6 +27266,22 @@
   {
     "title": "K-VESP4P2B3H2124E2",
     "cost": "603,37"
+  },
+  {
+    "title": "K-VMDS15005B3PRL15",
+    "cost": "306,83"
+  },
+  {
+    "title": "K-VMDS15006B3PRL15",
+    "cost": "317,32"
+  },
+  {
+    "title": "K-VMPBL05003",
+    "cost": "100,01"
+  },
+  {
+    "title": "K-VMPBL05004",
+    "cost": "100"
   },
   {
     "title": "K-VOSLP38/TR.S.P4",
@@ -26870,6 +27314,10 @@
   {
     "title": "K-W3E12VDC80L",
     "cost": "1 259,99"
+  },
+  {
+    "title": "K-WBCSE02B",
+    "cost": "145,01"
   },
   {
     "title": "K-WCR80L",
@@ -26984,20 +27432,24 @@
     "cost": "26,2"
   },
   {
+    "title": "K-Z2S6-41/10/V",
+    "cost": "316"
+  },
+  {
     "title": "K-Z40-52-7/10",
     "cost": "6"
   },
   {
     "title": "K-ZAB.1001-RAL",
-    "cost": "50"
+    "cost": "360"
   },
   {
     "title": "K-ZAB1.1001",
-    "cost": "250"
+    "cost": "260"
   },
   {
     "title": "K-ZAB1.1002",
-    "cost": "6,76"
+    "cost": "7,22"
   },
   {
     "title": "K-ZAB4.1003-P80",
@@ -27010,6 +27462,14 @@
   {
     "title": "K-ZATRZASK-120",
     "cost": "69,99"
+  },
+  {
+    "title": "K-ZAWOR-UZSB-10/12",
+    "cost": "650"
+  },
+  {
+    "title": "K-ZAWOR-VAUOM-1/2",
+    "cost": "89"
   },
   {
     "title": "K-ZESTAW",
@@ -27073,7 +27533,23 @@
   },
   {
     "title": "K-ZK3030CZ",
-    "cost": "0,34"
+    "cost": "0,37"
+  },
+  {
+    "title": "K-ZLACZE1/2\"-30CAR",
+    "cost": "19"
+  },
+  {
+    "title": "K-ZLACZE1/2\"-35KW",
+    "cost": "23"
+  },
+  {
+    "title": "K-ZLACZE3/4\"-40CAR",
+    "cost": "22"
+  },
+  {
+    "title": "K-ZLACZE3/4\"-40KW",
+    "cost": "28,99"
   },
   {
     "title": "K-ZOK1/2",
@@ -27089,7 +27565,7 @@
   },
   {
     "title": "K-ZPGWOM18X1.5",
-    "cost": "0,22"
+    "cost": "0,44"
   },
   {
     "title": "K-ZS-116",
@@ -27194,6 +27670,10 @@
   {
     "title": "KBINDER300-3.6S",
     "cost": "3,01"
+  },
+  {
+    "title": "KBINDER300-7.8S",
+    "cost": "0,51"
   },
   {
     "title": "KBINDER400-4.8S",
@@ -27397,7 +27877,7 @@
   },
   {
     "title": "KM22",
-    "cost": "1,4"
+    "cost": "1,36"
   },
   {
     "title": "KM24",
@@ -27405,7 +27885,7 @@
   },
   {
     "title": "KM26",
-    "cost": "2,34"
+    "cost": "2,37"
   },
   {
     "title": "KM30",
@@ -27469,7 +27949,7 @@
   },
   {
     "title": "KP106S",
-    "cost": "7,14"
+    "cost": "7,13"
   },
   {
     "title": "KP108",
@@ -27489,11 +27969,11 @@
   },
   {
     "title": "KP113",
-    "cost": "8,42"
+    "cost": "8,09"
   },
   {
     "title": "KP113S",
-    "cost": "10,06"
+    "cost": "10,01"
   },
   {
     "title": "KP116",
@@ -27509,7 +27989,7 @@
   },
   {
     "title": "KP120S",
-    "cost": "12"
+    "cost": "12,63"
   },
   {
     "title": "KP125",
@@ -27521,7 +28001,7 @@
   },
   {
     "title": "KP206S",
-    "cost": "8,99"
+    "cost": "8,86"
   },
   {
     "title": "KP208",
@@ -27549,7 +28029,7 @@
   },
   {
     "title": "KP210S",
-    "cost": "10,48"
+    "cost": "10,38"
   },
   {
     "title": "KP213",
@@ -27561,7 +28041,7 @@
   },
   {
     "title": "KP213S",
-    "cost": "12,37"
+    "cost": "12,28"
   },
   {
     "title": "KP216",
@@ -27609,11 +28089,11 @@
   },
   {
     "title": "KP616",
-    "cost": "27,66"
+    "cost": "24,31"
   },
   {
     "title": "KP620",
-    "cost": "28,08"
+    "cost": "29,09"
   },
   {
     "title": "KP625",
@@ -27669,7 +28149,7 @@
   },
   {
     "title": "LAB04HB",
-    "cost": "8,36"
+    "cost": "8,27"
   },
   {
     "title": "LAB06HB",
@@ -28597,7 +29077,7 @@
   },
   {
     "title": "M-4205-00000000003",
-    "cost": "224,62"
+    "cost": "129,05"
   },
   {
     "title": "M-4205-00000000004",
@@ -28605,11 +29085,11 @@
   },
   {
     "title": "M-4205-00000000005",
-    "cost": "178,45"
+    "cost": "175,4"
   },
   {
     "title": "M-4205-00000000006",
-    "cost": "164,82"
+    "cost": "82,08"
   },
   {
     "title": "M-4205-00000000007",
@@ -28649,15 +29129,15 @@
   },
   {
     "title": "M-4236-HAGZAB-W125",
-    "cost": "346,94"
+    "cost": "663,86"
   },
   {
     "title": "M-4236-HAGZAB04.01",
-    "cost": "372,68"
+    "cost": "336,22"
   },
   {
     "title": "M-4236-RA70132B5.1",
-    "cost": "250,23"
+    "cost": "500,91"
   },
   {
     "title": "MBK100110",
@@ -28825,7 +29305,7 @@
   },
   {
     "title": "MBK8090",
-    "cost": "4,28"
+    "cost": "4,31"
   },
   {
     "title": "MBK8590",
@@ -29005,7 +29485,7 @@
   },
   {
     "title": "MRS60-63",
-    "cost": "1,94"
+    "cost": "1,81"
   },
   {
     "title": "MRS64-67",
@@ -30442,6 +30922,10 @@
   {
     "title": "NY713",
     "cost": "15,01"
+  },
+  {
+    "title": "NY7206",
+    "cost": "17,65"
   },
   {
     "title": "NY808",
@@ -34161,7 +34645,7 @@
   },
   {
     "title": "OR4.48-1.78",
-    "cost": "0,04"
+    "cost": "0,05"
   },
   {
     "title": "OR4.5-1",
@@ -37005,7 +37489,7 @@
   },
   {
     "title": "PA720AOS16",
-    "cost": "18,23"
+    "cost": "23,14"
   },
   {
     "title": "PA720AOS1645",
@@ -37065,7 +37549,7 @@
   },
   {
     "title": "PA720SF2545",
-    "cost": "35,1"
+    "cost": "38,18"
   },
   {
     "title": "PA720SF2590",
@@ -37486,6 +37970,10 @@
   {
     "title": "PA732SF690L120",
     "cost": "105,39"
+  },
+  {
+    "title": "PA732SF6PLUS",
+    "cost": "83,32"
   },
   {
     "title": "PA732SF9",
@@ -38209,7 +38697,7 @@
   },
   {
     "title": "PHD106",
-    "cost": "1,45"
+    "cost": "1,44"
   },
   {
     "title": "PHD106E",
@@ -38233,7 +38721,7 @@
   },
   {
     "title": "PHD110",
-    "cost": "1,75"
+    "cost": "1,73"
   },
   {
     "title": "PHD11095",
@@ -38249,7 +38737,7 @@
   },
   {
     "title": "PHD113",
-    "cost": "2,29"
+    "cost": "2,28"
   },
   {
     "title": "PHD113E",
@@ -38265,7 +38753,7 @@
   },
   {
     "title": "PHD116",
-    "cost": "2,64"
+    "cost": "2,63"
   },
   {
     "title": "PHD116E",
@@ -38277,7 +38765,7 @@
   },
   {
     "title": "PHD120",
-    "cost": "3,7"
+    "cost": "3,67"
   },
   {
     "title": "PHD120105",
@@ -38293,7 +38781,7 @@
   },
   {
     "title": "PHD125",
-    "cost": "7,28"
+    "cost": "7,46"
   },
   {
     "title": "PHD125102",
@@ -38433,7 +38921,7 @@
   },
   {
     "title": "PHD220",
-    "cost": "4,77"
+    "cost": "4,43"
   },
   {
     "title": "PHD220E",
@@ -38497,7 +38985,7 @@
   },
   {
     "title": "PHD416",
-    "cost": "3,38"
+    "cost": "3,31"
   },
   {
     "title": "PHD420",
@@ -38932,6 +39420,10 @@
     "cost": "2,74"
   },
   {
+    "title": "PHY7206",
+    "cost": "5,17"
+  },
+  {
     "title": "PHY806N",
     "cost": "1,68"
   },
@@ -38993,7 +39485,7 @@
   },
   {
     "title": "PMH102",
-    "cost": "0,77"
+    "cost": "0,76"
   },
   {
     "title": "PN02AB",
@@ -39037,11 +39529,11 @@
   },
   {
     "title": "PN02AOL06",
-    "cost": "5,61"
+    "cost": "5,6"
   },
   {
     "title": "PN02AOL0690",
-    "cost": "11,78"
+    "cost": "11,86"
   },
   {
     "title": "PN02AOL08",
@@ -39149,7 +39641,7 @@
   },
   {
     "title": "PN02MMA1/4",
-    "cost": "6,91"
+    "cost": "6,85"
   },
   {
     "title": "PN02MMA1/445",
@@ -39165,7 +39657,7 @@
   },
   {
     "title": "PN02SKE",
-    "cost": "4,77"
+    "cost": "4,73"
   },
   {
     "title": "PN02SKE12",
@@ -39185,7 +39677,7 @@
   },
   {
     "title": "PN02SKE90",
-    "cost": "18,39"
+    "cost": "18,4"
   },
   {
     "title": "PN04AB",
@@ -39313,7 +39805,7 @@
   },
   {
     "title": "PN06AB",
-    "cost": "1,92"
+    "cost": "1,91"
   },
   {
     "title": "PN06AB02",
@@ -39349,7 +39841,7 @@
   },
   {
     "title": "PN06AB90",
-    "cost": "2,63"
+    "cost": "2,64"
   },
   {
     "title": "PN06ABK1090",
@@ -39489,7 +39981,7 @@
   },
   {
     "title": "PN06AOL",
-    "cost": "1,62"
+    "cost": "1,61"
   },
   {
     "title": "PN06AOL04",
@@ -39537,7 +40029,7 @@
   },
   {
     "title": "PN06AOL45",
-    "cost": "3,34"
+    "cost": "3,33"
   },
   {
     "title": "PN06AOL45VA",
@@ -40357,7 +40849,7 @@
   },
   {
     "title": "PN10AB90",
-    "cost": "3,32"
+    "cost": "3,31"
   },
   {
     "title": "PN10AB90VA",
@@ -40553,7 +41045,7 @@
   },
   {
     "title": "PN10AOL",
-    "cost": "2,18"
+    "cost": "2,16"
   },
   {
     "title": "PN10AOL06",
@@ -40605,7 +41097,7 @@
   },
   {
     "title": "PN10AOL90",
-    "cost": "4,26"
+    "cost": "4,22"
   },
   {
     "title": "PN10AOL90L50",
@@ -41005,11 +41497,11 @@
   },
   {
     "title": "PN13AB45",
-    "cost": "4,44"
+    "cost": "5,11"
   },
   {
     "title": "PN13AB90",
-    "cost": "5,39"
+    "cost": "5,38"
   },
   {
     "title": "PN13AB90EVA",
@@ -41173,7 +41665,7 @@
   },
   {
     "title": "PN13AOL",
-    "cost": "3,26"
+    "cost": "3,25"
   },
   {
     "title": "PN13AOL10",
@@ -41189,7 +41681,7 @@
   },
   {
     "title": "PN13AOL16",
-    "cost": "6,16"
+    "cost": "5,46"
   },
   {
     "title": "PN13AOL1645",
@@ -41209,7 +41701,7 @@
   },
   {
     "title": "PN13AOL90",
-    "cost": "6,28"
+    "cost": "6,25"
   },
   {
     "title": "PN13AOL90VA",
@@ -41441,7 +41933,7 @@
   },
   {
     "title": "PN13HL",
-    "cost": "2,53"
+    "cost": "3,86"
   },
   {
     "title": "PN13HL10",
@@ -41717,7 +42209,7 @@
   },
   {
     "title": "PN16AOL",
-    "cost": "4,98"
+    "cost": "4,93"
   },
   {
     "title": "PN16AOL13",
@@ -41729,7 +42221,7 @@
   },
   {
     "title": "PN16AOL20",
-    "cost": "13,62"
+    "cost": "14,67"
   },
   {
     "title": "PN16AOL2045",
@@ -41745,7 +42237,7 @@
   },
   {
     "title": "PN16AOL45",
-    "cost": "10,21"
+    "cost": "10,13"
   },
   {
     "title": "PN16AOL45VA",
@@ -41753,7 +42245,7 @@
   },
   {
     "title": "PN16AOL90",
-    "cost": "10,42"
+    "cost": "10,33"
   },
   {
     "title": "PN16AOL90VA",
@@ -41765,7 +42257,7 @@
   },
   {
     "title": "PN16AOS",
-    "cost": "6,64"
+    "cost": "6,63"
   },
   {
     "title": "PN16AOS13",
@@ -41797,7 +42289,7 @@
   },
   {
     "title": "PN16AOS90",
-    "cost": "10,56"
+    "cost": "10,59"
   },
   {
     "title": "PN16AOS90E",
@@ -42093,7 +42585,7 @@
   },
   {
     "title": "PN20AB",
-    "cost": "6,5"
+    "cost": "6,49"
   },
   {
     "title": "PN20AB13",
@@ -42253,7 +42745,7 @@
   },
   {
     "title": "PN20AOL",
-    "cost": "7,67"
+    "cost": "7,66"
   },
   {
     "title": "PN20AOL16",
@@ -42285,7 +42777,7 @@
   },
   {
     "title": "PN20AOL90",
-    "cost": "12,38"
+    "cost": "12,5"
   },
   {
     "title": "PN20AOL90VA",
@@ -42509,7 +43001,7 @@
   },
   {
     "title": "PN20SF2545",
-    "cost": "19,04"
+    "cost": "23,32"
   },
   {
     "title": "PN20SF2590",
@@ -42557,7 +43049,7 @@
   },
   {
     "title": "PN20SF690",
-    "cost": "19,78"
+    "cost": "23,61"
   },
   {
     "title": "PN20SF9",
@@ -42737,7 +43229,7 @@
   },
   {
     "title": "PN25AOL",
-    "cost": "10,81"
+    "cost": "10,7"
   },
   {
     "title": "PN25AOL20",
@@ -42765,7 +43257,7 @@
   },
   {
     "title": "PN25AOL45",
-    "cost": "22,6"
+    "cost": "22,3"
   },
   {
     "title": "PN25AOL45VA",
@@ -42773,7 +43265,7 @@
   },
   {
     "title": "PN25AOL90",
-    "cost": "21,66"
+    "cost": "21,72"
   },
   {
     "title": "PN25AOL90L150",
@@ -43737,7 +44229,7 @@
   },
   {
     "title": "PN50SF90",
-    "cost": "113,99"
+    "cost": "143,66"
   },
   {
     "title": "PN50VB",
@@ -43806,6 +44298,26 @@
   {
     "title": "PNY2106HN10",
     "cost": "12,78"
+  },
+  {
+    "title": "PNY7206AB",
+    "cost": "13,3"
+  },
+  {
+    "title": "PNY7206AOS",
+    "cost": "11,12"
+  },
+  {
+    "title": "PNY7206AOS04",
+    "cost": "9,76"
+  },
+  {
+    "title": "PNY7206HN",
+    "cost": "6,99"
+  },
+  {
+    "title": "PNY7206HN10",
+    "cost": "8,12"
   },
   {
     "title": "PPW095",
@@ -44129,7 +44641,7 @@
   },
   {
     "title": "PR15-1.5VZCF",
-    "cost": "7,83"
+    "cost": "7,86"
   },
   {
     "title": "PR15-1V1GG",
@@ -44249,7 +44761,7 @@
   },
   {
     "title": "PR18-1.5VZCF",
-    "cost": "9,58"
+    "cost": "9,96"
   },
   {
     "title": "PR18-2",
@@ -44317,7 +44829,7 @@
   },
   {
     "title": "PR20-3VZCF",
-    "cost": "6,76"
+    "cost": "18,16"
   },
   {
     "title": "PR21.3-2V4",
@@ -44433,7 +44945,7 @@
   },
   {
     "title": "PR28-1.5",
-    "cost": "10,04"
+    "cost": "11,79"
   },
   {
     "title": "PR28-1.5V4",
@@ -44453,7 +44965,7 @@
   },
   {
     "title": "PR28-2",
-    "cost": "11,84"
+    "cost": "13,99"
   },
   {
     "title": "PR28-2.5",
@@ -44477,7 +44989,7 @@
   },
   {
     "title": "PR28-2VZCF",
-    "cost": "3,75"
+    "cost": "20,46"
   },
   {
     "title": "PR28-3",
@@ -44777,7 +45289,7 @@
   },
   {
     "title": "PW110-U",
-    "cost": "17,09"
+    "cost": "23,35"
   },
   {
     "title": "PW120-U",
@@ -44837,7 +45349,7 @@
   },
   {
     "title": "PW45-U",
-    "cost": "6,38"
+    "cost": "6,71"
   },
   {
     "title": "PW50-U",
@@ -45201,7 +45713,7 @@
   },
   {
     "title": "RIKNW2006ED",
-    "cost": "3,03"
+    "cost": "3,82"
   },
   {
     "title": "RIKNW2006EDVA",
@@ -45249,7 +45761,7 @@
   },
   {
     "title": "RIKNW2513ED",
-    "cost": "6,35"
+    "cost": "6,34"
   },
   {
     "title": "RIKNW2513EDVA",
@@ -45265,7 +45777,7 @@
   },
   {
     "title": "RIKNW3220ED",
-    "cost": "10,46"
+    "cost": "10,43"
   },
   {
     "title": "RIKNW4013",
@@ -45289,7 +45801,7 @@
   },
   {
     "title": "RIKNW4025ED",
-    "cost": "14,05"
+    "cost": "14,04"
   },
   {
     "title": "RILM1822",
@@ -45357,7 +45869,7 @@
   },
   {
     "title": "RILNW1006ED",
-    "cost": "2,34"
+    "cost": "2,32"
   },
   {
     "title": "RILNW1010",
@@ -45828,6 +46340,10 @@
     "cost": "7,56"
   },
   {
+    "title": "ROHRENTGRATADAPTER",
+    "cost": "42,32"
+  },
+  {
     "title": "ROHRENTGRATER",
     "cost": "83,43"
   },
@@ -45929,7 +46445,7 @@
   },
   {
     "title": "RS3543-L",
-    "cost": "6,59"
+    "cost": "6,38"
   },
   {
     "title": "RS3545-L",
@@ -45945,7 +46461,7 @@
   },
   {
     "title": "RS4050-L",
-    "cost": "8,21"
+    "cost": "8,23"
   },
   {
     "title": "RS4055-L",
@@ -47177,7 +47693,7 @@
   },
   {
     "title": "SGB150",
-    "cost": "42,76"
+    "cost": "37,97"
   },
   {
     "title": "SGB160",
@@ -48685,7 +49201,7 @@
   },
   {
     "title": "SKM13IR2FS",
-    "cost": "46,5"
+    "cost": "46,56"
   },
   {
     "title": "SKM13IR2MULTIQ",
@@ -48785,7 +49301,7 @@
   },
   {
     "title": "SKM20IR3FS",
-    "cost": "64,17"
+    "cost": "64,6"
   },
   {
     "title": "SKM20IR4",
@@ -49025,7 +49541,7 @@
   },
   {
     "title": "SKMZUBS2FS",
-    "cost": "2,94"
+    "cost": "2,95"
   },
   {
     "title": "SKMZUBS399",
@@ -49041,7 +49557,7 @@
   },
   {
     "title": "SKMZUBS3FS",
-    "cost": "3,16"
+    "cost": "3,19"
   },
   {
     "title": "SKMZUBS4",
@@ -49277,7 +49793,7 @@
   },
   {
     "title": "SKS13IR2FS",
-    "cost": "15,96"
+    "cost": "15,91"
   },
   {
     "title": "SKS13IR2MULTIQ",
@@ -49377,7 +49893,7 @@
   },
   {
     "title": "SKS20IR3FS",
-    "cost": "29,62"
+    "cost": "29,91"
   },
   {
     "title": "SKS20IR4",
@@ -49597,7 +50113,7 @@
   },
   {
     "title": "SKSZUBS2FS",
-    "cost": "2,93"
+    "cost": "2,94"
   },
   {
     "title": "SKSZUBS399",
@@ -49937,7 +50453,7 @@
   },
   {
     "title": "SRD15",
-    "cost": "0,76"
+    "cost": "0,77"
   },
   {
     "title": "SRD15VA",
@@ -49965,7 +50481,7 @@
   },
   {
     "title": "SRD20",
-    "cost": "1,59"
+    "cost": "1,61"
   },
   {
     "title": "SRD20VA",
@@ -49989,7 +50505,7 @@
   },
   {
     "title": "SRD28",
-    "cost": "2,2"
+    "cost": "2,28"
   },
   {
     "title": "SRD28VA",
@@ -50173,7 +50689,7 @@
   },
   {
     "title": "SRS0215PP",
-    "cost": "0,81"
+    "cost": "0,8"
   },
   {
     "title": "SRS0216AL",
@@ -50201,7 +50717,7 @@
   },
   {
     "title": "SRS0218PP",
-    "cost": "0,84"
+    "cost": "0,83"
   },
   {
     "title": "SRS0319PP",
@@ -50217,7 +50733,7 @@
   },
   {
     "title": "SRS0320PP",
-    "cost": "1,01"
+    "cost": "0,97"
   },
   {
     "title": "SRS0321.3PP",
@@ -50269,7 +50785,7 @@
   },
   {
     "title": "SRS0428PP",
-    "cost": "1,26"
+    "cost": "1,24"
   },
   {
     "title": "SRS0428VG",
@@ -50669,7 +51185,7 @@
   },
   {
     "title": "SRSAF3",
-    "cost": "0,54"
+    "cost": "0,91"
   },
   {
     "title": "SRSAF4",
@@ -50773,11 +51289,11 @@
   },
   {
     "title": "SRSASDP3",
-    "cost": "0,09"
+    "cost": "0,13"
   },
   {
     "title": "SRSASDP4",
-    "cost": "0,11"
+    "cost": "0,16"
   },
   {
     "title": "SRSASDP5",
@@ -50829,7 +51345,7 @@
   },
   {
     "title": "SRSDP3",
-    "cost": "0,42"
+    "cost": "0,39"
   },
   {
     "title": "SRSDP30",
@@ -50977,7 +51493,7 @@
   },
   {
     "title": "SRSSM",
-    "cost": "0,79"
+    "cost": "0,81"
   },
   {
     "title": "SRSSM30-50V4",
@@ -51053,7 +51569,7 @@
   },
   {
     "title": "SRSSP4",
-    "cost": "1,24"
+    "cost": "1,27"
   },
   {
     "title": "SRSSP40",
@@ -51141,7 +51657,7 @@
   },
   {
     "title": "SRSTS11-2",
-    "cost": "14,28"
+    "cost": "15,71"
   },
   {
     "title": "SRSTS14-1",
@@ -52065,7 +52581,7 @@
   },
   {
     "title": "SWP7590",
-    "cost": "11,25"
+    "cost": "11,4"
   },
   {
     "title": "SWP8095",
@@ -52669,7 +53185,7 @@
   },
   {
     "title": "TFBAND",
-    "cost": "1,18"
+    "cost": "1,3"
   },
   {
     "title": "TFH010",
@@ -53117,11 +53633,11 @@
   },
   {
     "title": "TIR06",
-    "cost": "7,01"
+    "cost": "7"
   },
   {
     "title": "TIR08",
-    "cost": "12,37"
+    "cost": "12,04"
   },
   {
     "title": "TIR12",
@@ -53921,7 +54437,7 @@
   },
   {
     "title": "TS4555-L2",
-    "cost": "9,05"
+    "cost": "9,29"
   },
   {
     "title": "TS5058",
@@ -53997,7 +54513,7 @@
   },
   {
     "title": "TS6070-L",
-    "cost": "9,31"
+    "cost": "9,54"
   },
   {
     "title": "TS6070-L1",
@@ -54129,7 +54645,7 @@
   },
   {
     "title": "TS8090-L",
-    "cost": "11,39"
+    "cost": "11,7"
   },
   {
     "title": "TS8090-L1",
@@ -54521,7 +55037,7 @@
   },
   {
     "title": "UEMNW13L",
-    "cost": "1,02"
+    "cost": "0,98"
   },
   {
     "title": "UEMNW13LB",
@@ -54573,7 +55089,7 @@
   },
   {
     "title": "UEMNW16S",
-    "cost": "2,22"
+    "cost": "2,24"
   },
   {
     "title": "UEMNW16SB",
@@ -54597,7 +55113,7 @@
   },
   {
     "title": "UEMNW20L",
-    "cost": "1,97"
+    "cost": "1,98"
   },
   {
     "title": "UEMNW20LD24",
@@ -54629,7 +55145,7 @@
   },
   {
     "title": "UEMNW25L",
-    "cost": "2,84"
+    "cost": "2,93"
   },
   {
     "title": "UEMNW25LD30",
@@ -55709,11 +56225,15 @@
   },
   {
     "title": "VERSCHLUSSO08",
-    "cost": "1,71"
+    "cost": "1,77"
   },
   {
     "title": "VERSCHLUSSO08IS",
     "cost": "2,05"
+  },
+  {
+    "title": "VERSCHLUSSO10",
+    "cost": "2,4"
   },
   {
     "title": "VERSCHLUSSO10IS",
@@ -55765,7 +56285,7 @@
   },
   {
     "title": "VF3003",
-    "cost": "6,08"
+    "cost": "6,18"
   },
   {
     "title": "VF3004",
@@ -55777,7 +56297,7 @@
   },
   {
     "title": "VF3006",
-    "cost": "11,83"
+    "cost": "12,08"
   },
   {
     "title": "VF3007",
@@ -55929,7 +56449,7 @@
   },
   {
     "title": "VHR90-1/2ED",
-    "cost": "1,93"
+    "cost": "1,94"
   },
   {
     "title": "VHR90-1/2EDVA",
@@ -55961,7 +56481,7 @@
   },
   {
     "title": "VHR90-1ED",
-    "cost": "6,53"
+    "cost": "6,47"
   },
   {
     "title": "VHR90-1EDVA",
@@ -55973,7 +56493,7 @@
   },
   {
     "title": "VHR90-3/4ED",
-    "cost": "3,74"
+    "cost": "3,72"
   },
   {
     "title": "VHR90-3/4EDV",
@@ -55989,7 +56509,7 @@
   },
   {
     "title": "VHR90-3/8ED",
-    "cost": "1,62"
+    "cost": "1,61"
   },
   {
     "title": "VHR90-3/8EDVA",
@@ -57425,7 +57945,7 @@
   },
   {
     "title": "W90AB04",
-    "cost": "3,61"
+    "cost": "3,5"
   },
   {
     "title": "W90AB04HB",
@@ -57457,7 +57977,7 @@
   },
   {
     "title": "W90AB08HB",
-    "cost": "5,94"
+    "cost": "5,91"
   },
   {
     "title": "W90AB10",
@@ -58765,7 +59285,7 @@
   },
   {
     "title": "WDA112",
-    "cost": "18,08"
+    "cost": "18,1"
   },
   {
     "title": "WDA138",
@@ -58809,7 +59329,7 @@
   },
   {
     "title": "WDS112",
-    "cost": "26,87"
+    "cost": "26,92"
   },
   {
     "title": "WDS138",
@@ -58913,7 +59433,7 @@
   },
   {
     "title": "WF35LKS16315",
-    "cost": "17,35"
+    "cost": "17,5"
   },
   {
     "title": "WF35LKS20315",
@@ -58933,11 +59453,11 @@
   },
   {
     "title": "WF40LKL22100",
-    "cost": "15,71"
+    "cost": "15,49"
   },
   {
     "title": "WF40LKL28100",
-    "cost": "19,05"
+    "cost": "19,2"
   },
   {
     "title": "WF40LKL35100",
@@ -59245,7 +59765,7 @@
   },
   {
     "title": "WRM-P35",
-    "cost": "1,18"
+    "cost": "1,14"
   },
   {
     "title": "WRM-P36",
@@ -59257,7 +59777,7 @@
   },
   {
     "title": "WRM-P40",
-    "cost": "1,34"
+    "cost": "1,39"
   },
   {
     "title": "WRM-P42",
@@ -59265,7 +59785,7 @@
   },
   {
     "title": "WRM-P45",
-    "cost": "1,31"
+    "cost": "1,35"
   },
   {
     "title": "WRM-P45-1",
@@ -59701,7 +60221,7 @@
   },
   {
     "title": "X-CODESET",
-    "cost": "1,74"
+    "cost": "1,73"
   },
   {
     "title": "XAHNW04S03",
@@ -60257,7 +60777,7 @@
   },
   {
     "title": "XAOHNW10L13",
-    "cost": "5,22"
+    "cost": "5,87"
   },
   {
     "title": "XAOHNW10L13S",
@@ -60301,7 +60821,7 @@
   },
   {
     "title": "XAOHNW13L06",
-    "cost": "4,25"
+    "cost": "4,1"
   },
   {
     "title": "XAOHNW13L06VA",
@@ -60561,7 +61081,7 @@
   },
   {
     "title": "XAOHNW25L10",
-    "cost": "12,96"
+    "cost": "13,47"
   },
   {
     "title": "XAOHNW25L13",
@@ -61377,7 +61897,7 @@
   },
   {
     "title": "XHFMTHL10",
-    "cost": "19,71"
+    "cost": "19,73"
   },
   {
     "title": "XHFMTHL10S",
@@ -62221,7 +62741,7 @@
   },
   {
     "title": "XS60-AK353",
-    "cost": "5,69"
+    "cost": "5,66"
   },
   {
     "title": "XS63-AK353",
@@ -62805,7 +63325,7 @@
   },
   {
     "title": "XSVNW10HL",
-    "cost": "3,89"
+    "cost": "3,88"
   },
   {
     "title": "XSVNW10HLVA",
@@ -62817,7 +63337,7 @@
   },
   {
     "title": "XSVNW13HL",
-    "cost": "5,02"
+    "cost": "5"
   },
   {
     "title": "XSVNW13HLV",
@@ -62833,7 +63353,7 @@
   },
   {
     "title": "XSVNW16HL",
-    "cost": "7,39"
+    "cost": "7,78"
   },
   {
     "title": "XSVNW16HLVA",
@@ -62861,7 +63381,7 @@
   },
   {
     "title": "XSVNW25HL",
-    "cost": "13,05"
+    "cost": "12,91"
   },
   {
     "title": "XSVNW25HLVA",
@@ -62893,7 +63413,7 @@
   },
   {
     "title": "XSVRNW06HLED",
-    "cost": "3,54"
+    "cost": "3,53"
   },
   {
     "title": "XSVRNW08HLED",
@@ -62917,7 +63437,7 @@
   },
   {
     "title": "XSVRNW13HLED",
-    "cost": "9,37"
+    "cost": "9,32"
   },
   {
     "title": "XSVRNW13HS3/4ED",
@@ -62933,7 +63453,7 @@
   },
   {
     "title": "XSVRNW16HL3/4ED",
-    "cost": "10,84"
+    "cost": "10,97"
   },
   {
     "title": "XSVRNW16HLED",
@@ -63013,7 +63533,7 @@
   },
   {
     "title": "XSWNW13HL",
-    "cost": "9,16"
+    "cost": "9,66"
   },
   {
     "title": "XSWNW13HLVA",
@@ -63185,7 +63705,7 @@
   },
   {
     "title": "XTNW10HL",
-    "cost": "6,73"
+    "cost": "6,38"
   },
   {
     "title": "XTNW10HLVA",
@@ -63197,7 +63717,7 @@
   },
   {
     "title": "XTNW13HL",
-    "cost": "9,12"
+    "cost": "9,11"
   },
   {
     "title": "XTNW13HLVA",
@@ -63481,7 +64001,7 @@
   },
   {
     "title": "XVELONW13HL",
-    "cost": "10,1"
+    "cost": "10,08"
   },
   {
     "title": "XVELONW13HLVA",
@@ -63521,7 +64041,7 @@
   },
   {
     "title": "XVELONW25HL",
-    "cost": "27,23"
+    "cost": "29,15"
   },
   {
     "title": "XVELONW25HLVA",
@@ -63681,7 +64201,7 @@
   },
   {
     "title": "XVETONW10HL",
-    "cost": "8,75"
+    "cost": "8,76"
   },
   {
     "title": "XVETONW10HLVA",
@@ -63693,7 +64213,7 @@
   },
   {
     "title": "XVETONW13HL",
-    "cost": "11,88"
+    "cost": "11,77"
   },
   {
     "title": "XVETONW13HLVA",
@@ -63945,7 +64465,7 @@
   },
   {
     "title": "XVEWONW06HL",
-    "cost": "4,12"
+    "cost": "4,1"
   },
   {
     "title": "XVEWONW06HLVA",
@@ -63969,7 +64489,7 @@
   },
   {
     "title": "XVEWONW10HL",
-    "cost": "6,51"
+    "cost": "6,52"
   },
   {
     "title": "XVEWONW10HLVA",
@@ -63981,7 +64501,7 @@
   },
   {
     "title": "XVEWONW13HL",
-    "cost": "7,34"
+    "cost": "7,36"
   },
   {
     "title": "XVEWONW13HLVA",
@@ -63997,7 +64517,7 @@
   },
   {
     "title": "XVEWONW16HL",
-    "cost": "9,07"
+    "cost": "8,78"
   },
   {
     "title": "XVEWONW16HLVA",
@@ -64005,7 +64525,7 @@
   },
   {
     "title": "XVEWONW16HS",
-    "cost": "13,77"
+    "cost": "13,9"
   },
   {
     "title": "XVEWONW20HL",
@@ -64089,7 +64609,7 @@
   },
   {
     "title": "XVHLNW16",
-    "cost": "3,83"
+    "cost": "3,28"
   },
   {
     "title": "XVHLNW20",
@@ -64097,7 +64617,7 @@
   },
   {
     "title": "XVHLNW25",
-    "cost": "6,63"
+    "cost": "4,83"
   },
   {
     "title": "XVHLNW32",
@@ -64133,7 +64653,7 @@
   },
   {
     "title": "XVHSNW16",
-    "cost": "4,65"
+    "cost": "5,49"
   },
   {
     "title": "XVHSNW20",
@@ -64501,7 +65021,7 @@
   },
   {
     "title": "XVMNW13HL22ED",
-    "cost": "3,32"
+    "cost": "3,31"
   },
   {
     "title": "XVMNW13HL22VA",
@@ -65213,7 +65733,7 @@
   },
   {
     "title": "XVNW16HS",
-    "cost": "4,37"
+    "cost": "4,2"
   },
   {
     "title": "XVNW16HS06",
@@ -65265,7 +65785,7 @@
   },
   {
     "title": "XVNW20HL13",
-    "cost": "6,51"
+    "cost": "6,17"
   },
   {
     "title": "XVNW20HL16",
@@ -65625,7 +66145,7 @@
   },
   {
     "title": "XVRNW06HLED",
-    "cost": "1,78"
+    "cost": "1,71"
   },
   {
     "title": "XVRNW06HLEDVA",
@@ -65797,7 +66317,7 @@
   },
   {
     "title": "XVRNW10HL3/4ED",
-    "cost": "4,8"
+    "cost": "4,81"
   },
   {
     "title": "XVRNW10HL3/4EDVA",
@@ -65809,7 +66329,7 @@
   },
   {
     "title": "XVRNW10HLED",
-    "cost": "2,17"
+    "cost": "2,15"
   },
   {
     "title": "XVRNW10HLEDVA",
@@ -65849,7 +66369,7 @@
   },
   {
     "title": "XVRNW13HL1",
-    "cost": "15,75"
+    "cost": "15,84"
   },
   {
     "title": "XVRNW13HL1/4",
@@ -65877,11 +66397,11 @@
   },
   {
     "title": "XVRNW13HL3/8ED",
-    "cost": "3,09"
+    "cost": "3,08"
   },
   {
     "title": "XVRNW13HLED",
-    "cost": "3,02"
+    "cost": "2,88"
   },
   {
     "title": "XVRNW13HLEDVA",
@@ -65900,12 +66420,16 @@
     "cost": "1,65"
   },
   {
+    "title": "XVRNW13HS1ED",
+    "cost": "11,05"
+  },
+  {
     "title": "XVRNW13HS3/4",
     "cost": "3,12"
   },
   {
     "title": "XVRNW13HS3/4ED",
-    "cost": "5,22"
+    "cost": "5,25"
   },
   {
     "title": "XVRNW13HS3/8",
@@ -65929,7 +66453,7 @@
   },
   {
     "title": "XVRNW16HL1",
-    "cost": "7,09"
+    "cost": "7,75"
   },
   {
     "title": "XVRNW16HL1EDV",
@@ -65949,7 +66473,7 @@
   },
   {
     "title": "XVRNW16HL3/4ED",
-    "cost": "5,21"
+    "cost": "5,23"
   },
   {
     "title": "XVRNW16HL3/4EDVA",
@@ -65965,11 +66489,11 @@
   },
   {
     "title": "XVRNW16HL3/8ED",
-    "cost": "3,99"
+    "cost": "3,68"
   },
   {
     "title": "XVRNW16HLED",
-    "cost": "3,01"
+    "cost": "2,96"
   },
   {
     "title": "XVRNW16HLEDVA",
@@ -66001,11 +66525,11 @@
   },
   {
     "title": "XVRNW16HS1ED",
-    "cost": "7,72"
+    "cost": "7,55"
   },
   {
     "title": "XVRNW16HSED",
-    "cost": "4,64"
+    "cost": "4,6"
   },
   {
     "title": "XVRNW16HSEDVA",
@@ -66025,7 +66549,7 @@
   },
   {
     "title": "XVRNW20HL1/2ED",
-    "cost": "5,09"
+    "cost": "6,05"
   },
   {
     "title": "XVRNW20HL1/2EDVA",
@@ -66033,7 +66557,7 @@
   },
   {
     "title": "XVRNW20HL1ED",
-    "cost": "11,71"
+    "cost": "11,66"
   },
   {
     "title": "XVRNW20HL1EDVA",
@@ -66125,7 +66649,7 @@
   },
   {
     "title": "XVRNW25HLED",
-    "cost": "7,2"
+    "cost": "7,07"
   },
   {
     "title": "XVRNW25HLEDVA",
@@ -66681,7 +67205,7 @@
   },
   {
     "title": "XWNW10HL",
-    "cost": "4,09"
+    "cost": "5,28"
   },
   {
     "title": "XWNW10HLVA",
@@ -66717,7 +67241,7 @@
   },
   {
     "title": "XWNW16HS",
-    "cost": "9,28"
+    "cost": "9,45"
   },
   {
     "title": "XWNW20HL",
@@ -66733,7 +67257,7 @@
   },
   {
     "title": "XWNW25HL",
-    "cost": "15,61"
+    "cost": "15,74"
   },
   {
     "title": "XWNW25HLVA",
@@ -67082,9 +67606,5 @@
   {
     "title": "ZROO42",
     "cost": "7,88"
-  },
-  {
-    "title": "ZURRGURT800ROT",
-    "cost": "6,93"
   }
 ]
