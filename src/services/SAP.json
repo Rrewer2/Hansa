@@ -92,7 +92,7 @@
   {
     "title": "08BS920",
     "description": "PierśUsit centr. 10,37x15,88x2,1 NBR",
-    "amount": "15"
+    "amount": "14"
   },
   {
     "title": "08BS9202",
@@ -122,7 +122,7 @@
   {
     "title": "08BS921",
     "description": "PierśUsit centr. 13,74x20,57x2,1 NBR",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "08BS9212",
@@ -167,7 +167,7 @@
   {
     "title": "08BS9227",
     "description": "PierśUsit centr. M14 22,0x16,4x1,5 NBR",
-    "amount": "4"
+    "amount": "0"
   },
   {
     "title": "08BS9229",
@@ -177,7 +177,7 @@
   {
     "title": "08BS923",
     "description": "PierśUsit centr. 17,28x23,80x2,1 NBR",
-    "amount": "3"
+    "amount": "11"
   },
   {
     "title": "08BS9230",
@@ -187,7 +187,7 @@
   {
     "title": "08BS9232",
     "description": "PierśUsit centr. M18 26,0x20,4x1,5 NBR",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "08BS9233",
@@ -197,12 +197,12 @@
   {
     "title": "08BS9236",
     "description": "PierśUsit centr. M22 30,00x24,40x2 NBR",
-    "amount": "16"
+    "amount": "27"
   },
   {
     "title": "08BS9238",
     "description": "PierśUsit centr. M24 32,00x26,40x2 NBR",
-    "amount": "10"
+    "amount": "9"
   },
   {
     "title": "08BS9239",
@@ -232,7 +232,7 @@
   {
     "title": "08BS925",
     "description": "PierśUsit centr. 21,54x28,58x2,4 NBR",
-    "amount": "10"
+    "amount": "32"
   },
   {
     "title": "08BS925FPM",
@@ -247,17 +247,17 @@
   {
     "title": "08BS927",
     "description": "PierśUsit centr. 27,05x34,93x2,4 NBR",
-    "amount": "23"
+    "amount": "21"
   },
   {
     "title": "08BS929",
     "description": "PierśUsit centr. 30,81x38,10x2,4 NBR",
-    "amount": "20"
+    "amount": "19"
   },
   {
     "title": "08BS930",
     "description": "PierśUsit centr. 33,89x42,80x3,4 NBR",
-    "amount": "44"
+    "amount": "37"
   },
   {
     "title": "08BS930FPM",
@@ -482,12 +482,7 @@
   {
     "title": "3BKR13LK",
     "description": "3kierunkowykurek L blok DN12 IGR1/2\" kp",
-    "amount": "0"
-  },
-  {
-    "title": "3BKR13LK",
-    "description": "3kierunkowykurek L blok DN12 IGR1/2\" kp",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "3BKR13LKVZ",
@@ -992,7 +987,7 @@
   {
     "title": "AFS106SCHRM",
     "description": "Zestaw śrub imbusowych M12x45 (4szt.)",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "AFS106SCHRU",
@@ -1542,7 +1537,7 @@
   {
     "title": "AOVRNW06LED",
     "description": "Element wkręcany AGR1/4\"-WD DKOL08",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "AOVRNW06LEDVA",
@@ -1582,7 +1577,7 @@
   {
     "title": "AOVRNW10L1/2ED",
     "description": "Element wkręcany AGR1/2\"-WD DKOL12",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "AOVRNW10L1/2EDVA",
@@ -1592,12 +1587,12 @@
   {
     "title": "AOVRNW10L1/4ED",
     "description": "Element wkręcany AGR1/4\"-WD DKOL12",
-    "amount": "66"
+    "amount": "46"
   },
   {
     "title": "AOVRNW10LED",
     "description": "Element wkręcany AGR3/8\"-WD DKOL12",
-    "amount": "158"
+    "amount": "121"
   },
   {
     "title": "AOVRNW10SED",
@@ -1607,7 +1602,7 @@
   {
     "title": "AOVRNW13LED",
     "description": "Element wkręcany AGR1/2\"-WD DKOL15",
-    "amount": "1"
+    "amount": "14"
   },
   {
     "title": "AOVRNW13LEDVA",
@@ -2292,7 +2287,7 @@
   {
     "title": "AVRNW13L3/8ED",
     "description": "Element wkręcany AGR3/8\"-WD L15",
-    "amount": "9"
+    "amount": "5"
   },
   {
     "title": "AVRNW13LED",
@@ -3612,7 +3607,7 @@
   {
     "title": "BKR50ND",
     "description": "2kierunkowykurek ND DN51 IGR2\"",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "BKR75ND",
@@ -3767,7 +3762,7 @@
   {
     "title": "BOER1/2",
     "description": "Zawór spustowy oleju AGR1/2\"",
-    "amount": "13"
+    "amount": "17"
   },
   {
     "title": "BOER1/4",
@@ -5002,7 +4997,7 @@
   {
     "title": "DBM196157-ISO",
     "description": "Uszczel. tłoka DBM 50x40x12,5",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "DBM200137",
@@ -5882,7 +5877,7 @@
   {
     "title": "DMONW10L",
     "description": "Nakrętka dwustronna DKOL12 DKOL12",
-    "amount": "1"
+    "amount": "5"
   },
   {
     "title": "DMONW10L06S",
@@ -5927,7 +5922,7 @@
   {
     "title": "DMONW13L",
     "description": "Nakrętka dwustronna DKOL15 DKOL15",
-    "amount": "6"
+    "amount": "9"
   },
   {
     "title": "DMONW13L10S",
@@ -5977,7 +5972,7 @@
   {
     "title": "DMONW16L",
     "description": "Nakrętka dwustronna DKOL18 DKOL18",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "DMONW16L16S",
@@ -5997,7 +5992,7 @@
   {
     "title": "DMONW16S",
     "description": "Nakrętka dwustronna DKOS20 DKOS20",
-    "amount": "2"
+    "amount": "10"
   },
   {
     "title": "DMONW16S20",
@@ -6057,7 +6052,7 @@
   {
     "title": "DMONW25L",
     "description": "Nakrętka dwustronna DKOL28 DKOL28",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "DMONW25L13S",
@@ -8012,12 +8007,12 @@
   {
     "title": "F1",
     "description": "Kołnierz pompy 4otwor KO30 IGR3/8\"",
-    "amount": "7"
+    "amount": "10"
   },
   {
     "title": "F2",
     "description": "Kołnierz pompy 4otwor KO40 IGR1/2\"",
-    "amount": "4"
+    "amount": "6"
   },
   {
     "title": "F3.5A",
@@ -8032,7 +8027,7 @@
   {
     "title": "F3A",
     "description": "Kołnierz pompy 4otwor KO51 IGR3/4\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "F3B",
@@ -8232,7 +8227,7 @@
   {
     "title": "FE2",
     "description": "Kołnierz pompy 4otwor KO40 AGR3/4\"-flach",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "FE3A",
@@ -8427,7 +8422,7 @@
   {
     "title": "FIBL046FP10002",
     "description": "Belüftungsfilter org. 10my Bayonet Kette",
-    "amount": "10"
+    "amount": "7"
   },
   {
     "title": "FIBL080FP03080",
@@ -8457,7 +8452,7 @@
   {
     "title": "FIBL116FP03001",
     "description": "Belüftungsfilter org. 3my Flansch BG1",
-    "amount": "9"
+    "amount": "13"
   },
   {
     "title": "FIBL116FP03002",
@@ -8467,12 +8462,12 @@
   {
     "title": "FIBLEMP0071P03",
     "description": "Belüftungsfilterelement organ. 3my BG1",
-    "amount": "1"
+    "amount": "13"
   },
   {
     "title": "FIBLEMP0072P03",
     "description": "Belüftungsfilterelement organ. 3my BG2",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "FIDFS32A075",
@@ -8567,12 +8562,7 @@
   {
     "title": "FIRL048P10NVG1/2",
     "description": "Rücklauffilter 60l 10my V1,75 1/2\"",
-    "amount": "0"
-  },
-  {
-    "title": "FIRL048P10NVG1/2",
-    "description": "Rücklauffilter 60l 10my V1,75 1/2\"",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "FIRL053A10NVG1/2",
@@ -8607,12 +8597,12 @@
   {
     "title": "FIRL150P10NVG3/4",
     "description": "Rücklauffilter 110l 10my V1,75 3/4\"",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "FIRL225P10NVG1",
     "description": "Rücklauffilter 220l 10my V1,75 1\"",
-    "amount": "1"
+    "amount": "9"
   },
   {
     "title": "FIRL225P10NVG3/4",
@@ -8637,7 +8627,7 @@
   {
     "title": "FIRL610P10NVG11/2",
     "description": "Rücklauffilter 610l 10my V1,75 1.1/2\"",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "FIRLEMP0072P10",
@@ -8757,7 +8747,7 @@
   {
     "title": "FISPEMP0147P10",
     "description": "Spin-On-Element org. 10my 147x96, 3/4\"",
-    "amount": "7"
+    "amount": "9"
   },
   {
     "title": "FISPEMP0182A10",
@@ -8767,7 +8757,7 @@
   {
     "title": "FISPEMP0182P10",
     "description": "Spin-On-Element org. 10my 182x129 1.1/4\"",
-    "amount": "7"
+    "amount": "4"
   },
   {
     "title": "FISPEMP0213A06",
@@ -8827,12 +8817,12 @@
   {
     "title": "FISPR48A10VG3/4",
     "description": "Spin-On Rücklauffilter 48l 10my 3/4\"",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "FISPR55P10VG3/4",
     "description": "Spin-On Rücklauffilter 55l 10my 3/4\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "FISPRFK001G11/4",
@@ -8842,7 +8832,7 @@
   {
     "title": "FISPRFK001G3/4",
     "description": "Spin-On Rücklauffilterkopf 3/4\"",
-    "amount": "10"
+    "amount": "14"
   },
   {
     "title": "FISPRFK002G11/2",
@@ -8857,7 +8847,7 @@
   {
     "title": "FIVDEA50HA50",
     "description": "Verschmutzungsanzeige elektr. 5 bar 1/2\"",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "FKKG31IR25DAL",
@@ -9542,7 +9532,7 @@
   {
     "title": "GAB08HB06",
     "description": "Adaptery DKR1/2\" AGR3/8\"",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "GAB08HB10",
@@ -9552,7 +9542,7 @@
   {
     "title": "GAB08HB12",
     "description": "Adaptery DKR1/2\" AGR3/4\"",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "GAB08HB16",
@@ -11242,7 +11232,7 @@
   {
     "title": "GEHRED04HB",
     "description": "Adaptery AGR1/4\"-WD AGR1/4\"",
-    "amount": "8"
+    "amount": "3"
   },
   {
     "title": "GEHRED04HB02",
@@ -11312,7 +11302,7 @@
   {
     "title": "GEHRED06HB",
     "description": "Adaptery AGR3/8\"-WD AGR3/8\"",
-    "amount": "20"
+    "amount": "9"
   },
   {
     "title": "GEHRED06HB04",
@@ -11322,7 +11312,7 @@
   {
     "title": "GEHRED06HB08",
     "description": "Adaptery AGR3/8\"-WD AGR1/2\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "GEHRED06HJ",
@@ -11402,12 +11392,12 @@
   {
     "title": "GEHRED08HB",
     "description": "Adaptery AGR1/2\"-WD AGR1/2\"",
-    "amount": "7"
+    "amount": "3"
   },
   {
     "title": "GEHRED08HB06",
     "description": "Adaptery AGR1/2\"-WD AGR3/8\"",
-    "amount": "6"
+    "amount": "1"
   },
   {
     "title": "GEHRED08HB10",
@@ -11492,7 +11482,7 @@
   {
     "title": "GEHRED12HB",
     "description": "Adaptery AGR3/4\"-WD AGR3/4\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "GEHRED12HB08",
@@ -11572,7 +11562,7 @@
   {
     "title": "GEHRED16HB12",
     "description": "Adaptery AGR1\"-WD AGR3/4\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "GEHRED16HJ",
@@ -12177,7 +12167,7 @@
   {
     "title": "GF35LKL12315",
     "description": "Kołnierz pompy 4otwor KO35 CEL12",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "GF35LKL15250",
@@ -12192,7 +12182,7 @@
   {
     "title": "GF40LKL15100",
     "description": "Kołnierz pompy 4otwor KO40 CEL15",
-    "amount": "8"
+    "amount": "4"
   },
   {
     "title": "GF40LKL18100",
@@ -12567,7 +12557,7 @@
   {
     "title": "GHB02HB04",
     "description": "Adaptery AGR1/8\" AGR1/4\"",
-    "amount": "4"
+    "amount": "0"
   },
   {
     "title": "GHB02HB06",
@@ -12597,12 +12587,12 @@
   {
     "title": "GHB04",
     "description": "Adaptery AGR1/4\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "GHB04HB06",
     "description": "Adaptery AGR1/4\" AGR3/8\"",
-    "amount": "1"
+    "amount": "7"
   },
   {
     "title": "GHB04HB06VA",
@@ -12612,7 +12602,7 @@
   {
     "title": "GHB04HB08",
     "description": "Adaptery AGR1/4\" AGR1/2\"",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "GHB04HB08VA",
@@ -12627,7 +12617,7 @@
   {
     "title": "GHB04HB12",
     "description": "Adaptery AGR1/4\" AGR3/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "GHB04HB16",
@@ -12672,7 +12662,7 @@
   {
     "title": "GHB06",
     "description": "Adaptery AGR3/8\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "GHB06HB08",
@@ -12692,7 +12682,7 @@
   {
     "title": "GHB06HB12",
     "description": "Adaptery AGR3/8\" AGR3/4\"",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "GHB06HB16",
@@ -12752,7 +12742,7 @@
   {
     "title": "GHB08HB16",
     "description": "Adaptery AGR1/2\" AGR1\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "GHB08HB20",
@@ -14032,7 +14022,7 @@
   {
     "title": "GMM63-250",
     "description": "Manometr glicerynowy 63 250bar",
-    "amount": "59"
+    "amount": "48"
   },
   {
     "title": "GMM63-250H",
@@ -14042,7 +14032,7 @@
   {
     "title": "GMM63-250HFR",
     "description": "Manometr glicerynowy 63 250bar",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "GMM63-250HKR",
@@ -14087,7 +14077,7 @@
   {
     "title": "GMM63-400HFR",
     "description": "Manometr glicerynowy 63 400bar",
-    "amount": "2"
+    "amount": "18"
   },
   {
     "title": "GMM63-400HKR",
@@ -14102,12 +14092,7 @@
   {
     "title": "GMM63-40HFR",
     "description": "Manometr glicerynowy 63 40bar",
-    "amount": "0"
-  },
-  {
-    "title": "GMM63-40HFR",
-    "description": "Manometr glicerynowy 63 40bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "GMM63-40HKR",
@@ -14882,6 +14867,31 @@
   {
     "title": "H-BUNDJACKE64",
     "description": "Czarna kurtka, rozmiar 64",
+    "amount": "0"
+  },
+  {
+    "title": "H-BUNDJACKEL",
+    "description": "Bundjacke Grösse L schwarz/grau",
+    "amount": "0"
+  },
+  {
+    "title": "H-BUNDJACKEM",
+    "description": "Bundjacke Grösse M schwarz/grau",
+    "amount": "0"
+  },
+  {
+    "title": "H-BUNDJACKES",
+    "description": "Bundjacke Grösse S schwarz/grau",
+    "amount": "0"
+  },
+  {
+    "title": "H-BUNDJACKEXL",
+    "description": "Bundjacke Grösse XL schwarz/grau",
+    "amount": "0"
+  },
+  {
+    "title": "H-BUNDJACKEXXL",
+    "description": "Bundjacke Grösse XXL schwarz/grau",
     "amount": "0"
   },
   {
@@ -15907,7 +15917,7 @@
   {
     "title": "HD216S",
     "description": "Wąż hydrauliczny 2SN DN16",
-    "amount": "0,04"
+    "amount": "0,00"
   },
   {
     "title": "HD216T",
@@ -16252,7 +16262,7 @@
   {
     "title": "HFMKL08",
     "description": "Złącze pomiarowe M16x2 DKOL08",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HFMKL08-12",
@@ -16282,7 +16292,7 @@
   {
     "title": "HFMKL12",
     "description": "Złącze pomiarowe M16x2 DKOL12",
-    "amount": "66"
+    "amount": "46"
   },
   {
     "title": "HFMKL12-16",
@@ -16297,7 +16307,7 @@
   {
     "title": "HFMKL15",
     "description": "Złącze pomiarowe M16x2 DKOL15",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HFMKL18",
@@ -16647,7 +16657,7 @@
   {
     "title": "HFMMKR1/2ED",
     "description": "Złącze pomiarowe M16x2 AGR1/2\"-WD",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "HFMMKR1/2S",
@@ -16657,7 +16667,7 @@
   {
     "title": "HFMMKR1/4",
     "description": "Złącze pomiarowe M16x2 AGR1/4\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HFMMKR1/4-12",
@@ -16667,7 +16677,7 @@
   {
     "title": "HFMMKR1/4ED",
     "description": "Złącze pomiarowe M16x2 AGR1/4\"-WD",
-    "amount": "16"
+    "amount": "34"
   },
   {
     "title": "HFMMKR1/4S",
@@ -16727,7 +16737,7 @@
   {
     "title": "HFMMKR3/8ED",
     "description": "Złącze pomiarowe M16x2 AGR3/8\"-WD",
-    "amount": "4"
+    "amount": "1"
   },
   {
     "title": "HFMMKR3/8S",
@@ -16757,7 +16767,7 @@
   {
     "title": "HFMMMA1/4",
     "description": "Adapterdomanometruprzeg M16x2 IGR1/4\"",
-    "amount": "59"
+    "amount": "49"
   },
   {
     "title": "HFMMMA1/4-12",
@@ -16787,7 +16797,7 @@
   {
     "title": "HFMSKE1000",
     "description": "Przewód pomiaro. M16x2 DN02 D=1000",
-    "amount": "61"
+    "amount": "49"
   },
   {
     "title": "HFMSKE1000-12",
@@ -16907,12 +16917,7 @@
   {
     "title": "HK00613",
     "description": "Obudowa zaworu 2kieru WZ6 IGR3/8\"",
-    "amount": "0"
-  },
-  {
-    "title": "HK00613",
-    "description": "Obudowa zaworu 2kieru WZ6 IGR3/8\"",
-    "amount": "56"
+    "amount": "36"
   },
   {
     "title": "HK00713",
@@ -16932,12 +16937,7 @@
   {
     "title": "HK01812",
     "description": "Obudowa zaworu 3kieru WZ12 IGR3/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HK01812",
-    "description": "Obudowa zaworu 3kieru WZ12 IGR3/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HK02313",
@@ -16967,7 +16967,7 @@
   {
     "title": "HK055211000900",
     "description": "Zawór zwrotny jed. działania IGR1/4\"",
-    "amount": "2"
+    "amount": "4"
   },
   {
     "title": "HK055301000300",
@@ -17007,6 +17007,11 @@
   {
     "title": "HK0P0401ABBA",
     "description": "Pompa zębata TW0 0,45 EU cyl. wałek LR",
+    "amount": "1"
+  },
+  {
+    "title": "HK0P0501ABBA",
+    "description": "Pompa zębata TW0 0,56 EU cyl. wałek LR",
     "amount": "1"
   },
   {
@@ -17052,12 +17057,7 @@
   {
     "title": "HK12VDCLEMDV1012",
     "description": "Cewka magnet. do HKEMDV10+12 12VDC",
-    "amount": "0"
-  },
-  {
-    "title": "HK12VDCLEMDV1012",
-    "description": "Cewka magnet. do HKEMDV10+12 12VDC",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HK12VDCLEMDV60191",
@@ -17067,12 +17067,7 @@
   {
     "title": "HK12VDCSEMDV08",
     "description": "Cewka magnet. do HKEMDV08 12VDC",
-    "amount": "0"
-  },
-  {
-    "title": "HK12VDCSEMDV08",
-    "description": "Cewka magnet. do HKEMDV08 12VDC",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HK12VDCSEMDV60186",
@@ -17152,7 +17147,7 @@
   {
     "title": "HK1P1602FIIA",
     "description": "Pompa zębata TW1 0,91 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK1P1702FBBA",
@@ -17177,7 +17172,7 @@
   {
     "title": "HK1P2002FIIA",
     "description": "Pompa zębata TW1 2,08 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK1P2101FBBA",
@@ -17202,12 +17197,12 @@
   {
     "title": "HK1P2502FBBA",
     "description": "Pompa zębata TW1 3,64 wałek EU 1:8 PS",
-    "amount": "9"
+    "amount": "6"
   },
   {
     "title": "HK1P2502FIIA",
     "description": "Pompa zębata TW1 3,64 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK1P2701FBBA",
@@ -17227,12 +17222,12 @@
   {
     "title": "HK1P3102FBBA",
     "description": "Pompa zębata TW1 5,85 wałek EU 1:8 PS",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HK1P3402FBBA",
     "description": "Pompa zębata TW1 7,54 wałek EU 1:8 PS",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HK1P3402FIIA",
@@ -17277,12 +17272,12 @@
   {
     "title": "HK2APF06F02Z41RSS",
     "description": "Zahnradpumpe Grp2 6,0 EU Welle 1:8 Re",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK2APF08F02Z41RSS",
     "description": "Zahnradpumpe Grp2 8,0 EU Welle 1:8 Re",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HK2APF10F06Z41LSS",
@@ -17310,6 +17305,11 @@
     "amount": "0"
   },
   {
+    "title": "HK2APF20F06Z41LSS",
+    "description": "Zahnradpumpe Grp2 20,0 EU Welle 1:8 Li",
+    "amount": "0"
+  },
+  {
     "title": "HK2APF20F06Z41RSS",
     "description": "Zahnradpumpe Grp2 20,0 EU Welle 1:8 Re",
     "amount": "0"
@@ -17320,14 +17320,24 @@
     "amount": "0"
   },
   {
+    "title": "HK2MS124VDC001",
+    "description": "Kühler Öl-Luft 2MS1 24VDC o. T.",
+    "amount": "0"
+  },
+  {
+    "title": "HK2MS224VDC001",
+    "description": "Kühler Öl-Luft 2MS2 24VDC o. T.",
+    "amount": "0"
+  },
+  {
     "title": "HK2P4102EBBA",
     "description": "Pompa zębata TW2 4,20 wałek EU 1:8 PS",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HK2P4102EOOA",
     "description": "Pompa zębata TW2 4,20 wałek EU 1:8 PS",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HK2P4131CSRA",
@@ -17347,7 +17357,7 @@
   {
     "title": "HK2P4302EOOA",
     "description": "Pompa zębata TW2 6,00 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HK2P4332CSRA",
@@ -17417,7 +17427,7 @@
   {
     "title": "HK2P4702EOOA",
     "description": "Pompa zębata TW2 10,8 wałek EU 1:8 PS",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK2P4711FSRA",
@@ -17432,7 +17442,7 @@
   {
     "title": "HK2P4722FSRA",
     "description": "Pompa zębata TW2 10,8 wałek DE 1:5 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK2P4731CSRA",
@@ -17482,7 +17492,7 @@
   {
     "title": "HK2P4942FSRA",
     "description": "Pompa zębata TW2 14,4 wałek DE 1:5 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HK2P5101ECBA",
@@ -17542,7 +17552,7 @@
   {
     "title": "HK2P5502EPOA",
     "description": "Pompa zębata TW2 22,8 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HK2P5512FSRA",
@@ -17617,7 +17627,7 @@
   {
     "title": "HK4131070601C1Q",
     "description": "Zawór magrozdz4/2 WZ6 24VDC",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK4131070601C1R",
@@ -17637,7 +17647,7 @@
   {
     "title": "HK4131510101C1Q",
     "description": "Zawór magrozdz4/2 WZ6 24VDC",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HK4131510201C1Q",
@@ -17647,6 +17657,11 @@
   {
     "title": "HK4131510201C1R",
     "description": "Zawór magrozdz4/2 WZ6 12VDC",
+    "amount": "0"
+  },
+  {
+    "title": "HK41320103021Q",
+    "description": "Zawór magrozdz4/3 WZ6 24VDC",
     "amount": "0"
   },
   {
@@ -17672,7 +17687,7 @@
   {
     "title": "HK4132030302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "44"
+    "amount": "46"
   },
   {
     "title": "HK4132030302C1R",
@@ -17687,7 +17702,7 @@
   {
     "title": "HK4132070302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "8"
+    "amount": "6"
   },
   {
     "title": "HK4132070302C1R",
@@ -17697,7 +17712,7 @@
   {
     "title": "HK4132080302C1Q",
     "description": "Zawór magrozdz4/3 WZ6 24VDC",
-    "amount": "10"
+    "amount": "8"
   },
   {
     "title": "HK4132080302C1R",
@@ -17757,7 +17772,7 @@
   {
     "title": "HK4232010302C1Q",
     "description": "Zawór magrozdz4/3 WZ10 24VDC",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HK4232030302C1Q",
@@ -17840,14 +17855,24 @@
     "amount": "0"
   },
   {
+    "title": "HK80M4B352-4IE2",
+    "description": "Silnik-E 230/400V 0,75kW 1400U B35 IE2",
+    "amount": "0"
+  },
+  {
     "title": "HK80M4B352-4IE3",
     "description": "E-Motor 230/400V 0,75kW 1400U B3/B5 IE3",
-    "amount": "1"
+    "amount": "0"
+  },
+  {
+    "title": "HK80M4B52-4IE3",
+    "description": "E-Motor 230/400V 0,75kW 1400U B5 IE3",
+    "amount": "0"
   },
   {
     "title": "HK90L4B352-4IE3",
     "description": "E-Motor 230/400V 1,5kW 1400U B3/B5 IE3",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "HK90S4B352-4IE3",
@@ -17947,7 +17972,7 @@
   {
     "title": "HKA192424N1AL",
     "description": "Coupling Spidex A19 M24 P1:8 9.75 AL",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKA2419N2AAL",
@@ -17962,7 +17987,7 @@
   {
     "title": "HKA2424N2AAL",
     "description": "Coupling Spidex A24 M24 P1:8 17.28 AL",
-    "amount": "5"
+    "amount": "3"
   },
   {
     "title": "HKA24322860N1AL",
@@ -17977,7 +18002,7 @@
   {
     "title": "HKA243228N2AAL",
     "description": "Coupling Spidex A24 M28 P1:8 17.28 AL",
-    "amount": "13"
+    "amount": "9"
   },
   {
     "title": "HKA243228N3AL",
@@ -17987,7 +18012,7 @@
   {
     "title": "HKA28383860N2AAL",
     "description": "Coupling Spidex A28 M38 P1:8 17.28 AL",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKA28383860N3AL",
@@ -17997,11 +18022,6 @@
   {
     "title": "HKA384542N2AAL",
     "description": "Coupling Spidex A38 M42 P1:8 17.28 AL",
-    "amount": "0"
-  },
-  {
-    "title": "HKA384542N3AL",
-    "description": "Coupling Spidex A38 M42 P1:8 22 AL 92Sh",
     "amount": "0"
   },
   {
@@ -18026,27 +18046,27 @@
   },
   {
     "title": "HKAGN009PBA83236",
-    "description": "Kupplung ST Axkopumpe PBA+EM132 9kW",
+    "description": "Kupplung AGN 009 M38 P8x32x36 ISO 14 ST",
     "amount": "1"
   },
   {
     "title": "HKAGN015PBA83236",
-    "description": "Kupplung ST Axkopumpe PBA+EM160-180 15kW",
+    "description": "Kupplung AGN 015 M42 P8x32x36 ISO 14 ST",
     "amount": "0"
   },
   {
     "title": "HKAGN022PBA83236",
-    "description": "Kupplung ST Axkopumpe PBA+EM160-180 22kW",
+    "description": "Kupplung AGN 022 M48 P8x32x36 ISO 14 ST",
     "amount": "0"
   },
   {
     "title": "HKAGN030PBA83236",
-    "description": "Kupplung ST Axkopumpe PBA+EM200 30kW",
+    "description": "Kupplung AGN 030 M55 P8x32x36 ISO 14 ST",
     "amount": "1"
   },
   {
     "title": "HKAGN045PBA83236",
-    "description": "Kupplung ST Axkopumpe PBA+EM225 45kW",
+    "description": "Kupplung AGN 045 M60 P8x32x36 ISO 14 ST",
     "amount": "1"
   },
   {
@@ -18157,7 +18177,7 @@
   {
     "title": "HKAZPJ016RH030MB",
     "description": "Zahnradpumpe Gr2 16,0 EU SI Welle 1:8 RE",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HKAZPJ019RH030MB",
@@ -18302,7 +18322,7 @@
   {
     "title": "HKBA428",
     "description": "Płytka przyłączeniowa 1x WZ10",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKBA428HF",
@@ -18337,12 +18357,12 @@
   {
     "title": "HKBABP6HF",
     "description": "Abdeckplatte NG6",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "HKBAKRA12",
     "description": "Zbiornik bez krawęd 12L AL",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKBAKRA130",
@@ -18352,12 +18372,12 @@
   {
     "title": "HKBAKRA20",
     "description": "Zbiornik bez krawęd 20L AL",
-    "amount": "7"
+    "amount": "6"
   },
   {
     "title": "HKBAKRA30",
     "description": "Zbiornik bez krawęd 30L AL",
-    "amount": "9"
+    "amount": "6"
   },
   {
     "title": "HKBAKRA44",
@@ -18367,7 +18387,7 @@
   {
     "title": "HKBAKRA70",
     "description": "Zbiornik bez krawęd 70L AL",
-    "amount": "2"
+    "amount": "11"
   },
   {
     "title": "HKBCWS",
@@ -18472,7 +18492,7 @@
   {
     "title": "HKBHFIG14",
     "description": "Płytka adapteru do HKMAP IGR1/4\"",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HKBHM03A",
@@ -18560,6 +18580,11 @@
     "amount": "0"
   },
   {
+    "title": "HKBM40A",
+    "description": "Tłok zaworu typ A do HKBM40",
+    "amount": "2"
+  },
+  {
     "title": "HKBM40A1",
     "description": "Monoblok ręczny zawór rozd BM40-A1",
     "amount": "0"
@@ -18592,12 +18617,7 @@
   {
     "title": "HKBM40B",
     "description": "Tłok zaworu typ B do HKBM40",
-    "amount": "0"
-  },
-  {
-    "title": "HKBM40B",
-    "description": "Tłok zaworu typ B do HKBM40",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKBM40C0",
@@ -18632,12 +18652,7 @@
   {
     "title": "HKBM40F",
     "description": "Tłok zaworu typ F do HKBM40",
-    "amount": "0"
-  },
-  {
-    "title": "HKBM40F",
-    "description": "Tłok zaworu typ F do HKBM40",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "HKBM40K",
@@ -18732,12 +18747,7 @@
   {
     "title": "HKBM70D",
     "description": "Tłok zaworu typ D do HKBM70",
-    "amount": "0"
-  },
-  {
-    "title": "HKBM70D",
-    "description": "Tłok zaworu typ D do HKBM70",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKBM70DBAL",
@@ -18825,6 +18835,11 @@
     "amount": "0"
   },
   {
+    "title": "HKBSKRD324HF",
+    "description": "Servicing cover Ø324 for steel tank BSK",
+    "amount": "4"
+  },
+  {
     "title": "HKBSKRDDICHT250",
     "description": "Dichtung Reinigungsdeckel D 250 für BSK",
     "amount": "6"
@@ -18847,7 +18862,7 @@
   {
     "title": "HKC24VDC",
     "description": "Cewka magnet. do cartridgea 24VDC",
-    "amount": "58"
+    "amount": "48"
   },
   {
     "title": "HKC24VDC33",
@@ -18992,17 +19007,17 @@
   {
     "title": "HKCBS0800000",
     "description": "Gwint przyłącza oleju IGR1/2\"",
-    "amount": "28"
+    "amount": "16"
   },
   {
     "title": "HKCBS1200000",
     "description": "Gwint przyłącza oleju IGR3/4\"",
-    "amount": "61"
+    "amount": "53"
   },
   {
     "title": "HKCBS1600000",
     "description": "Gwint przyłącza oleju IGR1\"",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "HKCBS2000000",
@@ -19877,7 +19892,7 @@
   {
     "title": "HKCGE0500000",
     "description": "Promieniowe łożysko przegubowe GE 50",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKCGE0600000",
@@ -20602,7 +20617,7 @@
   {
     "title": "HKDFE0523ZAW24DC",
     "description": "3/2-Magnetventil IGR3/8\" 200bar 24VDC",
-    "amount": "47"
+    "amount": "44"
   },
   {
     "title": "HKDFE0523ZAY24DC",
@@ -20832,7 +20847,7 @@
   {
     "title": "HKDG4V30CVMU24DC",
     "description": "4/3-Magnetventil NG6 24VDC",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKDG4V322AVMU24DC",
@@ -20962,12 +20977,7 @@
   {
     "title": "HKDHE0614X00DC",
     "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "5"
-  },
-  {
-    "title": "HKDHE06302X00DC",
-    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKDHE06302X00DC",
@@ -20987,12 +20997,7 @@
   {
     "title": "HKDHE06322X00DC",
     "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
-  },
-  {
-    "title": "HKDHE06322X00DC",
-    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKDHE0710X00DC",
@@ -21003,6 +21008,11 @@
     "title": "HKDHE0711PX00DC",
     "description": "Zawór magrozdz4/3 WZ6 bez cewki red.wyc.",
     "amount": "0"
+  },
+  {
+    "title": "HKDHE0711X00AC",
+    "description": "4/3-Magnetventil NG6 ohne Spule",
+    "amount": "1"
   },
   {
     "title": "HKDHE0711X00DC",
@@ -21036,11 +21046,6 @@
   },
   {
     "title": "HKDHI0611X00",
-    "description": "Zawór magrozdz4/2 WZ6 bez cewki",
-    "amount": "0"
-  },
-  {
-    "title": "HKDHI0613X00",
     "description": "Zawór magrozdz4/2 WZ6 bez cewki",
     "amount": "0"
   },
@@ -21157,7 +21162,7 @@
   {
     "title": "HKDHQ023OI24DC",
     "description": "Zawórbiegszybki/pełzaj do QV06 A WZ6 PZ",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKDHZEA071L5",
@@ -21177,7 +21182,7 @@
   {
     "title": "HKDICHTBANDMOOSGUM",
     "description": "Taśma uszczel. do zbor. 15x5mm gumaporow",
-    "amount": "0,00"
+    "amount": "6,00"
   },
   {
     "title": "HKDK1141",
@@ -21187,6 +21192,11 @@
   {
     "title": "HKDKE1610X00DC",
     "description": "Zawór magrozdz4/2 WZ10 DC bez cewki",
+    "amount": "0"
+  },
+  {
+    "title": "HKDKE1611X00AC",
+    "description": "4/2-Magnetventil NG10 ohne Spule",
     "amount": "0"
   },
   {
@@ -21250,6 +21260,11 @@
     "amount": "0"
   },
   {
+    "title": "HKDKE1714X00AC",
+    "description": "4/3-Magnetventil NG10 ohne Spule",
+    "amount": "0"
+  },
+  {
     "title": "HKDKE1714X00DC",
     "description": "Zawór magrozdz4/3 WZ10 DC bez cewki",
     "amount": "1"
@@ -21266,16 +21281,6 @@
   },
   {
     "title": "HKDKI1611X00",
-    "description": "Zawór magrozdz4/2 WZ10 bez cewki",
-    "amount": "0"
-  },
-  {
-    "title": "HKDKI1611X00",
-    "description": "Zawór magrozdz4/2 WZ10 bez cewki",
-    "amount": "0"
-  },
-  {
-    "title": "HKDKI1613X00",
     "description": "Zawór magrozdz4/2 WZ10 bez cewki",
     "amount": "0"
   },
@@ -21327,12 +21332,12 @@
   {
     "title": "HKDLMDL112M",
     "description": "Listwa amortująca MDL 112M",
-    "amount": "8"
+    "amount": "6"
   },
   {
     "title": "HKDLMDL132M",
     "description": "Listwa amortująca MDL 132M",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKDLMDL132S",
@@ -21357,6 +21362,11 @@
   {
     "title": "HKDLMDL180M",
     "description": "Listwa amortująca MDL 180M",
+    "amount": "0"
+  },
+  {
+    "title": "HKDLMDL200L",
+    "description": "Listwa amortująca MDL 200L",
     "amount": "0"
   },
   {
@@ -21385,23 +21395,33 @@
     "amount": "0"
   },
   {
+    "title": "HKDPT160NBR",
+    "description": "Uszczelka do wspornik pomp 160mm NBR",
+    "amount": "1"
+  },
+  {
     "title": "HKDPT200NBR",
     "description": "Uszczelka do wspornik pomp 200mm NBR",
-    "amount": "12"
+    "amount": "8"
   },
   {
     "title": "HKDPT250NBR",
     "description": "Uszczelka do wspornik pomp 250mm NBR",
-    "amount": "7"
+    "amount": "8"
   },
   {
     "title": "HKDPT300NBR",
     "description": "Uszczelka do wspornik pomp 300mm NBR",
-    "amount": "3"
+    "amount": "12"
   },
   {
     "title": "HKDPT350NBR",
     "description": "Uszczelka do wspornik pomp 350mm NBR",
+    "amount": "0"
+  },
+  {
+    "title": "HKDRH3",
+    "description": "Rückschlagventil dw. entsperrbar 1/2\"",
     "amount": "0"
   },
   {
@@ -21452,7 +21472,7 @@
   {
     "title": "HKDSA10N420A400",
     "description": "Drucksensor 0-400bar, 4-20mA",
-    "amount": "1"
+    "amount": "8"
   },
   {
     "title": "HKDSFL350",
@@ -21462,7 +21482,7 @@
   {
     "title": "HKDSRM124POL5.0W",
     "description": "Wtyk M12 4biegun kątowe kabel 5m",
-    "amount": "1"
+    "amount": "4"
   },
   {
     "title": "HKDTDFMCN",
@@ -21478,6 +21498,11 @@
     "title": "HKEASBUSBOPT",
     "description": "Isolator Adapter USB A",
     "amount": "1"
+  },
+  {
+    "title": "HKEBAT",
+    "description": "Obudowa zaworu HKCBBY+HKCBCA A/B PZ ST",
+    "amount": "0"
   },
   {
     "title": "HKEBMASPS01H",
@@ -21530,14 +21555,19 @@
     "amount": "0"
   },
   {
+    "title": "HKEIPH3050RK23",
+    "description": "Innenzahnradpumpe SAEB2 50,3 Welle Ø25 R",
+    "amount": "0"
+  },
+  {
     "title": "HKEM103138X2F",
     "description": "Anschlussplatte 1x NG6 DBV 50-210 bar",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "HKEM103138X3F",
     "description": "Anschlussplatte 1x NG6 DBV 100-350 bar",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HKEM103238X2F",
@@ -21552,7 +21582,7 @@
   {
     "title": "HKEM103338X2F",
     "description": "Anschlussplatte 3x NG6 DBV 50-210 bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKEM103338X3F",
@@ -21562,7 +21592,7 @@
   {
     "title": "HKEM103438X2F",
     "description": "Anschlussplatte 4x NG6 DBV 50-210 bar",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKEM103438X3F",
@@ -21583,6 +21613,11 @@
     "title": "HKEM103638X2F",
     "description": "Anschlussplatte 6x NG6 DBV 50-210 bar",
     "amount": "1"
+  },
+  {
+    "title": "HKEM105134X2F",
+    "description": "Anschlussplatte 1x NG10 DBV 35-120 bar",
+    "amount": "0"
   },
   {
     "title": "HKEM105134X3F",
@@ -21612,6 +21647,11 @@
   {
     "title": "HKEM105434X3F",
     "description": "Anschlussplatte 4x NG10 DBV 80-270 bar",
+    "amount": "0"
+  },
+  {
+    "title": "HKEM105534X3F",
+    "description": "Anschlussplatte 5x NG10 DBV 80-270 bar",
     "amount": "0"
   },
   {
@@ -21697,7 +21737,7 @@
   {
     "title": "HKEMIASIR01HM12",
     "description": "Stecker-Leistungsverstärker f. Prop.-WV",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKEPM032CD",
@@ -21842,7 +21882,7 @@
   {
     "title": "HKEPRM080CD",
     "description": "Silnik Geroller 080 W25 HD",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKEPRM100CD",
@@ -21877,17 +21917,12 @@
   {
     "title": "HKES3B38X2F",
     "description": "Connection plate 1x NG6 DBV 50-210 bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKES3B38X2F",
-    "description": "Connection plate 1x NG6 DBV 50-210 bar",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "HKES3B38X3F",
     "description": "Connection plate 1x NG6 DBV 100-350 bar",
-    "amount": "6"
+    "amount": "5"
   },
   {
     "title": "HKES5B34PLX2F",
@@ -21902,7 +21937,7 @@
   {
     "title": "HKEV0822CY24VDC",
     "description": "Magnetsitzventil 2/2 Cart. NG8 NC 24DC",
-    "amount": "10"
+    "amount": "0"
   },
   {
     "title": "HKEV0822DTC24VDC",
@@ -21917,7 +21952,7 @@
   {
     "title": "HKEV0823DTC24VDC",
     "description": "Magnetsitzventil 2/2 Cart. NG8 NO 24DC",
-    "amount": "2"
+    "amount": "22"
   },
   {
     "title": "HKEV0830C230RAC",
@@ -21972,7 +22007,7 @@
   {
     "title": "HKEVH06A5",
     "description": "Elektomagnetzawór2/2 Cartr. WZ6",
-    "amount": "24"
+    "amount": "4"
   },
   {
     "title": "HKEVH06C3",
@@ -22106,7 +22141,7 @@
   },
   {
     "title": "HKFPMD70ILP12A20",
-    "description": "Shock valve da. IGR1/2\" 80-280bar",
+    "description": "Shock valve da. IGR1/2 80-250bar",
     "amount": "0"
   },
   {
@@ -22137,21 +22172,26 @@
   {
     "title": "HKFT29001-14",
     "description": "Manometerabsperrventil IGR+IGR1/4\"",
-    "amount": "1"
+    "amount": "10"
   },
   {
     "title": "HKFT291-14",
     "description": "Zawór odcinający manomet 90° AGR+IGR1/4\"",
-    "amount": "9"
+    "amount": "5"
   },
   {
     "title": "HKFT29101-14",
     "description": "Manometerabsperrventil 90° IGR+IGR1/4\"",
-    "amount": "11"
+    "amount": "26"
   },
   {
     "title": "HKFUSS150ALU",
     "description": "Nóżka do zbiornalu HKBAK30-44-70",
+    "amount": "5"
+  },
+  {
+    "title": "HKFUSS75ALU",
+    "description": "Nóżka do zbiornalu HKBAK12-13-20",
     "amount": "4"
   },
   {
@@ -22197,12 +22237,7 @@
   {
     "title": "HKGEH12C1230GGG",
     "description": "Obudowa zaworu 3kier SAE12 IGR1/2\" GGG40",
-    "amount": "0"
-  },
-  {
-    "title": "HKGEH12C1230GGG",
-    "description": "Obudowa zaworu 3kier SAE12 IGR1/2\" GGG40",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "HKGEH34C1020",
@@ -22222,7 +22257,7 @@
   {
     "title": "HKGEH38C0820",
     "description": "Obudowa zaworu 2kieru SAE08 IGR3/8\" Alu",
-    "amount": "23"
+    "amount": "12"
   },
   {
     "title": "HKGEH38C0820GGG",
@@ -22237,7 +22272,7 @@
   {
     "title": "HKGEH38C1020",
     "description": "Obudowa zaworu 2kieru SAE10 IGR3/8\" Alu",
-    "amount": "14"
+    "amount": "12"
   },
   {
     "title": "HKGEH38C1020GGG",
@@ -22247,7 +22282,7 @@
   {
     "title": "HKGEH38C1030",
     "description": "Obudowa zaworu 3kieru SAE10 IGR3/8\" Alu",
-    "amount": "30"
+    "amount": "10"
   },
   {
     "title": "HKGEHB08212ST",
@@ -22257,7 +22292,7 @@
   {
     "title": "HKGEHB08238ST",
     "description": "Ventilgehäuse 2-Wege SAE08 IGR3/8\" Stahl",
-    "amount": "35"
+    "amount": "33"
   },
   {
     "title": "HKGEHB08338ST",
@@ -22267,6 +22302,11 @@
   {
     "title": "HKGEHB10212ST",
     "description": "Ventilgehäuse 2-Wege SAE10 IGR1/2\" Stahl",
+    "amount": "0"
+  },
+  {
+    "title": "HKGEHB10338ST",
+    "description": "Ventilgehäuse 3-Wege SAE10 IGR3/8\" Stahl",
     "amount": "0"
   },
   {
@@ -22817,12 +22857,12 @@
   {
     "title": "HKGP4030M10B",
     "description": "Zderzak gumowy 40x30mm M10",
-    "amount": "48"
+    "amount": "88"
   },
   {
     "title": "HKGP7540M12B",
     "description": "Zderzak gumowy 75x40mm M12",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "HKHDS1120K71",
@@ -22832,7 +22872,7 @@
   {
     "title": "HKHDS1200K71",
     "description": "Wyłącznik ciśnieniowy 20-200bar",
-    "amount": "56"
+    "amount": "48"
   },
   {
     "title": "HKHDS1320K71",
@@ -23095,6 +23135,11 @@
     "amount": "4"
   },
   {
+    "title": "HKHM01200250",
+    "description": "Cylinder hydraulic dd bez zam 40-20-250",
+    "amount": "0"
+  },
+  {
     "title": "HKHM012100",
     "description": "Reduktor ciśnienia AB 5-100 WZ6 PZ",
     "amount": "0"
@@ -23300,11 +23345,6 @@
     "amount": "0"
   },
   {
-    "title": "HKHP0653A10H",
-    "description": "Element filtra nieorganicz 10my",
-    "amount": "0"
-  },
-  {
     "title": "HKHQ012",
     "description": "Zawór przeciwzwr. dław. AB odpł WZ6 PZ",
     "amount": "10"
@@ -23322,7 +23362,7 @@
   {
     "title": "HKHQ022",
     "description": "Zawór przeciwzwr. dław. AB dopł WZ6 PZ",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKHQ022U",
@@ -23342,7 +23382,7 @@
   {
     "title": "HKHR012",
     "description": "Zawór zwrotny AB pilotowany WZ6 PZ",
-    "amount": "3"
+    "amount": "7"
   },
   {
     "title": "HKHR013",
@@ -23465,16 +23505,6 @@
     "amount": "0"
   },
   {
-    "title": "HKK02",
-    "description": "Pompa zębata TW0 0,45 wałwieloklEU LR",
-    "amount": "0"
-  },
-  {
-    "title": "HKK03",
-    "description": "Pompa zębata TW0 0,57 wałwieloklEU LR",
-    "amount": "0"
-  },
-  {
     "title": "HKK03",
     "description": "Pompa zębata TW0 0,57 wałwieloklEU LR",
     "amount": "0"
@@ -23552,12 +23582,12 @@
   {
     "title": "HKK17CON",
     "description": "Pompa zębata TW1 4,16 wałek EU 1:8 LR",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "title": "HKK18",
     "description": "Pompa zębata TW1 4,94 wałwieloklEU LR",
-    "amount": "28"
+    "amount": "18"
   },
   {
     "title": "HKK18CON",
@@ -23577,7 +23607,7 @@
   {
     "title": "HKK19ACON",
     "description": "Pompa zębata TW1 6,50 wałek EU 1:8 LR",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKK19CON",
@@ -23607,12 +23637,7 @@
   {
     "title": "HKK203FCSP",
     "description": "Silnik-E 230V 0,37kW 1410U 1ph BK B314 F",
-    "amount": "0"
-  },
-  {
-    "title": "HKK203FCSP",
-    "description": "Silnik-E 230V 0,37kW 1410U 1ph BK B314 F",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKK205FBSPHT",
@@ -23627,12 +23652,7 @@
   {
     "title": "HKK206FBSPHT",
     "description": "Silnik-E 230V 1,1kW 1410U 1ph ABK B314 F",
-    "amount": "0"
-  },
-  {
-    "title": "HKK206FBSPHT",
-    "description": "Silnik-E 230V 1,1kW 1410U 1ph ABK B314 F",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKK206FCSP",
@@ -23650,9 +23670,14 @@
     "amount": "0"
   },
   {
+    "title": "HKK207FBSPHT",
+    "description": "Silnik-E 230V 1,5kW 1410U 1ph ABK B314 F",
+    "amount": "0"
+  },
+  {
     "title": "HKK207FCSP",
     "description": "Silnik-E 230V 1,5kW 1410U 1ph BK B314 F",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HKK208FCSP",
@@ -23702,7 +23727,7 @@
   {
     "title": "HKK234076000",
     "description": "Saugrohr PVC 98mm AGR3/8\"",
-    "amount": "29"
+    "amount": "18"
   },
   {
     "title": "HKK234716000",
@@ -23722,6 +23747,11 @@
   {
     "title": "HKK24V2.2-21065",
     "description": "Kompaktaggregat 24V, 2.2kW, 210bar",
+    "amount": "0"
+  },
+  {
+    "title": "HKK24V3.0-23088",
+    "description": "Kompaktaggregat 24V, 3.0kW, 230bar",
     "amount": "0"
   },
   {
@@ -23812,17 +23842,12 @@
   {
     "title": "HKK408A100LA4IE2",
     "description": "Silnik-E 230/400V 2,2kW 1440U B3B14 IE2",
-    "amount": "0"
-  },
-  {
-    "title": "HKK408A100LA4IE2",
-    "description": "Silnik-E 230/400V 2,2kW 1440U B3B14 IE2",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKK408A100LA4IE3",
     "description": "E-Motor 230/400V 2,2kW 1445U B3/B14 IE3",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HKK409A100LB4IE3",
@@ -23837,12 +23862,7 @@
   {
     "title": "HKKA12",
     "description": "Kołnierz centralny A12 CZR 90-250bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKKA12",
-    "description": "Kołnierz centralny A12 CZR 90-250bar",
-    "amount": "56"
+    "amount": "46"
   },
   {
     "title": "HKKA16Z",
@@ -23862,7 +23882,7 @@
   {
     "title": "HKKAS0003",
     "description": "Filtr na ssaniu 15L kątow",
-    "amount": "57"
+    "amount": "46"
   },
   {
     "title": "HKKAS010",
@@ -23887,12 +23907,7 @@
   {
     "title": "HKKC103",
     "description": "Silnik-E 24V 2,2kW 2600U B14 MS",
-    "amount": "0"
-  },
-  {
-    "title": "HKKC103",
-    "description": "Silnik-E 24V 2,2kW 2600U B14 MS",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKKC103CN",
@@ -23952,7 +23967,7 @@
   {
     "title": "HKKE52",
     "description": "Kołnierz złącza (PompaTW0+silnikDC)",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKKE55",
@@ -23982,7 +23997,7 @@
   {
     "title": "HKKEA12.7N",
     "description": "2/2-Magnetsitzventil NO f. ZF",
-    "amount": "56"
+    "amount": "46"
   },
   {
     "title": "HKKEAN",
@@ -24022,7 +24037,7 @@
   {
     "title": "HKKF16",
     "description": "Kupplungskit Pumpe Gr.1 + AC-Motor BG90",
-    "amount": "28"
+    "amount": "18"
   },
   {
     "title": "HKKF18",
@@ -24072,7 +24087,7 @@
   {
     "title": "HKKG07",
     "description": "Uchwyt montażowy do KC",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "HKKM011100",
@@ -24152,7 +24167,7 @@
   {
     "title": "HKKN03",
     "description": "Zwischenplatte (p) 49mm, 3/8\" für NG6",
-    "amount": "52"
+    "amount": "42"
   },
   {
     "title": "HKKN09",
@@ -24192,7 +24207,7 @@
   {
     "title": "HKKOCN",
     "description": "Magnetspule 24VDC",
-    "amount": "56"
+    "amount": "46"
   },
   {
     "title": "HKKONS219",
@@ -24237,7 +24252,7 @@
   {
     "title": "HKKP2020D082E2L",
     "description": "Zahnradpumpe BG2 G 21,14 EU Welle 1:8 Re",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKKP2025D082E2L",
@@ -24267,12 +24282,12 @@
   {
     "title": "HKKPB3",
     "description": "Safety plug for RV VMVSBN08 for CM",
-    "amount": "0"
+    "amount": "6"
   },
   {
     "title": "HKKQ012",
     "description": "Zawór przeciwzwr. dław. AB odpł WZ10 PZ",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKKQ014",
@@ -24302,7 +24317,7 @@
   {
     "title": "HKKR012",
     "description": "Zawór zwrotny AB pilotowany WZ10 PZ",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKKR013",
@@ -24317,12 +24332,7 @@
   {
     "title": "HKKS01",
     "description": "Zbiornik poziomy 1L Ś126mm",
-    "amount": "0"
-  },
-  {
-    "title": "HKKS01",
-    "description": "Zbiornik poziomy 1L Ś126mm",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKKS011210",
@@ -24362,7 +24372,7 @@
   {
     "title": "HKKS04V",
     "description": "Zbiornik pionowy 8L Ś190mm",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKKS07",
@@ -24412,7 +24422,7 @@
   {
     "title": "HKKS140",
     "description": "Zbiornik pionowy 12L prostokątn z zamoc.",
-    "amount": "29"
+    "amount": "19"
   },
   {
     "title": "HKKS141",
@@ -24557,7 +24567,7 @@
   {
     "title": "HKKTM12.7",
     "description": "Zasilanie ciśnienia do KC",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "HKKTPR",
@@ -24652,7 +24662,7 @@
   {
     "title": "HKLENKROLLE150",
     "description": "Krążekkie dozbiornalu HKBAK30-44-70",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKLVA10TM10",
@@ -24662,12 +24672,12 @@
   {
     "title": "HKLVA10TM12",
     "description": "Wskaźnik napełnienia opt 76mm M12 z te.",
-    "amount": "0"
+    "amount": "14"
   },
   {
     "title": "HKLVA20TM12",
     "description": "Wskaźnik napełnienia opt 127mm M12 z te.",
-    "amount": "18"
+    "amount": "30"
   },
   {
     "title": "HKLVA30TM12",
@@ -24692,7 +24702,7 @@
   {
     "title": "HKM1050",
     "description": "Zestaw śrub imbusowych M10x50 (4szt.)",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKM1090",
@@ -24702,62 +24712,32 @@
   {
     "title": "HKM5110",
     "description": "Zestaw śrub imbusowych M5x110 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5110",
-    "description": "Zestaw śrub imbusowych M5x110 (4szt.)",
-    "amount": "11"
+    "amount": "13"
   },
   {
     "title": "HKM5120",
     "description": "Zestaw śrub imbusowych M5x120 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5120",
-    "description": "Zestaw śrub imbusowych M5x120 (4szt.)",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKM5130",
     "description": "Zestaw śrub imbusowych M5x130 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5130",
-    "description": "Zestaw śrub imbusowych M5x130 (4szt.)",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKM5140",
     "description": "Zestaw śrub imbusowych M5x140 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5140",
-    "description": "Zestaw śrub imbusowych M5x140 (4szt.)",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKM5150",
     "description": "Zestaw śrub imbusowych M5x150 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5150",
-    "description": "Zestaw śrub imbusowych M5x150 (4szt.)",
-    "amount": "4"
-  },
-  {
-    "title": "HKM5160",
-    "description": "Zestaw śrub imbusowych M5x160 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5160",
-    "description": "Zestaw śrub imbusowych M5x160 (4szt.)",
     "amount": "5"
+  },
+  {
+    "title": "HKM5160",
+    "description": "Zestaw śrub imbusowych M5x160 (4szt.)",
+    "amount": "9"
   },
   {
     "title": "HKM5165",
@@ -24767,62 +24747,42 @@
   {
     "title": "HKM5170",
     "description": "Zestaw śrub imbusowych M5x170 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5170",
-    "description": "Zestaw śrub imbusowych M5x170 (4szt.)",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKM5250STABMU",
     "description": "Gewindestab M5x250 mit Inbus-Rundmutter",
-    "amount": "0"
-  },
-  {
-    "title": "HKM5250STABMU",
-    "description": "Gewindestab M5x250 mit Inbus-Rundmutter",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKM530",
     "description": "Zestaw śrub imbusowych M5x30 (4szt.)",
-    "amount": "37"
+    "amount": "21"
   },
   {
     "title": "HKM550",
     "description": "Zestaw śrub imbusowych M5x50 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM550",
-    "description": "Zestaw śrub imbusowych M5x50 (4szt.)",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKM560",
     "description": "Zestaw śrub imbusowych M5x60 (4szt.)",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKM570",
     "description": "Zestaw śrub imbusowych M5x70 (4szt.)",
-    "amount": "35"
+    "amount": "32"
   },
   {
     "title": "HKM580",
     "description": "Zestaw śrub imbusowych M5x80 (4szt.)",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKM590",
     "description": "Zestaw śrub imbusowych M5x90 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM590",
-    "description": "Zestaw śrub imbusowych M5x90 (4szt.)",
-    "amount": "4"
+    "amount": "9"
   },
   {
     "title": "HKM6140",
@@ -24832,32 +24792,17 @@
   {
     "title": "HKM6190",
     "description": "Zestaw śrub imbusowych M6x190 (4szt.)",
-    "amount": "0"
+    "amount": "2"
   },
   {
-    "title": "HKM6190",
-    "description": "Zestaw śrub imbusowych M6x190 (4szt.)",
+    "title": "HKM640",
+    "description": "Zestaw śrub imbusowych M6x40 (4szt.)",
+    "amount": "19"
+  },
+  {
+    "title": "HKM675",
+    "description": "Zestaw śrub imbusowych M6x75 (4szt.)",
     "amount": "1"
-  },
-  {
-    "title": "HKM640",
-    "description": "Zestaw śrub imbusowych M6x40 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM640",
-    "description": "Zestaw śrub imbusowych M6x40 (4szt.)",
-    "amount": "10"
-  },
-  {
-    "title": "HKM675",
-    "description": "Zestaw śrub imbusowych M6x75 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM675",
-    "description": "Zestaw śrub imbusowych M6x75 (4szt.)",
-    "amount": "0"
   },
   {
     "title": "HKM6802",
@@ -24867,12 +24812,7 @@
   {
     "title": "HKM690",
     "description": "Zestaw śrub imbusowych M6x90 (4szt.)",
-    "amount": "0"
-  },
-  {
-    "title": "HKM690",
-    "description": "Zestaw śrub imbusowych M6x90 (4szt.)",
-    "amount": "9"
+    "amount": "10"
   },
   {
     "title": "HKM835",
@@ -24897,27 +24837,12 @@
   {
     "title": "HKMAP080",
     "description": "Wyłącznik ciśnieniowy 4-80bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKMAP080",
-    "description": "Wyłącznik ciśnieniowy 4-80bar",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "HKMAP160",
     "description": "Wyłącznik ciśnieniowy 8-160bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKMAP160",
-    "description": "Wyłącznik ciśnieniowy 8-160bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKMAP320",
-    "description": "Wyłącznik ciśnieniowy 40-320bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKMAP320",
@@ -24957,12 +24882,7 @@
   {
     "title": "HKMMU",
     "description": "Obudowa zaworu IGR3/8\" HKFSBS+HKFSCS AL",
-    "amount": "0"
-  },
-  {
-    "title": "HKMMU",
-    "description": "Obudowa zaworu IGR3/8\" HKFSBS+HKFSCS AL",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKMMV",
@@ -24972,12 +24892,7 @@
   {
     "title": "HKMPS100150RG1",
     "description": "Głowica filtra powr. 100+150 IGR1.1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKMPS100150RG1",
-    "description": "Głowica filtra powr. 100+150 IGR1.1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKMRSL338",
@@ -25002,22 +24917,12 @@
   {
     "title": "HKNMU",
     "description": "Ventilgehäuse IGR3/8\" T-32A Alu",
-    "amount": "0"
-  },
-  {
-    "title": "HKNMU",
-    "description": "Ventilgehäuse IGR3/8\" T-32A Alu",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKNMVS",
     "description": "Ventilgehäuse IGR1/2\" T-32A Stahl",
-    "amount": "0"
-  },
-  {
-    "title": "HKNMVS",
-    "description": "Ventilgehäuse IGR1/2\" T-32A Stahl",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKNTMM319060NC280",
@@ -25027,7 +24932,7 @@
   {
     "title": "HKNTMM319070NC280",
     "description": "Wył poziomowo-temperaturo 190 70° NC 280",
-    "amount": "3"
+    "amount": "12"
   },
   {
     "title": "HKNTMM319080NC280",
@@ -25057,7 +24962,7 @@
   {
     "title": "HKNTMXPMS2S280",
     "description": "Wyłącznik poziomowo-temp. wyświet 2S 280",
-    "amount": "7"
+    "amount": "6"
   },
   {
     "title": "HKNTMXPMS2S370",
@@ -25072,6 +24977,11 @@
   {
     "title": "HKOEW160BSK",
     "description": "Miska olejowa bez nóżki dozb. BSK/BNK160",
+    "amount": "0"
+  },
+  {
+    "title": "HKOEW400BSK",
+    "description": "Miska olejowa bez nóżki dozb. BSK/BNK400",
     "amount": "0"
   },
   {
@@ -25097,12 +25007,12 @@
   {
     "title": "HKOILAIR2010K",
     "description": "Kühler Öl-Luft 2010K 230VAC o. T.",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "HKOILAIR2020K",
     "description": "Kühler Öl-Luft 2020K 230/400VAC o. T.",
-    "amount": "5"
+    "amount": "3"
   },
   {
     "title": "HKOILAIR2024K",
@@ -25157,7 +25067,7 @@
   {
     "title": "HKOLM0.75210C",
     "description": "Zbiornik przeponowy 0,75L 210bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKOLM0.75350A",
@@ -25172,7 +25082,7 @@
   {
     "title": "HKOLM1.0210C",
     "description": "Zbiornik przeponowy 1,0L 210bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKOLM1.4140C",
@@ -25212,12 +25122,7 @@
   {
     "title": "HKPAM0141201",
     "description": "Pompa ręczna 12,0 z.zbiornik z CZR",
-    "amount": "0"
-  },
-  {
-    "title": "HKPAM0141201",
-    "description": "Pompa ręczna 12,0 z.zbiornik z CZR",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPAM0142000",
@@ -25267,22 +25172,12 @@
   {
     "title": "HKPAM0151200",
     "description": "Pompa ręczna 12,0 z.zbiornik z ZTW",
-    "amount": "0"
-  },
-  {
-    "title": "HKPAM0151200",
-    "description": "Pompa ręczna 12,0 z.zbiornik z ZTW",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKPAM0151202",
     "description": "Pompa ręczna 12,0 z.zbiornik z ZR+CZR",
-    "amount": "0"
-  },
-  {
-    "title": "HKPAM0151202",
-    "description": "Pompa ręczna 12,0 z.zbiornik z ZR+CZR",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPAM0152500",
@@ -25292,12 +25187,7 @@
   {
     "title": "HKPAM0152502",
     "description": "Pompa ręczna 25,0 z.zbiornik z ZR+CZR",
-    "amount": "0"
-  },
-  {
-    "title": "HKPAM0152502",
-    "description": "Pompa ręczna 25,0 z.zbiornik z ZR+CZR",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPAM0154500",
@@ -25320,9 +25210,19 @@
     "amount": "0"
   },
   {
+    "title": "HKPAM190PIO",
+    "description": "Prop.-Leistungssteckerverstärker IO-Link",
+    "amount": "1"
+  },
+  {
     "title": "HKPAMDSV7646",
     "description": "Dichtsatz für Handpumpe TS/TDS komplett",
     "amount": "0"
+  },
+  {
+    "title": "HKPAMHR0190102",
+    "description": "Handrad für Handpumpe HKPAM mit Handabl",
+    "amount": "1"
   },
   {
     "title": "HKPAMSAL05",
@@ -25342,12 +25242,7 @@
   {
     "title": "HKPBA012L8051SF",
     "description": "Axialkolbenpumpe konstant 12 ccm, 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKPBA012L8051SF",
-    "description": "Axialkolbenpumpe konstant 12 ccm, 350bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPBA025L8051SF",
@@ -25382,32 +25277,17 @@
   {
     "title": "HKPCFC08NS002",
     "description": "2kierunkowy zawór reg. Cartr. WZ8 3-8L",
-    "amount": "0"
-  },
-  {
-    "title": "HKPCFC08NS002",
-    "description": "2kierunkowy zawór reg. Cartr. WZ8 3-8L",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKPCFC08NS005",
     "description": "2kierunkowy zawór reg. Cartr. WZ8 9-19L",
-    "amount": "0"
-  },
-  {
-    "title": "HKPCFC08NS005",
-    "description": "2kierunkowy zawór reg. Cartr. WZ8 9-19L",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPCFC12NS015",
     "description": "2kierunkowy zawór reg. Cartr WZ12 28-57L",
-    "amount": "0"
-  },
-  {
-    "title": "HKPCFC12NS015",
-    "description": "2kierunkowy zawór reg. Cartr WZ12 28-57L",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPF100",
@@ -25476,42 +25356,42 @@
   },
   {
     "title": "HKPK300052100",
-    "description": "Pumpenträger A10VSO28+BG132",
+    "description": "Pumpenträger 300-205-144 LK 140",
     "amount": "0"
   },
   {
     "title": "HKPK300054800",
-    "description": "Bell housing PFE31, JV15+BG132",
+    "description": "Pumpenträger 300-205-144 LK 106,4",
     "amount": "0"
   },
   {
     "title": "HKPK350040400",
-    "description": "Bell housing PFE40, PVPC30,40+Size160",
+    "description": "Pumpenträger 350-225-188 LK 146",
     "amount": "1"
   },
   {
     "title": "HKPK350062600",
-    "description": "Pumpenträger A10VSO71+BG180",
+    "description": "Pumpenträger 350-225-204 LK 180",
     "amount": "0"
   },
   {
     "title": "HKPK400040900",
-    "description": "Pumpenträger A10VSO71,88, K3VL80+BG200",
+    "description": "Pumpenträger 400-230-204 LK 180",
     "amount": "0"
   },
   {
     "title": "HKPL250030500",
-    "description": "Bell housing PFE31, JV15+BG100, 112",
+    "description": "Pumpenträger 250-124-124 LK 106,4",
     "amount": "0"
   },
   {
     "title": "HKPL250034400",
-    "description": "Pumpenträger A10VSO18+BG100, 112",
+    "description": "Pumpenträger 250-124-124 LK 109",
     "amount": "0"
   },
   {
     "title": "HKPL3500106",
-    "description": "Bell housing ZP Grp.3+Size160/180",
+    "description": "Pumpenträger 350-260-172 LB 128 x 98",
     "amount": "0"
   },
   {
@@ -25522,11 +25402,6 @@
   {
     "title": "HKPM00220002",
     "description": "Zbiornik do pompyręczne HKPAM 2L",
-    "amount": "0"
-  },
-  {
-    "title": "HKPM00220003",
-    "description": "Zbiornik do pompyręczne HKPAM 3L",
     "amount": "0"
   },
   {
@@ -25562,11 +25437,6 @@
   {
     "title": "HKPN2070PN400SER",
     "description": "Drucksensor 400bar IGR1/4\",2farb Display",
-    "amount": "0"
-  },
-  {
-    "title": "HKPN2070PN400SER",
-    "description": "Drucksensor 400bar IGR1/4\",2farb Display",
     "amount": "2"
   },
   {
@@ -25597,12 +25467,7 @@
   {
     "title": "HKPRFBLWN",
     "description": "3-Wege-Druckreduzierventil 70-315 bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKPRFBLWN",
-    "description": "3-Wege-Druckreduzierventil 70-315 bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKPRFRLBN",
@@ -25615,9 +25480,14 @@
     "amount": "0"
   },
   {
+    "title": "HKPROBEF-LDPE500D",
+    "description": "Probenflasche Kunststoff 500ml m. Deckel",
+    "amount": "4"
+  },
+  {
     "title": "HKPRRS10NS015",
     "description": "3kierunkowyciśni zawór reduk Cartr. WZ10",
-    "amount": "54"
+    "amount": "34"
   },
   {
     "title": "HKPRRS10NS030",
@@ -25626,12 +25496,12 @@
   },
   {
     "title": "HKPT132000PBA8080",
-    "description": "Pumpenträger AL Axkopumpe PBA+EM132",
+    "description": "Pumpenträger 300-235-170 LB 80 x 80",
     "amount": "0"
   },
   {
     "title": "HKPT160180PBA8080",
-    "description": "Pumpenträger AL Axkopumpe PBA+EM160180",
+    "description": "Pumpenträger 350-253-178 LB 80 x 80",
     "amount": "0"
   },
   {
@@ -25661,77 +25531,62 @@
   },
   {
     "title": "HKPTRV20080448",
-    "description": "Bell housing AL (PumpSz1+EM80)",
+    "description": "Pumpenträger 200-145-80 LB 71,9 x 52,4",
     "amount": "2"
   },
   {
     "title": "HKPTRV20090448",
-    "description": "Bell housing AL (PumpSz1+EM90)",
-    "amount": "0"
-  },
-  {
-    "title": "HKPTRV20090448",
-    "description": "Bell housing AL (PumpSz1+EM90)",
-    "amount": "3"
+    "description": "Pumpenträger 200-145-90 LB 71,9 x 52,4",
+    "amount": "7"
   },
   {
     "title": "HKPTRV20096446ZFV",
-    "description": "Bell housing AL (PumpSz2+EM80/90)",
-    "amount": "4"
-  },
-  {
-    "title": "HKPTRV250110441",
-    "description": "Pumpenträger AL (PUMPBG2 1:5+EM100/112)",
-    "amount": "0"
-  },
-  {
-    "title": "HKPTRV250110441",
-    "description": "Pumpenträger AL (PUMPBG2 1:5+EM100/112)",
-    "amount": "0"
-  },
-  {
-    "title": "HKPTRV250110446",
-    "description": "Bell housing AL (PumpSz2+EM100/112)",
-    "amount": "9"
-  },
-  {
-    "title": "HKPTRV250110448",
-    "description": "Bell housing AL (PumpSz1+EM100/112)",
-    "amount": "0"
-  },
-  {
-    "title": "HKPTRV250110448",
-    "description": "Bell housing AL (PumpSz1+EM100/112)",
+    "description": "Pumpenträger 200-145-96 LB 96,2 x 71,5",
     "amount": "1"
   },
   {
+    "title": "HKPTRV250110441",
+    "description": "Pumpenträger 250-190-110 LB 100 x 72",
+    "amount": "1"
+  },
+  {
+    "title": "HKPTRV250110446",
+    "description": "Pumpenträger 250-190-110 LB 96,2 x 71,5",
+    "amount": "6"
+  },
+  {
+    "title": "HKPTRV250110448",
+    "description": "Pumpenträger 250-190-110 LB 71,9 x 52,4",
+    "amount": "5"
+  },
+  {
     "title": "HKPTRV250115465",
-    "description": "Bell housing AL (PumpSz3+EM100/112)",
+    "description": "Pumpenträger 250-190-115 LB 128 x 98",
     "amount": "0"
   },
   {
     "title": "HKPTRV300130441",
-    "description": "Pumpenträger AL (PUMPBG2 1:5+EM132)",
+    "description": "Pumpenträger 300-234-130 LB 100 x 72",
     "amount": "0"
   },
   {
     "title": "HKPTRV300130446",
-    "description": "Bell housing AL (PumpSz2+EM132)",
-    "amount": "0"
+    "description": "Pumpenträger 300-234-130 LB 96,2 x 71,5",
+    "amount": "9"
   },
   {
     "title": "HKPTRV300144465",
-    "description": "Bell housing AL (PumpSz3+EM132)",
+    "description": "Pumpenträger 300-234-144 LB 128 x 98",
     "amount": "0"
   },
   {
     "title": "HKPTRV350173446",
-    "description": "Bell housing AL (PumpSz2+EM160)",
+    "description": "Pumpenträger 350-260-173 LB 96,2 x 71,5",
     "amount": "0"
   },
   {
     "title": "HKPTRV350173465",
-    "description": "Bell housing AL (PumpSz3+EM160/180)",
+    "description": "Pumpenträger 350-260-173 LB 128 x 98",
     "amount": "0"
   },
   {
@@ -25762,7 +25617,7 @@
   {
     "title": "HKQV0611",
     "description": "2kierunkowy zawór reg. ISO06 PL 0,1-11L",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "HKQV0616",
@@ -25787,7 +25642,7 @@
   {
     "title": "HKR2838N2A",
     "description": "Coupling Rotex 28 M38 P1:8 17.28 ST 92Sh",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "HKR2838N3",
@@ -25847,12 +25702,7 @@
   {
     "title": "HKRFP9012CA",
     "description": "3-Wege-Stromregelventil Cart. NG12 0-90L",
-    "amount": "0"
-  },
-  {
-    "title": "HKRFP9012CA",
-    "description": "3-Wege-Stromregelventil Cart. NG12 0-90L",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKRH2",
@@ -25882,22 +25732,12 @@
   {
     "title": "HKRPECLAN",
     "description": "Reduktor ciśnienia 95L 7-210bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKRPECLAN",
-    "description": "Reduktor ciśnienia 95L 7-210bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKRPECLWN",
     "description": "Reduktor ciśnienia 95L 10-315bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKRPECLWN",
-    "description": "Reduktor ciśnienia 95L 10-315bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKRPGCLWN",
@@ -25922,47 +25762,32 @@
   {
     "title": "HKRSBAKRA20",
     "description": "Uszczelka płaska do HKBAKRA20",
-    "amount": "9"
+    "amount": "5"
   },
   {
     "title": "HKRSBAKRA30",
     "description": "Uszczelnienie o-ringiem do HKBAKRA30",
-    "amount": "0"
-  },
-  {
-    "title": "HKRSBAKRA30",
-    "description": "Uszczelnienie o-ringiem do HKBAKRA30",
-    "amount": "6"
+    "amount": "8"
   },
   {
     "title": "HKRSBAKRA44",
     "description": "Uszczelnienie o-ringiem do HKBAKRA44",
-    "amount": "0"
-  },
-  {
-    "title": "HKRSBAKRA44",
-    "description": "Uszczelnienie o-ringiem do HKBAKRA44",
-    "amount": "3"
+    "amount": "5"
   },
   {
     "title": "HKRSBAKRA70",
     "description": "Uszczelnienie o-ringiem do HKBAKRA70",
-    "amount": "4"
+    "amount": "12"
   },
   {
     "title": "HKRTR0501CG1P10",
     "description": "Filtr na powrocie zbiornik z IGR3/8\" 10L",
-    "amount": "0"
-  },
-  {
-    "title": "HKRTR0501CG1P10",
-    "description": "Filtr na powrocie zbiornik z IGR3/8\" 10L",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKRTR0502CG1P10",
     "description": "Filtr na powrocie zbiornik z IGR3/8\" 20L",
-    "amount": "57"
+    "amount": "46"
   },
   {
     "title": "HKRV0630400",
@@ -25997,12 +25822,7 @@
   {
     "title": "HKRZGOAE033210",
     "description": "Reduktor ciśnienia prop. WZ6 PL",
-    "amount": "0"
-  },
-  {
-    "title": "HKRZGOAE033210",
-    "description": "Reduktor ciśnienia prop. WZ6 PL",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKRZMOA010210",
@@ -26032,7 +25852,7 @@
   {
     "title": "HKS3E35SC400B02",
     "description": "Nebenstromkühlaggregat 230-400V, 40l/min",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKS3E55SC400B02",
@@ -26192,7 +26012,7 @@
   {
     "title": "HKSP667110",
     "description": "Wtyk LED 110VAC przezroczys",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKSP667220",
@@ -26202,12 +26022,12 @@
   {
     "title": "HKSP66724",
     "description": "Wtyk LED 12/24VDC przezroczys",
-    "amount": "57"
+    "amount": "26"
   },
   {
     "title": "HKSP66824",
     "description": "Stecker LED Schutzschaltung transparent",
-    "amount": "327"
+    "amount": "255"
   },
   {
     "title": "HKSP669",
@@ -26280,9 +26100,19 @@
     "amount": "0"
   },
   {
+    "title": "HKSPCOE230AC",
+    "description": "Cewka magnet. 230VAC do HKDHE AC",
+    "amount": "2"
+  },
+  {
+    "title": "HKSPCOE230RC",
+    "description": "Magnetspule 230VAC(R) für HKDHE DC",
+    "amount": "0"
+  },
+  {
     "title": "HKSPCOE24DC",
     "description": "Solenoid coil 24VDC for HKDHE..DC",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "HKSPCOEK24DC",
@@ -26327,22 +26157,22 @@
   {
     "title": "HKSPL706312VDC",
     "description": "Magnetspule für HKL705, HKL721 12VDC",
-    "amount": "0"
-  },
-  {
-    "title": "HKSPL706312VDC",
-    "description": "Magnetspule für HKL705, HKL721 12VDC",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKSPL710012VDC",
     "description": "Magnetspule für HKL706, HKL753 12VDC",
-    "amount": "0"
+    "amount": "1"
   },
   {
-    "title": "HKSPL710012VDC",
-    "description": "Magnetspule für HKL706, HKL753 12VDC",
-    "amount": "0"
+    "title": "HKSPSET6DH103500",
+    "description": "Awaryjna obsługa ręczna do HKDHI",
+    "amount": "4"
+  },
+  {
+    "title": "HKSPSET6OE101116",
+    "description": "Nakrętka kołpakowa do HKDHE-DC NG6",
+    "amount": "2"
   },
   {
     "title": "HKSPSVS0812VDC",
@@ -26362,7 +26192,7 @@
   {
     "title": "HKSPWPDHS",
     "description": "Awaryjna ręczna o zblokad do HKDHE..DC",
-    "amount": "1"
+    "amount": "5"
   },
   {
     "title": "HKSPWPDKEDC",
@@ -26370,14 +26200,14 @@
     "amount": "1"
   },
   {
-    "title": "HKSPZH7P",
-    "description": "Wtyk do elektr. prop. 7biegun",
+    "title": "HKSPZH5P",
+    "description": "Wtyk do elektr. prop. 5biegun",
     "amount": "0"
   },
   {
     "title": "HKSPZH7P",
     "description": "Wtyk do elektr. prop. 7biegun",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKSRH1.7K5V420A",
@@ -26447,27 +26277,12 @@
   {
     "title": "HKSVD5S08NC24DC",
     "description": "Magnetsitzventil 2/2 Cartr. NG8 NC",
-    "amount": "0"
-  },
-  {
-    "title": "HKSVD5S08NC24DC",
-    "description": "Magnetsitzventil 2/2 Cartr. NG8 NC",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKSVE0S08NO24DC",
     "description": "Magnetsitzventil 2/2 Cartr. NG8 NO",
-    "amount": "0"
-  },
-  {
-    "title": "HKSVE0S08NO24DC",
-    "description": "Magnetsitzventil 2/2 Cartr. NG8 NO",
-    "amount": "5"
-  },
-  {
-    "title": "HKSVK0S08NO24DC",
-    "description": "Magnetsitzventil 2/2 Cartr. NG8 NO",
-    "amount": "0"
+    "amount": "6"
   },
   {
     "title": "HKSVK0S08NO24DC",
@@ -26477,7 +26292,7 @@
   {
     "title": "HKSVT0S08NC24DC",
     "description": "Magnetsitzventil 2/2 Cartr. NG8 NC",
-    "amount": "18"
+    "amount": "25"
   },
   {
     "title": "HKSZ100",
@@ -26497,7 +26312,7 @@
   {
     "title": "HKTLA1G14",
     "description": "Wziernik oleju AGR1/4\" AL",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKTLA2G38",
@@ -26587,11 +26402,6 @@
   {
     "title": "HKTM45A50",
     "description": "Thermostat für Ölkühler 50C NO AGR1/2",
-    "amount": "0"
-  },
-  {
-    "title": "HKTM45A50",
-    "description": "Thermostat für Ölkühler 50C NO AGR1/2",
     "amount": "5"
   },
   {
@@ -26622,22 +26432,12 @@
   {
     "title": "HKTS60NC-12",
     "description": "Wył. temperaturowy 60C AGR1/2\" otwart",
-    "amount": "0"
-  },
-  {
-    "title": "HKTS60NC-12",
-    "description": "Wył. temperaturowy 60C AGR1/2\" otwart",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKTS70NC-12",
     "description": "Wył. temperaturowy 70C AGR1/2\" otwart",
-    "amount": "0"
-  },
-  {
-    "title": "HKTS70NC-12",
-    "description": "Wył. temperaturowy 70C AGR1/2\" otwart",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKTS80N0-12",
@@ -26647,22 +26447,12 @@
   {
     "title": "HKTS80NC-12",
     "description": "Wył. temperaturowy 80C AGR1/2\" otwart",
-    "amount": "0"
-  },
-  {
-    "title": "HKTS80NC-12",
-    "description": "Wył. temperaturowy 80C AGR1/2\" otwart",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKTSDG20RNAA200",
     "description": "Pokrywa zamykając AGR1/2\" wskapręt 200mm",
-    "amount": "0"
-  },
-  {
-    "title": "HKTSDG20RNAA200",
-    "description": "Pokrywa zamykając AGR1/2\" wskapręt 200mm",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKTSDG20RNAAS",
@@ -26677,7 +26467,7 @@
   {
     "title": "HKTSF1G14",
     "description": "Filtrwentylzbiornika AGR1/4\" ST",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKTSF1M1415",
@@ -26692,7 +26482,7 @@
   {
     "title": "HKTSF3G12",
     "description": "Filtrwentylzbiornika AGR1/2\" ST",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKTSF3M1815",
@@ -26702,7 +26492,7 @@
   {
     "title": "HKTSF4G34",
     "description": "Filtrwentylzbiornika AGR3/4\" ST",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKTSF5G1",
@@ -26712,7 +26502,7 @@
   {
     "title": "HKTSF5M2215",
     "description": "Filtrwentylzbiornika AGM22x1,5 ST",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKTSF6G114",
@@ -26732,7 +26522,7 @@
   {
     "title": "HKTSF8M3320",
     "description": "Filtrwentylzbiornika AGM33x2 ST",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKTSK1TKO60L280",
@@ -26745,14 +26535,14 @@
     "amount": "0"
   },
   {
-    "title": "HKV01205003",
-    "description": "Reduktor ciśnienia IGR1/4\" 50bar",
-    "amount": "0"
+    "title": "HKTSK1TKO70L340",
+    "description": "Wył. temperaturowy 70C AGR3/4\" 340mm",
+    "amount": "1"
   },
   {
     "title": "HKV01205003",
     "description": "Reduktor ciśnienia IGR1/4\" 50bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKV01205006",
@@ -26762,42 +26552,22 @@
   {
     "title": "HKV01205008",
     "description": "Reduktor ciśnienia IGR1/2\" 50bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01205008",
-    "description": "Reduktor ciśnienia IGR1/2\" 50bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV01205012",
     "description": "Reduktor ciśnienia IGR3/4\" 50bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01205012",
-    "description": "Reduktor ciśnienia IGR3/4\" 50bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKV01210006",
     "description": "Reduktor ciśnienia IGR3/8\" 100bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01210006",
-    "description": "Reduktor ciśnienia IGR3/8\" 100bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV01210008",
     "description": "Reduktor ciśnienia IGR1/2\" 100bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01210008",
-    "description": "Reduktor ciśnienia IGR1/2\" 100bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV01210012",
@@ -26807,32 +26577,17 @@
   {
     "title": "HKV01218003",
     "description": "Reduktor ciśnienia IGR1/4\" 180bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01218003",
-    "description": "Reduktor ciśnienia IGR1/4\" 180bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKV01218006",
     "description": "Reduktor ciśnienia IGR3/8\" 180bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01218006",
-    "description": "Reduktor ciśnienia IGR3/8\" 180bar",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKV01218008",
     "description": "Reduktor ciśnienia IGR1/2\" 180bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01218008",
-    "description": "Reduktor ciśnienia IGR1/2\" 180bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV01218012",
@@ -26842,11 +26597,6 @@
   {
     "title": "HKV01225006",
     "description": "Reduktor ciśnienia IGR3/8\" 250bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01225008",
-    "description": "Reduktor ciśnienia IGR1/2\" 250bar",
     "amount": "0"
   },
   {
@@ -26862,12 +26612,7 @@
   {
     "title": "HKV01230003",
     "description": "Reduktor ciśnienia IGR1/4\" 300bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01230003",
-    "description": "Reduktor ciśnienia IGR1/4\" 300bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKV01230006",
@@ -26877,22 +26622,12 @@
   {
     "title": "HKV01230008",
     "description": "Reduktor ciśnienia IGR1/2\" 300bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01230008",
-    "description": "Reduktor ciśnienia IGR1/2\" 300bar",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "HKV01230012",
     "description": "Reduktor ciśnienia IGR3/4\" 300bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV01230012",
-    "description": "Reduktor ciśnienia IGR3/4\" 300bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV05900490",
@@ -26907,32 +26642,17 @@
   {
     "title": "HKV05900505",
     "description": "Zawór udarowy dd IGR3/4\" do EPMT",
-    "amount": "0"
-  },
-  {
-    "title": "HKV05900505",
-    "description": "Zawór udarowy dd IGR3/4\" do EPMT",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010004",
-    "description": "Zawór zwrotny IGR1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010004",
-    "description": "Zawór zwrotny IGR1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010006",
-    "description": "Zawór zwrotny IGR3/8\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010006",
-    "description": "Zawór zwrotny IGR3/8\"",
     "amount": "1"
+  },
+  {
+    "title": "HKV15010004",
+    "description": "Zawór zwrotny IGR1/4\"",
+    "amount": "6"
+  },
+  {
+    "title": "HKV15010006",
+    "description": "Zawór zwrotny IGR3/8\"",
+    "amount": "5"
   },
   {
     "title": "HKV15010008",
@@ -26942,57 +26662,32 @@
   {
     "title": "HKV15010012",
     "description": "Zawór zwrotny IGR3/4\"",
-    "amount": "1"
-  },
-  {
-    "title": "HKV15010016",
-    "description": "Zawór zwrotny IGR1\"",
     "amount": "0"
   },
   {
     "title": "HKV15010016",
     "description": "Zawór zwrotny IGR1\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010020",
-    "description": "Zawór zwrotny IGR1.1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV15010020",
-    "description": "Zawór zwrotny IGR1.1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV16010400",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV16010400",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR1/4\"",
-    "amount": "3"
-  },
-  {
-    "title": "HKV16010600",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR3/8\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV16010600",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR3/8\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV16010800",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR1/2\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV16010800",
-    "description": "Zawórzabezpieczprzedpęknięcia AGR1/2\"",
     "amount": "1"
+  },
+  {
+    "title": "HKV15010020",
+    "description": "Zawór zwrotny IGR1.1/4\"",
+    "amount": "2"
+  },
+  {
+    "title": "HKV16010400",
+    "description": "Zawórzabezpieczprzedpęknięcia AGR1/4\"",
+    "amount": "16"
+  },
+  {
+    "title": "HKV16010600",
+    "description": "Zawórzabezpieczprzedpęknięcia AGR3/8\"",
+    "amount": "15"
+  },
+  {
+    "title": "HKV16010800",
+    "description": "Zawórzabezpieczprzedpęknięcia AGR1/2\"",
+    "amount": "4"
   },
   {
     "title": "HKV16011200",
@@ -27022,12 +26717,7 @@
   {
     "title": "HKV18650400",
     "description": "Zawór zwrotny dd z odbl IGR1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV18650400",
-    "description": "Zawór zwrotny dd z odbl IGR1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV18650600",
@@ -27052,72 +26742,37 @@
   {
     "title": "HKV2190A600",
     "description": "Zawór hamulca opu jed.dz. IGR3/8\" 350bar",
-    "amount": "0"
+    "amount": "9"
   },
   {
-    "title": "HKV2190A600",
-    "description": "Zawór hamulca opu jed.dz. IGR3/8\" 350bar",
+    "title": "HKV2190A800",
+    "description": "Zawór hamulca opu jed.dz. IGR1/2\" 350bar",
+    "amount": "4"
+  },
+  {
+    "title": "HKV2290A600",
+    "description": "Zawór hamulca opu dd IGR3/8\" 350bar",
+    "amount": "18"
+  },
+  {
+    "title": "HKV2290A800",
+    "description": "Zawór hamulca opu dd IGR1/2\" 350bar",
     "amount": "1"
   },
   {
-    "title": "HKV2190A800",
-    "description": "Zawór hamulca opu jed.dz. IGR1/2\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2190A800",
-    "description": "Zawór hamulca opu jed.dz. IGR1/2\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2290A600",
-    "description": "Zawór hamulca opu dd IGR3/8\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2290A600",
-    "description": "Zawór hamulca opu dd IGR3/8\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2290A800",
-    "description": "Zawór hamulca opu dd IGR1/2\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2290A800",
-    "description": "Zawór hamulca opu dd IGR1/2\" 350bar",
-    "amount": "0"
-  },
-  {
     "title": "HKV2515S-1",
     "description": "Drosselrückschlagventil IGR1\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2515S-1",
-    "description": "Drosselrückschlagventil IGR1\" 350bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV2515S-1/4",
     "description": "Drosselrückschlagventil IGR1/4\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2515S-1/4",
-    "description": "Drosselrückschlagventil IGR1/4\" 350bar",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKV2515S-3/4",
     "description": "Drosselrückschlagventil IGR3/4\" 350bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2515S-3/4",
-    "description": "Drosselrückschlagventil IGR3/4\" 350bar",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV2572-1",
@@ -27127,12 +26782,7 @@
   {
     "title": "HKV2572-1/2",
     "description": "Zawór dławiący IGR1/2\" 400bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2572-1/2",
-    "description": "Zawór dławiący IGR1/2\" 400bar",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "HKV2572-1/4",
@@ -27142,12 +26792,7 @@
   {
     "title": "HKV2572-1/8",
     "description": "Zawór dławiący IGR1/8\" 400bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2572-1/8",
-    "description": "Zawór dławiący IGR1/8\" 400bar",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "HKV2572-11/2",
@@ -27177,7 +26822,7 @@
   {
     "title": "HKV2575-1/2",
     "description": "Zawór przeciwzwr. dław. IGR1/2\" 400bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV2575-1/4",
@@ -27197,7 +26842,7 @@
   {
     "title": "HKV2575-3/8",
     "description": "Zawór przeciwzwr. dław. IGR3/8\" 400bar",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "HKV2705-3/8",
@@ -27207,42 +26852,22 @@
   {
     "title": "HKV2765Z1000",
     "description": "Zawór przeciwzwr. dławiący IGR3/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2765Z1000",
-    "description": "Zawór przeciwzwr. dławiący IGR3/4\"",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV2765Z400",
     "description": "Zawór przeciwzwr. dławiący IGR1/4\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2765Z400",
-    "description": "Zawór przeciwzwr. dławiący IGR1/4\"",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "HKV2765Z600",
     "description": "Zawór przeciwzwr. dławiący IGR3/8\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2765Z600",
-    "description": "Zawór przeciwzwr. dławiący IGR3/8\"",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "HKV2765Z800",
     "description": "Zawór przeciwzwr. dławiący IGR1/2\"",
-    "amount": "0"
-  },
-  {
-    "title": "HKV2765Z800",
-    "description": "Zawór przeciwzwr. dławiący IGR1/2\"",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV62150320",
@@ -27267,12 +26892,7 @@
   {
     "title": "HKV7367A06",
     "description": "Zawór rozdz.przełaczny3/3 IGR3/8\" otw.",
-    "amount": "0"
-  },
-  {
-    "title": "HKV7367A06",
-    "description": "Zawór rozdz.przełaczny3/3 IGR3/8\" otw.",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKV7367A08",
@@ -27322,12 +26942,7 @@
   {
     "title": "HKV7467A12",
     "description": "Zawór rozdz.przełaczny4/3 IGR3/4\" otw.",
-    "amount": "0"
-  },
-  {
-    "title": "HKV7467A12",
-    "description": "Zawór rozdz.przełaczny4/3 IGR3/4\" otw.",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKV7467C06",
@@ -27357,17 +26972,12 @@
   {
     "title": "HKVAEC",
     "description": "Wskaźnik zabrudzenia 1,3bar Z",
-    "amount": "0"
-  },
-  {
-    "title": "HKVAEC",
-    "description": "Wskaźnik zabrudzenia 1,3bar Z",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKVAFX",
     "description": "Wskaźnik zabrudzenia elektr. 1,3bar W",
-    "amount": "8"
+    "amount": "5"
   },
   {
     "title": "HKVAN8",
@@ -27377,12 +26987,7 @@
   {
     "title": "HKVAV1",
     "description": "Wskaźnik zabrudzenia manometry",
-    "amount": "0"
-  },
-  {
-    "title": "HKVAV1",
-    "description": "Wskaźnik zabrudzenia manometry",
-    "amount": "2"
+    "amount": "24"
   },
   {
     "title": "HKVAV8",
@@ -27392,12 +26997,7 @@
   {
     "title": "HKVAVR",
     "description": "Wskaźnik zabrudzenia manometry",
-    "amount": "0"
-  },
-  {
-    "title": "HKVAVR",
-    "description": "Wskaźnik zabrudzenia manometry",
-    "amount": "5"
+    "amount": "11"
   },
   {
     "title": "HKVAVS",
@@ -27457,12 +27057,7 @@
   {
     "title": "HKVML1080300",
     "description": "Sprężyna do HKV0590 80-300bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKVML1080300",
-    "description": "Sprężyna do HKV0590 80-300bar",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "HKVMPBL0538V",
@@ -27472,17 +27067,12 @@
   {
     "title": "HKVMPBL1012V",
     "description": "Reduktor ciśnienia IGR1/2\" pokr Alu",
-    "amount": "3"
+    "amount": "7"
   },
   {
     "title": "HKVMPBL12040",
     "description": "Sprężyna do DBV VMPBL IGR1/2\" 4-40bar",
-    "amount": "0"
-  },
-  {
-    "title": "HKVMPBL12040",
-    "description": "Sprężyna do DBV VMPBL IGR1/2\" 4-40bar",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKVMPBL12080",
@@ -27537,12 +27127,7 @@
   {
     "title": "HKVRC06E12",
     "description": "3kierunkowy zawór reg. Cartr. WZ6",
-    "amount": "0"
-  },
-  {
-    "title": "HKVRC06E12",
-    "description": "3kierunkowy zawór reg. Cartr. WZ6",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "HKVRC06E35",
@@ -27562,12 +27147,7 @@
   {
     "title": "HKVRDE10CIL",
     "description": "Zawór zwrotny z odbl. wst. IGR1/4\" cyl",
-    "amount": "0"
-  },
-  {
-    "title": "HKVRDE10CIL",
-    "description": "Zawór zwrotny z odbl. wst. IGR1/4\" cyl",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKVRDE20CIL",
@@ -27732,12 +27312,12 @@
   {
     "title": "HKX3P8102ABAA",
     "description": "Pompa zębata TW3 50,88 wałek EU 1:8 PS",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "HKX3P8302ACBA",
     "description": "Pompa zębata TW3 60,81 wałek EU 1:8 PS",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "HKX3P8701ACBA",
@@ -27812,12 +27392,12 @@
   {
     "title": "HKZKSPIDEX1998SH",
     "description": "Elastic spider SPIDEX ZK 19 98 SH red",
-    "amount": "0"
+    "amount": "10"
   },
   {
     "title": "HKZKSPIDEX2492SH",
     "description": "Elastic spider SPIDEX ZK 24 92SH white",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "HKZKSPIDEX2898SH",
@@ -27902,7 +27482,7 @@
   {
     "title": "HM102",
     "description": "Wąż pomiarowy DN02",
-    "amount": "0,80"
+    "amount": "1,50"
   },
   {
     "title": "HSM06",
@@ -28972,12 +28552,12 @@
   {
     "title": "K-063H9-075",
     "description": "Rura cylindrowa",
-    "amount": "7,12"
+    "amount": "0,00"
   },
   {
     "title": "K-065H8-080",
     "description": "Rura Cylindryczna",
-    "amount": "0,75"
+    "amount": "0,00"
   },
   {
     "title": "K-065H8-75",
@@ -28997,7 +28577,7 @@
   {
     "title": "K-070H8-82",
     "description": "Rura Cylindrowa",
-    "amount": "5,94"
+    "amount": "0,00"
   },
   {
     "title": "K-070H8-85",
@@ -29032,7 +28612,7 @@
   {
     "title": "K-080H8-100",
     "description": "Rura dogniatana",
-    "amount": "4,95"
+    "amount": "0,00"
   },
   {
     "title": "K-080H8-110",
@@ -29042,7 +28622,7 @@
   {
     "title": "K-080H8-95",
     "description": "Rura dogniatana",
-    "amount": "3,90"
+    "amount": "0,00"
   },
   {
     "title": "K-085H8-100",
@@ -29062,7 +28642,7 @@
   {
     "title": "K-090H8-110",
     "description": "Rura Cylindryczna",
-    "amount": "1,12"
+    "amount": "0,55"
   },
   {
     "title": "K-090H8-120",
@@ -29077,7 +28657,7 @@
   {
     "title": "K-100120H8",
     "description": "Rura dogniatana",
-    "amount": "3,53"
+    "amount": "0,00"
   },
   {
     "title": "K-100CR-20MNV6",
@@ -29122,7 +28702,7 @@
   {
     "title": "K-110H8-130",
     "description": "Rura dogniatana",
-    "amount": "5,63"
+    "amount": "0,00"
   },
   {
     "title": "K-115H8-135",
@@ -29132,7 +28712,7 @@
   {
     "title": "K-120H8-140",
     "description": "Rura dogniatana",
-    "amount": "0,80"
+    "amount": "0,00"
   },
   {
     "title": "K-120H8-160",
@@ -29265,6 +28845,11 @@
     "amount": "0"
   },
   {
+    "title": "K-1PZD4-2X2-2-776",
+    "description": "Pompa dwustrumieniowa2ccm+2ccm Ø25,4;",
+    "amount": "1"
+  },
+  {
     "title": "K-20CR-20MNV6",
     "description": "Pręt chromowany",
     "amount": "0,00"
@@ -29312,7 +28897,7 @@
   {
     "title": "K-230B34-1.5-90L",
     "description": "Siln.1-faz. 230V; 1,5kW 1370obr.B34; MYT",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "K-24CR-CK45IH",
@@ -29417,7 +29002,7 @@
   {
     "title": "K-2PZW4-16X6.3-2",
     "description": "Pompa dwusekcyjna 2PZW4-16x6,3-2-77G pra",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "K-2PZW4-20X4-2-77G",
@@ -29432,7 +29017,7 @@
   {
     "title": "K-2PZW4-20X8-2-776",
     "description": "Dwu sekcyjna pompa zębata",
-    "amount": "0"
+    "amount": "6"
   },
   {
     "title": "K-2PZW4-20X9-2",
@@ -29492,7 +29077,7 @@
   {
     "title": "K-32CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "9,11"
+    "amount": "8,11"
   },
   {
     "title": "K-32CR-42CRMO4IH",
@@ -29542,12 +29127,12 @@
   {
     "title": "K-35CR-CK45IH",
     "description": "Pręt chromowany hartowany",
-    "amount": "2,10"
+    "amount": "1,40"
   },
   {
     "title": "K-36CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "3,23"
+    "amount": "2,63"
   },
   {
     "title": "K-36CR-42CRMO4IH",
@@ -29582,7 +29167,7 @@
   {
     "title": "K-38CR-20MNV6",
     "description": "Pręt Chromowany",
-    "amount": "4,52"
+    "amount": "3,58"
   },
   {
     "title": "K-3PZ4T1-80/12.5",
@@ -29600,6 +29185,11 @@
     "amount": "0"
   },
   {
+    "title": "K-4003B34-3-100",
+    "description": "Silnik 3-faz. 400V; 3kW 2880 obr B34",
+    "amount": "1"
+  },
+  {
     "title": "K-400B14-1.5-90L",
     "description": "Silnik trójfazowy 400V; 1,5kW 1400obr.",
     "amount": "0"
@@ -29615,14 +29205,24 @@
     "amount": "0"
   },
   {
+    "title": "K-400B14-3100L4B",
+    "description": "Silnik 3kW; kołnierz C2 160/160/110; B14",
+    "amount": "1"
+  },
+  {
     "title": "K-400B34-1.5-90L",
     "description": "Silnik trójfaz. 400V; 1,5kW 1400obr; B34",
-    "amount": "4"
+    "amount": "2"
+  },
+  {
+    "title": "K-400B34-2.2100L",
+    "description": "Silnik 3-faz. 400V;2,2kW;B34;1420obr/min",
+    "amount": "0"
   },
   {
     "title": "K-400B34-3-100L",
     "description": "Silnik 3-faz. 400V; 3kW 1420obr/min; B34",
-    "amount": "5"
+    "amount": "12"
   },
   {
     "title": "K-400B35-11-132L",
@@ -29632,12 +29232,22 @@
   {
     "title": "K-400B35-2.2-90L",
     "description": "Silnik 3-faz. B35; 400V; 2,2kW 1410obr/m",
+    "amount": "1"
+  },
+  {
+    "title": "K-400B35-2.2100L",
+    "description": "Silnik 3faz. 2.2kW; B35; 1450",
     "amount": "2"
+  },
+  {
+    "title": "K-400B35-22-180",
+    "description": "Silnik elektr. 22 kW; B35; 1400; 180B35",
+    "amount": "0"
   },
   {
     "title": "K-400B35-3-100L",
     "description": "Silnik elektr. 3 kW; B35; 230/400V; 1450",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "K-400B35-3-132S",
@@ -29647,17 +29257,17 @@
   {
     "title": "K-400B35-4-112M",
     "description": "Silnik trójfazowy 400V; 4kW 1450obr/min;",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "K-400B35-5.5-132",
     "description": "Silnik 3-faz. 400V; 5.5kW 1420obr/min; B",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "K-400B35-7.5132M",
     "description": "Silnik el. 400/690V 7,5KW 1465U B35 IE3",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "K-400B5-1.1-90S",
@@ -29672,7 +29282,12 @@
   {
     "title": "K-400B5-2.2-100L",
     "description": "Silnik 3faz. 400V; 2.2kW 1420obr/min; B5",
-    "amount": "1"
+    "amount": "0"
+  },
+  {
+    "title": "K-400SOFTST-22KW",
+    "description": "Softstarter LS; prąd 48A; moc 22kW;",
+    "amount": "0"
   },
   {
     "title": "K-40CR-20MNV6",
@@ -29717,12 +29332,12 @@
   {
     "title": "K-42CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "1,98"
+    "amount": "1,28"
   },
   {
     "title": "K-44.45CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "4,38"
+    "amount": "3,18"
   },
   {
     "title": "K-45CR-20MNV6",
@@ -29732,7 +29347,7 @@
   {
     "title": "K-45CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "7,60"
+    "amount": "5,85"
   },
   {
     "title": "K-45CR-CK45",
@@ -29758,6 +29373,11 @@
     "title": "K-46-CUSN12",
     "description": "Pręt brązowy fi 46",
     "amount": "0,000"
+  },
+  {
+    "title": "K-4WE6-G-32/G24NZ4",
+    "description": "Rozdzielacz K-4WE6-G-32/G24NZ4L/V",
+    "amount": "1"
   },
   {
     "title": "K-50.8CR-20MNV6",
@@ -29892,7 +29512,7 @@
   {
     "title": "K-55CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "1,42"
+    "amount": "0,00"
   },
   {
     "title": "K-55CR2-20MNV6",
@@ -29902,7 +29522,7 @@
   {
     "title": "K-56CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "2,40"
+    "amount": "0,00"
   },
   {
     "title": "K-56CR-42CRMO4UH",
@@ -29917,7 +29537,7 @@
   {
     "title": "K-57.15CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "1,65"
+    "amount": "0,00"
   },
   {
     "title": "K-605-125X140X12",
@@ -29957,7 +29577,7 @@
   {
     "title": "K-60CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "2,30"
+    "amount": "1,05"
   },
   {
     "title": "K-60CR-42CRMO4IH",
@@ -29982,17 +29602,17 @@
   {
     "title": "K-63.5CR-20MNV6",
     "description": "Pręt chromowany",
-    "amount": "4,79"
+    "amount": "0,00"
   },
   {
     "title": "K-63CR-20MNV6",
     "description": "Pręt Chromowany",
-    "amount": "4,02"
+    "amount": "3,02"
   },
   {
     "title": "K-63CR-42CRMO4IH",
     "description": "Pręt chromowany Hartowany",
-    "amount": "2,15"
+    "amount": "0,00"
   },
   {
     "title": "K-652-100X115X16",
@@ -30007,7 +29627,7 @@
   {
     "title": "K-65CR-20MNV6",
     "description": "Pręt Chromowany",
-    "amount": "5,16"
+    "amount": "0,00"
   },
   {
     "title": "K-65CR-42CRMO4IH",
@@ -30027,7 +29647,7 @@
   {
     "title": "K-70CR-CK45IH",
     "description": "Pręt chromowany",
-    "amount": "1,28"
+    "amount": "0,43"
   },
   {
     "title": "K-70CRX45-20MNV6",
@@ -30052,7 +29672,7 @@
   {
     "title": "K-75CR-42CRMO4IH",
     "description": "Pręt chrom. Indukcyjnie Hartowany f7",
-    "amount": "0,99"
+    "amount": "0,00"
   },
   {
     "title": "K-75H8-90",
@@ -30167,7 +29787,7 @@
   {
     "title": "K-88.9H8-107.95",
     "description": "Rura Cylindrowa",
-    "amount": "2,64"
+    "amount": "0,00"
   },
   {
     "title": "K-8AM-NRV-28A-01",
@@ -30182,7 +29802,7 @@
   {
     "title": "K-90CR-20MNV6",
     "description": "Pręt Chromowany",
-    "amount": "2,17"
+    "amount": "1,97"
   },
   {
     "title": "K-90CR-42CRMO4IH",
@@ -30302,7 +29922,7 @@
   {
     "title": "K-AFR100C10NR",
     "description": "FILTR POWROTNY Ø106/ G1”/ 85L/MIN",
-    "amount": "8"
+    "amount": "10"
   },
   {
     "title": "K-AFR180C10NR",
@@ -30495,6 +30115,31 @@
     "amount": "0"
   },
   {
+    "title": "K-BSK400",
+    "description": "Zbiornik 400L stal",
+    "amount": "0"
+  },
+  {
+    "title": "K-BSK400-ZAB0111",
+    "description": "Płyta zesp. sterujących NG16 wypalona",
+    "amount": "0"
+  },
+  {
+    "title": "K-BSK400-ZAB0112",
+    "description": "Blacha stopy mocującej",
+    "amount": "0"
+  },
+  {
+    "title": "K-BSK400-ZAB102",
+    "description": "Zaślepka wew profilu 60",
+    "amount": "6"
+  },
+  {
+    "title": "K-BSK400WO-01",
+    "description": "Płaszcz wann",
+    "amount": "0"
+  },
+  {
     "title": "K-BWR01",
     "description": "247.4x254x31.75 POM Pierścień",
     "amount": "0"
@@ -30525,9 +30170,19 @@
     "amount": "1"
   },
   {
+    "title": "K-C19B-02400E1-25",
+    "description": "ELEKTROMAGNES 24 VDC 25,75NA",
+    "amount": "1"
+  },
+  {
+    "title": "K-C19B-11550E5-433",
+    "description": "CEWKA",
+    "amount": "2"
+  },
+  {
     "title": "K-C22B-024E1-18.6N",
     "description": "CEWKA ZAWORU START.",
-    "amount": "4"
+    "amount": "1"
   },
   {
     "title": "K-CARBOLN10-19",
@@ -30540,6 +30195,16 @@
     "amount": "0"
   },
   {
+    "title": "K-CEWKA.24V-120A",
+    "description": "CEWKA 24V 120A ARD1191",
+    "amount": "6"
+  },
+  {
+    "title": "K-CEWKA.851020-024",
+    "description": "CEWKA 851020-024VDC",
+    "amount": "1"
+  },
+  {
     "title": "K-CEWKA.C19B-01200",
     "description": "CEWKA C19B-01200E2-7,1NA",
     "amount": "0"
@@ -30547,6 +30212,11 @@
   {
     "title": "K-CEWKA.C19B-02400",
     "description": "CEWKA C19B-02400E1-28,8NA",
+    "amount": "0"
+  },
+  {
+    "title": "K-CEWKA.ZAW.3/2-24",
+    "description": "CEWKA ZAWORU 3/2 24VDC",
     "amount": "1"
   },
   {
@@ -30567,7 +30237,7 @@
   {
     "title": "K-CR091C10R",
     "description": "Wkład filtra do  AFR30C10NR",
-    "amount": "17"
+    "amount": "22"
   },
   {
     "title": "K-CR111C10R",
@@ -30717,7 +30387,7 @@
   {
     "title": "K-DR2-06/21-AL",
     "description": "BLOK NG06/2 Z ZAWOREM PRZE.",
-    "amount": "1"
+    "amount": "2"
   },
   {
     "title": "K-DR2-06/21-ST",
@@ -30727,7 +30397,7 @@
   {
     "title": "K-DR2-06/22-AL",
     "description": "BLOK NG06/2 Z ZAWOREM PRZE.",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "K-DR2-06/22ST-B",
@@ -30737,7 +30407,7 @@
   {
     "title": "K-DR2-06/31-AL",
     "description": "BLOK NG06/3 Z ZAWOREM PRZE.",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "K-DR2-06/31-ST",
@@ -30747,7 +30417,7 @@
   {
     "title": "K-DR2-06/32-AL",
     "description": "BLOK NG06/3 Z ZAWOREM PRZE.",
-    "amount": "4"
+    "amount": "5"
   },
   {
     "title": "K-DR2-06/41-AL",
@@ -30795,6 +30465,11 @@
     "amount": "0"
   },
   {
+    "title": "K-DZWIGNIA-Q25",
+    "description": "DZWIGNIA DO Q25",
+    "amount": "8"
+  },
+  {
     "title": "K-E90-7080",
     "description": "Tuleja Ślizgowa",
     "amount": "0"
@@ -30805,6 +30480,16 @@
     "amount": "0"
   },
   {
+    "title": "K-ELI2-D-8.2-T0",
+    "description": "Pompa ELI2; 8.2cm3/obr:1:8; 076-11671",
+    "amount": "1"
+  },
+  {
+    "title": "K-ELI2-D-9.6-T0",
+    "description": "Pompa ELI2; 9.6cm3/obr;1:8; 076-11672",
+    "amount": "1"
+  },
+  {
     "title": "K-EM3-2F",
     "description": "MANOMETR",
     "amount": "0"
@@ -30813,6 +30498,11 @@
     "title": "K-EU01",
     "description": "Blacha chwytaka 03",
     "amount": "0"
+  },
+  {
+    "title": "K-EZB-12.6MG-230VA",
+    "description": "Elektromagnes",
+    "amount": "1"
   },
   {
     "title": "K-F2-120X125X1.5",
@@ -30880,9 +30570,19 @@
     "amount": "0"
   },
   {
+    "title": "K-FARBA-EPINOX77",
+    "description": "Grunt epoksy EPINOX77,dwuskład.TO-860",
+    "amount": "0"
+  },
+  {
+    "title": "K-FARBA-HKE80D",
+    "description": "Farba czarna ALKID HKE80D połysk RAL9005",
+    "amount": "0"
+  },
+  {
     "title": "K-FCA90LC4/PHE",
     "description": "SILNIK PROGRESYWNY 2,2 Kw",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-FCPA112MD-4IMB35",
@@ -30942,7 +30642,7 @@
   {
     "title": "K-FPIA L6 V 20 NG6",
     "description": "ZAWOR REWERSYJNY NG6",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "K-FPIAL10VM20",
@@ -30952,7 +30652,7 @@
   {
     "title": "K-FPMS-PDL-10-SPEC",
     "description": "FPMS-PDL-10-SPEC",
-    "amount": "8"
+    "amount": "7"
   },
   {
     "title": "K-FSP-26.8X35X2.8",
@@ -31252,12 +30952,12 @@
   {
     "title": "K-HAG.D05",
     "description": "Dystans 5mm HKGEH",
-    "amount": "18"
+    "amount": "17"
   },
   {
     "title": "K-HAG.D20",
     "description": "Dystans 20mm HKGEH",
-    "amount": "36"
+    "amount": "34"
   },
   {
     "title": "K-HAG.ES5B34-01",
@@ -31267,7 +30967,7 @@
   {
     "title": "K-HAG.FIBL116.K01",
     "description": "Mocowanie filtra - krążek",
-    "amount": "11"
+    "amount": "10"
   },
   {
     "title": "K-HAG.FIMD-01",
@@ -31302,7 +31002,7 @@
   {
     "title": "K-HAG.K01",
     "description": "Wzmocnienie ramy",
-    "amount": "0"
+    "amount": "32"
   },
   {
     "title": "K-HAG.M-DR20",
@@ -31317,7 +31017,7 @@
   {
     "title": "K-HAG.MA01",
     "description": "Mocowanie hydroakumulatora",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "K-HAG.MAM8053",
@@ -31375,14 +31075,19 @@
     "amount": "0"
   },
   {
+    "title": "K-HAG.MHKS3E35",
+    "description": "Mocowanie chłod. agregatu",
+    "amount": "0"
+  },
+  {
     "title": "K-HAG.MM01",
     "description": "Mocowanie manometru",
-    "amount": "8"
+    "amount": "5"
   },
   {
     "title": "K-HAG.MR01",
     "description": "Mocowanie robocze",
-    "amount": "22"
+    "amount": "18"
   },
   {
     "title": "K-HAG.MR02",
@@ -31392,7 +31097,7 @@
   {
     "title": "K-HAG.MR03-GMM63",
     "description": "Mocowanie manometru",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "K-HAG.MR04-FISPRFK",
@@ -31402,12 +31107,17 @@
   {
     "title": "K-HAG.MR05-HKV6215",
     "description": "Mocowanie regulatora przepływu",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "K-HAG.MR06",
     "description": "Mocowanie profil 30X30",
-    "amount": "8"
+    "amount": "4"
+  },
+  {
+    "title": "K-HAG.MRA12",
+    "description": "Stopy zbiornika RA12",
+    "amount": "2"
   },
   {
     "title": "K-HAG.MS-01",
@@ -31572,17 +31282,17 @@
   {
     "title": "K-HAG.ZAB-03-01",
     "description": "PŁYTA PODZBIORNIKOWA",
-    "amount": "8"
+    "amount": "6"
   },
   {
     "title": "K-HAG.ZAB-03-01RAL",
     "description": "PŁYTA PODZBIORNIKOWA POMALOWANA",
-    "amount": "0"
+    "amount": "7"
   },
   {
     "title": "K-HAG.ZAB-03-02",
     "description": "MOCOWANIE OSPRZĘTU",
-    "amount": "5"
+    "amount": "10"
   },
   {
     "title": "K-HAG.ZAB-03-03",
@@ -31597,12 +31307,12 @@
   {
     "title": "K-HAG.ZAB-04-04",
     "description": "Ucho mocujące fi25",
-    "amount": "63"
+    "amount": "75"
   },
   {
     "title": "K-HAG.ZAB-EL.KRAIS",
     "description": "Mocowanie skrzynki el. Krais",
-    "amount": "5"
+    "amount": "10"
   },
   {
     "title": "K-HAG.ZB25-PLYTA",
@@ -31645,6 +31355,11 @@
     "amount": "0"
   },
   {
+    "title": "K-HAG2RA12-100",
+    "description": "Pokrywa zbiornika EM100 B14",
+    "amount": "0"
+  },
+  {
     "title": "K-HAG2RA20-100",
     "description": "Pokrywa zbiornika",
     "amount": "0"
@@ -31652,6 +31367,11 @@
   {
     "title": "K-HAG2RA20-90",
     "description": "Pokrywa zbiornika",
+    "amount": "3"
+  },
+  {
+    "title": "K-HAG2RA20-90M",
+    "description": "Płyta pospawana",
     "amount": "0"
   },
   {
@@ -31662,12 +31382,17 @@
   {
     "title": "K-HAG2RA44-112",
     "description": "Pokrywa zbiornika",
-    "amount": "1"
+    "amount": "0"
+  },
+  {
+    "title": "K-HAGAP-HKEM",
+    "description": "Płyta pośrednia pod HKEM103",
+    "amount": "0"
   },
   {
     "title": "K-HAGAP-NG10",
     "description": "Płyta pośrednia HAGAP-NG10",
-    "amount": "0"
+    "amount": "6"
   },
   {
     "title": "K-HAGAP-NG6",
@@ -31687,7 +31412,12 @@
   {
     "title": "K-HAGAP-P2NG10RAL",
     "description": "Płyta pośrednia HAGAP-P2NG10 pomalowana",
-    "amount": "6"
+    "amount": "5"
+  },
+  {
+    "title": "K-HAGBSK400",
+    "description": "Pokrywa zbiornika pospawana",
+    "amount": "0"
   },
   {
     "title": "K-HAGOEWBAKRA1301",
@@ -31703,6 +31433,11 @@
     "title": "K-HAGRA0001",
     "description": "Płyta bloku",
     "amount": "4"
+  },
+  {
+    "title": "K-HAGRA12-LS168",
+    "description": "Płyta 12L silnik fi160",
+    "amount": "1"
   },
   {
     "title": "K-HAGRA130-2X112",
@@ -31722,7 +31457,7 @@
   {
     "title": "K-HAGRA20-112RAL",
     "description": "Płyta 20L silnik fi250 ES3",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "K-HAGRA20-90L/S",
@@ -31802,7 +31537,7 @@
   {
     "title": "K-HAGRA70S.0101",
     "description": "Pokrywa zbiornika HAGRA70S.0101",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-HAGRA75.0101",
@@ -31847,12 +31582,22 @@
   {
     "title": "K-HKBM40A1",
     "description": "ROZDZIELACZ 1 SEKCYJNY 40L",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "K-HKBM40A1WARYNSKI",
     "description": "ROZDZIELACZ 1 SEKCYJNY 40 L",
     "amount": "0"
+  },
+  {
+    "title": "K-HKBM40A1X2",
+    "description": "ROZDZIELACZ 2 SEKCYJNY 40L",
+    "amount": "1"
+  },
+  {
+    "title": "K-HKBM40A1X3",
+    "description": "ROZDZIELACZ 3 SEKCYJNY 40L",
+    "amount": "2"
   },
   {
     "title": "K-HKBM40A1X3WARYNS",
@@ -31872,6 +31617,21 @@
   {
     "title": "K-HKBM40CO",
     "description": "TULEJA40L",
+    "amount": "1"
+  },
+  {
+    "title": "K-HKBM808",
+    "description": "Zatrzask do rozdzielacza",
+    "amount": "2"
+  },
+  {
+    "title": "K-HKBM80A1",
+    "description": "ROZDZIELACZ 1 SEKCYJNY 80L",
+    "amount": "2"
+  },
+  {
+    "title": "K-HKBM80A1X5",
+    "description": "ROZDZIELACZ 5 SEKCYJNY 80L",
     "amount": "1"
   },
   {
@@ -32020,6 +31780,11 @@
     "amount": "0"
   },
   {
+    "title": "K-HMAP00340212",
+    "description": "gałka do kierownicy AP00340212",
+    "amount": "10"
+  },
+  {
     "title": "K-HRC304030",
     "description": "Tuleja stalowa hartowana",
     "amount": "0"
@@ -32047,7 +31812,7 @@
   {
     "title": "K-IE3AC08B2029N",
     "description": "Silnik elektryczny WM80; 1,1 kW; 2880 ob",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "K-IE3AC09LC403",
@@ -32160,6 +31925,11 @@
     "amount": "0"
   },
   {
+    "title": "K-K1PS2.5G",
+    "description": "Zamiennik pompy HKK12 (lewa, 1,6 ccm)",
+    "amount": "1"
+  },
+  {
     "title": "K-K2-140X115X32",
     "description": "Kompakt Tłoka  PA/NBR",
     "amount": "0"
@@ -32187,6 +31957,11 @@
   {
     "title": "K-K3VL45/B-1NRMM",
     "description": "Pompa tłoczkowa 104-10081 K3VL45/B-1NRMM",
+    "amount": "0"
+  },
+  {
+    "title": "K-K3VL80/B-1NRMM",
+    "description": "Pompa tłoczkowa 104-10239 K3VL80/B-1NRMM",
     "amount": "0"
   },
   {
@@ -32375,14 +32150,24 @@
     "amount": "0"
   },
   {
+    "title": "K-L35C-125C-K3VL",
+    "description": "L35C-125C konsola do pompy K3VL80;",
+    "amount": "0"
+  },
+  {
     "title": "K-LCW/MPAE/125/KDS",
     "description": "Kółko obrotowe z hamulcem",
-    "amount": "32"
+    "amount": "44"
   },
   {
     "title": "K-LF300-37X47X8",
     "description": "05 Uszczelnienie Tłoczyska  PU",
     "amount": "0"
+  },
+  {
+    "title": "K-LINKA STERUJACA",
+    "description": "LINKA STERUJACA",
+    "amount": "1"
   },
   {
     "title": "K-LOCTIT5980-100ML",
@@ -32415,6 +32200,11 @@
     "amount": "0"
   },
   {
+    "title": "K-LOCTITE-518-50ML",
+    "description": "05 uszczelniacz do złączy kołnierzowych",
+    "amount": "0"
+  },
+  {
     "title": "K-LOCTITE-55/150MB",
     "description": "nić do uszczelnienia gwintów",
     "amount": "0"
@@ -32425,6 +32215,11 @@
     "amount": "0"
   },
   {
+    "title": "K-LS618",
+    "description": "Kielich AL PumpGr2 EM100 B14",
+    "amount": "1"
+  },
+  {
     "title": "K-M-8XSVNW10HL",
     "description": "Mocowanie złączy grodziowych",
     "amount": "1"
@@ -32433,6 +32228,11 @@
     "title": "K-M.3BKR32L",
     "description": "Mocowanie zaworu",
     "amount": "0"
+  },
+  {
+    "title": "K-M14450001",
+    "description": "ELEKTROMAGNEZ",
+    "amount": "2"
   },
   {
     "title": "K-MAL.41-08",
@@ -32510,19 +32310,34 @@
     "amount": "0"
   },
   {
+    "title": "K-NG16DSP7-S4/20",
+    "description": "Rozdzielacz NG16; DSP7-S4/20N-EI/D24K1",
+    "amount": "0"
+  },
+  {
+    "title": "K-NG16ES710LLX2F",
+    "description": "Płyta NG16; ES710LLX2F; porty X,Y;",
+    "amount": "0"
+  },
+  {
     "title": "K-NG6E24",
     "description": "Rozdzielacz V-4WE6, 50l. suwak E, 24VDC",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "K-NG6G24",
     "description": "Rozdzielacz V-4WE6, 50l. suwak G, 24VDC",
-    "amount": "2"
+    "amount": "14"
   },
   {
     "title": "K-NILEX_400G",
     "description": "Smar do sworzni EP NLGI 2,400g",
     "amount": "0"
+  },
+  {
+    "title": "K-NKP-64011",
+    "description": "SYGNALIZATOR POZIOMU OLEJU",
+    "amount": "1"
   },
   {
     "title": "K-NPSL-P30",
@@ -32532,7 +32347,7 @@
   {
     "title": "K-OLEJ HV46",
     "description": "OLEJ HYDRAULICZNY HV 46",
-    "amount": "362"
+    "amount": "611"
   },
   {
     "title": "K-OLEJ-AMORTYZOL15",
@@ -32562,6 +32377,16 @@
   {
     "title": "K-OMT4080C47-K3V",
     "description": "OMT4080C47 piasta sprzęgła do pompy K3VL",
+    "amount": "0"
+  },
+  {
+    "title": "K-OMT5050D43-K3V",
+    "description": "OMT5050D43 elem. sprzęgła do K3VL80",
+    "amount": "0"
+  },
+  {
+    "title": "K-OMT5110C54-K3V",
+    "description": "OMT5110C5400 elem. sprzęgła do K3VL80",
     "amount": "0"
   },
   {
@@ -32772,7 +32597,12 @@
   {
     "title": "K-PAKIET-ZEW.",
     "description": "Pakiet zewnętrzny do ukł. hydraulicznego",
-    "amount": "0"
+    "amount": "4"
+  },
+  {
+    "title": "K-PB2B-T11A-LBN",
+    "description": "Zawór redukcyjny pośredniego działania",
+    "amount": "1"
   },
   {
     "title": "K-PDE-75X55X35",
@@ -32798,6 +32628,11 @@
     "title": "K-PDK035-02",
     "description": "Podkładka",
     "amount": "0"
+  },
+  {
+    "title": "K-PDM123/12F",
+    "description": "PŁYTA Z ZAWOREM PRZELEWOWYM",
+    "amount": "6"
   },
   {
     "title": "K-PDP-50X36X9",
@@ -32840,9 +32675,14 @@
     "amount": "0"
   },
   {
+    "title": "K-PKDWHRB-50",
+    "description": "13-Koń PHR z GZ 2\" BSPT do węża 2\" ocynk",
+    "amount": "0"
+  },
+  {
     "title": "K-PKR18",
     "description": "Osłona przeciwpyłowa fi18",
-    "amount": "20"
+    "amount": "16"
   },
   {
     "title": "K-PL250-3-5",
@@ -32852,7 +32692,17 @@
   {
     "title": "K-PLOMBA",
     "description": "Plomba termokurczliwa",
-    "amount": "3,00"
+    "amount": "0,00"
+  },
+  {
+    "title": "K-PLYTA-E53A38P",
+    "description": "Płyta CETOP 3",
+    "amount": "5"
+  },
+  {
+    "title": "K-PLYTA-EA0633",
+    "description": "Płyta z zaworem przelew. EA06333813H50",
+    "amount": "2"
   },
   {
     "title": "K-PODKLAD-CZARNA",
@@ -32868,6 +32718,16 @@
     "title": "K-POL-4-K3VL45",
     "description": "POL-4 elem. sprzęgłado pompy K3VL45, nyl",
     "amount": "0"
+  },
+  {
+    "title": "K-POL-5-K3VL80",
+    "description": "POL-5 elem. sprzęgła do K3VL80,003-10063",
+    "amount": "0"
+  },
+  {
+    "title": "K-POMPA_KV2P/17+17",
+    "description": "POMPA PODWOJNA17+17DO80-SCF.03-D5",
+    "amount": "1"
   },
   {
     "title": "K-PP020195102000",
@@ -32980,6 +32840,16 @@
     "amount": "0"
   },
   {
+    "title": "K-PZ1-4.5EUP",
+    "description": "Pompa zębata 5cc 1:8 gr1EU",
+    "amount": "0"
+  },
+  {
+    "title": "K-PZ1-5EUP",
+    "description": "Pompa zębata 4,2cc 1:8 gr1EU",
+    "amount": "0"
+  },
+  {
     "title": "K-PZ1-5PPL",
     "description": "Pompa zębata 5cc  frez5 gr1PP",
     "amount": "0"
@@ -32987,17 +32857,27 @@
   {
     "title": "K-PZ2-20/6.3EUP",
     "description": "Pompa 20/6,3 2gr",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "K-PZ2-4.5EUP",
     "description": "Pompa zębata 4,5cc 1:8 gr2EU",
-    "amount": "2"
+    "amount": "8"
+  },
+  {
+    "title": "K-PZ3E-221/7",
+    "description": "PZ3E-221/7",
+    "amount": "3"
   },
   {
     "title": "K-PZE-044.45",
     "description": "Pierścień żeliwny do siłowników",
     "amount": "11"
+  },
+  {
+    "title": "K-Q25F1SN-103/A1M1",
+    "description": "ROZDZIELACZ Q25F1S(N)-103/A1/M1-F3D",
+    "amount": "3"
   },
   {
     "title": "K-R.HKPTRV300-200",
@@ -33440,6 +33320,11 @@
     "amount": "0"
   },
   {
+    "title": "K-SB-A3-0103AL",
+    "description": "Blok zaworowy",
+    "amount": "1"
+  },
+  {
     "title": "K-SB-B2-0103ST",
     "description": "BLOK",
     "amount": "2"
@@ -33457,12 +33342,12 @@
   {
     "title": "K-SCPV5.RA30K-01",
     "description": "Blacha korpusowa",
-    "amount": "5"
+    "amount": "7"
   },
   {
     "title": "K-SCPV5.RA30K-02",
     "description": "Blacha dolna",
-    "amount": "5"
+    "amount": "7"
   },
   {
     "title": "K-SD2E-A3/L2D21-A",
@@ -33472,7 +33357,7 @@
   {
     "title": "K-SD2E-B2/S2I11",
     "description": "zawór startowy",
-    "amount": "3"
+    "amount": "6"
   },
   {
     "title": "K-SD3E-B2/H2O2-A",
@@ -33527,7 +33412,7 @@
   {
     "title": "K-SL8470",
     "description": "Wkład filtra powietrza SL8470",
-    "amount": "10"
+    "amount": "0"
   },
   {
     "title": "K-SLH89002",
@@ -33543,6 +33428,11 @@
     "title": "K-SOLVENT_SPRAY",
     "description": "Odrdzewiacz,500ml",
     "amount": "0"
+  },
+  {
+    "title": "K-SOSPC050ONGP",
+    "description": "Orbitrol",
+    "amount": "8"
   },
   {
     "title": "K-SP4204018512",
@@ -33572,7 +33462,7 @@
   {
     "title": "K-SR1A-B2/H25L-B1",
     "description": "Zawór przelewowy z nasadką ochronną, plo",
-    "amount": "0"
+    "amount": "11"
   },
   {
     "title": "K-SR1A-B2/H25S",
@@ -33592,7 +33482,7 @@
   {
     "title": "K-SR1A-B2/H35L-B1",
     "description": "Zawór przelewowy z nasadką ochronną, plo",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-SR1A-B2/H42S",
@@ -33607,7 +33497,7 @@
   {
     "title": "K-SR4E2-B2/H35V",
     "description": "ZAWÓR PRZELEWOWO-ODCIĄŻAJĄCY 350 BAR",
-    "amount": "5"
+    "amount": "8"
   },
   {
     "title": "K-SS-50.8X57X3.5",
@@ -33647,7 +33537,7 @@
   {
     "title": "K-T3A-112M2-4",
     "description": "Silnik prog. T3A-112M2-4; 5,5kW, B5, 145",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "K-T3A-132M-4",
@@ -33687,7 +33577,7 @@
   {
     "title": "K-TABLICZKA-GRAWER",
     "description": "tabliczka hansa-flex grawerowana",
-    "amount": "162"
+    "amount": "150"
   },
   {
     "title": "K-TABLICZKA-M22S",
@@ -33697,7 +33587,7 @@
   {
     "title": "K-TABLICZKA-OPIS",
     "description": "Tabliczka z grawerowaną nazwą agregatu",
-    "amount": "36"
+    "amount": "16"
   },
   {
     "title": "K-TABLICZKA-POZ.",
@@ -33712,12 +33602,12 @@
   {
     "title": "K-TAFTR22250AP01",
     "description": "Tankflansch",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "K-TAFTR26300AP01",
     "description": "Tankflansch",
-    "amount": "0"
+    "amount": "4"
   },
   {
     "title": "K-TAFTR32350AP01",
@@ -33768,6 +33658,11 @@
     "title": "K-TL-32X24X15.5",
     "description": "Tłok Cylindra",
     "amount": "0"
+  },
+  {
+    "title": "K-TLTE127B1A7A10S",
+    "description": "Wskaźnik poziomu oleju i temperatury",
+    "amount": "1"
   },
   {
     "title": "K-TPM-100X75X22.4",
@@ -33935,9 +33830,19 @@
     "amount": "0"
   },
   {
+    "title": "K-UTWARDZACZ-B",
+    "description": "Utwardzacz EPITAN92; skł.B",
+    "amount": "0"
+  },
+  {
     "title": "K-UZPR-6-42/350-2P",
     "description": "Zawór przelewowy warstwowy",
-    "amount": "2"
+    "amount": "11"
+  },
+  {
+    "title": "K-V-FCR1GT3/8",
+    "description": "krańcówka otwarta 3/8''",
+    "amount": "5"
   },
   {
     "title": "K-V-R40L-1E",
@@ -33963,6 +33868,11 @@
     "title": "K-V7.1560-103K8",
     "description": "Wkład filtrujący V7.1560-103K8",
     "amount": "0"
+  },
+  {
+    "title": "K-VD34-12-14",
+    "description": "Zawór niskie/wysokie ciśnienie",
+    "amount": "1"
   },
   {
     "title": "K-VE260070145000",
@@ -33995,8 +33905,18 @@
     "amount": "0"
   },
   {
+    "title": "K-VEDHU0711X00",
+    "description": "ROZDZIELACZ",
+    "amount": "1"
+  },
+  {
     "title": "K-VEEMDV10N3D012DG",
     "description": "3/2 Magnetwegeventil Cartridge 24VDC",
+    "amount": "1"
+  },
+  {
+    "title": "K-VERPE3043Z110120",
+    "description": "ROZDZIELACZ",
     "amount": "1"
   },
   {
@@ -34008,6 +33928,26 @@
     "title": "K-VESP4P2B3H2124E2",
     "description": "Prop. Ventil SP4P2-B3/H21-24E2V-A",
     "amount": "0"
+  },
+  {
+    "title": "K-VMDS15005B3PRL15",
+    "description": "Zawór przeciąż.1”150l/min.30-350bar kapt",
+    "amount": "1"
+  },
+  {
+    "title": "K-VMDS15006B3PRL15",
+    "description": "Zawór przeciąż.1.1/4”150l/min.30bar kapt",
+    "amount": "1"
+  },
+  {
+    "title": "K-VMPBL05003",
+    "description": "Zawór przelewowy",
+    "amount": "13"
+  },
+  {
+    "title": "K-VMPBL05004",
+    "description": "Zawór przelewowy",
+    "amount": "3"
   },
   {
     "title": "K-VOSLP38/TR.S.P4",
@@ -34048,6 +33988,11 @@
     "title": "K-W3E12VDC80L",
     "description": "ROZDZIELACZ3E80, sterowany, 3-sekcy. 12V",
     "amount": "0"
+  },
+  {
+    "title": "K-WBCSE02B",
+    "description": "Zawór zwrotny sterowany przeciążeniowy 3",
+    "amount": "4"
   },
   {
     "title": "K-WCR80L",
@@ -34190,6 +34135,11 @@
     "amount": "0"
   },
   {
+    "title": "K-Z2S6-41/10/V",
+    "description": "Zawór zwrotny bliźniaczy",
+    "amount": "1"
+  },
+  {
     "title": "K-Z40-52-7/10",
     "description": "05 Zgarniacz",
     "amount": "0"
@@ -34202,12 +34152,12 @@
   {
     "title": "K-ZAB1.1001",
     "description": "wanna ociekowa",
-    "amount": "10"
+    "amount": "13"
   },
   {
     "title": "K-ZAB1.1002",
     "description": "wzmocnienie",
-    "amount": "24"
+    "amount": "36"
   },
   {
     "title": "K-ZAB4.1003-P80",
@@ -34223,6 +34173,16 @@
     "title": "K-ZATRZASK-120",
     "description": "zatrzask do rozdz. sterow.  ręcznie120",
     "amount": "0"
+  },
+  {
+    "title": "K-ZAWOR-UZSB-10/12",
+    "description": "ZAWÓR",
+    "amount": "1"
+  },
+  {
+    "title": "K-ZAWOR-VAUOM-1/2",
+    "description": "PRZELEWOWY KRZYZOWY 1/2\" 160BAR",
+    "amount": "4"
   },
   {
     "title": "K-ZESTAW",
@@ -34302,7 +34262,27 @@
   {
     "title": "K-ZK3030CZ",
     "description": "04 ZAŚLEPKA 30X30",
-    "amount": "29"
+    "amount": "110"
+  },
+  {
+    "title": "K-ZLACZE1/2\"-30CAR",
+    "description": "Przyłącze kolanowe 1/2''-30 caro",
+    "amount": "3"
+  },
+  {
+    "title": "K-ZLACZE1/2\"-35KW",
+    "description": "Przyłącze kolanowe 1/2'' 35 kwadrat",
+    "amount": "5"
+  },
+  {
+    "title": "K-ZLACZE3/4\"-40CAR",
+    "description": "Przyłącze kolanowe 3/4''-40 caro",
+    "amount": "2"
+  },
+  {
+    "title": "K-ZLACZE3/4\"-40KW",
+    "description": "Przyłącze kolanowe 3/4''-40 kwadrat",
+    "amount": "5"
   },
   {
     "title": "K-ZOK1/2",
@@ -34317,12 +34297,12 @@
   {
     "title": "K-ZPGWO3/8",
     "description": "Zaślepka GW 3/8” O-ring",
-    "amount": "122"
+    "amount": "0"
   },
   {
     "title": "K-ZPGWOM18X1.5",
     "description": "Zaślepka GW M18x1.5 z uszcz. Nr467039",
-    "amount": "0"
+    "amount": "500"
   },
   {
     "title": "K-ZS-116",
@@ -34452,6 +34432,11 @@
   {
     "title": "KBINDER300-3.6S",
     "description": "Kabelbinder 300-3.6 schwarz",
+    "amount": "0"
+  },
+  {
+    "title": "KBINDER300-7.8S",
+    "description": "Przewiązki kablowe 300-7,8 czarny",
     "amount": "0"
   },
   {
@@ -34682,7 +34667,7 @@
   {
     "title": "KM18",
     "description": "Przeciwnakrętka M18x1,5",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "KM18VA",
@@ -34702,7 +34687,7 @@
   {
     "title": "KM22",
     "description": "Przeciwnakrętka M22x1,5",
-    "amount": "12"
+    "amount": "7"
   },
   {
     "title": "KM24",
@@ -34712,7 +34697,7 @@
   {
     "title": "KM26",
     "description": "Przeciwnakrętka M26x1,5",
-    "amount": "10"
+    "amount": "14"
   },
   {
     "title": "KM30",
@@ -34857,7 +34842,7 @@
   {
     "title": "KP206S",
     "description": "HD- Kompaktowy wąż 2SC DN06 wykonanie S",
-    "amount": "0,00"
+    "amount": "0,49"
   },
   {
     "title": "KP208",
@@ -34907,7 +34892,7 @@
   {
     "title": "KP213S",
     "description": "HD- Kompaktowy wąż 2SC DN12 wykonanie S",
-    "amount": "0,00"
+    "amount": "15,43"
   },
   {
     "title": "KP216",
@@ -35042,7 +35027,7 @@
   {
     "title": "LAB04HB",
     "description": "Adaptery L DKR1/4\" AGR1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "LAB06HB",
@@ -36202,7 +36187,7 @@
   {
     "title": "M-4205-00000000003",
     "description": "Płyta zbiornik Krais",
-    "amount": "0"
+    "amount": "3"
   },
   {
     "title": "M-4205-00000000004",
@@ -36212,22 +36197,22 @@
   {
     "title": "M-4205-00000000005",
     "description": "PŁYTA ZBIORNIK 44L",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "M-4205-00000000006",
     "description": "PŁYTA ZBIORNIK 70L KOŁNIERZ 300",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "M-4205-00000000007",
     "description": "Rura PR15-1.5VZx605x90st",
-    "amount": "17"
+    "amount": "12"
   },
   {
     "title": "M-4205-00000000009",
     "description": "Rura PR15-1.5VZx355x90st",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "M-4205-00000000010",
@@ -36257,7 +36242,7 @@
   {
     "title": "M-4221-PG3476",
     "description": "PRZEDŁUŻKA PG3476 SONKO",
-    "amount": "18"
+    "amount": "14"
   },
   {
     "title": "M-4236-HAGRA70-112",
@@ -36272,17 +36257,17 @@
   {
     "title": "M-4236-HAGZAB-W125",
     "description": "Wanna ociekowa",
-    "amount": "1"
+    "amount": "7"
   },
   {
     "title": "M-4236-HAGZAB04.01",
     "description": "Zabudowa agregatu",
-    "amount": "1"
+    "amount": "5"
   },
   {
     "title": "M-4236-RA70132B5.1",
     "description": "Kompletna płyta do zb. 70l.132 B5",
-    "amount": "4"
+    "amount": "13"
   },
   {
     "title": "MBK100110",
@@ -37607,7 +37592,7 @@
   {
     "title": "MVONW10L",
     "description": "Złączka gwint. do mano IGR1/4\" DKOL12",
-    "amount": "57"
+    "amount": "46"
   },
   {
     "title": "MVR04HJ",
@@ -38515,6 +38500,11 @@
     "amount": "0,00"
   },
   {
+    "title": "NY7206",
+    "description": "Thermoplast-Höchstdruckschlauch DN06",
+    "amount": "0,00"
+  },
+  {
     "title": "NY808",
     "description": "Wąż termoplastyczny SAE100 R8 DN08",
     "amount": "0,00"
@@ -39407,7 +39397,7 @@
   {
     "title": "OR12.42-1.78",
     "description": "O-ring 12,42x1,78 NBR 70SH",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "OR12.42-1.78V",
@@ -41197,7 +41187,7 @@
   {
     "title": "OR19.3-2.4",
     "description": "O-ring 19,3x2,4 NBR 70SH",
-    "amount": "0"
+    "amount": "30"
   },
   {
     "title": "OR19.4-2.4",
@@ -43162,7 +43152,7 @@
   {
     "title": "OR4.48-1.78",
     "description": "O-ring 4,48x1,78 NBR 70SH",
-    "amount": "50"
+    "amount": "14"
   },
   {
     "title": "OR4.5-1",
@@ -44917,7 +44907,7 @@
   {
     "title": "OR71.44-3.53",
     "description": "O-ring 71,44x3,53 NBR 70SH",
-    "amount": "0"
+    "amount": "7"
   },
   {
     "title": "OR72-2",
@@ -45717,7 +45707,7 @@
   {
     "title": "OR9.25-1.78",
     "description": "O-ring 9,25x1,78 NBR 70SH",
-    "amount": "12"
+    "amount": "8"
   },
   {
     "title": "OR9.25-1.78N90",
@@ -47320,6 +47310,11 @@
     "amount": "0"
   },
   {
+    "title": "PA732SF6PLUS",
+    "description": "Swage fitting R15-PLUS DN31 SFS1.1/4\"",
+    "amount": "0"
+  },
+  {
     "title": "PA732SF9",
     "description": "Armatura wtłac R15 DN31 SFS1.1/4\"-CAT",
     "amount": "0"
@@ -48222,7 +48217,7 @@
   {
     "title": "PHD106",
     "description": "Oprawka zdzierająca 1SN DN06",
-    "amount": "4"
+    "amount": "6"
   },
   {
     "title": "PHD106E",
@@ -48272,7 +48267,7 @@
   {
     "title": "PHD113",
     "description": "Oprawka zdzierająca 1SN DN12",
-    "amount": "12"
+    "amount": "20"
   },
   {
     "title": "PHD113E",
@@ -48307,7 +48302,7 @@
   {
     "title": "PHD120",
     "description": "Oprawka zdzierająca 1SN DN19",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "PHD120105",
@@ -48477,7 +48472,7 @@
   {
     "title": "PHD213",
     "description": "Oprawka zdzierająca 2SN DN12",
-    "amount": "6"
+    "amount": "2"
   },
   {
     "title": "PHD213E",
@@ -49125,6 +49120,11 @@
     "amount": "0"
   },
   {
+    "title": "PHY7206",
+    "description": "Pressfassung NY7200 DN06",
+    "amount": "0"
+  },
+  {
     "title": "PHY806N",
     "description": "Oprawka wtłaczana NY800 DN06",
     "amount": "0"
@@ -49257,12 +49257,12 @@
   {
     "title": "PN02AOL06",
     "description": "Złączki wtłaczane DN02 DKOL08",
-    "amount": "3"
+    "amount": "2"
   },
   {
     "title": "PN02AOL0690",
     "description": "Złączki wtłaczane DN02 DKOL08 90°",
-    "amount": "6"
+    "amount": "0"
   },
   {
     "title": "PN02AOL08",
@@ -49417,7 +49417,7 @@
   {
     "title": "PN02SKE",
     "description": "Złączki wtłaczane DN02 M16x2",
-    "amount": "2"
+    "amount": "0"
   },
   {
     "title": "PN02SKE12",
@@ -49442,7 +49442,7 @@
   {
     "title": "PN02SKE90",
     "description": "Złączki wtłaczane DN02 M16x2 90°",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "PN04AB",
@@ -49602,7 +49602,7 @@
   {
     "title": "PN06AB",
     "description": "Złączki wtłaczane DN06 DKR1/4\"",
-    "amount": "2"
+    "amount": "3"
   },
   {
     "title": "PN06AB02",
@@ -49647,7 +49647,7 @@
   {
     "title": "PN06AB90",
     "description": "Złączki wtłaczane DN06 DKR1/4\" 90°",
-    "amount": "5"
+    "amount": "4"
   },
   {
     "title": "PN06ABK1090",
@@ -49822,7 +49822,7 @@
   {
     "title": "PN06AOL",
     "description": "Złączki wtłaczane DN06 DKOL08",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "PN06AOL04",
@@ -49882,7 +49882,7 @@
   {
     "title": "PN06AOL45",
     "description": "Złączki wtłaczane DN06 DKOL08 45°",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "PN06AOL45VA",
@@ -51927,7 +51927,7 @@
   {
     "title": "PN13AOL",
     "description": "Złączki wtłaczane DN12 DKOL15",
-    "amount": "5"
+    "amount": "9"
   },
   {
     "title": "PN13AOL10",
@@ -51947,7 +51947,7 @@
   {
     "title": "PN13AOL16",
     "description": "Złączki wtłaczane DN12 DKOL18",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "PN13AOL1645",
@@ -51972,7 +51972,7 @@
   {
     "title": "PN13AOL90",
     "description": "Złączki wtłaczane DN12 DKOL15 90°",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "PN13AOL90VA",
@@ -53277,7 +53277,7 @@
   {
     "title": "PN20AOL",
     "description": "Złączki wtłaczane DN19 DKOL22",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "PN20AOL16",
@@ -53592,6 +53592,11 @@
   {
     "title": "PN20SF25",
     "description": "Złączki wtłaczane DN19 SFL1\"",
+    "amount": "0"
+  },
+  {
+    "title": "PN20SF2545",
+    "description": "Złączki wtłaczane DN19 SFL1\" 45°",
     "amount": "0"
   },
   {
@@ -53927,7 +53932,7 @@
   {
     "title": "PN25AOL90",
     "description": "Złączki wtłaczane DN25 DKOL28 90°",
-    "amount": "13"
+    "amount": "0"
   },
   {
     "title": "PN25AOL90L150",
@@ -55220,6 +55225,31 @@
     "amount": "0"
   },
   {
+    "title": "PNY7206AB",
+    "description": "Pressnippel NY7200 DN06 DKR1/4\"",
+    "amount": "0"
+  },
+  {
+    "title": "PNY7206AOS",
+    "description": "Pressnippel NY7200 DN06 DKOS10",
+    "amount": "0"
+  },
+  {
+    "title": "PNY7206AOS04",
+    "description": "Pressnippel NY7200 DN06 DKOS08",
+    "amount": "0"
+  },
+  {
+    "title": "PNY7206HN",
+    "description": "Pressnippel NY7200 DN06 AGN1/4\"",
+    "amount": "0"
+  },
+  {
+    "title": "PNY7206HN10",
+    "description": "Pressnippel NY7200 DN06 AGN3/8\"",
+    "amount": "0"
+  },
+  {
     "title": "PPW095",
     "description": "Zgarniacz tłokowy PPW 95x86,4x5,3 PUR",
     "amount": "0"
@@ -55497,7 +55527,7 @@
   {
     "title": "PR12-1.5",
     "description": "Rura hydrauliczna 12x1,5 ST37.4 NBK",
-    "amount": "88,72"
+    "amount": "70,22"
   },
   {
     "title": "PR12-1.5ST52ZS",
@@ -55622,7 +55652,7 @@
   {
     "title": "PR15-1.5VZCF",
     "description": "Rura hydrauliczna 15x1,5 ocynk., bez CR6",
-    "amount": "0,00"
+    "amount": "5,00"
   },
   {
     "title": "PR15-1V1GG",
@@ -55772,7 +55802,7 @@
   {
     "title": "PR18-1.5VZCF",
     "description": "Rura hydrauliczna 18x1,5 ocynk., bez CR6",
-    "amount": "0,00"
+    "amount": "2,50"
   },
   {
     "title": "PR18-2",
@@ -55857,7 +55887,7 @@
   {
     "title": "PR20-3VZCF",
     "description": "Rura hydrauliczna 20x3 ocynk., bez CR6",
-    "amount": "0,00"
+    "amount": "6,00"
   },
   {
     "title": "PR21.3-2V4",
@@ -56002,7 +56032,7 @@
   {
     "title": "PR28-1.5",
     "description": "Rura hydrauliczna 28x1,5 ST37.4 NBK",
-    "amount": "0,00"
+    "amount": "30,00"
   },
   {
     "title": "PR28-1.5V4",
@@ -56027,7 +56057,7 @@
   {
     "title": "PR28-2",
     "description": "Rura hydrauliczna 28x2 ST37.4 NBK",
-    "amount": "0,00"
+    "amount": "5,51"
   },
   {
     "title": "PR28-2.5",
@@ -56087,7 +56117,7 @@
   {
     "title": "PR30-2",
     "description": "Rura hydrauliczna 30x2 ST37.4 NBK",
-    "amount": "57,88"
+    "amount": "22,88"
   },
   {
     "title": "PR30-2.5",
@@ -56962,7 +56992,7 @@
   {
     "title": "RIKNW2006ED",
     "description": "Redukcja AGR3/4\"-WD IGR1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "RIKNW2006EDVA",
@@ -57022,7 +57052,7 @@
   {
     "title": "RIKNW2513ED",
     "description": "Redukcja AGR1\"-WD IGR1/2\"",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "RIKNW2513EDVA",
@@ -57042,7 +57072,7 @@
   {
     "title": "RIKNW3220ED",
     "description": "Redukcja AGR1.1/4\"-WD IGR3/4\"",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "RIKNW4013",
@@ -57157,7 +57187,7 @@
   {
     "title": "RILNW1006ED",
     "description": "Redukcja AGR3/8\"-WD IGR1/4\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "RILNW1010",
@@ -57743,6 +57773,11 @@
     "title": "RMM63-6H",
     "description": "Manometr bez gliceryn 63 6bar AGR1/4\"",
     "amount": "0"
+  },
+  {
+    "title": "ROHRENTGRATADAPTER",
+    "description": "Rohrentgrater Aufnahme Adapter 6 - 35",
+    "amount": "1"
   },
   {
     "title": "ROHRENTGRATER",
@@ -61227,7 +61262,7 @@
   {
     "title": "SKM10IR2FS",
     "description": "Kielich złącza wtykowego FS IGR3/8\" TW2",
-    "amount": "4"
+    "amount": "0"
   },
   {
     "title": "SKM10IR3",
@@ -61317,7 +61352,7 @@
   {
     "title": "SKM13IR2FS",
     "description": "Kielich złącza wtykowego FS IGR1/2\" TW2",
-    "amount": "0"
+    "amount": "7"
   },
   {
     "title": "SKM13IR2MULTIQ",
@@ -61442,7 +61477,7 @@
   {
     "title": "SKM20IR3FS",
     "description": "Kielich złącza wtykowego FS IGR3/4\" TW3",
-    "amount": "6"
+    "amount": "16"
   },
   {
     "title": "SKM20IR4",
@@ -61742,7 +61777,12 @@
   {
     "title": "SKMZUBS2FS",
     "description": "Ochrona przeciwpyłowa do SKM_FS TW2",
-    "amount": "1"
+    "amount": "0"
+  },
+  {
+    "title": "SKMZUBS2FS",
+    "description": "Ochrona przeciwpyłowa do SKM_FS TW2",
+    "amount": "3"
   },
   {
     "title": "SKMZUBS399",
@@ -61762,7 +61802,7 @@
   {
     "title": "SKMZUBS3FS",
     "description": "Ochrona przeciwpyłowa do SKM_FS TW3",
-    "amount": "6"
+    "amount": "14"
   },
   {
     "title": "SKMZUBS4",
@@ -61972,7 +62012,7 @@
   {
     "title": "SKS10IR2FS",
     "description": "Wtyk złącza wtykowego FS IGR3/8\" TW2",
-    "amount": "4"
+    "amount": "0"
   },
   {
     "title": "SKS10IR3",
@@ -62057,7 +62097,7 @@
   {
     "title": "SKS13IR2FS",
     "description": "Wtyk złącza wtykowego FS IGR1/2\" TW2",
-    "amount": "0"
+    "amount": "9"
   },
   {
     "title": "SKS13IR2MULTIQ",
@@ -62182,7 +62222,7 @@
   {
     "title": "SKS20IR3FS",
     "description": "Wtyk złącza wtykowego FS IGR3/4\" TW3",
-    "amount": "6"
+    "amount": "16"
   },
   {
     "title": "SKS20IR4",
@@ -62457,7 +62497,7 @@
   {
     "title": "SKSZUBS2FS",
     "description": "Ochrona przeciwpyłowa do SKS_FS TW2",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "SKSZUBS399",
@@ -62857,7 +62897,7 @@
   {
     "title": "SRD12",
     "description": "Pierścień zacinający L12 S12",
-    "amount": "64"
+    "amount": "58"
   },
   {
     "title": "SRD12LL",
@@ -62882,7 +62922,7 @@
   {
     "title": "SRD15",
     "description": "Pierścień zacinający L15",
-    "amount": "5"
+    "amount": "30"
   },
   {
     "title": "SRD15VA",
@@ -62907,7 +62947,7 @@
   {
     "title": "SRD18",
     "description": "Pierścień zacinający L18",
-    "amount": "10"
+    "amount": "2"
   },
   {
     "title": "SRD18VA",
@@ -62917,7 +62957,7 @@
   {
     "title": "SRD20",
     "description": "Pierścień zacinający S20",
-    "amount": "5"
+    "amount": "49"
   },
   {
     "title": "SRD20VA",
@@ -62927,7 +62967,7 @@
   {
     "title": "SRD22",
     "description": "Pierścień zacinający L22",
-    "amount": "5"
+    "amount": "3"
   },
   {
     "title": "SRD22VA",
@@ -63212,7 +63252,7 @@
   {
     "title": "SRS0218PP",
     "description": "Opaska rurowa lekka TW2 18,0 PP",
-    "amount": "4"
+    "amount": "0"
   },
   {
     "title": "SRS0319PP",
@@ -63232,7 +63272,7 @@
   {
     "title": "SRS0320PP",
     "description": "Opaska rurowa lekka TW3 20,0 PP",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "SRS0321.3PP",
@@ -63297,7 +63337,7 @@
   {
     "title": "SRS0428PP",
     "description": "Opaska rurowa lekka TW4 28,0 PP",
-    "amount": "0"
+    "amount": "22"
   },
   {
     "title": "SRS0428VG",
@@ -63797,7 +63837,7 @@
   {
     "title": "SRSAF3",
     "description": "Śruba montażowa lekka TW3",
-    "amount": "0"
+    "amount": "8"
   },
   {
     "title": "SRSAF4",
@@ -63922,17 +63962,17 @@
   {
     "title": "SRSASDP2",
     "description": "Śrubazłbemsześcio opaska rurowa leka TW2",
-    "amount": "0"
+    "amount": "18"
   },
   {
     "title": "SRSASDP3",
     "description": "Śrubazłbemsześcio opaska rurowa leka TW3",
-    "amount": "0"
+    "amount": "40"
   },
   {
     "title": "SRSASDP4",
     "description": "Śrubazłbemsześcio opaska rurowa leka TW4",
-    "amount": "0"
+    "amount": "44"
   },
   {
     "title": "SRSASDP5",
@@ -63997,7 +64037,7 @@
   {
     "title": "SRSDP3",
     "description": "Płyta mask do opaski jednorur lekka TW3",
-    "amount": "0"
+    "amount": "29"
   },
   {
     "title": "SRSDP30",
@@ -64017,7 +64057,7 @@
   {
     "title": "SRSDP4",
     "description": "Płyta mask do opaski jednorur lekka TW4",
-    "amount": "0"
+    "amount": "22"
   },
   {
     "title": "SRSDP40",
@@ -64182,7 +64222,7 @@
   {
     "title": "SRSSM",
     "description": "Nakrętka szyny nośnej lekka TW0-6",
-    "amount": "7"
+    "amount": "0"
   },
   {
     "title": "SRSSM30-50V4",
@@ -64277,7 +64317,7 @@
   {
     "title": "SRSSP4",
     "description": "Płytka do przyspawania krót lekka TW4",
-    "amount": "0"
+    "amount": "22"
   },
   {
     "title": "SRSSP40",
@@ -65597,7 +65637,7 @@
   {
     "title": "TAB06HB",
     "description": "Adaptery T DKR3/8\" AGR3/8\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "TAB08",
@@ -65607,7 +65647,7 @@
   {
     "title": "TAB08HB",
     "description": "Adaptery T DKR1/2\" AGR1/2\"",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "TAB10",
@@ -66682,12 +66722,12 @@
   {
     "title": "TIR06",
     "description": "Adaptery T IGR3/8\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "TIR08",
     "description": "Adaptery T IGR1/2\"",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "TIR12",
@@ -68397,7 +68437,7 @@
   {
     "title": "UEMNW10L",
     "description": "Nakrętka kołpakowa L12 M18x1,5",
-    "amount": "69"
+    "amount": "58"
   },
   {
     "title": "UEMNW10LB",
@@ -68437,7 +68477,7 @@
   {
     "title": "UEMNW13L",
     "description": "Nakrętka kołpakowa L15 M22x1,5",
-    "amount": "32"
+    "amount": "26"
   },
   {
     "title": "UEMNW13LB",
@@ -68482,7 +68522,7 @@
   {
     "title": "UEMNW16L",
     "description": "Nakrętka kołpakowa L18 M26x1,5",
-    "amount": "10"
+    "amount": "5"
   },
   {
     "title": "UEMNW16L27",
@@ -68502,7 +68542,7 @@
   {
     "title": "UEMNW16S",
     "description": "Nakrętka kołpakowa S20 M30x2",
-    "amount": "11"
+    "amount": "49"
   },
   {
     "title": "UEMNW16SB",
@@ -68532,7 +68572,7 @@
   {
     "title": "UEMNW20L",
     "description": "Nakrętka kołpakowa L22 M30x2",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "UEMNW20LD24",
@@ -69922,12 +69962,17 @@
   {
     "title": "VERSCHLUSSO08",
     "description": "Króciec zamykający AGUNF3/4\"-OR",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "VERSCHLUSSO08IS",
     "description": "Króciec zamykający ISK AGUNF3/4\"-OR",
     "amount": "0"
+  },
+  {
+    "title": "VERSCHLUSSO10",
+    "description": "Króciec zamykający AGUNF7/8\"-OR",
+    "amount": "1"
   },
   {
     "title": "VERSCHLUSSO10IS",
@@ -70197,7 +70242,7 @@
   {
     "title": "VHR90-1/2ED",
     "description": "Śruba zamykająca ISK AGR1/2\"-WD",
-    "amount": "61"
+    "amount": "62"
   },
   {
     "title": "VHR90-1/2EDVA",
@@ -70237,7 +70282,7 @@
   {
     "title": "VHR90-1ED",
     "description": "Śruba zamykająca ISK AGR1\"-WD",
-    "amount": "0"
+    "amount": "10"
   },
   {
     "title": "VHR90-1EDVA",
@@ -70252,7 +70297,7 @@
   {
     "title": "VHR90-3/4ED",
     "description": "Śruba zamykająca ISK AGR3/4\"-WD",
-    "amount": "22"
+    "amount": "43"
   },
   {
     "title": "VHR90-3/4EDV",
@@ -70272,7 +70317,7 @@
   {
     "title": "VHR90-3/8ED",
     "description": "Śruba zamykająca ISK AGR3/8\"-WD",
-    "amount": "47"
+    "amount": "7"
   },
   {
     "title": "VHR90-3/8EDVA",
@@ -70327,7 +70372,7 @@
   {
     "title": "VLMNW10",
     "description": "Nakrętka zamykająca DKOL12",
-    "amount": "13"
+    "amount": "1"
   },
   {
     "title": "VLMNW13",
@@ -70337,7 +70382,7 @@
   {
     "title": "VLMNW16",
     "description": "Nakrętka zamykająca DKOL18",
-    "amount": "5"
+    "amount": "2"
   },
   {
     "title": "VLMNW20",
@@ -72067,7 +72112,7 @@
   {
     "title": "W90AB06HB",
     "description": "Adaptery 90° DKR3/8\" AGR3/8\"",
-    "amount": "11"
+    "amount": "12"
   },
   {
     "title": "W90AB06HJ",
@@ -72082,7 +72127,7 @@
   {
     "title": "W90AB08HB",
     "description": "Adaptery 90° DKR1/2\" AGR1/2\"",
-    "amount": "3"
+    "amount": "4"
   },
   {
     "title": "W90AB10",
@@ -72102,7 +72147,7 @@
   {
     "title": "W90AB12HB",
     "description": "Adaptery 90° DKR3/4\" AGR3/4\"",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "W90AB12HBVA",
@@ -73267,7 +73312,7 @@
   {
     "title": "W90IR06",
     "description": "Adaptery 90° IGR3/8\"",
-    "amount": "3"
+    "amount": "0"
   },
   {
     "title": "W90IR08",
@@ -73717,12 +73762,7 @@
   {
     "title": "WDA112",
     "description": "Kołnierz pompy 3otw. KO30 IGR1/2\" 90° AL",
-    "amount": "0"
-  },
-  {
-    "title": "WDA112",
-    "description": "Kołnierz pompy 3otw. KO30 IGR1/2\" 90° AL",
-    "amount": "8"
+    "amount": "4"
   },
   {
     "title": "WDA138",
@@ -73732,7 +73772,7 @@
   {
     "title": "WDA234",
     "description": "Kołnierz pompy 3otw. KO40 IGR3/4\" 90° AL",
-    "amount": "6"
+    "amount": "8"
   },
   {
     "title": "WDA3100",
@@ -73742,7 +73782,7 @@
   {
     "title": "WDA334",
     "description": "Kołnierz pompy 3otw. KO51 IGR3/4\" 90° AL",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "title": "WDR1/2",
@@ -73777,7 +73817,7 @@
   {
     "title": "WDS112",
     "description": "Kołnierz pompy 3otwor KO30 IGR1/2\" 90°",
-    "amount": "7"
+    "amount": "17"
   },
   {
     "title": "WDS138",
@@ -73897,7 +73937,7 @@
   {
     "title": "WF35LKL15250",
     "description": "Kołnierz pompy 4otwor KO35 CEL15 90°",
-    "amount": "4"
+    "amount": "3"
   },
   {
     "title": "WF35LKL18250",
@@ -73907,7 +73947,7 @@
   {
     "title": "WF35LKS16315",
     "description": "Kołnierz pompy 4otwor KO35 CES16 90°",
-    "amount": "6"
+    "amount": "16"
   },
   {
     "title": "WF35LKS20315",
@@ -73932,12 +73972,12 @@
   {
     "title": "WF40LKL22100",
     "description": "Kołnierz pompy 4otwor KO40 CEL22 90°",
-    "amount": "4"
+    "amount": "8"
   },
   {
     "title": "WF40LKL28100",
     "description": "Kołnierz pompy 4otwor KO40 CEL28 90°",
-    "amount": "3"
+    "amount": "8"
   },
   {
     "title": "WF40LKL35100",
@@ -74267,7 +74307,7 @@
   {
     "title": "WRM-P18",
     "description": "Zgarniacz WRM-P 18x24,6x3,8 PUR",
-    "amount": "6"
+    "amount": "2"
   },
   {
     "title": "WRM-P180",
@@ -74892,7 +74932,7 @@
   {
     "title": "X-CODESET",
     "description": "Zestaw do kodowania węży",
-    "amount": "25"
+    "amount": "36"
   },
   {
     "title": "XAHNW04S03",
@@ -75642,7 +75682,7 @@
   {
     "title": "XAOHNW13L06",
     "description": "Króciec dwuzłączki DKOL15 CEL08",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XAOHNW13L06VA",
@@ -76607,7 +76647,7 @@
   {
     "title": "XEWORNW25HL",
     "description": "Króciec wkręcany 90° AGR1\"-OR CEL28",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XEWORNW25HS",
@@ -76987,7 +77027,7 @@
   {
     "title": "XHFMTHL10",
     "description": "Króciec przy. pomiarowy T M16x2 CEL12",
-    "amount": "61"
+    "amount": "47"
   },
   {
     "title": "XHFMTHL10S",
@@ -78772,7 +78812,7 @@
   {
     "title": "XSVNW10HL",
     "description": "Króciec dwuzłączki przegrodowej CEL12",
-    "amount": "6"
+    "amount": "10"
   },
   {
     "title": "XSVNW10HLVA",
@@ -78787,7 +78827,7 @@
   {
     "title": "XSVNW13HL",
     "description": "Króciec dwuzłączki przegrodowej CEL15",
-    "amount": "1"
+    "amount": "9"
   },
   {
     "title": "XSVNW13HLV",
@@ -78882,7 +78922,7 @@
   {
     "title": "XSVRNW06HLED",
     "description": "Króciecwkręcanyprzegrod AGR1/4\"-WD CEL08",
-    "amount": "2"
+    "amount": "10"
   },
   {
     "title": "XSVRNW08HLED",
@@ -78912,7 +78952,7 @@
   {
     "title": "XSVRNW13HLED",
     "description": "Króciecwkręcanyprzegrod AGR1/2\"-WD CEL15",
-    "amount": "0"
+    "amount": "9"
   },
   {
     "title": "XSVRNW13HS3/4ED",
@@ -78932,7 +78972,7 @@
   {
     "title": "XSVRNW16HL3/4ED",
     "description": "Króciecwkręcanyprzegrod AGR3/4\"-WD CEL18",
-    "amount": "5"
+    "amount": "22"
   },
   {
     "title": "XSVRNW16HLED",
@@ -79032,7 +79072,7 @@
   {
     "title": "XSWNW13HL",
     "description": "Króciec dwuzłączki przegr. 90° CEL15",
-    "amount": "3"
+    "amount": "6"
   },
   {
     "title": "XSWNW13HLVA",
@@ -79247,7 +79287,7 @@
   {
     "title": "XTNW10HL",
     "description": "Króciec dwuzłączki T CEL12",
-    "amount": "0"
+    "amount": "5"
   },
   {
     "title": "XTNW10HLVA",
@@ -79262,7 +79302,7 @@
   {
     "title": "XTNW13HL",
     "description": "Króciec dwuzłączki T CEL15",
-    "amount": "2"
+    "amount": "6"
   },
   {
     "title": "XTNW13HLVA",
@@ -79302,7 +79342,7 @@
   {
     "title": "XTNW20HL",
     "description": "Króciec dwuzłączki T CEL22",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "title": "XTNW20HLVA",
@@ -79602,7 +79642,7 @@
   {
     "title": "XVELONW10HL",
     "description": "Króciec dwuzłączki L DKOL12 CEL12",
-    "amount": "188"
+    "amount": "150"
   },
   {
     "title": "XVELONW10HLVA",
@@ -79617,7 +79657,7 @@
   {
     "title": "XVELONW13HL",
     "description": "Króciec dwuzłączki L DKOL15 CEL15",
-    "amount": "2"
+    "amount": "8"
   },
   {
     "title": "XVELONW13HLVA",
@@ -79667,7 +79707,7 @@
   {
     "title": "XVELONW25HL",
     "description": "Króciec dwuzłączki L DKOL28 CEL28",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVELONW25HLVA",
@@ -79867,7 +79907,7 @@
   {
     "title": "XVETONW10HL",
     "description": "Króciec dwuzłączki T DKOL12 CEL12",
-    "amount": "61"
+    "amount": "40"
   },
   {
     "title": "XVETONW10HLVA",
@@ -79882,7 +79922,7 @@
   {
     "title": "XVETONW13HL",
     "description": "Króciec dwuzłączki T DKOL15 CEL15",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVETONW13HLVA",
@@ -80197,7 +80237,7 @@
   {
     "title": "XVEWONW06HL",
     "description": "Króciec dwuzłączki 90° DKOL08 CEL08",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVEWONW06HLVA",
@@ -80227,7 +80267,7 @@
   {
     "title": "XVEWONW10HL",
     "description": "Króciec dwuzłączki 90° DKOL12 CEL12",
-    "amount": "469"
+    "amount": "373"
   },
   {
     "title": "XVEWONW10HLVA",
@@ -80242,7 +80282,7 @@
   {
     "title": "XVEWONW13HL",
     "description": "Króciec dwuzłączki 90° DKOL15 CEL15",
-    "amount": "6"
+    "amount": "32"
   },
   {
     "title": "XVEWONW13HLVA",
@@ -80262,7 +80302,7 @@
   {
     "title": "XVEWONW16HL",
     "description": "Króciec dwuzłączki 90° DKOL18 CEL18",
-    "amount": "0"
+    "amount": "29"
   },
   {
     "title": "XVEWONW16HLVA",
@@ -80272,12 +80312,12 @@
   {
     "title": "XVEWONW16HS",
     "description": "Króciec dwuzłączki 90° DKOS20 CES20",
-    "amount": "1"
+    "amount": "17"
   },
   {
     "title": "XVEWONW20HL",
     "description": "Króciec dwuzłączki 90° DKOL22 CEL22",
-    "amount": "20"
+    "amount": "16"
   },
   {
     "title": "XVEWONW20HLVA",
@@ -80892,7 +80932,7 @@
   {
     "title": "XVMNW13HL22ED",
     "description": "Króciec wkręcany AGM22x1,5-WD CEL15",
-    "amount": "1"
+    "amount": "3"
   },
   {
     "title": "XVMNW13HL22VA",
@@ -81727,7 +81767,7 @@
   {
     "title": "XVNW16HL",
     "description": "Króciec dwuzłączki CEL18",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVNW16HL04",
@@ -81847,7 +81887,7 @@
   {
     "title": "XVNW20HL13",
     "description": "Króciec dwuzłączki CEL22 CEL15",
-    "amount": "0"
+    "amount": "1"
   },
   {
     "title": "XVNW20HL16",
@@ -82187,7 +82227,7 @@
   {
     "title": "XVRNW04HL1/4ED",
     "description": "Króciec wkręcany AGR1/4\"-WD CEL06",
-    "amount": "3"
+    "amount": "0"
   },
   {
     "title": "XVRNW04HL1/4EDVA",
@@ -82297,7 +82337,7 @@
   {
     "title": "XVRNW06HLED",
     "description": "Króciec wkręcany AGR1/4\"-WD CEL08",
-    "amount": "1"
+    "amount": "28"
   },
   {
     "title": "XVRNW06HLEDVA",
@@ -82472,7 +82512,7 @@
   {
     "title": "XVRNW10HL1/2ED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL12",
-    "amount": "11"
+    "amount": "26"
   },
   {
     "title": "XVRNW10HL1/2EDVA",
@@ -82487,7 +82527,7 @@
   {
     "title": "XVRNW10HL1/4ED",
     "description": "Króciec wkręcany AGR1/4\"-WD CEL12",
-    "amount": "58"
+    "amount": "46"
   },
   {
     "title": "XVRNW10HL1/4EDVA",
@@ -82507,12 +82547,12 @@
   {
     "title": "XVRNW10HL3/4",
     "description": "Króciec wkręcany AGR3/4\" CEL12",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVRNW10HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL12",
-    "amount": "2"
+    "amount": "7"
   },
   {
     "title": "XVRNW10HL3/4EDVA",
@@ -82527,7 +82567,7 @@
   {
     "title": "XVRNW10HLED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL12",
-    "amount": "567"
+    "amount": "457"
   },
   {
     "title": "XVRNW10HLEDVA",
@@ -82577,7 +82617,7 @@
   {
     "title": "XVRNW13HL1",
     "description": "Króciec wkręcany AGR1\" CEL15",
-    "amount": "1"
+    "amount": "7"
   },
   {
     "title": "XVRNW13HL1/4",
@@ -82597,7 +82637,7 @@
   {
     "title": "XVRNW13HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL15",
-    "amount": "5"
+    "amount": "26"
   },
   {
     "title": "XVRNW13HL3/4EDVA",
@@ -82612,12 +82652,12 @@
   {
     "title": "XVRNW13HL3/8ED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL15",
-    "amount": "3"
+    "amount": "20"
   },
   {
     "title": "XVRNW13HLED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL15",
-    "amount": "16"
+    "amount": "33"
   },
   {
     "title": "XVRNW13HLEDVA",
@@ -82640,6 +82680,11 @@
     "amount": "0"
   },
   {
+    "title": "XVRNW13HS1ED",
+    "description": "Connector M/M AGR1\"-WD CES16",
+    "amount": "0"
+  },
+  {
     "title": "XVRNW13HS3/4",
     "description": "Króciec wkręcany AGR3/4\" CES16",
     "amount": "0"
@@ -82647,7 +82692,7 @@
   {
     "title": "XVRNW13HS3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CES16",
-    "amount": "6"
+    "amount": "16"
   },
   {
     "title": "XVRNW13HS3/8",
@@ -82662,7 +82707,7 @@
   {
     "title": "XVRNW13HSED",
     "description": "Króciec wkręcany AGR1/2\"-WD CES16",
-    "amount": "1"
+    "amount": "0"
   },
   {
     "title": "XVRNW13HSVA",
@@ -82677,7 +82722,7 @@
   {
     "title": "XVRNW16HL1",
     "description": "Króciec wkręcany AGR1\" CEL18",
-    "amount": "2"
+    "amount": "18"
   },
   {
     "title": "XVRNW16HL1EDV",
@@ -82702,7 +82747,7 @@
   {
     "title": "XVRNW16HL3/4ED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL18",
-    "amount": "11"
+    "amount": "13"
   },
   {
     "title": "XVRNW16HL3/4EDVA",
@@ -82722,12 +82767,12 @@
   {
     "title": "XVRNW16HL3/8ED",
     "description": "Króciec wkręcany AGR3/8\"-WD CEL18",
-    "amount": "2"
+    "amount": "8"
   },
   {
     "title": "XVRNW16HLED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL18",
-    "amount": "10"
+    "amount": "13"
   },
   {
     "title": "XVRNW16HLEDVA",
@@ -82767,12 +82812,12 @@
   {
     "title": "XVRNW16HS1ED",
     "description": "Króciec wkręcany AGR1\"-WD CES20",
-    "amount": "5"
+    "amount": "7"
   },
   {
     "title": "XVRNW16HSED",
     "description": "Króciec wkręcany AGR3/4\"-WD CES20",
-    "amount": "20"
+    "amount": "32"
   },
   {
     "title": "XVRNW16HSEDVA",
@@ -82797,7 +82842,7 @@
   {
     "title": "XVRNW20HL1/2ED",
     "description": "Króciec wkręcany AGR1/2\"-WD CEL22",
-    "amount": "0"
+    "amount": "2"
   },
   {
     "title": "XVRNW20HL1/2EDVA",
@@ -82807,7 +82852,7 @@
   {
     "title": "XVRNW20HL1ED",
     "description": "Króciec wkręcany AGR1\"-WD CEL22",
-    "amount": "5"
+    "amount": "16"
   },
   {
     "title": "XVRNW20HL1EDVA",
@@ -82822,7 +82867,7 @@
   {
     "title": "XVRNW20HLED",
     "description": "Króciec wkręcany AGR3/4\"-WD CEL22",
-    "amount": "12"
+    "amount": "6"
   },
   {
     "title": "XVRNW20HLEDVA",
@@ -82922,7 +82967,7 @@
   {
     "title": "XVRNW25HLED",
     "description": "Króciec wkręcany AGR1\"-WD CEL28",
-    "amount": "1"
+    "amount": "4"
   },
   {
     "title": "XVRNW25HLEDVA",
@@ -83617,7 +83662,7 @@
   {
     "title": "XWNW10HL",
     "description": "Króciec dwuzłączki 90° CEL12",
-    "amount": "0"
+    "amount": "6"
   },
   {
     "title": "XWNW10HLVA",
@@ -83632,7 +83677,7 @@
   {
     "title": "XWNW13HL",
     "description": "Króciec dwuzłączki 90° CEL15",
-    "amount": "1"
+    "amount": "6"
   },
   {
     "title": "XWNW13HLVA",
@@ -83662,7 +83707,7 @@
   {
     "title": "XWNW16HS",
     "description": "Króciec dwuzłączki 90° CES20",
-    "amount": "0"
+    "amount": "44"
   },
   {
     "title": "XWNW20HL",
@@ -83682,7 +83727,7 @@
   {
     "title": "XWNW25HL",
     "description": "Króciec dwuzłączki 90° CEL28",
-    "amount": "0"
+    "amount": "7"
   },
   {
     "title": "XWNW25HLVA",
@@ -84117,11 +84162,6 @@
   {
     "title": "ZROO42",
     "description": "Pierścień pośredni 2 o-ring L42",
-    "amount": "0"
-  },
-  {
-    "title": "ZURRGURT800ROT",
-    "description": "Pas do mocowania D=800mm cze",
     "amount": "0"
   }
 ]
