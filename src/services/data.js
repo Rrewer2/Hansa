@@ -1565,6 +1565,7 @@ export const gauge = [
   ...gaugeBottom.map((el) => ({ ...el, mount: "bottom", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
   ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "H", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
   ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "HFR", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
+  { title: "HKPN2070PN400SER", pmax: 400, thread: "G1/4″", mount: "bottom", addition: { XSVRNW06HLED: { title: "XSVRNW06HLED" } } } },
 ];
 
 const priority = [
