@@ -187,7 +187,7 @@ export default {
   descr23: ["Napięcie elektromagnesu cewki"],
   descr24: ["Wielkość zbiornika"],
   descr25: ["Chłodnica olej-powietrze"],
-  descr26: ["Podgrzewacz zbiornika"],
+  descr26: ["Grzałka oleju z zabudowanym termostatem"],
   descr27: ["Wyłącznik poziomowo-temperaturowy"],
   descr28: ["Filtr napowietrzający"],
   descr29: ["Filtr zlewowy"],
