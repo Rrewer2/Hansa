@@ -161,7 +161,7 @@ onMounted(() => {
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <Simile v-if="navPage[4]" v-bind="{ simile }" />
-    <!-- <Drawings v-if="navPage[5]" /> -->
+    <Drawings v-if="navPage[5]" />
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <LogoStart class="logo" />
