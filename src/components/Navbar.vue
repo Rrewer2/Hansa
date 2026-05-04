@@ -9,7 +9,7 @@ const navData = [
   "partsSelection",
   "offer",
   "similarity",
-  // , "draw"
+  "draw",
 ];
 const { navPage, meta, save, load } = defineProps(["navPage", "meta", "save", "load"]);
 </script>
