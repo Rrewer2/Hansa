@@ -20,7 +20,7 @@ const pret = ({ HKSH: { d, L }, i, k }) => {
   };
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4IH", "42CRMO4UH"].map((el) => ({
     title: "K-" + d + "CR-" + el,
-    length: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
+    n: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
   }));
 };
 const rura = ({ HKSH: { D, L }, i, k }) => {
@@ -28,7 +28,7 @@ const rura = ({ HKSH: { D, L }, i, k }) => {
     const a = order[`${item}${i + 1} ${k + 1}`];
     return a?.[`${item}${i + 1} ${k + 1}Data`] || 0;
   };
-  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ...el, length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
+  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ...el, n: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
 };
 </script>
 
