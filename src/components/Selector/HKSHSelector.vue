@@ -10,7 +10,7 @@ const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d)
 const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
 const filteredWapr = (d) => wapr.filter(({ d: dd }) => +dd >= d);
-const filteredUcho = (d) => ucho.filter(({ B }) => +B >= d);
+const filteredUcho = (d) => ucho.filter(({ d1 }) => +d1 > D && +d1 < D*1.2);
 const filteredNaba = () => naba;
 const MW = 10;
 const pret = ({ HKSH: { d, L }, i, k }) => {
