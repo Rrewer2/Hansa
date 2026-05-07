@@ -2438,5 +2438,5 @@ export const prets = [
 {"title":" K-76.2H8-88.9"},
 {"title":" K-82.55H8-101.6"},
 {"title":" K-88.9H8-107.95"},
-].map(({ title }) => ({ title, DH8: title.match(/K-([\d.]+)H8/)?.[0], D1: title.match(/K-([\d.]+)H8-([\d.]+)/)?.[1] }));
+].map(({ title }) => ({ title, DH8: +title.match(/K-([\d.]+)H8/)?.[0].slice(2, -2), D1: +title.match(/K-([\d.]+)H8-([\d.]+)/)?.[1] }));
 console.log(prets);
