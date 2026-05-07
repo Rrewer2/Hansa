@@ -2439,4 +2439,3 @@ export const prets = [
 {"title":" K-82.55H8-101.6"},
 {"title":" K-88.9H8-107.95"},
 ].map(({ title }) => ({ title, DH8: +title.match(/K-([\d.]+)H8/)?.[0].slice(2, -2), D1: +title.match(/H8-([\d.]+)/)?.[1] }));
-console.log(wapr.map(el => ({...el, M: el.F.match(/[\d.]+/)?.[0]})));
