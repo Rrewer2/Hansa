@@ -9,7 +9,7 @@ const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d);
 const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
-const filteredWapr = (d) => wapr.filter(({ d: dd }) => +dd >= d);
+const filteredWapr = (D) => wapr.filter(({ F }) => +F.match(/M([\d.]+)x/)?.[0] < D && +F.match(/M([\d.]+)x/)?.[0] > 0.75*D);
 const filteredUcho = (D) => ucho.filter(({ d1 }) => +d1 > D && +d1 < D*1.2);
 const filteredNaba = () => naba;
 const MW = 10;
@@ -40,7 +40,7 @@ const rura = ({ HKSH: { D, L }, i, k }) => {
       <SmthSelector v-bind="{ meta, order }" :Name="`dlaw${i + 1} ${k + 1}`" index="" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
       <SmthSelector v-bind="{ meta, order }" :Name="`tlok${i + 1} ${k + 1}`" index="" :logic="() => filteredTlok(HKSH.D)" />
       <SmthSelector v-bind="{ meta, order }" :Name="`dno${i + 1} ${k + 1}`" index="" :logic="() => filteredDno(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`wapr${i + 1} ${k + 1}`" index="" :logic="() => filteredWapr(HKSH.d)" />
+      <SmthSelector v-bind="{ meta, order }" :Name="`wapr${i + 1} ${k + 1}`" index="" :logic="() => filteredWapr(HKSH.D)" />
       <SmthSelector v-bind="{ meta, order }" :Name="`ucho${i + 1} ${k + 1}`" index="" :logic="() => filteredUcho(HKSH.D)" />
       <SmthSelector v-bind="{ meta, order }" :Name="`naba${i + 1} ${k + 1}`" index="" :logic="() => filteredNaba()" />
       <SmthSelector v-bind="{ meta, order }" :Name="`pret${i + 1} ${k + 1}`" index="" :logic="() => pret({ HKSH, i, k })" />
