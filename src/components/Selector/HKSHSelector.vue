@@ -28,7 +28,7 @@ const rura = ({ HKSH: { D, L }, i, k }) => {
     const a = order[`${item}${i + 1} ${k + 1}`];
     return a?.[`${item}${i + 1} ${k + 1}Data`] || 0;
   };
-  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ..., length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
+  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ...el, length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
 };
 </script>
 
