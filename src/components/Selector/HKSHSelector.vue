@@ -1,5 +1,5 @@
 <script setup>
-import { dlaw, tlok, dno, ucho, wapr, naba } from "../../services/data";
+import { dlaw, tlok, dno, ucho, wapr, naba, prets } from "../../services/data";
 import { HKSHTitle, round } from "../../services/functions";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -28,10 +28,7 @@ const rura = ({ HKSH: { D, L }, i, k }) => {
     const a = order[`${item}${i + 1} ${k + 1}`];
     return a?.[`${item}${i + 1} ${k + 1}Data`] || 0;
   };
-  return ["H8"].map((el) => ({
-    title: "K-" + ("000" + D).slice(-3) + el + "-...",
-    length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1,
-  }));
+  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ..., length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
 };
 </script>
 
