@@ -104,8 +104,8 @@ Materiał cylindra:
   // решта статичних описів
 //  for (let i = 30; i <= 37; i++) arr.push(text(`descr${i}`));
 
-//  return arr;
-//});
+ return arr;
+});
 </script>
 
 <template>
