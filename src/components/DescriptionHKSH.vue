@@ -23,13 +23,13 @@ const description = computed(() => {
   arr.push(text(`() Niskie tarcie: PTFE (-25ºC do +80ºC)`));
   arr.push(text(`() Odporny na temperaturę: VITON (-20ºC do +160ºC)`));
   arr.push(text(`Materiał tłoczyska:`));
-  arr.push(text(`(${order?.pret0?.material === "CK45" ? "x" : ""}) Prosty: Ck45`));
-  arr.push(text(`(${order?.pret0?.material === "CK45IH" ? "x" : ""}) Prosty hartowany: Ck45 IH`));
-  arr.push(text(`(${order?.pret0?.material === "20MNV6" ? "x" : ""}) Standardowy: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.material === "CR2" ? "x" : ""}) Podwójny chrom: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.material === "AISI304" ? "x" : ""}) Stal nierdzewna: AISI 304`));
-  arr.push(text(`(${order?.pret0?.material === "42CRMO4" ? "x" : ""}) Ulepszony: 42CrMo4 U`));
-  arr.push(text(`(${order?.pret0?.material === "42CRMO4UH" ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "CK45" ? "x" : ""}) Prosty: Ck45`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "CK45IH" ? "x" : ""}) Prosty hartowany: Ck45 IH`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "20MNV6" ? "x" : ""}) Standardowy: 20MnV6`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "CR2" ? "x" : ""}) Podwójny chrom: 20MnV6`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "AISI304" ? "x" : ""}) Stal nierdzewna: AISI 304`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4" ? "x" : ""}) Ulepszony: 42CrMo4 U`));
+  arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4UH" ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
   arr.push(text(`Materiał cylindra:`));
   arr.push(text(`(${order?.rura0?.title?.includes("H8") ? "x" : ""}) Standardowy H8: St 52.3`));
   arr.push(text(`(${order?.rura0?.title?.includes("H9") ? "x" : ""}) Standardowy H9: St 52.3`));
@@ -81,7 +81,7 @@ const description = computed(() => {
   //}
 
   //if (order.tank?.tankData?.Size) {
-   // arr.push(`${text("descr24")} ${order.tank?.tankData?.Size} L (${order.tank?.tankData?.material ?? ""})`);
+   // arr.push(`${text("descr24")} ${order.tank?.tankData?.Size} L (${order.tank?.tankData?.pretData?.material ?? ""})`);
   //}
 
  // if (order.cooler?.title) arr.push(text("descr25"));
