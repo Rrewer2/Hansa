@@ -43,7 +43,6 @@ const rura = ({ HKSH: { D, L }, i }) => {
     <OrderHKSH v-bind="{ orderHKSH, i }" />
     <!-- <DescriptionHKSH v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" /> -->
   </div>
-  {{ orderHKSH }}
 </template>
 
 <style scoped></style>

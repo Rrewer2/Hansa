@@ -71,7 +71,7 @@ const netto = () => {
 </script>
 
 <template>
-  <!-- <div class="flex flex-row flex-center items-start">
+  <div class="flex flex-row flex-center items-start">
     <Table v-if="!magic" :keys="['Nr', 'title', 'count', 'JM', 'Description']" :data="normalize" />
   </div>
 
@@ -90,7 +90,7 @@ const netto = () => {
         )
       }}
     </h2>
-  </div> -->
+  </div>
 </template>
 <style scoped>
 .tar {
