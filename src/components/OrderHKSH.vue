@@ -10,7 +10,7 @@ const cracked = ref({});
 
 const normalize = () => {
   const KIT = {
-    KIT: { title: "KIT", count: 1, JM: "szt", opis: " Siownik" },
+    KIT: { title: "KIT", count: 1, JM: "szt", opis: " Siłownik" },
     fracht: { title: "T-FRA", count: 1, JM: "szt", opis: "Fracht" },
   };
   Object.keys(orderHKSH[i]).forEach((key) => {
