@@ -11,7 +11,7 @@ const description = computed(() => {
   arr.push(text(`Średnica tłoka: ${HKSH.D} [mm]`));
   arr.push(text(`Średnica tłoczyska: ${HKSH.d} [mm]`));
   arr.push(text(`Skok: ${HKSH.L} [mm]`));
-  arr.push(text(`Przyłącza olejowe: ${order?.naba0?.nabaData?.F}`));
+  arr.push(text(`Przyłącza olejowe: ${order?.naba0?.nabaData?.F || "-"}`));
   arr.push(text(`Mocowanie od strony tłoczyska: ${HKSH.mountB}`));
   arr.push(text(`Mocowanie od strony denka: ${HKSH.mountB}`));
   arr.push(text(`Ciśnienie robocze: 200 [bar]`));
@@ -23,17 +23,17 @@ const description = computed(() => {
   arr.push(text(`() Niskie tarcie: PTFE (-25ºC do +80ºC)`));
   arr.push(text(`() Odporny na temperaturę: VITON (-20ºC do +160ºC)`));
   arr.push(text(`Materiał tłoczyska:`));
-  arr.push(text(`(${order?.pret0?.title?.includes("CK45") && "x"}) Prosty: Ck45`));
-  arr.push(text(`(${order?.pret0?.title?.includes("CK45IH") && "x"}) Prosty hartowany: Ck45 IH`));
-  arr.push(text(`(${order?.pret0?.title?.includes("20MNV6") && "x"}) Standardowy: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.title?.includes("CR2") && "x"}) Podwójny chrom: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.title?.includes("AISI") && "x"}) Stal nierdzewna: AISI 304`));
-  arr.push(text(`(${order?.pret0?.title?.includes("42CRMO4") && "x"}) Ulepszony: 42CrMo4 U`));
-  arr.push(text(`(${order?.pret0?.title?.includes("42CRMO4UH") && "x"}) Ulepszony hartowany: 42CrMo4 UH`));
+  arr.push(text(`(${order?.pret0?.title?.includes("CK45") ? "x" : ""}) Prosty: Ck45`));
+  arr.push(text(`(${order?.pret0?.title?.includes("CK45IH") ? "x" : ""}) Prosty hartowany: Ck45 IH`));
+  arr.push(text(`(${order?.pret0?.title?.includes("20MNV6") ? "x" : ""}) Standardowy: 20MnV6`));
+  arr.push(text(`(${order?.pret0?.title?.includes("CR2") ? "x" : ""}) Podwójny chrom: 20MnV6`));
+  arr.push(text(`(${order?.pret0?.title?.includes("AISI") ? "x" : ""}) Stal nierdzewna: AISI 304`));
+  arr.push(text(`(${order?.pret0?.title?.includes("42CRMO4") ? "x" : ""}) Ulepszony: 42CrMo4 U`));
+  arr.push(text(`(${order?.pret0?.title?.includes("42CRMO4UH") ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
   arr.push(text(`Materiał cylindra:`));
-  arr.push(text(`(${order?.rura0?.title?.includes("H8") && "x"}) Standardowy H8: St 52.3`));
-  arr.push(text(`(${order?.rura0?.title?.includes("H9") && "x"}) Standardowy H9: St 52.3`));
-  arr.push(text(`(${order?.rura0?.title?.includes("AISI") && "x"}) Stal nierdzewna H8: AISI 304`));
+  arr.push(text(`(${order?.rura0?.title?.includes("H8") ? "x" : ""}) Standardowy H8: St 52.3`));
+  arr.push(text(`(${order?.rura0?.title?.includes("H9") ? "x" : ""}) Standardowy H9: St 52.3`));
+  arr.push(text(`(${order?.rura0?.title?.includes("AISI") ? "x" : ""}) Stal nierdzewna H8: AISI 304`));
   
   //arr.push(text("descr1"));
 
