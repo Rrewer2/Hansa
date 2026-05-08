@@ -113,6 +113,7 @@ Materiał cylindra:
     Copy text<CopyText :text="description.join('\n')" />
     <h5 v-for="(item, i) in description" :key="i">{{ item }}</h5>
   </article>
+  {{ order }}
 </template>
 
 <style scoped>
