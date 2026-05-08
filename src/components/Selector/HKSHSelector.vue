@@ -41,7 +41,7 @@ const rura = ({ HKSH: { D, L }, i }) => {
   <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
   <div class="right mx-auto">
     <OrderHKSH v-bind="{ orderHKSH, i }" />
-    <!-- <DescriptionHKSH v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" /> -->
+    <DescriptionHKSH v-bind="{ order: orderHKSH[i], project }" />
   </div>
 </template>
 
