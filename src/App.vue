@@ -7,6 +7,7 @@ import Title from "./components/Title.vue";
 import Scheme from "./components/Scheme.vue";
 import Order from "./components/Order.vue";
 import Selector from "./components/Selector.vue";
+import HKSH from "./components/HKSH.vue";
 import PumpUnitTitle from "./components/PumpUnitTitle.vue";
 import Simile from "./components/Simile.vue";
 import { text } from "./services/text";
@@ -83,6 +84,7 @@ const meta = ref({
 });
 provide("meta", meta);
 const order = ref({});
+const orderHKSH = ref({});
 const getNewPowerUnit = () =>
   project.value.push({
     id: getId("u"),
@@ -108,13 +110,13 @@ const addPumpSame = (k) =>
   });
 const delPump = (k, x) => (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
 const delUnit = (k) => (project.value = project.value.filter((_, i) => i !== k));
-const navPage = ref([true, false, false, false, false]);
+const navPage = ref([true, false, false, false, false, false]);
 
 const showBox = ref(true);
 onMounted(() => {
   setTimeout(() => {
     showBox.value = false;
-  }, 1500);
+  }, 1);
 });
 </script>
 
@@ -160,8 +162,8 @@ onMounted(() => {
     <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
-    <Simile v-if="navPage[4]" v-bind="{ simile }" />
-    <Drawings v-if="navPage[5]" />
+    <HKSH v-if="navPage[4]" v-bind="{ project, orderHKSH, meta }" />
+    <Simile v-if="navPage[5]" v-bind="{ simile }" />
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />
   <LogoStart class="logo" />

@@ -4,49 +4,46 @@ import { HKSHTitle, round } from "../../services/functions";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
+import OrderHKSH from "../OrderHKSH.vue";
+import DescriptionHKSH from "../DescriptionHKSH.vue";
 
-const { project, meta, order } = defineProps(["project", "meta", "order"]);
+const { HKSH, i, meta, orderHKSH } = defineProps(["HKSH", "i", "meta", "orderHKSH"]);
 const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d);
 const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
-const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75*d);
-const filteredUcho = (D) => ucho.filter(({ d1 }) => +d1 > D && +d1 < D*1.2);
+const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75 * d);
+const filteredUcho = (D) => ucho.filter(({ d1 }) => +d1 > D && +d1 < D * 1.2);
 const filteredNaba = () => naba;
 const MW = 10;
-const pret = ({ HKSH: { d, L }, i, k }) => {
-  const getOrder = (item) => {
-    const a = order[`${item}${i + 1} ${k + 1}`];
-    return a?.[`${item}${i + 1} ${k + 1}Data`] || 0;
-  };
+const getOrder = (item) => orderHKSH[i]?.[item]?.[`${item}Data`] || 0;
+const pret = ({ HKSH: { d, L }, i }) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4IH", "42CRMO4UH"].map((el) => ({
     title: "K-" + d + "CR-" + el,
-    n: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
+    length: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
   }));
 };
-const rura = ({ HKSH: { D, L }, i, k }) => {
-  const getOrder = (item) => {
-    const a = order[`${item}${i + 1} ${k + 1}`];
-    return a?.[`${item}${i + 1} ${k + 1}Data`] || 0;
-  };
-  return prets.filter(({ DH8 }) => DH8 === D).map((el) => ({ ...el, n: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1, }));
+const rura = ({ HKSH: { D, L }, i }) => {
+  return prets
+    .filter(({ DH8 }) => DH8 === D)
+    .map((el) => ({ ...el, length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1 }));
 };
 </script>
 
 <template>
-  <div v-for="(unit, i) in project[0].unit">
-    <div v-for="(HKSH, k) in unit.HKSH">
-      <h2>{{ HKSHTitle(HKSH) }}</h2>
-      /{{ i + 1 }}-{{ k + 1 }}
-      <SmthSelector v-bind="{ meta, order }" :Name="`dlaw${i + 1} ${k + 1}`" index="" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`tlok${i + 1} ${k + 1}`" index="" :logic="() => filteredTlok(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`dno${i + 1} ${k + 1}`" index="" :logic="() => filteredDno(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`wapr${i + 1} ${k + 1}`" index="" :logic="() => filteredWapr(HKSH.d)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`ucho${i + 1} ${k + 1}`" index="" :logic="() => filteredUcho(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`naba${i + 1} ${k + 1}`" index="" :logic="() => filteredNaba()" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`pret${i + 1} ${k + 1}`" index="" :logic="() => pret({ HKSH, i, k })" />
-      <SmthSelector v-bind="{ meta, order }" :Name="`rura${i + 1} ${k + 1}`" index="" :logic="() => rura({ HKSH, i, k })" />
-    </div>
+  <h2>{{ HKSHTitle(HKSH) }}</h2>
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`wapr`" :index="i" :logic="() => filteredWapr(HKSH.d)" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`ucho`" :index="i" :logic="() => filteredUcho(HKSH.D)" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`naba`" :index="i" :logic="() => filteredNaba()" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`pret`" :index="i" :logic="() => pret({ HKSH, i, k })" />
+  <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
+  <div class="right mx-auto">
+    <OrderHKSH v-bind="{ orderHKSH, i }" />
+    <!-- <DescriptionHKSH v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" /> -->
   </div>
+  {{ orderHKSH }}
 </template>
 
 <style scoped></style>

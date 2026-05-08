@@ -19,7 +19,7 @@ import Title from "./Title.vue";
 import Description from "./Description.vue";
 import NonCETOPValveSelector from "./Selector/NonCETOPValveSelector.vue";
 import DBDSelector from "./Selector/DBDSelector.vue";
-import HKSHSelector from "./Selector/HKSHSelector.vue";
+// import HKSHSelector from "./Selector/HKSHSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
@@ -42,7 +42,7 @@ const otherComponents = [
   CoolerSelector,
   ExtraSelector,
   OldValveSelector,
-  HKSHSelector,
+  // HKSHSelector,
 ];
 const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
