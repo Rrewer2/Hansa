@@ -17,8 +17,9 @@ const filteredNaba = () => naba;
 const MW = 10;
 const getOrder = (item) => orderHKSH[i]?.[item]?.[`${item}Data`] || 0;
 const pret = ({ HKSH: { d, L }, i }) => {
-  return ["20MNV6", "CK45", "CK45IH", "42CRMO4IH", "42CRMO4UH"].map((el) => ({
+  return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4IH", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
+    material: el,
     length: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
   }));
 };
