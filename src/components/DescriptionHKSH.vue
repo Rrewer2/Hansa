@@ -3,39 +3,36 @@ import { computed } from "vue";
 import { text } from "../services/text";
 import CopyText from "./Selector/CopyText.vue";
 
-const { project, order } = defineProps(["project", "order"]);
+const { project, order, HKSH } = defineProps(["project", "order", "HKSH"]);
 
 const description = computed(() => {
   const arr = [];
-
-  arr.push(
-    text(`Siłownik dwustronnego działania:
-Średnica tłoka: 40 [mm]
-Średnica tłoczyska: 25 [mm]
-Skok: 85 [mm]
-Przyłącza olejowe: G3/8"
-Mocowanie od strony tłoczyska: głowica widlasta
-Mocowanie od strony denka: kołnierz
-Ciśnienie robocze: 200 [bar]
-Tłumienie: bez tłumienia
-Olej hydrauliczny: HLP/HVLP zgodnie z DIN 51524; ISO-VG 22 do 68
-Kolor farby: czarny
-Specyfikacja systemu uszczelnień:
-(x) Standardowy: PU/NBR dla HLP (-25ºC do +80ºC)
-() Niskie tarcie: PTFE (-25ºC do +80ºC)
-() Odporny na temperaturę: VITON (-20ºC do +160ºC)
-Materiał tłoczyska:
-() Prosty: Ck45
-(x) Standardowy: 20MnV6
-() Podwójny chrom: 20MnV6
-() Stal nierdzewna: AISI 304
-() Wzmocniony: 42CrMo4
-Materiał cylindra:
-(x) Standardowy H8: St 52.3
-() Standardowy H9: St 52.3
-() Stal nierdzewna H8: AISI 304`),
-  );
-
+  arr.push(text(`Siłownik dwustronnego działania:`));
+  arr.push(text(`Średnica tłoka: 40 [mm]`));
+  arr.push(text(`Średnica tłoczyska: 25 [mm]`));
+  arr.push(text(`Skok: 85 [mm]`));
+  arr.push(text(`Przyłącza olejowe: G3/8"`));
+  arr.push(text(`Mocowanie od strony tłoczyska: głowica widlasta`));
+  arr.push(text(`Mocowanie od strony denka: kołnierz`));
+  arr.push(text(`Ciśnienie robocze: 200 [bar]`));
+  arr.push(text(`Tłumienie: bez tłumienia`));
+  arr.push(text(`Olej hydrauliczny: HLP/HVLP zgodnie z DIN 51524; ISO-VG 22 do 68`));
+  arr.push(text(`Kolor farby: czarny`));
+  arr.push(text(`Specyfikacja systemu uszczelnień:`));
+  arr.push(text(`(x) Standardowy: PU/NBR dla HLP (-25ºC do +80ºC)`));
+  arr.push(text(`() Niskie tarcie: PTFE (-25ºC do +80ºC)`));
+  arr.push(text(`() Odporny na temperaturę: VITON (-20ºC do +160ºC)`));
+  arr.push(text(`Materiał tłoczyska:`));
+  arr.push(text(`() Prosty: Ck45`));
+  arr.push(text(`(x) Standardowy: 20MnV6`));
+  arr.push(text(`() Podwójny chrom: 20MnV6`));
+  arr.push(text(`() Stal nierdzewna: AISI 304`));
+  arr.push(text(`() Wzmocniony: 42CrMo4`));
+  arr.push(text(`Materiał cylindra:`));
+  arr.push(text(`(x) Standardowy H8: St 52.3`));
+  arr.push(text(`() Standardowy H9: St 52.3`));
+  arr.push(text(`() Stal nierdzewna H8: AISI 304`));
+  
   //arr.push(text("descr1"));
 
   //arr.push(
@@ -114,6 +111,7 @@ Materiał cylindra:
     <h5 v-for="(item, i) in description" :key="i">{{ item }}</h5>
   </article>
   {{ order }}
+  {{ HKSH }}
 </template>
 
 <style scoped>
