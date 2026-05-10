@@ -2355,7 +2355,7 @@ export const dno = [
   { title: "HKCF00150170", AL: "150", T: "170", S: "20", S1: "2" },
   { title: "HKCF00160180", AL: "160", T: "180", S: "20", S1: "2" },
 ];
-export const ucho = [
+export const uchoN = [
   { title: "HKCSTS016N00", B: "16", d1: "48", l: "35", L: "59.0", S1: "14", Force: "21", S: "18" },
   { title: "HKCSTS020N00", B: "20", d1: "50", l: "38", L: "63", S1: "16", Force: "30", S: "19" },
   { title: "HKCSTS025N00", B: "25", d1: "55", l: "45", L: "72.5", S1: "20", Force: "48", S: "23" },
@@ -2365,6 +2365,17 @@ export const ucho = [
   { title: "HKCSTS045N00", B: "45", d1: "110", l: "77", L: "132.0", S1: "32", Force: "127", S: "40" },
   { title: "HKCSTS050N00", B: "50", d1: "123", l: "88", L: "149.5", S1: "35", Force: "156", S: "40" },
   { title: "HKCSTS060N00", B: "60", d1: "140", l: "100", L: "170.0", S1: "44", Force: "245", S: "50" },
+];
+export const uchoC = [
+  { title: "HKCSTS016C00", B: "16", d1: "48", l: "35", L: "59.0", S1: "14", Force: "21", S: "18" },
+  { title: "HKCSTS020C00", B: "20", d1: "50", l: "38", L: "63", S1: "16", Force: "30", S: "19" },
+  { title: "HKCSTS025C00", B: "25", d1: "55", l: "45", L: "72.5", S1: "20", Force: "48", S: "23" },
+  { title: "HKCSTS030C00", B: "30", d1: "65", l: "51", L: "83.5", S1: "22", Force: "62", S: "28" },
+  { title: "HKCSTS035C00", B: "35", d1: "83", l: "61", L: "102.5", S1: "25", Force: "80", S: "30" },
+  { title: "HKCSTS040C00", B: "40", d1: "100", l: "69", L: "119.0", S1: "28", Force: "100", S: "35" },
+  { title: "HKCSTS045C00", B: "45", d1: "110", l: "77", L: "132.0", S1: "32", Force: "127", S: "40" },
+  { title: "HKCSTS050C00", B: "50", d1: "123", l: "88", L: "149.5", S1: "35", Force: "156", S: "40" },
+  { title: "HKCSTS060C00", B: "60", d1: "140", l: "100", L: "170.0", S1: "44", Force: "245", S: "50" },
 ];
 export const wapr = [
   { title: "HKWAPR020U", d: "20", d1: "56", d2: "46", d3: "25", d4: "24", F: "M16x1.5", i: "50", L: "80", L1: "25", S1: "17", LF: "17", S: "16" },
@@ -2383,7 +2394,7 @@ export const naba = [
   { title: "HKCBS1200000", F: "G3/4″", L: "20", D: "38" },
   { title: "HKCBS1600000", F: "G1″", L: "25", D: "45" },
 ];
-export const prets = [
+export const ruras = [
   { title: " K-025H8-35" },
   { title: " K-030H8-40" },
   { title: " K-032H8-042" },

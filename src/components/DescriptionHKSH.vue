@@ -18,12 +18,12 @@ const description = computed(() => {
   arr.push(text(`Tłumienie: bez tłumienia`));
   arr.push(text(`Olej hydrauliczny: HLP/HVLP zgodnie z DIN 51524; ISO-VG 22 do 68`));
   arr.push(text(`Kolor farby: czarny`));
-  
+
   arr.push(text(`Specyfikacja systemu uszczelnień:`));
   arr.push(text(`(x) Standardowy: PU/NBR dla HLP (-25ºC do +80ºC)`));
   arr.push(text(`() Niskie tarcie: PTFE (-25ºC do +80ºC)`));
   arr.push(text(`() Odporny na temperaturę: VITON (-20ºC do +160ºC)`));
-  
+
   arr.push(text(`Materiał tłoczyska:`));
   arr.push(text(`(${order?.pret0?.pretData?.material === "CK45" ? "x" : ""}) Prosty: Ck45`));
   arr.push(text(`(${order?.pret0?.pretData?.material === "CK45IH" ? "x" : ""}) Prosty hartowany: Ck45 IH`));
@@ -32,13 +32,13 @@ const description = computed(() => {
   arr.push(text(`(${order?.pret0?.pretData?.material === "AISI304" ? "x" : ""}) Stal nierdzewna: AISI 304`));
   arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4" ? "x" : ""}) Ulepszony: 42CrMo4 U`));
   arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4UH" ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
-  
+
   arr.push(text(`Materiał cylindra:`));
   arr.push(text(`(${order?.rura0?.title?.includes("H8") ? "x" : ""}) Standardowy H8: St 52.3`));
   arr.push(text(`(${order?.rura0?.title?.includes("H9") ? "x" : ""}) Standardowy H9: St 52.3`));
   arr.push(text(`(${order?.rura0?.title?.includes("AISI") ? "x" : ""}) Stal nierdzewna H8: AISI 304`));
-  
- return arr;
+
+  return arr;
 });
 </script>
 

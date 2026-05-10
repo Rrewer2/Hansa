@@ -5,12 +5,12 @@ import HKSHSelector from "./Selector/HKSHSelector.vue";
 const { project, meta, orderHKSH } = defineProps(["project", "meta", "orderHKSH"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated"]);
 
-const other = () => [HKSHSelector].map(({ __name }) => __name);
-const items = () => [...other().map((o, j) => [o, j])];
-const activeIndex = ref(items()[0]);
-const setActive = ([name, index]) => {
-  activeIndex.value = [name, index];
-};
+// const other = () => [HKSHSelector].map(({ __name }) => __name);
+// const items = () => [...other().map((o, j) => [o, j])];
+// const activeIndex = ref(items()[0]);
+// const setActive = ([name, index]) => {
+//   activeIndex.value = [name, index];
+// };
 project
   .map(({ unit }) => unit.map(({ HKSH }) => HKSH))
   .flat(2)
@@ -22,7 +22,7 @@ project
 
 <template>
   <main>
-    <article class="grid">
+    <article class="">
       <article class="accordion" v-for="(HKSH, i) in project.map(({ unit }) => unit.map(({ HKSH }) => HKSH)).flat(2)">
         <HKSHSelector v-bind="{ HKSH, i, meta, orderHKSH }" />
       </article>
