@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { text } from "../services/text";
 import CopyText from "./Selector/CopyText.vue";
 
-const { project, order, HKSH } = defineProps(["project", "order", "HKSH"]);
+const { order, HKSH } = defineProps(["order", "HKSH"]);
 
 const description = computed(() => {
   const arr = [];

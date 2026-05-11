@@ -62,22 +62,57 @@ const fn = (e) => {
         </select>
       </InputItem>
     </div>
-
-    <div class="container" @click="fn">
-      <img v-for="(image, i) in [links.HKCSTSC, links.HKWAPR, links.HKCFF]" :src="image" :alt="i" class="imgLogo rotate90" />
-    </div>
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`wapr`" :index="i" :logic="() => filteredWapr(HKSH.d)" />
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`uchoC`" :index="i" :logic="() => filteredUchoC(HKSH.D)" />
+    Mocowanie rury
     <div class="container">
-      <img v-for="(image, i) in [links.HKFL, links.HKCSTSN, links.HKCFS]" :src="image" :alt="i" class="imgLogo rotate270" />
+      <img
+        v-for="(image, i) in [links.HKFL, links.HKCSTSN, links.HKCFS]"
+        :src="image"
+        :alt="i"
+        class="imgLogo rotate270"
+        :class="{ active: HKSH.mountA === i }"
+        :key="i"
+        @click="HKSH.mountA = i"
+      />
     </div>
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`uchoN`" :index="i" :logic="() => filteredUchoN(HKSH.D)" />
+    <SmthSelector
+      v-if="HKSH.mountA === 2"
+      v-bind="{ meta, order: orderHKSH[i] }"
+      :Name="`uchoN`"
+      :index="i"
+      :logic="() => filteredUchoN(HKSH.D)"
+    />
+    Mocowanie pręta
+    <div class="container">
+      <img
+        v-for="(image, i) in [links.mountB2, links.HKCSTSC, links.HKWAPR, links.HKCFF]"
+        :src="image"
+        :alt="i"
+        class="imgLogo rotate90"
+        :key="i"
+        @click="HKSH.mountB = i"
+      />
+    </div>
+    <SmthSelector
+      v-if="HKSH.mountB === 0"
+      v-bind="{ meta, order: orderHKSH[i] }"
+      :Name="`uchoC`"
+      :index="i"
+      :logic="() => filteredUchoC(HKSH.D)"
+    />
+    <SmthSelector
+      v-if="HKSH.mountB === 2"
+      v-bind="{ meta, order: orderHKSH[i] }"
+      :Name="`wapr`"
+      :index="i"
+      :logic="() => filteredWapr(HKSH.d)"
+    />
+    Dławnica
     <div class="container">
       <img :src="links.HKCG" alt="HKCG" class="imgLogo" />
       <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" />
     </div>
     <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
-
+    Tłok
     <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
     <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
     <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`naba`" :index="i" :logic="() => filteredNaba()" />
@@ -85,10 +120,9 @@ const fn = (e) => {
     <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
     <div class="right mx-auto">
       <OrderHKSH v-bind="{ orderHKSH, i }" />
-      <DescriptionHKSH v-bind="{ order: orderHKSH[i], project, HKSH }" />
+      <DescriptionHKSH v-bind="{ order: orderHKSH[i], HKSH }" />
     </div>
   </article>
-  {{ orderHKSH }}
 </template>
 
 <style scoped>
@@ -109,14 +143,18 @@ const fn = (e) => {
   width: auto;
   object-fit: contain;
   cursor: pointer;
-
+  opacity: 0.6;
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
 }
-
+.imgLogo.active {
+  opacity: 1 !important;
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.95));
+}
 .container:hover .imgLogo {
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 .container .imgLogo:hover {

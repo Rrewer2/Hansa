@@ -22,6 +22,15 @@ const HKCGPM =
 const HKCG =
   "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CG-900x900-1778112677742.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjQzNjExfGltYWdlL2pwZWd8YUdNeEwyZzBZaTh4TVRBeE56VTVNamd6TWpBek1DOVFSbDlJUzE5RFIxODVNREI0T1RBd1h6RTNOemd4TVRJMk56YzNOREl1YW5CbnxmODA0NWU0Y2UzNjk4YTQ5NGM4ODA4MWQ3YWUyMjhkM2NlNDQzMjRjOTMwOGZiN2M1MTRjM2IyYTcyYjBmNGFm";
 
+const mountB2 =
+  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-SBL-900x900-1778112843746.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NDI5MzQyfGltYWdlL2pwZWd8YUdVM0wyZzBZUzh4TVRBeE56WXhNakk1TmpJeU1pOVFSbDlJUzE5VFFreGZPVEF3ZURrd01GOHhOemM0TVRFeU9EUXpOelEyTG1wd1p3fDI2ZGVlM2EyMzMwNmU4MDM3ZDY5NzI5MmFmMGQ5NWY0NjhlNjRkMzU2ZmI0ODQ3ZWZkZjMxMDRiZDQ1YzA5OWE";
+
+const HKCFL =
+  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CFL-900x900-1753668187632.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjI1MzEwfGltYWdlL2pwZWd8YURZNEwyaGlZeTh4TURNNU9ETTVNek13TXpBM01DOVFSbDlJUzE5RFJreGZPVEF3ZURrd01GOHhOelV6TmpZNE1UZzNOak15TG1wd1p3fGEzZDIwMzFiODlkNWM3ODg0NzE5Yzk2MGNkNzBhYzBmYzFkMWE1NDE4YWNjY2UxMjhhZDJhYWI5ZGUwYmNkYzc";
+
+const HKCPB =
+  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CPB-900x900-1778112571746.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjYwMDAwfGltYWdlL2pwZWd8YUdOaUwyZ3dNeTh4TVRBeE56VTRNREl4TmpNMU1DOVFSbDlJUzE5RFVFSmZPVEF3ZURrd01GOHhOemM0TVRFeU5UY3hOelEyTG1wd1p3fDAwOTQyMGNiZjA1Zjk2Yzg2YzIyMzI5NGIzNzQwOGZmZmZiZTJiZjAyYTk2NDgzMzlhNjUxMzNhM2IxNjM3ZjI";
+
 export const links = {
   HKWAPR,
   HKCSTSC,
@@ -31,4 +40,23 @@ export const links = {
   HKCFF,
   HKCGPM,
   HKCG,
+  HKCFL,
+  HKCPB,
+  mountB2,
 };
+// export const links = {
+//   mountB2: { name: "mountB2", link: mountB2, kod: 0 },
+//   HKWAPR: { name: "HKWAPR", link: HKWAPR, kod: 1 },
+//   HKCSTSC: { name: "HKCSTSC", link: HKCSTSC, kod: 2 },
+//   HKCFL: { name: "HKCFL", link: HKCFL, kod: 3 },
+//   HKCFL: { name: "HKCFL", link: HKCFL, kod: 4 },
+//   HKCPB: { name: "HKCPB", link: HKCPB, kod: 9 },
+//   HKCFF: { name: "HKCFF", link: HKCFF, kod: "W" },
+
+//   mountB2: { name: "mountB2", link: mountB2, kod: 0 },
+//   HKFL: { name: "HKFL", link: HKFL, kod: 1 },
+//   HKCSTSN: { name: "HKCSTSN", link: HKCSTSN, kod: 2 },
+//   HKCFS: { name: "HKCFS", link: HKCFS, kod: "W" },
+//   HKCG,
+//   HKCGPM,
+// };
