@@ -44,80 +44,88 @@ const fn = (e) => {
 </script>
 
 <template>
-  <article class="art">
-    <h2>{{ HKSHTitle(HKSH) }}</h2>
-    <div v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountA: HKSH.mountA, mountB: HKSH.mountB, z: HKSH.z }" class="flex-row ml-5">
-      <InputItem :data="i">
-        <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
-          <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>
-        </select>
-        <input v-else-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="HKSH.id + i" class="input w-75" />
-        <select v-else v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
-          <option v-if="i === 'd'" v-for="elem in filtrationD(standartDiameters, HKSH)" :value="elem">
-            {{ elem }}
-          </option>
-          <option v-else v-for="elem in getValue[i]" :value="elem">
-            {{ elem }}
-          </option>
-        </select>
-      </InputItem>
-    </div>
-    Mocowanie rury
-    <div class="container">
-      <img
-        v-for="(image, i) in [links.HKFL, links.HKCSTSN, links.HKCFS]"
-        :src="image"
-        :alt="i"
-        class="imgLogo rotate270"
-        :class="{ active: HKSH.mountA === i }"
-        :key="i"
-        @click="HKSH.mountA = i"
+  <article class="art grid">
+    <div>
+      <h2>{{ HKSHTitle(HKSH) }}</h2>
+      <div class="flex-row">
+        <div
+          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountA: HKSH.mountA, mountB: HKSH.mountB, z: HKSH.z }"
+          class="flex-row ml-5"
+        >
+          <InputItem :data="i">
+            <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
+              <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>
+            </select>
+            <input v-else-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="HKSH.id + i" class="input w-75" />
+            <select v-else v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
+              <option v-if="i === 'd'" v-for="elem in filtrationD(standartDiameters, HKSH)" :value="elem">
+                {{ elem }}
+              </option>
+              <option v-else v-for="elem in getValue[i]" :value="elem">
+                {{ elem }}
+              </option>
+            </select>
+          </InputItem>
+        </div>
+      </div>
+      Mocowanie rury
+      <div class="container">
+        <img
+          v-for="(image, i) in [links.HKFL, links.HKCSTSN, links.HKCFS]"
+          :src="image"
+          :alt="i"
+          class="imgLogo rotate270"
+          :class="{ active: HKSH.mountA === i }"
+          :key="i"
+          @click="HKSH.mountA = i"
+        />
+      </div>
+      <SmthSelector
+        v-if="HKSH.mountA === 2"
+        v-bind="{ meta, order: orderHKSH[i] }"
+        :Name="`uchoN`"
+        :index="i"
+        :logic="() => filteredUchoN(HKSH.D)"
       />
-    </div>
-    <SmthSelector
-      v-if="HKSH.mountA === 2"
-      v-bind="{ meta, order: orderHKSH[i] }"
-      :Name="`uchoN`"
-      :index="i"
-      :logic="() => filteredUchoN(HKSH.D)"
-    />
-    Mocowanie pręta
-    <div class="container">
-      <img
-        v-for="(image, i) in [links.mountB2, links.HKCSTSC, links.HKWAPR, links.HKCFF]"
-        :src="image"
-        :alt="i"
-        class="imgLogo rotate90"
-        :key="i"
-        @click="HKSH.mountB = i"
+      Mocowanie pręta
+      <div class="container">
+        <img
+          v-for="(image, i) in [links.mountB2, links.HKCSTSC, links.HKWAPR, links.HKCFF]"
+          :src="image"
+          :alt="i"
+          class="imgLogo rotate90"
+          :class="{ active: HKSH.mountB === i }"
+          :key="i"
+          @click="HKSH.mountB = i"
+        />
+      </div>
+      <SmthSelector
+        v-if="HKSH.mountB === 0"
+        v-bind="{ meta, order: orderHKSH[i] }"
+        :Name="`uchoC`"
+        :index="i"
+        :logic="() => filteredUchoC(HKSH.D)"
       />
+      <SmthSelector
+        v-if="HKSH.mountB === 2"
+        v-bind="{ meta, order: orderHKSH[i] }"
+        :Name="`wapr`"
+        :index="i"
+        :logic="() => filteredWapr(HKSH.d)"
+      />
+      Dławnica
+      <div class="container">
+        <img :src="links.HKCG" alt="HKCG" class="imgLogo" />
+        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" />
+      </div>
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
+      Tłok
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`naba`" :index="i" :logic="() => filteredNaba()" />
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`pret`" :index="i" :logic="() => pret({ HKSH, i, k })" />
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
     </div>
-    <SmthSelector
-      v-if="HKSH.mountB === 0"
-      v-bind="{ meta, order: orderHKSH[i] }"
-      :Name="`uchoC`"
-      :index="i"
-      :logic="() => filteredUchoC(HKSH.D)"
-    />
-    <SmthSelector
-      v-if="HKSH.mountB === 2"
-      v-bind="{ meta, order: orderHKSH[i] }"
-      :Name="`wapr`"
-      :index="i"
-      :logic="() => filteredWapr(HKSH.d)"
-    />
-    Dławnica
-    <div class="container">
-      <img :src="links.HKCG" alt="HKCG" class="imgLogo" />
-      <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" />
-    </div>
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
-    Tłok
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`naba`" :index="i" :logic="() => filteredNaba()" />
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`pret`" :index="i" :logic="() => pret({ HKSH, i, k })" />
-    <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
     <div class="right mx-auto">
       <OrderHKSH v-bind="{ orderHKSH, i }" />
       <DescriptionHKSH v-bind="{ order: orderHKSH[i], HKSH }" />
@@ -127,14 +135,14 @@ const fn = (e) => {
 
 <style scoped>
 .art {
-  width: 50vw;
+  width: 90vw;
 }
 .container {
   display: flex;
   height: 180px;
   width: 30vw;
-  margin: 0 auto;
-  gap: 12px;
+  /* margin: 0 auto; */
+  /* gap: 12px; */
 }
 
 .imgLogo {
@@ -144,13 +152,14 @@ const fn = (e) => {
   object-fit: contain;
   cursor: pointer;
   opacity: 0.6;
+  transform: scale(0.85);
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
 }
 .imgLogo.active {
   opacity: 1 !important;
-  transform: scale(1.15);
+  transform: scale(1);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.95));
 }
 .container:hover .imgLogo {
@@ -159,20 +168,35 @@ const fn = (e) => {
 
 .container .imgLogo:hover {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.05);
   z-index: 2;
 }
 
 .rotate90 {
-  transform: rotate(90deg);
-  transform-origin: center;
+  /* transform: rotate(90deg);
+  transform-origin: center; */
 }
 .rotate180 {
-  transform: rotate(180deg);
-  transform-origin: center;
+  /* transform: rotate(180deg);
+  transform-origin: center; */
 }
 .rotate270 {
-  transform: rotate(270deg);
-  transform-origin: center;
+  /* transform: rotate(270deg);
+  transform-origin: center; */
+}
+.grid {
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 60% 37%;
+  column-gap: 3%;
+}
+.right {
+  /* width: 100%; */
+  position: sticky;
+  top: 4vh;
+  /* left: 65vw; */
+  max-height: calc(98vh);
+  overflow-y: auto;
+  /* background-color: rgba(255, 255, 255, 0.3); */
 }
 </style>
