@@ -1,5 +1,6 @@
 <script setup>
-import { dlaw, tlok, dno, uchoC, uchoN, wapr, naba, ruras, standartDiameters, HKSHMountD, HKSHMountd } from "../../services/data";
+import { ref } from "vue";
+import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr, naba, ruras, standartDiameters, HKSHMountD, HKSHMountd } from "../../services/data";
 import { HKSHTitle, filtrationD, round } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
@@ -11,6 +12,7 @@ import { text } from "../../services/text";
 
 const { HKSH, i, meta, orderHKSH } = defineProps(["HKSH", "i", "meta", "orderHKSH"]);
 const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d);
+const filteredDlawSteel = (D, d) => dlawSteel.filter(({ AL, S }) => +AL === D && +S === d);
 const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
 const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75 * d);
@@ -41,6 +43,7 @@ const getValue = {
 const fn = (e) => {
   console.log(e);
 };
+const dtawType = ref("");
 </script>
 
 <template>
@@ -114,10 +117,10 @@ const fn = (e) => {
       />
       Dławnica
       <div class="container">
-        <img :src="links.HKCG" alt="HKCG" class="imgLogo" />
-        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" />
+        <img :src="links.HKCG" alt="HKCG" class="imgLogo" key="HKCG" :class="{ active: dlawType === "HKCG" }" @click="dlawType = 'HKCG'"/>
+        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" key="HKCGPM" :class="{ active: dlawType === "HKCGPM" }" @click="dlawType = 'HKCGPM'"/>
       </div>
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => filteredDlaw(HKSH.D, HKSH.d)" />
+      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]" />
       Tłok
       <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
       <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
