@@ -2362,6 +2362,14 @@ export const tlok = [
   { title: "HKCTF1404830", AL: "140", F: "M48x3", L: "58", p: "30", GKG: "HKGKGF140048" },
   { title: "HKCTF1504830", AL: "150", F: "M48x3", L: "58", p: "30", GKG: "HKGKGF150048" },
   { title: "HKCTF1605230", AL: "160", F: "M52x3", L: "58", p: "30", GKG: "HKGKGF160052" },
+  
+  { title: "HKCTBF040M16", AL: "40", F: "M16x1.5", L: "27", p: "10", GKG: "HKGKGB040016" },
+  { title: "HKCTBF050M20", AL: "50", F: "M20x1.5", L: "30", p: "10", GKG: "HKGKGB050020" },
+  { title: "HKCTBF060M24", AL: "60", F: "M24x2", L: "35", p: "10", GKG: "HKGKGB060024" },
+  { title: "HKCTBF063M24", AL: "63", F: "M24x2", L: "35", p: "10", GKG: "HKGKGB063024" },
+  { title: "HKCTBF070M24", AL: "70", F: "M24x2", L: "35", p: "20", GKG: "HKGKGB070024" },
+  { title: "HKCTBF080M27", AL: "80", F: "M27x2", L: "40", p: "20", GKG: "HKGKGB080027" },
+  { title: "HKCTBF100M33", AL: "100", F: "M33x2", L: "40", p: "25", GKG: "HKGKGB100033" },
 ];
 export const dno = [
   { title: "HKCF00040050", AL: "40", T: "50", S: "10", S1: "2" },
