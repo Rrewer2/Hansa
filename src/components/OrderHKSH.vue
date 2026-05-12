@@ -14,14 +14,15 @@ const normalize = () => {
     fracht: { title: "T-FRA", count: 1, JM: "szt", opis: "Fracht" },
   };
   Object.keys(orderHKSH[i]).forEach((key) => {
-    const { title, n } = orderHKSH[i][key];
+    const { title, n, ruraData, pretData } = orderHKSH[i][key];
     if (title) {
       if (KIT[title]?.title) {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } else {
+        const LENGTH = ruraData?.length || pretData?.length;
         KIT[title] = {
           title,
-          count: n ? n : 1,
+          count: LENGTH ? (LENGTH / 1000).toLocaleString("pl-PL") : n ? n : 1,
           JM: "szt",
           opis: /^x/i.test(key) ? "Złączka" : /^vhr/i.test(key) ? "Korek" : key.replace(/\d+$/, ""),
           // opis: key
