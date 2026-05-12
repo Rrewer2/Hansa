@@ -90,7 +90,7 @@ const fn = (e) => {
       Mocowanie pręta
       <div class="container">
         <img
-          v-for="(image, i) in [links.mountB2, links.HKCSTSC, links.HKWAPR, links.HKCFF]"
+          v-for="(image, i) in [links.mountB2, links.HKCOF, links.HKWAPR, links.HKCFF]"
           :src="image"
           :alt="i"
           class="imgLogo rotate90"
