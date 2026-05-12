@@ -93,7 +93,7 @@ const dtawType = ref("HKCG");
       Mocowanie pręta
       <div class="container">
         <img
-          v-for="(image, i) in [links.mountB2, links.HKCOF, links.HKWAPR, links.HKCFF]"
+          v-for="(image, i) in {0: links.mountB2, 1: links.HKCOF, 2: links.HKWAPR, W: links.HKCFF}"
           :src="image"
           :alt="i"
           class="imgLogo rotate90"
