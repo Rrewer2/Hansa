@@ -14,7 +14,7 @@ const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d)
 const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
 const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75 * d);
-const filteredUchoC = (D) => uchoC.filter(({ d1 }) => +d1 > D && +d1 < D * 1.2);
+const filteredUchoC = (d) => uchoC.filter(({ d2 }) => +d2 > d * 0.9 && +d2 < d * 1.2);
 const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > D && +d1 < D * 1.2);
 const filteredNaba = () => naba;
 const MW = 10;
@@ -104,14 +104,13 @@ const fn = (e) => {
         v-bind="{ meta, order: orderHKSH[i] }"
         :Name="`uchoC`"
         :index="i"
-        :logic="() => filteredUchoC(HKSH.D)"
       />
       <SmthSelector
         v-if="HKSH.mountB === 2"
         v-bind="{ meta, order: orderHKSH[i] }"
         :Name="`wapr`"
         :index="i"
-        :logic="() => filteredWapr(HKSH.d)"
+        :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
       />
       Dławnica
       <div class="container">
