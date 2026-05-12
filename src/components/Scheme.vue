@@ -135,8 +135,9 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   z-index: 2;
-  height: 95vh;
-  width: 95vw;
+  height: 98vh;
+  width: 98vw;
+  background-color: rgba(70, 70, 70, 0.35);
 }
 .back {
   display: none;

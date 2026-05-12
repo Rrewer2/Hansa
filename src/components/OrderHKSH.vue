@@ -1,16 +1,16 @@
 <script setup>
 import { ref } from "vue";
 import { getPriority } from "../services/data";
-import { KITtitle } from "../services/functions";
+import { HKSHTitle, KITtitle } from "../services/functions";
 import Table from "./Table.vue";
 import TableSAP from "./TableSAP.vue";
 
-const { orderHKSH, i } = defineProps(["orderHKSH", "i"]);
+const { orderHKSH, i, HKSH } = defineProps(["orderHKSH", "i", "HKSH"]);
 const cracked = ref({});
 
 const normalize = () => {
   const KIT = {
-    KIT: { title: "KIT", count: 1, JM: "szt", opis: " Siłownik" },
+    KIT: { title: "KIT", count: 1, JM: "szt", opis: HKSHTitle(HKSH) + " Siłownik" },
     fracht: { title: "T-FRA", count: 1, JM: "szt", opis: "Fracht" },
   };
   Object.keys(orderHKSH[i]).forEach((key) => {

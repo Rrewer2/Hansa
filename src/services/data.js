@@ -1848,7 +1848,7 @@ export const lidData = [
     motor: 100,
     type: "RA",
     hole: 88,
-    // blockType: "---",
+    blockType: "HKES",
     addition: {
       xvrPumpOut0: { title: "XVRNW13HLED" },
       xvrBlockIn0: { title: "AOVRNW13LED" },
@@ -1868,7 +1868,7 @@ export const lidData = [
     motor: 112,
     type: "RA",
     hole: 88,
-    // blockType: "---",
+    blockType: "HKES",
     addition: {
       xvrPumpOut0: { title: "XVRNW13HLED" },
       xvrBlockIn0: { title: "AOVRNW13LED" },
@@ -2362,7 +2362,7 @@ export const tlok = [
   { title: "HKCTF1404830", AL: "140", F: "M48x3", L: "58", p: "30", GKG: "HKGKGF140048" },
   { title: "HKCTF1504830", AL: "150", F: "M48x3", L: "58", p: "30", GKG: "HKGKGF150048" },
   { title: "HKCTF1605230", AL: "160", F: "M52x3", L: "58", p: "30", GKG: "HKGKGF160052" },
-  
+
   { title: "HKCTBF040M16", AL: "40", F: "M16x1.5", L: "27", p: "10", GKG: "HKGKGB040016" },
   { title: "HKCTBF050M20", AL: "50", F: "M20x1.5", L: "30", p: "10", GKG: "HKGKGB050020" },
   { title: "HKCTBF060M24", AL: "60", F: "M24x2", L: "35", p: "10", GKG: "HKGKGB060024" },
@@ -2400,24 +2400,34 @@ export const uchoN = [
 ];
 export const uchoC = [
   { title: "HKCSTS016C00", P: "16", D: "48", d2: "21.5", Z: "35", L: "58", S1: "14", S: "18", Force: "21" },
-  { title: "HKCSTS020C00", P: "20", D: "50", d2: "27.5", Z: "38", L: "64.5", S1: "16", S: "19" , Force: "30"},
+  { title: "HKCSTS020C00", P: "20", D: "50", d2: "27.5", Z: "38", L: "64.5", S1: "16", S: "19", Force: "30" },
   { title: "HKCSTS025C00", P: "25", D: "55", d2: "33.5", Z: "45", L: "77", S1: "20", S: "23", Force: "48" },
   { title: "HKCSTS030C00", P: "30", D: "65", d2: "40", Z: "51", L: "87.5", S1: "22", S: "28", Force: "62" },
   { title: "HKCSTS035C00", P: "35", D: "83", d2: "47", Z: "61", L: "102", S1: "25", S: "30", Force: "80" },
   { title: "HKCSTS040C00", P: "40", D: "100", d2: "52", Z: "69", L: "115", S1: "28", S: "35", Force: "100" },
-  { title: "HKCSTS045C00", P: "45", D: "110", d2: "58", Z: "77", L: "128", S1: "32", S: "40", Force: "127"},
+  { title: "HKCSTS045C00", P: "45", D: "110", d2: "58", Z: "77", L: "128", S1: "32", S: "40", Force: "127" },
   { title: "HKCSTS050C00", P: "50", D: "123", d2: "62", Z: "88", L: "144", S1: "35", S: "40", Force: "156" },
   { title: "HKCSTS060C00", P: "60", D: "140", d2: "70", Z: "100", L: "167.5", S1: "44", S: "50", Force: "245" },
 ];
 export const wapr = [
-  { title: "HKWAPR020U", P: "20", D: "56", d3: "25", F: "M16x1.5", LF: "17", Z: "50", L: "80", S1: "19",S: "16", Force: "30" },
+  { title: "HKWAPR020U", P: "20", D: "56", d3: "25", F: "M16x1.5", LF: "17", Z: "50", L: "80", S1: "19", S: "16", Force: "30" },
   { title: "HKWAPR025U", P: "25", D: "56", d3: "25", F: "M16x1.5", LF: "17", Z: "50", L: "80", S1: "23", S: "20", Force: "48" },
-  { title: "HKWAPR030U", P: "30", D: "64", d3: "32", F: "M22x1.5", LF: "23", Z: "60", L: "94", S1: "28", S: "22", Force: "62"  },
-  { title: "HKWAPR035U", P: "35", D: "78", d3: "40", F: "M28x1.5", LF: "29", Z: "70", L: "112", S1: "30", S: "25", Force: "80"  },
+  { title: "HKWAPR030U", P: "30", D: "64", d3: "32", F: "M22x1.5", LF: "23", Z: "60", L: "94", S1: "28", S: "22", Force: "62" },
+  { title: "HKWAPR035U", P: "35", D: "78", d3: "40", F: "M28x1.5", LF: "29", Z: "70", L: "112", S1: "30", S: "25", Force: "80" },
   { title: "HKWAPR040U", P: "40", D: "94", d3: "49", F: "M35x1.5", LF: "36", Z: "85", L: "135", S1: "35", S: "28", Force: "100" },
   { title: "HKWAPR050U", P: "50", D: "117", d3: "61", F: "M45x1.5", LF: "46", Z: "105", L: "168", S1: "40", S: "35", Force: "127" },
   { title: "HKWAPR060U", P: "60", D: "130", d3: "75", F: "M58x1.5", LF: "59", Z: "130", L: "200", S1: "50", S: "44", Force: "156" },
   { title: "HKWAPR070U", P: "70", D: "154", d3: "86", F: "M65x1.5", LF: "66", Z: "150", L: "232", S1: "55", S: "49", Force: "245" },
+];
+export const cof = [
+  { title: "HKCOF1600000", P: "16.2", D: "35", Z: "25", L: "42", S: "20" },
+  { title: "HKCOF2000000", P: "20.2", D: "45", Z: "30", L: "50", S: "25" },
+  { title: "HKCOF2500000", P: "25.2", D: "50", Z: "35", L: "60", S: "30" },
+  { title: "HKCOF3000000", P: "30.2", D: "60", Z: "45", L: "75", S: "35" },
+  { title: "HKCOF3500000", P: "35.2", D: "70", Z: "55", L: "90", S: "40" },
+  { title: "HKCOF4000000", P: "40.2", D: "70", Z: "60", L: "95", S: "40" },
+  { title: "HKCOF5000000", P: "50.5", D: "90", Z: "75", L: "120", S: "40" },
+  { title: "HKCOF6000000", P: "60.5", D: "100", Z: "90", L: "140", S: "50" },
 ];
 export const naba = [
   { title: "HKCBS0600000", F: "G3/8″", L: "17", D: "26" },

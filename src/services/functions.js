@@ -46,8 +46,8 @@ const getPressure = ({ DBD, p, directPressValue, minDirectPressure }) => {
   return vals.length ? Math.min(...vals) : 0;
 };
 
-export const HKSHTitle = ({ D, d, L, mountA = 2, mountB = 2 }) => {
-  return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4);
+export const HKSHTitle = ({ D, d, L, G, mountA = 2, mountB = 2 }) => {
+  return "HKSH" + mountA + mountB + "." + ("000" + D).slice(-3) + ("000" + d).slice(-3) + ("000" + L).slice(-4) + G?.replace(/[/"″]/g, "");
 };
 export const hkshCounting = ({ D, d, L, z, directPress, directPressValue, directPressValueB }, { Q, p, DBD, HKSH }) => {
   const SD = S(D);

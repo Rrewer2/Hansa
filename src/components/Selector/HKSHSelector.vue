@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from "vue";
-import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr, naba, ruras, standartDiameters, HKSHMountD, HKSHMountd } from "../../services/data";
-import { HKSHTitle, filtrationD, round } from "../../services/functions";
+// import { ref } from "vue";
+import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr } from "../../services/data";
+import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof } from "../../services/data";
+import { HKSHTitle, filtrationD } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
 import ResultItem from "../ResultItem.vue";
@@ -17,42 +18,45 @@ const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
 const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
 const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75 * d);
 const filteredUchoC = (d) => uchoC.filter(({ d2 }) => +d2 > d * 0.9 && +d2 < d * 1.2);
-const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > D && +d1 < D * 1.2);
-const filteredNaba = () => naba;
+const filteredCof = (d) => cof.filter(({ S }) => +S > d * 0.9 && +S < d * 1.2);
+const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > 0.9 * D && +d1 < D * 1.2);
+const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ F }) => HKSH.G === F.replace(/[/]/g, "")));
 const MW = 10;
-const getOrder = (item) => orderHKSH[i]?.[item]?.[`${item}Data`] || 0;
-const pret = ({ HKSH: { d, L }, i }) => {
+const getOrder = (item, k) => orderHKSH[i]?.[item + k]?.[`${item}Data`];
+const pret = ({ d, L }, i) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
     material: el,
-    length: L + +getOrder("dlaw").L + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("wapr").LF + MW,
+    length: L + +getOrder("dlaw", i)?.L + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("mountB", i)?.LF + MW,
   }));
 };
-const rura = ({ HKSH: { D, L }, i }) => {
+const rura = ({ D, L }) => {
   return ruras
     .filter(({ DH8 }) => DH8 === D)
-    .map((el) => ({ ...el, length: L + +getOrder("dlaw").L1 + +getOrder("tlok").L + +getOrder("tlok").p + +getOrder("dno").S1 }));
+    .map((el) => ({
+      ...el,
+      length: L + +getOrder("dlaw", i)?.L1 + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("dno", i)?.S1,
+    }));
 };
 const getValue = {
   D: standartDiameters,
   d: "",
+  G: ["", "G3/8″", "G1/4″", "G1/2″", "G3/4″", "G1″"],
   z: [1, 2, 3, 4, 5, 6, 7, 8],
   mountA: HKSHMountD,
   mountB: HKSHMountd,
 };
-const fn = (e) => {
-  console.log(e);
-};
-const dtawType = ref("HKCG");
+// const dlawType = ref("HKCG");
+const afterNabaSelected = () => (HKSH.G = orderHKSH[i]?.["naba" + i]?.nabaData?.F);
 </script>
 
 <template>
-  <article class="art grid">
+  <div class="art grid">
     <div>
       <h2>{{ HKSHTitle(HKSH) }}</h2>
       <div class="flex-row">
         <div
-          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountA: HKSH.mountA, mountB: HKSH.mountB, z: HKSH.z }"
+          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountA: HKSH.mountA, mountB: HKSH.mountB, z: HKSH.z, G: HKSH.G }"
           class="flex-row ml-5"
         >
           <InputItem :data="i">
@@ -71,74 +75,111 @@ const dtawType = ref("HKCG");
           </InputItem>
         </div>
       </div>
-      Mocowanie rury
-      <div class="container">
-        <img
-          v-for="(image, i) in { 1: links.HKFL, 2: links.HKCSTSN, 3: links.HKCFL, 4: links.HKCFL, W: links.HKCFS }"
-          :src="image"
-          :alt="i"
-          class="imgLogo rotate270"
-          :class="{ active: HKSH.mountA === i }"
-          :key="i"
-          @click="HKSH.mountA = i"
-        />
+      <div>
+        <article class="kok">
+          <div class="container">
+            <img
+              v-for="(image, i) in { 1: links.HKFL, 2: links.HKCSTSN, 3: links.HKCFL, 4: links.HKCFL, W: links.HKCFS }"
+              :src="image"
+              :alt="i"
+              class="imgLogo rotate270"
+              :class="{ active: HKSH.mountA === i }"
+              :key="i"
+              @click="HKSH.mountA = i"
+            />
+          </div>
+          <SmthSelector
+            v-if="HKSH.mountA === '2'"
+            v-bind="{ meta, order: orderHKSH[i], Name: 'mountA' }"
+            :index="i"
+            :logic="() => filteredUchoN(HKSH.D)"
+          />
+        </article>
+        <article class="kok">
+          <div class="container">
+            <img
+              v-for="(image, i) in { 0: links.mountB2, 1: links.HKCOF, 2: links.HKCSTSC, W: links.HKCFF }"
+              :src="image"
+              :alt="i"
+              class="imgLogo rotate90"
+              :class="{ active: HKSH.mountB === i }"
+              :key="i"
+              @click="HKSH.mountB = i"
+            />
+          </div>
+          <SmthSelector
+            v-if="HKSH.mountB === '1'"
+            v-bind="{ meta, order: orderHKSH[i], Name: 'mountB' }"
+            :index="i"
+            :logic="() => filteredCof(HKSH.d)"
+          />
+          <SmthSelector
+            v-if="HKSH.mountB === '2'"
+            v-bind="{ meta, order: orderHKSH[i], Name: 'mountB' }"
+            :index="i"
+            :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
+          />
+        </article>
+        <article class="kok">
+          <!-- <div class="container">
+            <img
+              :src="links.HKCG"
+              alt="HKCG"
+              class="imgLogo"
+              key="HKCG"
+              :class="{ active: dlawType === 'HKCG' }"
+              @click="dlawType = 'HKCG'"
+            />
+            <img
+              :src="links.HKCGPM"
+              alt="HKCGPM"
+              class="imgLogo"
+              key="HKCGPM"
+              :class="{ active: dlawType === 'HKCGPM' }"
+              @click="dlawType = 'HKCGPM'"
+            />
+          </div> -->
+          <SmthSelector
+            v-bind="{ meta, order: orderHKSH[i], Name: 'dlaw' }"
+            :index="i"
+            :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]"
+          />
+        </article>
+        <article class="kok">
+          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'tlok' }" :index="i" :logic="() => filteredTlok(HKSH.D)" />
+        </article>
+        <article class="kok">
+          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'dno' }" :index="i" :logic="() => filteredDno(HKSH.D)" />
+        </article>
+        <article class="kok">
+          <SmthSelector
+            v-bind="{ meta, order: orderHKSH[i], Name: 'naba' }"
+            :index="i"
+            :logic="() => filteredNaba()"
+            :after="afterNabaSelected"
+          />
+        </article>
+        <article class="kok">
+          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'pret' }" :index="i" :logic="() => pret(HKSH, i)" />
+        </article>
+        <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
       </div>
-      <SmthSelector
-        v-if="HKSH.mountA === 2"
-        v-bind="{ meta, order: orderHKSH[i] }"
-        :Name="`uchoN`"
-        :index="i"
-        :logic="() => filteredUchoN(HKSH.D)"
-      />
-      Mocowanie pręta
-      <div class="container">
-        <img
-          v-for="(image, i) in { 0: links.mountB2, 1: links.HKCOF, 2: links.HKWAPR, W: links.HKCFF }"
-          :src="image"
-          :alt="i"
-          class="imgLogo rotate90"
-          :class="{ active: HKSH.mountB === i }"
-          :key="i"
-          @click="HKSH.mountB = i"
-        />
-      </div>
-      <SmthSelector
-        v-if="HKSH.mountB === 0"
-        v-bind="{ meta, order: orderHKSH[i] }"
-        :Name="`uchoC`"
-        :index="i"
-      />
-      <SmthSelector
-        v-if="HKSH.mountB === 2"
-        v-bind="{ meta, order: orderHKSH[i] }"
-        :Name="`wapr`"
-        :index="i"
-        :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
-      />
-      Dławnica
-      <div class="container">
-        <img :src="links.HKCG" alt="HKCG" class="imgLogo" key="HKCG" :class="{ active: dlawType === 'HKCG' }" @click="dlawType = 'HKCG'"/>
-        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" key="HKCGPM" :class="{ active: dlawType === 'HKCGPM' }" @click="dlawType = 'HKCGPM'"/>
-      </div>
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]" />
-      Tłok
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`tlok`" :index="i" :logic="() => filteredTlok(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dno`" :index="i" :logic="() => filteredDno(HKSH.D)" />
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`naba`" :index="i" :logic="() => filteredNaba()" />
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`pret`" :index="i" :logic="() => pret({ HKSH, i, k })" />
-      <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`rura`" :index="i" :logic="() => rura({ HKSH, i, k })" />
     </div>
     <div class="right mx-auto">
-      <OrderHKSH v-bind="{ orderHKSH, i }" />
+      <OrderHKSH v-bind="{ orderHKSH, i, HKSH }" />
       <DescriptionHKSH v-bind="{ order: orderHKSH[i], HKSH }" />
     </div>
-  </article>
+  </div>
 </template>
 
 <style scoped>
 .art {
-  width: 90vw;
+  width: 75vw;
 }
+article.kok:nth-of-type(odd) {
+  background: #f5f5f548;
+}
+
 .container {
   display: flex;
   height: 180px;

@@ -32,6 +32,7 @@ const cylInit = {
   D: 100,
   d: 60,
   L: 500,
+  G: "",
   mountA: "2",
   mountB: "2",
   z: 1,
@@ -182,7 +183,7 @@ onMounted(() => {
 
 .app {
   background-color: rgba(70, 70, 70, 0.35);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 5px;
   padding-top: 40px;
 }

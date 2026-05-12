@@ -11,6 +11,17 @@ const { Name, index = 0, logic, after, meta, order } = defineProps(["Name", "ind
 
 const orderTitle = ref(null);
 const slots = useSlots();
+const normalizeObjects = (arr) => {
+  const allKeys = [...new Set(arr.flatMap((obj) => Object.keys(obj)))].filter((key) => key !== "addition");
+  return arr.map((obj) => {
+    const normalized = {};
+
+    allKeys.forEach((key) => {
+      normalized[key] = obj[key] ?? false;
+    });
+    return normalized;
+  });
+};
 const setSmth = ({ title, addition, ...rest }) => {
   orderTitle.value = orderTitle.value === title ? null : title;
   const setIt = () => {
@@ -41,9 +52,9 @@ const setSmth = ({ title, addition, ...rest }) => {
   if (after) after();
 };
 
-const keys = () => Object.keys(logic()[0]).filter((item) => item !== "addition");
+const keys = () => Object.keys(normalizeObjects(logic())[0]).filter((item) => item !== "addition");
 const sorting = () => {
-  const res = logic();
+  const res = normalizeObjects(logic());
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
   if (!sortKey.value) return res;
   return res.sort((a, b) =>
@@ -128,8 +139,9 @@ if (!logic().length) order[Name + index] = {};
 
 <style scoped>
 .hide {
-  position: fixed;
-  top: -10000px;
+  text-decoration: line-through;
+  /* position: fixed;
+  top: -10000px; */
 }
 
 .sort {
