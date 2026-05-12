@@ -74,7 +74,7 @@ const dtawType = ref("HKCG");
       Mocowanie rury
       <div class="container">
         <img
-          v-for="(image, i) in [links.HKFL, links.HKCSTSN, links.HKCFS]"
+          v-for="(image, i) in { 1: links.HKFL, 2: links.HKCSTSN, 3: links.HKCFL, 4: links.HKCFL, W: links.HKCFS }"
           :src="image"
           :alt="i"
           class="imgLogo rotate270"
@@ -93,7 +93,7 @@ const dtawType = ref("HKCG");
       Mocowanie pręta
       <div class="container">
         <img
-          v-for="(image, i) in {0: links.mountB2, 1: links.HKCOF, 2: links.HKWAPR, W: links.HKCFF}"
+          v-for="(image, i) in { 0: links.mountB2, 1: links.HKCOF, 2: links.HKWAPR, W: links.HKCFF }"
           :src="image"
           :alt="i"
           class="imgLogo rotate90"
