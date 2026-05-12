@@ -117,8 +117,8 @@ const dtawType = ref("");
       />
       Dławnica
       <div class="container">
-        <img :src="links.HKCG" alt="HKCG" class="imgLogo" key="HKCG" :class="{ active: dlawType === "HKCG" }" @click="dlawType = 'HKCG'"/>
-        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" key="HKCGPM" :class="{ active: dlawType === "HKCGPM" }" @click="dlawType = 'HKCGPM'"/>
+        <img :src="links.HKCG" alt="HKCG" class="imgLogo" key="HKCG" :class="{ active: dlawType === 'HKCG' }" @click="dlawType = 'HKCG'"/>
+        <img :src="links.HKCGPM" alt="HKCGPM" class="imgLogo" key="HKCGPM" :class="{ active: dlawType === 'HKCGPM' }" @click="dlawType = 'HKCGPM'"/>
       </div>
       <SmthSelector v-bind="{ meta, order: orderHKSH[i] }" :Name="`dlaw`" :index="i" :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]" />
       Tłok
