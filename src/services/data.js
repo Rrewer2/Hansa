@@ -1545,6 +1545,7 @@ export const gauge = [
 
 const priority = [
   "Agregat",
+  "Siłownik",
   "pump",
   "flangeIn",
   "flangeOut",
@@ -1574,6 +1575,15 @@ const priority = [
   "cooler",
   "gauge",
   "gaugeShutOff",
+  "mountA",
+  "mountB",
+  "rura",
+  "pret",
+  "dlaw",
+  "tlok",
+  "dno",
+  "naba",
+  "GKG",
 ];
 export const getPriority = (KIT) => {
   const array = Object.entries(KIT);

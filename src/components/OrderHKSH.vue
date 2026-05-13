@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { getPriority } from "../services/data";
-import { HKSHTitle, KITtitle } from "../services/functions";
+import { HKSHTitle } from "../services/functions";
 import Table from "./Table.vue";
 import TableSAP from "./TableSAP.vue";
 
