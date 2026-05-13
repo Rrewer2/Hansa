@@ -20,14 +20,15 @@ const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d &
 const filteredUchoC = (d) => uchoC.filter(({ d2 }) => +d2 > d * 0.9 && +d2 < d * 1.2);
 const filteredCof = (d) => cof.filter(({ S }) => +S > d * 0.9 && +S < d * 1.2);
 const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > 0.9 * D && +d1 < D * 1.2);
-const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ F }) => HKSH.G === F.replace(/[/]/g, "")));
+const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ F }) => HKSH.G === F));
+const afterNabaSelected = () => (HKSH.G = orderHKSH[i]?.["naba" + i]?.nabaData?.F);
 const MW = 10;
 const getOrder = (item, k) => orderHKSH[i]?.[item + k]?.[`${item}Data`];
 const pret = ({ d, L }, i) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
     material: el,
-    length: L + +getOrder("dlaw", i)?.L + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("mountB", i)?.LF + MW,
+    length: L + +getOrder("dlaw", i)?.L + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("mountB", i)?.LF + MW || 0,
   }));
 };
 const rura = ({ D, L }) => {
@@ -35,7 +36,7 @@ const rura = ({ D, L }) => {
     .filter(({ DH8 }) => DH8 === D)
     .map((el) => ({
       ...el,
-      length: L + +getOrder("dlaw", i)?.L1 + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("dno", i)?.S1,
+      length: L + +getOrder("dlaw", i)?.L1 + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("dno", i)?.S1 || 0,
     }));
 };
 const getValue = {
@@ -47,7 +48,6 @@ const getValue = {
   mountB: HKSHMountd,
 };
 // const dlawType = ref("HKCG");
-const afterNabaSelected = () => (HKSH.G = orderHKSH[i]?.["naba" + i]?.nabaData?.F);
 </script>
 
 <template>
@@ -170,6 +170,7 @@ const afterNabaSelected = () => (HKSH.G = orderHKSH[i]?.["naba" + i]?.nabaData?.
       <DescriptionHKSH v-bind="{ order: orderHKSH[i], HKSH }" />
     </div>
   </div>
+  {{ orderHKSH }}
 </template>
 
 <style scoped>

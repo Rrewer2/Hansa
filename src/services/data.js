@@ -2446,7 +2446,7 @@ export const naba = [
   { title: "HKCBS1200000", F: "G3/4″", L: "20", D: "38" },
   { title: "HKCBS1600000", F: "G1″", L: "25", D: "45" },
 ];
-export const ruras = [
+const H8 = [
   { title: " K-025H8-35" },
   { title: " K-030H8-40" },
   { title: " K-032H8-042" },
@@ -2501,4 +2501,10 @@ export const ruras = [
   { title: " K-76.2H8-88.9" },
   { title: " K-82.55H8-101.6" },
   { title: " K-88.9H8-107.95" },
-].map(({ title }) => ({ title, DH8: +title.match(/K-([\d.]+)H8/)?.[0].slice(2, -2), D1: +title.match(/H8-([\d.]+)/)?.[1] }));
+];
+export const ruras = [...H8, ...H8.map(({ title }) => ({ title: title.replace("H8", "H9") }))].map(({ title }) => ({
+  title,
+  DH8: +title.match(/([\d.]+)/)?.[0],
+  D1: +title.match(/H[8|9]-([\d.]+)/)?.[1],
+  tolerance: title.includes("H8") ? "H8" : "H9",
+}));
