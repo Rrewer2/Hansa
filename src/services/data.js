@@ -1580,7 +1580,9 @@ const priority = [
   "rura",
   "pret",
   "dlaw",
+  "dlawSeal",
   "tlok",
+  "tlokSeal",
   "dno",
   "naba",
   "GKG",
@@ -2309,7 +2311,7 @@ export const dlaw = [
   { title: "HKCG18016090", AL: "160", S: "90", F: "M165x2", L: "102", L1: "90", LF: "69", GKG: "HKGKG0160090" },
   { title: "HKCG30180100", AL: "180", S: "100", F: "M188x2.5", L: "110", L1: "92", LF: "58", GKG: "HKGKGCG3180100" },
   { title: "HKCG30200100 ", AL: "200", S: "100", F: "M208x2.5", L: "110", L1: "92", LF: "58", GKG: "HKGKGCG3200100" },
-];
+].map((el) => ({ ...el, addition: el.GKG && el.GKG !== "On request" ? { dlawSeal: { title: el.GKG } } : {} }));
 export const dlawSteel = [
   { title: "HKCGPM065050025", AL: "50", S: "25", F: "M54x1.5", L: "55", L1: "45", LF: "22", GKG: "HKGKGPM050025" },
   { title: "HKCGPM065050030", AL: "50", S: "30", F: "M54x1.5", L: "55", L1: "45", LF: "22", GKG: "HKGKGPM050030" },
@@ -2356,7 +2358,7 @@ export const dlawSteel = [
   { title: "HKCGPM275250180", AL: "250", S: "180", F: "M258x2.5", L: "150", L1: "130", LF: "80", GKG: "HKGKGPM250180" },
   { title: "HKCGPM335300150", AL: "300", S: "150", F: "M308x3", L: "180", L1: "155", LF: "95", GKG: "HKGKGPM300150" },
   { title: "HKCGPM335300180", AL: "300", S: "180", F: "M308x3", L: "180", L1: "155", LF: "95", GKG: "HKGKGPM300180" },
-];
+].map((el) => ({ ...el, addition: el.GKG ? { dlawSeal: { title: el.GKG } } : {} }));
 export const tlok = [
   { title: "HKCTF0401615", AL: "40", F: "M16x1.5", L: "40", p: "10", GKG: "HKGKGF040016" },
   { title: "HKCTF0502015", AL: "50", F: "M20x1.5", L: "40", p: "10", GKG: "HKGKGF050020" },
@@ -2380,7 +2382,7 @@ export const tlok = [
   { title: "HKCTBF070M24", AL: "70", F: "M24x2", L: "35", p: "20", GKG: "HKGKGB070024" },
   { title: "HKCTBF080M27", AL: "80", F: "M27x2", L: "40", p: "20", GKG: "HKGKGB080027" },
   { title: "HKCTBF100M33", AL: "100", F: "M33x2", L: "40", p: "25", GKG: "HKGKGB100033" },
-];
+].map((el) => ({ ...el, addition: el.GKG ? { tlokSeal: { title: el.GKG } } : {} }));
 export const dno = [
   { title: "HKCF00040050", AL: "40", T: "50", S: "10", S1: "2" },
   { title: "HKCF00050060", AL: "50", T: "60", S: "10", S1: "2" },

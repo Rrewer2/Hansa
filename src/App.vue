@@ -27,6 +27,7 @@ const init = {
   nonReturn: "",
   flowControl: "",
   balance: "",
+  order: {},
 };
 const cylInit = {
   D: 100,
@@ -85,7 +86,6 @@ const meta = ref({
 });
 provide("meta", meta);
 const order = ref({});
-const orderHKSH = ref({});
 const getNewPowerUnit = () =>
   project.value.push({
     id: getId("u"),
@@ -163,7 +163,7 @@ onMounted(() => {
     <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
-    <HKSH v-if="navPage[4]" v-bind="{ project, orderHKSH, meta }" />
+    <HKSH v-if="navPage[4]" v-bind="{ project, meta }" />
     <Simile v-if="navPage[5]" v-bind="{ simile }" />
   </main>
   <Navbar @nav="(ind) => (navPage = navPage.map((_, k) => ind === k))" v-bind="{ navPage, meta, save, load }" />

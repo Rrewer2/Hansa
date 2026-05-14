@@ -208,4 +208,13 @@ export default {
   false: ["❌"],
   "-": ["❌"],
   true: ["✅"],
+
+  dlaw: ["Dławnica"],
+  tlok: ["Tłok gwintowany"],
+  pret: ["Tłoczysko chromowane"],
+  rura: ["Rura walcowana"],
+  naba: ["Przyłącze oleju"],
+  dno: ["Denko cylindra"],
+  dlawSeal: ["Uszczelnenia dławnicy"],
+  tlokSeal: ["Uszczelnenia tłoka"],
 };

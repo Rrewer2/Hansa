@@ -12,7 +12,7 @@ const { Name, index = 0, logic, after, meta, order } = defineProps(["Name", "ind
 const orderTitle = ref(null);
 const slots = useSlots();
 const normalizeObjects = (arr) => {
-  const allKeys = [...new Set(arr.flatMap((obj) => Object.keys(obj)))].filter((key) => key !== "addition");
+  const allKeys = [...new Set(arr.flatMap((obj) => Object.keys(obj)))];
   return arr.map((obj) => {
     const normalized = {};
 

@@ -38,6 +38,7 @@ const {
   nonReturn,
   flowControl,
   balance,
+  order,
   ...rest
 } = HKSH;
 </script>

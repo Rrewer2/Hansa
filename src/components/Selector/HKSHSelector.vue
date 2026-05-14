@@ -21,9 +21,9 @@ const filteredUchoC = (d) => uchoC.filter(({ d2 }) => +d2 > d * 0.9 && +d2 < d *
 const filteredCof = (d) => cof.filter(({ S }) => +S > d * 0.9 && +S < d * 1.2);
 const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > 0.9 * D && +d1 < D * 1.2);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ F }) => HKSH.G === F));
-const afterNabaSelected = () => (HKSH.G = orderHKSH[i]?.["naba" + i]?.nabaData?.F);
+const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.F);
 const MW = 10;
-const getOrder = (item, k) => orderHKSH[i]?.[item + k]?.[`${item}Data`];
+const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
 const pret = ({ d, L }, i) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
@@ -90,7 +90,7 @@ const getValue = {
           </div>
           <SmthSelector
             v-if="HKSH.mountA === '2'"
-            v-bind="{ meta, order: orderHKSH[i], Name: 'mountA' }"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
             :index="i"
             :logic="() => filteredUchoN(HKSH.D)"
           />
@@ -109,13 +109,13 @@ const getValue = {
           </div>
           <SmthSelector
             v-if="HKSH.mountB === '1'"
-            v-bind="{ meta, order: orderHKSH[i], Name: 'mountB' }"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountB' }"
             :index="i"
             :logic="() => filteredCof(HKSH.d)"
           />
           <SmthSelector
             v-if="HKSH.mountB === '2'"
-            v-bind="{ meta, order: orderHKSH[i], Name: 'mountB' }"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountB' }"
             :index="i"
             :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
           />
@@ -140,42 +140,41 @@ const getValue = {
             />
           </div> -->
           <SmthSelector
-            v-bind="{ meta, order: orderHKSH[i], Name: 'dlaw' }"
+            v-bind="{ meta, order: HKSH.order, Name: 'dlaw' }"
             :index="i"
             :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]"
           />
         </article>
         <article class="kok">
-          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'tlok' }" :index="i" :logic="() => filteredTlok(HKSH.D)" />
+          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'tlok' }" :index="i" :logic="() => filteredTlok(HKSH.D)" />
         </article>
         <article class="kok">
-          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'dno' }" :index="i" :logic="() => filteredDno(HKSH.D)" />
+          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'dno' }" :index="i" :logic="() => filteredDno(HKSH.D)" />
         </article>
         <article class="kok">
           <SmthSelector
-            v-bind="{ meta, order: orderHKSH[i], Name: 'naba' }"
+            v-bind="{ meta, order: HKSH.order, Name: 'naba' }"
             :index="i"
             :logic="() => filteredNaba()"
             :after="afterNabaSelected"
           />
         </article>
         <article class="kok">
-          <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'pret' }" :index="i" :logic="() => pret(HKSH, i)" />
+          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'pret' }" :index="i" :logic="() => pret(HKSH, i)" />
         </article>
-        <SmthSelector v-bind="{ meta, order: orderHKSH[i], Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
+        <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
       </div>
     </div>
     <div class="right mx-auto">
       <OrderHKSH v-bind="{ orderHKSH, i, HKSH }" />
-      <DescriptionHKSH v-bind="{ order: orderHKSH[i], HKSH }" />
+      <DescriptionHKSH v-bind="{ order: HKSH.order, HKSH }" />
     </div>
   </div>
-  {{ orderHKSH }}
 </template>
 
 <style scoped>
 .art {
-  width: 75vw;
+  /* width: 100vw; */
 }
 article.kok:nth-of-type(odd) {
   background: #f5f5f548;
