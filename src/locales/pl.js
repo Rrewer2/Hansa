@@ -179,7 +179,7 @@ export default {
   descr15: ["↺ lewy"],
   descr16: ["↻ prawy"],
   descr17: ["Maksymalne ciśnienie nastawcze"],
-  descr18: ["Blok sterowniczy CETOP"],
+  descr18: ["Blok sterowniczy CETOP "],
   descr19: ["Liczba stacji"],
   descr20: ["szt"],
   descr21: ["Rozdzielacz startowy z suwakiem"],
