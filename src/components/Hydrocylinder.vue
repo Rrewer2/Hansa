@@ -38,6 +38,7 @@ const {
   nonReturn,
   flowControl,
   balance,
+  G,
   order,
   ...rest
 } = HKSH;

@@ -150,11 +150,11 @@ onMounted(() => {
         </div>
       </section>
 
-      <div class="flex-row flex-left my-2">
+      <!-- <div class="flex-row flex-left my-2">
         <button @click="getNewPowerUnit" class="btn-add" :title="text('btnPumpUnit', meta)" :disabled="project.length > 1">
           + {{ text("pumpUnit", meta) }}
         </button>
-      </div>
+      </div> -->
       <Scheme class="schemeMin" v-bind="{ project, meta, order, scale: 0.5 }" />
       <!-- <Picture class="picture" /> -->
     </article>
