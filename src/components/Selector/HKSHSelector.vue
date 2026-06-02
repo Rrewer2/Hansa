@@ -91,6 +91,12 @@ const getValue = {
             />
           </div>
           <SmthSelector
+            v-if="HKSH.mountA === '1'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
+            :index="i"
+            :logic="() => filteredCof(HKSH.d)"
+          />
+          <SmthSelector
             v-if="HKSH.mountA === '2'"
             v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
             :index="i"
