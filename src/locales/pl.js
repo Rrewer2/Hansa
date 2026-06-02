@@ -217,4 +217,13 @@ export default {
   dno: ["Denko cylindra"],
   dlawSeal: ["Uszczelnenia dławnicy"],
   tlokSeal: ["Uszczelnenia tłoka"],
+
+  Forceö: ["Siła", "kN"],
+  GKGö: ["Komplet uszczelnień"],
+  Fö: ["Gwint"],
+  lengthö: ["Długość", "mm"],
+  SMö: ["Faza", "mm"],
+  Pö: ["Sworzeń", "mm"],
+  toleranceö: ["Tolerancja średnicy wewnętrznej"],
+  ö: ["", ""],
 };

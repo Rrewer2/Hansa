@@ -12,33 +12,34 @@ import DescriptionHKSH from "../DescriptionHKSH.vue";
 import { text } from "../../services/text";
 
 const { HKSH, i, meta, orderHKSH } = defineProps(["HKSH", "i", "meta", "orderHKSH"]);
-const filteredDlaw = (D, d) => dlaw.filter(({ AL, S }) => +AL === D && +S === d);
-const filteredDlawSteel = (D, d) => dlawSteel.filter(({ AL, S }) => +AL === D && +S === d);
-const filteredTlok = (D) => tlok.filter(({ AL }) => +AL === D);
-const filteredDno = (D) => dno.filter(({ AL }) => +AL === D);
-const filteredWapr = (d) => wapr.filter(({ F }) => +F.match(/[\d.]+/)?.[0] < d && +F.match(/[\d.]+/)?.[0] >= 0.75 * d);
-const filteredUchoC = (d) => uchoC.filter(({ d2 }) => +d2 > d * 0.9 && +d2 < d * 1.2);
+const filteredDlaw = (D, d) => dlaw.filter(({ ALö, Sö }) => +ALö === D && +Sö === d);
+const filteredDlawSteel = (D, d) => dlawSteel.filter(({ ALö, Sö }) => +ALö === D && +Sö === d);
+const filteredTlok = (D) => tlok.filter(({ ALö }) => +ALö === D);
+const filteredDno = (D) => dno.filter(({ ALö }) => +ALö === D);
+const filteredWapr = (d) => wapr.filter(({ Fö }) => +Fö.match(/[\d.]+/)?.[0] < d && +Fö.match(/[\d.]+/)?.[0] >= 0.75 * d);
+const filteredUchoC = (d) => uchoC.filter(({ d2ö }) => +d2ö > d * 0.9 && +d2ö < d * 1.2);
 const filteredCof = (d) => [...cof, ...fl];
-//const filteredCof = (d) => [...cof, ...fl].filter(({ S }) => +S > d * 0.9 && +S < d * 1.2);
-const filteredCFL = (D) => cfl.filter(({ A }) => +A > D * 0.8 && +A < D * 1.2);
-const filteredUchoN = (D) => uchoN.filter(({ d1 }) => +d1 > 0.9 * D && +d1 < D * 1.2);
-const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ F }) => HKSH.G === F));
-const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.F);
+//const filteredCof = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.9 && +Sö < d * 1.2);
+const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
+const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö > 0.9 * D && +d1ö < D * 1.2);
+const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
+const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.Fö);
 const MW = 10;
 const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
 const pret = ({ d, L }, i) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
     material: el,
-    length: L + +getOrder("dlaw", i)?.L + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("mountB", i)?.LF + MW || 0,
+    lengthö:
+      L + +getOrder("dlaw", i)?.Lö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("mountB", i)?.LFö + MW || L * 1.5,
   }));
 };
 const rura = ({ D, L }) => {
   return ruras
-    .filter(({ DH8 }) => DH8 === D)
+    .filter(({ DH8ö }) => DH8ö === D)
     .map((el) => ({
       ...el,
-      length: L + +getOrder("dlaw", i)?.L1 + +getOrder("tlok", i)?.L + +getOrder("tlok", i)?.p + +getOrder("dno", i)?.S1 || 0,
+      lengthö: L + +getOrder("dlaw", i)?.L1ö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("dno", i)?.S1ö || L * 1.5,
     }));
 };
 const getValue = {

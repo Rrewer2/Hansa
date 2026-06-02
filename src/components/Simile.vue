@@ -15,7 +15,7 @@ const getDiffBetween = (orderStr, modelStr) => {
   order.forEach(([nr, title, N]) => {
     if (!title) return;
     if (title.match(/^KIT/i)) return (KIT = N);
-    orderObj[title] ? orderObj[title].push({ N: +N, nr }) : (orderObj[title] = [{ N: +N, nr }]);
+    orderObj[title] ? orderObj[title].push({ N: +N.replace(",", "."), nr }) : (orderObj[title] = [{ N: +N.replace(",", "."), nr }]);
   });
   const modelObj = {};
   model.forEach(([title, N]) => {
@@ -23,7 +23,9 @@ const getDiffBetween = (orderStr, modelStr) => {
     if (title.match(/^M\d+[A-Za-z]*/)) return;
     if (title.match(/rura|wąż|imb/gi)) return;
     const trimTitle = title.trim();
-    modelObj[trimTitle] ? modelObj[trimTitle].push(N * (KIT || 1)) : (modelObj[trimTitle] = [N * (KIT || 1)]);
+    modelObj[trimTitle]
+      ? modelObj[trimTitle].push(+N.replace(",", ".") * (KIT || 1))
+      : (modelObj[trimTitle] = [+N.replace(",", ".") * (KIT || 1)]);
   });
   const res = [];
   const res1 = [];
