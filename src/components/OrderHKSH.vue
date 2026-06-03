@@ -19,11 +19,11 @@ const normalize = () => {
       if (KIT[title]?.title) {
         KIT[title].count = n ? KIT[title].count + n : KIT[title].count + 1;
       } else {
-        const LENGTH = ruraData?.length || pretData?.length;
+        const LENGTH = ruraData?.lengthö || pretData?.lengthö;
         KIT[title] = {
           title,
           count: LENGTH ? (LENGTH / 1000).toLocaleString("pl-PL") : n ? n : 1,
-          JM: "szt",
+          JM: LENGTH ? "m" : "szt",
           opis: /^x/i.test(key) ? "Złączka" : /^vhr/i.test(key) ? "Korek" : key.replace(/\d+$/, ""),
           // opis: key
         };
