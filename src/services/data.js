@@ -2475,11 +2475,11 @@ export const cfl = [
   { title: "HKCFL0180325", Dö: "325", Cö: "270", Aö: "178", SMö: "12x45°", B2ö: "38", Gö: "6xØ28" },
 ];
 export const naba = [
-  { title: "HKCBS0600000", Fö: "G3/8″", Lö: "17", Dö: "26" },
-  { title: "HKCBS0400000", Fö: "G1/4″", Lö: "17", Dö: "20" },
-  { title: "HKCBS0800000", Fö: "G1/2″", Lö: "18", Dö: "30" },
-  { title: "HKCBS1200000", Fö: "G3/4″", Lö: "20", Dö: "38" },
-  { title: "HKCBS1600000", Fö: "G1″", Lö: "25", Dö: "45" },
+  { title: "HKCBS0400000", Fö: "G1/4″", Lö: "17", Dö: "20", addition: { naba: { title: "HKCBS0400000" } } },
+  { title: "HKCBS0600000", Fö: "G3/8″", Lö: "17", Dö: "26", addition: { naba: { title: "HKCBS0600000" } } },
+  { title: "HKCBS0800000", Fö: "G1/2″", Lö: "18", Dö: "30", addition: { naba: { title: "HKCBS0800000" } } },
+  { title: "HKCBS1200000", Fö: "G3/4″", Lö: "20", Dö: "38", addition: { naba: { title: "HKCBS1200000" } } },
+  { title: "HKCBS1600000", Fö: "G1″", Lö: "25", Dö: "45", addition: { naba: { title: "HKCBS1600000" } } },
 ];
 const H8 = [
   { title: " K-025H8-35" },
