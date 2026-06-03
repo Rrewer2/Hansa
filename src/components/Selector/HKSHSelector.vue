@@ -21,7 +21,7 @@ const filteredUchoC = (d) => uchoC.filter(({ d2ö }) => +d2ö > d * 0.9 && +d2ö
 const filteredCof = (d) => [...cof, ...fl];
 //const filteredCof = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.9 && +Sö < d * 1.2);
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
-const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.8 * D && +d1ö <= D);
+const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
 const filteredThreadD = (D) => filteredWapr(D);
 const filteredThreadd = (d) => filteredWapr(d);
