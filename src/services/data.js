@@ -24,7 +24,6 @@ export const HKSHMountd = {
   1: "mountRigidBushing",
   2: "mountSwivelBearing",
   5: "mountRodFlange",
-  6: "mountFeet",
   7: "mountBall",
   8: "mountThroughRod",
   W: "mountForked",
