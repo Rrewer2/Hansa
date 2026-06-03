@@ -28,7 +28,7 @@ const filteredThreadd = (d) => filteredWapr(d);
 const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.Fö);
 const MW = 10;
 const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
-const pret = ({ d, L }, i) => {
+const pret = ({ d, L }) => {
   return ["20MNV6", "CK45", "CK45IH", "42CRMO4", "42CRMO4UH", "AISI304"].map((el) => ({
     title: "K-" + d + "CR-" + el,
     material: el,
@@ -189,9 +189,11 @@ const getValue = {
           />
         </article>
         <article class="kok">
-          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'pret' }" :index="i" :logic="() => pret(HKSH, i)" />
+          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'pret' }" :index="i" :logic="() => pret(HKSH)" />
         </article>
-        <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
+        <article class="kok">
+          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
+        </article>
       </div>
     </div>
     <div class="right mx-auto">
