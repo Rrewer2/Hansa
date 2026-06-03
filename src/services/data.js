@@ -594,7 +594,12 @@ const gearPumpRexroth = [
     HKK20CON: { CC: 7.54, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "1: 8", pmax: 210, holePattern: "40 x 40 - Ø32" },
     HKK21CON: { CC: 9.88, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "1: 8", pmax: 190, holePattern: "40 x 40 - Ø32" },
   },
-  {},
+  {
+    HKAZPJ012RH030MB: { CC: 12, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    HKAZPJ014RH030MB: { CC: 14, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    HKAZPJ016RH030MB: { CC: 16, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+    HKAZPJ019RH030MB: { CC: 19, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 250, holePattern: "96.2 x 71.5 - Ø36.5" },
+  },
   {},
 ];
 const gearPumpWPH = [
