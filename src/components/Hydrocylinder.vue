@@ -12,8 +12,8 @@ const getValue = {
   d: "",
   z: [1, 2, 3, 4, 5, 6, 7, 8],
   spool: spoolTypes,
-  mountA: HKSHMountD,
-  mountB: HKSHMountd,
+  mountD: HKSHMountD,
+  mountd: HKSHMountd,
   form: ["⇑", "⇓", "⇐", "⇒"],
   throttle: ["", "012", "013", "014", "022", "023", "024"],
   check: ["", "011", "012", "013", "014", "016"],
@@ -25,8 +25,8 @@ const getValue = {
 };
 const {
   id,
-  mountA,
-  mountB,
+  mountD,
+  mountd,
   spool,
   throttle,
   check,
@@ -53,8 +53,8 @@ const {
       </h2>
       <div
         v-for="(_, i) in {
-          mountA,
-          mountB,
+          mountD,
+          mountd,
           form,
           spool,
           throttle,
@@ -70,7 +70,7 @@ const {
       >
         <InputItem :data="i">
           <select v-model="HKSH[i]" :id="id + i" class="w-75" :disabled="pumpData.same">
-            <option v-if="i === 'mountA' || i === 'mountB'" v-for="(elem, j) in getValue[i]" :value="j" class="tal">
+            <option v-if="i === 'mountD' || i === 'mountd'" v-for="(elem, j) in getValue[i]" :value="j" class="tal">
               {{ j }} {{ text(elem) }}
             </option>
             <option v-else v-for="elem in getValue[i]" :value="elem">

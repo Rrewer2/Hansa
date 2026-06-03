@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { text } from "../services/text";
 import CopyText from "./Selector/CopyText.vue";
+import { HKSHMountD, HKSHMountd } from "../services/data";
 
 const { order, HKSH } = defineProps(["order", "HKSH"]);
 
@@ -11,9 +12,9 @@ const description = computed(() => {
   arr.push(text(`Średnica tłoka: ${HKSH.D} [mm]`));
   arr.push(text(`Średnica tłoczyska: ${HKSH.d} [mm]`));
   arr.push(text(`Skok: ${HKSH.L} [mm]`));
-  arr.push(text(`Przyłącza olejowe: ${order?.naba0?.nabaData?.F || "-"}`));
-  arr.push(text(`Mocowanie od strony tłoczyska: ${HKSH.mountB}`));
-  arr.push(text(`Mocowanie od strony denka: ${HKSH.mountB}`));
+  arr.push(text(`Przyłącza olejowe: ${order?.naba0?.nabaData?.Fö || "-"}`));
+  arr.push(text(`Mocowanie od strony tłoczyska: ${text(HKSHMountd[HKSH.mountd])}`));
+  arr.push(text(`Mocowanie od strony denka: ${text(HKSHMountD[HKSH.mountD])}`));
   arr.push(text(`Ciśnienie robocze: 200 [bar]`));
   arr.push(text(`Tłumienie: bez tłumienia`));
   arr.push(text(`Olej hydrauliczny: HLP/HVLP zgodnie z DIN 51524; ISO-VG 22 do 68`));

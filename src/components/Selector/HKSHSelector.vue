@@ -23,6 +23,8 @@ const filteredCof = (d) => [...cof, ...fl];
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö > 0.9 * D && +d1ö < D * 1.2);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
+const filteredThreadD = (D) => filteredWapr(D);
+const filteredThreadd = (d) => filteredWapr(d);
 const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.Fö);
 const MW = 10;
 const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
@@ -31,7 +33,7 @@ const pret = ({ d, L }, i) => {
     title: "K-" + d + "CR-" + el,
     material: el,
     lengthö:
-      L + +getOrder("dlaw", i)?.Lö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("mountB", i)?.LFö + MW || L * 1.5,
+      L + +getOrder("dlaw", i)?.Lö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("mountd", i)?.LFö + MW || L * 1.5,
   }));
 };
 const rura = ({ D, L }) => {
@@ -47,8 +49,8 @@ const getValue = {
   d: "",
   G: ["", "G3/8″", "G1/4″", "G1/2″", "G3/4″", "G1″"],
   z: [1, 2, 3, 4, 5, 6, 7, 8],
-  mountA: HKSHMountD,
-  mountB: HKSHMountd,
+  mountD: HKSHMountD,
+  mountd: HKSHMountd,
 };
 // const dlawType = ref("HKCG");
 </script>
@@ -59,11 +61,11 @@ const getValue = {
       <h2>{{ HKSHTitle(HKSH) }}</h2>
       <div class="flex-row">
         <div
-          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountA: HKSH.mountA, mountB: HKSH.mountB, z: HKSH.z, G: HKSH.G }"
+          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountD: HKSH.mountD, mountd: HKSH.mountd, z: HKSH.z, G: HKSH.G }"
           class="flex-row ml-5"
         >
           <InputItem :data="i">
-            <select v-if="i === 'mountA' || i === 'mountB'" v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
+            <select v-if="i === 'mountD' || i === 'mountd'" v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
               <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>
             </select>
             <input v-else-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="HKSH.id + i" class="input w-75" />
@@ -86,26 +88,32 @@ const getValue = {
               :src="image"
               :alt="i"
               class="imgLogo rotate270"
-              :class="{ active: HKSH.mountA === i }"
+              :class="{ active: HKSH.mountD === i }"
               :key="i"
-              @click="HKSH.mountA = i"
+              @click="HKSH.mountD = i"
             />
           </div>
           <SmthSelector
-            v-if="HKSH.mountA === '1'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
+            v-if="HKSH.mountD === '0'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
+            :index="i"
+            :logic="() => filteredThreadD(HKSH.D)"
+          />
+          <SmthSelector
+            v-if="HKSH.mountD === '1'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
             :index="i"
             :logic="() => filteredCof(HKSH.d)"
           />
           <SmthSelector
-            v-if="HKSH.mountA === '2'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
+            v-if="HKSH.mountD === '2'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
             :index="i"
             :logic="() => filteredUchoN(HKSH.D)"
           />
           <SmthSelector
-            v-if="HKSH.mountA === '3' || HKSH.mountA === '4'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountA' }"
+            v-if="HKSH.mountD === '3' || HKSH.mountD === '4'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
             :index="i"
             :logic="() => filteredCFL(HKSH.D)"
           />
@@ -113,24 +121,30 @@ const getValue = {
         <article class="kok">
           <div class="container">
             <img
-              v-for="(image, i) in { 0: links.mountB2, 1: links.HKCOF, 2: links.HKCSTSC, W: links.HKCFF }"
+              v-for="(image, i) in { 0: links.mountd2, 1: links.HKCOF, 2: links.HKCSTSC, W: links.HKCFF }"
               :src="image"
               :alt="i"
               class="imgLogo rotate90"
-              :class="{ active: HKSH.mountB === i }"
+              :class="{ active: HKSH.mountd === i }"
               :key="i"
-              @click="HKSH.mountB = i"
+              @click="HKSH.mountd = i"
             />
           </div>
           <SmthSelector
-            v-if="HKSH.mountB === '1'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountB' }"
+            v-if="HKSH.mountd === '0'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
+            :index="i"
+            :logic="() => filteredThreadd(HKSH.d)"
+          />
+          <SmthSelector
+            v-if="HKSH.mountd === '1'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
             :logic="() => filteredCof(HKSH.d)"
           />
           <SmthSelector
-            v-if="HKSH.mountB === '2'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountB' }"
+            v-if="HKSH.mountd === '2'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
             :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
           />
