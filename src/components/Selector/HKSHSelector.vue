@@ -121,7 +121,7 @@ const getValue = {
         <article class="kok">
           <div class="container">
             <img
-              v-for="(image, i) in { 0: links.mountd2, 1: links.HKCOF, 2: links.HKCSTSC, W: links.HKCFF }"
+              v-for="(image, i) in { 0: links.mountB2, 1: links.HKCOF, 2: links.HKCSTSC, W: links.HKCFF }"
               :src="image"
               :alt="i"
               class="imgLogo rotate90"
