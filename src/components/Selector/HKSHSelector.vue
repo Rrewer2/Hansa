@@ -18,8 +18,8 @@ const filteredTlok = (D) => tlok.filter(({ ALö }) => +ALö === D);
 const filteredDno = (D) => dno.filter(({ ALö }) => +ALö === D);
 const filteredWapr = (d) => wapr.filter(({ Fö }) => +Fö.match(/[\d.]+/)?.[0] < d && +Fö.match(/[\d.]+/)?.[0] >= 0.75 * d);
 const filteredUchoC = (d) => uchoC.filter(({ d2ö }) => +d2ö > d * 0.9 && +d2ö < d * 1.2);
-const filteredCof = (d) => [...cof, ...fl];
-//const filteredCof = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.9 && +Sö < d * 1.2);
+const filteredCofD = (D) => [...cof, ...fl].filter(({ Bö }) => +Bö > D * 0.9 && +Bö < D * 1.2);
+const filteredCofd = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.95 && +Sö < d * 1.2);
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
@@ -103,7 +103,7 @@ const getValue = {
             v-if="HKSH.mountD === '1'"
             v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
             :index="i"
-            :logic="() => filteredCof(HKSH.d)"
+            :logic="() => filteredCofD(HKSH.D)"
           />
           <SmthSelector
             v-if="HKSH.mountD === '2'"
@@ -140,7 +140,7 @@ const getValue = {
             v-if="HKSH.mountd === '1'"
             v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
-            :logic="() => filteredCof(HKSH.d)"
+            :logic="() => filteredCofd(HKSH.d)"
           />
           <SmthSelector
             v-if="HKSH.mountd === '2'"
