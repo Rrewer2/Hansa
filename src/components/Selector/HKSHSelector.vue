@@ -150,7 +150,7 @@ const getValue = {
             :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
           />
           <SmthSelector
-            v-if="HKSH.mountD === '7'"
+            v-if="HKSH.mountd === '7'"
             v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
             :logic="() => filteredCSB(HKSH.d)"
