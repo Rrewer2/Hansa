@@ -34,6 +34,9 @@ const HKCPB =
 const HKCOF = 
   "https://hf-cdn-prod.azureedge.net/medias/PF-HK-COF-600x600-1778112562907.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8Mzg0MjEzfGltYWdlL2pwZWd8YUdRNEwyaGxOQzh4TVRBeE56VTNPVEl6TXpNeE1DOVFSbDlJUzE5RFQwWmZOakF3ZURZd01GOHhOemM0TVRFeU5UWXlPVEEzTG1wd1p3fGIzZGYzNzhlNzU5ZTA3M2I4MmRlZmVkMGQxMmU4MmY5ZjczZWNkYWJhODYyMzhhZjJiMjc5NGVhOTM0MTEzNjk";
 
+const HKCSB = 
+  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CSB-900x900-1778112576935.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjQxOTEyfGltYWdlL2pwZWd8YUdKakwyZ3hOQzh4TVRBeE56VTRNRGszTURBeE5DOVFSbDlJUzE5RFUwSmZPVEF3ZURrd01GOHhOemM0TVRFeU5UYzJPVE0xTG1wd1p3fGQxYjBlN2Q3NmZlNTBhNGU3OWE2YjNmZWQyZDI0MDI4OTc0MmJiN2RlMzY0MDg4ZGQzOGY2NGNhZDEwZjUwYmY";
+
 export const links = {
   HKWAPR,
   HKCSTSC,
@@ -47,6 +50,7 @@ export const links = {
   HKCPB,
   mountB2,
   HKCOF,
+  HKCSB
 };
 // export const links = {
 //   mountB2: { name: "mountB2", link: mountB2, kod: 0 },
