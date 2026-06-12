@@ -1,7 +1,7 @@
 <script setup>
 // import { ref } from "vue";
 import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr } from "../../services/data";
-import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl, csb } from "../../services/data";
+import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl, csb, cff } from "../../services/data";
 import { HKSHTitle, filtrationD } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
@@ -22,6 +22,7 @@ const filteredCofD = (D) => [...cof, ...fl].filter(({ Bö }) => +Bö > D * 0.9 &
 const filteredCofd = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.95 && +Sö < d * 1.2);
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
 const filteredCSB = (d) => csb;
+const filteredCFF = (d) => cff.filter(({ Fö }) => +Fö.match(/[\d.]+/)?.[0] < d && +Fö.match(/[\d.]+/)?.[0] >= 0.75 * d);
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
 const filteredThreadD = (D) => filteredWapr(D);
@@ -154,6 +155,12 @@ const getValue = {
             v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
             :logic="() => filteredCSB(HKSH.d)"
+          />
+          <SmthSelector
+            v-if="HKSH.mountd === 'W'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
+            :index="i"
+            :logic="() => filteredCFF(HKSH.d)"
           />
         </article>
         <article class="kok">
