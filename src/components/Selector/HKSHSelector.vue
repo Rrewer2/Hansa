@@ -118,12 +118,6 @@ const getValue = {
             :index="i"
             :logic="() => filteredCFL(HKSH.D)"
           />
-          <SmthSelector
-            v-if="HKSH.mountD === '7'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredCSB(HKSH.d)"
-          />
         </article>
         <article class="kok">
           <div class="container">
@@ -154,6 +148,12 @@ const getValue = {
             v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
             :index="i"
             :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
+          />
+          <SmthSelector
+            v-if="HKSH.mountD === '7'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
+            :index="i"
+            :logic="() => filteredCSB(HKSH.d)"
           />
         </article>
         <article class="kok">
