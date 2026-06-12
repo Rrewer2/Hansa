@@ -1,7 +1,7 @@
 <script setup>
 // import { ref } from "vue";
 import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr } from "../../services/data";
-import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl } from "../../services/data";
+import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl, csb } from "../../services/data";
 import { HKSHTitle, filtrationD } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
@@ -21,6 +21,7 @@ const filteredUchoC = (d) => uchoC.filter(({ d2ö }) => +d2ö > d * 0.9 && +d2ö
 const filteredCofD = (D) => [...cof, ...fl].filter(({ Bö }) => +Bö > D * 0.9 && +Bö < D * 1.2);
 const filteredCofd = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.95 && +Sö < d * 1.2);
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
+const filteredCSB = (d) => csb;
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
 const filteredThreadD = (D) => filteredWapr(D);
@@ -116,6 +117,12 @@ const getValue = {
             v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
             :index="i"
             :logic="() => filteredCFL(HKSH.D)"
+          />
+          <SmthSelector
+            v-if="HKSH.mountD === '7'"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
+            :index="i"
+            :logic="() => filteredCSB(HKSH.d)"
           />
         </article>
         <article class="kok">
