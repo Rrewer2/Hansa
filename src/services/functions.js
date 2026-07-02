@@ -21,6 +21,8 @@ export const getStandartTank = ({ tank }, T) => tankData[tank].filter(({ Size })
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
+const QforPistonPump = (Power, maxPressure) => (Power * 500) / maxPressure;
+export const getQforPistonPump = ({ project, k, pumpData }) => ({ minQ: Math.min(QforPistonPump(project[k].P, pumpData.maxPressure), pumpData.Q) });
 export const setPressure = (unit, P) => (unit[0].Q ? (unit[0].p = round(pressure(unit[0].Q, P), 1)) : {});
 export const reducedPower = (unit) => unit.map(({ Q, p, DBD }) => Power(Q, getPressure({ DBD, p }))).reduce((a, b) => a + b); // Сукупна потужність
 export const getStandartPower = (P) => motorData.find((N) => N >= 0.97 * P); //Потужність каталогова
@@ -101,11 +103,11 @@ export const agregatTitle = (project, meta, order) => {
   const motor = P.some((el) => el) ? `${P.join("/")}` : "";
   const pump = Q.some((el) => el) ? `${Q.join("/")}` : "";
   const pressure = pmax ? `${pmax}` : "";
-  const extra = order.frames?.title ? "-ZAB" : "";
+  // const extra = order.frames?.title ? "-ZAB" : "";
   const sp1 = tank && motor ? "-" : "";
   const sp2 = pump && motor ? "-" : "";
   const sp3 = pump && pressure ? "." : "";
-  return tank + sp1 + motor + sp2 + pump + sp3 + pressure + extra;
+  return tank + sp1 + motor + sp2 + pump + sp3 + pressure;
 };
 
 export const agregatCounting = (project) => getT(getQfromProject(project));

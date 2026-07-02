@@ -7,13 +7,13 @@ export const standartDiameters = [
 export const bucklingSafety = 5;
 
 export const HKSHMountD = {
-  0: "mountThread",
+  // 0: "mountThread",
   1: "mountRigidBushing",
   2: "mountSwivelBearing",
   3: "mountGlandFlange",
   4: "mountBottomFlange",
   6: "mountFeet",
-  7: "mountBall",
+  // 7: "mountBall",
   9: "mountPins",
   W: "mountForked",
   X: "mountOther",
@@ -23,7 +23,7 @@ export const HKSHMountd = {
   0: "mountThread",
   1: "mountRigidBushing",
   2: "mountSwivelBearing",
-  5: "mountRodFlange",
+  // 5: "mountRodFlange",
   7: "mountBall",
   8: "mountThroughRod",
   W: "mountForked",

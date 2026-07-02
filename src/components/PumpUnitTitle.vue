@@ -1,5 +1,5 @@
 <script setup>
-import { engineMountData, freqData, motorData } from "../services/data";
+import { engineMountData, freqData, motorData, pumpData } from "../services/data";
 import { powerCounting, setPressure, unitTitle } from "../services/functions";
 import InputItem from "./InputItem.vue";
 import ResultItem from "./ResultItem.vue";
@@ -37,6 +37,13 @@ const { id, unit, ...rest } = project[k];
         </InputItem>
       </div>
       <ResultItem :data="powerCounting(unit)" />
+      <InputItem data="pumpType">
+        <select v-model="meta.pumpType" id="pumpType">
+          <option v-for="item in Object.keys(pumpData)" :value="item">
+            {{ text(item) }}
+          </option>
+        </select>
+      </InputItem>
     </div>
   </div>
 </template>

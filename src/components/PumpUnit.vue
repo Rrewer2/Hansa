@@ -1,6 +1,5 @@
 <script setup>
-import Hydrocylinder from "./Hydrocylinder.vue";
-import { buckling, pumpCounting, getVFU, round } from "../services/functions";
+import { buckling, pumpCounting, getVFU, round, getQforPistonPump } from "../services/functions";
 import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 import { spoolTypes } from "../services/data";
@@ -33,12 +32,14 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
           <input
             v-if="ind === 'Q'"
             type="number"
-            min="0" max="350"
+            min="0"
+            max="350"
             v-model="pumpData[ind]"
             :disabled="order[`pump${i}-${k}`]?.title"
             :id="id + ind"
           />
           <input v-if="ind === 'p'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'maxPressure'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
           <input v-if="ind === 'DBD'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
           <input v-if="ind === 'aku'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
           <select v-if="ind === 'DR2type'" v-model="pumpData.DR2type" class="w-100" :disabled="same" :id="id + ind">
@@ -60,7 +61,7 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
           </select>
         </InputItem>
       </div>
-
+      <ResultItem :data="getQforPistonPump({ project, k, pumpData })" />
       <ResultItem :data="pumpCounting(pumpData)" />
     </div>
 
