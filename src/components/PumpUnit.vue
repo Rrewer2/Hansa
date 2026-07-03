@@ -39,7 +39,7 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
             :id="id + ind"
           />
           <input v-if="ind === 'p'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
-          <input v-if="ind === 'maxPressure' && meta.pumpType === 'piston'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
+          <input v-if="ind === 'maxPressure'" type="number" min="0" max="700" v-model="pumpData[ind]" :id="id + ind" />
           <input v-if="ind === 'DBD'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
           <input v-if="ind === 'aku'" type="number" min="0" max="350" v-model="pumpData[ind]" :id="id + ind" />
           <select v-if="ind === 'DR2type'" v-model="pumpData[ind]" class="w-100" :disabled="same" :id="id + ind">
