@@ -947,6 +947,7 @@ export const couplingData = [
   { title: "HKR2428-19.05A", pump: "HKJV15", size: 112 },
   { title: "HKR2428-22.22F", pump: "HKJV23", size: 100 },
   { title: "HKR2428-22.22F", pump: "HKJV23", size: 112 },
+  { title: "HKR2838-22.22F", pump: "HKJV23", size: 132 },
   { title: "HKR2838-18", pump: "HKA10VSO18", size: 132 },
   { title: "HKR2838-19.05A", pump: "HKJV15", size: 132 },
   { title: "HKR2838-22", pump: "HKA10VSO28", size: 132 },
