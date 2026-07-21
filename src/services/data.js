@@ -1074,6 +1074,12 @@ const spoolAtos = [
   { title: "HKDHE0716X00DC", spool: "L", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 }, coil: { title: "HKSPCOE24DC", n: 2 } } },
   { title: "HKDHE0718X00DC", spool: "M", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 }, coil: { title: "HKSPCOE24DC", n: 2 } } },
   { title: "HKDHE0717X00DC", spool: "U", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 }, coil: { title: "HKSPCOE24DC", n: 2 } } },
+
+  { title: "HKDHA06312M724", spool: "D", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } },
+  { title: "HKDHA0713M724", spool: "J", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDHA0710M724", spool: "H", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDHA0711M724", spool: "E", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
+  { title: "HKDHA0714M724", spool: "G", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
 ];
 const spoolAtosCetop5 = [
   { title: "HKDKE1710X00DC", spool: "H", CETOP: 5, addition: { valvePlug: { title: "HKSP66824", n: 2 }, coil: { title: "HKSPCAE24DC", n: 2 } } },
