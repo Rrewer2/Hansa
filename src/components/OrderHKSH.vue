@@ -62,7 +62,9 @@ async function loadData() {
 const totalPrice = () => {
   let res = 0;
   for (let key in cracked.value) {
-    res += +cracked.value[key]?.price.replace(/\s/g, "").replace(".", "").replace(",", ".") * cracked.value[key]?.count;
+    res +=
+      +cracked.value[key]?.price.replace(/\s/g, "").replace(".", "").replace(",", ".") *
+      +("" + cracked.value[key]?.count).replace(",", ".");
   }
   return res;
 };

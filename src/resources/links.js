@@ -1,41 +1,28 @@
-const HKWAPR =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-WAPR-900x900-1778112451393.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NzY4Mzc0fGltYWdlL2pwZWd8YURaaUwyaGlZaTh4TVRBeE56VTJOek13TlRjMU9DOVFSbDlJUzE5WFFWQlNYemt3TUhnNU1EQmZNVGMzT0RFeE1qUTFNVE01TXk1cWNHY3wyMDA5NzFjN2Q4ZDQ3MWYyOTFiZTRiZjQ5MmUyMDllMWViYTU3ZWYzZWE3YWVlNDVmYWNkOTA4OWU0N2Q0NmMw";
+const HKWAPR = "/HKWAPR.jpg";
 
-const HKCSTSC =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CSTS-C-900x900-1778112445734.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjYzODc0fGltYWdlL2pwZWd8YUdGaUwyaGtZaTh4TVRBeE56VTJOak00T0RJMU5DOVFSbDlJUzE5RFUxUlRYME5mT1RBd2VEa3dNRjh4TnpjNE1URXlORFExTnpNMExtcHdad3wwZWFlYzU1NzM5Y2I4ODk1OTI0MzkzZjNiYWFmZjEwNTI3ZGQzMTU1OGRkMmJkZTExMTQ0NGRjMzQxMDNmNzkz";
+const HKCSTSC = "/HKCSTSC.jpg";
 
-const HKCSTSN =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CSTS-N-900x900-1778112448685.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8Njc2MTM4fGltYWdlL2pwZWd8YURSakwyaGxPUzh4TVRBeE56VTJOamM0TVRRM01DOVFSbDlJUzE5RFUxUlRYMDVmT1RBd2VEa3dNRjh4TnpjNE1URXlORFE0TmpnMUxtcHdad3w4YTE5ODgwMjM2NzFjMmMzNmI3ODdmYWY4ZWEzMzg1NjlhODViMTA4ZjNhNWY1ZTcyOTlmZTM4ZTRhNGFkYzc5";
+const HKCSTSN = "/HKCSTSN.jpg";
 
-const HKCFS =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CFS-900x900-1778112438627.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NzAzMTE4fGltYWdlL2pwZWd8YURrMkwyZzJZUzh4TVRBeE56VTJOVEUwTXpBM01DOVFSbDlJUzE5RFJsTmZPVEF3ZURrd01GOHhOemM0TVRFeU5ETTROakkzTG1wd1p3fGRkNzFjNTllODc1OTgwMjdiOTI3Y2M2YmM2MWRmMzBhZjI0Mjc2Zjg2M2MwOTdjYTI4YjJmMzI1MGE4Y2U2ZWQ";
+const HKCFS = "/HKCFS.jpg";
 
-const HKFL =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-FL-900x900-1778112567799.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjkzNTI0fGltYWdlL2pwZWd8YURsbEwyaG1ZeTh4TVRBeE56VTNPVGt5TVRRek9DOVFSbDlJUzE5R1RGODVNREI0T1RBd1h6RTNOemd4TVRJMU5qYzNPVGt1YW5CbnwyOWQ3ZDMzNWIwMDgxNTQzZjBlMDlhODk1OGFmYTNiOTExODBhYmY3NTcyOWNjNzY2ZTkzYjRiNzNiMmZjOTkz";
+const HKFL = "/HKFL.jpg";
 
-const HKCFF =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CFF-900x900-1728395785517.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NzM2NzA4fGltYWdlL2pwZWd8YURKaUwyZzFNUzg1TnpNM01EazFOamMxT1RNMEwxQkdYMGhMWDBOR1JsODVNREI0T1RBd1h6RTNNamd6T1RVM09EVTFNVGN1YW5Cbnw1OTIzZWY2ODdlODRiMjUzOTM2ZDAwYzQ0NzJjNDQ1ZTIzZDRmNzllMzMyMWVmZjYwZDMzYjFmMTNmYzM5MGMy";
+const HKCFF = "/HKCFF.jpg";
 
-const HKCGPM =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CGPM-900x900-1778112696259.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NTg1ODcwfGltYWdlL2pwZWd8YUdSbUwyaGxNeTh4TVRBeE56VTVOVFF5TURjd01pOVFSbDlJUzE5RFIxQk5Yemt3TUhnNU1EQmZNVGMzT0RFeE1qWTVOakkxT1M1cWNHY3w2OWQzMWEyODY2MWE1NTEwZTY3N2QyMjNmMTZlMjA0MDI2ZGM2N2VhZjY3ZTIxM2YzMTZiNDE0OTYyYTBjMTY2";
+const HKCGPM = "/HKCGPM.jpg";
 
-const HKCG =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CG-900x900-1778112677742.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjQzNjExfGltYWdlL2pwZWd8YUdNeEwyZzBZaTh4TVRBeE56VTVNamd6TWpBek1DOVFSbDlJUzE5RFIxODVNREI0T1RBd1h6RTNOemd4TVRJMk56YzNOREl1YW5CbnxmODA0NWU0Y2UzNjk4YTQ5NGM4ODA4MWQ3YWUyMjhkM2NlNDQzMjRjOTMwOGZiN2M1MTRjM2IyYTcyYjBmNGFm";
+const HKCG = "/HKCG.jpg";
 
-const mountB2 =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-SBL-900x900-1778112843746.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NDI5MzQyfGltYWdlL2pwZWd8YUdVM0wyZzBZUzh4TVRBeE56WXhNakk1TmpJeU1pOVFSbDlJUzE5VFFreGZPVEF3ZURrd01GOHhOemM0TVRFeU9EUXpOelEyTG1wd1p3fDI2ZGVlM2EyMzMwNmU4MDM3ZDY5NzI5MmFmMGQ5NWY0NjhlNjRkMzU2ZmI0ODQ3ZWZkZjMxMDRiZDQ1YzA5OWE";
+const mountB2 = "/MOUNTB2.jpg";
 
-const HKCFL =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CFL-900x900-1753668187632.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjI1MzEwfGltYWdlL2pwZWd8YURZNEwyaGlZeTh4TURNNU9ETTVNek13TXpBM01DOVFSbDlJUzE5RFJreGZPVEF3ZURrd01GOHhOelV6TmpZNE1UZzNOak15TG1wd1p3fGEzZDIwMzFiODlkNWM3ODg0NzE5Yzk2MGNkNzBhYzBmYzFkMWE1NDE4YWNjY2UxMjhhZDJhYWI5ZGUwYmNkYzc";
+const HKCFL = "/HKCFL.jpg";
 
-const HKCPB =
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CPB-900x900-1778112571746.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjYwMDAwfGltYWdlL2pwZWd8YUdOaUwyZ3dNeTh4TVRBeE56VTRNREl4TmpNMU1DOVFSbDlJUzE5RFVFSmZPVEF3ZURrd01GOHhOemM0TVRFeU5UY3hOelEyTG1wd1p3fDAwOTQyMGNiZjA1Zjk2Yzg2YzIyMzI5NGIzNzQwOGZmZmZiZTJiZjAyYTk2NDgzMzlhNjUxMzNhM2IxNjM3ZjI";
+const HKCPB = "/HKCPB.jpg";
 
-const HKCOF = 
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-COF-600x600-1778112562907.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8Mzg0MjEzfGltYWdlL2pwZWd8YUdRNEwyaGxOQzh4TVRBeE56VTNPVEl6TXpNeE1DOVFSbDlJUzE5RFQwWmZOakF3ZURZd01GOHhOemM0TVRFeU5UWXlPVEEzTG1wd1p3fGIzZGYzNzhlNzU5ZTA3M2I4MmRlZmVkMGQxMmU4MmY5ZjczZWNkYWJhODYyMzhhZjJiMjc5NGVhOTM0MTEzNjk";
+const HKCOF = "/HKCOF.jpg";
 
-const HKCSB = 
-  "https://hf-cdn-prod.azureedge.net/medias/PF-HK-CSB-900x900-1778112576935.jpg?context=bWFzdGVyfGhvdGZvbGRlci1pbXBvcnR8NjQxOTEyfGltYWdlL2pwZWd8YUdKakwyZ3hOQzh4TVRBeE56VTRNRGszTURBeE5DOVFSbDlJUzE5RFUwSmZPVEF3ZURrd01GOHhOemM0TVRFeU5UYzJPVE0xTG1wd1p3fGQxYjBlN2Q3NmZlNTBhNGU3OWE2YjNmZWQyZDI0MDI4OTc0MmJiN2RlMzY0MDg4ZGQzOGY2NGNhZDEwZjUwYmY";
+const HKCSB = "/HKCSB.jpg";
 
 export const links = {
   HKWAPR,
@@ -50,21 +37,5 @@ export const links = {
   HKCPB,
   mountB2,
   HKCOF,
-  HKCSB
+  HKCSB,
 };
-// export const links = {
-//   mountB2: { name: "mountB2", link: mountB2, kod: 0 },
-//   HKWAPR: { name: "HKWAPR", link: HKWAPR, kod: 1 },
-//   HKCSTSC: { name: "HKCSTSC", link: HKCSTSC, kod: 2 },
-//   HKCFL: { name: "HKCFL", link: HKCFL, kod: 3 },
-//   HKCFL: { name: "HKCFL", link: HKCFL, kod: 4 },
-//   HKCPB: { name: "HKCPB", link: HKCPB, kod: 9 },
-//   HKCFF: { name: "HKCFF", link: HKCFF, kod: "W" },
-
-//   mountB2: { name: "mountB2", link: mountB2, kod: 0 },
-//   HKFL: { name: "HKFL", link: HKFL, kod: 1 },
-//   HKCSTSN: { name: "HKCSTSN", link: HKCSTSN, kod: 2 },
-//   HKCFS: { name: "HKCFS", link: HKCFS, kod: "W" },
-//   HKCG,
-//   HKCGPM,
-// };
