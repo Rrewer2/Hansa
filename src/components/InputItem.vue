@@ -1,7 +1,9 @@
 <script setup>
+import { ref } from "vue";
 import { text } from "../services/text";
 
 const { data } = defineProps(["data"]);
+const option = ref(text(data).split(", ")[1]); //TODO: get this ref out to global
 </script>
 
 <template>
@@ -11,7 +13,17 @@ const { data } = defineProps(["data"]);
     </h4>
     <div class="input-group">
       <slot></slot>
-      <i v-if="text(data).split(', ')[1]" class="unit px-5">{{ text(data).split(", ")[1] }}</i>
+      <select v-if="text(data).split(', ')[2]" v-model="option">
+        <option
+          v-for="j in text(data)
+            .split(', ')
+            .filter((_, i) => i)"
+          :value="j"
+        >
+          {{ j }}
+        </option>
+      </select>
+      <i v-else-if="text(data).split(', ')[1]" class="unit px-5">{{ text(data).split(", ")[1] }}</i>
     </div>
   </div>
 </template>
