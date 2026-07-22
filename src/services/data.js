@@ -2252,11 +2252,15 @@ export const extra = {
     { title: "HKOEWBAKRA30", tank: 30 },
     { title: "K-HAG.OEWBAKRA44", tank: 44 },
     { title: "HKOEWBAKRA44", tank: 40 },
-    { title: "K-HAG.OEWBAKRA701", tank: 70 },
+    { title: "K-HKOEWBAKRA70-1", tank: 70, addition: { trayBar: { title: "K-HKOEWBAKRA70-2", n: 2 } }},
     { title: "HKOEWBAKRA70", tank: 70 },
-    { title: "K-HAG.W70", tank: 70 },
     { title: "M-4236-HAGZAB-W125", tank: 70, addition: { damperTrays: { title: "HKGP4030M10B", n: 4 } } },
-    { title: "K-HAGOEWBAKRA1301", tank: 130, addition: { trayBar: { title: "K-HAGOEWBAKRA1302", n: 2 } } },
+    { title: "K-HKOEWBAKRA130", tank: 130 },
+    { title: "HKOEW160BSK", tank: 160 },
+    { title: "HKOEW200BSK", tank: 200 },
+    { title: "HKOEW250BSK", tank: 250 },
+    { title: "HKOEW300BSK", tank: 300 },
+    { title: "HKOEW400BSK", tank: 400 },
   ],
 };
 
