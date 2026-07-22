@@ -54,7 +54,7 @@ const setSmth = ({ title, addition, ...rest }) => {
 
 const keys = () => Object.keys(normalizeObjects(logic())[0]).filter((item) => item !== "addition");
 const sorting = () => {
-  const res = normalizeObjects(logic());
+  const res = normalizeObjects(logic()).filter((item) => item !== "addition");
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
   if (!sortKey.value) return res;
   return res.sort((a, b) =>
