@@ -228,7 +228,7 @@ article.kok:nth-of-type(odd) {
 .container {
   display: flex;
   height: 180px;
-  width: 30vw;
+  width: 50vw;
   /* margin: 0 auto; */
   /* gap: 12px; */
 }
