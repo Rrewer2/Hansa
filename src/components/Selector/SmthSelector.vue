@@ -12,7 +12,7 @@ const { Name, index = 0, logic, after, meta, order } = defineProps(["Name", "ind
 const orderTitle = ref(null);
 const slots = useSlots();
 const normalizeObjects = (arr) => {
-  const allKeys = [...new Set(arr.flatMap((obj) => Object.keys(obj)))];
+  const allKeys = [...new Set(arr.flatMap((obj) => Object.keys(obj).filter(key => key !== "addition")))];
   return arr.map((obj) => {
     const normalized = {};
 
@@ -54,7 +54,7 @@ const setSmth = ({ title, addition, ...rest }) => {
 
 const keys = () => Object.keys(normalizeObjects(logic())[0]).filter((item) => item !== "addition");
 const sorting = () => {
-  const res = normalizeObjects(logic()).filter((item) => item !== "addition");
+  const res = normalizeObjects(logic());
   if (res.length === 1 && order[Name + index]?.title !== res[0]?.title) setSmth(res[0]);
   if (!sortKey.value) return res;
   return res.sort((a, b) =>
@@ -109,7 +109,6 @@ if (!logic().length) order[Name + index] = {};
           </td>
         </tr>
       </thead>
-      {{ sorting() }}
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
