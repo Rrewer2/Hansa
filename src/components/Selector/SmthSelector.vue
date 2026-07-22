@@ -109,6 +109,7 @@ if (!logic().length) order[Name + index] = {};
           </td>
         </tr>
       </thead>
+      {{ sorting() }}
       <tbody v-for="{ title, ...rest } in sorting()">
         <tr :class="order[Name + index]?.title && order[Name + index]?.title === title ? 'selected' : ''">
           <td :id="title" class="tal">
