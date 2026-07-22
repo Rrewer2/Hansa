@@ -1553,6 +1553,14 @@ export const gauge = [
   ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "H", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
   ...gaugeBottom.map(({ title, ...rest }) => ({ title: title + "HFR", ...rest, mount: "rear", addition: { gaugeShutOff: { title: "HKFT29101-14" } } })),
   { title: "HKPN2070PN400SER", pmax: 400, thread: "G1/4″", mount: "bottom", addition: { XSVRNW06HLED: { title: "XSVRNW06HLED" } } },
+  { title: "HKDSA10N010V025", pmax: 25, range: "0-10V", thread: "G1/4″" },
+  { title: "HKDSA10N010V100", pmax: 100, range: "0-10V", thread: "G1/4″" },
+  { title: "HKDSA10N010V250", pmax: 250, range: "0-10V", thread: "G1/4″" },
+  { title: "HKDSA10N010V400", pmax: 400, range: "0-10V", thread: "G1/4″" },
+  { title: "HKDSA10N420A025", pmax: 25, range: "4-20mA", thread: "G1/4″" },
+  { title: "HKDSA10N420A100", pmax: 100, range: "4-20mA", thread: "G1/4″" },
+  { title: "HKDSA10N420A250", pmax: 250, range: "4-20mA", thread: "G1/4″" },
+  { title: "HKDSA10N420A400", pmax: 400, range: "4-20mA", thread: "G1/4″" },
 ];
 
 const priority = [

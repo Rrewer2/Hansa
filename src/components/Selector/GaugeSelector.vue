@@ -5,7 +5,8 @@ import SmthSelector from "./SmthSelector.vue";
 
 const { project, meta, order } = defineProps(["project", "meta", "order"]);
 
-const filteredGauge = () => gauge.filter(({ title, pmax }) => title.startsWith("HK") || pmax > project[0]?.unit[0]?.p * 1.3 && pmax < project[0]?.unit[0]?.p * 3);
+const filteredGauge = () =>
+  gauge.filter(({ title, pmax }) => title.startsWith("HKPN") || (pmax > project[0]?.unit[0]?.p * 1.3 && pmax < project[0]?.unit[0]?.p * 3));
 </script>
 
 <template>
