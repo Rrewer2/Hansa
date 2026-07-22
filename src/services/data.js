@@ -1022,8 +1022,8 @@ const spoolHansa = [
   { title: "HK4137510902C1Q", spool: "D^", CETOP: 3, addition: { valvePlug: { title: "HKSP66824" } } },
 ];
 const spoolWarynski = [
-  { title: "K-NG6E24", spool: "E", CETOP: 3 },
-  { title: "K-NG6G24", spool: "G", CETOP: 3 },
+  { title: "K-NG6E24", spool: "E", CETOP: 3,  addition: {} },
+  { title: "K-NG6G24", spool: "G", CETOP: 3,  addition: {} },
 ];
 const spoolEaton = [
   { title: "HKDG4V30CVMU24DC", spool: "H", CETOP: 3, addition: { valvePlug: { title: "HKSP66824", n: 2 } } },
