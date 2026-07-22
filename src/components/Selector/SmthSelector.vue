@@ -63,7 +63,7 @@ const sorting = () => {
       : a[sortKey.value].toString().localeCompare(b[sortKey.value].toString()),
   );
 };
-const tableResults = (rest) =>
+const tableResults = ({ addition, ...rest }) =>
   Object.values(rest)
     .map((item) =>
       JSON.stringify(item)
