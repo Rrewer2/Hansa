@@ -172,7 +172,6 @@ onMounted(() => {
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
-  {{ navPage }}
 </template>
 
 <style>
