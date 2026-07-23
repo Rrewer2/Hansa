@@ -16,6 +16,7 @@ import LogoStart from "./components/LogoStart.vue";
 import Drawings from "./components/Drawings.vue";
 
 const simile = ref({ zlec: "", lista: "" });
+const navInit = [true, false, false, false, false, false];
 const init = {
   spool: "G",
   throttle: "",
@@ -60,7 +61,7 @@ const load = () => {
       order.value = storOrder;
     }
     alert("Załadowano");
-    navPage.value = [true, false, false, false, false];
+    navPage.value = navInit;
   } catch (error) {
     alert("ERROR!");
     console.error(error);
@@ -111,7 +112,7 @@ const addPumpSame = (k) =>
   });
 const delPump = (k, x) => (project.value[k].unit = project.value[k].unit.filter(({ id }) => id !== x));
 const delUnit = (k) => (project.value = project.value.filter((_, i) => i !== k));
-const navPage = ref([true, false, false, false, false, false]);
+const navPage = ref(navInit);
 
 const showBox = ref(true);
 onMounted(() => {
@@ -171,6 +172,7 @@ onMounted(() => {
   <!-- <div>project {{ project }}</div> -->
   <!-- <div>order {{ order }}</div> -->
   <!-- <div>meta {{ meta }}</div> -->
+  {{ navPage }}
 </template>
 
 <style>
