@@ -21,7 +21,7 @@ const filteredUchoC = (d) => uchoC.filter(({ d2ö }) => +d2ö > d * 0.9 && +d2ö
 const filteredCofD = (D) => [...cof, ...fl].filter(({ Bö }) => +Bö > D * 0.9 && +Bö < D * 1.2);
 const filteredCofd = (d) => [...cof, ...fl].filter(({ Sö }) => +Sö > d * 0.95 && +Sö < d * 1.2);
 const filteredCFL = (D) => cfl.filter(({ Aö }) => +Aö > D * 0.8 && +Aö < D * 1.2);
-const filteredCPB = (D) => cpb.filter(({ Eö }) => +Eö >= D * 0.85 && +Aö <= D * 1.05);
+const filteredCPB = (D) => cpb.filter(({ Eö }) => +Eö >= D * 0.85 && +Eö <= D * 1.05);
 const filteredCSB = (d) => csb;
 const filteredCFF = (d) => cff.filter(({ Fö }) => +Fö.match(/[\d.]+/)?.[0] < d && +Fö.match(/[\d.]+/)?.[0] >= 0.75 * d);
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
