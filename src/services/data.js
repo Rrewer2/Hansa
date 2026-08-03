@@ -2508,7 +2508,7 @@ export const cpb = [
   { title: "HKCPB1606060", Eö: "160", Bö: "80", Zö: "60", Lö: "100", Sö: "40" },
   { title: "HKCPB1707060", Eö: "170", Bö: "80", Zö: "60", Lö: "100", Sö: "40" },
   { title: "HKCPB1807060", Eö: "180", Bö: "80", Zö: "60", Lö: "100", Sö: "40" },
-];//TODO:Fixing other parameters after Eo
+]; //TODO:Fixing other parameters after Eo
 export const cfl = [
   { title: "HKCFL0050109", Dö: "109", Cö: "87", Aö: "50", SMö: "4x45°", B2ö: "12.5", Gö: "4xØ11" },
   { title: "HKCFL0050109", Dö: "109", Cö: "87", Aö: "50", SMö: "4x45°", B2ö: "12.5", Gö: "4xØ11" },
