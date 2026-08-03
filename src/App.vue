@@ -31,9 +31,9 @@ const init = {
   order: {},
 };
 const cylInit = {
-  D: 100,
-  d: 60,
-  L: 500,
+  D: 63,
+  d: 32,
+  L: 200,
   G: "",
   mountD: "2",
   mountd: "2",

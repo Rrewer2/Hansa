@@ -4,7 +4,7 @@ import { text } from "../services/text";
 import CopyText from "./Selector/CopyText.vue";
 import { HKSHMountD, HKSHMountd } from "../services/data";
 
-const { order, HKSH } = defineProps(["order", "HKSH"]);
+const { order, HKSH, n } = defineProps(["order", "HKSH", "n"]);
 
 const description = computed(() => {
   const arr = [];
@@ -12,7 +12,7 @@ const description = computed(() => {
   arr.push(text(`Średnica tłoka: ${HKSH.D} [mm]`));
   arr.push(text(`Średnica tłoczyska: ${HKSH.d} [mm]`));
   arr.push(text(`Skok: ${HKSH.L} [mm]`));
-  arr.push(text(`Przyłącza olejowe: ${order?.naba0?.nabaData?.Fö || "-"}`));
+  arr.push(text(`Przyłącza olejowe: ${order?.["naba" + n]?.nabaData?.Fö || "-"}`));
   arr.push(text(`Mocowanie od strony tłoczyska: ${text(HKSHMountd[HKSH.mountd])}`));
   arr.push(text(`Mocowanie od strony denka: ${text(HKSHMountD[HKSH.mountD])}`));
   arr.push(text(`Ciśnienie robocze: 200 [bar]`));
@@ -26,18 +26,18 @@ const description = computed(() => {
   arr.push(text(`() Odporny na temperaturę: VITON (-20ºC do +160ºC)`));
 
   arr.push(text(`Materiał tłoczyska:`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "CK45" ? "x" : ""}) Prosty: Ck45`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "CK45IH" ? "x" : ""}) Prosty hartowany: Ck45 IH`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "20MNV6" ? "x" : ""}) Standardowy: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "CR2" ? "x" : ""}) Podwójny chrom: 20MnV6`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "AISI304" ? "x" : ""}) Stal nierdzewna: AISI 304`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4" ? "x" : ""}) Ulepszony: 42CrMo4 U`));
-  arr.push(text(`(${order?.pret0?.pretData?.material === "42CRMO4UH" ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "CK45" ? "x" : ""}) Prosty: Ck45`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "CK45IH" ? "x" : ""}) Prosty hartowany: Ck45 IH`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "20MNV6" ? "x" : ""}) Standardowy: 20MnV6`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "CR2" ? "x" : ""}) Podwójny chrom: 20MnV6`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "AISI304" ? "x" : ""}) Stal nierdzewna: AISI 304`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "42CRMO4" ? "x" : ""}) Ulepszony: 42CrMo4 U`));
+  arr.push(text(`(${order?.["pret" + n]?.pretData?.material === "42CRMO4UH" ? "x" : ""}) Ulepszony hartowany: 42CrMo4 UH`));
 
   arr.push(text(`Materiał cylindra:`));
-  arr.push(text(`(${order?.rura0?.title?.includes("H8") ? "x" : ""}) Standardowy H8: St 52.3`));
-  arr.push(text(`(${order?.rura0?.title?.includes("H9") ? "x" : ""}) Standardowy H9: St 52.3`));
-  arr.push(text(`(${order?.rura0?.title?.includes("AISI") ? "x" : ""}) Stal nierdzewna H8: AISI 304`));
+  arr.push(text(`(${order?.["rura" + n]?.title?.includes("H8") ? "x" : ""}) Standardowy H8: St 52.3`));
+  arr.push(text(`(${order?.["rura" + n]?.title?.includes("H9") ? "x" : ""}) Standardowy H9: St 52.3`));
+  arr.push(text(`(${order?.["rura" + n]?.title?.includes("AISI") ? "x" : ""}) Stal nierdzewna H8: AISI 304`));
 
   return arr;
 });

@@ -1,17 +1,16 @@
 <script setup>
-// import { ref } from "vue";
 import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr } from "../../services/data";
 import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl, csb, cff, cpb } from "../../services/data";
 import { HKSHTitle, filtrationD } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
-import ResultItem from "../ResultItem.vue";
+// import ResultItem from "../ResultItem.vue";
 import SmthSelector from "./SmthSelector.vue";
 import OrderHKSH from "../OrderHKSH.vue";
 import DescriptionHKSH from "../DescriptionHKSH.vue";
 import { text } from "../../services/text";
 
-const { HKSH, i, meta, orderHKSH } = defineProps(["HKSH", "i", "meta", "orderHKSH"]);
+const { HKSH, n, meta, orderHKSH } = defineProps(["HKSH", "n", "meta", "orderHKSH"]);
 const filteredDlaw = (D, d) => dlaw.filter(({ ALö, Sö }) => +ALö === D && +Sö === d);
 const filteredDlawSteel = (D, d) => dlawSteel.filter(({ ALö, Sö }) => +ALö === D && +Sö === d);
 const filteredTlok = (D) => tlok.filter(({ ALö }) => +ALö === D);
@@ -28,7 +27,7 @@ const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1
 const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
 const filteredThreadD = (D) => filteredWapr(D);
 const filteredThreadd = (d) => filteredWapr(d);
-const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + i]?.nabaData?.Fö);
+const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + n]?.nabaData?.Fö);
 const MW = 10;
 const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
 const pret = ({ d, L }) => {
@@ -36,7 +35,7 @@ const pret = ({ d, L }) => {
     title: "K-" + d + "CR-" + el,
     material: el,
     lengthö:
-      L + +getOrder("dlaw", i)?.Lö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("mountd", i)?.LFö + MW || L * 1.5,
+      L + +getOrder("dlaw", n)?.Lö + +getOrder("tlok", n)?.Lö + +getOrder("tlok", n)?.pö + +getOrder("mountd", n)?.LFö + MW || L * 1.5,
   }));
 };
 const rura = ({ D, L }) => {
@@ -44,7 +43,7 @@ const rura = ({ D, L }) => {
     .filter(({ DH8ö }) => DH8ö === D)
     .map((el) => ({
       ...el,
-      lengthö: L + +getOrder("dlaw", i)?.L1ö + +getOrder("tlok", i)?.Lö + +getOrder("tlok", i)?.pö + +getOrder("dno", i)?.S1ö || L * 1.5,
+      lengthö: L + +getOrder("dlaw", n)?.L1ö + +getOrder("tlok", n)?.Lö + +getOrder("tlok", n)?.pö + +getOrder("dno", n)?.S1ö || L * 1.5,
     }));
 };
 const getValue = {
@@ -55,7 +54,22 @@ const getValue = {
   mountD: HKSHMountD,
   mountd: HKSHMountd,
 };
-// const dlawType = ref("HKCG");
+const selectors = [
+  { Name: "dlaw", logic: () => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)] },
+  { Name: "tlok", logic: () => filteredTlok(HKSH.D) },
+  { Name: "dno", logic: () => filteredDno(HKSH.D) },
+  { Name: "naba", logic: filteredNaba, after: afterNabaSelected },
+  { Name: "pret", logic: () => pret(HKSH) },
+  { Name: "rura", logic: () => rura(HKSH) },
+];
+const mountDSelectors = { 0: filteredThreadD, 1: filteredCofD, 2: filteredUchoN, 3: filteredCFL, 4: filteredCFL, 9: filteredCPB };
+const mountdSelectors = {
+  0: filteredThreadd,
+  1: filteredCofd,
+  2: (d) => [...filteredWapr(d), ...filteredUchoC(d)],
+  7: filteredCSB,
+  W: filteredCFF,
+};
 </script>
 
 <template>
@@ -73,12 +87,8 @@ const getValue = {
             </select>
             <input v-else-if="i === 'L'" type="number" min="0" max="3000" v-model="HKSH[i]" :id="HKSH.id + i" class="input w-75" />
             <select v-else v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
-              <option v-if="i === 'd'" v-for="elem in filtrationD(standartDiameters, HKSH)" :value="elem">
-                {{ elem }}
-              </option>
-              <option v-else v-for="elem in getValue[i]" :value="elem">
-                {{ elem }}
-              </option>
+              <option v-if="i === 'd'" v-for="elem in filtrationD(standartDiameters, HKSH)" :value="elem">{{ elem }}</option>
+              <option v-else v-for="elem in getValue[i]" :value="elem">{{ elem }}</option>
             </select>
           </InputItem>
         </div>
@@ -97,34 +107,8 @@ const getValue = {
             />
           </div>
           <SmthSelector
-            v-if="HKSH.mountD === '0'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredThreadD(HKSH.D)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountD === '1'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredCofD(HKSH.D)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountD === '2'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredUchoN(HKSH.D)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountD === '3' || HKSH.mountD === '4'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredCFL(HKSH.D)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountD === '9'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountD' }"
-            :index="i"
-            :logic="() => filteredCPB(HKSH.D)"
+            v-if="mountDSelectors[HKSH.mountD]"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountD', index: n, logic: () => mountDSelectors[HKSH.mountD](HKSH.D) }"
           />
         </article>
         <article class="kok">
@@ -140,86 +124,22 @@ const getValue = {
             />
           </div>
           <SmthSelector
-            v-if="HKSH.mountd === '0'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
-            :index="i"
-            :logic="() => filteredThreadd(HKSH.d)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountd === '1'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
-            :index="i"
-            :logic="() => filteredCofd(HKSH.d)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountd === '2'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
-            :index="i"
-            :logic="() => [...filteredWapr(HKSH.d), ...filteredUchoC(HKSH.d)]"
-          />
-          <SmthSelector
-            v-if="HKSH.mountd === '7'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
-            :index="i"
-            :logic="() => filteredCSB(HKSH.d)"
-          />
-          <SmthSelector
-            v-if="HKSH.mountd === 'W'"
-            v-bind="{ meta, order: HKSH.order, Name: 'mountd' }"
-            :index="i"
-            :logic="() => filteredCFF(HKSH.d)"
+            v-if="mountdSelectors[HKSH.mountd]"
+            v-bind="{ meta, order: HKSH.order, Name: 'mountd', index: n, logic: () => mountdSelectors[HKSH.mountd](HKSH.d) }"
           />
         </article>
-        <article class="kok">
-          <!-- <div class="container">
-            <img
-              :src="links.HKCG"
-              alt="HKCG"
-              class="imgLogo"
-              key="HKCG"
-              :class="{ active: dlawType === 'HKCG' }"
-              @click="dlawType = 'HKCG'"
-            />
-            <img
-              :src="links.HKCGPM"
-              alt="HKCGPM"
-              class="imgLogo"
-              key="HKCGPM"
-              :class="{ active: dlawType === 'HKCGPM' }"
-              @click="dlawType = 'HKCGPM'"
-            />
-          </div> -->
-          <SmthSelector
-            v-bind="{ meta, order: HKSH.order, Name: 'dlaw' }"
-            :index="i"
-            :logic="() => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)]"
-          />
-        </article>
-        <article class="kok">
-          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'tlok' }" :index="i" :logic="() => filteredTlok(HKSH.D)" />
-        </article>
-        <article class="kok">
-          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'dno' }" :index="i" :logic="() => filteredDno(HKSH.D)" />
-        </article>
-        <article class="kok">
-          <SmthSelector
-            v-bind="{ meta, order: HKSH.order, Name: 'naba' }"
-            :index="i"
-            :logic="() => filteredNaba()"
-            :after="afterNabaSelected"
-          />
-        </article>
-        <article class="kok">
-          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'pret' }" :index="i" :logic="() => pret(HKSH)" />
-        </article>
-        <article class="kok">
-          <SmthSelector v-bind="{ meta, order: HKSH.order, Name: 'rura' }" :index="i" :logic="() => rura(HKSH)" />
-        </article>
+        <SmthSelector
+          v-for="item in selectors"
+          class="kok"
+          v-bind="{ meta, order: HKSH.order, Name: item.Name, index: n, key: item.Name }"
+          :logic="item.logic"
+          :after="item.after"
+        />
       </div>
     </div>
     <div class="right mx-auto">
-      <OrderHKSH v-bind="{ orderHKSH, i, HKSH }" />
-      <DescriptionHKSH v-bind="{ order: HKSH.order, HKSH }" />
+      <OrderHKSH v-bind="{ orderHKSH, i: n, HKSH }" />
+      <DescriptionHKSH v-bind="{ order: HKSH.order, HKSH, n }" />
     </div>
   </div>
 </template>
@@ -228,16 +148,21 @@ const getValue = {
 .art {
   /* width: 100vw; */
 }
+article {
+  border-radius: 20px;
+  margin-top: 5px;
+}
 article.kok:nth-of-type(odd) {
   background: #f5f5f548;
+}
+article.kok:nth-of-type(even) {
+  background: #8e8e8e48;
 }
 
 .container {
   display: flex;
   height: 180px;
-  width: 50vw;
-  /* margin: 0 auto; */
-  /* gap: 12px; */
+  width: 50vw; /* margin: 0 auto; */ /* gap: 12px; */
 }
 
 .imgLogo {
@@ -268,16 +193,13 @@ article.kok:nth-of-type(odd) {
 }
 
 .rotate90 {
-  /* transform: rotate(90deg);
-  transform-origin: center; */
+  /* transform: rotate(90deg);transform-origin: center; */
 }
 .rotate180 {
-  /* transform: rotate(180deg);
-  transform-origin: center; */
+  /* transform: rotate(180deg);transform-origin: center; */
 }
 .rotate270 {
-  /* transform: rotate(270deg);
-  transform-origin: center; */
+  /* transform: rotate(270deg);transform-origin: center; */
 }
 .grid {
   padding-left: 20px;
@@ -288,10 +210,8 @@ article.kok:nth-of-type(odd) {
 .right {
   /* width: 100%; */
   position: sticky;
-  top: 4vh;
-  /* left: 65vw; */
+  top: 4vh; /* left: 65vw; */
   max-height: calc(98vh);
-  overflow-y: auto;
-  /* background-color: rgba(255, 255, 255, 0.3); */
+  overflow-y: auto; /* background-color: rgba(255, 255, 255, 0.3); */
 }
 </style>

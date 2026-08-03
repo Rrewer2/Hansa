@@ -11,8 +11,8 @@ const orderHKSH = HKSHArray.map(({ order }) => order);
 <template>
   <main>
     <article class="">
-      <article class="accordion" v-for="(HKSH, i) in HKSHArray">
-        <HKSHSelector v-bind="{ HKSH, i, meta, orderHKSH }" />
+      <article class="accordion" v-for="(HKSH, n) in HKSHArray">
+        <HKSHSelector v-bind="{ HKSH, n, meta, orderHKSH }" />
       </article>
     </article>
   </main>
