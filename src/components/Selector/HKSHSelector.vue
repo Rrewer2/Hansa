@@ -77,10 +77,7 @@ const mountdSelectors = {
     <div>
       <h2>{{ HKSHTitle(HKSH) }}</h2>
       <div class="flex-row">
-        <div
-          v-for="(_, i) in { D: HKSH.D, d: HKSH.d, L: HKSH.L, mountD: HKSH.mountD, mountd: HKSH.mountd, z: HKSH.z, G: HKSH.G }"
-          class="flex-row ml-5"
-        >
+        <div v-for="i in ['D', 'd', 'L', 'mountD', 'mountd', 'z', 'G']" class="flex-row ml-5">
           <InputItem :data="i">
             <select v-if="i === 'mountD' || i === 'mountd'" v-model="HKSH[i]" :id="HKSH.id + i" class="w-75">
               <option v-for="(elem, j) in getValue[i]" :value="j" class="tal">{{ j }} {{ text(elem) }}</option>

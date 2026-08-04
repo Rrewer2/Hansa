@@ -28,7 +28,6 @@ const init = {
   nonReturn: "",
   flowControl: "",
   balance: "",
-  order: {},
 };
 const cylInit = {
   D: 63,
@@ -42,12 +41,13 @@ const cylInit = {
   ...init,
 };
 const gerotorInit = { CC: 50, z: 1, spool: "G", ...init };
-const addGerotor = (k, i) => project.value[k].unit[i].HKSH.push({ ...gerotorInit, id: getId("g") });
+const addGerotor = (k, i) => project.value[k].unit[i].HKSH.push({ ...gerotorInit, id: getId("g"), order: {} });
 const pumpInit = { Q: "", p: "", DR2type: 1, start: "", startValve: "GA", DBD: "", aku: "", maxPressure: "" };
+const newCyl = () => ({ ...cylInit, id: getId("c"), order: {} });
 const getNewPump = () => ({
   ...pumpInit,
   id: getId("p"),
-  HKSH: [{ ...cylInit, id: getId("c") }],
+  HKSH: [newCyl()],
 });
 const project = ref([]);
 const load = () => {
@@ -97,11 +97,12 @@ const getNewPowerUnit = () =>
   });
 getNewPowerUnit();
 const addCyl = (k, i) =>
-  project.value[k].unit[i].HKSH.push(
-    project.value[k].unit[i].HKSH.filter((el) => el.id.startsWith("c")).length
-      ? { ...project.value[k].unit[i].HKSH.filter((el) => el.id.startsWith("c")).at(-1), id: getId("c") }
-      : { ...cylInit, id: getId("c") },
-  );
+  project.value[k].unit[i].HKSH.push({
+    ...project.value[k].unit[i].HKSH.filter((el) => el.id.startsWith("c")).at(-1),
+    id: getId("c"),
+    order: {},
+    // order: structuredClone(toRaw(last.order)),
+  });
 
 const addPump = (k) => project.value[k].unit.push(getNewPump());
 const addPumpSame = (k) =>
