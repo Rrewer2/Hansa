@@ -1149,7 +1149,14 @@ const singleConnectionPlate = [
   { title: "HKBA204HF", cetop: 3, pressure: 350, threadP: "G3/8″", threadT: "G3/8″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
   { title: "HKBA518HF", cetop: 7, pressure: 350, threadP: "G1″", threadT: "G1″", threadA: "G1″", threadB: "G1″", DBV: false },
 
-  { title: "HKKN03", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: false },
+  { title: "HKKN03", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: false, start: false },
+  { title: "HKKN11", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: false, start: false },
+  { title: "HKKN03", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: true, start: false },
+  { title: "HKKN11", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: true, start: false },
+  { title: "HKKN03", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: false, start: true },
+  { title: "HKKN11", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: false, start: true },
+  { title: "HKKN03", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: true, start: true },
+  { title: "HKKN11", cetop: 3, pressure: 300, threadP: "G1/4″", threadT: "G1/4″", threadA: "G3/8″", threadB: "G3/8″", DBV: true, start: true },
 ];
 const multipleConnectionPlateBA214 = Array.from({ length: 9 }, (_, i) => {
   const stations = 2 + i;
