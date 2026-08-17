@@ -1,4 +1,4 @@
-import { bucklingSafety, tankData, motorData, VPipe, pipesData, pipesSData, coolerData } from "./data";
+import { bucklingSafety, tankData, motorData, VPipe, pipesData, pipesSData, coolerData, g } from "./data";
 
 export const round = (num, param = 10) => (typeof num === "string" ? num : num === Infinity || isNaN(num) ? "" : Math.round(num * param) / param);
 
@@ -224,3 +224,5 @@ export const deepMerge = (oldData, newData) => {
 
   return result;
 };
+const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06 };
+export const getConvertedValue = (value, unit) => (unitKoef[unit] ? unitKoef[unit] * value : value);
