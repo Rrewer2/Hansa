@@ -441,7 +441,7 @@ const gearPumpVivolo = [
     HKK02: { CC: 0.45, in: "G1/4″", out: "Bore Ø5 mm with O-Ring", shaft: "Ø7,16 frez 5", pmax: 220, holePattern: "Ø66 - Ø22" },
     HKK03: { CC: 0.57, in: "G1/4″", out: "Bore Ø5 mm with O-Ring", shaft: "Ø7,16 frez 5", pmax: 220, holePattern: "Ø66 - Ø22" },
     HKK04: { CC: 0.76, in: "G1/4″", out: "Bore Ø5 mm with O-Ring", shaft: "Ø7,16 frez 5", pmax: 220, holePattern: "Ø66 - Ø22" },
-  
+
     HK0P0102ABBA: { CC: 0.16, in: "G1/4″", out: "G1/4″", shaft: "Ø7", pmax: 220, holePattern: "Ø66 - Ø22" },
     HK0P0202ABBA: { CC: 0.24, in: "G1/4″", out: "G1/4″", shaft: "Ø7", pmax: 220, holePattern: "Ø66 - Ø22" },
     HK0P0402ABBA: { CC: 0.45, in: "G1/4″", out: "G1/4″", shaft: "Ø7", pmax: 220, holePattern: "Ø66 - Ø22" },
@@ -591,8 +591,7 @@ const gearPumpCasappa = [
   },
 ];
 const gearPumpRexroth = [
-  {
-  },
+  {},
   {
     HKKBR10: { CC: 0.84, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "Ø10 frez 5", pmax: 210, holePattern: "40 x 40 - Ø32" },
     HKKBR11: { CC: 1.25, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "Ø10 frez 5", pmax: 210, holePattern: "40 x 40 - Ø32" },

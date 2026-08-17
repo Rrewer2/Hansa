@@ -50,7 +50,15 @@ async function loadData() {
       return acc;
     }, {});
     cracked.value = Object.fromEntries(
-      Object.entries(normalize()).map((poz) => [poz[0], { ...poz[1], price: a[poz[0]]?.cost || "0,00", ...c[poz[0]] }]),
+      Object.entries(normalize()).map((poz) => [
+        poz[0],
+        {
+          ...poz[1],
+          price: a[poz[0]]?.cost || "0,00",
+          amount: c[poz[0]]?.amount ?? "0",
+          description: c[poz[0]]?.description,
+        },
+      ]),
     );
   } catch (error) {
     alert("Ni chuja!");
@@ -64,9 +72,6 @@ const totalPrice = () => {
     res += +cracked.value[key]?.price.replace(/\s/g, "").replace(".", "").replace(",", ".") * cracked.value[key]?.count;
   }
   return res;
-};
-const netto = () => {
-  return zlo.value + totalPrice() / (totalPrice() / (totalPrice() / (1 - margin.value / 100) - zlo.value));
 };
 </script>
 

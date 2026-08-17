@@ -14,7 +14,13 @@ const { keys, data } = defineProps(["keys", "data"]);
     <tbody>
       <tr
         v-for="({ title, count, description, opis, price, amount }, _, i) of data"
-        :class="price === '0,00' || amount === 0 ? 'red' : amount < count ? 'yellow' : ''"
+        :class="
+          title !== 'KIT' && (price === '0,00' || +amount.replace(',', '.') === 0)
+            ? 'red'
+            : title !== 'KIT' && +amount.replace(',', '.') < +`${count}`.replace(',', '.')
+              ? 'yellow'
+              : ''
+        "
       >
         <td class="tal">
           {{ (i + 1) * 100 }}
