@@ -127,15 +127,15 @@ export const powerCounting = (unit) => {
   return { Pcalc, I };
 };
 const maxRatio = (HKSH) => Math.max(...HKSH.map(({ D, d }) => ratio(D, d) || 1));
-const getPipeP = (Q1, DBD, p1) => Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > Math.max(DBD, p1));
+const getPipeP = (Q1, pmax) => Object.entries(pipesData).find(([_, { Q, p }]) => Q >= Q1 && p > pmax);
 const getPipe = (Q1, k) => Object.entries(k ? pipesData : pipesSData).find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
 const getTPipe = (Q1, k) =>
   Object.entries(pipesData)
     .filter((el) => el[0] !== "L12-1.5")
     .find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
-export const pumpCounting = ({ Q, p, DBD, HKSH }) => {
+export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }) => {
   const k = maxRatio(HKSH);
-  const pipe_P = getPipeP(Q, DBD, p);
+  const pipe_P = getPipeP(Q, Math.max(DBD, p, maxPressure));
   const pipeP = pipe_P ? pipe_P[0] : "∄";
   const pipe_T = getTPipe(Q, k);
   const pipeT = pipe_T ? pipe_T[0] : "∄";
