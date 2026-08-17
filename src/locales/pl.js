@@ -10,7 +10,9 @@ export default {
   formHorizontal: ["poziomo"],
   formVertical: ["pionowo"],
   Q: ["Wydajność", "L/min"],
+  minQ: ["minQ", "L/min"],
   p: ["Ciśnienie", "bar"],
+  maxPressure: ["Ciśnienie max", "bar"],
   n: ["Obroty silnika", "min⁻¹"],
   mount: ["Montaż"],
   DR2type: ["Typ bloku"],
@@ -62,7 +64,7 @@ export default {
   flowControl: ["Dławiący*"],
   nonReturn: ["Zwrotny*"],
   DBD: ["DBD", "bar"],
-  aku: ["AKU"],
+  aku: ["AKU", "bar"],
   // Navigation items
   calculations: ["Obliczenia"],
   scheme: ["Schemat"],

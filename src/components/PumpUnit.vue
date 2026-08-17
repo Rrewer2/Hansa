@@ -16,7 +16,7 @@ const { pumpData, btnDisabled, project, k, i, order, meta } = defineProps([
   "meta",
 ]);
 
-const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
+const { id, HKSH, same, startValve, Gerotor, maxPressure, ...rest } = pumpData;
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const { id, HKSH, same, startValve, Gerotor, ...rest } = pumpData;
       </div>
       <ResultItem :data="{ VFU: round(getVFU(pumpData.Q, project[k].n)) }" />
 
-      <div v-for="(_, ind) in rest">
+      <div v-for="(_, ind) in meta.pumpType === 'piston' ? { ...rest, maxPressure } : rest">
         <InputItem :data="ind">
           <input
             v-if="ind === 'Q'"
