@@ -132,12 +132,12 @@ onUnmounted(() => {
 }
 .front {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0.5vh;
+  left: -1vw;
   z-index: 2;
   height: 98vh;
-  width: 98vw;
-  background-color: rgba(70, 70, 70, 0.35);
+  width: 100vw;
+  background-color: rgba(70, 70, 70, 0.3);
 }
 .back {
   display: none;

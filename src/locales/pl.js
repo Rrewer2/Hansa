@@ -10,7 +10,7 @@ export default {
   formHorizontal: ["poziomo"],
   formVertical: ["pionowo"],
   Q: ["Wydajność", "L/min"],
-  minQ: ["minQ", "L/min"],
+  minQ: ["Q min", "L/min"],
   p: ["Ciśnienie", "bar"],
   maxPressure: ["Ciśnienie max", "bar"],
   n: ["Obroty silnika", "min⁻¹"],

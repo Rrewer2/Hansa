@@ -184,7 +184,7 @@ onMounted(() => {
 }
 
 .app {
-  background-color: rgba(70, 70, 70, 0.35);
+  background-color: rgba(70, 70, 70, 0.3);
   /* min-height: 100vh; */
   padding: 5px;
   padding-top: 40px;
@@ -342,13 +342,12 @@ td {
 .border-bottom-no {
   border-bottom: none;
 }
-
 .bgc-w {
-  background-color: #fef6c6;
+  background-color: #fef6c6e4;
 }
 
 .bgc-g {
-  background-color: #c7ecf354;
+  background-color: #c5f2fbed;
 }
 
 .pl-25 {
