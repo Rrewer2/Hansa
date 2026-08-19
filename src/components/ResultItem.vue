@@ -11,9 +11,9 @@ const format = ref(Object.keys(data).map((el) => text(el).split(", ")[1]));
     <h4 class="border border-bottom-no bgc-g h-100 px-5">
       {{ text(name).split(", ")[0] }}
     </h4>
-    <div class="text border bgc-w px-5">
+    <div class="text border bgc-w px-5" :class="!text(name).split(', ')[2] && 'py-2'">
       {{ round(getConvertedValue(el, format[ind]), name === "P01" ? 1000 : 10) }}
-      <select v-if="text(name).split(', ')[2]" id="" v-model="format[ind]">
+      <select v-if="text(name).split(', ')[2]" :id="text(name).split(', ')[0]" v-model="format[ind]" class="db">
         <option v-for="value in text(name).split(', ').slice(1)" :value="value">{{ value }}</option>
       </select>
       <i v-else>{{ text(name).split(", ")[1] }}</i>
@@ -29,5 +29,8 @@ const format = ref(Object.keys(data).map((el) => text(el).split(", ")[1]));
 
 .mw {
   min-width: 6rem;
+}
+.db {
+  display: inline;
 }
 </style>

@@ -23,7 +23,7 @@ const option = ref(text(data).split(", ")[1]); //TODO: get this ref out to globa
           {{ j }}
         </option>
       </select>
-      <i v-else-if="text(data).split(', ')[1]" class="unit px-5">{{ text(data).split(", ")[1] }}</i>
+      <i v-else-if="text(data).split(', ')[1]" class="unit px-5 py-2">{{ text(data).split(", ")[1] }}</i>
     </div>
   </div>
 </template>
@@ -33,12 +33,12 @@ const option = ref(text(data).split(", ")[1]); //TODO: get this ref out to globa
   position: relative;
   display: inline-block;
   background-color: white;
-  border: 0.5px solid;
+  border: 1px solid;
   width: 100%;
 }
 .unit {
-  padding-top: 0.1rem;
-  background-color: #e5e5e5;
+  /* background-color: #e5e5e5; */
+  margin: 0 5px 0 0;
   font-size: 1rem;
 }
 </style>

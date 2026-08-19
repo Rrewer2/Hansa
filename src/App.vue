@@ -358,6 +358,10 @@ td {
   padding: 0 5px;
 }
 
+.py-2 {
+  padding: 1px 0;
+}
+
 .border-l {
   border: solid 0.5px;
 }
@@ -383,7 +387,7 @@ td {
 }
 
 .ml-10 {
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
 }
 
 .mr-30 {
