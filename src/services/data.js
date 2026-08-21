@@ -2260,6 +2260,11 @@ export const GEHSUNData = [
   .map(({ title, thread, threadA }) => ({ title, thread, threadA: threadA ? threadA : title.includes("X") ? "G1″" : title.includes("W") ? "G3/4″" : title.includes("V") ? "G1/2″" : "G3/8″", material: title.endsWith("S") ? "Steel" : "Alu" }))
   .map(({ title, thread, threadA, material }) => ({ title, thread, threadA, pmax: material === "Steel" ? 350 : 210, material }));
 export const extra = {
+   clogging: [
+     { title: "HKVAVR", thread: "G1/8″", type: "optic" },
+     { title: "HKVAV1", thread: "G1/8″", type: "optic" },
+     { title: "HKVAFX", thread: "G1/8″", type: "electric" },
+   ],
   heater: [
     { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230, tempController: false },
     { title: "HKEH1460650TA3X4", heatingCapacity: "1,460 W", Voltage: 400, tempController: true },
