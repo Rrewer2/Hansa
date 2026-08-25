@@ -1555,6 +1555,23 @@ export const HKVCounterBalance = [
   { title: "HKCBEALHN", type: "B", flowMax: 120, thread: "T-2A", pmax: 280 },
 ];
 
+export const HKVPipeBurst = [
+  { title: "HKV16010400", type: "A", flowMax: 25, thread: "G1/4″", pmax: 350 },
+  { title: "HKV16010600", type: "A", flowMax: 50, thread: "G3/8″", pmax: 350 },
+  { title: "HKV16010800", type: "A", flowMax: 80, thread: "G1/2″", pmax: 350 },
+  { title: "HKV16011200", type: "A", flowMax: 140, thread: "G3/4″", pmax: 350 },
+
+  { title: "HKV16010400", type: "B", flowMax: 25, thread: "G1/4″", pmax: 350 },
+  { title: "HKV16010600", type: "B", flowMax: 50, thread: "G3/8″", pmax: 350 },
+  { title: "HKV16010800", type: "B", flowMax: 80, thread: "G1/2″", pmax: 350 },
+  { title: "HKV16011200", type: "B", flowMax: 140, thread: "G3/4″", pmax: 350 },
+
+  { title: "HKV16010400", type: "AB", flowMax: 25, thread: "G1/4″", pmax: 350, addition: { burst2: { title: "HKV16010400" } } },
+  { title: "HKV16010600", type: "AB", flowMax: 50, thread: "G3/8″", pmax: 350, addition: { burst2: { title: "HKV16010600" } } },
+  { title: "HKV16010800", type: "AB", flowMax: 80, thread: "G1/2″", pmax: 350, addition: { burst2: { title: "HKV16010800" } } },
+  { title: "HKV16011200", type: "AB", flowMax: 140, thread: "G3/4″", pmax: 350, addition: { burst2: { title: "HKV16011200" } } },
+];
+
 const gaugeBottom = [
   { title: "GMM63-40", pmax: 40, thread: "G1/4″" },
   { title: "GMM63-60", pmax: 60, thread: "G1/4″" },
@@ -2260,11 +2277,11 @@ export const GEHSUNData = [
   .map(({ title, thread, threadA }) => ({ title, thread, threadA: threadA ? threadA : title.includes("X") ? "G1″" : title.includes("W") ? "G3/4″" : title.includes("V") ? "G1/2″" : "G3/8″", material: title.endsWith("S") ? "Steel" : "Alu" }))
   .map(({ title, thread, threadA, material }) => ({ title, thread, threadA, pmax: material === "Steel" ? 350 : 210, material }));
 export const extra = {
-   clogging: [
-     { title: "HKVAVR", thread: "G1/8″", type: "optic" },
-     { title: "HKVAV1", thread: "G1/8″", type: "optic" },
-     { title: "HKVAFX", thread: "G1/8″", type: "electric" },
-   ],
+  clogging: [
+    { title: "HKVAVR", thread: "G1/8″", type: "optic" },
+    { title: "HKVAV1", thread: "G1/8″", type: "optic" },
+    { title: "HKVAFX", thread: "G1/8″", type: "electric" },
+  ],
   heater: [
     { title: "HKTEHM1000", heatingCapacity: "1,000 W", Voltage: 230, tempController: false },
     { title: "HKEH1460650TA3X4", heatingCapacity: "1,460 W", Voltage: 400, tempController: true },
@@ -2570,6 +2587,11 @@ export const naba = [
   { title: "HKCBS0800000", Fö: "G1/2″", Lö: "18", Dö: "30", addition: { naba2: { title: "HKCBS0800000" } } },
   { title: "HKCBS1200000", Fö: "G3/4″", Lö: "20", Dö: "38", addition: { naba2: { title: "HKCBS1200000" } } },
   { title: "HKCBS1600000", Fö: "G1″", Lö: "25", Dö: "45", addition: { naba2: { title: "HKCBS1600000" } } },
+];
+export const nabaLong = [
+  { title: "HKCBSP0400000", Fö: "G1/4″", Lö: "40", Dö: "22", addition: { naba2: { title: "HKCBSP0400000" } } },
+  { title: "HKCBSP0600000", Fö: "G3/8″", Lö: "42", Dö: "26", addition: { naba2: { title: "HKCBSP0600000" } } },
+  { title: "HKCBSP0800000", Fö: "G1/2″", Lö: "48", Dö: "30", addition: { naba2: { title: "HKCBSP0800000" } } },
 ];
 const H8 = [
   { title: "K-025H8-35" },

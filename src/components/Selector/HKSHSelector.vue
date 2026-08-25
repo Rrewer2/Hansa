@@ -1,6 +1,6 @@
 <script setup>
-import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr } from "../../services/data";
-import { naba, ruras, standartDiameters, HKSHMountD, HKSHMountd, cof, cfl, fl, csb, cff, cpb } from "../../services/data";
+import { dlaw, dlawSteel, tlok, dno, uchoC, uchoN, wapr, cof, cfl, fl, csb, cff, cpb, naba, nabaLong } from "../../services/data";
+import { ruras, standartDiameters, HKSHMountD, HKSHMountd, HKVPipeBurst } from "../../services/data";
 import { HKSHTitle, filtrationD } from "../../services/functions";
 import { links } from "../../resources/links";
 import InputItem from "../InputItem.vue";
@@ -24,9 +24,13 @@ const filteredCPB = (D) => cpb.filter(({ Eö }) => +Eö >= D * 0.85 && +Eö <= D
 const filteredCSB = (d) => csb;
 const filteredCFF = (d) => cff.filter(({ Fö }) => +Fö.match(/[\d.]+/)?.[0] < d && +Fö.match(/[\d.]+/)?.[0] >= 0.75 * d);
 const filteredUchoN = (D) => uchoN.filter(({ d1ö }) => +d1ö >= 0.85 * D && +d1ö <= D * 1.1);
-const filteredNaba = () => (!HKSH.G ? naba : naba.filter(({ Fö }) => HKSH.G === Fö));
+const filteredNaba = ({ G, lineBreak }) => {
+  if (!lineBreak) return !G ? naba : naba.filter(({ Fö }) => G === Fö);
+  else return !G ? nabaLong : nabaLong.filter(({ Fö }) => G === Fö);
+};
 const filteredThreadD = (D) => filteredWapr(D);
 const filteredThreadd = (d) => filteredWapr(d);
+const filteredPipeBurst = ({ lineBreak }) => HKVPipeBurst.filter((el) => lineBreak === el.type && (!HKSH.G || el.thread === HKSH.G));
 const afterNabaSelected = () => (HKSH.G = HKSH.order["naba" + n]?.nabaData?.Fö);
 const MW = 10;
 const getOrder = (item, k) => HKSH.order[item + k]?.[`${item}Data`];
@@ -58,7 +62,8 @@ const selectors = [
   { Name: "dlaw", logic: () => [...filteredDlaw(HKSH.D, HKSH.d), ...filteredDlawSteel(HKSH.D, HKSH.d)] },
   { Name: "tlok", logic: () => filteredTlok(HKSH.D) },
   { Name: "dno", logic: () => filteredDno(HKSH.D) },
-  { Name: "naba", logic: filteredNaba, after: afterNabaSelected },
+  { Name: "naba", logic: () => filteredNaba(HKSH), after: afterNabaSelected },
+  { Name: "burst", logic: () => filteredPipeBurst(HKSH) },
   { Name: "pret", logic: () => pret(HKSH) },
   { Name: "rura", logic: () => rura(HKSH) },
 ];

@@ -189,10 +189,13 @@ export default {
   descr23: ["Napięcie elektromagnesu cewki"],
   descr24: ["Wielkość zbiornika"],
   descr25: ["Chłodnica olej-powietrze"],
+  descr255: [" z termostatem"],
   descr26: ["Grzałka oleju z zabudowanym termostatem"],
   descr27: ["Wyłącznik poziomowo-temperaturowy"],
   descr28: ["Filtr napowietrzający"],
   descr29: ["Filtr zlewowy"],
+  descr295: [" z wskaźnikiem optycznym"],
+  descr296: [" z wskaźnikiem elektrycznym"],
   descr30: ["Olej mineralny HLP zgodnie z DIN 51524, część 2, ISO VG 46"],
   descr31: ["Zakres lepkości od 12 do 800 mm²/s (zalecany zakres od 20 do 100)"],
   descr32: [
@@ -219,6 +222,7 @@ export default {
   dno: ["Denko cylindra"],
   dlawSeal: ["Uszczelnenia dławnicy"],
   tlokSeal: ["Uszczelnenia tłoka"],
+  burst: ["Zawór pękniętego przewodu"],
 
   Forceö: ["Siła", "kN"],
   GKGö: ["Komplet uszczelnień"],

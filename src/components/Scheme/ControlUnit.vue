@@ -11,6 +11,7 @@ import ValveNonReturn from "./ValveNonReturn.vue";
 import ValveFlowControl from "./ValveFlowControl.vue";
 import ValveHoses from "./ValveHoses.vue";
 import ValveCounterBalance from "./ValveCounterBalance.vue";
+import ValvePipeBurst from "./ValvePipeBurst.vue";
 import HKSH from "./HKSH.vue";
 import AkumSafety from "./AkumSafety.vue";
 
@@ -41,9 +42,11 @@ const yHKZNS = (data) => (!!data.check + !!data.throttle) * getSh(unit);
 const yUp = () => y() + 300 - getSh(unit) / 8 - (3 * getSh(unit)) / 2;
 const yVFC = () => yUp();
 const yVCB = (data) => yUp() - getSh(unit) * !!data.flowControl;
-const yVNR = (data) => yUp() - getSh(unit) * (!!data.flowControl + !!data.balance);
+const yVNR = (data) => yUp() - getSh(unit) * (!!data.flowControl + !!data.balance + !!data.lineBreak);
+const yVPB = (data) => yUp() - getSh(unit) * (!!data.flowControl + !!data.balance);
 const xHKSH = (unit, i) => x(c) + getSL1(unit) + (i + unit.start) * (getSL(unit) * 1.1) + getSL(unit) / 2;
-const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!nonReturn + !!flowControl + !!balance);
+const yHKSH = ({ nonReturn, flowControl, balance, lineBreak }) =>
+  yUp() - getSh(unit) * (!!nonReturn + !!flowControl + !!balance + !!lineBreak);
 </script>
 
 <template>
@@ -129,6 +132,14 @@ const yHKSH = ({ nonReturn, flowControl, balance }) => yUp() - getSh(unit) * (!!
     v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
     :x="xV(unit, i)"
     :y="yVCB(data)"
+    :r="getSL(unit) / 30"
+  />
+  <ValvePipeBurst
+    v-if="!unit.same"
+    v-for="(data, i) in unit.HKSH"
+    v-bind="{ sl: getSL(unit), sh: getSh(unit), data }"
+    :x="xV(unit, i)"
+    :y="yVPB(data)"
     :r="getSL(unit) / 30"
   />
   <HKSH

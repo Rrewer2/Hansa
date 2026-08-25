@@ -59,14 +59,16 @@ const description = computed(() => {
     arr.push(`${text("descr24")} ${order.tank?.tankData?.Size} L (${order.tank?.tankData?.material ?? ""})`);
   }
 
-  if (order.cooler?.title) arr.push(text("descr25"));
+  if (order.cooler?.title) arr.push(text("descr25") + (order.thermostat.title ? text("descr255") : "123"));
   if (order.heater?.title) arr.push(text("descr26"));
   if (order.levelTemp?.title) arr.push(text("descr27"));
   if (order.ventilation?.title) {
     arr.push(`${text("descr28")} ${order.ventilation?.title?.match(/(P10|P03)/)?.[0] ?? 10} (µm)`);
   }
   if (order.filter?.title) {
-    arr.push(`${text("descr29")} ${order.filter?.filterData?.filterGrade ?? 10} (µm)`);
+    arr.push(
+      `${text("descr29")} ${order.filter?.filterData?.filterGrade ?? 10} (µm) ${order.clogging.title === "HKVAFX" ? text("descr296") : text("descr295")}`,
+    );
   }
   if (order.trays?.title) {
     arr.push(text("descr38"));

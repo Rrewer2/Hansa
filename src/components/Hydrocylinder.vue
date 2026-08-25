@@ -22,6 +22,7 @@ const getValue = {
   nonReturn: ["", "ABpilot", "Apilot", "Bpilot", "AB", "A", "B"],
   flowControl: ["", "⟯|⟮AB", "⟯|⟮A", "⟯|⟮B", "⇑AB", "⇑A", "⇑B", "⇓AB", "⇓A", "⇓B"],
   balance: ["", "AB", "A", "B"],
+  lineBreak: ["", "AB", "A", "B"],
 };
 const {
   id,
@@ -38,6 +39,7 @@ const {
   nonReturn,
   flowControl,
   balance,
+  lineBreak,
   G,
   order,
   ...rest
@@ -65,6 +67,7 @@ const {
           nonReturn,
           flowControl,
           balance,
+          lineBreak,
         }"
         class="flex-col ml-5"
       >

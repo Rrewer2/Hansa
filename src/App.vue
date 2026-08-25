@@ -28,6 +28,7 @@ const init = {
   nonReturn: "",
   flowControl: "",
   balance: "",
+  lineBreak: "",
 };
 const cylInit = {
   D: 63,
