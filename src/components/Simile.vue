@@ -1,7 +1,9 @@
 <script setup>
+import { ref } from "vue";
 import { text } from "../services/text";
 
 const { simile } = defineProps(["simile"]);
+const cracked = ref([]);
 const getDiffBetween = (orderStr, modelStr) => {
   if (!orderStr.trim().length || !modelStr.trim().length) return ["", ""];
   const order = orderStr.split("\n").map((row) => row.split("\t"));
@@ -52,6 +54,39 @@ const getDiffBetween = (orderStr, modelStr) => {
   res.push(res2.join("\n"));
   return res;
 };
+async function loadData() {
+  // magic.value = true;
+  // loading.value = true;
+  try {
+    const costs = await import("../services/costsSap.json");
+    const availableQuantity = await import("../services/SAP.json");
+    const a = costs.default.reduce((acc, { title, ...rest }) => {
+      acc[title] = rest;
+      return acc;
+    }, {});
+    const c = availableQuantity.default.reduce((acc, { title, amount, description }) => {
+      acc[title] = { amount, description };
+      return acc;
+    }, {});
+    cracked.value = Object.fromEntries(
+      simile.zlec
+        .split("\n")
+        .map((row) => row.split("\t"))
+        .map((poz) => [poz[0], { price: a[poz[1]]?.cost || "0,00", count: poz[2] }]),
+    );
+  } catch (error) {
+    alert("Ni chuja!");
+    console.error(error);
+  }
+  // loading.value = false;
+}
+const totalPrice = () => {
+  let res = 0;
+  for (let key in cracked.value) {
+    res += +cracked.value[key]?.price.replace(/\s/g, "").replace(".", "").replace(",", ".") * cracked.value[key]?.count;
+  }
+  return res;
+};
 </script>
 
 <template>
@@ -67,6 +102,10 @@ const getDiffBetween = (orderStr, modelStr) => {
       >{{ res }}</textarea
     >
   </section>
+  <label class="final">
+    <button @click="loadData" class="magic-btn">Koszty</button>
+    {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() || 0) }}
+  </label>
 </template>
 
 <style scoped>
