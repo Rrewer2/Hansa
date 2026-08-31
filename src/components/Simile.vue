@@ -4,6 +4,8 @@ import { text } from "../services/text";
 
 const { simile } = defineProps(["simile"]);
 const cracked = ref([]);
+const margin = ref(50);
+const zlo = ref(0);
 const getDiffBetween = (orderStr, modelStr) => {
   if (!orderStr.trim().length || !modelStr.trim().length) return ["", ""];
   const order = orderStr.split("\n").map((row) => row.split("\t"));
@@ -106,6 +108,15 @@ const totalPrice = () => {
     <button @click="loadData" class="magic-btn">Koszty</button>
     {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() || 0) }}
   </label>
+  <d class="mt-20 ml-10">Marża <input v-model="margin" type="number" min="0" /></d>
+  <d class="final mt-20 ml-10">
+    Netto
+    {{
+      new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(
+        zlo + totalPrice() / (totalPrice() / (totalPrice() / (1 - margin / 100) - zlo)) || 0,
+      )
+    }}
+  </d>
 </template>
 
 <style scoped>
