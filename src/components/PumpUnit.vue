@@ -62,7 +62,7 @@ const { id, HKSH, same, startValve, Gerotor, maxPressure, ...rest } = pumpData;
         </InputItem>
       </div>
       <ResultItem v-if="meta.pumpType === 'piston'" :data="getQforPistonPump({ project, k, pumpData })" />
-      <ResultItem :data="pumpCounting(pumpData)" />
+      <ResultItem :data="pumpCounting(pumpData, project[k].n)" />
     </div>
 
     <Section

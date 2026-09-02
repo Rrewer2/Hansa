@@ -21,6 +21,7 @@ export const getStandartTank = ({ tank }, T) => tankData[tank].filter(({ Size })
 
 const Power = (Q, p) => (Q * p) / 500; //Потужність розрахункова
 const pressure = (Q, P) => (P * 500) / Q; //Тиск
+const Moment = (VFU, p) => (VFU * p) / (20 * Math.PI * 0.8); //Момент
 const QforPistonPump = (Power, maxPressure) => (Power * 500) / maxPressure;
 export const getQforPistonPump = ({ project, k, pumpData }) => ({ minQ: Math.min(QforPistonPump(project[k].P, pumpData.maxPressure), pumpData.Q) });
 export const setPressure = (unit, P) => (unit[0].Q ? (unit[0].p = round(pressure(unit[0].Q, P), 1)) : {});
@@ -33,8 +34,9 @@ export const Qmax = (project) =>
     .flat()
     .reduce((a, b) => a + b);
 
-export const getVFU = (Q, n) => (Q * 1000) / (n * 0.96);
-export const getQ = (VFU, n) => (VFU * (n * 0.96)) / 1000;
+const ηv = 0.96; //Motor efficiency
+export const getVFU = (Q, n) => (Q * 1000) / (n * ηv);
+export const getQ = (VFU, n) => (VFU * (n * ηv)) / 1000;
 const pipe = (Q, VP) => 2 * (Q / (Math.PI * VP * 0.06)) ** 0.5; //Діаметр труби
 const pipePmax = (Q) => pipe(Q, VPipe.P[0]);
 const pipeTmax = (QBack) => pipe(QBack, VPipe.T[0]);
@@ -133,7 +135,7 @@ const getTPipe = (Q1, k) =>
   Object.entries(pipesData)
     .filter((el) => el[0] !== "L12-1.5")
     .find(([_, { Q }]) => Q > Q1 * (k ? k : 1));
-export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }) => {
+export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }, n = 1450) => {
   const k = maxRatio(HKSH);
   const pipe_P = getPipeP(Q, Math.max(DBD, p, maxPressure));
   const pipeP = pipe_P ? pipe_P[0] : "∄";
@@ -144,7 +146,9 @@ export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }) => {
   const Qback = Q * k;
   const minDirectPressure = Math.min(...HKSH.map(({ directPress, directPressValue }) => (directPress === "011" ? directPressValue : null)).filter((v) => v));
   const Pcalc = Power(Q, getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress, minDirectPressure }));
-  return { pipeP, pipeT, pipeS, Qback, Pcalc };
+  const M = Moment(getVFU(Q, n), p);
+  const psi = p;
+  return { pipeP, pipeT, pipeS, Qback, Pcalc, M, psi };
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
@@ -224,5 +228,5 @@ export const deepMerge = (oldData, newData) => {
 
   return result;
 };
-const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06 };
+const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06, psi: 14.503773773 };
 export const getConvertedValue = (value, unit) => (unitKoef[unit] ? unitKoef[unit] * value : value);

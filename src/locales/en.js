@@ -34,7 +34,8 @@ export default {
   wall: ["Wall thickness", "mm"],
   Qback: ["Oil return", "L/min"],
   Qmax: ["Max oil return", "L/min"],
-  M: ["Torque", "Nm"],
+  M: ["Torque", "N·m"],
+  psi: ["Pressure", "psi", "MPa"],
   gerotor: ["Gerotor"],
 
   gears: ["Gear"],
