@@ -666,6 +666,17 @@ const gearPumpEckerle = {
   HKEIPH2011RK03: { CC: 10.9, in: "SAE J518C - 1″", out: "SAE J518C - 1/2″", drain: false, pmax: 330, regulator: false, holePattern: "106.4 - Ø82.5", shaft: "Ø20" },
   HKEIPH3032RK23: { CC: 32, in: "SAE J518C - 1.1/4″", out: "SAE J518C - 3/4″", drain: false, pmax: 330, regulator: false, holePattern: "Ø146 - Ø101,6", shaft: "Ø25" },
 };
+const gearPumpElika = [
+  {
+    ELIK1P-S-4.8: { CC: 4.8, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "Ø10 frez 5", pmax: 180, holePattern: "40 x 40 - Ø32" },
+  },
+  {
+    "ELI2-D-8.2-T0": { CC: 8.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "ELI2-D-9.6-T0": { CC: 9.6, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "ELI2-D-18-T0": { CC: 17.8, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 140, holePattern: "96.2 x 71.5 - Ø36.5" },
+    "ELI2-D-21-T0": { CC: 21, in: "Ø40mm / M8", out: "Ø30mm / M6", shaft: "1: 8", pmax: 130, holePattern: "96.2 x 71.5 - Ø36.5" },
+  },
+];
 const pistonPumpRexroth = {
   HKA10VSO18DRG31R: { CC: 18, in: "SAE J518C - 1″", out: "SAE J518C - 3/4″", drain: "M16 x 1.5", pmax: 280, regulator: "Regulator ciśnienia", holePattern: "Ø106,4 - Ø80", shaft: "Ø18" },
   HKA10VSO18DFR31R: { CC: 18, in: "SAE J518C - 1″", out: "SAE J518C - 3/4″", drain: "M16 x 1.5", pmax: 280, regulator: "Kontroler wykrywania obciążenia", holePattern: "Ø106,4 - Ø80", shaft: "Ø18" },
@@ -734,6 +745,7 @@ export const pumpData = {
     ["REXROTH", gearPumpRexroth],
     ["WPH", gearPumpWPH],
     ["CHINA", gearPumpAPF],
+    ["MARZOTTI", gearPumpElika],
   ].flatMap(([maker, pumpsByGroup]) => pumpsByGroup.flatMap((el, group) => Object.entries(el).map(([title, data]) => ({ [title]: { title: title.startsWith("HK") ? title : "K-" + title, ...data, maker, group } })))),
   piston: [
     ["REXROTH", pistonPumpRexroth],
