@@ -148,7 +148,7 @@ export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }, n = 1450) => {
   const Pcalc = Power(Q, getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress, minDirectPressure }));
   const M = Moment(getVFU(Q, n), p);
   const psi = p;
-  return { pipeP, pipeT, pipeS, Qback, Pcalc, M, psi };
+  return { pipeP, pipeT, pipeS, Qback, Pcalc, M, Q, psi };
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
