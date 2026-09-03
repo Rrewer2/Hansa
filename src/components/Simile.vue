@@ -4,6 +4,7 @@ import { text } from "../services/text";
 
 const { simile } = defineProps(["simile"]);
 const cracked = ref([]);
+const deal = ref("");
 const margin = ref(50);
 const zlo = ref(0);
 const getDiffBetween = (orderStr, modelStr) => {
@@ -61,13 +62,8 @@ async function loadData() {
   // loading.value = true;
   try {
     const costs = await import("../services/costsSap.json");
-    const availableQuantity = await import("../services/SAP.json");
     const a = costs.default.reduce((acc, { title, ...rest }) => {
       acc[title] = rest;
-      return acc;
-    }, {});
-    const c = availableQuantity.default.reduce((acc, { title, amount, description }) => {
-      acc[title] = { amount, description };
       return acc;
     }, {});
     cracked.value = Object.fromEntries(
@@ -84,9 +80,16 @@ async function loadData() {
 }
 const totalPrice = () => {
   let res = 0;
-  for (let key in cracked.value) {
-    res += +cracked.value[key]?.price.replace(/\s/g, "").replace(".", "").replace(",", ".") * cracked.value[key]?.count;
+  let arr = [];
+  for (const key in cracked.value) {
+    const item = cracked.value[key];
+    const num = +item?.price?.replace(" ", "").replace(".", "").replace(",", ".") * item?.count;
+    if (key) {
+      res += num;
+      if (num === 0) arr.push(key);
+    }
   }
+  deal.value = arr.join(", ");
   return res;
 };
 </script>
@@ -108,15 +111,17 @@ const totalPrice = () => {
     <button @click="loadData" class="magic-btn">Koszty</button>
     {{ new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(totalPrice() || 0) }}
   </label>
-  <d class="mt-20 ml-10">Marża <input v-model="margin" type="number" min="0" /></d>
-  <d class="final mt-20 ml-10">
+  <b class="mt-20 ml-10">Marża <input v-model="margin" type="number" min="0" /></b>
+  <b class="final mt-20 ml-10">
     Netto
     {{
       new Intl.NumberFormat("pl-PL", { style: "currency", currency: "PLN" }).format(
         zlo + totalPrice() / (totalPrice() / (totalPrice() / (1 - margin / 100) - zlo)) || 0,
       )
     }}
-  </d>
+  </b>
+  <p v-if="deal.length">Nie udane: {{ deal }}</p>
+  <br />
 </template>
 
 <style scoped>
