@@ -9,7 +9,7 @@ export default {
   form: ["Form"],
   formHorizontal: ["horizontal"],
   formVertical: ["vertical"],
-  Q: ["Flow rate", "L/min"],
+  Q: ["Flow rate", "L/min", "gpm"],
   p: ["Pressure", "bar"],
   n: ["Speed", "min⁻¹"],
   mount: ["Mounting"],
