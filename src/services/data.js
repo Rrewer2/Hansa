@@ -668,7 +668,7 @@ const gearPumpEckerle = {
 };
 const gearPumpElika = [
   {
-    ELIK1P-S-4.8: { CC: 4.8, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "Ø10 frez 5", pmax: 180, holePattern: "40 x 40 - Ø32" },
+    "ELIK1P-S-4.8": { CC: 4.8, in: "G3/8″", out: "Bore Ø9.25mm with O-Ring", shaft: "Ø10 frez 5", pmax: 180, holePattern: "40 x 40 - Ø32" },
   },
   {
     "ELI2-D-8.2-T0": { CC: 8.2, in: "Ø30mm / M6", out: "Ø30mm / M6", shaft: "1: 8", pmax: 190, holePattern: "96.2 x 71.5 - Ø36.5" },
