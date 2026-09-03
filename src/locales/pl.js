@@ -19,7 +19,7 @@ export default {
   P: ["Moc silnika", "kW"],
   Pcalc: ["Moc oblicz.", "kW"],
   I: ["Prąd el.", "A"],
-  VFU: ["VFU", "cm³/obr"],
+  VFU: ["VFU", "cm³/obr", "gpm"],
   k: ["Ratio"],
   pipeP: ["Rura P"],
   pipeT: ["Rura T"],
