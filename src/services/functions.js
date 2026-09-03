@@ -228,5 +228,5 @@ export const deepMerge = (oldData, newData) => {
 
   return result;
 };
-const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06, psi: 14.503773773 };
+const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06, psi: 14.503773773, gpm: 0.26417 };
 export const getConvertedValue = (value, unit) => (unitKoef[unit] ? unitKoef[unit] * value : value);
