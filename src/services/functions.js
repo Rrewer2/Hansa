@@ -148,7 +148,7 @@ export const pumpCounting = ({ Q, p, DBD, HKSH, maxPressure }, n = 1450) => {
   const Pcalc = Power(Q, getPressure({ DBD, p, directPressValue: HKSH.directPressValue, directPress: HKSH.directPress, minDirectPressure }));
   const M = Moment(getVFU(Q, n), p);
   const psi = p;
-  return { pipeP, pipeT, pipeS, Qback, Pcalc, M, Q, psi };
+  return { pipeP, pipeT, pipeS, Qback, Pcalc, M, Qgpm: Q, psi };
 };
 
 export const filtrationD = (arr, { D }) => arr.filter((el) => el < D);
@@ -228,5 +228,5 @@ export const deepMerge = (oldData, newData) => {
 
   return result;
 };
-const unitKoef = { kN: g / 1000, MPa: 0.1, "m/min": 0.06, psi: 14.503773773, gpm: 0.26417 };
+const unitKoef = { kN: g / 1000, MPa: 0.1, HP: 0.74569987, "m/min": 0.06, psi: 14.503773773, gpm: 0.26417 };
 export const getConvertedValue = (value, unit) => (unitKoef[unit] ? unitKoef[unit] * value : value);
