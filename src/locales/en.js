@@ -17,7 +17,7 @@ export default {
   P: ["Power", "kW"],
   Pcalc: ["Power calc.", "kW"],
   I: ["El. current", "A"],
-  VFU: ["VFU", "cm³/rev", "gpm"],
+  VFU: ["VFU", "cm³/rev"],
   k: ["Ratio"],
   pipeP: ["Pipe P"],
   pipeT: ["Pipe T"],
