@@ -122,6 +122,8 @@ onMounted(() => {
     showBox.value = false;
   }, 1);
 });
+const selector = ref([]);
+const setOrder = () => (order.value = {});
 </script>
 
 <template>
@@ -163,7 +165,7 @@ onMounted(() => {
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" scale="1" />
 
-    <Selector v-if="navPage[2]" v-bind="{ project, meta, order }" />
+    <Selector v-if="navPage[2]" v-bind="{ project, meta, order, selector }" @reload="setOrder" />
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <HKSH v-if="navPage[4]" v-bind="{ project, meta }" />

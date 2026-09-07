@@ -19,19 +19,13 @@ import Title from "./Title.vue";
 import Description from "./Description.vue";
 import NonCETOPValveSelector from "./Selector/NonCETOPValveSelector.vue";
 import DBDSelector from "./Selector/DBDSelector.vue";
-// import HKSHSelector from "./Selector/HKSHSelector.vue";
+import SelectorTree from "./SelectorTree.vue";
 
-const { project, meta, order } = defineProps(["project", "meta", "order"]);
-const emits = defineEmits(["pumpSelected", "projectUpdated"]);
-const pumpUnitComponents = [
-  PumpSelector,
-  MotorSelector,
-  BellhousingSelector,
-  VibroSelector,
-  BlockSelector,
-  ValveSelector,
-  NonCETOPValveSelector,
-];
+const { project, meta, order, selector } = defineProps(["project", "meta", "order", "selector"]);
+const emits = defineEmits(["pumpSelected", "projectUpdated", "reload"]);
+const powerUnitComponents = [PumpSelector, MotorSelector, BellhousingSelector, VibroSelector];
+const blockComponents = [BlockSelector, ValveSelector, NonCETOPValveSelector];
+const pumpUnitComponents = [...powerUnitComponents, ...blockComponents];
 const otherComponents = [
   TankSelector,
   LidSelector,
@@ -44,46 +38,83 @@ const otherComponents = [
   OldValveSelector,
   // HKSHSelector,
 ];
-const pumpUnit = () => Object.values(pumpUnitComponents).map(({ __name }) => __name);
+const powerUnit = () => Object.values(powerUnitComponents).map(({ __name }) => __name);
+const block = () => Object.values(blockComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
-const items = () => [...project.flatMap((_, i) => pumpUnit().map((p) => [p, i])), ...other().map((o, j) => [o, j])];
+const items = () => [...project.flatMap((_, i) => [...powerUnit(), ...block()].map((p) => [p, i])), ...other().map((o, j) => [o, j])];
 const activeIndex = ref(items()[0]);
 const setActive = ([name, index]) => {
   activeIndex.value = [name, index];
+};
+if (!selector.length) {
+  selector.push(
+    {
+      name: "powerUnitSelector",
+      open: false,
+      children: powerUnit().map((name) => ({ name, selected: true })),
+    },
+    {
+      name: "blockUnitSelector",
+      open: false,
+      children: block().map((name) => ({ name, selected: true })),
+    },
+    {
+      name: "otherUnitsSelector",
+      open: false,
+      children: other().map((name) => ({ name, selected: true })),
+    },
+  );
+}
+const isBtn = ref(true);
+const reload = () => {
+  isBtn.value = !isBtn.value;
+  if (isBtn) emits("reload");
 };
 </script>
 
 <template>
   <main>
-    <Title v-bind="{ project, meta, order }" />
-    <article class="grid">
-      <article class="accordion">
-        <div v-for="(powerUNIT, i) in project" :key="i">
-          <div
-            v-for="selector in pumpUnitComponents"
-            class="accordion-item"
-            :key="selector.__name"
-            @click="() => setActive([selector.__name, i])"
-            :class="i === activeIndex[1] && selector.__name === activeIndex[0] && 'active'"
-          >
-            <component :is="selector" v-bind="{ project, meta, order, i, powerUNIT }" />
+    <button @click="reload">{{ isBtn ? "Wybrać elementy" : "Wrócić do wyboru elementów" }}</button>
+    <SelectorTree v-bind="{ selector }" v-if="isBtn" />
+    <div v-else>
+      <Title v-bind="{ project, meta, order }" />
+      <article class="grid">
+        <article class="accordion">
+          <div v-for="(powerUNIT, i) in project" :key="i">
+            <div
+              v-for="sel in pumpUnitComponents"
+              class="accordion-item"
+              :key="sel.__name"
+              @click="() => setActive([sel.__name, i])"
+              :class="i === activeIndex[1] && sel.__name === activeIndex[0] && 'active'"
+            >
+              <component
+                v-if="selector.flatMap((item) => item.children).find((child) => child.name === sel.__name)?.selected"
+                :is="sel"
+                v-bind="{ project, meta, order, i, powerUNIT }"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          v-for="(selector, index) in otherComponents"
-          :key="selector.__name"
-          class="accordion-item"
-          @click="() => setActive([selector.__name, index])"
-          :class="index === activeIndex[1] && selector.__name === activeIndex[0] && 'active'"
-        >
-          <component :is="selector" v-bind="{ project, meta, order }" />
+          <div
+            v-for="(sel, index) in otherComponents"
+            :key="sel.__name"
+            class="accordion-item"
+            @click="() => setActive([sel.__name, index])"
+            :class="index === activeIndex[1] && sel.__name === activeIndex[0] && 'active'"
+          >
+            <component
+              v-if="selector.flatMap((item) => item.children).find((child) => child.name === sel.__name)?.selected"
+              :is="sel"
+              v-bind="{ project, meta, order }"
+            />
+          </div>
+        </article>
+        <div class="right mx-auto">
+          <Order v-bind="{ project, order }" />
+          <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
         </div>
       </article>
-      <div class="right mx-auto">
-        <Order v-bind="{ project, order }" />
-        <Description v-if="order['pump' + 0]?.title && order['motor' + 0]?.title" v-bind="{ order, project }" />
-      </div>
-    </article>
+    </div>
     <!-- <SelectNavbar @nav="(ind) => navPage = navPage.map((_, k) => ind === k)" :navPage="navPage" /> -->
   </main>
 </template>

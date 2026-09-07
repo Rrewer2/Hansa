@@ -216,6 +216,28 @@ export default {
   "-": ["❌"],
   true: ["✅"],
 
+  powerUnitSelector: ["Wybór elementów zespołu pompującego"],
+  PumpSelector: ["Wybór pompy"],
+  MotorSelector: ["Wybór silnika"],
+  BellhousingSelector: ["Wybór kielicha / sprzęgła"],
+  VibroSelector: ["Wybór wibroizolatora"],
+
+  blockUnitSelector: ["Wybór elementów bloku"],
+  BlockSelector: ["Wybór bloku"],
+  ValveSelector: ["Wybór zaworów CETOP"],
+  NonCETOPValveSelector: ["Wybór zaworu nie-CETOP"],
+
+  otherUnitsSelector: ["Wybór pozostałych elementów"],
+  TankSelector: ["Wybór zbiornika"],
+  LidSelector: ["Wybór pokrywy"],
+  FilterSelector: ["Wybór filtra powrotnego"],
+  GaugeSelector: ["Wybór manometru"],
+  AkuSelector: ["Wybór akumulatora"],
+  DBDSelector: ["Wybór zaworu przelewowego"],
+  CoolerSelector: ["Wybór chłodnicy"],
+  ExtraSelector: ["Wybór dodatkowych elementów"],
+  OldValveSelector: ["Wybór starego zaworu"],
+
   dlaw: ["Dławnica"],
   tlok: ["Tłok gwintowany"],
   pret: ["Tłoczysko chromowane"],
