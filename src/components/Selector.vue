@@ -21,7 +21,7 @@ import NonCETOPValveSelector from "./Selector/NonCETOPValveSelector.vue";
 import DBDSelector from "./Selector/DBDSelector.vue";
 import SelectorTree from "./SelectorTree.vue";
 
-const { project, meta, order, selector } = defineProps(["project", "meta", "order", "selector"]);
+const { project, meta, order, selector, isBtn } = defineProps(["project", "meta", "order", "selector", "isBtn"]);
 const emits = defineEmits(["pumpSelected", "projectUpdated", "reload"]);
 const powerUnitComponents = [PumpSelector, MotorSelector, BellhousingSelector, VibroSelector];
 const blockComponents = [BlockSelector, ValveSelector, NonCETOPValveSelector];
@@ -65,11 +65,7 @@ if (!selector.length) {
     },
   );
 }
-const isBtn = ref(true);
-const reload = () => {
-  isBtn.value = !isBtn.value;
-  if (isBtn) emits("reload");
-};
+const reload = () => emits("reload");
 </script>
 
 <template>

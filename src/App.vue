@@ -123,7 +123,11 @@ onMounted(() => {
   }, 1);
 });
 const selector = ref([]);
-const setOrder = () => (order.value = {});
+const isBtn = ref(true);
+const setOrder = () => {
+  isBtn.value = !isBtn.value;
+  order.value = {};
+};
 </script>
 
 <template>
@@ -165,7 +169,7 @@ const setOrder = () => (order.value = {});
     </article>
     <Scheme class="scheme" v-if="navPage[1]" v-bind="{ project, meta, order }" scale="1" />
 
-    <Selector v-if="navPage[2]" v-bind="{ project, meta, order, selector }" @reload="setOrder" />
+    <Selector v-if="navPage[2]" v-bind="{ project, meta, order, selector, isBtn }" @reload="setOrder" />
 
     <Order v-if="navPage[3]" v-bind="{ project, order }" />
     <HKSH v-if="navPage[4]" v-bind="{ project, meta }" />
