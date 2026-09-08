@@ -26,18 +26,7 @@ const emits = defineEmits(["pumpSelected", "projectUpdated", "reload"]);
 const powerUnitComponents = [PumpSelector, MotorSelector, BellhousingSelector, VibroSelector];
 const blockComponents = [BlockSelector, ValveSelector, NonCETOPValveSelector];
 const pumpUnitComponents = [...powerUnitComponents, ...blockComponents];
-const otherComponents = [
-  TankSelector,
-  LidSelector,
-  FilterSelector,
-  GaugeSelector,
-  AkuSelector,
-  DBDSelector,
-  CoolerSelector,
-  ExtraSelector,
-  OldValveSelector,
-  // HKSHSelector,
-];
+const otherComponents = [TankSelector, LidSelector, FilterSelector, GaugeSelector, AkuSelector, DBDSelector, CoolerSelector, ExtraSelector];
 const powerUnit = () => Object.values(powerUnitComponents).map(({ __name }) => __name);
 const block = () => Object.values(blockComponents).map(({ __name }) => __name);
 const other = () => Object.values(otherComponents).map(({ __name }) => __name);
@@ -50,17 +39,17 @@ if (!selector.length) {
   selector.push(
     {
       name: "powerUnitSelector",
-      open: false,
+      open: true,
       children: powerUnit().map((name) => ({ name, selected: true })),
     },
     {
       name: "blockUnitSelector",
-      open: false,
+      open: true,
       children: block().map((name) => ({ name, selected: true })),
     },
     {
       name: "otherUnitsSelector",
-      open: false,
+      open: true,
       children: other().map((name) => ({ name, selected: true })),
     },
   );
@@ -104,6 +93,7 @@ const reload = () => emits("reload");
               v-bind="{ project, meta, order }"
             />
           </div>
+          <OldValveSelector v-bind="{ project, meta }" />
         </article>
         <div class="right mx-auto">
           <Order v-bind="{ project, order }" />

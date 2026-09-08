@@ -71,6 +71,7 @@ const { id, HKSH, same, startValve, Gerotor, maxPressure, ...rest } = pumpData;
       :HKSH="pumpData.HKSH[j]"
       :pumpData="{ ...pumpData, same }"
       :class="buckling({ ...pumpData, HKSH: HKSH[j] })"
+      :buckling="buckling({ ...pumpData, HKSH: HKSH[j] })"
       class="my-2 border"
     >
       <button

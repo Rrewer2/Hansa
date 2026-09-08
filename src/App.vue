@@ -123,7 +123,7 @@ onMounted(() => {
   }, 1);
 });
 const selector = ref([]);
-const isBtn = ref(true);
+const isBtn = ref(false);
 const setOrder = () => {
   isBtn.value = !isBtn.value;
   order.value = {};
@@ -379,6 +379,7 @@ td {
 
 .error {
   border: solid 1px red;
+  background-color: rgba(255, 218, 218, 0.48);
 }
 
 .yellow {

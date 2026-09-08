@@ -93,7 +93,7 @@ const velocityClass = (v, type) => {
         </th>
       </tr>
       <tr v-for="(t, i) in q" :key="i">
-        <td><input v-model.number="q[i]" type="number" min="0" max="500" /></td>
+        <td><input v-model.number="q[i]" type="number" min="0" max="500" :id="t" /></td>
         <td v-for="d in sizesMm" :key="d" :class="velocityClass(velocity(t, d), lineType)">
           {{ velocity(t, d).toFixed(2) }}
         </td>

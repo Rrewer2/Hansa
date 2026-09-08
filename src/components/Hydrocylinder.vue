@@ -5,7 +5,7 @@ import ResultItem from "./ResultItem.vue";
 import InputItem from "./InputItem.vue";
 import { text } from "../services/text";
 
-const { HKSH, pumpData } = defineProps(["HKSH", "pumpData"]);
+const { HKSH, pumpData, buckling } = defineProps(["HKSH", "pumpData", "buckling"]);
 
 const getValue = {
   D: standartDiameters,
@@ -114,6 +114,7 @@ const {
       </div>
 
       <ResultItem :data="hkshCounting(HKSH, pumpData)" />
+      <b v-if="buckling">Przekroczony warunek wyboczeniowy</b>
     </div>
   </section>
 </template>
@@ -122,5 +123,13 @@ const {
 .w-55 {
   min-width: 55px;
   width: 55px;
+}
+b {
+  position: relative;
+  top: -24px;
+  color: rgb(228, 20, 20);
+  max-width: 100px;
+  font-size: 18px;
+  margin-left: 10px;
 }
 </style>
