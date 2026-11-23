@@ -927,7 +927,7 @@ export const couplingData = [
 
   { title: "HKA1914N125AL", size: 71, shaft: "1: 8", group: 1 },
   { title: "HKA1919N1AL", size: 80, shaft: "1: 8", group: 1 },
-  { title: "HKA24197B17AL", size: 90, shaft: "1: 8", group: 1 },
+  { title: "HKA192424N1AL", size: 90, shaft: "1: 8", group: 1 },
   { title: "HKA24322860N1AL", size: 100, shaft: "1: 8", group: 1 },
   { title: "HKA24322860N1AL", size: 112, shaft: "1: 8", group: 1 },
 
